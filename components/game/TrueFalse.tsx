@@ -12,37 +12,27 @@ interface TrueFalseProps {
 
 export function TrueFalse({ question, onAnswered }: TrueFalseProps) {
   const [selected, setSelected] = useState<"Verdadero" | "Falso" | null>(null);
-
   const isAnswered = selected !== null;
 
   const handleAnswer = (choice: "Verdadero" | "Falso") => {
-    if (isAnswered) {
-      return;
-    }
-
+    if (isAnswered) return;
     setSelected(choice);
     const isCorrect = choice === question.answer;
     onAnswered(isCorrect, isCorrect ? 5 : 2);
   };
 
   return (
-    <Card className="mx-auto w-full max-w-xl">
+    <Card style={{ maxWidth: 700, margin: '0 auto' }}>
       <CardHeader>
         <CardTitle>True / False Sprint</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <p className="text-base font-medium">{question.question}</p>
-        <div className="grid grid-cols-2 gap-3">
-          <Button onClick={() => handleAnswer("Verdadero")} disabled={isAnswered}>
-            Verdadero
-          </Button>
-          <Button onClick={() => handleAnswer("Falso")} variant="outline" disabled={isAnswered}>
-            Falso
-          </Button>
+      <CardContent>
+        <p style={{ fontSize: '1.05rem', fontWeight: 600 }}>{question.question}</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.65rem' }}>
+          <Button onClick={() => handleAnswer("Verdadero")} disabled={isAnswered}>Verdadero</Button>
+          <Button onClick={() => handleAnswer("Falso")} variant="outline" disabled={isAnswered}>Falso</Button>
         </div>
-        {isAnswered ? (
-          <p className="text-sm text-muted-foreground">Respuesta correcta: {question.answer}</p>
-        ) : null}
+        {isAnswered ? <p className="text-muted">Respuesta correcta: {question.answer}</p> : null}
       </CardContent>
     </Card>
   );

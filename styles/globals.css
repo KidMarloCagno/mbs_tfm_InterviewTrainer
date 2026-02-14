@@ -1,0 +1,88 @@
+:root {
+  --bg: #0d1117;
+  --bg-elevated: #111827;
+  --bg-glass: rgba(17, 24, 39, 0.55);
+  --text-primary: #e6edf3;
+  --text-secondary: #9fb0c3;
+  --border: rgba(56, 139, 253, 0.24);
+  --primary: #388bfd;
+  --primary-strong: #1f6feb;
+  --secondary: #2dd4bf;
+  --danger: #f87171;
+  --success: #34d399;
+  --shadow-glow: 0 0 0 1px rgba(56, 139, 253, 0.35), 0 12px 24px rgba(0, 0, 0, 0.32);
+  --radius: 14px;
+  --font-sans: Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.13), transparent 35%),
+    radial-gradient(circle at top left, rgba(56, 139, 253, 0.16), transparent 40%),
+    var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+a { color: inherit; }
+
+.app-shell { min-height: 100vh; padding: 1.25rem; }
+.container { max-width: 1024px; margin: 0 auto; }
+.mono { font-family: var(--font-mono); }
+
+.glass-banner {
+  border: 1px solid var(--border);
+  background: linear-gradient(125deg, rgba(56, 139, 253, 0.15), rgba(45, 212, 191, 0.1));
+  backdrop-filter: blur(14px);
+  border-radius: calc(var(--radius) + 4px);
+  padding: 1.2rem;
+}
+
+.ui-card {
+  border-radius: var(--radius);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(13, 17, 23, 0.95));
+  box-shadow: 0 6px 18px rgba(0,0,0,.28);
+  transition: box-shadow 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+.ui-card:hover { border-color: rgba(56, 139, 253, 0.4); box-shadow: var(--shadow-glow); transform: translateY(-2px); }
+
+.ui-card-header { padding: 1.2rem 1.2rem 0.8rem; }
+.ui-card-title { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.02em; }
+.ui-card-description { margin: 0.45rem 0 0; color: var(--text-secondary); }
+.ui-card-content { padding: 0 1.2rem 1.2rem; }
+
+.ui-button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  height: 2.6rem;
+  padding: 0 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-family: var(--font-sans);
+  transform: translateY(0);
+}
+.ui-button:disabled { opacity: 0.55; cursor: not-allowed; }
+.ui-button:active { transform: translateY(2px); box-shadow: inset 0 2px 0 rgba(0,0,0,.35); }
+.ui-button-default { background: linear-gradient(180deg, var(--primary), var(--primary-strong)); color: #fff; box-shadow: 0 3px 0 #184d96; }
+.ui-button-outline { border-color: rgba(148,163,184,.35); background: rgba(13,17,23,.75); color: var(--text-primary); box-shadow: 0 3px 0 rgba(15,23,42,.95); }
+.ui-button-destructive { background: linear-gradient(180deg,#fb7185,#ef4444); color: #fff; box-shadow: 0 3px 0 #9f1239; }
+.ui-button-secondary { background: linear-gradient(180deg,#374151,#1f2937); color:#f8fafc; box-shadow: 0 3px 0 #0f172a; }
+.ui-button-lg { height: 2.9rem; }
+.ui-button-block { width: 100%; }
+
+.ui-badge { border: 1px solid rgba(45, 212, 191, 0.42); color: #bffaf2; background: rgba(45, 212, 191, 0.12); border-radius: 999px; padding: 0.22rem 0.65rem; font-size: 0.75rem; font-weight: 700; }
+
+.ui-progress { height: 6px; width: 100%; border-radius: 999px; border: 1px solid rgba(56, 139, 253, 0.3); background: rgba(17, 24, 39, 0.8); overflow: hidden; }
+.ui-progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); transition: width 200ms ease; box-shadow: 0 0 10px rgba(45,212,191,.45); }
+
+.grid-topics { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.text-muted { color: var(--text-secondary); }
+.feedback { border: 1px solid rgba(148,163,184,.25); border-radius: 10px; padding: .75rem; font-size: .92rem; }
+.feedback-success { border-color: rgba(52,211,153,.45); background: rgba(52,211,153,.1); }

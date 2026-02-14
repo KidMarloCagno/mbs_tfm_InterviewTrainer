@@ -39,7 +39,7 @@ export function GameEngine({ question, onAnswered }: GameEngineProps) {
       );
     default:
       return (
-        <div className="rounded-lg border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive">
+        <div className="feedback" style={{ borderColor: "rgba(248,113,113,.5)", color: "#fca5a5" }}>
           Unsupported question type.
         </div>
       );
