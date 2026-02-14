@@ -1,0 +1,30 @@
+[
+  {
+    "id": "javascript-closures-core",
+    "question": "¿Qué describe mejor un closure en JavaScript?",
+    "answer": "Una función que conserva acceso al scope léxico donde fue creada.",
+    "options": [
+      "Una función que conserva acceso al scope léxico donde fue creada.",
+      "Una función que solo puede ejecutarse una vez.",
+      "Una función que no puede recibir argumentos.",
+      "Una función que siempre retorna una promesa."
+    ],
+    "category": "Core Concepts",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "id": "javascript-event-loop-true-false",
+    "question": "El Event Loop ejecuta primero la cola de microtasks antes de la cola de macrotasks.",
+    "answer": "Verdadero",
+    "options": [
+      "Verdadero",
+      "Falso",
+      "Depende del navegador",
+      "Solo en Node.js"
+    ],
+    "category": "Async",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  }
+]

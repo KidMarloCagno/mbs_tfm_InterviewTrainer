@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum QuestionType {
+  QUIZ_SIMPLE
+  FILL_THE_BLANK
+  TRUE_FALSE
+}
+
+enum DifficultyLevel {
+  Beginner
+  Intermediate
+  Advanced
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  image        String?
+  streakCount  Int            @default(0)
+  lastActivity DateTime?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  progress     UserProgress[]
+}
+
+model Question {
+  id         String         @id
+  question   String
+  answer     String
+  options    String[]
+  category   String
+  type       QuestionType
+  level      DifficultyLevel
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  progress   UserProgress[]
+}
+
+model UserProgress {
+  id             String   @id @default(cuid())
+  userId         String
+  questionId     String
+  repetition     Int      @default(0)
+  interval       Int      @default(1)
+  easinessFactor Float    @default(2.5)
+  nextReview     DateTime @default(now())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+  @@index([nextReview])
+}
