@@ -79,5 +79,81 @@ interface QuestionSetItem {
 
 --
 
-## 7. Prompt de Inicio Rápido para la IA
+## 7. Version Control & Changelog Management
+
+### 7.1 Package Version Updates
+When implementing new features, fixing bugs, or making significant changes:
+
+1. **Update `package.json` version** following [Semantic Versioning](https://semver.org/):
+   - **MAJOR** (X.0.0): Breaking changes that affect existing functionality
+   - **MINOR** (0.X.0): New features added in a backward-compatible manner
+   - **PATCH** (0.0.X): Backward-compatible bug fixes
+
+2. **Version Update Rules**:
+   - New game types or learning algorithms → MINOR version bump
+   - UI improvements or new question sets → PATCH version bump
+   - Database schema changes or API breaking changes → MAJOR version bump
+
+### 7.2 CHANGELOG.md Creation & Maintenance
+The AI agent MUST create and maintain a `CHANGELOG.md` file in the project root following the [Keep a Changelog](https://keepachangelog.com/) format:
+
+```markdown
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.0.0] - YYYY-MM-DD
+### Added
+- Initial release with Quiz Simple, True/False, and Fill the Blank game modes
+- SM-2 algorithm implementation for spaced repetition
+- Database and JavaScript question sets
+- Zustand state management for game sessions
+
+### Changed
+- [List any changes to existing functionality]
+
+### Deprecated
+- [List soon-to-be removed features]
+
+### Removed
+- [List removed features]
+
+### Fixed
+- [List bug fixes]
+
+### Security
+- [List security improvements]
+```
+
+### 7.3 Update Workflow
+When making changes, the AI MUST:
+
+1. **Before coding**: Review current version in `package.json`
+2. **After implementation**: 
+   - Update `package.json` version number
+   - Add entry to `CHANGELOG.md` under appropriate section (Added/Changed/Fixed)
+   - Include date in ISO format (YYYY-MM-DD)
+   - Reference issue/PR numbers if applicable
+
+### 7.4 Example Entry Format
+```markdown
+## [1.2.0] - 2026-02-14
+### Added
+- New React question set with 30 advanced hooks questions
+- Progress visualization component with completion percentage
+- Dark mode toggle in user settings
+
+### Fixed
+- Quiz state reset bug when switching categories
+- Auto-advance timer not clearing on incorrect answers (#42)
+```
+
+---
+
+## 8. Prompt de Inicio Rápido para la IA
 *"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"*
