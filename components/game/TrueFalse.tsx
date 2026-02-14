@@ -12,6 +12,7 @@ interface TrueFalseProps {
 
 export function TrueFalse({ question, onAnswered }: TrueFalseProps) {
   const [selected, setSelected] = useState<"Verdadero" | "Falso" | null>(null);
+
   const isAnswered = selected !== null;
 
   const handleAnswer = (choice: "Verdadero" | "Falso") => {

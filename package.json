@@ -1,0 +1,29 @@
+{
+  "name": "mbs-tfm-interview-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:push": "prisma db push",
+    "prisma:seed": "node prisma/seed.ts",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "@prisma/client": "^5.8.0",
+    "@hookstate/core": "^4.0.1",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "prisma": "^5.8.0"
+  }
+}
