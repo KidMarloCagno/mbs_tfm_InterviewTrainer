@@ -1,0 +1,380 @@
+[
+  {
+    "question": "What is a Database?",
+    "answer": "A database is a structured collection of data for easy access, management, and updating.",
+    "options": [
+      "A database is a structured collection of data for easy access, management, and updating.",
+      "A hardware device used to store physical documents.",
+      "A programming language used to create website layouts.",
+      "A temporary folder for storing browser cache."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a DBMS?",
+    "answer": "A software system that allows users to define, create, maintain and control access to the database.",
+    "options": [
+      "A hardware protocol for data transmission.",
+      "A software system that allows users to define, create, maintain and control access to the database.",
+      "A type of operating system specialized in networking.",
+      "A compiler used for C++ programming."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is SQL?",
+    "answer": "Structured Query Language, used for managing and manipulating data in relational databases.",
+    "options": [
+      "Simple Question Language for AI chat.",
+      "System Query Logic for operating systems.",
+      "Server Quick Link for remote access.",
+      "Structured Query Language, used for managing and manipulating data in relational databases."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What are the advantages of DBMS?",
+    "answer": "Data sharing, data security, data integration, and reduced data redundancy.",
+    "options": [
+      "Data sharing, data security, data integration, and reduced data redundancy.",
+      "Increased hardware cost and slower data access.",
+      "Mandatory use of physical paper backups.",
+      "Limited access to data for only one user at a time."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is the difference between a Database and a DBMS?",
+    "answer": "The Database is the collection of data, while the DBMS is the software used to manage that data.",
+    "options": [
+      "The Database is a hardware component and DBMS is a software component.",
+      "The Database is the collection of data, while the DBMS is the software used to manage that data.",
+      "There is no difference; they are interchangeable terms.",
+      "DBMS stores data in physical files and Database stores them in the cloud."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a Primary Key?",
+    "answer": "A unique identifier for each record in a table that cannot contain NULL values.",
+    "options": [
+      "A password used to encrypt the database files.",
+      "A unique identifier for each record in a table that cannot contain NULL values.",
+      "A duplicate value allowed in multiple rows for indexing.",
+      "The name given to the database administrator."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a Foreign Key?",
+    "answer": "A field in one table that uniquely identifies a row of another table or the same table.",
+    "options": [
+      "A key used to access databases in foreign countries.",
+      "A field in one table that uniquely identifies a row of another table or the same table.",
+      "A secondary password for guest users.",
+      "A key used only in non-relational databases."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is Normalization?",
+    "answer": "The process of organizing data to minimize redundancy and dependency.",
+    "options": [
+      "The process of converting all text to uppercase.",
+      "The process of organizing data to minimize redundancy and dependency.",
+      "Deleting old data to free up disk space.",
+      "A method to increase the size of the database for better performance."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a Join in SQL?",
+    "answer": "An operation used to combine rows from two or more tables based on a related column.",
+    "options": [
+      "A way to merge two different database servers.",
+      "A command to delete duplicate records.",
+      "An operation used to combine rows from two or more tables based on a related column.",
+      "A function that adds the values of two different columns."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a Transaction?",
+    "answer": "A sequence of operations performed as a single logical unit of work.",
+    "options": [
+      "A sequence of operations performed as a single logical unit of work.",
+      "A financial payment made to the database provider.",
+      "The act of moving the database from one server to another.",
+      "A specific type of table used for logging errors."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is the main purpose of 'Checkpoint' in a database system?",
+    "answer": "To reduce the time required for recovery in case of a system crash by saving the current state.",
+    "options": [
+      "To check if the user has the correct permissions to log in.",
+      "To reduce the time required for recovery in case of a system crash by saving the current state.",
+      "To verify if the database has any duplicate primary keys.",
+      "To prevent unauthorized IP addresses from accessing the server."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is 'Transparent Data Encryption' (TDE)?",
+    "answer": "A technology used to encrypt database files at rest on the hard drive.",
+    "options": [
+      "A method to hide the SQL code from other developers.",
+      "A way to encrypt data while it is being transmitted over the internet.",
+      "A technology used to encrypt database files at rest on the hard drive.",
+      "An algorithm that makes the database schema invisible to the DBMS."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "Which SQL statement is used to remove all records from a table without logging individual row deletions?",
+    "answer": "TRUNCATE",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "TRUNCATE",
+      "DROP"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is the difference between 'DELETE' and 'TRUNCATE' commands?",
+    "answer": "DELETE is a DML command that can be rolled back; TRUNCATE is a DDL command that is faster and cannot be rolled back easily.",
+    "options": [
+      "DELETE is faster than TRUNCATE.",
+      "DELETE is a DML command that can be rolled back; TRUNCATE is a DDL command that is faster and cannot be rolled back easily.",
+      "TRUNCATE allows you to use a WHERE clause, while DELETE does not.",
+      "Both are exactly the same in terms of performance and logging."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is a 'Data Warehouse'?",
+    "answer": "A central repository of data accumulated from a wide range of sources for analysis and reporting.",
+    "options": [
+      "A physical building where database servers are stored.",
+      "A central repository of data accumulated from a wide range of sources for analysis and reporting.",
+      "A backup system used only for emergency data recovery.",
+      "A specific type of table that only stores binary images."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "In the context of ACID properties, what does 'Atomicity' mean?",
+    "answer": "It ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
+    "options": [
+      "It ensures that data remains consistent across different tables.",
+      "It ensures that multiple transactions can happen at the same time.",
+      "It ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
+      "It ensures that data is saved permanently even if the system fails."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is a 'Stored Procedure'?",
+    "answer": "A prepared SQL code that you can save and reuse multiple times.",
+    "options": [
+      "A prepared SQL code that you can save and reuse multiple times.",
+      "A manual guide for database administrators.",
+      "A type of hardware used to increase database speed.",
+      "An automated backup that runs every midnight."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a 'View' in SQL?",
+    "answer": "A virtual table based on the result-set of an SQL statement.",
+    "options": [
+      "The physical appearance of the database management tool.",
+      "A virtual table based on the result-set of an SQL statement.",
+      "A command used to see the list of all users.",
+      "A hidden table that only the administrator can see."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is an Entity-Relationship (E-R) Model?",
+    "answer": "A diagrammatic approach to database design where real-world objects are represented as entities and their relationships are defined.",
+    "options": [
+      "A diagrammatic approach to database design where real-world objects are represented as entities and their relationships are defined.",
+      "A mathematical formula used to calculate database latency.",
+      "A type of hardware configuration for high-availability clusters.",
+      "A coding standard for writing SQL stored procedures."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is an Entity in an ER Model?",
+    "answer": "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
+    "options": [
+      "A student is an entity.",
+      "A software bug found in the database engine.",
+      "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
+      "The connection string used to link the app to the DB.",
+      "A specific row in a temporary table."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is an Attribute?",
+    "answer": "Attributes are the characteristics or properties of an entity. For a Student entity, Name and Age are attributes.",
+    "options": [
+      "The primary key of a table only.",
+      "Attributes are the characteristics or properties of an entity. For a Student entity, Name and Age are attributes.",
+      "A specific SQL command used for updates.",
+      "The total size of the database file."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is a Relationship in an ER model?",
+    "answer": "A relationship is an association among several entities.",
+    "options": [
+      "A relationship is an association among several entities.",
+      "The link between the database and the cloud provider.",
+      "A function that joins two different programming languages.",
+      "A backup file that relates to the original data."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner"
+  },
+  {
+    "question": "What is the 'Self-Description' property of a database?",
+    "answer": "The database contains not only the data but also the definition/metadata of the data.",
+    "options": [
+      "The database automatically writes its own documentation.",
+      "The database contains not only the data but also the definition/metadata of the data.",
+      "The database can repair its own corrupted files.",
+      "The database can run without any management software."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What are 'Constraints' in a database?",
+    "answer": "Rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
+    "options": [
+      "Hardware limitations that slow down the server.",
+      "Rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
+      "The maximum number of users allowed to connect.",
+      "Security firewalls that block SQL injection."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is the difference between a 'Between' and 'In' operator?",
+    "answer": "BETWEEN is used to retrieve rows based on a range of values, while IN is used to check for values inside a specific list.",
+    "options": [
+      "BETWEEN is for text and IN is for numbers.",
+      "BETWEEN is used to retrieve rows based on a range of values, while IN is used to check for values inside a specific list.",
+      "IN is faster than BETWEEN in all scenarios.",
+      "There is no difference; they are aliases of each other."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is the 'Normalization' rule for 1NF (First Normal Form)?",
+    "answer": "Each column must contain atomic (indivisible) values and there should be no repeating groups.",
+    "options": [
+      "The table must have at least two primary keys.",
+      "All data must be encrypted.",
+      "Each column must contain atomic (indivisible) values and there should be no repeating groups.",
+      "The table must be linked to at least one other table."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is the 'Normalization' rule for 2NF (Second Normal Form)?",
+    "answer": "It must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
+    "options": [
+      "It must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
+      "It must contain no foreign keys.",
+      "All columns must be of the type 'VARCHAR'.",
+      "The table must be divided into exactly two parts."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced"
+  },
+  {
+    "question": "What is a 'Composite Key'?",
+    "answer": "A primary key that consists of two or more columns to uniquely identify a row.",
+    "options": [
+      "A key that is made of both letters and numbers.",
+      "A primary key that consists of two or more columns to uniquely identify a row.",
+      "A key that is shared between two different databases.",
+      "A secondary index used for full-text search."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate"
+  },
+  {
+    "question": "What is 'Denormalization'?",
+    "answer": "The process of adding redundant data to a database to improve read performance.",
+    "options": [
+      "A mistake made during the database design phase.",
+      "The process of adding redundant data to a database to improve read performance.",
+      "Deleting all indexes to save disk space.",
+      "Converting a relational database into a CSV file."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced"
+  }
+]
