@@ -101,7 +101,7 @@ export default function QuizPage() {
                     setLastAnswerCorrect(null);
                     nextQuestion();
                   }
-                }, 1200);
+                }, 4000);
               }
             }}
           />
