@@ -139,6 +139,7 @@ When making changes, the AI MUST:
    - Add entry to `CHANGELOG.md` under appropriate section (Added/Changed/Fixed)
    - Include date in ISO format (YYYY-MM-DD)
    - Reference issue/PR numbers if applicable
+   - Update `README.md` only when new functionalities are added (not for fixes or changes that do not introduce new functionality)
 
 ### 7.4 Example Entry Format
 ```markdown
