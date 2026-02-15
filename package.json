@@ -1,6 +1,6 @@
 {
   "name": "mbs-tfm-interview-trainer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gamified IT interview practice platform with spaced repetition and active recall",
   "private": true,
   "author": "Joaquin",
