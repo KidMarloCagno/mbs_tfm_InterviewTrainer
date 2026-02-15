@@ -55,7 +55,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Button onClick={() => router.push(`/quiz/${encodeURIComponent(topic)}`)} className="ui-button-block" size="lg">
-                    Start Session
+                    Start Practice
                   </Button>
                 </CardContent>
               </Card>

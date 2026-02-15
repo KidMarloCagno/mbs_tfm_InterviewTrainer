@@ -54,6 +54,7 @@ mbs_tfm_InterviewTrainer/
 - Adaptive question interleaving and capped session lengths.
 - Spaced repetition (SM-2) logic for future review scheduling.
 - Score tracking and session completion summary.
+- Toggle between Autumn, Neon, and Summer themes.
 - JSON-driven question sets for rapid content iteration.
 - Prisma schema for user progress and question metadata.
 
