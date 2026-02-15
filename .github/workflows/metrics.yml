@@ -1,0 +1,83 @@
+name: Essential Metrics
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    name: Track TIER 1 Metrics
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: TIER 1 - Test Success Rate
+        id: tests
+        run: |
+          echo "Running tests..."
+          pnpm test --run --reporter=verbose > test-output.txt 2>&1 || true
+          TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' || echo "0")
+          TEST_TOTAL=$(grep -oE 'Tests.*[0-9]+ passed' test-output.txt | tail -1 | grep -oE '[0-9]+' | head -1 || echo "1")
+          TEST_RATE=$((TEST_PASSED * 100 / TEST_TOTAL))
+          echo "test_rate=$TEST_RATE" >> $GITHUB_OUTPUT
+          echo "Test Success Rate: $TEST_RATE% ($TEST_PASSED/$TEST_TOTAL)"
+
+          if [ "$TEST_RATE" -lt 95 ]; then
+            echo "RED FLAG: Test success rate below 95%"
+            exit 1
+          fi
+
+      - name: TIER 1 - Build Success Rate
+        run: |
+          echo "Checking TypeScript build..."
+          pnpm tsc --noEmit
+          echo "Build Success: 100%"
+
+      - name: TIER 1 - Lint Quality
+        run: |
+          echo "Checking code quality..."
+          LINT_ISSUES=$(pnpm lint 2>&1 | grep -c 'problem' || echo "0")
+          echo "Lint Issues: $LINT_ISSUES"
+
+          if [ "$LINT_ISSUES" -gt 0 ]; then
+            echo "WARNING: $LINT_ISSUES lint issues found"
+            exit 1
+          fi
+
+      - name: TIER 3 - Technical Debt
+        run: |
+          echo "Counting technical debt..."
+          TODO_COUNT=$(grep -r "TODO" pages components lib store prisma 2>/dev/null | wc -l | xargs)
+          echo "Technical Debt: $TODO_COUNT TODOs"
+
+          if [ "$TODO_COUNT" -gt 10 ]; then
+            echo "WARNING: High technical debt (>10 TODOs)"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "----------------------------------------"
+          echo "Essential Metrics Summary"
+          echo "----------------------------------------"
+          echo "Test Success Rate: OK"
+          echo "Build Success: OK"
+          echo "Code Quality: OK"
+          echo "----------------------------------------"

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-02-15
+
+### Added
+- Vitest + React Testing Library setup for unit and component tests
+- Playwright configuration for end-to-end testing
+- Prisma integration test scaffolding with `DATABASE_URL_TEST`
+- GitHub Actions metrics workflow for test, build, and lint health
+
 ## [0.1.0] - 2026-02-14
 
 ### Added
