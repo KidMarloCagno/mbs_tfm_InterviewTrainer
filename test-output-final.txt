@@ -1,0 +1,13 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90m/home/runner/work/mbs_tfm_InterviewTrainer/mbs_tfm_InterviewTrainer[39m
+
+ [32m✓[39m __tests__/unit/sm2.test.ts[2m > [22mcalculateSM2[2m > [22mresets repetition when quality is below 3
+ [32m✓[39m __tests__/unit/sm2.test.ts[2m > [22mcalculateSM2[2m > [22mcalculates intervals for successive correct answers
+ [32m✓[39m __tests__/components/button.test.tsx[2m > [22mButton[2m > [22mrenders with accessible label and handles clicks
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[2m | [22m[33m1 skipped[39m[90m (3)[39m
+[2m      Tests [22m [1m[32m3 passed[39m[22m[2m | [22m[33m1 skipped[39m[90m (4)[39m
+[2m   Start at [22m 02:36:24
+[2m   Duration [22m 2.23s[2m (transform 56ms, setup 142ms, collect 224ms, tests 84ms, environment 1.07s, prepare 258ms)[22m
+

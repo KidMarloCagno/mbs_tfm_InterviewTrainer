@@ -35,8 +35,8 @@ jobs:
           pnpm vitest run --reporter=verbose > test-output.txt 2>&1 || true
           
           # Extract test counts with better error handling
-          # We want the "Tests" line, not "Test Files", so we use tail to get the final match
-          TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' | tail -1)
+          # We want the "Tests" line, not "Test Files", so we filter explicitly and get the final match
+          TEST_PASSED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ passed' | grep -oE '[0-9]+' | tail -1)
           TEST_PASSED=${TEST_PASSED:-0}
           
           # Try to extract total from the format: "Tests  3 passed | 1 skipped (4)"
@@ -47,9 +47,9 @@ jobs:
           # If TEST_TOTAL is still 0 or empty, try alternative parsing
           if [ -z "$TEST_TOTAL" ] || [ "$TEST_TOTAL" -eq 0 ]; then
             # Fallback: count passed + failed + skipped
-            TEST_FAILED=$(grep -oE '[0-9]+ failed' test-output.txt | grep -oE '[0-9]+' | tail -1)
+            TEST_FAILED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ failed' | grep -oE '[0-9]+' | tail -1)
             TEST_FAILED=${TEST_FAILED:-0}
-            TEST_SKIPPED=$(grep -oE '[0-9]+ skipped' test-output.txt | grep -oE '[0-9]+' | tail -1)
+            TEST_SKIPPED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ skipped' | grep -oE '[0-9]+' | tail -1)
             TEST_SKIPPED=${TEST_SKIPPED:-0}
             TEST_TOTAL=$((TEST_PASSED + TEST_FAILED + TEST_SKIPPED))
           fi
@@ -58,7 +58,7 @@ jobs:
           if [ -z "$TEST_TOTAL" ] || [ "$TEST_TOTAL" -eq 0 ]; then
             echo "::error::Could not parse test results. Check test output below:"
             cat test-output.txt
-            echo "Warning: Could not parse test results. Defaulting to 1 total."
+            echo "::warning::Could not parse test results. Defaulting to 1 total."
             TEST_TOTAL=1
           fi
           
