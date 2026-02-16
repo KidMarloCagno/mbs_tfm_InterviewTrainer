@@ -26,6 +26,56 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
 	 pnpm dev
 	 ```
 
+## Dependency Management
+
+This project uses strict dependency management to ensure consistent versions across all environments.
+
+### Installing Dependencies
+
+```bash
+# Standard installation (uses frozen lockfile by default via .npmrc)
+pnpm install
+```
+
+### Updating Dependencies
+
+```bash
+# Update a specific package
+pnpm update @prisma/client
+
+# Update all packages within semver ranges
+pnpm update
+
+# After updating, commit the updated lockfile
+git add pnpm-lock.yaml
+git commit -m "chore: update dependencies"
+```
+
+### Adding New Packages
+
+```bash
+# Add a new dependency
+pnpm add <package-name>
+
+# Add a dev dependency
+pnpm add -D <package-name>
+
+# The lockfile will be automatically updated
+git add pnpm-lock.yaml package.json
+git commit -m "chore: add <package-name>"
+```
+
+### Troubleshooting
+
+If you encounter lockfile issues:
+```bash
+# Never use --no-frozen-lockfile in CI
+# Instead, update dependencies locally and commit the lockfile:
+pnpm update
+git add pnpm-lock.yaml
+git commit -m "chore: update lockfile"
+```
+
 ## Project Structure
 ```text
 mbs_tfm_InterviewTrainer/
