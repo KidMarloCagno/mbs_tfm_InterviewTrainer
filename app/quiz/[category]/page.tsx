@@ -153,7 +153,7 @@ export default function QuizPage() {
               }}
               style={{ flex: 1 }}
             >
-              Next Question ->
+              Next Question {'->'} 
             </Button>
           ) : null}
         </div>

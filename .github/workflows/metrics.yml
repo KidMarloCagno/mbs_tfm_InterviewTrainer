@@ -32,17 +32,26 @@ jobs:
         id: tests
         run: |
           echo "Running tests..."
-          pnpm test --run --reporter=verbose > test-output.txt 2>&1 || true
+          pnpm vitest run --reporter=verbose > test-output.txt 2>&1 || true
           
           # Extract test counts with better error handling
-          TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' || echo "0")
-          TEST_TOTAL=$(grep -oE '[0-9]+ total' test-output.txt | grep -oE '[0-9]+' || echo "0")
+          # We want the "Tests" line, not "Test Files", so we use tail to get the last match
+          TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' | tail -1)
+          TEST_PASSED=${TEST_PASSED:-0}
+          
+          # Try to extract total from the format: "Tests  3 passed | 1 skipped (4)"
+          # The number in parentheses is the total
+          TEST_TOTAL=$(grep -E 'Tests.*passed' test-output.txt | grep -oE '\([0-9]+\)' | grep -oE '[0-9]+')
+          TEST_TOTAL=${TEST_TOTAL:-0}
           
           # If TEST_TOTAL is still 0 or empty, try alternative parsing
           if [ -z "$TEST_TOTAL" ] || [ "$TEST_TOTAL" -eq 0 ]; then
-            # Fallback: count passed + failed
-            TEST_FAILED=$(grep -oE '[0-9]+ failed' test-output.txt | grep -oE '[0-9]+' || echo "0")
-            TEST_TOTAL=$((TEST_PASSED + TEST_FAILED))
+            # Fallback: count passed + failed + skipped
+            TEST_FAILED=$(grep -oE '[0-9]+ failed' test-output.txt | grep -oE '[0-9]+' | tail -1)
+            TEST_FAILED=${TEST_FAILED:-0}
+            TEST_SKIPPED=$(grep -oE '[0-9]+ skipped' test-output.txt | grep -oE '[0-9]+' | tail -1)
+            TEST_SKIPPED=${TEST_SKIPPED:-0}
+            TEST_TOTAL=$((TEST_PASSED + TEST_FAILED + TEST_SKIPPED))
           fi
           
           # Final safety check to prevent division by zero

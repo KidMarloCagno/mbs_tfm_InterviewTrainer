@@ -52,7 +52,7 @@ export default async function DashboardPage() {
             </p>
           </div>
           <div className="ui-badge mono" style={{ marginTop: '.5rem' }}>
-            Tier Path: Junior -> Architect
+            Tier Path: Junior {'->'} Architect
           </div>
         </div>
 
