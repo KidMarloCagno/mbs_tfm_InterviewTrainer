@@ -35,7 +35,7 @@ jobs:
           pnpm vitest run --reporter=verbose > test-output.txt 2>&1 || true
           
           # Extract test counts with better error handling
-          # We want the "Tests" line, not "Test Files", so we use tail to get the last match
+          # We want the "Tests" line, not "Test Files", so we use tail to get the final match
           TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' | tail -1)
           TEST_PASSED=${TEST_PASSED:-0}
           
@@ -56,6 +56,8 @@ jobs:
           
           # Final safety check to prevent division by zero
           if [ -z "$TEST_TOTAL" ] || [ "$TEST_TOTAL" -eq 0 ]; then
+            echo "::error::Could not parse test results. Check test output below:"
+            cat test-output.txt
             echo "Warning: Could not parse test results. Defaulting to 1 total."
             TEST_TOTAL=1
           fi
