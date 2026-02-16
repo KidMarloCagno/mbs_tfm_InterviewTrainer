@@ -32,12 +32,36 @@ jobs:
         id: tests
         run: |
           echo "Running tests..."
-          pnpm test --run --reporter=verbose > test-output.txt 2>&1 || true
-          TEST_PASSED=$(grep -oE '[0-9]+ passed' test-output.txt | grep -oE '[0-9]+' || echo "0")
-          TEST_TOTAL=$(grep -oE 'Tests.*[0-9]+ passed' test-output.txt | tail -1 | grep -oE '[0-9]+' | head -1 || echo "1")
-          TEST_RATE=$((TEST_PASSED * 100 / TEST_TOTAL))
+          pnpm vitest run > test-output.txt 2>&1 || true
+          
+          # Debug: Show test output
+          echo "=== Test Output ==="
+          cat test-output.txt
+          echo "==================="
+          
+          # Extract metrics from Vitest output format: "Tests  3 passed | 1 skipped (4)"
+          TEST_PASSED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ passed' | grep -oE '[0-9]+' || echo "0")
+          TEST_FAILED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ failed' | grep -oE '[0-9]+' || echo "0")
+          TEST_SKIPPED=$(grep 'Tests' test-output.txt | grep -oE '[0-9]+ skipped' | grep -oE '[0-9]+' || echo "0")
+          
+          # Extract total from parentheses: "(4)"
+          TEST_TOTAL=$(grep 'Tests' test-output.txt | grep -oE '\([0-9]+\)' | grep -oE '[0-9]+' || echo "0")
+          
+          # Fallback: sum passed + failed + skipped if total not found
+          if [ "${TEST_TOTAL:-0}" -eq 0 ]; then
+            TEST_TOTAL=$((${TEST_PASSED:-0} + ${TEST_FAILED:-0} + ${TEST_SKIPPED:-0}))
+          fi
+          
+          # Ensure we don't divide by zero
+          if [ "${TEST_TOTAL:-0}" -eq 0 ]; then
+            echo "::error::No tests found in output"
+            cat test-output.txt
+            exit 1
+          fi
+          
+          TEST_RATE=$((${TEST_PASSED:-0} * 100 / ${TEST_TOTAL:-1}))
           echo "test_rate=$TEST_RATE" >> $GITHUB_OUTPUT
-          echo "Test Success Rate: $TEST_RATE% ($TEST_PASSED/$TEST_TOTAL)"
+          echo "Test Success Rate: $TEST_RATE% (${TEST_PASSED:-0}/${TEST_TOTAL:-0})"
 
           if [ "$TEST_RATE" -lt 95 ]; then
             echo "RED FLAG: Test success rate below 95%"
