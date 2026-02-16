@@ -9,11 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.1] - 2026-02-15
 
+
 ### Fixed
 - Removed invalid `explanation` field access from question set mapping to fix strict TypeScript builds
 - Added explicit typing for JSON question sets to preserve strict type safety
 - Excluded seed scripts from app type-check scope to prevent Prisma client generation issues from breaking CI builds
 - Disabled build-time ESLint execution in Next.js config so builds are not blocked when ESLint is unavailable in CI
+
 
 ## [0.1.0] - 2026-02-14
 

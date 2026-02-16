@@ -156,5 +156,25 @@ When making changes, the AI MUST:
 
 ---
 
-## 8. Prompt de Inicio Rápido para la IA
+## 8. Reglas de Calidad, Testing y CI
+
+### 8.1 Reglas Generales
+- Usar **pnpm** para instalar dependencias y ejecutar scripts.
+- Evitar implementar ejercicios de ejemplo o prompts de practica.
+- Aplicar cambios en incrementos pequenos y verificables.
+
+### 8.2 Estrategia de Testing
+- **Unit Tests (Vitest):** funciones puras como `lib/sm2.ts`.
+- **Component Tests (React Testing Library):** `components/ui/` y `components/game/`.
+- **E2E (Playwright):** flujo feliz (seleccion de tema -> seleccion de categoria -> completar sesion).
+- **Integracion Prisma:** usar `DATABASE_URL_TEST` para entorno aislado.
+
+### 8.3 Calidad y Automatizacion
+- Ejecutar `pnpm test --run`, `pnpm lint` y `pnpm tsc --noEmit` antes de publicar cambios.
+- Mantener workflow de metricas en GitHub Actions para test, build y lint.
+- Registrar deuda tecnica con comentarios `TODO`.
+
+---
+
+## 9. Prompt de Inicio Rapido para la IA
 *"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"*
