@@ -55,6 +55,9 @@ mbs_tfm_InterviewTrainer/
 - Spaced repetition (SM-2) logic for future review scheduling.
 - Score tracking and session completion summary.
 - Toggle between Autumn, Neon, and Summer themes.
+- Auth.js credentials login gate before dashboard access.
+- Fixed-position logout button on the dashboard.
+- Logout confirmation prompt.
 - JSON-driven question sets for rapid content iteration.
 - Prisma schema for user progress and question metadata.
 

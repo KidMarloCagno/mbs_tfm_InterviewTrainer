@@ -65,7 +65,9 @@ export function QuizSimple({ question, onAnswered, title = "Quick Quiz" }: QuizS
         })}
 
         <div className={`feedback ${isCorrect && isAnswered ? 'feedback-success' : ''}`.trim()}>
-          <p style={{ margin: 0, fontWeight: 600 }}>{feedbackText}</p>
+          <p style={{ margin: 0, fontWeight: 600 }} className={!isAnswered ? 'feedback-callout' : undefined}>
+            {feedbackText}
+          </p>
           {isAnswered ? (
             <p className="text-muted" style={{ marginBottom: 0 }}>
               Explanation: {question.explanation ?? `The correct answer is "${question.answer}".`}

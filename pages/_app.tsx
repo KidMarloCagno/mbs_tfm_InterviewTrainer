@@ -11,7 +11,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-    const nextTheme: ThemeMode = storedTheme === 'neon' || storedTheme === 'summer' ? storedTheme : 'original';
+    const nextTheme: ThemeMode =
+      storedTheme === 'original' || storedTheme === 'neon' || storedTheme === 'summer' ? storedTheme : 'neon';
     setTheme(nextTheme);
     document.documentElement.dataset.theme = nextTheme;
   }, []);

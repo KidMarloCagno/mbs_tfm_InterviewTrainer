@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-02-15
+
+### Fixed
+- Added App Router quiz route to avoid 404s from the dashboard
+
+## [0.2.3] - 2026-02-15
+
+### Added
+- Logout confirmation prompt with neon styling
+
+## [0.2.2] - 2026-02-15
+
+### Added
+- Fixed-position logout button on the dashboard
+
+## [0.2.1] - 2026-02-15
+
+### Fixed
+- Switched Auth.js setup to stable NextAuth v4 and Pages API route
+
+## [0.2.0] - 2026-02-15
+
+### Added
+- Auth.js credentials login gate with App Router entry flow
+- Cyberpunk login screen with animated logo and neon styling
+- Summer/Neon/Autumn theme selection in the dashboard
+
 ## [0.1.1] - 2026-02-15
 
 

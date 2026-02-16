@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+"use client";
+
+import { useEffect, useMemo, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 import { GameEngine } from '@/components/game/GameEngine';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,8 +11,9 @@ import { useGameStore } from '@/store/useGameStore';
 
 export default function QuizPage() {
   const router = useRouter();
-  const { category } = router.query;
-  const categoryName = typeof category === 'string' ? decodeURIComponent(category) : '';
+  const params = useParams();
+  const rawCategory = typeof params?.category === 'string' ? params.category : '';
+  const categoryName = useMemo(() => (rawCategory ? decodeURIComponent(rawCategory) : ''), [rawCategory]);
   const [loading, setLoading] = useState(true);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
 
@@ -42,10 +45,14 @@ export default function QuizPage() {
     return (
       <div className="app-shell" style={{ display: 'grid', placeItems: 'center' }}>
         <Card style={{ maxWidth: 500 }}>
-          <CardHeader><CardTitle>No questions available</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle>No questions available</CardTitle>
+          </CardHeader>
           <CardContent>
             <p className="text-muted">There are no questions for {categoryName} yet.</p>
-            <Button onClick={() => router.push('/')} className="ui-button-block">Back to Topics</Button>
+            <Button onClick={() => router.push('/dashboard')} className="ui-button-block">
+              Back to Topics
+            </Button>
           </CardContent>
         </Card>
       </div>
@@ -57,12 +64,33 @@ export default function QuizPage() {
     return (
       <div className="app-shell" style={{ display: 'grid', placeItems: 'center' }}>
         <Card style={{ maxWidth: 500 }}>
-          <CardHeader><CardTitle className="mono">Session Complete · Tier Progress Updated</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="mono">Session Complete · Tier Progress Updated</CardTitle>
+          </CardHeader>
           <CardContent style={{ display: 'grid', gap: '.75rem' }}>
-            <p style={{ margin: 0, fontSize: '2rem', fontWeight: 800, color: 'var(--secondary)' }}>{score}/{sessionQuestions.length}</p>
+            <p style={{ margin: 0, fontSize: '2rem', fontWeight: 800, color: 'var(--secondary)' }}>
+              {score}/{sessionQuestions.length}
+            </p>
             <p className="text-muted" style={{ margin: 0 }}>Precision: {percentage}%</p>
-            <Button className="ui-button-block" onClick={() => { resetSession(); router.push('/'); }}>Back to Topics</Button>
-            <Button className="ui-button-block" variant="outline" onClick={() => { resetSession(); window.location.reload(); }}>Run Again</Button>
+            <Button
+              className="ui-button-block"
+              onClick={() => {
+                resetSession();
+                router.push('/dashboard');
+              }}
+            >
+              Back to Topics
+            </Button>
+            <Button
+              className="ui-button-block"
+              variant="outline"
+              onClick={() => {
+                resetSession();
+                window.location.reload();
+              }}
+            >
+              Run Again
+            </Button>
           </CardContent>
         </Card>
       </div>
@@ -79,14 +107,20 @@ export default function QuizPage() {
           <div className="header-row">
             <div>
               <h1 className="mono" style={{ margin: 0 }}>{categoryName}</h1>
-              <p className="text-muted" style={{ margin: '.2rem 0 0' }}>Question {currentQuestionIndex + 1} / {sessionQuestions.length}</p>
+              <p className="text-muted" style={{ margin: '.2rem 0 0' }}>
+                Question {currentQuestionIndex + 1} / {sessionQuestions.length}
+              </p>
             </div>
             <div style={{ textAlign: 'right' }}>
-              <div className="mono" style={{ color: 'var(--secondary)', fontSize: '1.35rem', fontWeight: 700 }}>⚡ Uptime {score}</div>
+              <div className="mono" style={{ color: 'var(--secondary)', fontSize: '1.35rem', fontWeight: 700 }}>
+                ⚡ Uptime {score}
+              </div>
               <p className="text-muted" style={{ margin: '.2rem 0 0' }}>Correct answers</p>
             </div>
           </div>
-          <div style={{ marginTop: '.8rem' }}><Progress value={progressPercent} /></div>
+          <div style={{ marginTop: '.8rem' }}>
+            <Progress value={progressPercent} />
+          </div>
         </div>
 
         <div style={{ marginBottom: '1rem' }} key={currentQuestion.id}>
@@ -108,9 +142,19 @@ export default function QuizPage() {
         </div>
 
         <div style={{ display: 'flex', gap: '.75rem' }}>
-          <Button onClick={() => router.push('/')} variant="outline" style={{ flex: 1 }}>Exit Session</Button>
+          <Button onClick={() => router.push('/dashboard')} variant="outline" style={{ flex: 1 }}>
+            Exit Session
+          </Button>
           {currentQuestionIndex < sessionQuestions.length - 1 && lastAnswerCorrect === false ? (
-            <Button onClick={() => { setLastAnswerCorrect(null); nextQuestion(); }} style={{ flex: 1 }}>Next Question →</Button>
+            <Button
+              onClick={() => {
+                setLastAnswerCorrect(null);
+                nextQuestion();
+              }}
+              style={{ flex: 1 }}
+            >
+              Next Question ->
+            </Button>
           ) : null}
         </div>
       </div>
