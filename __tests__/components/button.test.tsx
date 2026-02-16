@@ -16,6 +16,7 @@ describe('Button', () => {
 
     const button = screen.getByRole('button', { name: /start practice/i });
     expect(button).toBeInTheDocument();
+    expect(button).toHaveClass('ui-button');
     expect(button).toHaveClass('ui-button-outline');
 
     await user.click(button);
