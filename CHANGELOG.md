@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-02-17
+
+### Added
+- LICENSE file (MIT License)
+- CONTRIBUTING.md with contribution guidelines
+- CODE_OF_CONDUCT.md for community guidelines
+- SECURITY.md with security policy and vulnerability reporting
+- Repository metadata in package.json (repository, bugs, homepage URLs)
+
+### Changed
+- Updated README.md with enhanced documentation for public repository
+- Added badges and improved formatting in README
+- Removed "private": true from package.json to allow public npm publishing
+- Bumped version to 0.3.0 for public release
+
+### Security
+- Documented hardcoded demo credentials security concern in SECURITY.md
+- Added security best practices for production deployment
+
 ## [0.2.4] - 2026-02-15
 
 ### Fixed

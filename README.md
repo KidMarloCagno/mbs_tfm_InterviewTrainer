@@ -1,30 +1,68 @@
-# mbs_tfm_InterviewTrainer
+# InterviewTrainer 🎯
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+
 InterviewTrainer is a gamified IT interview practice app that blends active recall with spaced repetition. It exists to help learners drill core topics in short, high-focus sessions while tracking performance across categories. The project provides a polished quiz flow today and a Prisma-backed path for long-term progress tracking.
+
+## 🌟 Features
+
+- **Multiple Question Types**: Quiz Simple, True/False, and Fill the Blank
+- **Spaced Repetition**: SM-2 algorithm for optimal knowledge retention
+- **Theme Customization**: Switch between Autumn, Neon, and Summer themes
+- **Progress Tracking**: Track your performance across different categories
+- **Authentication**: Secure login with NextAuth.js
+- **Responsive Design**: Beautiful UI built with Tailwind CSS
 
 ## Tech Stack
 - Frontend: ![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
 - State: ![Zustand](https://img.shields.io/badge/Zustand-4-654FF0) ![Hookstate](https://img.shields.io/badge/Hookstate-4-1E90FF)
 - Data: ![Prisma](https://img.shields.io/badge/Prisma-5-2D3748) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791)
 
-## Installation & Setup
-1. Clone the repository.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
+   cd mbs_tfm_InterviewTrainer
+   ```
+
 2. Install dependencies:
-	 ```bash
-	 pnpm install
-	 ```
+   ```bash
+   pnpm install
+   ```
+
 3. Configure environment variables:
-	 ```bash
-	 copy .env.example .env
-	 ```
-	 Update `DATABASE_URL`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
+   ```bash
+   cp .env.example .env
+   ```
+   Update `DATABASE_URL`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
+
 4. (Optional) Initialize the database schema if you plan to use Prisma:
-	 ```bash
-	 pnpm prisma:push
-	 ```
+   ```bash
+   pnpm prisma:push
+   ```
+
 5. Start the development server:
-	 ```bash
-	 pnpm dev
-	 ```
+   ```bash
+   pnpm dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+**Demo Credentials:**
+- Username: `QuizView`
+- Password: `Teletubbie`
+
+> ⚠️ **Security Note**: These are demo credentials only. See [SECURITY.md](SECURITY.md) for production deployment guidelines.
 
 ## Project Structure
 ```text
@@ -61,8 +99,42 @@ mbs_tfm_InterviewTrainer/
 - JSON-driven question sets for rapid content iteration.
 - Prisma schema for user progress and question metadata.
 
-## Useful Scripts
-- `pnpm dev`: Start the development server.
-- `pnpm build`: Build the production bundle.
-- `pnpm start`: Run the production server.
-- `pnpm prisma:studio`: Explore data with Prisma Studio.
+## 📜 Available Scripts
+
+- `pnpm dev`: Start the development server
+- `pnpm build`: Build the production bundle
+- `pnpm start`: Run the production server
+- `pnpm test`: Run unit tests with Vitest
+- `pnpm test:e2e`: Run end-to-end tests with Playwright
+- `pnpm lint`: Run ESLint for code quality
+- `pnpm prisma:studio`: Explore data with Prisma Studio
+- `pnpm prisma:push`: Push Prisma schema to the database
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
+- How to set up your development environment
+- Our coding standards and conventions
+- How to submit pull requests
+- How to add new question sets
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+## 🔒 Security
+
+If you discover a security vulnerability, please review our [Security Policy](SECURITY.md) for responsible disclosure guidelines.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- State management with [Zustand](https://github.com/pmndrs/zustand)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Question data inspired by common IT interview topics
+
+## 📧 Contact
+
+For questions or feedback, please open an issue on GitHub.

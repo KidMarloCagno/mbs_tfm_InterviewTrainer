@@ -1,10 +1,17 @@
 {
   "name": "mbs-tfm-interview-trainer",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Gamified IT interview practice platform with spaced repetition and active recall",
-  "private": true,
   "author": "Joaquin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer/issues"
+  },
+  "homepage": "https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer#readme",
   "keywords": [
     "interview",
     "learning",
