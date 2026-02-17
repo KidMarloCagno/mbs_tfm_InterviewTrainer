@@ -110,6 +110,36 @@ mbs_tfm_InterviewTrainer/
 - `pnpm prisma:studio`: Explore data with Prisma Studio
 - `pnpm prisma:push`: Push Prisma schema to the database
 
+## ▲ Vercel Deployment Notes
+
+- This project pins pnpm via `packageManager` in `package.json` to ensure CI and local environments use the same package manager version.
+- Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
+- If deployment fails with `ERR_PNPM_OUTDATED_LOCKFILE`, run this locally from project root:
+
+	```bash
+	pnpm install
+	pnpm install --frozen-lockfile
+	```
+
+- Commit and push both `package.json` and `pnpm-lock.yaml` if either changes.
+- In Vercel Project Settings, ensure the Root Directory points to this app folder.
+
+### Pre-deploy Checklist
+
+- **Root directory**: `mbs_tfm_InterviewTrainer`
+- **Install command**: `pnpm install`
+- **Build command**: `pnpm build`
+- **Required environment variables**:
+	- `DATABASE_URL`
+	- `NEXTAUTH_SECRET`
+	- `NEXTAUTH_URL`
+	- Template file: `.env.vercel.example`
+- **Lockfile validation**:
+	- `pnpm install --frozen-lockfile`
+- **Quality gate (recommended)**:
+	- `pnpm test`
+	- `pnpm lint`
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
