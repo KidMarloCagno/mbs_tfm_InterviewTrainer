@@ -48,9 +48,9 @@ async function ensureDatabaseExists(adminUrl: string, dbName: string): Promise<v
   });
 
   try {
-    const rows = (await adminClient.$queryRawUnsafe(
-      `SELECT datname FROM pg_database WHERE datname = '${dbName}' LIMIT 1`,
-    )) as Array<{ datname: string }>;
+    const rows = await adminClient.$queryRaw<Array<{ datname: string }>>`
+      SELECT datname FROM pg_database WHERE datname = ${dbName} LIMIT 1
+    `;
 
     if (rows.length === 0) {
       await adminClient.$executeRawUnsafe(`CREATE DATABASE "${dbName}"`);
