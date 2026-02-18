@@ -44,11 +44,12 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
    ```bash
    cp .env.example .env
    ```
-   Update `DATABASE_URL`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
+	Update `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
 
-4. (Optional) Initialize the database schema if you plan to use Prisma:
+4. Apply Prisma migrations and seed:
    ```bash
-   pnpm prisma:push
+	pnpm prisma:migrate:deploy
+	pnpm prisma:seed
    ```
 
 5. Start the development server:
@@ -104,11 +105,24 @@ mbs_tfm_InterviewTrainer/
 - `pnpm dev`: Start the development server
 - `pnpm build`: Build the production bundle
 - `pnpm start`: Run the production server
+- `pnpm test:db:prepare`: Create/prepare `quizview_test` and apply Prisma migrations
 - `pnpm test`: Run unit tests with Vitest
 - `pnpm test:e2e`: Run end-to-end tests with Playwright
 - `pnpm lint`: Run ESLint for code quality
 - `pnpm prisma:studio`: Explore data with Prisma Studio
 - `pnpm prisma:push`: Push Prisma schema to the database
+
+### Recommended Test Workflow
+
+For local integration reliability with PostgreSQL:
+
+```bash
+pnpm test:db:prepare
+pnpm test
+```
+
+- `pnpm test:db:prepare` creates `quizview_test` (if missing) and applies Prisma migrations.
+- `pnpm test` runs the test suite after the test database is ready.
 
 ## ▲ Vercel Deployment Notes
 
@@ -130,7 +144,8 @@ mbs_tfm_InterviewTrainer/
 - **Install command**: `pnpm install`
 - **Build command**: `pnpm build`
 - **Required environment variables**:
-	- `DATABASE_URL`
+	- `POSTGRES_PRISMA_URL`
+	- `POSTGRES_URL_NON_POOLING`
 	- `NEXTAUTH_SECRET`
 	- `NEXTAUTH_URL`
 	- Template file: `.env.vercel.example`

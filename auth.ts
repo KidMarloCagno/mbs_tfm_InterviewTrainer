@@ -1,10 +1,12 @@
 import type { NextAuthOptions } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
+import bcrypt from 'bcryptjs';
 import { z } from 'zod';
+import { prisma } from '@/lib/prisma';
 
 const credentialsSchema = z.object({
-  username: z.string().min(1),
-  password: z.string().min(1),
+  username: z.string().trim().min(1).max(64),
+  password: z.string().min(1).max(128),
 });
 
 export const authOptions: NextAuthOptions = {
@@ -28,11 +30,30 @@ export const authOptions: NextAuthOptions = {
 
         const { username, password } = parsed.data;
 
-        if (username === 'QuizView' && password === 'Teletubbie') {
-          return { id: 'quizview', name: 'QuizView' };
+        const user = await prisma.user.findUnique({
+          where: { username },
+          select: {
+            id: true,
+            username: true,
+            email: true,
+            passwordHash: true,
+          },
+        });
+
+        if (!user) {
+          return null;
         }
 
-        return null;
+        const isValid = await bcrypt.compare(password, user.passwordHash);
+        if (!isValid) {
+          return null;
+        }
+
+        return {
+          id: user.id,
+          name: user.username,
+          email: user.email,
+        };
       },
     }),
   ],

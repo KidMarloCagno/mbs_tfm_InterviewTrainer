@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `test:db:prepare` command to automatically create `quizview_test` and apply Prisma migrations before integration tests
+- `scripts/prepare-test-db.ts` utility to bootstrap the test database in local Docker/PostgreSQL environments
+
+### Changed
+- Normalized `id` fields in `prisma/data/sets/database.json` so all question records are seedable and uniquely addressable
+- Updated `.env.test.example` with local Docker PostgreSQL defaults and optional Prisma URL aliases
+- Updated `SECURITY.md` to reflect current database-backed bcrypt authentication flow (removed outdated hardcoded-credentials example)
+- Updated `AGENTS.md` testing guidance with mandatory test DB preparation step
+
+## [1.0.0] - 2026-02-17
+
+### Added
+- Credentials authentication backed by Prisma user records and bcrypt password verification
+- Prisma singleton client helper for stable DB connections in Next.js runtime
+- Seeded default `QuizView` user with hashed password
+- Prisma seed configuration using `tsx`
+
+### Changed
+- Migrated Prisma datasource to Vercel Postgres standard variables: `POSTGRES_PRISMA_URL` and `POSTGRES_URL_NON_POOLING`
+- Extended `User` model with `username` and `passwordHash` for credential-based auth
+- Updated build script to run `prisma migrate deploy` before `next build`
+- Updated `.env.example` and `.env.vercel.example` to Postgres-based configuration
+
+### Security
+- Replaced hardcoded plain-text credential check with hashed password comparison
+
 ## [0.3.0] - 2026-02-17
 
 ### Added

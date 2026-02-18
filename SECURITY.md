@@ -34,25 +34,25 @@ When reporting a vulnerability, please include:
 
 ### Demo Credentials
 
-**⚠️ IMPORTANT SECURITY NOTE**: The current version uses hardcoded demo credentials in `auth.ts`:
+**⚠️ IMPORTANT SECURITY NOTE**: The application seeds a demo user for development/local testing.
+Credentials are validated against the database using bcrypt hash comparison.
 
 ```typescript
-if (username === 'QuizView' && password === 'Teletubbie') {
-  return { id: 'quizview', name: 'QuizView' };
-}
+const isValid = await bcrypt.compare(password, user.passwordHash);
+if (!isValid) return null;
 ```
 
-**This is for demonstration purposes only and should NOT be used in production.**
+**The seeded demo password is for demonstration only and should NOT be used in production.**
 
 ### Before Production Deployment
 
 If you plan to deploy this application to production, you **MUST**:
 
-1. **Remove hardcoded credentials** from `auth.ts`
-2. **Implement proper authentication**:
+1. **Use production-grade authentication policy**:
    - Use OAuth providers (GitHub, Google, etc.)
-   - Implement database-backed user management
-   - Use bcrypt or similar for password hashing
+   - Keep database-backed user management
+   - Keep bcrypt (or stronger) password hashing
+2. **Rotate or remove demo seeded credentials** from production data
 3. **Set up environment variables** properly:
    - Generate a strong `NEXTAUTH_SECRET` (minimum 32 characters)
    - Never commit `.env` files to the repository
@@ -67,7 +67,8 @@ If you plan to deploy this application to production, you **MUST**:
 The following environment variables should be kept secure:
 
 - `NEXTAUTH_SECRET`: Used for JWT signing and encryption
-- `DATABASE_URL`: Database connection string (may contain credentials)
+- `POSTGRES_PRISMA_URL`: Pooled Prisma database connection string (may contain credentials)
+- `POSTGRES_URL_NON_POOLING`: Direct database connection string for migrations (may contain credentials)
 
 **Never commit these to version control.**
 
@@ -84,8 +85,8 @@ When using Prisma with PostgreSQL in production:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.2.x   | ✅ Yes (current)   |
-| 0.1.x   | ❌ No              |
+| 1.0.x   | ✅ Yes (current)   |
+| 0.x.x   | ❌ No              |
 
 Only the latest minor version receives security updates.
 
