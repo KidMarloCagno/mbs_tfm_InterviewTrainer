@@ -4,7 +4,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 enum QuestionType {
@@ -21,7 +22,9 @@ enum DifficultyLevel {
 
 model User {
   id           String         @id @default(cuid())
+  username     String         @unique
   email        String         @unique
+  passwordHash String
   image        String?
   streakCount  Int            @default(0)
   lastActivity DateTime?

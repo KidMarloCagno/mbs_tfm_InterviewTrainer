@@ -168,6 +168,7 @@ When making changes, the AI MUST:
 - **Component Tests (React Testing Library):** `components/ui/` y `components/game/`.
 - **E2E (Playwright):** flujo feliz (seleccion de tema -> seleccion de categoria -> completar sesion).
 - **Integracion Prisma:** usar `DATABASE_URL_TEST` para entorno aislado.
+- **Preparacion DB de test:** ejecutar `pnpm test:db:prepare` para crear `quizview_test` y aplicar migraciones antes de tests de integracion.
 
 ### 8.3 Calidad y Automatizacion
 - Ejecutar `pnpm test --run`, `pnpm lint` y `pnpm tsc --noEmit` antes de publicar cambios.

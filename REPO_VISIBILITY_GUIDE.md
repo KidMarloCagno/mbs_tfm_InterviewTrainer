@@ -94,20 +94,20 @@ Consider adding protection for the `main` branch:
 ### Demo Credentials Notice
 The repository contains hardcoded demo credentials in `auth.ts`:
 ```typescript
-if (username === 'QuizView' && password === 'Teletubbie') {
-  return { id: 'quizview', name: 'QuizView' };
-}
+const isValid = await bcrypt.compare(password, user.passwordHash);
+if (!isValid) return null;
 ```
 
-**This is acceptable for demonstration purposes, but users must be warned:**
+**Current security posture:**
+- ✅ Password verification uses bcrypt hash comparison
 - ✅ Security notice is included in SECURITY.md
-- ✅ Warning is included in README.md
-- ✅ Clear documentation that this is for demo only
+- ✅ Deployment instructions require secure environment variables
 
 ### Environment Variables
 Ensure your deployed instances use proper environment variables:
 - `NEXTAUTH_SECRET`: Strong random string (32+ characters)
-- `DATABASE_URL`: Secure database connection
+- `POSTGRES_PRISMA_URL`: Secure pooled database connection
+- `POSTGRES_URL_NON_POOLING`: Secure direct connection for migrations
 - Never commit `.env` files to the repository
 
 ## Rollback Plan

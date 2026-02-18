@@ -1,5 +1,6 @@
 [
   {
+    "id": "db-q001",
     "question": "What is a Database?",
     "answer": "A database is a structured collection of data for easy access, management, and updating.",
     "options": [
@@ -13,6 +14,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q002",
     "question": "What is a DBMS?",
     "answer": "A software system that allows users to define, create, maintain and control access to the database.",
     "options": [
@@ -26,6 +28,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q003",
     "question": "What is SQL?",
     "answer": "Structured Query Language, used for managing and manipulating data in relational databases.",
     "options": [
@@ -39,6 +42,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q004",
     "question": "What are the advantages of DBMS?",
     "answer": "Data sharing, data security, data integration, and reduced data redundancy.",
     "options": [
@@ -52,6 +56,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q005",
     "question": "What is the difference between a Database and a DBMS?",
     "answer": "The Database is the collection of data, while the DBMS is the software used to manage that data.",
     "options": [
@@ -65,6 +70,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q006",
     "question": "What is a Primary Key?",
     "answer": "A unique identifier for each record in a table that cannot contain NULL values.",
     "options": [
@@ -78,6 +84,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q007",
     "question": "What is a Foreign Key?",
     "answer": "A field in one table that uniquely identifies a row of another table or the same table.",
     "options": [
@@ -91,6 +98,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q008",
     "question": "What is Normalization?",
     "answer": "The process of organizing data to minimize redundancy and dependency.",
     "options": [
@@ -104,6 +112,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q009",
     "question": "What is a Join in SQL?",
     "answer": "An operation used to combine rows from two or more tables based on a related column.",
     "options": [
@@ -117,6 +126,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q010",
     "question": "What is a Transaction?",
     "answer": "A sequence of operations performed as a single logical unit of work.",
     "options": [
@@ -130,6 +140,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q011",
     "question": "What is the main purpose of 'Checkpoint' in a database system?",
     "answer": "To reduce the time required for recovery in case of a system crash by saving the current state.",
     "options": [
@@ -143,6 +154,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q012",
     "question": "What is 'Transparent Data Encryption' (TDE)?",
     "answer": "A technology used to encrypt database files at rest on the hard drive.",
     "options": [
@@ -156,6 +168,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q013",
     "question": "Which SQL statement is used to remove all records from a table without logging individual row deletions?",
     "answer": "TRUNCATE",
     "options": [
@@ -169,6 +182,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q014",
     "question": "What is the difference between 'DELETE' and 'TRUNCATE' commands?",
     "answer": "DELETE is a DML command that can be rolled back; TRUNCATE is a DDL command that is faster and cannot be rolled back easily.",
     "options": [
@@ -182,6 +196,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q015",
     "question": "What is a 'Data Warehouse'?",
     "answer": "A central repository of data accumulated from a wide range of sources for analysis and reporting.",
     "options": [
@@ -195,6 +210,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q016",
     "question": "In the context of ACID properties, what does 'Atomicity' mean?",
     "answer": "It ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
     "options": [
@@ -208,6 +224,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q017",
     "question": "What is a 'Stored Procedure'?",
     "answer": "A prepared SQL code that you can save and reuse multiple times.",
     "options": [
@@ -221,6 +238,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q018",
     "question": "What is a 'View' in SQL?",
     "answer": "A virtual table based on the result-set of an SQL statement.",
     "options": [
@@ -234,6 +252,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q019",
     "question": "What is an Entity-Relationship (E-R) Model?",
     "answer": "A diagrammatic approach to database design where real-world objects are represented as entities and their relationships are defined.",
     "options": [
@@ -247,6 +266,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q020",
     "question": "What is an Entity in an ER Model?",
     "answer": "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
     "options": [
@@ -261,6 +281,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q021",
     "question": "What is an Attribute?",
     "answer": "Attributes are the characteristics or properties of an entity. For a Student entity, Name and Age are attributes.",
     "options": [
@@ -274,6 +295,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q022",
     "question": "What is a Relationship in an ER model?",
     "answer": "A relationship is an association among several entities.",
     "options": [
@@ -287,6 +309,7 @@
     "level": "Beginner"
   },
   {
+    "id": "db-q023",
     "question": "What is the 'Self-Description' property of a database?",
     "answer": "The database contains not only the data but also the definition/metadata of the data.",
     "options": [
@@ -300,6 +323,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q024",
     "question": "What are 'Constraints' in a database?",
     "answer": "Rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
     "options": [
@@ -313,6 +337,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q025",
     "question": "What is the difference between a 'Between' and 'In' operator?",
     "answer": "BETWEEN is used to retrieve rows based on a range of values, while IN is used to check for values inside a specific list.",
     "options": [
@@ -326,6 +351,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q026",
     "question": "What is the 'Normalization' rule for 1NF (First Normal Form)?",
     "answer": "Each column must contain atomic (indivisible) values and there should be no repeating groups.",
     "options": [
@@ -339,6 +365,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q027",
     "question": "What is the 'Normalization' rule for 2NF (Second Normal Form)?",
     "answer": "It must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
     "options": [
@@ -352,6 +379,7 @@
     "level": "Advanced"
   },
   {
+    "id": "db-q028",
     "question": "What is a 'Composite Key'?",
     "answer": "A primary key that consists of two or more columns to uniquely identify a row.",
     "options": [
@@ -365,6 +393,7 @@
     "level": "Intermediate"
   },
   {
+    "id": "db-q029",
     "question": "What is 'Denormalization'?",
     "answer": "The process of adding redundant data to a database to improve read performance.",
     "options": [
