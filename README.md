@@ -147,8 +147,12 @@ pnpm test
 	- `POSTGRES_PRISMA_URL`
 	- `POSTGRES_URL_NON_POOLING`
 	- `NEXTAUTH_SECRET`
+	- `AUTH_SECRET`
 	- `NEXTAUTH_URL`
-	- Template file: `.env.vercel.example`
+	- Template files: `.env.vercel.example`, `.env.production.example`
+	- Scope rules:
+		- `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, `AUTH_SECRET`: set for Development, Preview, and Production.
+		- `NEXTAUTH_URL`: set for Production only.
 - **Lockfile validation**:
 	- `pnpm install --frozen-lockfile`
 - **Quality gate (recommended)**:

@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-# Run pnpm version check before commit
 pnpm run check-versions
+pnpm run lint-staged
+pnpm run lint
+pnpm run typecheck
