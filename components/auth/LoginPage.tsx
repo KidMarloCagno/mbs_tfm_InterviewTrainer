@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import loginLogo from '@/VisualIdentity/loginLogo.png';
-import { LoginForm } from '@/components/auth/LoginForm';
+import Image from "next/image";
+import loginLogo from "@/VisualIdentity/loginLogo.png";
+import { LoginForm } from "@/components/auth/LoginForm";
+import { SignUpSection } from "@/components/auth/SignUpSection";
 
 export function LoginPage() {
   return (
@@ -16,9 +17,12 @@ export function LoginPage() {
             priority
           />
           <h1 className="text-2xl font-semibold text-[#f0f6fc]">QuizView</h1>
-          <p className="text-sm text-[#8b949e]">Access your cyberpractice console.</p>
+          <p className="text-sm text-[#8b949e]">
+            Access your cyberpractice console.
+          </p>
         </div>
         <LoginForm />
+        <SignUpSection />
       </div>
     </div>
   );
