@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "prisma migrate deploy && next build",
+    "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "check-versions": "bash scripts/check-pnpm-version.sh",
