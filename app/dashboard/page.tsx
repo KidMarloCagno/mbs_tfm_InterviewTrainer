@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { getServerSession } from 'next-auth/next';
+import { getServerSession } from 'next-auth';
 import { authOptions } from '@/auth';
 import { getAvailableTopics } from '@/lib/questions-data';
 import { ThemeSelect } from '@/components/theme/ThemeSelect';
 import { LogoutButton } from '@/components/auth/LogoutButton';
+
+export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
