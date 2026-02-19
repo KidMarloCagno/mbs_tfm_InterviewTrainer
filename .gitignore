@@ -46,5 +46,6 @@ yarn-error.log*
 # Test outputs
 test-output*.txt
 
-# Auto-generated ESLint config
-.eslintrc.json
+# ESLint
+.vercel
+.env*.local
