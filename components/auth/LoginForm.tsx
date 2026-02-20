@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { signIn } from 'next-auth/react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
 
 const loginSchema = z.object({
-  username: z.string().min(1, 'Username is required.'),
-  password: z.string().min(1, 'Password is required.'),
+  username: z.string().min(1, "Username is required."),
+  password: z.string().min(1, "Password is required."),
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
@@ -28,22 +28,32 @@ export function LoginForm() {
 
   const onSubmit = async (data: LoginFormData) => {
     setFormError(null);
-    const result = await signIn('credentials', {
+    const result = await signIn("credentials", {
       redirect: false,
       username: data.username,
       password: data.password,
     });
 
     if (result?.error) {
-      setFormError('Invalid credentials.');
+      if (result.error === "TooManyAttempts") {
+        setFormError(
+          "Too many sign-in attempts. Please wait 15 minutes before trying again.",
+        );
+      } else {
+        setFormError("Invalid credentials.");
+      }
       return;
     }
 
-    router.replace('/dashboard');
+    router.replace("/dashboard");
   };
 
   return (
-    <form className="mt-6 grid gap-4" onSubmit={handleSubmit(onSubmit)} noValidate>
+    <form
+      className="mt-6 grid gap-4"
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+    >
       <div className="grid gap-1">
         <label htmlFor="username" className="text-sm text-[#8b949e]">
           Username
@@ -53,10 +63,12 @@ export function LoginForm() {
           type="text"
           autoComplete="username"
           className="login-input"
-          {...register('username')}
+          {...register("username")}
           aria-invalid={Boolean(errors.username)}
         />
-        {errors.username ? <p className="text-xs login-error">{errors.username.message}</p> : null}
+        {errors.username ? (
+          <p className="text-xs login-error">{errors.username.message}</p>
+        ) : null}
       </div>
 
       <div className="grid gap-1">
@@ -68,10 +80,12 @@ export function LoginForm() {
           type="password"
           autoComplete="current-password"
           className="login-input"
-          {...register('password')}
+          {...register("password")}
           aria-invalid={Boolean(errors.password)}
         />
-        {errors.password ? <p className="text-xs login-error">{errors.password.message}</p> : null}
+        {errors.password ? (
+          <p className="text-xs login-error">{errors.password.message}</p>
+        ) : null}
       </div>
 
       {formError ? (
@@ -81,7 +95,7 @@ export function LoginForm() {
       ) : null}
 
       <Button type="submit" className="login-button" disabled={isSubmitting}>
-        {isSubmitting ? 'Signing in...' : 'Sign In'}
+        {isSubmitting ? "Signing in..." : "Sign In"}
       </Button>
     </form>
   );

@@ -58,8 +58,13 @@ If you plan to deploy this application to production, you **MUST**:
    - Never commit `.env` files to the repository
    - Use secure environment variable management in production
 4. **Enable HTTPS** for all production deployments
-5. **Set up rate limiting** to prevent brute force attacks
-6. **Implement input validation** for all user inputs
+5. **Rate limiting is implemented** (OWASP A07):
+   - Login: 10 attempts per 15 minutes per IP (`lib/loginRateLimit.ts`, wired into NextAuth `authorize`)
+   - Registration: 5 attempts per 15 minutes per IP (`lib/registerRateLimit.ts`)
+   - **Note**: Uses an in-process in-memory store. On serverless deployments (Vercel) with multiple concurrent instances, replace with a shared store (e.g. Upstash Redis + `@upstash/ratelimit`) for a hard global cap.
+6. **Input validation is implemented** (OWASP A03):
+   - All registration and login fields validated with Zod on both client and server
+   - Availability check endpoint validates input before any DB query
 7. **Keep dependencies updated** to patch known vulnerabilities
 
 ### Environment Variables
@@ -83,10 +88,10 @@ When using Prisma with PostgreSQL in production:
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.x   | ✅ Yes (current)   |
-| 0.x.x   | ❌ No              |
+| Version | Supported        |
+| ------- | ---------------- |
+| 1.0.x   | ✅ Yes (current) |
+| 0.x.x   | ❌ No            |
 
 Only the latest minor version receives security updates.
 

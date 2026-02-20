@@ -1,7 +1,8 @@
-import type { NextAuthOptions } from 'next-auth';
-import Credentials from 'next-auth/providers/credentials';
-import bcrypt from 'bcryptjs';
-import { z } from 'zod';
+import type { NextAuthOptions } from "next-auth";
+import Credentials from "next-auth/providers/credentials";
+import bcrypt from "bcryptjs";
+import { z } from "zod";
+import { checkLoginRateLimit } from "@/lib/loginRateLimit";
 
 const credentialsSchema = z.object({
   username: z.string().trim().min(1).max(64),
@@ -9,25 +10,36 @@ const credentialsSchema = z.object({
 });
 
 export const authOptions: NextAuthOptions = {
-  session: { strategy: 'jwt' },
+  session: { strategy: "jwt" },
   secret: process.env.NEXTAUTH_SECRET ?? process.env.AUTH_SECRET,
   pages: {
-    signIn: '/',
+    signIn: "/",
   },
   providers: [
     Credentials({
-      name: 'Credentials',
+      name: "Credentials",
       credentials: {
-        username: { label: 'Username', type: 'text' },
-        password: { label: 'Password', type: 'password' },
+        username: { label: "Username", type: "text" },
+        password: { label: "Password", type: "password" },
       },
-      authorize: async (credentials) => {
+      authorize: async (credentials, req) => {
+        // --- Rate limiting (OWASP A07 – Brute Force) ---
+        const forwarded = req.headers?.["x-forwarded-for"];
+        const ip =
+          (typeof forwarded === "string"
+            ? forwarded.split(",")[0]
+            : undefined
+          )?.trim() ?? "unknown";
+        if (!checkLoginRateLimit(ip).allowed) {
+          throw new Error("TooManyAttempts");
+        }
+
         const parsed = credentialsSchema.safeParse(credentials);
         if (!parsed.success) {
           return null;
         }
 
-        const { prisma } = await import('@/lib/prisma');
+        const { prisma } = await import("@/lib/prisma");
 
         const { username, password } = parsed.data;
 
@@ -70,8 +82,8 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token }) {
       if (session.user) {
-        session.user.name = token.name ?? session.user.name ?? 'QuizView';
-        session.user.id = token.sub ?? 'quizview';
+        session.user.name = token.name ?? session.user.name ?? "QuizView";
+        session.user.id = token.sub ?? "quizview";
       }
       return session;
     },
