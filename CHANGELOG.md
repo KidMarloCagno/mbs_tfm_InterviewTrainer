@@ -8,35 +8,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - `test:db:prepare` command to automatically create `quizview_test` and apply Prisma migrations before integration tests
 - `scripts/prepare-test-db.ts` utility to bootstrap the test database in local Docker/PostgreSQL environments
+- User registration: Sign Up modal with OWASP A03/A07-compliant validation (Zod client+server schema, bcrypt cost 12, server-side rate limiting)
+- `GET /api/auth/check-availability`: real-time username and email availability endpoint with Zod validation before any DB query
+- Debounced availability checks (400 ms) in SignUpModal with green/red status indicators for username and email fields
+- Live password strength checklist: minimum 12 characters, uppercase, lowercase, digit, and special character — shown as user types
+- Live email format checklist: `@` placement, valid domain, no spaces, no injection characters, max 254 characters (RFC 5321)
+- Login brute-force protection: in-process sliding-window rate limiter — 10 attempts per 15 minutes per IP (`lib/loginRateLimit.ts`)
+- Descriptive lock-out error in the login form: "Too many sign-in attempts. Please wait 15 minutes before trying again."
+- Login page redesigned as a two-column split layout with 280 px logo, cyberpunk scanlines, and white-glowing brand title
+- Dashboard greeting personalised to the authenticated user: "Welcome back, {username}" sourced from JWT session
+- Global version badge fixed at the bottom-left corner of every page (`app/layout.tsx`)
 
 ### Changed
+
 - Normalized `id` fields in `prisma/data/sets/database.json` so all question records are seedable and uniquely addressable
 - Updated `.env.test.example` with local Docker PostgreSQL defaults and optional Prisma URL aliases
 - Updated `SECURITY.md` to reflect current database-backed bcrypt authentication flow (removed outdated hardcoded-credentials example)
 - Updated `AGENTS.md` testing guidance with mandatory test DB preparation step
 
+### Security
+
+- Added per-IP sliding-window rate limiter (10 attempts / 15 min) to the NextAuth `authorize` callback to prevent credential brute-force attacks (OWASP A07)
+- Registration endpoint rate-limited (5 attempts / 15 min per IP) via `lib/registerRateLimit.ts`
+- `/api/auth/check-availability` performs Zod input validation before any database query
+
 ## [1.0.0] - 2026-02-17
 
 ### Added
+
 - Credentials authentication backed by Prisma user records and bcrypt password verification
 - Prisma singleton client helper for stable DB connections in Next.js runtime
 - Seeded default `QuizView` user with hashed password
 - Prisma seed configuration using `tsx`
 
 ### Changed
+
 - Migrated Prisma datasource to Vercel Postgres standard variables: `POSTGRES_PRISMA_URL` and `POSTGRES_URL_NON_POOLING`
 - Extended `User` model with `username` and `passwordHash` for credential-based auth
 - Updated build script to run `prisma migrate deploy` before `next build`
 - Updated `.env.example` and `.env.vercel.example` to Postgres-based configuration
 
 ### Security
+
 - Replaced hardcoded plain-text credential check with hashed password comparison
 
 ## [0.3.0] - 2026-02-17
 
 ### Added
+
 - LICENSE file (MIT License)
 - CONTRIBUTING.md with contribution guidelines
 - CODE_OF_CONDUCT.md for community guidelines
@@ -44,55 +66,62 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Repository metadata in package.json (repository, bugs, homepage URLs)
 
 ### Changed
+
 - Updated README.md with enhanced documentation for public repository
 - Added badges and improved formatting in README
 - Removed "private": true from package.json to allow public npm publishing
 - Bumped version to 0.3.0 for public release
 
 ### Security
+
 - Documented hardcoded demo credentials security concern in SECURITY.md
 - Added security best practices for production deployment
 
 ## [0.2.4] - 2026-02-15
 
 ### Fixed
+
 - Added App Router quiz route to avoid 404s from the dashboard
 
 ## [0.2.3] - 2026-02-15
 
 ### Added
+
 - Logout confirmation prompt with neon styling
 
 ## [0.2.2] - 2026-02-15
 
 ### Added
+
 - Fixed-position logout button on the dashboard
 
 ## [0.2.1] - 2026-02-15
 
 ### Fixed
+
 - Switched Auth.js setup to stable NextAuth v4 and Pages API route
 
 ## [0.2.0] - 2026-02-15
 
 ### Added
+
 - Auth.js credentials login gate with App Router entry flow
 - Cyberpunk login screen with animated logo and neon styling
 - Summer/Neon/Autumn theme selection in the dashboard
 
 ## [0.1.1] - 2026-02-15
 
-
 ### Fixed
+
 - Removed invalid `explanation` field access from question set mapping to fix strict TypeScript builds
 - Added explicit typing for JSON question sets to preserve strict type safety
 - Excluded seed scripts from app type-check scope to prevent Prisma client generation issues from breaking CI builds
 - Disabled build-time ESLint execution in Next.js config so builds are not blocked when ESLint is unavailable in CI
 
-
 ## [0.1.0] - 2026-02-14
 
 ### Added
+
 - Initial project setup with Next.js 14.2.35 and TypeScript
 - Pages Router architecture with dynamic category routing
 - Three question types implementation:
@@ -122,12 +151,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Session management with automatic reset on category change
 
 ### Fixed
+
 - Component state reset between questions using Next.js `key` pattern
 - Category switching bug that kept old session data
 - Removed unused state variables and imports for cleaner codebase
 - Optimized React imports to type-only where applicable
 
 ### Technical Details
+
 - **Framework**: Next.js 14.2.35 (Pages Router)
 - **State Management**: Zustand 4.5.7
 - **Database**: Prisma 5.22.0 with SQLite (development)
@@ -136,6 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **TypeScript**: Strict mode enabled
 
 ### Known Limitations
+
 - No user authentication yet
 - No spaced repetition algorithm implementation (SM-2 pending)
 - No progress tracking persistence

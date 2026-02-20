@@ -12,10 +12,13 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
 - **Spaced Repetition**: SM-2 algorithm for optimal knowledge retention
 - **Theme Customization**: Switch between Autumn, Neon, and Summer themes
 - **Progress Tracking**: Track your performance across different categories
-- **Authentication**: Secure login with NextAuth.js
+- **Authentication**: Secure login with NextAuth.js and credential-based registration
+- **Live Registration Validation**: Real-time password strength and email format checklists; debounced username/email availability checks
+- **Brute-Force Protection**: Per-IP rate limiting on both login (10 attempts/15 min) and registration (5 attempts/15 min)
 - **Responsive Design**: Beautiful UI built with Tailwind CSS
 
 ## Tech Stack
+
 - Frontend: ![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
 - State: ![Zustand](https://img.shields.io/badge/Zustand-4-654FF0) ![Hookstate](https://img.shields.io/badge/Hookstate-4-1E90FF)
 - Data: ![Prisma](https://img.shields.io/badge/Prisma-5-2D3748) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791)
@@ -30,29 +33,35 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
    cd mbs_tfm_InterviewTrainer
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Configure environment variables:
+
    ```bash
    cp .env.example .env
    ```
-	Update `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
+
+   Update `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL` as needed.
 
 4. Apply Prisma migrations and seed:
+
    ```bash
-	pnpm prisma:migrate:deploy
-	pnpm prisma:seed
+   pnpm prisma:migrate:deploy
+   pnpm prisma:seed
    ```
 
 5. Start the development server:
+
    ```bash
    pnpm dev
    ```
@@ -60,12 +69,14 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
 6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 **Demo Credentials:**
+
 - Username: `QuizView`
 - Password: `Teletubbie`
 
 > ⚠️ **Security Note**: These are demo credentials only. See [SECURITY.md](SECURITY.md) for production deployment guidelines.
 
 ## Project Structure
+
 ```text
 mbs_tfm_InterviewTrainer/
 	pages/                 # Next.js routes
@@ -89,12 +100,18 @@ mbs_tfm_InterviewTrainer/
 ```
 
 ## Main Functionalities
+
 - Topic-based quiz sessions with dynamic routing per category.
 - Adaptive question interleaving and capped session lengths.
 - Spaced repetition (SM-2) logic for future review scheduling.
 - Score tracking and session completion summary.
 - Toggle between Autumn, Neon, and Summer themes.
 - Auth.js credentials login gate before dashboard access.
+- User registration with OWASP-compliant validation (Zod, bcrypt cost 12, server-side schema mirroring).
+- Live password strength checklist and email format checklist shown as the user types.
+- Debounced real-time username/email availability check (400 ms) via `GET /api/auth/check-availability`.
+- Per-IP rate limiting on login (10 attempts / 15 min) and registration (5 attempts / 15 min).
+- Personalised dashboard greeting ("Welcome back, {username}") from JWT session.
 - Fixed-position logout button on the dashboard.
 - Logout confirmation prompt.
 - JSON-driven question sets for rapid content iteration.
@@ -130,10 +147,10 @@ pnpm test
 - Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
 - If deployment fails with `ERR_PNPM_OUTDATED_LOCKFILE`, run this locally from project root:
 
-	```bash
-	pnpm install
-	pnpm install --frozen-lockfile
-	```
+  ```bash
+  pnpm install
+  pnpm install --frozen-lockfile
+  ```
 
 - Commit and push both `package.json` and `pnpm-lock.yaml` if either changes.
 - In Vercel Project Settings, ensure the Root Directory points to this app folder.
@@ -144,24 +161,25 @@ pnpm test
 - **Install command**: `pnpm install`
 - **Build command**: `pnpm build`
 - **Required environment variables**:
-	- `POSTGRES_PRISMA_URL`
-	- `POSTGRES_URL_NON_POOLING`
-	- `NEXTAUTH_SECRET`
-	- `AUTH_SECRET`
-	- `NEXTAUTH_URL`
-	- Template files: `.env.vercel.example`, `.env.production.example`
-	- Scope rules:
-		- `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, `AUTH_SECRET`: set for Development, Preview, and Production.
-		- `NEXTAUTH_URL`: set for Production only.
+  - `POSTGRES_PRISMA_URL`
+  - `POSTGRES_URL_NON_POOLING`
+  - `NEXTAUTH_SECRET`
+  - `AUTH_SECRET`
+  - `NEXTAUTH_URL`
+  - Template files: `.env.vercel.example`, `.env.production.example`
+  - Scope rules:
+    - `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`, `NEXTAUTH_SECRET`, `AUTH_SECRET`: set for Development, Preview, and Production.
+    - `NEXTAUTH_URL`: set for Production only.
 - **Lockfile validation**:
-	- `pnpm install --frozen-lockfile`
+  - `pnpm install --frozen-lockfile`
 - **Quality gate (recommended)**:
-	- `pnpm test`
-	- `pnpm lint`
+  - `pnpm test`
+  - `pnpm lint`
 
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
+
 - How to set up your development environment
 - Our coding standards and conventions
 - How to submit pull requests

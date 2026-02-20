@@ -5,24 +5,36 @@ import { SignUpSection } from "@/components/auth/SignUpSection";
 
 export function LoginPage() {
   return (
-    <div className="login-background min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="login-panel w-full max-w-md rounded-2xl px-6 py-8">
-        <div className="flex flex-col items-center text-center gap-3">
-          <Image
-            src={loginLogo}
-            alt="QuizView login logo"
-            width={160}
-            height={160}
-            className="login-logo"
-            priority
-          />
-          <h1 className="text-2xl font-semibold text-[#f0f6fc]">QuizView</h1>
-          <p className="text-sm text-[#8b949e]">
-            Access your cyberpractice console.
-          </p>
+    <div className="login-background min-h-screen flex items-center justify-center px-4 py-8">
+      <div className="login-split">
+        {/* Left — branding hero */}
+        <div className="login-left">
+          <div className="login-left-inner">
+            <Image
+              src={loginLogo}
+              alt="QuizView login logo"
+              width={280}
+              height={280}
+              className="login-logo"
+              priority
+            />
+            <h1 className="login-brand-title">QuizView</h1>
+            <p className="login-brand-sub">
+              <span className="login-brand-sub-highlight">IT</span> interviews
+              Studying Tool
+            </p>
+          </div>
         </div>
-        <LoginForm />
-        <SignUpSection />
+
+        {/* Right — form */}
+        <div className="login-right">
+          <div className="login-right-inner">
+            <h2 className="login-form-heading">Sign In</h2>
+            <p className="login-form-sub">Access your training session.</p>
+            <LoginForm />
+            <SignUpSection />
+          </div>
+        </div>
       </div>
     </div>
   );

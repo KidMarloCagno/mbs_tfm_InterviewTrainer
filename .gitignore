@@ -49,3 +49,14 @@ test-output*.txt
 # ESLint
 .vercel
 .env*.local
+
+# Docker (machine-specific volume hash)
+docker-compose.yml
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+node_modules
