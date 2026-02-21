@@ -1,0 +1,61 @@
+name: Snyk Security
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  snyk:
+    name: Scan dependencies and code
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Run Snyk Open Source test
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: --severity-threshold=high
+
+      - name: Run Snyk Code (SAST)
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: code test
+          args: --severity-threshold=high --sarif-file-output=snyk-code.sarif
+
+      - name: Upload Snyk SARIF to GitHub Code Scanning
+        if: always() && hashFiles('snyk-code.sarif') != ''
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: snyk-code.sarif

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1] - 2026-02-21
+
+### Added
+
+- Added GitHub Actions workflow `.github/workflows/snyk.yml` to run Snyk Open Source and Snyk Code scans on push, pull request, schedule, and manual dispatch
+- Added SARIF upload step so Snyk Code findings can appear in GitHub code scanning
+- Documented Snyk setup options and `SNYK_TOKEN` repository secret requirements in README
+
 ## [1.3.0] - 2026-02-21
 
 ### Added
