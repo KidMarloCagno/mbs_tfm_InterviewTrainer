@@ -1,10 +1,10 @@
-# InterviewTrainer 🎯
+# InterviewTrainer aka QuizView🎯
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 
-InterviewTrainer is a gamified IT interview practice app that blends active recall with spaced repetition. It exists to help learners drill core topics in short, high-focus sessions while tracking performance across categories. The project provides a polished quiz flow today and a Prisma-backed path for long-term progress tracking.
+QuizView is a gamified IT interview practice app that blends active recall with spaced repetition. It exists to help learners drill core topics in short, high-focus sessions while tracking performance across categories. The project provides a polished quiz flow today and a Prisma-backed path for long-term progress tracking.
 
 ## 🌟 Features
 
