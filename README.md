@@ -147,6 +147,29 @@ pnpm test
 
 ## ▲ Vercel Deployment Notes
 
+## 🔐 Snyk Integration Options
+
+This repository supports Snyk as a GitHub Actions workflow (`.github/workflows/snyk.yml`) so scans can run automatically after pushes and on pull requests.
+
+You can choose one of these rollout options:
+
+1. **PR-only scans** (recommended first step): run Snyk on `pull_request` and gate merges.
+2. **Push + PR scans**: run on both `push` and `pull_request` for faster feedback on branch work.
+3. **Scheduled baseline scans**: add a weekly cron so new CVEs are detected even without new commits.
+4. **Manual scans**: use `workflow_dispatch` to run on-demand from the Actions tab.
+
+### Required secret
+
+Set `SNYK_TOKEN` in repository secrets:
+
+- GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
+
+### Optional hardening
+
+- Enable GitHub code scanning upload (SARIF) for Snyk Code findings.
+- Start with `--severity-threshold=high` and later tighten to `medium`.
+- Add `snyk monitor` in a separate scheduled workflow to track project history in Snyk dashboard.
+
 - This project pins pnpm via `packageManager` in `package.json` to ensure CI and local environments use the same package manager version.
 - Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
 - If deployment fails with `ERR_PNPM_OUTDATED_LOCKFILE`, run this locally from project root:
