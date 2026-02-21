@@ -9,13 +9,15 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 ## 🌟 Features
 
 - **Multiple Question Types**: Quiz Simple, True/False, and Fill the Blank
-- **Spaced Repetition**: SM-2 algorithm for optimal knowledge retention
-- **Theme Customization**: Switch between Autumn, Neon, and Summer themes
+- **Spaced Repetition**: SM-2 algorithm — per-user per-question progress persisted to PostgreSQL; sessions prioritise overdue reviews, then new questions, then scheduled ones automatically
+- **Remix Mode**: A cross-topic virtual session that mixes only the questions you have already studied, ordered by SM-2 priority; includes a topic selector so you can focus on a subset of your studied sets
+- **Session Configuration**: Choose question count (10 / 20 / 30) and type filter (Mixed, Multiple Choice, True/False, Fill the Blank) before every session
+- **Theme Customization**: Switch between Neon and Summer themes
 - **Progress Tracking**: Track your performance across different categories
 - **Authentication**: Secure login with NextAuth.js and credential-based registration
 - **Live Registration Validation**: Real-time password strength and email format checklists; debounced username/email availability checks
 - **Brute-Force Protection**: Per-IP rate limiting on both login (10 attempts/15 min) and registration (5 attempts/15 min)
-- **Responsive Design**: Beautiful UI built with Tailwind CSS
+- **Responsive Design**: Clean UI with semantic CSS design tokens and dark/neon themes
 
 ## Tech Stack
 
@@ -102,10 +104,13 @@ mbs_tfm_InterviewTrainer/
 ## Main Functionalities
 
 - Topic-based quiz sessions with dynamic routing per category.
-- Adaptive question interleaving and capped session lengths.
-- Spaced repetition (SM-2) logic for future review scheduling.
+- Pre-session configuration modal: choose question count (10 / 20 / 30) and type filter before starting.
+- SM-2 spaced repetition: sessions ordered as overdue → new → scheduled; progress persisted to `UserProgress` after every session.
+- **Remix mode**: cross-topic session scoped to the user's already-studied questions; configurable topic selector per session.
+- Manual "Next Question →" button required after every answer (correct and wrong), giving the user time to read explanations.
 - Score tracking and session completion summary.
-- Toggle between Autumn, Neon, and Summer themes.
+- Exit Session button with warning (amber) styling.
+- Toggle between Neon and Summer themes.
 - Auth.js credentials login gate before dashboard access.
 - User registration with OWASP-compliant validation (Zod, bcrypt cost 12, server-side schema mirroring).
 - Live password strength checklist and email format checklist shown as the user types.
@@ -113,7 +118,6 @@ mbs_tfm_InterviewTrainer/
 - Per-IP rate limiting on login (10 attempts / 15 min) and registration (5 attempts / 15 min).
 - Personalised dashboard greeting ("Welcome back, {username}") from JWT session.
 - Fixed-position logout button on the dashboard.
-- Logout confirmation prompt.
 - JSON-driven question sets for rapid content iteration.
 - Prisma schema for user progress and question metadata.
 

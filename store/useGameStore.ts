@@ -1,16 +1,31 @@
 import { create } from "zustand";
 import type { GameQuestion } from "@/components/game/GameEngine";
 
+type Quality = 0 | 1 | 2 | 3 | 4 | 5;
+
+interface AnsweredResult {
+  questionId: string;
+  quality: Quality;
+}
+
 interface GameSessionState {
   sessionQuestions: GameQuestion[];
   currentQuestionIndex: number;
   score: number;
   isFinished: boolean;
+  answeredResults: AnsweredResult[];
   startSession: (questions: GameQuestion[]) => void;
-  answerQuestion: (isCorrect: boolean) => void;
+  answerQuestion: (
+    questionId: string,
+    isCorrect: boolean,
+    quality: Quality,
+  ) => void;
   nextQuestion: () => void;
   resetSession: () => void;
-  interleaveQuestions: (questions: GameQuestion[], maxQuestions?: number) => GameQuestion[];
+  interleaveQuestions: (
+    questions: GameQuestion[],
+    maxQuestions?: number,
+  ) => GameQuestion[];
 }
 
 const initialState = {
@@ -18,6 +33,7 @@ const initialState = {
   currentQuestionIndex: 0,
   score: 0,
   isFinished: false,
+  answeredResults: [] as AnsweredResult[],
 };
 
 function shuffle<T>(items: T[]): T[] {
@@ -41,7 +57,9 @@ export const useGameStore = create<GameSessionState>((set, get) => ({
       byCategory.set(question.category, categoryQuestions);
     }
 
-    const categoryPools = Array.from(byCategory.values()).map((pool) => shuffle(pool));
+    const categoryPools = Array.from(byCategory.values()).map((pool) =>
+      shuffle(pool),
+    );
     const interleaved: GameQuestion[] = [];
 
     while (interleaved.length < maxQuestions) {
@@ -70,22 +88,25 @@ export const useGameStore = create<GameSessionState>((set, get) => ({
   },
 
   startSession: (questions) => {
-    const mixedQuestions = get().interleaveQuestions(questions, Math.min(10, questions.length));
+    const mixedQuestions = get().interleaveQuestions(
+      questions,
+      Math.min(10, questions.length),
+    );
 
     set({
       sessionQuestions: mixedQuestions,
       currentQuestionIndex: 0,
       score: 0,
       isFinished: mixedQuestions.length === 0,
+      answeredResults: [],
     });
   },
 
-  answerQuestion: (isCorrect) => {
-    if (!isCorrect) {
-      return;
-    }
-
-    set((state) => ({ score: state.score + 1 }));
+  answerQuestion: (questionId, isCorrect, quality) => {
+    set((state) => ({
+      score: isCorrect ? state.score + 1 : state.score,
+      answeredResults: [...state.answeredResults, { questionId, quality }],
+    }));
   },
 
   nextQuestion: () => {
@@ -94,7 +115,9 @@ export const useGameStore = create<GameSessionState>((set, get) => ({
       const isFinished = nextIndex >= state.sessionQuestions.length;
 
       return {
-        currentQuestionIndex: isFinished ? state.currentQuestionIndex : nextIndex,
+        currentQuestionIndex: isFinished
+          ? state.currentQuestionIndex
+          : nextIndex,
         isFinished,
       };
     });

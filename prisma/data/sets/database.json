@@ -171,12 +171,7 @@
     "id": "db-q013",
     "question": "Which SQL statement is used to remove all records from a table without logging individual row deletions?",
     "answer": "TRUNCATE",
-    "options": [
-      "DELETE",
-      "REMOVE",
-      "TRUNCATE",
-      "DROP"
-    ],
+    "options": ["DELETE", "REMOVE", "TRUNCATE", "DROP"],
     "category": "Database",
     "type": "QUIZ_SIMPLE",
     "level": "Beginner"
@@ -270,7 +265,6 @@
     "question": "What is an Entity in an ER Model?",
     "answer": "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
     "options": [
-      "A student is an entity.",
       "A software bug found in the database engine.",
       "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
       "The connection string used to link the app to the DB.",
@@ -405,5 +399,2495 @@
     "category": "Database",
     "type": "QUIZ_SIMPLE",
     "level": "Advanced"
+  },
+  {
+    "id": "db-q030",
+    "question": "A ______ is a structured collection of data for easy access, management, and updating.",
+    "answer": "Database",
+    "options": [
+      "Database",
+      "Hardware device",
+      "Programming language",
+      "Temporary folder"
+    ],
+    "explanation": "A database is specifically designed as a structured collection of data for easy access, management, and updating.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q031",
+    "question": "A ______ is a software system that allows users to define, create, maintain and control access to the database.",
+    "answer": "DBMS",
+    "options": ["Hardware protocol", "DBMS", "Operating system", "Compiler"],
+    "explanation": "A DBMS (Database Management System) is the software system that allows users to define, create, maintain, and control access to the database.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q032",
+    "question": "______ stands for Structured Query Language, used for managing and manipulating data in relational databases.",
+    "answer": "SQL",
+    "options": [
+      "Simple Question Language",
+      "System Query Logic",
+      "Server Quick Link",
+      "SQL"
+    ],
+    "explanation": "SQL stands for Structured Query Language, and it is used for managing and manipulating data in relational databases.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q033",
+    "question": "The advantages of a ______ include data sharing, data security, data integration, and reduced data redundancy.",
+    "answer": "DBMS",
+    "options": [
+      "DBMS",
+      "Hardware setup",
+      "Paper backup system",
+      "Single-user environment"
+    ],
+    "explanation": "Data sharing, data security, data integration, and reduced data redundancy are all primary advantages of using a DBMS.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q034",
+    "question": "The ______ is the collection of data, while the ______ is the software used to manage that data.",
+    "answer": "Database, DBMS",
+    "options": [
+      "Hardware, Software",
+      "Database, DBMS",
+      "DBMS, Database",
+      "File, Cloud"
+    ],
+    "explanation": "The Database is the collection of data, while the DBMS is the software used to manage that data.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q035",
+    "question": "A ______ is a unique identifier for each record in a table that cannot contain NULL values.",
+    "answer": "Primary Key",
+    "options": [
+      "Password",
+      "Primary Key",
+      "Duplicate index",
+      "Administrator ID"
+    ],
+    "explanation": "A Primary Key is a unique identifier for each record in a table that absolutely cannot contain NULL values.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q036",
+    "question": "A ______ is a field in one table that uniquely identifies a row of another table or the same table.",
+    "answer": "Foreign Key",
+    "options": [
+      "Foreign Country Key",
+      "Foreign Key",
+      "Guest Password",
+      "Non-relational Key"
+    ],
+    "explanation": "A Foreign Key is defined as a field in one table that uniquely identifies a row of another table or the same table.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q037",
+    "question": "______ is the process of organizing data to minimize redundancy and dependency.",
+    "answer": "Normalization",
+    "options": ["Capitalization", "Normalization", "Deletion", "Expansion"],
+    "explanation": "Normalization is the process of organizing data to minimize redundancy and dependency.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q038",
+    "question": "A ______ in SQL is an operation used to combine rows from two or more tables based on a related column.",
+    "answer": "Join",
+    "options": ["Server Merge", "Deduplication", "Join", "Column Addition"],
+    "explanation": "An operation used to combine rows from two or more tables based on a related column is the standard definition of a Join.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q039",
+    "question": "A ______ is a sequence of operations performed as a single logical unit of work.",
+    "answer": "Transaction",
+    "options": ["Transaction", "Payment", "Migration", "Logging Table"],
+    "explanation": "A Transaction is a sequence of operations performed as a single logical unit of work.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q040",
+    "question": "The main purpose of a ______ in a database system is to reduce the time required for recovery in case of a system crash by saving the current state.",
+    "answer": "Checkpoint",
+    "options": ["Permission Log", "Checkpoint", "Key Verifier", "Firewall"],
+    "explanation": "The main purpose of a checkpoint is to reduce the time required for recovery in case of a system crash by saving the current state.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q041",
+    "question": "______ is a technology used to encrypt database files at rest on the hard drive.",
+    "answer": "Transparent Data Encryption (TDE)",
+    "options": [
+      "Code Obfuscation",
+      "In-transit Encryption",
+      "Transparent Data Encryption (TDE)",
+      "Invisible Schema Algorithm"
+    ],
+    "explanation": "Transparent Data Encryption (TDE) is specifically designed to encrypt database files at rest on the hard drive.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q042",
+    "question": "The ______ SQL statement is used to remove all records from a table without logging individual row deletions.",
+    "answer": "TRUNCATE",
+    "options": ["DELETE", "REMOVE", "TRUNCATE", "DROP"],
+    "explanation": "TRUNCATE removes all records from a table without logging individual row deletions, making it faster than DELETE.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q043",
+    "question": "______ is a DML command that can be rolled back; ______ is a DDL command that is faster and cannot be rolled back easily.",
+    "answer": "DELETE, TRUNCATE",
+    "options": [
+      "TRUNCATE, DELETE",
+      "DELETE, TRUNCATE",
+      "WHERE, DELETE",
+      "DROP, TRUNCATE"
+    ],
+    "explanation": "DELETE is a DML command that can be rolled back; TRUNCATE is a DDL command that is faster and cannot be rolled back easily.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q044",
+    "question": "A ______ is a central repository of data accumulated from a wide range of sources for analysis and reporting.",
+    "answer": "Data Warehouse",
+    "options": [
+      "Server Room",
+      "Data Warehouse",
+      "Emergency Backup",
+      "Binary Table"
+    ],
+    "explanation": "A Data Warehouse acts as a central repository of data accumulated from a wide range of sources for analysis and reporting.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q045",
+    "question": "In the context of ACID properties, ______ ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
+    "answer": "Atomicity",
+    "options": ["Consistency", "Isolation", "Atomicity", "Durability"],
+    "explanation": "Atomicity ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q046",
+    "question": "A ______ is a prepared SQL code that you can save and reuse multiple times.",
+    "answer": "Stored Procedure",
+    "options": [
+      "Stored Procedure",
+      "Manual Guide",
+      "Hardware Accelerator",
+      "Automated Backup"
+    ],
+    "explanation": "A prepared SQL code that you can save and reuse multiple times is exactly what a Stored Procedure is.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q047",
+    "question": "A ______ in SQL is a virtual table based on the result-set of an SQL statement.",
+    "answer": "View",
+    "options": ["GUI Interface", "View", "User List", "Hidden Table"],
+    "explanation": "A View in SQL is a virtual table based on the result-set of an SQL statement.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q048",
+    "question": "An ______ is a diagrammatic approach to database design where real-world objects are represented as entities and their relationships are defined.",
+    "answer": "Entity-Relationship (E-R) Model",
+    "options": [
+      "Entity-Relationship (E-R) Model",
+      "Latency Formula",
+      "High-Availability Cluster",
+      "Coding Standard"
+    ],
+    "explanation": "This is the correct definition of an Entity-Relationship (E-R) Model.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q049",
+    "question": "In an ER Model, an ______ is a real-world object that is identifiable; for example, in a school database, a student.",
+    "answer": "Entity",
+    "options": ["Software Bug", "Entity", "Connection String", "Temporary Row"],
+    "explanation": "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q050",
+    "question": "______ are the characteristics or properties of an entity. For a Student entity, Name and Age are examples.",
+    "answer": "Attributes",
+    "options": ["Primary Keys", "Attributes", "SQL Commands", "Database Sizes"],
+    "explanation": "Attributes are the characteristics or properties of an entity, such as Name and Age for a Student.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q051",
+    "question": "A ______ in an ER model is an association among several entities.",
+    "answer": "Relationship",
+    "options": [
+      "Relationship",
+      "Cloud Link",
+      "Programming Function",
+      "Backup File"
+    ],
+    "explanation": "A relationship is an association among several entities.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q052",
+    "question": "The ______ property of a database means the database contains not only the data but also the definition/metadata of the data.",
+    "answer": "Self-Description",
+    "options": [
+      "Auto-documentation",
+      "Self-Description",
+      "Self-repairing",
+      "Unmanaged Execution"
+    ],
+    "explanation": "Self-Description accurately means the database contains not only the data but also the definition/metadata of the data.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q053",
+    "question": "______ in a database are rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
+    "answer": "Constraints",
+    "options": [
+      "Hardware Limitations",
+      "Constraints",
+      "User Limits",
+      "Security Firewalls"
+    ],
+    "explanation": "Constraints are rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q054",
+    "question": "The ______ operator is used to retrieve rows based on a range of values, while the ______ operator is used to check for values inside a specific list.",
+    "answer": "BETWEEN, IN",
+    "options": [
+      "IN, BETWEEN",
+      "BETWEEN, IN",
+      "RANGE, LIST",
+      "WITHIN, CONTAINS"
+    ],
+    "explanation": "BETWEEN is correctly used for a range of values, and IN is used to check for values inside a specific list.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q055",
+    "question": "The Normalization rule for ______ requires that each column must contain atomic (indivisible) values and there should be no repeating groups.",
+    "answer": "1NF (First Normal Form)",
+    "options": [
+      "2NF (Second Normal Form)",
+      "Encryption Standard",
+      "1NF (First Normal Form)",
+      "Table Linking"
+    ],
+    "explanation": "1NF dictates that each column must contain atomic (indivisible) values and there should be no repeating groups.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q056",
+    "question": "The Normalization rule for ______ states that it must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
+    "answer": "2NF (Second Normal Form)",
+    "options": [
+      "2NF (Second Normal Form)",
+      "Foreign Key Constraints",
+      "VARCHAR Casting",
+      "Table Division"
+    ],
+    "explanation": "2NF dictates that the table must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced"
+  },
+  {
+    "id": "db-q057",
+    "question": "A ______ is a primary key that consists of two or more columns to uniquely identify a row.",
+    "answer": "Composite Key",
+    "options": [
+      "Alphanumeric Key",
+      "Composite Key",
+      "Shared Database Key",
+      "Secondary Index"
+    ],
+    "explanation": "A primary key consisting of two or more columns to uniquely identify a row is the exact definition of a Composite Key.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q058",
+    "question": "______ is the process of adding redundant data to a database to improve read performance.",
+    "answer": "Denormalization",
+    "options": [
+      "Design Error",
+      "Denormalization",
+      "Index Deletion",
+      "CSV Conversion"
+    ],
+    "explanation": "Denormalization is the process of adding redundant data to a database to improve read performance.",
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced"
+  },
+  {
+    "id": "db-q059",
+    "question": "True or False: A database is a structured collection of data for easy access, management, and updating.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "A database is specifically designed as a structured collection of data for easy access, management, and updating.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q060",
+    "question": "True or False: A DBMS is a hardware system that allows users to define, create, maintain and control access to the database.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "A DBMS is a software system, not a hardware system, that allows users to define, create, maintain and control access to the database.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q061",
+    "question": "True or False: SQL stands for Simple Question Language, and it is used for managing and manipulating data in relational databases.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "SQL stands for Structured Query Language, not Simple Question Language.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q062",
+    "question": "True or False: The advantages of DBMS include data sharing, data security, data integration, and reduced data redundancy.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "Data sharing, data security, data integration, and reduced data redundancy are all primary advantages of using a DBMS.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q063",
+    "question": "True or False: The difference between a Database and a DBMS is that the DBMS is the collection of data, while the Database is the software used to manage that data.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "It is the exact opposite: the Database is the collection of data, while the DBMS is the software used to manage that data.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q064",
+    "question": "True or False: A Primary Key is a unique identifier for each record in a table that can contain up to one NULL value.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "A Primary Key is a unique identifier for each record in a table that absolutely cannot contain NULL values.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q065",
+    "question": "True or False: A Foreign Key is a field in one table that uniquely identifies a row of another table or the same table.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "A Foreign Key is correctly defined as a field in one table that uniquely identifies a row of another table or the same table.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q066",
+    "question": "True or False: Normalization is the process of organizing data to maximize redundancy and dependency.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "Normalization is the process of organizing data to minimize redundancy and dependency, not maximize it.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q067",
+    "question": "True or False: A Join in SQL is an operation used to combine rows from two or more tables based on a related column.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "An operation used to combine rows from two or more tables based on a related column is the standard definition of a Join.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q068",
+    "question": "True or False: A Transaction is a sequence of operations performed as multiple independent logical units of work.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "A Transaction is a sequence of operations performed as a single logical unit of work, not multiple independent ones.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q069",
+    "question": "True or False: The main purpose of a 'Checkpoint' in a database system is to verify if the user has the correct permissions to log in.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "The main purpose of a checkpoint is to reduce the time required for recovery in case of a system crash by saving the current state.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q070",
+    "question": "True or False: 'Transparent Data Encryption' (TDE) is a technology used to encrypt database files at rest on the hard drive.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "TDE is specifically designed as a technology used to encrypt database files at rest on the hard drive.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q071",
+    "question": "True or False: The DELETE SQL statement is used to remove all records from a table without logging individual row deletions.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "The TRUNCATE statement is used to remove all records without logging individual row deletions, whereas DELETE does log them.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q072",
+    "question": "True or False: TRUNCATE is a DML command that can be rolled back; DELETE is a DDL command that is faster and cannot be rolled back easily.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "The roles are reversed: DELETE is a DML command that can be rolled back; TRUNCATE is a DDL command that is faster and cannot be rolled back easily.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q073",
+    "question": "True or False: A 'Data Warehouse' is a central repository of data accumulated from a wide range of sources for analysis and reporting.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "A data warehouse acts precisely as a central repository of data accumulated from a wide range of sources for analysis and reporting.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q074",
+    "question": "True or False: In the context of ACID properties, 'Atomicity' ensures that multiple transactions can happen at the same time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "Atomicity ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q075",
+    "question": "True or False: A 'Stored Procedure' is a prepared SQL code that you can save and reuse multiple times.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "A prepared SQL code that you can save and reuse multiple times is exactly what a Stored Procedure is.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q076",
+    "question": "True or False: A 'View' in SQL is the physical appearance of the database management tool.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "A View in SQL is not a physical appearance, but rather a virtual table based on the result-set of an SQL statement.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q077",
+    "question": "True or False: An Entity-Relationship (E-R) Model is a diagrammatic approach to database design where real-world objects are represented as entities and their relationships are defined.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "This is the correct definition of an Entity-Relationship (E-R) Model.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q078",
+    "question": "True or False: In an ER Model, an entity is a specific SQL command used for updates.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "An entity is a real-world object that is identifiable; for example, in a school database, a student is an entity.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q079",
+    "question": "True or False: Attributes are the characteristics or properties of an entity. For a Student entity, Name and Age are attributes.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "Attributes are the characteristics or properties of an entity, such as Name and Age for a Student.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q080",
+    "question": "True or False: A relationship in an ER model is a function that joins two different programming languages.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "A relationship is an association among several entities, not a function joining programming languages.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner"
+  },
+  {
+    "id": "db-q081",
+    "question": "True or False: The 'Self-Description' property of a database means the database contains not only the data but also the definition/metadata of the data.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "Self-Description accurately means the database contains not only the data but also the definition/metadata of the data.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q082",
+    "question": "True or False: 'Constraints' in a database are hardware limitations that slow down the server.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "Constraints are actually rules or restrictions enforced on data columns to ensure the validity and integrity of data.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q083",
+    "question": "True or False: The BETWEEN operator is used to retrieve rows based on a range of values, while the IN operator is used to check for values inside a specific list.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "BETWEEN is correctly used for a range of values, and IN is used to check for values inside a specific list.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q084",
+    "question": "True or False: The 'Normalization' rule for 1NF (First Normal Form) requires that the table must have at least two primary keys.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "1NF actually dictates that each column must contain atomic (indivisible) values and there should be no repeating groups.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q085",
+    "question": "True or False: The 'Normalization' rule for 2NF (Second Normal Form) states that all columns must be of the type 'VARCHAR'.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "2NF actually dictates that the table must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced"
+  },
+  {
+    "id": "db-q086",
+    "question": "True or False: A 'Composite Key' is a primary key that consists of two or more columns to uniquely identify a row.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "explanation": "A primary key consisting of two or more columns to uniquely identify a row is the exact definition of a Composite Key.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate"
+  },
+  {
+    "id": "db-q087",
+    "question": "True or False: 'Denormalization' is the process of converting a relational database into a CSV file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "explanation": "Denormalization is the process of adding redundant data to a database to improve read performance, not exporting it to a CSV file.",
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced"
+  },
+  {
+    "id": "db-q088",
+    "question": "What do you understand by 'Database'?",
+    "answer": "An organized collection of related data where the data is stored and organized to serve some specific purpose.",
+    "options": [
+      "A physical server used only for backing up files.",
+      "An organized collection of related data where the data is stored and organized to serve some specific purpose.",
+      "A programming language for web design.",
+      "A random assortment of unrelated text files."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A database is specifically designed to store and organize related data for easy access and management."
+  },
+  {
+    "id": "db-q089",
+    "question": "True or False: A database is a random assortment of unrelated text files.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A database is an organized collection of related data, not a random assortment."
+  },
+  {
+    "id": "db-q090",
+    "question": "An organized collection of related data where the data is stored and organized to serve some specific purpose is called a ______.",
+    "answer": "Database",
+    "options": ["Database", "File System", "Spreadsheet", "Compiler"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A database is the correct term for an organized collection of related data."
+  },
+  {
+    "id": "db-q091",
+    "question": "What does DBMS stand for?",
+    "answer": "Database Management System",
+    "options": [
+      "Data Backup and Maintenance System",
+      "Digital Business Management Software",
+      "Dynamic Block Memory Server",
+      "Database Management System"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "DBMS is the standard acronym for Database Management System."
+  },
+  {
+    "id": "db-q092",
+    "question": "True or False: DBMS stands for Database Management System.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. DBMS correctly stands for Database Management System."
+  },
+  {
+    "id": "db-q093",
+    "question": "______ stands for Database Management System.",
+    "answer": "DBMS",
+    "options": ["DBMS", "RDBMS", "SQL", "DDL"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "DBMS is the abbreviation for Database Management System."
+  },
+  {
+    "id": "db-q094",
+    "question": "What is the primary characteristic of an RDBMS?",
+    "answer": "It is based on a relational model where data is stored in separate, related tables.",
+    "options": [
+      "It stores data exclusively in flat files without any relationships.",
+      "It manages network traffic routing between database servers.",
+      "It is based on a relational model where data is stored in separate, related tables.",
+      "It is a hardware-only solution for database storage."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An RDBMS relies on the relational model to store data in inter-connected tables."
+  },
+  {
+    "id": "db-q095",
+    "question": "True or False: An RDBMS stores data exclusively in flat files without any relationships.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. An RDBMS is based on a relational model storing data in separate, related tables."
+  },
+  {
+    "id": "db-q096",
+    "question": "The primary characteristic of an ______ is that it is based on a relational model where data is stored in separate, related tables.",
+    "answer": "RDBMS",
+    "options": ["RDBMS", "Operating System", "NoSQL Database", "Flat File"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "An RDBMS (Relational Database Management System) uses the relational model."
+  },
+  {
+    "id": "db-q097",
+    "question": "Which of the following is a primary advantage of using a DBMS?",
+    "answer": "Data is stored in a structured way, controlling redundancy.",
+    "options": [
+      "It completely eliminates the need for hard drives.",
+      "It automatically writes business application code.",
+      "Data is stored in a structured way, controlling redundancy.",
+      "It removes the need for data security."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A DBMS structures data efficiently and helps minimize unnecessary redundancy."
+  },
+  {
+    "id": "db-q098",
+    "question": "True or False: A primary advantage of using a DBMS is that data is stored in a structured way, controlling redundancy.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Controlling redundancy through structured storage is a key DBMS advantage."
+  },
+  {
+    "id": "db-q099",
+    "question": "A primary advantage of a ______ is that data is stored in a structured way, controlling redundancy.",
+    "answer": "DBMS",
+    "options": ["DBMS", "Spreadsheet", "Text Editor", "File System"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A DBMS manages data systematically to prevent uncontrolled redundancy."
+  },
+  {
+    "id": "db-q100",
+    "question": "What do you understand by Data Redundancy?",
+    "answer": "The duplication of data at multiple locations, which wastes storage space.",
+    "options": [
+      "The process of compressing data to save disk space.",
+      "The duplication of data at multiple locations, which wastes storage space.",
+      "The encryption of data to prevent unauthorized access.",
+      "The automatic deletion of old, unused database records."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Data redundancy means the same piece of data is held in two or more separate places."
+  },
+  {
+    "id": "db-q101",
+    "question": "True or False: Data Redundancy is the process of compressing data to save disk space.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Data redundancy refers to the duplication of data at multiple locations, which wastes storage."
+  },
+  {
+    "id": "db-q102",
+    "question": "______ refers to the duplication of data at multiple locations, which wastes storage space.",
+    "answer": "Data Redundancy",
+    "options": [
+      "Data Normalization",
+      "Data Encryption",
+      "Data Redundancy",
+      "Data Indexing"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Data redundancy involves unwanted duplication of data."
+  },
+  {
+    "id": "db-q103",
+    "question": "What are the various types of relationships in a Database?",
+    "answer": "One-to-one, One-to-many, and Many-to-many.",
+    "options": [
+      "Top-down, Bottom-up, and Lateral.",
+      "One-to-one, One-to-many, and Many-to-many.",
+      "Primary, Secondary, and Tertiary.",
+      "Static, Dynamic, and Fluid."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "These are the three fundamental types of table relationships in relational databases."
+  },
+  {
+    "id": "db-q104",
+    "question": "True or False: The types of relationships in a database include One-to-one, One-to-many, and Many-to-many.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. These are the three standard relationships used in entity-relationship models."
+  },
+  {
+    "id": "db-q105",
+    "question": "The primary types of ______ in a Database are One-to-one, One-to-many, and Many-to-many.",
+    "answer": "relationships",
+    "options": ["keys", "indexes", "relationships", "queries"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Relationships define how different tables relate to one another."
+  },
+  {
+    "id": "db-q106",
+    "question": "What is Normalization?",
+    "answer": "The process of organizing data to minimize redundancy.",
+    "options": [
+      "The process of organizing data to minimize redundancy.",
+      "The process of adding duplicate data for faster read times.",
+      "A method for encrypting user passwords.",
+      "A command used to shut down the database."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Normalization breaks down tables to remove redundant data and improve integrity."
+  },
+  {
+    "id": "db-q107",
+    "question": "True or False: Normalization is the process of adding duplicate data for faster read times.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Normalization is intended to minimize redundancy, not add to it."
+  },
+  {
+    "id": "db-q108",
+    "question": "______ is the process of organizing data to minimize redundancy.",
+    "answer": "Normalization",
+    "options": ["Denormalization", "Normalization", "Indexing", "Hashing"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Normalization streamlines table design to eliminate duplicated details."
+  },
+  {
+    "id": "db-q109",
+    "question": "What does BCNF stand for in database normalization?",
+    "answer": "Boyce Codd Normal Form",
+    "options": [
+      "Binary Coded Network Format",
+      "Basic Column Normalization Format",
+      "Boyce Codd Normal Form",
+      "Broad Cascading Node Function"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "BCNF stands for Boyce Codd Normal Form, a slightly stronger version of the third normal form (3NF)."
+  },
+  {
+    "id": "db-q110",
+    "question": "True or False: BCNF stands for Boyce Codd Normal Form.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It was developed by Raymond Boyce and Edgar F. Codd."
+  },
+  {
+    "id": "db-q111",
+    "question": "In database normalization, BCNF stands for ______ Normal Form.",
+    "answer": "Boyce Codd",
+    "options": [
+      "Binary Coded",
+      "Basic Column",
+      "Broad Cascading",
+      "Boyce Codd"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "BCNF expands to Boyce Codd Normal Form."
+  },
+  {
+    "id": "db-q112",
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "options": [
+      "Standard Query Logic",
+      "Structured Query Language",
+      "Simple Question Language",
+      "Sequential Query List"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "SQL stands for Structured Query Language, the standard programming language for relational databases."
+  },
+  {
+    "id": "db-q113",
+    "question": "True or False: SQL stands for Simple Question Language.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. SQL stands for Structured Query Language."
+  },
+  {
+    "id": "db-q114",
+    "question": "______ stands for Structured Query Language.",
+    "answer": "SQL",
+    "options": ["SQL", "XML", "HTTP", "JSON"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "SQL is the industry standard abbreviation for Structured Query Language."
+  },
+  {
+    "id": "db-q115",
+    "question": "Which of the following represents the main categories of SQL statements?",
+    "answer": "DDL, DML, and DCL",
+    "options": [
+      "XML, HTML, and CSS",
+      "EXE, BAT, and COM",
+      "DDL, DML, and DCL",
+      "HTTP, FTP, and SMTP"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "SQL statements fall mainly into Data Definition, Data Manipulation, and Data Control languages."
+  },
+  {
+    "id": "db-q116",
+    "question": "True or False: The main categories of SQL statements are DDL, DML, and DCL.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. These define, manipulate, and control data respectively."
+  },
+  {
+    "id": "db-q117",
+    "question": "The main categories of SQL statements are DDL, ______, and DCL.",
+    "answer": "DML",
+    "options": ["XML", "DML", "HTML", "SMTP"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "DML (Data Manipulation Language) is one of the three core categories of SQL."
+  },
+  {
+    "id": "db-q118",
+    "question": "What type of language contains commands like CREATE, ALTER, and DROP?",
+    "answer": "Data Definition Language (DDL)",
+    "options": [
+      "Data Manipulation Language (DML)",
+      "Data Definition Language (DDL)",
+      "Data Control Language (DCL)",
+      "Transaction Control Language (TCL)"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DDL commands are used to define or change the database structure."
+  },
+  {
+    "id": "db-q119",
+    "question": "True or False: Commands like CREATE, ALTER, and DROP belong to the Data Manipulation Language (DML).",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. They belong to the Data Definition Language (DDL)."
+  },
+  {
+    "id": "db-q120",
+    "question": "______ contains commands like CREATE, ALTER, and DROP.",
+    "answer": "Data Definition Language (DDL)",
+    "options": [
+      "Data Definition Language (DDL)",
+      "Data Manipulation Language (DML)",
+      "Data Control Language (DCL)",
+      "Transaction Control Language (TCL)"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "DDL deals with defining the schemas and table structures."
+  },
+  {
+    "id": "db-q121",
+    "question": "What is the role of a DML Compiler?",
+    "answer": "It translates DML statements into low-level instructions for the Query Evaluation Engine.",
+    "options": [
+      "It interprets DDL statements and updates the metadata table.",
+      "It manages user authentication and authorization.",
+      "It creates a physical backup of the entire database.",
+      "It translates DML statements into low-level instructions for the Query Evaluation Engine."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The DML Compiler is responsible for translating data manipulation queries into executable low-level instructions."
+  },
+  {
+    "id": "db-q122",
+    "question": "True or False: A DML Compiler translates DML statements into low-level instructions for the Query Evaluation Engine.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It processes DML statements for the execution engine."
+  },
+  {
+    "id": "db-q123",
+    "question": "The role of a ______ is to translate DML statements into low-level instructions for the Query Evaluation Engine.",
+    "answer": "DML Compiler",
+    "options": [
+      "DDL Interpreter",
+      "Transaction Manager",
+      "DML Compiler",
+      "Storage Engine"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The DML Compiler explicitly translates DML queries."
+  },
+  {
+    "id": "db-q124",
+    "question": "What does a DDL Interpreter do?",
+    "answer": "It interprets DDL statements and records the generated statements in the metadata table.",
+    "options": [
+      "It executes INSERT and UPDATE commands.",
+      "It interprets DDL statements and records the generated statements in the metadata table.",
+      "It optimizes the execution speed of SELECT queries.",
+      "It handles database failover and clustering."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A DDL Interpreter handles schema definitions and records changes in the system catalog or metadata table."
+  },
+  {
+    "id": "db-q125",
+    "question": "True or False: A DDL Interpreter optimizes the execution speed of SELECT queries.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A DDL Interpreter interprets DDL statements and updates the metadata, not query optimization."
+  },
+  {
+    "id": "db-q126",
+    "question": "A ______ interprets DDL statements and records the generated statements in the metadata table.",
+    "answer": "DDL Interpreter",
+    "options": [
+      "Query Optimizer",
+      "DML Compiler",
+      "DDL Interpreter",
+      "Data Validator"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The DDL Interpreter handles changes to the database structure and metadata."
+  },
+  {
+    "id": "db-q127",
+    "question": "In database terminology, what is Data Independence?",
+    "answer": "The ability to modify the schema at one level without affecting the schema at the next higher level.",
+    "options": [
+      "The process of isolating the database from the internet for security.",
+      "The feature that allows multiple users to query the database simultaneously.",
+      "The ability to modify the schema at one level without affecting the schema at the next higher level.",
+      "The automatic synchronization of data across distributed servers."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Data independence ensures changes to lower-level storage or structures don't break higher-level application schemas."
+  },
+  {
+    "id": "db-q128",
+    "question": "True or False: Data Independence is the ability to modify the schema at one level without affecting the schema at the next higher level.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It acts as a buffer between data structures and applications."
+  },
+  {
+    "id": "db-q129",
+    "question": "______ is the ability to modify the schema at one level without affecting the schema at the next higher level.",
+    "answer": "Data Independence",
+    "options": [
+      "Data Redundancy",
+      "Data Independence",
+      "Data Normalization",
+      "Data Partitioning"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Data independence protects applications from structural changes in the database."
+  },
+  {
+    "id": "db-q130",
+    "question": "What is a View in a database?",
+    "answer": "A virtual table that derives its data from one or more underlying base tables.",
+    "options": [
+      "A virtual table that derives its data from one or more underlying base tables.",
+      "A physical table that permanently stores duplicate data for faster access.",
+      "A graphical user interface used by administrators to monitor performance.",
+      "A temporary backup file created during a transaction."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A view is a stored query that behaves like a virtual table."
+  },
+  {
+    "id": "db-q131",
+    "question": "True or False: A View in a database is a physical table that permanently stores duplicate data for faster access.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A view is a virtual table derived from underlying base tables, not a physical table storing duplicate data."
+  },
+  {
+    "id": "db-q132",
+    "question": "A ______ in a database is a virtual table that derives its data from one or more underlying base tables.",
+    "answer": "View",
+    "options": ["Trigger", "View", "Cursor", "Stored Procedure"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A view provides a logical representation of data from one or more tables."
+  },
+  {
+    "id": "db-q133",
+    "question": "Which of the following is an advantage of using Views?",
+    "answer": "It generates output without wasting resources as there is no physical location where data is stored.",
+    "options": [
+      "It allows bypassing all database security protocols.",
+      "It acts as a physical backup for corrupted tables.",
+      "It generates output without wasting resources as there is no physical location where data is stored.",
+      "It automatically normalizes unstructured data."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Views save storage resources by functioning virtually instead of writing redundant data physically."
+  },
+  {
+    "id": "db-q134",
+    "question": "True or False: An advantage of using Views is that it generates output without wasting resources as there is no physical location where data is stored.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Because views are virtual, they don't consume additional storage for the raw data."
+  },
+  {
+    "id": "db-q135",
+    "question": "An advantage of using ______ is that it generates output without wasting resources as there is no physical location where data is stored.",
+    "answer": "Views",
+    "options": ["Indexes", "Partitions", "Views", "Triggers"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Views dynamically fetch data without physically duplicating it."
+  },
+  {
+    "id": "db-q136",
+    "question": "When does Functional Dependency occur?",
+    "answer": "When one attribute uniquely defines another attribute in a relation.",
+    "options": [
+      "When a database server relies on a secondary server for failover.",
+      "When two tables have the exact same number of rows and columns.",
+      "When one attribute uniquely defines another attribute in a relation.",
+      "When a query depends on an index to execute quickly."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Functional dependency is a constraint where the value of one attribute strictly dictates the value of another."
+  },
+  {
+    "id": "db-q137",
+    "question": "True or False: Functional Dependency occurs when two tables have the exact same number of rows and columns.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It occurs when one attribute uniquely defines another attribute within a relation."
+  },
+  {
+    "id": "db-q138",
+    "question": "______ occurs when one attribute uniquely defines another attribute in a relation.",
+    "answer": "Functional Dependency",
+    "options": [
+      "Data Redundancy",
+      "Database Normalization",
+      "Entity Relationship",
+      "Functional Dependency"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Functional dependency is a core concept used in normalizing database tables."
+  },
+  {
+    "id": "db-q139",
+    "question": "What is the purpose of an Entity-Relationship (E-R) model?",
+    "answer": "It defines the conceptual view of the database.",
+    "options": [
+      "It calculates the exact hardware requirements for the database server.",
+      "It defines the conceptual view of the database.",
+      "It acts as a firewall to block unauthorized network traffic.",
+      "It compiles SQL statements into machine code."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An E-R model provides a high-level conceptual framework representing data entities and their relationships."
+  },
+  {
+    "id": "db-q140",
+    "question": "True or False: The purpose of an Entity-Relationship (E-R) model is to define the conceptual view of the database.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. E-R diagrams represent logical database concepts visually."
+  },
+  {
+    "id": "db-q141",
+    "question": "The purpose of an ______ model is to define the conceptual view of the database.",
+    "answer": "Entity-Relationship (E-R)",
+    "options": [
+      "Entity-Relationship (E-R)",
+      "Object-Oriented",
+      "Client-Server",
+      "Hardware Architecture"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The E-R model defines structural schemas and relationships."
+  },
+  {
+    "id": "db-q142",
+    "question": "What is an Entity in an E-R model?",
+    "answer": "An object or concept about which data is stored.",
+    "options": [
+      "A specific row in a database table.",
+      "An object or concept about which data is stored.",
+      "The connection string used to access the database.",
+      "A piece of hardware used for storage."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An entity is any real-world object or concept (like a 'Student' or 'Order') modeled in the database."
+  },
+  {
+    "id": "db-q143",
+    "question": "True or False: An Entity in an E-R model is a specific row in a database table.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. An entity is an object or concept about which data is stored, not a row itself."
+  },
+  {
+    "id": "db-q144",
+    "question": "In an E-R model, an ______ is an object or concept about which data is stored.",
+    "answer": "Entity",
+    "options": ["Attribute", "Entity", "Index", "Array"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "An entity is the fundamental building block of an E-R diagram."
+  },
+  {
+    "id": "db-q145",
+    "question": "What is a Primary Key?",
+    "answer": "A column or set of columns that uniquely identifies each row in a table.",
+    "options": [
+      "A column or set of columns that uniquely identifies each row in a table.",
+      "A password required to open a database connection.",
+      "A field that allows duplicate values for indexing.",
+      "The first column created in any database table."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A primary key ensures every record has a unique, non-null identifier."
+  },
+  {
+    "id": "db-q146",
+    "question": "True or False: A Primary Key is a column or set of columns that uniquely identifies each row in a table.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. A primary key uniquely identifies rows and enforces data integrity."
+  },
+  {
+    "id": "db-q147",
+    "question": "A ______ is a column or set of columns that uniquely identifies each row in a table.",
+    "answer": "Primary Key",
+    "options": [
+      "Foreign Key",
+      "Primary Key",
+      "Secondary Key",
+      "Null Constraint"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A primary key distinguishes each record uniquely."
+  },
+  {
+    "id": "db-q148",
+    "question": "What is a Foreign Key?",
+    "answer": "A field in one table that uniquely identifies a row of another table.",
+    "options": [
+      "A key used exclusively to decrypt data from external sources.",
+      "A field in one table that uniquely identifies a row of another table.",
+      "A primary key that contains NULL values.",
+      "An automated sequence number generated by the database."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A foreign key creates a link between two tables by referencing the primary key of another table."
+  },
+  {
+    "id": "db-q149",
+    "question": "True or False: A Foreign Key is a key used exclusively to decrypt data from external sources.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A foreign key is a field used to link two tables by referencing a primary key."
+  },
+  {
+    "id": "db-q150",
+    "question": "A ______ is a field in one table that uniquely identifies a row of another table.",
+    "answer": "Foreign Key",
+    "options": ["Primary Key", "Foreign Key", "Unique Key", "Composite Key"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Foreign keys enforce referential integrity between tables."
+  },
+  {
+    "id": "db-q151",
+    "question": "What is a Candidate Key?",
+    "answer": "A set of one or more attributes that can uniquely identify a record, from which a primary key is chosen.",
+    "options": [
+      "A key generated temporarily during complex JOIN operations.",
+      "A set of one or more attributes that can uniquely identify a record, from which a primary key is chosen.",
+      "A secondary password used for database administration.",
+      "A key that identifies only the first record of a table."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Candidate keys are all the possible unique identifiers in a table that qualify to be the primary key."
+  },
+  {
+    "id": "db-q152",
+    "question": "True or False: A Candidate Key is a set of one or more attributes that can uniquely identify a record, from which a primary key is chosen.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Any unique key capable of serving as the primary key is a candidate key."
+  },
+  {
+    "id": "db-q153",
+    "question": "A ______ is a set of one or more attributes that can uniquely identify a record, from which a primary key is chosen.",
+    "answer": "Candidate Key",
+    "options": ["Candidate Key", "Foreign Key", "Encryption Key", "Index Key"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Candidate keys are the pool of unique identifiers from which the primary key is selected."
+  },
+  {
+    "id": "db-q154",
+    "question": "What is the primary difference between DELETE and TRUNCATE?",
+    "answer": "DELETE is a DML command and can be rolled back; TRUNCATE is a DDL command and cannot be easily rolled back.",
+    "options": [
+      "DELETE is a DDL command and cannot be rolled back; TRUNCATE is a DML command.",
+      "DELETE removes the table structure; TRUNCATE only removes the data.",
+      "DELETE is a DML command and can be rolled back; TRUNCATE is a DDL command and cannot be easily rolled back.",
+      "There is no difference; they are interchangeable."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DELETE logs individual row removals and can be rolled back, while TRUNCATE drops and recreates the table faster without logging each row."
+  },
+  {
+    "id": "db-q155",
+    "question": "True or False: DELETE is a DDL command and cannot be rolled back; TRUNCATE is a DML command.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. DELETE is a DML command that can be rolled back, while TRUNCATE is a DDL command."
+  },
+  {
+    "id": "db-q156",
+    "question": "______ is a DML command and can be rolled back; TRUNCATE is a DDL command and cannot be easily rolled back.",
+    "answer": "DELETE",
+    "options": ["DROP", "DELETE", "REMOVE", "CLEAR"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "DELETE logs operations making it reversible, unlike TRUNCATE."
+  },
+  {
+    "id": "db-q157",
+    "question": "Which of the following describes a JOIN operation?",
+    "answer": "An operation that combines rows from two or more tables based on a related column between them.",
+    "options": [
+      "An operation used to append data to the end of a single table.",
+      "An operation that combines rows from two or more tables based on a related column between them.",
+      "An administrative task that merges two databases together.",
+      "A function that concatenates text strings in SQL."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JOINs are used to relate data distributed across multiple normalized tables."
+  },
+  {
+    "id": "db-q158",
+    "question": "True or False: A JOIN operation combines rows from two or more tables based on a related column between them.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. JOINs map matching relational keys together to form combined results."
+  },
+  {
+    "id": "db-q159",
+    "question": "A ______ operation combines rows from two or more tables based on a related column between them.",
+    "answer": "JOIN",
+    "options": ["UNION", "MERGE", "JOIN", "CONCAT"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A JOIN matches rows across tables using shared keys."
+  },
+  {
+    "id": "db-q160",
+    "question": "What does an INNER JOIN do?",
+    "answer": "It returns records that have matching values in both tables.",
+    "options": [
+      "It returns all records from the left table, regardless of matches.",
+      "It returns all records from the right table, regardless of matches.",
+      "It returns records that have matching values in both tables.",
+      "It returns all records when there is a match in either table."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "An INNER JOIN is a strict intersection returning only the overlap where keys match in both tables."
+  },
+  {
+    "id": "db-q161",
+    "question": "True or False: An INNER JOIN returns all records from the left table, regardless of matches.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A LEFT JOIN does that. An INNER JOIN only returns records with matching values in both tables."
+  },
+  {
+    "id": "db-q162",
+    "question": "An ______ returns records that have matching values in both tables.",
+    "answer": "INNER JOIN",
+    "options": ["OUTER JOIN", "LEFT JOIN", "INNER JOIN", "RIGHT JOIN"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "INNER JOIN filters out records that don't have a corresponding match on both sides."
+  },
+  {
+    "id": "db-q163",
+    "question": "What is an Index in a database?",
+    "answer": "A performance tuning method that allows faster retrieval of records.",
+    "options": [
+      "A table that logs database errors.",
+      "A performance tuning method that allows faster retrieval of records.",
+      "A completely separate database used for backups.",
+      "A command that organizes columns alphabetically."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Indexes function similarly to a book's index, making search and retrieval queries drastically faster."
+  },
+  {
+    "id": "db-q164",
+    "question": "True or False: An Index is a performance tuning method that allows faster retrieval of records.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Indexing is an essential performance optimization technique in SQL."
+  },
+  {
+    "id": "db-q165",
+    "question": "An ______ is a performance tuning method that allows faster retrieval of records.",
+    "answer": "Index",
+    "options": ["Index", "Array", "Entity", "Operator"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Indexes speed up data retrieval."
+  },
+  {
+    "id": "db-q166",
+    "question": "What is the difference between Clustered and Non-Clustered Indexes?",
+    "answer": "A Clustered index physically sorts the data in the table, whereas a Non-Clustered index creates a separate logical order.",
+    "options": [
+      "A Clustered index physically sorts the data in the table, whereas a Non-Clustered index creates a separate logical order.",
+      "A Clustered index can only contain integers, while Non-Clustered indexes can contain strings.",
+      "A Clustered index is used for backups, while a Non-Clustered index is used for real-time queries.",
+      "There is no difference between them."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Clustered indexes dictate the physical storage order, so there can be only one per table, unlike non-clustered indexes."
+  },
+  {
+    "id": "db-q167",
+    "question": "True or False: A Clustered index is used for backups, while a Non-Clustered index is used for real-time queries.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A Clustered index physically sorts the data in the table, whereas a Non-Clustered index creates a separate logical order."
+  },
+  {
+    "id": "db-q168",
+    "question": "A ______ index physically sorts the data in the table, whereas a Non-Clustered index creates a separate logical order.",
+    "answer": "Clustered",
+    "options": ["Primary", "Composite", "Clustered", "Hash"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Clustered refers to the physical sorting of records."
+  },
+  {
+    "id": "db-q169",
+    "question": "What is a Stored Procedure?",
+    "answer": "A prepared SQL code that you can save and reuse.",
+    "options": [
+      "A hardware component that stores database memory.",
+      "A manual detailing database administrative tasks.",
+      "A prepared SQL code that you can save and reuse.",
+      "An automated backup routine."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Stored procedures allow for the encapsulation of repeated SQL scripts directly on the database server."
+  },
+  {
+    "id": "db-q170",
+    "question": "True or False: A Stored Procedure is a prepared SQL code that you can save and reuse.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. They are saved SQL routines ready for reuse."
+  },
+  {
+    "id": "db-q171",
+    "question": "A ______ is a prepared SQL code that you can save and reuse.",
+    "answer": "Stored Procedure",
+    "options": [
+      "Query Log",
+      "Stored Procedure",
+      "Table View",
+      "Database Trigger"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Stored procedures are named collections of SQL statements."
+  },
+  {
+    "id": "db-q172",
+    "question": "What is a Database Trigger?",
+    "answer": "A special type of stored procedure that automatically runs when an event occurs in the database.",
+    "options": [
+      "A button in the UI that starts the database server.",
+      "A special type of stored procedure that automatically runs when an event occurs in the database.",
+      "An error thrown when a query takes too long to execute.",
+      "A security feature that blocks SQL injections."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Triggers are event-driven actions attached to tables or views."
+  },
+  {
+    "id": "db-q173",
+    "question": "True or False: A Database Trigger is a security feature that blocks SQL injections.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A database trigger is a special type of stored procedure that automatically runs upon specific database events."
+  },
+  {
+    "id": "db-q174",
+    "question": "A ______ is a special type of stored procedure that automatically runs when an event occurs in the database.",
+    "answer": "Database Trigger",
+    "options": [
+      "Stored Procedure",
+      "Database Trigger",
+      "Foreign Key",
+      "Constraint"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Triggers 'fire' automatically in response to DML or DDL events."
+  },
+  {
+    "id": "db-q175",
+    "question": "What does ACID stand for in the context of database transactions?",
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Completeness, Integration, Dependency",
+      "Automation, Concurrency, Indexing, Data",
+      "Availability, Connectivity, Iteration, Duplication"
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ACID properties ensure reliable processing of database transactions."
+  },
+  {
+    "id": "db-q176",
+    "question": "True or False: ACID stands for Atomicity, Consistency, Isolation, Durability.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. These four properties guarantee database transaction reliability."
+  },
+  {
+    "id": "db-q177",
+    "question": "In the context of database transactions, ACID stands for ______, Consistency, Isolation, Durability.",
+    "answer": "Atomicity",
+    "options": ["Accuracy", "Availability", "Atomicity", "Automation"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Atomicity is the 'A' in the ACID acronym."
+  },
+  {
+    "id": "db-q178",
+    "question": "In the ACID properties, what does 'Atomicity' guarantee?",
+    "answer": "That a transaction is treated as a single, indivisible logical unit of work; it either completely succeeds or completely fails.",
+    "options": [
+      "That the database will survive physical hardware destruction.",
+      "That transactions occurring at the same time do not affect each other.",
+      "That a transaction is treated as a single, indivisible logical unit of work; it either completely succeeds or completely fails.",
+      "That only atomic data types can be used in the schema."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Atomicity prevents partial updates, ensuring strict all-or-nothing execution."
+  },
+  {
+    "id": "db-q179",
+    "question": "True or False: In the ACID properties, 'Atomicity' guarantees that transactions occurring at the same time do not affect each other.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. That describes 'Isolation'. Atomicity guarantees all-or-nothing execution."
+  },
+  {
+    "id": "db-q180",
+    "question": "In the ACID properties, ______ guarantees that a transaction is treated as a single, indivisible logical unit of work.",
+    "answer": "Atomicity",
+    "options": ["Consistency", "Isolation", "Durability", "Atomicity"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Atomicity handles the indivisible nature of transactions."
+  },
+  {
+    "id": "db-q181",
+    "question": "What does a UNIQUE constraint do?",
+    "answer": "It ensures that all values in a column are different.",
+    "options": [
+      "It automatically encrypts the column data.",
+      "It requires the column to be a numeric value.",
+      "It prevents a table from being dropped.",
+      "It ensures that all values in a column are different."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A UNIQUE constraint prevents duplicate data entries in the designated column."
+  },
+  {
+    "id": "db-q182",
+    "question": "True or False: A UNIQUE constraint ensures that all values in a column are different.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It enforces distinct values across all rows in that column."
+  },
+  {
+    "id": "db-q183",
+    "question": "A ______ constraint ensures that all values in a column are different.",
+    "answer": "UNIQUE",
+    "options": ["PRIMARY", "FOREIGN", "UNIQUE", "CHECK"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "UNIQUE limits the column to only distinct, non-repeating values."
+  },
+  {
+    "id": "db-q184",
+    "question": "What is the purpose of the HAVING clause?",
+    "answer": "It is used in combination with the GROUP BY clause to restrict the groups of returned rows to only those whose condition is TRUE.",
+    "options": [
+      "It is used to sort the data in descending order.",
+      "It replaces the WHERE clause entirely in standard queries.",
+      "It is used in combination with the GROUP BY clause to restrict the groups of returned rows to only those whose condition is TRUE.",
+      "It allows querying data across multiple databases."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "HAVING filters aggregated grouped records, which WHERE cannot do."
+  },
+  {
+    "id": "db-q185",
+    "question": "True or False: The HAVING clause is used to sort the data in descending order.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is used to filter records that work on aggregated GROUP BY results. ORDER BY is used for sorting."
+  },
+  {
+    "id": "db-q186",
+    "question": "The ______ clause is used in combination with the GROUP BY clause to restrict the groups of returned rows.",
+    "answer": "HAVING",
+    "options": ["WHERE", "ORDER BY", "HAVING", "SELECT"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "HAVING operates specifically on grouped datasets."
+  },
+  {
+    "id": "db-q187",
+    "question": "How is the WHERE clause different from the HAVING clause?",
+    "answer": "WHERE is applied before grouping, while HAVING is applied after grouping.",
+    "options": [
+      "WHERE is applied before grouping, while HAVING is applied after grouping.",
+      "HAVING can only be used with strings, while WHERE is used for numbers.",
+      "WHERE is applied after grouping, while HAVING is applied before grouping.",
+      "They are functionally identical and can be used interchangeably."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "WHERE filters individual records before aggregation, while HAVING filters the groups post-aggregation."
+  },
+  {
+    "id": "db-q188",
+    "question": "True or False: WHERE is applied before grouping, while HAVING is applied after grouping.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. WHERE filters rows before aggregation, HAVING filters the groups."
+  },
+  {
+    "id": "db-q189",
+    "question": "______ is applied before grouping, while HAVING is applied after grouping.",
+    "answer": "WHERE",
+    "options": ["ORDER BY", "SELECT", "WHERE", "JOIN"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "WHERE affects rows prior to the GROUP BY."
+  },
+  {
+    "id": "db-q190",
+    "question": "What is a Subquery?",
+    "answer": "A query nested inside another SQL query.",
+    "options": [
+      "A query that fails to execute properly.",
+      "A database table used temporarily to hold intermediate results.",
+      "A query nested inside another SQL query.",
+      "An alternative name for an Outer Join."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A subquery allows utilizing the result of one query directly as a condition in another."
+  },
+  {
+    "id": "db-q191",
+    "question": "True or False: A Subquery is an alternative name for an Outer Join.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Subquery is a nested query, not a type of join."
+  },
+  {
+    "id": "db-q192",
+    "question": "A ______ is a query nested inside another SQL query.",
+    "answer": "Subquery",
+    "options": ["Subquery", "View", "Stored Procedure", "Transaction"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Subqueries act as internal queries within a larger statement."
+  },
+  {
+    "id": "db-q193",
+    "question": "What does the GROUP BY statement do?",
+    "answer": "It groups rows that have the same values into summary rows.",
+    "options": [
+      "It organizes columns alphabetically.",
+      "It separates a single table into multiple smaller tables.",
+      "It groups rows that have the same values into summary rows.",
+      "It automatically creates a clustered index."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "GROUP BY is used with aggregate functions to group the result-set by one or more columns."
+  },
+  {
+    "id": "db-q194",
+    "question": "True or False: The GROUP BY statement groups rows that have the same values into summary rows.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It aggregates records with identical values in specified columns."
+  },
+  {
+    "id": "db-q195",
+    "question": "The ______ statement groups rows that have the same values into summary rows.",
+    "answer": "GROUP BY",
+    "options": ["ORDER BY", "GROUP BY", "SORT BY", "INDEX BY"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "GROUP BY summarizes rows sharing the same values."
+  },
+  {
+    "id": "db-q196",
+    "question": "What is the purpose of the COMMIT command?",
+    "answer": "It permanently saves all changes made during the current transaction.",
+    "options": [
+      "It deletes the current transaction history.",
+      "It permanently saves all changes made during the current transaction.",
+      "It rolls back the database to a previous state.",
+      "It creates a new user account."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "COMMIT finalizes a transaction, making all the data manipulations permanent."
+  },
+  {
+    "id": "db-q197",
+    "question": "True or False: The COMMIT command rolls back the database to a previous state.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. ROLLBACK undoes changes, while COMMIT permanently saves them."
+  },
+  {
+    "id": "db-q198",
+    "question": "The ______ command permanently saves all changes made during the current transaction.",
+    "answer": "COMMIT",
+    "options": ["ROLLBACK", "SAVEPOINT", "COMMIT", "UPDATE"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "COMMIT cements the data operations."
+  },
+  {
+    "id": "db-q199",
+    "question": "What does the ROLLBACK command do?",
+    "answer": "It undoes transactions that have not yet been saved to the database.",
+    "options": [
+      "It deletes the entire database schema.",
+      "It converts a database from one version to an older one.",
+      "It undoes transactions that have not yet been saved to the database.",
+      "It stops a currently running query."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ROLLBACK reverts the database to the last committed state, ignoring pending changes."
+  },
+  {
+    "id": "db-q200",
+    "question": "True or False: The ROLLBACK command undoes transactions that have not yet been saved to the database.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It safely undoes any uncommitted changes."
+  },
+  {
+    "id": "db-q201",
+    "question": "The ______ command undoes transactions that have not yet been saved to the database.",
+    "answer": "ROLLBACK",
+    "options": ["COMMIT", "ROLLBACK", "UNDO", "DELETE"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ROLLBACK aborts the current transaction."
+  },
+  {
+    "id": "db-q202",
+    "question": "What is Data Dictionary?",
+    "answer": "A set of information describing the contents, format, and structure of a database and the relationship between its elements.",
+    "options": [
+      "A physical book used by database administrators.",
+      "A set of information describing the contents, format, and structure of a database and the relationship between its elements.",
+      "A command used to check spelling in varchar fields.",
+      "A tool that translates SQL queries into other programming languages."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Data Dictionary contains metadata about the database structure and schema."
+  },
+  {
+    "id": "db-q203",
+    "question": "True or False: A Data Dictionary is a physical book used by database administrators.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It is an internal system database containing metadata."
+  },
+  {
+    "id": "db-q204",
+    "question": "A ______ is a set of information describing the contents, format, and structure of a database.",
+    "answer": "Data Dictionary",
+    "options": [
+      "Data Warehouse",
+      "Data Dictionary",
+      "System Log",
+      "Metadata Array"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The Data Dictionary stores definitions and metadata."
+  },
+  {
+    "id": "db-q205",
+    "question": "What does the term 'Collation' mean in databases?",
+    "answer": "It refers to a set of rules that determine how character data is sorted and compared.",
+    "options": [
+      "It is the process of grouping servers together for failover.",
+      "It is an error that occurs when two primary keys conflict.",
+      "It refers to a set of rules that determine how character data is sorted and compared.",
+      "It is a type of mathematical join operation."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Collation defines rules for string comparison, determining issues like case sensitivity and sorting order."
+  },
+  {
+    "id": "db-q206",
+    "question": "True or False: Collation refers to a set of rules that determine how character data is sorted and compared.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It dictates character sorting and comparison rules."
+  },
+  {
+    "id": "db-q207",
+    "question": "______ refers to a set of rules that determine how character data is sorted and compared.",
+    "answer": "Collation",
+    "options": ["Normalization", "Collation", "Indexing", "Aggregation"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Collation governs character encoding comparisons."
+  },
+  {
+    "id": "db-q208",
+    "question": "What is Database Partitioning?",
+    "answer": "The process of dividing a large table or database into smaller, more manageable pieces.",
+    "options": [
+      "The process of installing a database on a new hard drive partition.",
+      "The process of dividing a large table or database into smaller, more manageable pieces.",
+      "The physical separation of database users into different network VLANs.",
+      "A security rule that isolates the DDL from DML commands."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Partitioning improves performance and manageability by splitting large tables logically."
+  },
+  {
+    "id": "db-q209",
+    "question": "True or False: Database Partitioning is the process of installing a database on a new hard drive partition.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the logical division of large tables or databases into smaller, manageable chunks."
+  },
+  {
+    "id": "db-q210",
+    "question": "______ is the process of dividing a large table or database into smaller, more manageable pieces.",
+    "answer": "Database Partitioning",
+    "options": [
+      "Database Sharding",
+      "Database Partitioning",
+      "Data Normalization",
+      "Database Clustering"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Partitioning chunks data based on specific keys for better performance."
+  },
+  {
+    "id": "db-q211",
+    "question": "Which command is used to add a new column to an existing table?",
+    "answer": "ALTER TABLE",
+    "options": ["MODIFY TABLE", "ADD COLUMN", "ALTER TABLE", "UPDATE TABLE"],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The ALTER TABLE command modifies the schema of an existing table."
+  },
+  {
+    "id": "db-q212",
+    "question": "True or False: The ALTER TABLE command is used to add a new column to an existing table.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. ALTER TABLE handles structural changes like adding columns."
+  },
+  {
+    "id": "db-q213",
+    "question": "The ______ command is used to add a new column to an existing table.",
+    "answer": "ALTER TABLE",
+    "options": ["UPDATE TABLE", "ALTER TABLE", "MODIFY TABLE", "CHANGE TABLE"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "ALTER TABLE acts on the data definition."
+  },
+  {
+    "id": "db-q214",
+    "question": "What is a Deadlock in a database?",
+    "answer": "A situation where two or more transactions are waiting indefinitely for one another to give up locks.",
+    "options": [
+      "A hardware failure that crashes the server.",
+      "A situation where a user forgets their administrative password.",
+      "A situation where two or more transactions are waiting indefinitely for one another to give up locks.",
+      "When a query takes longer than the allowed timeout period."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Deadlock is a circular locking issue where transactions block each other permanently."
+  },
+  {
+    "id": "db-q215",
+    "question": "True or False: A Deadlock is a hardware failure that crashes the server.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It is a logical concurrency issue where transactions block each other."
+  },
+  {
+    "id": "db-q216",
+    "question": "A ______ is a situation where two or more transactions are waiting indefinitely for one another to give up locks.",
+    "answer": "Deadlock",
+    "options": ["Timeout", "Deadlock", "Crash", "Rollback"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Deadlocks must be resolved by killing one of the transactions."
+  },
+  {
+    "id": "db-q217",
+    "question": "What is a Cursor in SQL?",
+    "answer": "A database object used to retrieve, manipulate, and navigate through a result set row by row.",
+    "options": [
+      "The blinking line where you type SQL queries.",
+      "A database object used to retrieve, manipulate, and navigate through a result set row by row.",
+      "A specific index used only for geometric data.",
+      "A pointer to the location of the transaction log."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Cursors process individual rows sequentially instead of operating on sets of data."
+  },
+  {
+    "id": "db-q218",
+    "question": "True or False: A Cursor in SQL is a database object used to retrieve, manipulate, and navigate through a result set row by row.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Cursors step through records one by one."
+  },
+  {
+    "id": "db-q219",
+    "question": "A ______ in SQL is a database object used to retrieve, manipulate, and navigate through a result set row by row.",
+    "answer": "Cursor",
+    "options": ["Cursor", "Pointer", "Trigger", "View"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Cursors handle record-by-record processing."
+  },
+  {
+    "id": "db-q220",
+    "question": "What is an Aggregate Function?",
+    "answer": "A function that performs a calculation on a set of values and returns a single value.",
+    "options": [
+      "A function that returns a table of random numbers.",
+      "A function that performs a calculation on a set of values and returns a single value.",
+      "A function used exclusively to combine strings.",
+      "A stored procedure that schedules backups."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Aggregate functions (like SUM, AVG) collapse multiple rows into a single summary result."
+  },
+  {
+    "id": "db-q221",
+    "question": "True or False: An Aggregate Function returns a table of random numbers.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. It performs a calculation on a set of values and returns a single value."
+  },
+  {
+    "id": "db-q222",
+    "question": "An ______ performs a calculation on a set of values and returns a single value.",
+    "answer": "Aggregate Function",
+    "options": [
+      "Aggregate Function",
+      "Inline Function",
+      "Scalar Function",
+      "Analytic Function"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Aggregate functions include MIN, MAX, SUM, etc."
+  },
+  {
+    "id": "db-q223",
+    "question": "Which of the following is NOT an Aggregate Function?",
+    "answer": "LEN()",
+    "options": ["SUM()", "COUNT()", "MAX()", "LEN()"],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "LEN() is a scalar string function, while SUM, COUNT, and MAX aggregate multiple rows."
+  },
+  {
+    "id": "db-q224",
+    "question": "True or False: LEN() is NOT an Aggregate Function.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It evaluates a single string length, rather than a set of values."
+  },
+  {
+    "id": "db-q225",
+    "question": "Among SUM(), COUNT(), MAX(), and LEN(), ______ is NOT an Aggregate Function.",
+    "answer": "LEN()",
+    "options": ["SUM()", "COUNT()", "MAX()", "LEN()"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "LEN() works on single values."
+  },
+  {
+    "id": "db-q226",
+    "question": "What does a Checkpoint do?",
+    "answer": "It forces all modified pages in memory to be written to disk, reducing recovery time.",
+    "options": [
+      "It checks the syntax of a SQL query before execution.",
+      "It verifies user credentials during login.",
+      "It forces all modified pages in memory to be written to disk, reducing recovery time.",
+      "It creates a complete, bootable clone of the database."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Checkpoints flush 'dirty' data from RAM to disk ensuring data persistence and faster crash recovery."
+  },
+  {
+    "id": "db-q227",
+    "question": "True or False: A Checkpoint checks the syntax of a SQL query before execution.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It flushes modified pages from memory to disk."
+  },
+  {
+    "id": "db-q228",
+    "question": "A ______ forces all modified pages in memory to be written to disk, reducing recovery time.",
+    "answer": "Checkpoint",
+    "options": ["Commit", "Rollback", "Checkpoint", "Savepoint"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Checkpoints manage memory buffer persistence."
+  },
+  {
+    "id": "db-q229",
+    "question": "What is a Materialized View?",
+    "answer": "A database object that contains the physical results of a query, rather than just the virtual definition.",
+    "options": [
+      "A UI component in the database administration tool.",
+      "A database object that contains the physical results of a query, rather than just the virtual definition.",
+      "A view that can only be accessed by the system administrator.",
+      "A printout of the database schema."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Unlike standard views, materialized views store the actual computed data for faster read times."
+  },
+  {
+    "id": "db-q230",
+    "question": "True or False: A Materialized View is a database object that contains the physical results of a query, rather than just the virtual definition.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It caches the query results to physical storage."
+  },
+  {
+    "id": "db-q231",
+    "question": "A ______ is a database object that contains the physical results of a query, rather than just the virtual definition.",
+    "answer": "Materialized View",
+    "options": [
+      "Virtual Table",
+      "Materialized View",
+      "Data Dictionary",
+      "Subquery"
+    ],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Materialized Views boost performance on heavy aggregate queries."
+  },
+  {
+    "id": "db-q232",
+    "question": "What is the difference between a Local Variable and a Global Variable in SQL?",
+    "answer": "Local variables are defined by the user and scoped to the batch, while global variables are defined by the system.",
+    "options": [
+      "Local variables can hold numbers, global variables hold text.",
+      "Local variables are defined by the user and scoped to the batch, while global variables are defined by the system.",
+      "Local variables are stored on disk, global variables in RAM.",
+      "There is no functional difference."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Local variables exist within a specific transaction block; global ones reflect overall server state."
+  },
+  {
+    "id": "db-q233",
+    "question": "True or False: Local variables are stored on disk, while global variables are in RAM.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Both can be in memory. The difference lies in definition origin and scope boundaries."
+  },
+  {
+    "id": "db-q234",
+    "question": "______ variables are defined by the user and scoped to the batch, while global variables are defined by the system.",
+    "answer": "Local",
+    "options": ["Session", "Global", "Static", "Local"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Local variables are tightly scoped."
+  },
+  {
+    "id": "db-q235",
+    "question": "What is the purpose of the COALESCE() function?",
+    "answer": "It returns the first non-null value in a list of expressions.",
+    "options": [
+      "It merges two tables into one.",
+      "It returns the first non-null value in a list of expressions.",
+      "It calculates the average of a column.",
+      "It converts strings to integers."
+    ],
+    "category": "Database",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "COALESCE is extremely useful for handling potential NULL values smoothly during queries."
+  },
+  {
+    "id": "db-q236",
+    "question": "True or False: The COALESCE() function returns the first non-null value in a list of expressions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Database",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It safely steps through variables until it hits a defined value."
+  },
+  {
+    "id": "db-q237",
+    "question": "The ______ function returns the first non-null value in a list of expressions.",
+    "answer": "COALESCE()",
+    "options": ["ISNULL()", "CONCAT()", "COALESCE()", "NULLIF()"],
+    "category": "Database",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "COALESCE() is standard SQL for fallback values."
   }
 ]

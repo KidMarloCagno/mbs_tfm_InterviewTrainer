@@ -20,8 +20,10 @@ export function LoginPage() {
             />
             <h1 className="login-brand-title">QuizView</h1>
             <p className="login-brand-sub">
-              <span className="login-brand-sub-highlight">IT</span> interviews
-              Studying Tool
+              Your prep for{" "}
+              <span className="login-brand-sub-highlight">IT</span> interviews.
+              <br />
+              Do not just hoot, execute.
             </p>
           </div>
         </div>

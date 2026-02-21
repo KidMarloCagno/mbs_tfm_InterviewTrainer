@@ -225,6 +225,11 @@ a {
   color: #fff;
   box-shadow: 0 3px 0 #9f1239;
 }
+.ui-button-warning {
+  background: linear-gradient(180deg, #fbbf24, var(--warning));
+  color: #1a0e00;
+  box-shadow: 0 3px 0 #92400e;
+}
 .ui-button-secondary {
   background: linear-gradient(180deg, #8b5cf6, #6d28d9);
   color: #f8fafc;
@@ -317,6 +322,131 @@ a {
   box-shadow: none;
 }
 
+/* ── Remix card ──────────────────────────────────────────── */
+.remix-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.08) 0%,
+    rgba(0, 242, 255, 0.06) 100%
+  );
+  cursor: pointer;
+  transition:
+    box-shadow 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+.remix-card:hover {
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.3),
+    0 12px 28px rgba(168, 85, 247, 0.18);
+  transform: translateY(-2px);
+}
+.remix-icon-wrapper {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.22),
+    rgba(0, 242, 255, 0.18)
+  );
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+.remix-icon {
+  width: 34px;
+  height: 34px;
+  color: #a855f7;
+}
+.remix-info {
+  flex: 1;
+  min-width: 0;
+}
+.remix-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #a855f7 0%, #00f2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.remix-description {
+  margin: 0 0 0.35rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.remix-meta {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono, monospace);
+  opacity: 0.75;
+}
+[data-theme="summer"] .remix-card {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.06),
+    rgba(0, 162, 173, 0.06)
+  );
+  border-color: rgba(168, 85, 247, 0.3);
+}
+[data-theme="summer"] .remix-icon-wrapper {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.15),
+    rgba(0, 162, 173, 0.15)
+  );
+}
+/* ── Remix sidebar card (vertical, left column) ─────────── */
+.remix-sidebar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.4rem 1.2rem 1.2rem;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: linear-gradient(
+    180deg,
+    rgba(168, 85, 247, 0.09) 0%,
+    rgba(0, 242, 255, 0.05) 100%
+  );
+  cursor: pointer;
+  transition:
+    box-shadow 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+.remix-sidebar-card:hover {
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.3),
+    0 12px 28px rgba(168, 85, 247, 0.18);
+  transform: translateY(-2px);
+}
+[data-theme="summer"] .remix-sidebar-card {
+  background: linear-gradient(
+    180deg,
+    rgba(168, 85, 247, 0.06),
+    rgba(0, 162, 173, 0.05)
+  );
+  border-color: rgba(168, 85, 247, 0.3);
+}
+/* ── Topic grid ──────────────────────────────────────────── */
 .grid-topics {
   display: grid;
   gap: 1rem;
@@ -346,6 +476,22 @@ a {
 }
 [data-theme="summer"] .feedback-callout {
   color: var(--primary-strong);
+}
+.feedback-wrong {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+}
+.feedback-explanation {
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.65rem;
+  border-left: 3px solid var(--primary);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-radius: 0 4px 4px 0;
+}
+.feedback-explanation-wrong {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.07);
 }
 .theme-toggle {
   position: fixed;
@@ -817,4 +963,75 @@ a {
   border-color: var(--primary-strong);
   background: rgba(0, 162, 173, 0.08);
   color: var(--primary-strong);
+}
+
+/* ============================================================
+   Session Config Modal Selectors
+   ============================================================ */
+
+.session-config-section {
+  margin-bottom: 1.25rem;
+}
+
+.session-config-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem;
+}
+
+.session-config-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.session-config-pill {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease,
+    background 150ms ease;
+  line-height: 1.4;
+}
+
+.session-config-pill:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.session-config-pill.active {
+  background: rgba(0, 243, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.session-config-pill:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.session-config-pill-count {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+[data-theme="summer"] .session-config-pill.active {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+[data-theme="summer"] .session-config-pill:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--text-primary);
 }
