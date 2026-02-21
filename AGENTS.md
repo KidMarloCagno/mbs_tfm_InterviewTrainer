@@ -265,6 +265,40 @@ The version string displayed inside the application MUST stay in sync with `pack
 
 ---
 
+### 8.4 Testing & Quality Standards
+
+#### Strategic Coverage (100/80/0 Rule)
+
+- **CORE TIER (100% coverage)**: Business logic that handles money/critical data
+  - Examples: calculateSubtotal, formatPrice, discount strategies
+  - All files in: `src/shared/utils/`, `src/shared/strategies/`
+  - Thresholds: 100% statements, branches, functions, lines
+
+- **IMPORTANT TIER (80%+ coverage)**: User-facing features and components
+  - Examples: ProductCard, CartSummary, ShoppingCart
+  - All files in: `src/features/**/*.tsx`
+  - Thresholds: 80% statements/lines, 90% functions
+
+- **INFRASTRUCTURE TIER (0% strategic)**: TypeScript validates, no logic to test
+  - Examples: Type definitions, interfaces, constants
+  - Excluded from coverage: `src/shared/types/**`
+
+#### Testing Approach
+
+- **Unit Tests**: Pure business logic functions (AAA pattern)
+- **Integration Tests**: Component + user interactions (Testing Library)
+- **E2E Tests**: Critical user flows (Playwright + Page Object Model)
+- **Coverage**: Run with `pnpm test:coverage` - enforces thresholds
+
+#### E2E Testing Rules (Playwright)
+
+- Use Page Object Model (POM) pattern for maintainability
+- Selectors priority: getByRole > getByLabel > getByTestId
+- Never use CSS selectors or XPath (brittle)
+- Group related actions in page object methods
+- One E2E test per critical user journey
+- Use visual regression (`toHaveScreenshot`) for UI validation
+
 ## 9. Prompt de Inicio Rapido para la IA
 
 _"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"_

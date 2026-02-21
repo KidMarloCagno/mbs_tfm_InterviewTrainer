@@ -34,7 +34,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the following repository:
 
    ```bash
    git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
@@ -145,8 +145,6 @@ pnpm test
 - `pnpm test:db:prepare` creates `quizview_test` (if missing) and applies Prisma migrations.
 - `pnpm test` runs the test suite after the test database is ready.
 
-## ▲ Vercel Deployment Notes
-
 ## 🔐 Snyk Integration Options
 
 This repository supports Snyk as a GitHub Actions workflow (`.github/workflows/snyk.yml`) so scans can run automatically after pushes and on pull requests.
@@ -158,17 +156,14 @@ You can choose one of these rollout options:
 3. **Scheduled baseline scans**: add a weekly cron so new CVEs are detected even without new commits.
 4. **Manual scans**: use `workflow_dispatch` to run on-demand from the Actions tab.
 
-### Required secret
-
-Set `SNYK_TOKEN` in repository secrets:
-
-- GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
-
 ### Optional hardening
 
 - Enable GitHub code scanning upload (SARIF) for Snyk Code findings.
 - Start with `--severity-threshold=high` and later tighten to `medium`.
 - Add `snyk monitor` in a separate scheduled workflow to track project history in Snyk dashboard.
+-
+
+## ▲ Vercel Deployment Notes
 
 - This project pins pnpm via `packageManager` in `package.json` to ensure CI and local environments use the same package manager version.
 - Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
@@ -232,3 +227,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions or feedback, please open an issue on GitHub.
+
+## 🛡️ Snyk Security Scanning (Recommended)
+
+Before committing, it is highly recommended to run Snyk locally to check for vulnerabilities in all project dependencies. This helps catch issues early and avoid failed commits due to security problems.
+
+- Run Snyk with the following command to scan all project manifests (including both package.json and pnpm-lock.yaml):
+
+  ```bash
+  snyk test --all-projects
+  ```
+
+- If vulnerabilities are found, you can attempt to auto-fix them:
+
+  ```bash
+  snyk fix --all-projects
+  ```
+
+- Note: Some vulnerabilities may require manual updates to package versions or human validation. If an upgrade implies significant code changes, carefully review whether the update is worth it for your project at this time.
+
+- Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
+
+- For more details, see the [Snyk documentation](https://docs.snyk.io/).
