@@ -45,11 +45,6 @@ const questionsData: Record<string, GameQuestion[]> = {
     explanation: q.explanation,
   })),
 };
-// Vulnerable code for Snyk test
-export function vulnerableEval(input: string) {
-  // This is intentionally insecure for testing Snyk
-  return eval(input);
-}
 
 export function getAvailableTopics(): string[] {
   return Object.keys(questionsData).sort((a, b) => a.localeCompare(b));

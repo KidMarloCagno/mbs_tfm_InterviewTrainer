@@ -47,6 +47,7 @@
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "prismjs": "1.23.0",
     "@hookform/resolvers": "^3.9.1",
     "@hookstate/core": "^4.0.1",
     "@prisma/client": "^5.8.0",
