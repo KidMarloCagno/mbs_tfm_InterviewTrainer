@@ -12,7 +12,11 @@ interface QuizSimpleProps {
   title?: string;
 }
 
-export function QuizSimple({ question, onAnswered, title = "Quick Quiz" }: QuizSimpleProps) {
+export function QuizSimple({
+  question,
+  onAnswered,
+  title = "Quick Quiz",
+}: QuizSimpleProps) {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   const isAnswered = selectedOption !== null;
@@ -32,30 +36,61 @@ export function QuizSimple({ question, onAnswered, title = "Quick Quiz" }: QuizS
   };
 
   return (
-    <Card style={{ maxWidth: 760, margin: '0 auto' }}>
+    <Card style={{ maxWidth: 760, margin: "0 auto" }}>
       <CardHeader>
         <div className="header-row">
           <CardTitle>{title}</CardTitle>
           <Badge>{question.level}</Badge>
         </div>
-        <div className="text-muted" style={{ display: 'flex', gap: '.55rem', alignItems: 'center', fontSize: '.8rem' }}>
+        <div
+          className="text-muted"
+          style={{
+            display: "flex",
+            gap: ".55rem",
+            alignItems: "center",
+            fontSize: ".8rem",
+          }}
+        >
           <span className="mono">◉ {question.category}</span>
           {question.technologyIcon}
         </div>
-        <p style={{ margin: 0, fontSize: '1.05rem', fontWeight: 600, lineHeight: 1.45 }}>{question.question}</p>
+        <p
+          style={{
+            margin: 0,
+            fontSize: "1.05rem",
+            fontWeight: 600,
+            lineHeight: 1.45,
+          }}
+        >
+          {question.question}
+        </p>
       </CardHeader>
-      <CardContent style={{ display: 'grid', gap: '.65rem' }}>
+      <CardContent style={{ display: "grid", gap: ".65rem" }}>
         {question.options.map((option) => {
           const showCorrect = isAnswered && option === question.answer;
-          const showIncorrect = isAnswered && option === selectedOption && option !== question.answer;
+          const showIncorrect =
+            isAnswered &&
+            option === selectedOption &&
+            option !== question.answer;
 
           return (
             <Button
               key={option}
               type="button"
-              variant={showCorrect ? "default" : showIncorrect ? "destructive" : "outline"}
+              variant={
+                showCorrect
+                  ? "default"
+                  : showIncorrect
+                    ? "destructive"
+                    : "outline"
+              }
               className="ui-button-block"
-              style={{ height: 'auto', textAlign: 'left', justifyContent: 'flex-start', padding: '.8rem 1rem' }}
+              style={{
+                height: "auto",
+                textAlign: "left",
+                justifyContent: "flex-start",
+                padding: ".8rem 1rem",
+              }}
               onClick={() => handleSelection(option)}
               disabled={isAnswered}
             >
@@ -64,13 +99,21 @@ export function QuizSimple({ question, onAnswered, title = "Quick Quiz" }: QuizS
           );
         })}
 
-        <div className={`feedback ${isCorrect && isAnswered ? 'feedback-success' : ''}`.trim()}>
-          <p style={{ margin: 0, fontWeight: 600 }} className={!isAnswered ? 'feedback-callout' : undefined}>
+        <div
+          className={`feedback${isAnswered && isCorrect ? " feedback-success" : isAnswered ? " feedback-wrong" : ""}`}
+        >
+          <p
+            style={{ margin: 0, fontWeight: 600 }}
+            className={!isAnswered ? "feedback-callout" : undefined}
+          >
             {feedbackText}
           </p>
           {isAnswered ? (
-            <p className="text-muted" style={{ marginBottom: 0 }}>
-              Explanation: {question.explanation ?? `The correct answer is "${question.answer}".`}
+            <p
+              className={`feedback-explanation${!isCorrect ? " feedback-explanation-wrong" : ""}`}
+            >
+              {question.explanation ??
+                `The correct answer is "${question.answer}".`}
             </p>
           ) : null}
         </div>

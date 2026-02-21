@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/auth";
-import { getAvailableTopics } from "@/lib/questions-data";
+import { getAvailableTopics, getQuestionsByTopic } from "@/lib/questions-data";
 import { ThemeSelect } from "@/components/theme/ThemeSelect";
 import { LogoutButton } from "@/components/auth/LogoutButton";
+import { TopicGrid } from "@/components/dashboard/TopicGrid";
+import type { TypeCounts } from "@/components/quiz/SessionConfigModal";
 
 export const dynamic = "force-dynamic";
 
@@ -17,6 +18,19 @@ export default async function DashboardPage() {
   }
 
   const topics = getAvailableTopics();
+
+  // Compute per-type question counts for each topic (used by SessionConfigModal)
+  const topicStats: Record<string, TypeCounts> = {};
+  for (const topic of topics) {
+    const questions = getQuestionsByTopic(topic);
+    topicStats[topic] = {
+      total: questions.length,
+      QUIZ_SIMPLE: questions.filter((q) => q.type === "QUIZ_SIMPLE").length,
+      TRUE_FALSE: questions.filter((q) => q.type === "TRUE_FALSE").length,
+      FILL_THE_BLANK: questions.filter((q) => q.type === "FILL_THE_BLANK")
+        .length,
+    };
+  }
 
   return (
     <div className="app-shell">
@@ -81,43 +95,7 @@ export default async function DashboardPage() {
         </div>
 
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div className="grid-topics">
-            {topics.map((topic) => (
-              <div className="ui-card" key={topic}>
-                <div className="ui-card-header">
-                  <h3
-                    className="ui-card-title mono"
-                    style={{ fontSize: "1.05rem" }}
-                  >
-                    {topic}
-                  </h3>
-                  <p className="ui-card-description">
-                    Adaptive interview drills with active recall and spaced
-                    repetition.
-                  </p>
-                </div>
-                <div className="ui-card-content">
-                  <Link
-                    href={`/quiz/${encodeURIComponent(topic)}`}
-                    className="ui-button ui-button-default ui-button-lg ui-button-block"
-                  >
-                    Start Practice
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {topics.length === 0 ? (
-            <div
-              className="glass-banner"
-              style={{ marginTop: "1rem", textAlign: "center" }}
-            >
-              <p className="text-muted">
-                No topics available yet. Add question sets in prisma/data/sets.
-              </p>
-            </div>
-          ) : null}
+          <TopicGrid topics={topics} topicStats={topicStats} />
         </div>
       </div>
     </div>

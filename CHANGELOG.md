@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-02-20
+
+### Added
+
+- `SessionConfigModal` — pre-session configuration modal triggered by "Start Practice"; lets user choose question count (5 / 7 / 10) and question type (Mixed, Multiple Choice, True/False, Fill the Blank)
+- `TopicGrid` client component wraps the dashboard topic cards and owns modal open/close state
+- Per-type question counts shown on each type pill in the modal (e.g. "Multiple Choice (18)")
+- Type pills are disabled when no questions of that type exist for the topic
+- Warning line in modal when requested count exceeds available questions for the chosen filter
+- `GET /api/quiz/questions/[topic]` now accepts `?count=N&type=QUIZ_SIMPLE|TRUE_FALSE|FILL_THE_BLANK|mixed` query params
+
+### Changed
+
+- Dashboard "Start Practice" is now a `<button>` that opens the config modal instead of a direct `<Link>`
+- Quiz page reads `count` and `type` from URL search params and forwards them to the questions API
+- "No questions available" message now clarifies that filters may be the cause
+
 ## [1.1.0] - 2026-02-20
 
 ### Added

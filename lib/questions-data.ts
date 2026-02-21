@@ -9,6 +9,7 @@ interface QuestionSetItem {
   options: string[];
   type: GameQuestion["type"];
   level: GameQuestion["level"];
+  explanation?: string;
 }
 
 const questionsData: Record<string, GameQuestion[]> = {
@@ -20,6 +21,7 @@ const questionsData: Record<string, GameQuestion[]> = {
     category: "Database",
     type: q.type,
     level: q.level,
+    explanation: q.explanation,
   })),
   JavaScript: (javascriptQuestions as QuestionSetItem[]).map((q, idx) => ({
     id: q.id || `js-${idx}`,
@@ -29,6 +31,7 @@ const questionsData: Record<string, GameQuestion[]> = {
     category: "JavaScript",
     type: q.type,
     level: q.level,
+    explanation: q.explanation,
   })),
 };
 

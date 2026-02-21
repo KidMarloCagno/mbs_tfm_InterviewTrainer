@@ -11,28 +11,63 @@ interface TrueFalseProps {
 }
 
 export function TrueFalse({ question, onAnswered }: TrueFalseProps) {
-  const [selected, setSelected] = useState<"Verdadero" | "Falso" | null>(null);
+  const [selected, setSelected] = useState<"True" | "False" | null>(null);
   const isAnswered = selected !== null;
+  const isCorrect = selected === question.answer;
 
-  const handleAnswer = (choice: "Verdadero" | "Falso") => {
+  const handleAnswer = (choice: "True" | "False") => {
     if (isAnswered) return;
     setSelected(choice);
-    const isCorrect = choice === question.answer;
-    onAnswered(isCorrect, isCorrect ? 5 : 2);
+    const correct = choice === question.answer;
+    onAnswered(correct, correct ? 5 : 2);
   };
 
   return (
-    <Card style={{ maxWidth: 700, margin: '0 auto' }}>
+    <Card style={{ maxWidth: 700, margin: "0 auto" }}>
       <CardHeader>
         <CardTitle>True / False Sprint</CardTitle>
       </CardHeader>
       <CardContent>
-        <p style={{ fontSize: '1.05rem', fontWeight: 600 }}>{question.question}</p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.65rem' }}>
-          <Button onClick={() => handleAnswer("Verdadero")} disabled={isAnswered}>Verdadero</Button>
-          <Button onClick={() => handleAnswer("Falso")} variant="outline" disabled={isAnswered}>Falso</Button>
+        <p style={{ fontSize: "1.05rem", fontWeight: 600 }}>
+          {question.question}
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: ".65rem",
+          }}
+        >
+          <Button onClick={() => handleAnswer("True")} disabled={isAnswered}>
+            True
+          </Button>
+          <Button
+            onClick={() => handleAnswer("False")}
+            variant="outline"
+            disabled={isAnswered}
+          >
+            False
+          </Button>
         </div>
-        {isAnswered ? <p className="text-muted">Respuesta correcta: {question.answer}</p> : null}
+        {isAnswered ? (
+          <div
+            className={`feedback${isCorrect ? " feedback-success" : " feedback-wrong"}`}
+            style={{ marginTop: ".75rem" }}
+          >
+            <p style={{ margin: 0, fontWeight: 600 }}>
+              {isCorrect
+                ? "Correct!"
+                : `Incorrect — the answer is: ${question.answer}`}
+            </p>
+            {question.explanation ? (
+              <p
+                className={`feedback-explanation${!isCorrect ? " feedback-explanation-wrong" : ""}`}
+              >
+                {question.explanation}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
       </CardContent>
     </Card>
   );

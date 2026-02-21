@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { GameEngine } from "@/components/game/GameEngine";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,12 +12,18 @@ import type { GameQuestion } from "@/components/game/GameEngine";
 export default function QuizPage() {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const rawCategory =
     typeof params?.category === "string" ? params.category : "";
   const categoryName = useMemo(
     () => (rawCategory ? decodeURIComponent(rawCategory) : ""),
     [rawCategory],
   );
+
+  // Session config from modal (forwarded as query params)
+  const count = searchParams?.get("count") ?? "10";
+  const type = searchParams?.get("type") ?? "mixed";
+
   const [loading, setLoading] = useState(true);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(
     null,
@@ -35,12 +41,15 @@ export default function QuizPage() {
     resetSession,
   } = useGameStore();
 
-  // Load questions from the SM-2 ordered API endpoint
+  // Load questions from the SM-2 ordered API endpoint with user-selected config
   useEffect(() => {
     if (!categoryName) return;
     setLoading(true);
     resetSession();
-    fetch(`/api/quiz/questions/${encodeURIComponent(categoryName)}`)
+    const qs = new URLSearchParams({ count, type });
+    fetch(
+      `/api/quiz/questions/${encodeURIComponent(categoryName)}?${qs.toString()}`,
+    )
       .then((res) => res.json())
       .then((data: { questions?: GameQuestion[] }) => {
         startSession(data.questions ?? []);
@@ -49,7 +58,7 @@ export default function QuizPage() {
         startSession([]);
       })
       .finally(() => setLoading(false));
-  }, [categoryName, resetSession, startSession]);
+  }, [categoryName, count, type, resetSession, startSession]);
 
   // Persist session results to the DB via SM-2 once the session is done
   useEffect(() => {
@@ -81,7 +90,8 @@ export default function QuizPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted">
-              There are no questions for {categoryName} yet.
+              There are no questions for {categoryName} with the selected
+              filters.
             </p>
             <Button
               onClick={() => router.push("/dashboard")}

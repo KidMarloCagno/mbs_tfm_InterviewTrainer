@@ -347,6 +347,22 @@ a {
 [data-theme="summer"] .feedback-callout {
   color: var(--primary-strong);
 }
+.feedback-wrong {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+}
+.feedback-explanation {
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.65rem;
+  border-left: 3px solid var(--primary);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-radius: 0 4px 4px 0;
+}
+.feedback-explanation-wrong {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.07);
+}
 .theme-toggle {
   position: fixed;
   top: 1rem;
@@ -817,4 +833,75 @@ a {
   border-color: var(--primary-strong);
   background: rgba(0, 162, 173, 0.08);
   color: var(--primary-strong);
+}
+
+/* ============================================================
+   Session Config Modal Selectors
+   ============================================================ */
+
+.session-config-section {
+  margin-bottom: 1.25rem;
+}
+
+.session-config-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem;
+}
+
+.session-config-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.session-config-pill {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease,
+    background 150ms ease;
+  line-height: 1.4;
+}
+
+.session-config-pill:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.session-config-pill.active {
+  background: rgba(0, 243, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.session-config-pill:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.session-config-pill-count {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+[data-theme="summer"] .session-config-pill.active {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+[data-theme="summer"] .session-config-pill:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--text-primary);
 }

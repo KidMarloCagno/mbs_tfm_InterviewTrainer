@@ -87,7 +87,40 @@ interface QuestionSetItem {
   level: "Beginner" | "Intermediate" | "Advanced";
 }
 
---
+### 6.2 Question Sources & Prompts
+
+All sourcing documentation is maintained in:
+
+- **[`QuestionsKitchen/SOURCES.md`](QuestionsKitchen/SOURCES.md)** — source URLs and AI prompts used to generate each question set
+- **[`prisma/data/sets/`](prisma/data/sets/)** — the actual JSON files consumed by the seeder and the app
+
+---
+
+### 6.3 Adding a New Question Set — Auto-Verify Checklist
+
+When a new `.json` file is dropped into `prisma/data/sets/`, or new questions are appended to an existing file, the agent MUST run through this checklist **before seeding the DB**:
+
+- [ ] **1. JSON schema valid** — every object has the required structural fields: `id`, `question`, `answer`, `options`, `type`, `level`. Content quality (`explanation` text, answer correctness, distractor quality) is the author's responsibility and is **out of scope** for this checklist.
+- [ ] **2. ID sequence integrity** — the agent MUST auto-correct any ID that violates the sequence rules. **Do not flag or touch question content — IDs only.**
+  - Format: `{prefix}-q{NNN}` zero-padded 3-digit counter (e.g., `db-q001`, `db-q059`)
+  - **No duplicates** — IDs must be unique across the entire `prisma/data/sets/` directory
+  - **No gaps** — sequence must be continuous within each file (q001 → q002 → q003…)
+  - **Continuation rule** — questions appended to an existing file must continue from the last existing ID (e.g., last is `db-q089` → next is `db-q090`)
+  - **Auto-fix:** renumber out-of-sequence or duplicate IDs to restore continuity; report what was changed
+- [ ] **3. Register in app** — add an import and a new key to `lib/questions-data.ts`:
+  ```ts
+  import <topic>Questions from "@/prisma/data/sets/<topic>.json";
+  // inside questionsData:
+  <TopicName>: (<topic>Questions as QuestionSetItem[]).map((q, idx) => ({ ... })),
+  ```
+- [ ] **4. Seed DB** — run `npx prisma db seed` automatically after steps 1–3 pass. Do not wait for the user to request it. (Seeder auto-discovers all JSON files in `prisma/data/sets/`)
+- [ ] **5. TypeScript clean** — run `npx tsc --noEmit`, fix any errors
+- [ ] **6. Document** — add a row for the new topic in `QuestionsKitchen/SOURCES.md`
+- [ ] **7. Version bump** — follow Section 7 (patch bump for new question set, minor bump for new category)
+
+> `seed.ts` auto-discovers every `.json` in `prisma/data/sets/` — no changes to the seeder are needed. Only `lib/questions-data.ts` requires a manual import.
+
+---
 
 ## 7. Version Control & Changelog Management
 
@@ -152,7 +185,23 @@ When making changes, the AI MUST:
    - Reference issue/PR numbers if applicable
    - Update `README.md` only when new functionalities are added (not for fixes or changes that do not introduce new functionality)
 
-### 7.4 Example Entry Format
+### 7.4 In-App Version Display (MANDATORY)
+
+The version string displayed inside the application MUST stay in sync with `package.json` and `CHANGELOG.md`.
+
+**Files to update on every version bump:**
+
+| File             | Location                      | Example                   |
+| ---------------- | ----------------------------- | ------------------------- |
+| `package.json`   | `"version"` field             | `"version": "1.3.0"`      |
+| `CHANGELOG.md`   | New `## [X.Y.Z]` section      | `## [1.3.0] - 2026-02-20` |
+| `app/layout.tsx` | `<p className="app-version">` | `v1.3.0`                  |
+
+> **Rule:** Never close a feature without verifying all three files show the same version. Stale in-app versions (e.g., showing v1.0.0 while CHANGELOG says v1.2.0) erode trust in the UI.
+
+---
+
+### 7.5 Example Entry Format
 
 ```markdown
 ## [1.2.0] - 2026-02-14
