@@ -153,7 +153,7 @@ This project uses a git pre-commit hook to automatically run Snyk security scans
 
 **How it works:**
 
-- The hook runs `snyk test` and `snyk code test` in the project directory.
+- The hook runs `snyk test --all-projects` and `snyk code test --all-projects` in the project directory.
 - If any issues are detected, the commit is aborted.
 - Make sure Snyk CLI is installed and authenticated (`snyk auth`).
 
