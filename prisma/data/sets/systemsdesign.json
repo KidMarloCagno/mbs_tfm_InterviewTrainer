@@ -1,0 +1,1952 @@
+[
+  {
+    "id": "sd-q001",
+    "question": "What is the primary difference between an API Gateway and a Load Balancer?",
+    "answer": "An API Gateway handles cross-cutting concerns like authentication, routing, and rate limiting for APIs, while a Load Balancer primarily distributes network traffic across multiple servers.",
+    "options": [
+      "An API Gateway is a hardware device, whereas a Load Balancer is strictly a software component.",
+      "An API Gateway handles cross-cutting concerns like authentication, routing, and rate limiting for APIs, while a Load Balancer primarily distributes network traffic across multiple servers.",
+      "An API Gateway is used exclusively for internal microservices communication, while a Load Balancer handles external internet traffic.",
+      "An API Gateway operates at OSI Layer 4, whereas a Load Balancer operates exclusively at Layer 7."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "An API Gateway manages API-specific concerns like routing and authentication, whereas a Load Balancer is primarily focused on distributing network load across servers."
+  },
+  {
+    "id": "sd-q002",
+    "question": "What is the main functional difference between a Forward Proxy and a Reverse Proxy?",
+    "answer": "A forward proxy sits in front of client devices to intercept outbound requests, whereas a reverse proxy sits in front of web servers to intercept incoming requests.",
+    "options": [
+      "A forward proxy balances load across backend servers, whereas a reverse proxy caches static IP addresses.",
+      "A forward proxy is used strictly for database connections, whereas a reverse proxy is used for web traffic.",
+      "A forward proxy sits in front of client devices to intercept outbound requests, whereas a reverse proxy sits in front of web servers to intercept incoming requests.",
+      "A forward proxy encrypts all traffic, whereas a reverse proxy can only handle unencrypted HTTP traffic."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Forward proxies protect and route traffic for clients, while reverse proxies protect and route traffic for backend servers."
+  },
+  {
+    "id": "sd-q003",
+    "question": "How does horizontal scaling differ from vertical scaling?",
+    "answer": "Horizontal scaling involves adding more machines to a system, whereas vertical scaling involves adding more computational power (CPU, RAM) to an existing single machine.",
+    "options": [
+      "Horizontal scaling involves upgrading to a faster CPU, whereas vertical scaling means adding more hard drives.",
+      "Horizontal scaling involves adding more machines to a system, whereas vertical scaling involves adding more computational power (CPU, RAM) to an existing single machine.",
+      "Horizontal scaling refers to partitioning databases, whereas vertical scaling refers to deploying microservices.",
+      "Horizontal scaling is only applicable to databases, whereas vertical scaling is only applicable to web servers."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Horizontal scaling scales 'out' by adding nodes, while vertical scaling scales 'up' by adding hardware resources to a single node."
+  },
+  {
+    "id": "sd-q004",
+    "question": "What is a defining characteristic of a Microservices architecture compared to a Monolithic architecture?",
+    "answer": "Microservices divide an application into small, loosely coupled, independently deployable services, while a Monolithic architecture builds the application as a single, unified unit.",
+    "options": [
+      "Microservices must all share a single, central database, whereas Monolithic applications require multiple databases.",
+      "Microservices divide an application into small, loosely coupled, independently deployable services, while a Monolithic architecture builds the application as a single, unified unit.",
+      "Microservices are always slower than Monolithic applications due to internal network latency.",
+      "Microservices can only be written in a single programming language, while a Monolith can use multiple languages."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Microservices break systems down into independent components, contrasting heavily with the unified codebase of a Monolith."
+  },
+  {
+    "id": "sd-q005",
+    "question": "In database design, what is the difference between vertical partitioning and horizontal partitioning (sharding)?",
+    "answer": "Horizontal partitioning splits rows of a table into multiple tables, while vertical partitioning splits columns of a table into multiple tables.",
+    "options": [
+      "Horizontal partitioning splits columns of a table into multiple tables, while vertical partitioning splits rows of a table into multiple tables.",
+      "Horizontal partitioning duplicates the entire database across regions, while vertical partitioning stores everything in one location.",
+      "Horizontal partitioning splits rows of a table into multiple tables, while vertical partitioning splits columns of a table into multiple tables.",
+      "Horizontal partitioning is used exclusively for NoSQL databases, while vertical partitioning is for SQL databases."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Horizontal partitioning (sharding) divides the dataset by rows to scale out, whereas vertical partitioning separates large tables by columns."
+  },
+  {
+    "id": "sd-q006",
+    "question": "What is the primary purpose of a Rate Limiter in system design?",
+    "answer": "To control the amount of incoming requests to a network or service within a specific time window to prevent abuse and overload.",
+    "options": [
+      "To limit the physical bandwidth capacity of the data center's main router.",
+      "To automatically block users from specific geographic regions.",
+      "To control the amount of incoming requests to a network or service within a specific time window to prevent abuse and overload.",
+      "To ensure that database queries execute within a guaranteed millisecond threshold."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Rate limiters protect services from denial-of-service attacks and ensure fair usage by restricting request volumes per user or IP."
+  },
+  {
+    "id": "sd-q007",
+    "question": "How does Single Sign-On (SSO) fundamentally work?",
+    "answer": "It allows a user to authenticate once with a central identity provider and gain access to multiple independent software systems without re-entering credentials.",
+    "options": [
+      "It requires a user to enter a separate, unique password for every microservice within an organization.",
+      "It automatically synchronizes a user's password across multiple distinct databases via an API.",
+      "It allows a user to authenticate once with a central identity provider and gain access to multiple independent software systems without re-entering credentials.",
+      "It completely replaces traditional passwords with biometric authentication via a third-party app."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "SSO centralizes authentication, providing users with seamless access to connected applications after a single central login."
+  },
+  {
+    "id": "sd-q008",
+    "question": "Why is Apache Kafka known for its exceptionally high throughput and speed?",
+    "answer": "It utilizes a sequential disk I/O mechanism and relies heavily on the OS page cache for zero-copy data transfer.",
+    "options": [
+      "It stores all messages strictly in RAM and never writes data to physical disks.",
+      "It bypasses the operating system network stack entirely using proprietary hardware drivers.",
+      "It utilizes a sequential disk I/O mechanism and relies heavily on the OS page cache for zero-copy data transfer.",
+      "It encrypts all messages using a lightweight algorithm that requires zero CPU overhead."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Kafka's immense performance comes from leveraging sequential disk writes and the zero-copy principle via the OS page cache."
+  },
+  {
+    "id": "sd-q009",
+    "question": "What is a key difference between Apache Kafka and RabbitMQ?",
+    "answer": "Kafka is a distributed event streaming platform built for high-throughput log aggregation and replay, while RabbitMQ is a traditional message broker focused on complex routing and message delivery guarantees.",
+    "options": [
+      "Kafka uses a push-based model for consumers, while RabbitMQ relies entirely on a pull-based model.",
+      "Kafka is a distributed event streaming platform built for high-throughput log aggregation and replay, while RabbitMQ is a traditional message broker focused on complex routing and message delivery guarantees.",
+      "Kafka is primarily an in-memory database, while RabbitMQ is a persistent disk-based storage system.",
+      "Kafka can only support single-consumer models, while RabbitMQ natively supports consumer groups."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Kafka is designed as an immutable log for massive data streams and replays, whereas RabbitMQ is designed for complex, stateful message routing."
+  },
+  {
+    "id": "sd-q010",
+    "question": "Which of the following best describes OAuth?",
+    "answer": "An authorization framework that allows third-party applications limited access to user accounts via access tokens without exposing passwords.",
+    "options": [
+      "An authorization framework that allows third-party applications limited access to user accounts via access tokens without exposing passwords.",
+      "A biometric security protocol used primarily for unlocking mobile devices.",
+      "A database encryption standard ensuring data-at-rest is secure.",
+      "An authentication protocol that strictly verifies user identity using XML assertions."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "OAuth relies on tokens rather than passwords to grant delegated access to third-party services securely."
+  },
+  {
+    "id": "sd-q011",
+    "question": "When designing a URL Shortener like TinyURL, which technique is most commonly used to efficiently generate the short URL identifier?",
+    "answer": "Base62 encoding of an auto-incrementing integer or a unique hash ID.",
+    "options": [
+      "Concatenating the user's IP address with the current timestamp.",
+      "Running the long URL through a standard AES-256 encryption block.",
+      "Base62 encoding of an auto-incrementing integer or a unique hash ID.",
+      "Using a random 100-character alphanumeric string generated by a UUID."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Base62 utilizes alphanumeric characters [A-Z, a-z, 0-9] to create a short, collision-resistant string from a numeric ID."
+  },
+  {
+    "id": "sd-q012",
+    "question": "In a system design for a text storage service like Pastebin, which storage type is most suitable for scaling and storing the large unstructured text blobs?",
+    "answer": "Object Storage (like Amazon S3) or a NoSQL Document Database.",
+    "options": [
+      "A highly normalized Relational Database (like PostgreSQL) storing text across dozens of tables.",
+      "Object Storage (like Amazon S3) or a NoSQL Document Database.",
+      "An In-Memory Cache (like Redis) exclusively without persistent storage.",
+      "A Graph Database (like Neo4j) to map the text to its author."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unstructured text blobs do not require relational mapping, making Object Storage or NoSQL highly efficient and scalable."
+  },
+  {
+    "id": "sd-q013",
+    "question": "What is the primary function of a Content Delivery Network (CDN) when delivering static web assets?",
+    "answer": "To cache static content on edge servers geographically closer to the end users, reducing latency and bandwidth costs.",
+    "options": [
+      "To automatically execute complex backend business logic closer to the user.",
+      "To serve as a distributed firewall blocking all incoming database queries.",
+      "To cache static content on edge servers geographically closer to the end users, reducing latency and bandwidth costs.",
+      "To securely encrypt all user passwords before they reach the main application server."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "CDNs place assets near users globally, dramatically accelerating the delivery of static files like images, CSS, and JS."
+  },
+  {
+    "id": "sd-q014",
+    "question": "When designing an automated Parking Garage system, what is an efficient data structure for quickly finding the nearest available parking spot to the entrance?",
+    "answer": "A Min-Heap or a Priority Queue prioritizing the closest spots.",
+    "options": [
+      "A Hash Map with the license plate as the key.",
+      "A simple Singly Linked List of all spots.",
+      "A Min-Heap or a Priority Queue prioritizing the closest spots.",
+      "A Stack (LIFO) tracking the most recently vacated spots."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A Min-Heap allows for extracting the absolute minimum element (closest spot) in O(log N) time efficiently."
+  },
+  {
+    "id": "sd-q015",
+    "question": "In an object-oriented system design for a Vending Machine, which design pattern is most appropriate for handling its different phases (e.g., HasMoney, Dispensing, SoldOut)?",
+    "answer": "The State Pattern.",
+    "options": [
+      "The State Pattern.",
+      "The Singleton Pattern.",
+      "The Factory Method Pattern.",
+      "The Observer Pattern."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The State Pattern allows an object to alter its behavior when its internal state changes, perfectly matching a vending machine's workflow."
+  },
+  {
+    "id": "sd-q016",
+    "question": "When building a highly available Distributed Key-Value Store, which technique is primarily used to distribute data across nodes evenly while minimizing data movement when nodes are added or removed?",
+    "answer": "Consistent Hashing.",
+    "options": [
+      "Round-Robin DNS routing.",
+      "Consistent Hashing.",
+      "Two-Phase Commit Protocol.",
+      "B-Tree Indexing."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Consistent hashing minimizes the number of keys that need to be remapped when a node is added or removed from the cluster."
+  },
+  {
+    "id": "sd-q017",
+    "question": "What is a common cache eviction policy used in a Distributed Cache like Redis to remove old data when memory is full?",
+    "answer": "Least Recently Used (LRU).",
+    "options": [
+      "First In, Last Out (FILO).",
+      "Most Frequently Used (MFU).",
+      "Least Recently Used (LRU).",
+      "Shortest Job First (SJF)."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "LRU discards the least recently used items first, effectively keeping active hot data in memory."
+  },
+  {
+    "id": "sd-q018",
+    "question": "In a Distributed Job Scheduler, what is the best way to ensure that a scheduled task is executed exactly once by only one worker node?",
+    "answer": "Using a distributed lock mechanism (like Redis Redlock or Zookeeper) to claim the task before execution.",
+    "options": [
+      "Relying on the client to send the request exactly once.",
+      "Having all worker nodes execute the task and discarding duplicate results at the database level.",
+      "Using a distributed lock mechanism (like Redis Redlock or Zookeeper) to claim the task before execution.",
+      "Using a standard Java synchronized block within each microservice container."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Distributed locks ensure mutually exclusive access to a shared resource or task across a cluster of independent nodes."
+  },
+  {
+    "id": "sd-q019",
+    "question": "When designing a modern Authentication System, how should user passwords be securely stored in the database?",
+    "answer": "Hashed and salted using a strong, slow cryptographic function like bcrypt or Argon2.",
+    "options": [
+      "Encrypted using a symmetric key algorithm like AES-256.",
+      "Hashed and salted using a strong, slow cryptographic function like bcrypt or Argon2.",
+      "Stored as plain text but restricted via strict database firewall rules.",
+      "Encoded using Base64 so they cannot be read plainly by administrators."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Hashing is irreversible, and salting prevents rainbow table attacks, keeping stolen credentials safe."
+  },
+  {
+    "id": "sd-q020",
+    "question": "In a Payment System design like UPI, how do you handle network timeouts to ensure a financial transaction isn't processed twice upon a retry?",
+    "answer": "By generating and tracking unique Idempotency keys for each transaction request.",
+    "options": [
+      "By blocking the user account after any network failure.",
+      "By using a Load Balancer to drop all duplicate IP packets.",
+      "By generating and tracking unique Idempotency keys for each transaction request.",
+      "By clearing the browser cache before attempting a retry."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Idempotency keys ensure that safely retrying an API request does not result in the duplicate execution of a state-changing operation."
+  },
+  {
+    "id": "sd-q021",
+    "question": "When designing an image-heavy social feed like Instagram, what is an efficient architectural pattern for rapidly delivering feeds to users?",
+    "answer": "A push-based (fan-out-on-write) model that pre-computes and stores feeds for active users when a new post is made.",
+    "options": [
+      "A pull-based model that executes a heavy SQL JOIN on the fly every time a user opens the app.",
+      "A push-based (fan-out-on-write) model that pre-computes and stores feeds for active users when a new post is made.",
+      "Sending the raw image files via email directly to followers.",
+      "Using a blockchain ledger to synchronously record every single image view."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Fan-out-on-write shifts the heavy lifting to the write phase, allowing lightning-fast reads when users open their feeds."
+  },
+  {
+    "id": "sd-q022",
+    "question": "In a location-based application like Tinder or Yelp, which spatial data structure or indexing technique is commonly used to quickly query nearby users or businesses?",
+    "answer": "Geohash or Quadtree indexing.",
+    "options": [
+      "Standard B-Tree indexes on longitude and latitude columns separately.",
+      "A distributed Hash Table using the user's name as the key.",
+      "Geohash or Quadtree indexing.",
+      "A Bloom Filter mapped to the user's IP address."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Geohashes and Quadtrees convert two-dimensional coordinates into a structure that can be easily queried for proximity."
+  },
+  {
+    "id": "sd-q023",
+    "question": "When designing a real-time chat application like WhatsApp, which communication protocol is best suited for maintaining a low-latency, bi-directional persistent connection?",
+    "answer": "WebSockets.",
+    "options": [
+      "Standard HTTP/1.0 Short Polling.",
+      "Simple Mail Transfer Protocol (SMTP).",
+      "WebSockets.",
+      "File Transfer Protocol (FTP)."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "WebSockets provide a full-duplex communication channel over a single TCP connection, ideal for real-time messaging."
+  },
+  {
+    "id": "sd-q024",
+    "question": "When designing a massive social graph like Facebook, what kind of database is theoretically best suited for traversing multi-level relationships (e.g., 'friends of friends')?",
+    "answer": "Graph Database.",
+    "options": [
+      "Relational Database.",
+      "Time-Series Database.",
+      "Graph Database.",
+      "Column-Family Database."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Graph databases treat relationships as first-class citizens, making complex network traversals exceptionally fast."
+  },
+  {
+    "id": "sd-q025",
+    "question": "How does Twitter efficiently handle the massive read volume generated by celebrities with millions of followers?",
+    "answer": "By using a hybrid approach where celebrity tweets are pulled (fan-out-on-load) by followers rather than pushed to millions of individual timelines.",
+    "options": [
+      "By forcing all users to upgrade to premium accounts to see celebrity tweets.",
+      "By strictly pushing (fan-out-on-write) the tweet to all 50 million followers' databases instantly.",
+      "By storing celebrity tweets only in the browser's local storage.",
+      "By using a hybrid approach where celebrity tweets are pulled (fan-out-on-load) by followers rather than pushed to millions of individual timelines."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Pushing to millions of lists instantly causes massive load delays. The hybrid approach pulls celebrity data at read-time to save backend write operations."
+  },
+  {
+    "id": "sd-q026",
+    "question": "In a system like Reddit, what is the most scalable way to handle rapidly changing upvote and downvote counts for viral posts?",
+    "answer": "Aggregating votes asynchronously in an in-memory cache (like Redis) and periodically flushing the totals to the persistent database.",
+    "options": [
+      "Performing a synchronous SQL UPDATE statement directly on the primary database for every single click.",
+      "Writing every vote directly to an AWS S3 bucket as a new text file.",
+      "Aggregating votes asynchronously in an in-memory cache (like Redis) and periodically flushing the totals to the persistent database.",
+      "Disabling voting once a post reaches a threshold of 1000 votes to save database load."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Directly updating the DB causes lock contention. Caching the counts and doing batch updates asynchronously solves this bottleneck."
+  },
+  {
+    "id": "sd-q027",
+    "question": "When designing a video streaming service like Netflix, how is video content delivered to users seamlessly under varying network conditions?",
+    "answer": "By utilizing a global CDN and Adaptive Bitrate Streaming (ABR) to dynamically adjust video quality chunks based on current network speed.",
+    "options": [
+      "By utilizing a global CDN and Adaptive Bitrate Streaming (ABR) to dynamically adjust video quality chunks based on current network speed.",
+      "By downloading the entire movie to the user's hard drive before allowing playback.",
+      "By streaming the video directly from a single massive mainframe database in California.",
+      "By utilizing UDP multicasting from peer-to-peer user devices only."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ABR monitors user bandwidth and switches smoothly between different resolution video chunks served via the CDN."
+  },
+  {
+    "id": "sd-q028",
+    "question": "In a video processing system like YouTube, how should the backend architecture handle the heavy compute task of converting an uploaded video into multiple resolutions?",
+    "answer": "By publishing a task to an asynchronous message queue, allowing a scalable pool of worker nodes to process video chunks in the background.",
+    "options": [
+      "By forcing the user's browser to keep the HTTP connection open until all processing is completely finished.",
+      "By publishing a task to an asynchronous message queue, allowing a scalable pool of worker nodes to process video chunks in the background.",
+      "By utilizing the API Gateway to perform the video encoding before it hits the backend.",
+      "By sending the raw video directly to the CDN to be transcoded on the fly during playback."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Offloading heavy jobs to asynchronous worker pools prevents the main application servers from freezing."
+  },
+  {
+    "id": "sd-q029",
+    "question": "In a typical Search Engine architecture like Google Search, what specific component is responsible for navigating the internet and downloading web pages to be indexed?",
+    "answer": "A Distributed Web Crawler.",
+    "options": [
+      "A Reverse Proxy.",
+      "A MapReduce Aggregator.",
+      "A Distributed Web Crawler.",
+      "An API Gateway."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A web crawler (or spider) systematically browses the web to download pages for the search index."
+  },
+  {
+    "id": "sd-q030",
+    "question": "In an E-commerce system like Amazon, what pattern is commonly used to protect backend databases from being overwhelmed during a sudden 'Flash Sale' traffic spike?",
+    "answer": "Implementing a queue-based asynchronous order processing system to buffer the influx of requests.",
+    "options": [
+      "Implementing a queue-based asynchronous order processing system to buffer the influx of requests.",
+      "Switching the primary database from an SSD to a mechanical Hard Drive.",
+      "Bypassing all load balancers to reduce network hops.",
+      "Disabling all user authentication to speed up checkout."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A message queue acts as a shock absorber, regulating the flow of orders into the database at a safe, steady pace."
+  },
+  {
+    "id": "sd-q031",
+    "question": "How does a music streaming app like Spotify heavily optimize song playback to minimize perceived latency when a user hits play?",
+    "answer": "By pre-fetching and caching the first few seconds of a user's predicted next songs locally on the client device.",
+    "options": [
+      "By storing the entire Spotify music catalog directly on the user's mobile device upon installation.",
+      "By routing all audio strictly through a blockchain network.",
+      "By pre-fetching and caching the first few seconds of a user's predicted next songs locally on the client device.",
+      "By utilizing synchronous SOAP web services for music delivery."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Client-side pre-fetching allows the app to start playback instantly while buffering the rest of the song in the background."
+  },
+  {
+    "id": "sd-q032",
+    "question": "What is the core underlying architectural mechanism driving TikTok's highly personalized short-video feed?",
+    "answer": "A real-time Recommendation Engine powered by Machine Learning models analyzing user interactions and video metadata.",
+    "options": [
+      "A purely chronological SQL query sorting videos by upload time.",
+      "A real-time Recommendation Engine powered by Machine Learning models analyzing user interactions and video metadata.",
+      "A manual curation team pushing video IDs to a static Redis list.",
+      "A random number generator selecting videos from the CDN."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "TikTok's success is heavily tied to its ML recommendation systems matching content features with micro-user behaviors."
+  },
+  {
+    "id": "sd-q033",
+    "question": "In a massive multi-tenant SaaS platform like Shopify, what is a common strategy for scaling and isolating databases for large premium enterprise merchants?",
+    "answer": "Database Sharding, where massive enterprise tenants are routed to dedicated database shards while smaller tenants share shards.",
+    "options": [
+      "Storing all tenants globally in one single massive SQL table.",
+      "Database Sharding, where massive enterprise tenants are routed to dedicated database shards while smaller tenants share shards.",
+      "Using local SQLite databases attached to the web servers.",
+      "Forcing enterprise tenants to host the database on their own physical on-premise hardware."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Routing VIP clients to their own isolated shards guarantees performance without noisy-neighbor interference."
+  },
+  {
+    "id": "sd-q034",
+    "question": "When designing an accommodation booking system like Airbnb, how do you prevent double-booking of the exact same property for the exact same dates by two concurrent users?",
+    "answer": "By using distributed locks and strict database transactions with appropriate isolation levels (like Serializable) during the booking process.",
+    "options": [
+      "By alerting the host via email and letting them decide who gets the room.",
+      "By strictly allowing only one user to be logged into the website at any given time.",
+      "By processing bookings exclusively through a decentralized cryptocurrency smart contract.",
+      "By using distributed locks and strict database transactions with appropriate isolation levels (like Serializable) during the booking process."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Concurrency controls, including strong database transaction isolation and locks, are mandatory to guarantee booking correctness."
+  },
+  {
+    "id": "sd-q035",
+    "question": "What is the optimal data structure choice for designing an efficient Autocomplete or Typeahead suggestion feature in a search bar?",
+    "answer": "A Trie (Prefix Tree).",
+    "options": [
+      "A standard Array.",
+      "A Trie (Prefix Tree).",
+      "A Doubly Linked List.",
+      "A Stack."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A Trie allows extremely fast lookups for string prefixes, scaling excellently for autocomplete features."
+  },
+  {
+    "id": "sd-q036",
+    "question": "Which specific algorithm is widely used to implement scalable API Rate Limiters?",
+    "answer": "The Token Bucket or Leaky Bucket algorithm.",
+    "options": [
+      "The Paxos consensus algorithm.",
+      "The Token Bucket or Leaky Bucket algorithm.",
+      "The Apriori algorithm.",
+      "The RSA encryption algorithm."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Token Bucket and Leaky Bucket are standard memory-efficient algorithms used to smooth out traffic bursts."
+  },
+  {
+    "id": "sd-q037",
+    "question": "In a distributed message queue system like Kafka, what fundamental mechanism ensures that messages are not lost if a single broker node physically crashes?",
+    "answer": "Data Replication of partitions across multiple broker nodes.",
+    "options": [
+      "Writing the messages down on a physically printed log.",
+      "Data Replication of partitions across multiple broker nodes.",
+      "The client application infinitely retrying until the exact broker comes back online.",
+      "Relying solely on the CPU cache of the failed node."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka mirrors partitions to multiple backup nodes (followers). If the leader crashes, a follower seamlessly takes over."
+  },
+  {
+    "id": "sd-q038",
+    "question": "According to the CAP theorem, when designing the core reservation phase of a Flight Booking System, which property must absolutely be prioritized to ensure a seat isn't sold twice?",
+    "answer": "Consistency over Availability (Strong Consistency).",
+    "options": [
+      "Availability over Consistency (Eventual Consistency).",
+      "Partition Tolerance strictly over all network security.",
+      "Consistency over Availability (Strong Consistency).",
+      "Throughput over Latency."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A flight system must sacrifice some availability during network partitions to maintain strict data consistency and prevent double booking."
+  },
+  {
+    "id": "sd-q039",
+    "question": "When designing a collaborative Online Code Editor (like Google Docs for code), what complex algorithm is typically used to resolve typing conflicts from multiple users editing the same file in real-time?",
+    "answer": "Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDT).",
+    "options": [
+      "Simple last-write-wins (LWW) database overwrites.",
+      "Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDT).",
+      "Round-robin turn-based lock passing.",
+      "Asymmetric key cryptography."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "OT and CRDT algorithms mathematically merge concurrent distributed character edits smoothly."
+  },
+  {
+    "id": "sd-q040",
+    "question": "In a Stock Exchange system design, what is considered the most critical non-functional requirement for the core order matching engine?",
+    "answer": "Ultra-low latency to process financial trades in microseconds.",
+    "options": [
+      "Providing a beautiful, high-resolution Graphical User Interface.",
+      "Ultra-low latency to process financial trades in microseconds.",
+      "Using a purely serverless microservice architecture to save money on cloud bills.",
+      "Ensuring the system supports thousands of different human languages natively."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Trading systems win or lose based on execution speed, making latency the absolute highest priority metric."
+  },
+  {
+    "id": "sd-q041",
+    "question": "What type of database architecture is most appropriate for a large-scale Analytics Platform that ingests millions of system logs and metrics per second?",
+    "answer": "A Time-Series Database (e.g., InfluxDB) or a Columnar Database (e.g., ClickHouse).",
+    "options": [
+      "A fully normalized Relational Database (e.g., MySQL) focusing heavily on foreign keys.",
+      "An In-Memory cache exclusively (e.g., Memcached) with no disk persistence.",
+      "A Time-Series Database (e.g., InfluxDB) or a Columnar Database (e.g., ClickHouse).",
+      "A pure Graph Database (e.g., Neo4j)."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Time-series and columnar databases are heavily optimized for write-heavy analytical workloads spanning wide timeframes."
+  },
+  {
+    "id": "sd-q042",
+    "question": "When designing a Location-Based Service, how do you efficiently query a massive database for businesses within a specific radius of a user's location?",
+    "answer": "By converting latitude/longitude coordinates into Geohashes and performing a prefix match query.",
+    "options": [
+      "By running the Haversine formula on every single row in the database simultaneously.",
+      "By converting latitude/longitude coordinates into Geohashes and performing a prefix match query.",
+      "By querying the zip code column using a standard SQL LIKE statement.",
+      "By loading all businesses into the mobile app and filtering on the client side."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Geohashing converts 2D coordinates into a 1D string. A simple string prefix query fetches nearby spots instantly."
+  },
+  {
+    "id": "sd-q043",
+    "question": "In a ride-sharing app like Uber, what service architecture is responsible for continuously tracking and updating the live locations of millions of active drivers?",
+    "answer": "A specialized Location Tracking Service utilizing WebSockets and a scalable spatial database (like Redis Geospatial).",
+    "options": [
+      "A basic PHP script querying a MySQL database every 5 minutes.",
+      "A specialized Location Tracking Service utilizing WebSockets and a scalable spatial database (like Redis Geospatial).",
+      "An email-based alerting system where drivers text their GPS coordinates to the server.",
+      "A static CDN caching the last known location for 24 hours."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "High-frequency coordinate updates require persistent WebSocket connections and an in-memory spatial DB to handle the enormous write loads."
+  },
+  {
+    "id": "sd-q044",
+    "question": "What is the primary architectural pattern used when designing complex, distributed order fulfillment state machines for a Food Delivery App (spanning Restaurant, Driver, and User services)?",
+    "answer": "The Saga Pattern, managing distributed transactions through asynchronous compensating actions.",
+    "options": [
+      "The Saga Pattern, managing distributed transactions through asynchronous compensating actions.",
+      "The Singleton Pattern, strictly holding the entire order in one server's RAM.",
+      "The Two-Phase Commit protocol across multiple independent NoSQL databases.",
+      "A single monolithic database transaction locking all tables for 45 minutes."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Because each step involves a different microservice domain, the Saga Pattern orchestrates the flow and issues rollbacks (compensations) if a step fails."
+  },
+  {
+    "id": "sd-q045",
+    "question": "In a real-time document editing system, how do browser clients maintain a live connection to the server to instantly receive typing updates from other collaborators?",
+    "answer": "By utilizing Server-Sent Events (SSE) or WebSockets.",
+    "options": [
+      "By refreshing the entire webpage every 1 second via a Meta Refresh tag.",
+      "By downloading the file via FTP every time a character is typed.",
+      "By utilizing Server-Sent Events (SSE) or WebSockets.",
+      "By sending standard SMTP email payloads behind the scenes."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "SSE (unidirectional) and WebSockets (bidirectional) keep an HTTP connection open to stream live text updates effortlessly."
+  },
+  {
+    "id": "sd-q046",
+    "question": "At a fundamental level, how does a routing system like Google Maps calculate the shortest physical route between a starting point and a destination?",
+    "answer": "By modeling the road network as a graph and applying optimized shortest-path algorithms like Dijkstra's or A*.",
+    "options": [
+      "By modeling the road network as a graph and applying optimized shortest-path algorithms like Dijkstra's or A*.",
+      "By drawing a straight line on an image map and estimating the time visually.",
+      "By using a Binary Search Tree to find the closest alphabetical street names.",
+      "By calculating the exact distance to every single street in the world recursively."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Maps represent intersections as nodes and roads as edges, allowing advanced graph algorithms to find the optimal path."
+  },
+  {
+    "id": "sd-q047",
+    "question": "In a large-scale video conferencing application like Zoom, which architecture is typically used to efficiently route webcam video streams between multiple participants without overwhelming their individual network connections?",
+    "answer": "Selective Forwarding Unit (SFU) architecture.",
+    "options": [
+      "Pure Peer-to-Peer (P2P) mesh networking for all 100+ participants.",
+      "Selective Forwarding Unit (SFU) architecture.",
+      "SMTP server routing.",
+      "A purely decentralized Blockchain network."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "SFU receives streams from everyone and selectively forwards them to participants based on their layout and bandwidth, preventing client overload."
+  },
+  {
+    "id": "sd-q048",
+    "question": "How does a File Sharing System like Dropbox drastically minimize user upload bandwidth when syncing a 1GB file that has only been slightly modified?",
+    "answer": "By dividing the file into smaller chunks, calculating a cryptographic hash for each chunk, and only uploading the chunks with modified hashes.",
+    "options": [
+      "By zipping the file into a standard .rar archive before every upload.",
+      "By dividing the file into smaller chunks, calculating a cryptographic hash for each chunk, and only uploading the chunks with modified hashes.",
+      "By converting the binary file into a text document and compressing it.",
+      "By solely relying on the user's ISP to compress the traffic via specialized routers."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Chunking and hashing ensure that only the exact bytes that changed are transmitted over the network."
+  },
+  {
+    "id": "sd-q049",
+    "question": "In a Ticket Booking system like BookMyShow, what mechanism is commonly used to temporarily reserve a movie seat while the user enters their credit card details?",
+    "answer": "A temporary soft lock stored in a fast caching layer (like Redis) with a Time-To-Live (TTL) expiration.",
+    "options": [
+      "A hard SQL lock that completely freezes the entire database table.",
+      "A temporary soft lock stored in a fast caching layer (like Redis) with a Time-To-Live (TTL) expiration.",
+      "An infinite loop running on the application server.",
+      "A client-side cookie that physically reserves the seat on the user's browser."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A Redis lock with TTL ensures the seat is held exclusively during checkout but is automatically released if the user abandons the process."
+  },
+  {
+    "id": "sd-q050",
+    "question": "In a highly Distributed Cloud Storage system like Amazon S3, what advanced technique is used to ensure extreme data durability and availability even if an entire data center goes offline?",
+    "answer": "Erasure Coding and automated cross-region replication.",
+    "options": [
+      "Storing everything exclusively on a single military-grade hard drive.",
+      "Erasure Coding and automated cross-region replication.",
+      "Using standard RAID 0 arrays on web servers.",
+      "Printing the binary data to physical tape storage and mailing it to users."
+    ],
+    "category": "System Design",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Erasure coding breaks data into fragments, expanded with parity pieces, and stores them across different fault zones to survive massive outages."
+  },
+  {
+    "id": "sd-q051",
+    "question": "True or False: An API Gateway primarily distributes network traffic across multiple servers, while a Load Balancer handles cross-cutting concerns like authentication.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The roles are reversed; a Load Balancer distributes traffic, while an API Gateway handles cross-cutting concerns like authentication."
+  },
+  {
+    "id": "sd-q052",
+    "question": "True or False: A forward proxy sits in front of client devices to intercept outbound requests, whereas a reverse proxy sits in front of web servers to intercept incoming requests.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This accurately describes the positioning and distinct operational purposes of forward and reverse proxies."
+  },
+  {
+    "id": "sd-q053",
+    "question": "True or False: Horizontal scaling involves adding more computational power (CPU, RAM) to an existing single machine.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Adding more computational power to a single machine is vertical scaling. Horizontal scaling adds more independent machines."
+  },
+  {
+    "id": "sd-q054",
+    "question": "True or False: Microservices divide an application into small, loosely coupled, independently deployable services.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This modularity is the core defining feature of a microservices architecture."
+  },
+  {
+    "id": "sd-q055",
+    "question": "True or False: Horizontal partitioning splits columns of a table into multiple tables, while vertical partitioning splits rows.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Horizontal partitioning splits rows (known as sharding), while vertical partitioning splits columns."
+  },
+  {
+    "id": "sd-q056",
+    "question": "True or False: A Rate Limiter controls the amount of incoming requests to a network or service within a specific time window.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It enforces policies on how many requests a client can make over a specific period, preventing overload."
+  },
+  {
+    "id": "sd-q057",
+    "question": "True or False: Single Sign-On (SSO) requires a user to enter a separate, unique password for every microservice within an organization.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. SSO allows a user to log in exactly once and gain access to multiple integrated services without re-entering credentials."
+  },
+  {
+    "id": "sd-q058",
+    "question": "True or False: Apache Kafka utilizes a sequential disk I/O mechanism and relies heavily on the OS page cache for zero-copy data transfer.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. These are the core architectural reasons for Kafka's renowned high throughput capabilities."
+  },
+  {
+    "id": "sd-q059",
+    "question": "True or False: RabbitMQ is a distributed event streaming platform built for high-throughput log aggregation, while Kafka focuses on complex routing.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Kafka handles high-throughput log aggregation and replay, while RabbitMQ focuses on complex routing and delivery guarantees."
+  },
+  {
+    "id": "sd-q060",
+    "question": "True or False: OAuth is an authorization framework that allows third-party applications limited access to user accounts via access tokens without exposing passwords.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This delegated authorization process without exposing raw credentials is the primary function of the OAuth standard."
+  },
+  {
+    "id": "sd-q061",
+    "question": "True or False: Concatenating the user's IP address with the current timestamp is the most common technique to efficiently generate a short URL identifier.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Base62 encoding of an auto-incrementing integer or a unique hash ID is the standard scalable approach for URL shorteners."
+  },
+  {
+    "id": "sd-q062",
+    "question": "True or False: Object Storage or a NoSQL Document Database is the most suitable storage type for scaling and storing large unstructured text blobs like in Pastebin.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. They handle unstructured, large-capacity data scaling far better than normalized SQL databases."
+  },
+  {
+    "id": "sd-q063",
+    "question": "True or False: The primary function of a CDN is to automatically execute complex backend business logic closer to the user.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A CDN's primary role is to cache static content geographically close to users to reduce delivery latency."
+  },
+  {
+    "id": "sd-q064",
+    "question": "True or False: A Min-Heap or a Priority Queue is an efficient data structure for quickly finding the nearest available parking spot to the entrance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. They maintain order efficiently so the closest spots can be retrieved instantly."
+  },
+  {
+    "id": "sd-q065",
+    "question": "True or False: The Singleton Pattern is the most appropriate design pattern for handling the different phases (e.g., HasMoney, Dispensing) of a Vending Machine.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The State Pattern is optimal for managing dynamic behavioral phases, whereas Singleton just restricts instantiation."
+  },
+  {
+    "id": "sd-q066",
+    "question": "True or False: Consistent Hashing is primarily used to distribute data across nodes evenly while minimizing data movement when nodes change.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It elegantly solves the rehashing problem inherent in standard modulo-based sharding."
+  },
+  {
+    "id": "sd-q067",
+    "question": "True or False: First In, Last Out (FILO) is the most common cache eviction policy to remove old data when memory is full.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Least Recently Used (LRU) is the standard and most efficient cache eviction policy for general use."
+  },
+  {
+    "id": "sd-q068",
+    "question": "True or False: Using a distributed lock mechanism (like Redis Redlock or Zookeeper) ensures a scheduled task is executed exactly once by only one worker node.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Distributed locks guarantee that multiple worker nodes don't simultaneously process the same scheduled task."
+  },
+  {
+    "id": "sd-q069",
+    "question": "True or False: User passwords should be stored as plain text but restricted via strict database firewall rules.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Passwords should always be securely hashed and salted using a strong, slow cryptographic function like bcrypt."
+  },
+  {
+    "id": "sd-q070",
+    "question": "True or False: Generating and tracking unique Idempotency keys for each transaction request prevents financial transactions from being processed twice upon retry.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Idempotency guarantees a system operation yields the exact same result no matter how many times it is retried."
+  },
+  {
+    "id": "sd-q071",
+    "question": "True or False: A pull-based model that executes a heavy SQL JOIN on the fly is the most efficient architectural pattern for delivering image-heavy social feeds.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A push-based (fan-out-on-write) model that pre-computes feeds is significantly more scalable for general user feeds."
+  },
+  {
+    "id": "sd-q072",
+    "question": "True or False: Geohash or Quadtree indexing is commonly used to quickly query nearby users or businesses in a location-based application.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. These spatial indexes efficiently convert 2D geographic coordinates into queries that databases can process rapidly."
+  },
+  {
+    "id": "sd-q073",
+    "question": "True or False: Standard HTTP/1.0 Short Polling is best suited for maintaining a low-latency, bi-directional persistent connection in real-time chat applications.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. WebSockets are designed specifically for low-latency, bi-directional persistent connections, unlike short polling."
+  },
+  {
+    "id": "sd-q074",
+    "question": "True or False: A Graph Database is theoretically best suited for traversing multi-level relationships like 'friends of friends' in a massive social graph.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Graph databases treat node relationships as first-class objects, optimizing deep connection traversals."
+  },
+  {
+    "id": "sd-q075",
+    "question": "True or False: Twitter handles massive read volume from celebrities by strictly pushing (fan-out-on-write) the tweet to all 50 million followers' databases instantly.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It uses a hybrid approach, allowing normal users to push (fan-out-on-write), but celebrity tweets are pulled (fan-out-on-load) to avoid write overload."
+  },
+  {
+    "id": "sd-q076",
+    "question": "True or False: Aggregating votes asynchronously in an in-memory cache and periodically flushing the totals to the persistent database is the most scalable way to handle viral posts.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This avoids the severe database locking and connection exhaustion caused by synchronous updates."
+  },
+  {
+    "id": "sd-q077",
+    "question": "True or False: Video streaming services deliver content seamlessly by utilizing UDP multicasting from peer-to-peer user devices only.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. They primarily utilize global CDNs combined with Adaptive Bitrate Streaming (ABR) to dynamically adjust to network speeds."
+  },
+  {
+    "id": "sd-q078",
+    "question": "True or False: Publishing a task to an asynchronous message queue allows a scalable pool of worker nodes to process video chunks in the background.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Message queues decouple heavy backend compute tasks, preventing them from blocking frontend application servers."
+  },
+  {
+    "id": "sd-q079",
+    "question": "True or False: A Reverse Proxy is the component responsible for navigating the internet and downloading web pages to be indexed.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Distributed Web Crawler (or spider) is the component responsible for navigating and downloading internet pages."
+  },
+  {
+    "id": "sd-q080",
+    "question": "True or False: Implementing a queue-based asynchronous order processing system is commonly used to protect backend databases from being overwhelmed during a sudden traffic spike.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. A message queue acts as a buffer, ensuring the database processes orders at a sustainable rate."
+  },
+  {
+    "id": "sd-q081",
+    "question": "True or False: Spotify heavily optimizes song playback by storing its entire music catalog directly on the user's mobile device upon installation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It optimizes playback by pre-fetching and caching only the first few seconds of predicted upcoming songs."
+  },
+  {
+    "id": "sd-q082",
+    "question": "True or False: A real-time Recommendation Engine powered by Machine Learning models analyzing user interactions is the core architectural mechanism driving TikTok's feed.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It uses ML to instantly adjust video suggestions based on granular viewing habits."
+  },
+  {
+    "id": "sd-q083",
+    "question": "True or False: In a massive multi-tenant SaaS platform, storing all tenants globally in one single massive SQL table is a common strategy for isolating large premium enterprise merchants.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Dedicated Database Sharding is commonly used to properly isolate and scale premium enterprise tenants."
+  },
+  {
+    "id": "sd-q084",
+    "question": "True or False: Double-booking in an accommodation system is prevented by using distributed locks and strict database transactions with appropriate isolation levels.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Strong consistency mechanisms are mandatory for preventing double-booking in reservation platforms."
+  },
+  {
+    "id": "sd-q085",
+    "question": "True or False: A Doubly Linked List is the optimal data structure choice for designing an efficient Autocomplete or Typeahead suggestion feature in a search bar.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A Trie (Prefix Tree) is the optimal structure because it is specifically designed for rapid string prefix lookups."
+  },
+  {
+    "id": "sd-q086",
+    "question": "True or False: The Token Bucket or Leaky Bucket algorithm is widely used to implement scalable API Rate Limiters.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. These are standard and highly effective algorithms for managing traffic throughput."
+  },
+  {
+    "id": "sd-q087",
+    "question": "True or False: Relying solely on the CPU cache of a failed node ensures that messages are not lost if a single Kafka broker physically crashes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. If a node crashes, its CPU cache is wiped. Kafka ensures data survival through Data Replication across multiple broker nodes."
+  },
+  {
+    "id": "sd-q088",
+    "question": "True or False: According to the CAP theorem, when designing the core reservation phase of a Flight Booking System, Consistency over Availability (Strong Consistency) must be prioritized to ensure a seat isn't sold twice.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. In transactional reservations, the system must remain accurate (Consistent) even if it occasionally refuses connections (Availability)."
+  },
+  {
+    "id": "sd-q089",
+    "question": "True or False: Simple last-write-wins (LWW) database overwrites are typically used to resolve typing conflicts from multiple users editing the same file in real-time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. LWW would delete collaborators' typing. Complex algorithms like Operational Transformation (OT) or CRDT are used instead."
+  },
+  {
+    "id": "sd-q090",
+    "question": "True or False: Ultra-low latency to process financial trades in microseconds is considered the most critical non-functional requirement for a Stock Exchange order matching engine.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Processing trades in microseconds defines success in modern financial matching engines."
+  },
+  {
+    "id": "sd-q091",
+    "question": "True or False: A fully normalized Relational Database (e.g., MySQL) focusing heavily on foreign keys is most appropriate for a large-scale Analytics Platform that ingests millions of system logs per second.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. High-speed ingestion of millions of logs requires a specialized Time-Series Database or a Columnar Database."
+  },
+  {
+    "id": "sd-q092",
+    "question": "True or False: You can efficiently query a massive database for businesses within a specific radius by converting latitude/longitude coordinates into Geohashes and performing a prefix match query.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Geohashing maps 2D coordinates to strings where locations near each other share similar string prefixes."
+  },
+  {
+    "id": "sd-q093",
+    "question": "True or False: A basic PHP script querying a MySQL database every 5 minutes is the service architecture responsible for continuously tracking and updating the live locations of millions of active drivers.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Real-time driver tracking requires a high-performance Location Tracking Service utilizing WebSockets and scalable spatial databases."
+  },
+  {
+    "id": "sd-q094",
+    "question": "True or False: The Saga Pattern, managing distributed transactions through asynchronous compensating actions, is the primary architectural pattern used when designing complex order fulfillment state machines.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. The Saga Pattern successfully coordinates and rolls back transactions spanning multiple independent microservices."
+  },
+  {
+    "id": "sd-q095",
+    "question": "True or False: In a real-time document editing system, browser clients maintain a live connection to the server by downloading the file via FTP every time a character is typed.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Clients use lightweight Server-Sent Events (SSE) or WebSockets to instantly stream character updates."
+  },
+  {
+    "id": "sd-q096",
+    "question": "True or False: A routing system like Google Maps calculates the shortest physical route by modeling the road network as a graph and applying optimized shortest-path algorithms like Dijkstra's or A*.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Roads map to graph edges, allowing graph traversal algorithms to find optimal pathing."
+  },
+  {
+    "id": "sd-q097",
+    "question": "True or False: Pure Peer-to-Peer (P2P) mesh networking for all 100+ participants is typically used to efficiently route webcam video streams in a large-scale video conferencing application like Zoom.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. P2P crashes user networks with too many connections. A Selective Forwarding Unit (SFU) architecture is used to optimize bandwidth."
+  },
+  {
+    "id": "sd-q098",
+    "question": "True or False: A File Sharing System like Dropbox drastically minimizes user upload bandwidth by dividing the file into smaller chunks, calculating a cryptographic hash for each, and only uploading the chunks with modified hashes.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Differential synchronization via hashing prevents re-uploading an entire file if only a small portion changed."
+  },
+  {
+    "id": "sd-q099",
+    "question": "True or False: A hard SQL lock that completely freezes the entire database table is commonly used to temporarily reserve a movie seat while the user enters their credit card details.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Freezing an entire table destroys application throughput. A fast temporary soft lock in a cache like Redis with a TTL is used instead."
+  },
+  {
+    "id": "sd-q100",
+    "question": "True or False: Erasure Coding and automated cross-region replication are advanced techniques used to ensure extreme data durability and availability in a highly Distributed Cloud Storage system like Amazon S3.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "System Design",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Erasure coding provides redundancy with less overhead than full mirroring, and cross-region replication handles datacenter outages."
+  },
+  {
+    "id": "sd-q101",
+    "question": "An ______ handles cross-cutting concerns like authentication, routing, and rate limiting for APIs.",
+    "answer": "API Gateway",
+    "options": [
+      "Load Balancer",
+      "API Gateway",
+      "Reverse Proxy",
+      "Forward Proxy"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "An API Gateway is explicitly designed to manage authentication, routing, and rate limiting for APIs."
+  },
+  {
+    "id": "sd-q102",
+    "question": "A ______ sits in front of web servers to intercept incoming requests.",
+    "answer": "Reverse Proxy",
+    "options": [
+      "Forward Proxy",
+      "Reverse Proxy",
+      "API Gateway",
+      "Load Balancer"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Reverse proxies act as an intermediary for backend servers to securely handle incoming client requests."
+  },
+  {
+    "id": "sd-q103",
+    "question": "______ scaling involves adding more machines to a system.",
+    "answer": "Horizontal",
+    "options": ["Vertical", "Horizontal", "Diagonal", "Linear"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Horizontal scaling expands overall system capacity by adding new physical or virtual servers to the pool."
+  },
+  {
+    "id": "sd-q104",
+    "question": "A ______ architecture builds the application as a single, unified unit.",
+    "answer": "Monolithic",
+    "options": ["Microservices", "Monolithic", "Serverless", "Event-Driven"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Monolithic architecture tightly couples all components and modules of an application into one single deployment unit."
+  },
+  {
+    "id": "sd-q105",
+    "question": "______ partitioning splits rows of a table into multiple tables, also known as sharding.",
+    "answer": "Horizontal",
+    "options": ["Vertical", "Horizontal", "Logical", "Physical"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Horizontal partitioning distributes row data across multiple servers to effectively scale out the database horizontally."
+  },
+  {
+    "id": "sd-q106",
+    "question": "The primary purpose of a ______ is to control the amount of incoming requests to a network or service within a specific time window.",
+    "answer": "Rate Limiter",
+    "options": [
+      "Load Balancer",
+      "Rate Limiter",
+      "Reverse Proxy",
+      "API Gateway"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A Rate Limiter throttles requests to preserve system stability and prevent abuse."
+  },
+  {
+    "id": "sd-q107",
+    "question": "______ allows a user to authenticate once with a central identity provider and gain access to multiple independent software systems.",
+    "answer": "Single Sign-On",
+    "options": [
+      "Multi-Factor Authentication",
+      "Single Sign-On",
+      "OAuth",
+      "Role-Based Access Control"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Single Sign-On (SSO) improves user experience and security by centralizing login workflows."
+  },
+  {
+    "id": "sd-q108",
+    "question": "Apache Kafka relies heavily on the ______ for zero-copy data transfer.",
+    "answer": "OS page cache",
+    "options": [
+      "CPU cache",
+      "OS page cache",
+      "In-memory database",
+      "SSD swap space"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The OS page cache prevents data from being pointlessly copied into application memory, drastically improving transfer speeds."
+  },
+  {
+    "id": "sd-q109",
+    "question": "______ is a traditional message broker focused on complex routing and message delivery guarantees.",
+    "answer": "RabbitMQ",
+    "options": ["Apache Kafka", "RabbitMQ", "Redis", "Amazon S3"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "RabbitMQ provides robust and highly flexible routing capabilities via exchanges and queues."
+  },
+  {
+    "id": "sd-q110",
+    "question": "______ is an authorization framework that allows third-party applications limited access to user accounts via access tokens.",
+    "answer": "OAuth",
+    "options": ["SAML", "OAuth", "JWT", "OpenID Connect"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "OAuth ensures users do not have to hand over their raw passwords to third-party apps."
+  },
+  {
+    "id": "sd-q111",
+    "question": "When designing a URL Shortener, ______ encoding of an auto-incrementing integer or unique hash ID is commonly used.",
+    "answer": "Base62",
+    "options": ["Base64", "Base62", "MD5", "SHA-256"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Base62 keeps the URL short and avoids the confusing special characters present in Base64."
+  },
+  {
+    "id": "sd-q112",
+    "question": "In a text storage service like Pastebin, ______ is most suitable for scaling and storing large unstructured text blobs.",
+    "answer": "Object Storage or NoSQL",
+    "options": [
+      "Highly normalized SQL",
+      "Object Storage or NoSQL",
+      "In-Memory Cache only",
+      "Graph Database"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "These storage mechanisms scale horizontally to hold vast amounts of unstructured blobs cost-effectively."
+  },
+  {
+    "id": "sd-q113",
+    "question": "The primary function of a ______ is to cache static content on edge servers geographically closer to the end users.",
+    "answer": "Content Delivery Network (CDN)",
+    "options": [
+      "API Gateway",
+      "Content Delivery Network (CDN)",
+      "Load Balancer",
+      "Forward Proxy"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A Content Delivery Network acts as a distributed cache layer globally."
+  },
+  {
+    "id": "sd-q114",
+    "question": "An efficient data structure for quickly finding the nearest available parking spot is a ______.",
+    "answer": "Min-Heap or Priority Queue",
+    "options": [
+      "Hash Map",
+      "Singly Linked List",
+      "Min-Heap or Priority Queue",
+      "Stack"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Using a Min-Heap dynamically keeps the closest available parking spot at the root."
+  },
+  {
+    "id": "sd-q115",
+    "question": "The ______ Pattern is most appropriate for handling different phases of an object like a Vending Machine.",
+    "answer": "State",
+    "options": ["State", "Singleton", "Factory Method", "Observer"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The State Pattern changes an object's behavior depending on its current state context."
+  },
+  {
+    "id": "sd-q116",
+    "question": "______ is primarily used to distribute data across nodes evenly while minimizing data movement when nodes are added or removed.",
+    "answer": "Consistent Hashing",
+    "options": [
+      "Round-Robin DNS",
+      "Consistent Hashing",
+      "B-Tree Indexing",
+      "Two-Phase Commit"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Consistent Hashing forms a ring to assign data, drastically reducing rebalancing costs."
+  },
+  {
+    "id": "sd-q117",
+    "question": "A common cache eviction policy used in Redis to remove old data when memory is full is ______.",
+    "answer": "Least Recently Used (LRU)",
+    "options": [
+      "Least Recently Used (LRU)",
+      "First In, Last Out (FILO)",
+      "Most Frequently Used (MFU)",
+      "Shortest Job First (SJF)"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "LRU optimizes the cache by prioritizing recently accessed data."
+  },
+  {
+    "id": "sd-q118",
+    "question": "Using a ______ mechanism (like Redis Redlock or Zookeeper) ensures a scheduled task is executed exactly once by only one worker node.",
+    "answer": "distributed lock",
+    "options": [
+      "synchronized block",
+      "distributed lock",
+      "load balancer",
+      "relational foreign key"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Distributed locks manage concurrency effectively in distributed system environments."
+  },
+  {
+    "id": "sd-q119",
+    "question": "User passwords should be ______ using a strong, slow cryptographic function like bcrypt or Argon2.",
+    "answer": "Hashed and salted",
+    "options": [
+      "Base64 encoded",
+      "Symmetrically encrypted",
+      "Hashed and salted",
+      "Compressed"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Salting adds random data, while hashing creates a one-way mathematical signature."
+  },
+  {
+    "id": "sd-q120",
+    "question": "You handle network timeouts and prevent double financial transactions by generating and tracking unique ______.",
+    "answer": "Idempotency keys",
+    "options": [
+      "Foreign keys",
+      "Idempotency keys",
+      "Primary keys",
+      "Symmetric keys"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Idempotency guarantees a system operation yields the exact same result no matter how many times it is called."
+  },
+  {
+    "id": "sd-q121",
+    "question": "A ______ model pre-computes and stores feeds for active users when a new post is made, ensuring fast delivery.",
+    "answer": "push-based (fan-out-on-write)",
+    "options": [
+      "pull-based (fan-out-on-load)",
+      "push-based (fan-out-on-write)",
+      "synchronous polling",
+      "blockchain ledger"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Fan-out-on-write pushes the content into the follower's feed caches immediately."
+  },
+  {
+    "id": "sd-q122",
+    "question": "______ indexing is commonly used to quickly query nearby users or businesses in location-based apps.",
+    "answer": "Geohash or Quadtree",
+    "options": [
+      "B-Tree",
+      "Bloom Filter",
+      "Geohash or Quadtree",
+      "Consistent Hashing"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "These algorithms efficiently map geographical data to one-dimensional strings or trees for fast boundary lookups."
+  },
+  {
+    "id": "sd-q123",
+    "question": "______ is the communication protocol best suited for maintaining a low-latency, bi-directional persistent connection.",
+    "answer": "WebSockets",
+    "options": ["HTTP Short Polling", "WebSockets", "SMTP", "FTP"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "WebSockets maintain an open pipeline between client and server."
+  },
+  {
+    "id": "sd-q124",
+    "question": "A ______ is theoretically best suited for traversing multi-level relationships in a social graph.",
+    "answer": "Graph Database",
+    "options": [
+      "Relational Database",
+      "Time-Series Database",
+      "Graph Database",
+      "Document Database"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Graph databases (like Neo4j) are explicitly optimized for highly interconnected data."
+  },
+  {
+    "id": "sd-q125",
+    "question": "Twitter efficiently handles celebrity tweets by using a hybrid approach where tweets are ______ by followers rather than pushed to millions of individual timelines.",
+    "answer": "pulled (fan-out-on-load)",
+    "options": [
+      "pushed (fan-out-on-write)",
+      "pulled (fan-out-on-load)",
+      "deleted automatically",
+      "emailed individually"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Fan-out-on-load merges celebrity tweets into the feed at the moment the user requests it."
+  },
+  {
+    "id": "sd-q126",
+    "question": "The most scalable way to handle rapid vote counts is aggregating them asynchronously in a(n) ______ and periodically flushing the totals to the database.",
+    "answer": "in-memory cache (like Redis)",
+    "options": [
+      "in-memory cache (like Redis)",
+      "AWS S3 bucket",
+      "SQL transaction log",
+      "frontend browser cookie"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "An in-memory cache provides high-speed counting capabilities to absorb massive traffic spikes."
+  },
+  {
+    "id": "sd-q127",
+    "question": "Video streaming seamlessly adjusts to varying networks by utilizing a global CDN and ______.",
+    "answer": "Adaptive Bitrate Streaming (ABR)",
+    "options": [
+      "Adaptive Bitrate Streaming (ABR)",
+      "Peer-to-Peer Multicasting",
+      "Synchronous Data Link Control",
+      "File Transfer Protocol (FTP)"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ABR breaks video into small segments encoded at multiple bitrates."
+  },
+  {
+    "id": "sd-q128",
+    "question": "The backend handles heavy video conversion tasks by publishing the task to a(n) ______, allowing worker nodes to process it in the background.",
+    "answer": "asynchronous message queue",
+    "options": [
+      "API Gateway",
+      "asynchronous message queue",
+      "synchronous database lock",
+      "client-side web worker"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Message queues (like RabbitMQ or SQS) decouple the upload process from the heavy transcoding tasks."
+  },
+  {
+    "id": "sd-q129",
+    "question": "A ______ is responsible for navigating the internet and downloading web pages to be indexed.",
+    "answer": "Distributed Web Crawler",
+    "options": [
+      "Reverse Proxy",
+      "MapReduce Aggregator",
+      "Distributed Web Crawler",
+      "Load Balancer"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Crawlers traverse hyperlink structures comprehensively across the web."
+  },
+  {
+    "id": "sd-q130",
+    "question": "To protect databases during a Flash Sale, systems implement a ______ to buffer the sudden influx of requests.",
+    "answer": "queue-based asynchronous order processing system",
+    "options": [
+      "queue-based asynchronous order processing system",
+      "mechanical hard drive cluster",
+      "bypassed load balancer routing",
+      "disabled user authentication module"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Queues smooth out unpredictable traffic spikes protecting backend infrastructure."
+  },
+  {
+    "id": "sd-q131",
+    "question": "Spotify minimizes perceived latency by ______ the first few seconds of a user's predicted next songs locally.",
+    "answer": "pre-fetching and caching",
+    "options": [
+      "permanently downloading",
+      "blockchain routing",
+      "pre-fetching and caching",
+      "transcoding"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pre-fetching anticipates user actions to create an illusion of zero latency."
+  },
+  {
+    "id": "sd-q132",
+    "question": "TikTok's highly personalized feed is powered by a real-time ______ analyzing user interactions and video metadata.",
+    "answer": "Recommendation Engine",
+    "options": [
+      "Chronological SQL query",
+      "Recommendation Engine",
+      "Manual curation team",
+      "Random number generator"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Recommendation Engines utilize ML algorithms to dynamically sort personalized content feeds."
+  },
+  {
+    "id": "sd-q133",
+    "question": "In multi-tenant SaaS systems, ______ routes massive enterprise tenants to dedicated databases while smaller tenants share them.",
+    "answer": "Database Sharding",
+    "options": [
+      "Vertical Scaling",
+      "Database Sharding",
+      "Local SQLite Caching",
+      "On-premise Hosting"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Sharding distributes the tenants securely across a cluster of databases."
+  },
+  {
+    "id": "sd-q134",
+    "question": "You prevent double-booking concurrent users by using distributed locks and strict database transactions with appropriate ______ (like Serializable).",
+    "answer": "isolation levels",
+    "options": [
+      "cryptocurrency contracts",
+      "email alerts",
+      "isolation levels",
+      "browser cookies"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Database isolation levels determine how transaction integrity is visible to other concurrent users."
+  },
+  {
+    "id": "sd-q135",
+    "question": "A ______ is the optimal data structure for designing an efficient Autocomplete or Typeahead suggestion feature.",
+    "answer": "Trie (Prefix Tree)",
+    "options": [
+      "Stack",
+      "Doubly Linked List",
+      "Trie (Prefix Tree)",
+      "Standard Array"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Tries are specifically engineered for string prefix matching operations."
+  },
+  {
+    "id": "sd-q136",
+    "question": "The ______ algorithm is widely used to implement scalable API Rate Limiters.",
+    "answer": "Token Bucket or Leaky Bucket",
+    "options": [
+      "Paxos consensus",
+      "Token Bucket or Leaky Bucket",
+      "Apriori",
+      "RSA encryption"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Token Bucket algorithm regulates request flow via refilling tokens over time."
+  },
+  {
+    "id": "sd-q137",
+    "question": "Message queues prevent data loss during a crash using ______ across multiple broker nodes.",
+    "answer": "Data Replication",
+    "options": [
+      "Data Replication",
+      "Infinite Retries",
+      "CPU caching",
+      "Physical printing"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Data Replication clones the data log to redundant hardware in the cluster."
+  },
+  {
+    "id": "sd-q138",
+    "question": "According to the CAP theorem, a Flight Booking System must prioritize ______ to ensure a seat isn't sold twice.",
+    "answer": "Consistency over Availability (Strong Consistency)",
+    "options": [
+      "Availability over Consistency",
+      "Partition Tolerance over Security",
+      "Consistency over Availability (Strong Consistency)",
+      "Throughput over Latency"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Strong Consistency ensures all readers see the most recent write universally."
+  },
+  {
+    "id": "sd-q139",
+    "question": "Collaborative Online Code Editors typically use ______ to resolve typing conflicts in real-time.",
+    "answer": "Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDT)",
+    "options": [
+      "Last-write-wins (LWW)",
+      "Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDT)",
+      "Round-robin lock passing",
+      "Asymmetric key cryptography"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "OT algorithms mutate the incoming edit position based on other edits that happened concurrently."
+  },
+  {
+    "id": "sd-q140",
+    "question": "The most critical non-functional requirement for a Stock Exchange matching engine is ______.",
+    "answer": "Ultra-low latency to process financial trades in microseconds",
+    "options": [
+      "A high-resolution GUI",
+      "Ultra-low latency to process financial trades in microseconds",
+      "Serverless architecture",
+      "Multi-language support"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Ultra-low latency architectures often use entirely in-memory processing to avoid disk speeds."
+  },
+  {
+    "id": "sd-q141",
+    "question": "A ______ Database is most appropriate for a large-scale Analytics Platform ingesting millions of metrics per second.",
+    "answer": "Time-Series Database (e.g., InfluxDB) or a Columnar Database (e.g., ClickHouse)",
+    "options": [
+      "Relational",
+      "In-Memory Cache",
+      "Time-Series Database (e.g., InfluxDB) or a Columnar Database (e.g., ClickHouse)",
+      "Graph"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "These databases efficiently compress time-stamped log data for lightning-fast range queries."
+  },
+  {
+    "id": "sd-q142",
+    "question": "You efficiently query location radius by converting latitude/longitude coordinates into ______ and performing a prefix match query.",
+    "answer": "Geohashes",
+    "options": ["Haversine formulas", "Geohashes", "Zip codes", "IP Addresses"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Geohash prefix queries natively utilize database B-Tree string indexes for high performance."
+  },
+  {
+    "id": "sd-q143",
+    "question": "Live location tracking of active drivers requires a service utilizing ______ and a scalable spatial database.",
+    "answer": "WebSockets",
+    "options": ["PHP scripts", "WebSockets", "Email alerts", "Static CDNs"],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "WebSockets support the continuous back-and-forth coordinate data stream."
+  },
+  {
+    "id": "sd-q144",
+    "question": "The ______ manages distributed transactions through asynchronous compensating actions in complex order fulfillment systems.",
+    "answer": "Saga Pattern",
+    "options": [
+      "Saga Pattern",
+      "Singleton Pattern",
+      "Two-Phase Commit",
+      "Monolithic Transaction"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The Saga pattern orchestrates multi-service transactions resiliently."
+  },
+  {
+    "id": "sd-q145",
+    "question": "Browser clients maintain a live connection to the server to instantly receive typing updates by utilizing ______.",
+    "answer": "Server-Sent Events (SSE) or WebSockets",
+    "options": [
+      "Server-Sent Events (SSE) or WebSockets",
+      "FTP downloads",
+      "Meta Refresh tags",
+      "SMTP payloads"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "SSE provides highly efficient unidirectional streams, while WebSockets allow bidirectional updates."
+  },
+  {
+    "id": "sd-q146",
+    "question": "A routing system calculates the shortest physical route by modeling the road network as a graph and applying optimized ______ like Dijkstra's or A*.",
+    "answer": "shortest-path algorithms",
+    "options": [
+      "string matching",
+      "binary searches",
+      "shortest-path algorithms",
+      "recursive distance logic"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Routing maps naturally onto graph data structures for pathfinding analysis."
+  },
+  {
+    "id": "sd-q147",
+    "question": "In a large-scale video conferencing application, a ______ architecture is typically used to efficiently route webcam video streams between multiple participants.",
+    "answer": "Selective Forwarding Unit (SFU)",
+    "options": [
+      "Peer-to-Peer (P2P)",
+      "Selective Forwarding Unit (SFU)",
+      "SMTP routing",
+      "Decentralized Blockchain"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "SFU acts as a central hub that receives and optimally distributes video streams without re-encoding them."
+  },
+  {
+    "id": "sd-q148",
+    "question": "A File Sharing System minimizes upload bandwidth by dividing the file into smaller chunks and only uploading the chunks with modified ______.",
+    "answer": "cryptographic hashes",
+    "options": [
+      "file extensions",
+      "cryptographic hashes",
+      "zip compression headers",
+      "time stamps"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Cryptographic hashes accurately and quickly identify exactly which binary segments have changed."
+  },
+  {
+    "id": "sd-q149",
+    "question": "In a Ticket Booking system, a ______ stored in a fast caching layer (like Redis) with a TTL expiration is commonly used to temporarily reserve a movie seat.",
+    "answer": "temporary soft lock",
+    "options": [
+      "hard SQL lock",
+      "temporary soft lock",
+      "infinite server loop",
+      "client-side cookie"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A soft lock with a Time-To-Live prevents the seat from being blocked permanently if a checkout process fails."
+  },
+  {
+    "id": "sd-q150",
+    "question": "To ensure extreme data durability, Distributed Cloud Storage systems use ______ and automated cross-region replication.",
+    "answer": "Erasure Coding",
+    "options": [
+      "RAID 0 arrays",
+      "Erasure Coding",
+      "Military-grade hard drives",
+      "Physical tape backups"
+    ],
+    "category": "System Design",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Erasure Coding guarantees high durability with a much lower storage overhead than simply copying data across nodes."
+  }
+]

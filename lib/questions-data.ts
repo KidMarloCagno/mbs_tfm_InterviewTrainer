@@ -1,5 +1,6 @@
 import databaseQuestions from "@/prisma/data/sets/database.json";
 import javascriptQuestions from "@/prisma/data/sets/javascript.json";
+import systemdesignQuestions from "@/prisma/data/sets/systemsdesign.json";
 import type { GameQuestion } from "@/components/game/GameEngine";
 
 interface QuestionSetItem {
@@ -29,6 +30,16 @@ const questionsData: Record<string, GameQuestion[]> = {
     answer: q.answer,
     options: q.options,
     category: "JavaScript",
+    type: q.type,
+    level: q.level,
+    explanation: q.explanation,
+  })),
+  SystemsDesign: (systemdesignQuestions as QuestionSetItem[]).map((q, idx) => ({
+    id: q.id || `js-${idx}`,
+    question: q.question,
+    answer: q.answer,
+    options: q.options,
+    category: "System Design",
     type: q.type,
     level: q.level,
     explanation: q.explanation,

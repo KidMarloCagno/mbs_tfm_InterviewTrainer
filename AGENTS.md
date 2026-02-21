@@ -96,23 +96,29 @@ All sourcing documentation is maintained in:
 
 ---
 
+
 ### 6.3 Adding a New Question Set — Auto-Verify Checklist
 
 When a new `.json` file is dropped into `prisma/data/sets/`, or new questions are appended to an existing file, the agent MUST run through this checklist **before seeding the DB**:
 
 - [ ] **1. JSON schema valid** — every object has the required structural fields: `id`, `question`, `answer`, `options`, `type`, `level`. Content quality (`explanation` text, answer correctness, distractor quality) is the author's responsibility and is **out of scope** for this checklist.
 - [ ] **2. ID sequence integrity** — the agent MUST auto-correct any ID that violates the sequence rules. **Do not flag or touch question content — IDs only.**
-  - Format: `{prefix}-q{NNN}` zero-padded 3-digit counter (e.g., `db-q001`, `db-q059`)
-  - **No duplicates** — IDs must be unique across the entire `prisma/data/sets/` directory
-  - **No gaps** — sequence must be continuous within each file (q001 → q002 → q003…)
-  - **Continuation rule** — questions appended to an existing file must continue from the last existing ID (e.g., last is `db-q089` → next is `db-q090`)
-  - **Auto-fix:** renumber out-of-sequence or duplicate IDs to restore continuity; report what was changed
+   - Format: `{prefix}-q{NNN}` zero-padded 3-digit counter (e.g., `db-q001`, `db-q059`)
+   - **No duplicates** — IDs must be unique across the entire `prisma/data/sets/` directory
+   - **No gaps** — sequence must be continuous within each file (q001 → q002 → q003…)
+   - **Continuation rule** — questions appended to an existing file must continue from the last existing ID (e.g., last is `db-q089` → next is `db-q090`)
+   - **Auto-fix:** renumber out-of-sequence or duplicate IDs to restore continuity; report what was changed
 - [ ] **3. Register in app** — add an import and a new key to `lib/questions-data.ts`:
-  ```ts
-  import <topic>Questions from "@/prisma/data/sets/<topic>.json";
-  // inside questionsData:
-  <TopicName>: (<topic>Questions as QuestionSetItem[]).map((q, idx) => ({ ... })),
-  ```
+   ```ts
+   import <topic>Questions from "@/prisma/data/sets/<topic>.json";
+   // inside questionsData:
+   <TopicName>: (<topic>Questions as QuestionSetItem[]).map((q, idx) => ({ ... })),
+   ```
+- [ ] **3.1. Automation: Update questions-data.ts** — The agent MUST automatically scan `prisma/data/sets/` for all `.json` files and update `lib/questions-data.ts` to:
+   - Add import statements for each new or updated topic file.
+   - Add or update the corresponding entry in the `questionsData` object.
+   - Ensure `getAvailableTopics()` and Dashboard reflect all available sets.
+   - This step removes the need for manual edits when new sets are added.
 - [ ] **4. Seed DB** — run `npx prisma db seed` automatically after steps 1–3 pass. Do not wait for the user to request it. (Seeder auto-discovers all JSON files in `prisma/data/sets/`)
 - [ ] **5. TypeScript clean** — run `npx tsc --noEmit`, fix any errors
 - [ ] **6. Document** — add a row for the new topic in `QuestionsKitchen/SOURCES.md`
