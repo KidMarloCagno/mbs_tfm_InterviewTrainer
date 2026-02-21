@@ -34,7 +34,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ### Installation
 
-1. Clone the following repository:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
