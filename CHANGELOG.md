@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-02-21
+
+### Changed
+
+- Hardened `.github/workflows/snyk.yml` so scans run only when `SNYK_TOKEN` is present, upload SARIF for both Snyk Open Source and Snyk Code, and fail non-PR events when the token is missing
+- Added a default-branch `snyk monitor` step so vulnerabilities are tracked in the Snyk dashboard baseline
+- Updated README Snyk guidance to document token validation behavior and monitor execution
+
 ## [1.3.1] - 2026-02-21
 
 ### Added

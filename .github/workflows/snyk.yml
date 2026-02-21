@@ -36,26 +36,59 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Check SNYK_TOKEN availability
+        id: snyk_token
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          if [ -z "$SNYK_TOKEN" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "SNYK_TOKEN is missing. Snyk scans require this secret." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run Snyk Open Source test
+        if: steps.snyk_token.outputs.available == 'true'
         uses: snyk/actions/node@master
-        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: test
-          args: --severity-threshold=high
+          args: --severity-threshold=high --sarif-file-output=snyk-open-source.sarif
 
       - name: Run Snyk Code (SAST)
+        if: steps.snyk_token.outputs.available == 'true'
         uses: snyk/actions/node@master
-        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: code test
           args: --severity-threshold=high --sarif-file-output=snyk-code.sarif
 
+      - name: Monitor project in Snyk dashboard
+        if: steps.snyk_token.outputs.available == 'true' && github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
+          args: --project-name=${{ github.repository }}
+
+      - name: Upload Snyk Open Source SARIF to GitHub Code Scanning
+        if: always() && hashFiles('snyk-open-source.sarif') != ''
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: snyk-open-source.sarif
+
       - name: Upload Snyk SARIF to GitHub Code Scanning
         if: always() && hashFiles('snyk-code.sarif') != ''
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: snyk-code.sarif
+
+      - name: Fail when SNYK_TOKEN is missing on non-PR events
+        if: steps.snyk_token.outputs.available != 'true' && github.event_name != 'pull_request'
+        run: |
+          echo "SNYK_TOKEN is required for push/schedule/manual Snyk scans." >&2
+          exit 1

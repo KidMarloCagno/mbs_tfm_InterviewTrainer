@@ -164,11 +164,14 @@ Set `SNYK_TOKEN` in repository secrets:
 
 - GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
 
+> The workflow now validates token presence. On `pull_request`, missing token is reported in the job summary (non-blocking). On `push`, `schedule`, and manual runs, missing token fails the job so security drift is visible.
+
 ### Optional hardening
 
 - Enable GitHub code scanning upload (SARIF) for Snyk Code findings.
+- Enable GitHub code scanning upload (SARIF) for both Snyk Open Source and Snyk Code findings.
 - Start with `--severity-threshold=high` and later tighten to `medium`.
-- Add `snyk monitor` in a separate scheduled workflow to track project history in Snyk dashboard.
+- `snyk monitor` runs automatically on the repository default branch (non-PR events) to keep project history in the Snyk dashboard.
 
 - This project pins pnpm via `packageManager` in `package.json` to ensure CI and local environments use the same package manager version.
 - Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
