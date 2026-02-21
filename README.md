@@ -34,7 +34,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the following repository:
 
    ```bash
    git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
@@ -146,6 +146,28 @@ pnpm test
 - `pnpm test` runs the test suite after the test database is ready.
 
 ## ▲ Vercel Deployment Notes
+
+# Snyk Pre-commit Automation
+
+This project uses a git pre-commit hook to automatically run Snyk security scans before every commit. If vulnerabilities or code issues are found, the commit is blocked.
+
+**How it works:**
+
+- The hook runs `snyk test --all-projects` and `snyk code test --all-projects` in the project directory.
+- If any issues are detected, the commit is aborted.
+- Make sure Snyk CLI is installed and authenticated (`snyk auth`).
+
+**Location:**
+
+- `.git/hooks/pre-commit` (shell script)
+
+**To disable:**
+
+- Remove or rename the pre-commit hook file.
+
+**Requirements:**
+
+- Snyk CLI installed globally (`npm install -g snyk` or via other package managers).
 
 ## 🔐 Snyk Integration Options
 
