@@ -119,7 +119,22 @@ When a new `.json` file is dropped into `prisma/data/sets/`, or new questions ar
    - Add or update the corresponding entry in the `questionsData` object.
    - Ensure `getAvailableTopics()` and Dashboard reflect all available sets.
    - This step removes the need for manual edits when new sets are added.
-- [ ] **4. Seed DB** — run `npx prisma db seed` automatically after steps 1–3 pass. Do not wait for the user to request it. (Seeder auto-discovers all JSON files in `prisma/data/sets/`)
+- [ ] **4. Seed DB** — run the following sequence automatically after steps 1–3 pass. Do not wait for the user to request it.
+
+  ```bash
+  # 1. Ensure the local Docker DB container is running
+  docker compose up -d
+
+  # 2. Re-seed (upserts existing rows, inserts new ones)
+  pnpm prisma:seed
+  ```
+
+  **Expected output:** `Seeded QuizView user and N questions from .../prisma/data/sets`
+  Verify that `N` equals the total question count across **all** JSON files in `prisma/data/sets/`.
+
+  > **Why re-run?** `seed.ts` auto-discovers every `.json` in `prisma/data/sets/`, but it only writes to the DB when executed. Dropping a file into the directory does **not** automatically update the DB — the seed must be re-run explicitly after each addition.
+  >
+  > After seeding, refresh Prisma Studio (`pnpm prisma:studio`) to confirm the new rows are visible in the `Question` table.
 - [ ] **5. TypeScript clean** — run `npx tsc --noEmit`, fix any errors
 - [ ] **6. Document** — add a row for the new topic in `QuestionsKitchen/SOURCES.md`
 - [ ] **7. Version bump** — follow Section 7 (patch bump for new question set, minor bump for new category)

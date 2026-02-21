@@ -35,7 +35,7 @@ const questionsData: Record<string, GameQuestion[]> = {
     explanation: q.explanation,
   })),
   SystemsDesign: (systemdesignQuestions as QuestionSetItem[]).map((q, idx) => ({
-    id: q.id || `js-${idx}`,
+    id: q.id || `sd-${idx}`,
     question: q.question,
     answer: q.answer,
     options: q.options,
@@ -47,7 +47,7 @@ const questionsData: Record<string, GameQuestion[]> = {
 };
 
 export function getAvailableTopics(): string[] {
-  return Object.keys(questionsData).sort();
+  return Object.keys(questionsData).sort((a, b) => a.localeCompare(b));
 }
 
 export function getQuestionsByTopic(topic: string): GameQuestion[] {

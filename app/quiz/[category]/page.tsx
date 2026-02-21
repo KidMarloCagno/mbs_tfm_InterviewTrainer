@@ -204,12 +204,6 @@ export default function QuizPage() {
             onAnswered={(isCorrect, quality) => {
               setLastAnswerCorrect(isCorrect);
               answerQuestion(currentQuestion.id, isCorrect, quality);
-              if (isCorrect) {
-                setTimeout(() => {
-                  setLastAnswerCorrect(null);
-                  nextQuestion();
-                }, 4000);
-              }
             }}
           />
         </div>
@@ -217,12 +211,12 @@ export default function QuizPage() {
         <div style={{ display: "flex", gap: ".75rem" }}>
           <Button
             onClick={() => router.push("/dashboard")}
-            variant="outline"
+            variant="warning"
             style={{ flex: 1 }}
           >
             Exit Session
           </Button>
-          {lastAnswerCorrect === false ? (
+          {lastAnswerCorrect !== null ? (
             <Button
               onClick={() => {
                 setLastAnswerCorrect(null);

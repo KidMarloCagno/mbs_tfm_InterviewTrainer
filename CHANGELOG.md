@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-02-21
+
+### Added
+
+- **Remix mode** — virtual topic that pools all questions the user has already studied, mixed across every topic, ordered by SM-2 spaced repetition priority
+- `RemixCard` component: placed in the left sidebar (below the logo/greeting card) with a purple→cyan gradient title, shuffle icon, and question count; dimmed and disabled for users with no study history
+- **Topic selector in Remix Configure Session modal**: checkboxes (pill style) let the user include or exclude individual studied sets; type-count pills and Start button update live as selections change
+- `StudiedTopic` interface exported from `SessionConfigModal` — carries per-set `TypeCounts` for type-aware filtering
+- Exit Session button in quiz now uses the "warning" (orange/amber) visual variant to distinguish it from the navigation action
+- `components/ui/button.tsx` — added `'warning'` variant mapped to `.ui-button-warning` CSS class
+- `.ui-button-warning` CSS rule using `--warning` design token
+
+### Changed
+
+- Login page tagline updated to: "Your prep for IT interviews. / Do not just hoot, execute." (two lines, glow retained on "IT")
+- Correct-answer auto-advance removed — "Next Question →" button is now always required, for both correct and wrong answers, giving the user time to read the explanation
+- Remix question pool is now scoped to questions with an existing `UserProgress` record per user; `GET /api/quiz/questions/Remix` accepts a `?topics=A,B,C` param to further narrow the pool to selected topic keys
+- Dashboard page now queries `UserProgress` to compute per-user studied counts for the Remix card (previously all questions were counted)
+- `SessionConfigModal` question count options changed to 10 / 20 / 30 (expanded upper bound for Remix sessions)
+- `createPortal` used in `RemixCard` to render the configure-session modal at `document.body` level, escaping the sticky stacking context of the sidebar
+
+### Fixed
+
+- Remix configure-session modal was appearing behind topic cards because `position: sticky` on the parent trapped `position: fixed` descendants; fixed by rendering the modal via `ReactDOM.createPortal` outside the stacking context
+
 ## [1.2.0] - 2026-02-20
 
 ### Added
