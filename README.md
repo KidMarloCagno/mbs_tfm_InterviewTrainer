@@ -232,3 +232,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions or feedback, please open an issue on GitHub.
+
+## 🛡️ Snyk Security Scanning (Recommended)
+
+Before committing, it is highly recommended to run Snyk locally to check for vulnerabilities in all project dependencies. This helps catch issues early and avoid failed commits due to security problems.
+
+- Run Snyk with the following command to scan all project manifests (including both package.json and pnpm-lock.yaml):
+
+  ```bash
+  snyk test --all-projects
+  ```
+
+- If vulnerabilities are found, you can attempt to auto-fix them:
+
+  ```bash
+  snyk fix --all-projects
+  ```
+
+- Note: Some vulnerabilities may require manual updates to package versions or human validation. If an upgrade implies significant code changes, carefully review whether the update is worth it for your project at this time.
+
+- Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
+
+- For more details, see the [Snyk documentation](https://docs.snyk.io/).
