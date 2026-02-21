@@ -7,7 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-20
+
 ### Added
+
+- SM-2 spaced repetition end-to-end wiring: session results are now persisted to `UserProgress` after every practice session
+- `GET /api/quiz/questions/[topic]`: returns up to 10 questions ordered by SM-2 review priority (overdue → new → scheduled)
+- `POST /api/quiz/session`: accepts `{ results: [{questionId, quality}] }`, runs `calculateSM2()` per question, upserts `UserProgress`, and updates `User.lastActivity`
+- `answeredResults` state in `useGameStore` — tracks `{questionId, quality}` for each answered question within a session
+- "Progress saved · Questions scheduled for spaced repetition review" status line on the session complete screen
+
+### Changed
+
+- Quiz page now loads questions from `/api/quiz/questions/[topic]` (SM-2 ordered) instead of static JSON
+- `useGameStore.answerQuestion` now accepts `(questionId, isCorrect, quality)` to record the SM-2 quality grade per answer
+- Removed the last-question auto-advance guard that prevented the session from finishing on a correct final answer
+- `Next Question` button now shows for any wrong answer (including the last question), so every session reaches completion
+- Fixed question ID mapping for Database questions in `lib/questions-data.ts` — now uses the JSON `id` field (`db-q001`, etc.) so IDs match the seeded `Question` table
+
+### Fixed
+
+- `GET /api/quiz/questions/[topic]` and `POST /api/quiz/session` now pass `authOptions` to `getServerSession` so the session resolves correctly in API routes
+- Removed `any[]` type annotations from both new routes (TypeScript strict compliance)
 
 - `test:db:prepare` command to automatically create `quizview_test` and apply Prisma migrations before integration tests
 - `scripts/prepare-test-db.ts` utility to bootstrap the test database in local Docker/PostgreSQL environments

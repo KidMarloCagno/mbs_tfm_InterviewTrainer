@@ -9,7 +9,7 @@ InterviewTrainer is a gamified IT interview practice app that blends active reca
 ## 🌟 Features
 
 - **Multiple Question Types**: Quiz Simple, True/False, and Fill the Blank
-- **Spaced Repetition**: SM-2 algorithm for optimal knowledge retention
+- **Spaced Repetition**: SM-2 algorithm — per-user per-question progress persisted to PostgreSQL; future sessions prioritise overdue reviews automatically
 - **Theme Customization**: Switch between Autumn, Neon, and Summer themes
 - **Progress Tracking**: Track your performance across different categories
 - **Authentication**: Secure login with NextAuth.js and credential-based registration

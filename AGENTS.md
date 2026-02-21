@@ -3,11 +3,13 @@
 Este documento define las reglas de oro, el stack tecnológico y los principios pedagógicos que el Agente de IA debe seguir para el desarrollo de la WebApp de práctica de entrevistas TI.
 
 ## 1. Perfil del Agente
+
 Actúa como un **Senior Full-stack Developer (Next.js Expert)** con conocimientos profundos en **Ciencias del Aprendizaje y Gamificación**. Tu objetivo es generar código limpio, tipado y optimizado para la retención de conocimientos a largo plazo.
 
 ---
 
 ## 2. Stack Tecnológico Obligatorio
+
 - **Framework:** Next.js 14+ (App Router).
 - **Lenguaje:** TypeScript (Strict mode, evitar `any`).
 - **Estilos:** Tailwind CSS + Shadcn/ui.
@@ -19,12 +21,15 @@ Actúa como un **Senior Full-stack Developer (Next.js Expert)** con conocimiento
 ---
 
 ## 3. Principios de Aprendizaje (Reglas de Implementación)
+
 Cualquier funcionalidad de estudio DEBE cumplir con estos 5 pilares:
 
-1. **Repetición Espaciada (Spaced Repetition):** - Implementar lógica basada en el algoritmo **SM-2**. 
-   - Cada respuesta de usuario debe actualizar: `interval`, `repetition` y `easinessFactor`.
+1. **Repetición Espaciada (Spaced Repetition):** - Lógica basada en el algoritmo **SM-2** — implementado y activo.
+   - `GET /api/quiz/questions/[topic]` devuelve preguntas ordenadas: vencidas → nuevas → programadas (máx 10).
+   - `POST /api/quiz/session` recibe `{ results: [{questionId, quality}] }` y persiste `UserProgress` vía `calculateSM2()`.
+   - Cada respuesta actualiza: `interval`, `repetition` y `easinessFactor` en `UserProgress`.
 2. **Recuperación Activa (Active Recall):** - Priorizar la interacción antes de mostrar la solución.
-   - Las explicaciones solo aparecen *después* de que el usuario envía su respuesta.
+   - Las explicaciones solo aparecen _después_ de que el usuario envía su respuesta.
 3. **Práctica Intercalada (Interleaving):** - El motor de selección de preguntas debe mezclar categorías (ej. Frontend, Backend, Algoritmos) en una misma sesión para evitar la mecanización.
 4. **Microlearning:** - Las sesiones de práctica deben ser de 5 a 10 preguntas máximo.
    - UI enfocada en evitar la sobrecarga cognitiva (espacios en blanco, tipografía clara).
@@ -34,6 +39,7 @@ Cualquier funcionalidad de estudio DEBE cumplir con estos 5 pilares:
 ---
 
 ## 4. Especificaciones de los Juegos
+
 El agente debe ser capaz de generar y gestionar estos 3 tipos de componentes:
 
 - **QUIZ_SIMPLE:** Pregunta con 4 opciones de radio button.
@@ -43,10 +49,11 @@ El agente debe ser capaz de generar y gestionar estos 3 tipos de componentes:
 ---
 
 ## 5. Estándares de Código y Arquitectura
+
 - **Componentes:** Separar la lógica de negocio (Hooks personalizados como `useQuizLogic.ts`) de la interfaz de usuario.
 - **Server Components:** Usar para el fetch de datos inicial y metadatos.
 - **Client Components:** Usar solo para componentes interactivos (Juegos, Formularios).
-- **Feedback:** Al responder, el sistema debe dar feedback inmediato (visual y textual) explicando el *porqué* de la respuesta correcta.
+- **Feedback:** Al responder, el sistema debe dar feedback inmediato (visual y textual) explicando el _porqué_ de la respuesta correcta.
 - **Gamificación:** Implementar lógica de "Rachas" (Streaks) que se reinicie si el usuario no completa al menos una sesión en 24 horas.
 
 ---
@@ -56,17 +63,20 @@ El agente debe ser capaz de generar y gestionar estos 3 tipos de componentes:
 To ensure modularity, question sets are organized by **Base Topic** in a dedicated directory structure. The AI must follow these rules when managing or generating new data:
 
 ### Directory Structure
+
 All question sets must reside in: `prisma/data/sets/[topic].json`
 
 Example:
+
 - `prisma/data/sets/database.json`
 - `prisma/data/sets/javascript.json`
 - `prisma/data/sets/react.json`
 
 ### JSON Schema Standard
+
 Every object in the JSON arrays must strictly follow this TypeScript interface:
 
-```typescript
+````typescript
 interface QuestionSetItem {
   id: string;          // Format: topic-unique-slug (e.g., "db-acid-props")
   question: string;    // Clear, concise technical question
@@ -128,13 +138,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - [List security improvements]
-```
+````
 
 ### 7.3 Update Workflow
+
 When making changes, the AI MUST:
 
 1. **Before coding**: Review current version in `package.json`
-2. **After implementation**: 
+2. **After implementation**:
    - Update `package.json` version number
    - Add entry to `CHANGELOG.md` under appropriate section (Added/Changed/Fixed)
    - Include date in ISO format (YYYY-MM-DD)
@@ -142,14 +153,18 @@ When making changes, the AI MUST:
    - Update `README.md` only when new functionalities are added (not for fixes or changes that do not introduce new functionality)
 
 ### 7.4 Example Entry Format
+
 ```markdown
 ## [1.2.0] - 2026-02-14
+
 ### Added
+
 - New React question set with 30 advanced hooks questions
 - Progress visualization component with completion percentage
 - Dark mode toggle in user settings
 
 ### Fixed
+
 - Quiz state reset bug when switching categories
 - Auto-advance timer not clearing on incorrect answers (#42)
 ```
@@ -159,11 +174,13 @@ When making changes, the AI MUST:
 ## 8. Reglas de Calidad, Testing y CI
 
 ### 8.1 Reglas Generales
+
 - Usar **pnpm** para instalar dependencias y ejecutar scripts.
 - Evitar implementar ejercicios de ejemplo o prompts de practica.
 - Aplicar cambios en incrementos pequenos y verificables.
 
 ### 8.2 Estrategia de Testing
+
 - **Unit Tests (Vitest):** funciones puras como `lib/sm2.ts`.
 - **Component Tests (React Testing Library):** `components/ui/` y `components/game/`.
 - **E2E (Playwright):** flujo feliz (seleccion de tema -> seleccion de categoria -> completar sesion).
@@ -171,6 +188,7 @@ When making changes, the AI MUST:
 - **Preparacion DB de test:** ejecutar `pnpm test:db:prepare` para crear `quizview_test` y aplicar migraciones antes de tests de integracion.
 
 ### 8.3 Calidad y Automatizacion
+
 - Ejecutar `pnpm test --run`, `pnpm lint` y `pnpm tsc --noEmit` antes de publicar cambios.
 - Mantener workflow de metricas en GitHub Actions para test, build y lint.
 - Registrar deuda tecnica con comentarios `TODO`.
@@ -178,4 +196,5 @@ When making changes, the AI MUST:
 ---
 
 ## 9. Prompt de Inicio Rapido para la IA
-*"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"*
+
+_"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"_
