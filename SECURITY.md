@@ -86,12 +86,21 @@ When using Prisma with PostgreSQL in production:
 - Regularly update Prisma to the latest version
 - Use parameterized queries (Prisma handles this automatically)
 
+## Known Vulnerabilities
+
+| ID                                                                           | Package        | Severity | Description                                                | Status                                                                                                                                    |
+| ---------------------------------------------------------------------------- | -------------- | -------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [SNYK-JS-NEXT-15104645](https://security.snyk.io/vuln/SNYK-JS-NEXT-15104645) | `next@14.2.35` | **High** | Allocation of Resources Without Limits or Throttling (DoS) | Accepted risk — fix requires upgrading to Next.js 15 (breaking change). Mitigated in practice by rate limiting on all mutating endpoints. |
+
+> **Note:** `14.2.35` is the latest Next.js 14.x release; no backport patch exists. Upgrading to Next.js 15 would require rewriting `cookies()`, `headers()`, and dynamic route `params` as async throughout the app. This trade-off is accepted for the current academic project scope.
+
 ## Supported Versions
 
-| Version | Supported        |
-| ------- | ---------------- |
-| 1.0.x   | ✅ Yes (current) |
-| 0.x.x   | ❌ No            |
+| Version       | Supported            |
+| ------------- | -------------------- |
+| 1.3.x         | ✅ Yes (current)     |
+| 1.0.x – 1.2.x | ⚠️ No longer patched |
+| 0.x.x         | ❌ No                |
 
 Only the latest minor version receives security updates.
 
@@ -115,6 +124,15 @@ pnpm audit
 
 # Check for outdated packages
 pnpm outdated
+
+# Snyk Open Source scan (dependency CVEs)
+snyk test --all-projects
+
+# Snyk Code scan (SAST — requires Snyk Code enabled in your org)
+snyk code test
+
+# Push a snapshot to Snyk dashboard for ongoing monitoring
+snyk monitor
 ```
 
 ## Acknowledgments

@@ -147,6 +147,28 @@ pnpm test
 
 ## ▲ Vercel Deployment Notes
 
+# Snyk Pre-commit Automation
+
+This project uses a git pre-commit hook to automatically run Snyk security scans before every commit. If vulnerabilities or code issues are found, the commit is blocked.
+
+**How it works:**
+
+- The hook runs `snyk test` and `snyk code test` in the project directory.
+- If any issues are detected, the commit is aborted.
+- Make sure Snyk CLI is installed and authenticated (`snyk auth`).
+
+**Location:**
+
+- `.git/hooks/pre-commit` (shell script)
+
+**To disable:**
+
+- Remove or rename the pre-commit hook file.
+
+**Requirements:**
+
+- Snyk CLI installed globally (`npm install -g snyk` or via other package managers).
+
 ## 🔐 Snyk Integration Options
 
 This repository supports Snyk as a GitHub Actions workflow (`.github/workflows/snyk.yml`) so scans can run automatically after pushes and on pull requests.
