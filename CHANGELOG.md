@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.4] - 2026-02-21
+
+### Fixed
+
+- Remix card not activating after first session on Vercel: the "Back to Topics" button now waits for `POST /api/quiz/session` to complete before navigating to the dashboard, eliminating the race condition where the dashboard Server Component queried `UserProgress` before the write had committed. The button shows "Saving…" and is disabled during the save.
+
 ## [1.3.3] - 2026-02-21
 
 ### Added
