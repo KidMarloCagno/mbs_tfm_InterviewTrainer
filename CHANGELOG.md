@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.3] - 2026-02-21
+
+### Added
+
+- 7 new test files covering previously-untested API routes and utility modules (251 tests total):
+  - `__tests__/unit/loginRateLimit.test.ts` — CORE TIER, 8 tests (100% coverage target)
+  - `__tests__/unit/registerRateLimit.test.ts` — CORE TIER, 8 tests
+  - `__tests__/unit/questionsData.test.ts` — CORE TIER, 8 tests
+  - `__tests__/api/auth/checkAvailability.test.ts` — IMPORTANT TIER, 10 tests (≥80% target)
+  - `__tests__/api/auth/register.test.ts` — IMPORTANT TIER, 11 tests
+  - `__tests__/api/quiz/questions.test.ts` — IMPORTANT TIER, 13 tests
+  - `__tests__/api/quiz/session.test.ts` — IMPORTANT TIER, 10 tests
+
+### Fixed
+
+- Renamed `vitest.config.ts` → `vitest.config.mts` to suppress Vite CJS Node API deprecation warning; `.mts` extension forces ESM loading without affecting Next.js config files
+
 ## [1.3.2] - 2026-02-21
 
 ### Added

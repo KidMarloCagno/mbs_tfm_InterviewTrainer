@@ -128,6 +128,7 @@ mbs_tfm_InterviewTrainer/
 - `pnpm start`: Run the production server
 - `pnpm test:db:prepare`: Create/prepare `quizview_test` and apply Prisma migrations
 - `pnpm test`: Run unit tests with Vitest
+- `pnpm test:coverage`: Run tests with v8 coverage report (HTML + text)
 - `pnpm test:e2e`: Run end-to-end tests with Playwright
 - `pnpm lint`: Run ESLint for code quality
 - `pnpm prisma:studio`: Explore data with Prisma Studio
