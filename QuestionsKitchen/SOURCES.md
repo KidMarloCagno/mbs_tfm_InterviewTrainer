@@ -6,10 +6,39 @@ Question sets live in: `prisma/data/sets/<topic>.json`
 
 ## Sources
 
-| Topic      | Source URL                                                        | Date Accessed | Notes |
-| ---------- | ----------------------------------------------------------------- | ------------- | ----- |
-| Database   | https://www.softwaretestinghelp.com/database-interview-questions/ | 2026-02-10    |       |
-| JavaScript |                                                                   |               |       |
+| Topic    | Source URL                                                        | Date Accessed | Notes |
+| -------- | ----------------------------------------------------------------- | ------------- | ----- |
+| Database | https://www.softwaretestinghelp.com/database-interview-questions/ | 2026-02-10    |       |
+
+|
+| Javascript | https://github.com/sudheerj/javascript-interview-questions | 2026-02-21 | |
+|
+| Angular | https://github.com/sudheerj/angular-interview-questions | 2026-02-21 | |
+|
+| Django | https://github.com/Ujjawal-Anand/django-interview | 2026-02-21 | |
+|
+| Java | https://github.com/Devinterview-io/java-interview-questions | 2026-02-21 | |
+|
+| Spring | https://github.com/altafjava/spring-interview-questions-answers | 2026-02-21 | |
+|
+| Python | https://github.com/Devinterview-io/python-interview-questions | 2026-02-21 | |
+|
+| React | https://github.com/sudheerj/reactjs-interview-questions | 2026-02-21 | |
+|
+| SQL | https://github.com/kansiris/SQL-interview-questions/tree/master | 2026-02-21 | |
+|
+| FrontEnd | https://dev.to/m_midas/52-frontend-interview-questions-javascript-59h6 | 2026-02-21 | |
+|
+| FrontEnd | https://github.com/h5bp/Front-end-Developer-Interview-Questions?tab=readme-ov-file | 2026-02-21 | |
+|
+| FrontEnd | https://4dayweek.medium.com/15-frontend-developer-interview-questions-2023-91c7a9a628c1 | 2026-02-21 | |
+|
+| FrontEnd | https://frontendinterviewquestions.medium.com/frontend-interview-questions-top-250-92ba361cbbbd | 2026-02-21 | |
+|
+| BackEnd | https://www.turing.com/interview-questions/back-end | 2026-02-21 | |
+|
+| BackEnd | https://github.com/tamhoang1412/backend-swe-interview-questions | 2026-02-21 | |
+|
 
 ---
 
@@ -45,7 +74,7 @@ Here are the strict rules for the JSON generation:
 * `level`: Assign exactly "Beginner", "Intermediate", or "Advanced" based on the complexity of the specific question.
 
 **4. Quantity**
-* Do not arbitrarily limit your extraction to a small number of questions. Many source URLs share 30, 40, or 50+ questions. Extract and generate as many high-quality questions as the source material supports. I want them ALL (Max 70 questions).
+* Do not arbitrarily limit your extraction to a small number of questions. Many source URLs share 30, 40, or 50+ questions. Extract and generate as many high-quality questions as the source material supports. I want them ALL (Max 120 questions).
 
 **5. Output Format**
 * Output the valid JSON array enclosed within a markdown code block (i.e., ```json [ ... ] ```).

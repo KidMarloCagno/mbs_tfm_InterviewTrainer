@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "re-q001",
+    "question": "What is React?",
+    "answer": "A front-end JavaScript library developed by Facebook for building user interfaces.",
+    "options": [
+      "A back-end framework for building scalable REST APIs.",
+      "A front-end JavaScript library developed by Facebook for building user interfaces.",
+      "A relational database management system used for enterprise storage.",
+      "A CSS preprocessor designed to dynamically generate stylesheets."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "React is an open-source, front-end, component-based JavaScript library initially created by Jordan Walke at Facebook to build interactive user interfaces."
+  },
+  {
+    "id": "re-q002",
+    "question": "What is the major difference between the Real DOM and the Virtual DOM in React?",
+    "answer": "The Virtual DOM updates much faster because it only updates the changed parts, whereas the Real DOM updates the entire tree.",
+    "options": [
+      "The Virtual DOM directly manipulates HTML tags, whereas the Real DOM only manipulates CSS.",
+      "The Real DOM is stored entirely in the cloud, while the Virtual DOM is stored locally.",
+      "The Virtual DOM updates much faster because it only updates the changed parts, whereas the Real DOM updates the entire tree.",
+      "There is no performance difference; the Virtual DOM is simply a syntactic wrapper for the Real DOM."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "React uses a diffing algorithm (reconciliation) on the Virtual DOM to calculate the minimum number of changes needed, making updates to the Real DOM incredibly efficient."
+  },
+  {
+    "id": "re-q003",
+    "question": "What is JSX?",
+    "answer": "A syntax extension to JavaScript that allows developers to write HTML-like code within React files.",
+    "options": [
+      "A syntax extension to JavaScript that allows developers to write HTML-like code within React files.",
+      "A strictly typed version of JavaScript that compiles down to WebAssembly.",
+      "A built-in state management tool replacing Redux.",
+      "An alternative to JSON used primarily for server-to-client data transmission."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JSX produces React 'elements' and allows developers to write intuitive, HTML-like markup natively mixed with JavaScript logic."
+  },
+  {
+    "id": "re-q004",
+    "question": "Can web browsers read JSX directly?",
+    "answer": "No, browsers can only read regular JavaScript objects, so JSX must be compiled by a tool like Babel.",
+    "options": [
+      "Yes, modern browsers natively support JSX rendering via the DOM.",
+      "Yes, but only if the file is saved with a .jsx extension instead of .js.",
+      "No, browsers can only read regular JavaScript objects, so JSX must be compiled by a tool like Babel.",
+      "No, JSX can only be read by Node.js environments on the backend."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Browsers only understand standard ECMA script. Transpilers like Babel convert JSX into pure JavaScript `React.createElement()` calls."
+  },
+  {
+    "id": "re-q005",
+    "question": "What is the Virtual DOM?",
+    "answer": "A lightweight JavaScript object representation of the actual DOM.",
+    "options": [
+      "A heavy desktop application used to mock browser environments.",
+      "A lightweight JavaScript object representation of the actual DOM.",
+      "A completely distinct programming language used exclusively by React.",
+      "A secure sandbox environment used for executing third-party APIs."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Virtual DOM is kept in memory and kept in sync with the 'real' DOM by a library such as ReactDOM."
+  },
+  {
+    "id": "re-q006",
+    "question": "What is the difference between an Element and a Component in React?",
+    "answer": "An Element describes what you want to see on the screen, while a Component is a function or class that optionally accepts inputs and returns a React element.",
+    "options": [
+      "Elements are dynamic and stateful, while Components are static and immutable.",
+      "Elements are exclusively used in class-based React, while Components are used in hooks.",
+      "An Element describes what you want to see on the screen, while a Component is a function or class that optionally accepts inputs and returns a React element.",
+      "There is no difference; the terms can be used interchangeably in the React documentation."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "An Element is a plain object describing a DOM node. A Component is a blueprint (a factory) that produces those elements."
+  },
+  {
+    "id": "re-q007",
+    "question": "What are Pure Components in React?",
+    "answer": "Components that do not re-render if their state and props have not changed, handled via a shallow comparison.",
+    "options": [
+      "Components that only contain HTML without any CSS styling.",
+      "Components that do not take any props or state.",
+      "Components that execute completely synchronously blocking the main thread.",
+      "Components that do not re-render if their state and props have not changed, handled via a shallow comparison."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "React.PureComponent implements `shouldComponentUpdate()` with a shallow prop and state comparison to prevent unnecessary renders."
+  },
+  {
+    "id": "re-q008",
+    "question": "What is 'state' in React?",
+    "answer": "An object that holds information that may change over the lifetime of the component, triggering a re-render when updated.",
+    "options": [
+      "A read-only property passed from parent to child.",
+      "An object that holds information that may change over the lifetime of the component, triggering a re-render when updated.",
+      "A global variable accessible by any component in the application automatically.",
+      "A built-in database interface used to query local storage."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "State represents the dynamic, reactive data local to a specific component. Changing it tells React to redraw the UI."
+  },
+  {
+    "id": "re-q009",
+    "question": "What are 'props' in React?",
+    "answer": "Read-only inputs passed from a parent component down to a child component.",
+    "options": [
+      "Read-only inputs passed from a parent component down to a child component.",
+      "Mutable variables used to manage internal component logic.",
+      "Special HTML attributes used exclusively for styling.",
+      "Server-side variables injected directly into the frontend."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Props (short for properties) allow components to be dynamic and reusable by passing data down the component tree. They are immutable from the child's perspective."
+  },
+  {
+    "id": "re-q010",
+    "question": "What is the primary difference between state and props?",
+    "answer": "Props are passed to the component like function parameters, whereas state is managed internally within the component like variables.",
+    "options": [
+      "State is passed to the component like function parameters, whereas props are managed internally.",
+      "Props are passed to the component like function parameters, whereas state is managed internally within the component like variables.",
+      "State can only be strings, while props can only be numbers or booleans.",
+      "State is used strictly for CSS styling, while props are used for data fetching."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Props configure a component when it's created, while state is used to track changes over time within the component itself."
+  },
+  {
+    "id": "re-q011",
+    "question": "Why should we not update React state directly (e.g., this.state.msg = 'Hello')?",
+    "answer": "Because mutating state directly will not trigger the component to re-render. You must use the setState() method.",
+    "options": [
+      "Because it causes an immediate syntax error and crashes the compiler.",
+      "Because state variables are physically locked in browser memory.",
+      "Because mutating state directly will not trigger the component to re-render. You must use the setState() method.",
+      "Because direct mutation permanently deletes the previous state history from Redux."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "React's reconciliation process depends on detecting state changes via its setters (`setState` or `useState` hook) to know when to update the DOM."
+  },
+  {
+    "id": "re-q012",
+    "question": "What is the purpose of passing a callback function as an argument to setState()?",
+    "answer": "The callback function is invoked exactly when setState has finished and the component is completely re-rendered.",
+    "options": [
+      "It prevents the component from re-rendering after the state is updated.",
+      "It acts as a fallback value in case the state update fails.",
+      "It allows you to intercept the state and cancel the update if conditions aren't met.",
+      "The callback function is invoked exactly when setState has finished and the component is completely re-rendered."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Because `setState` is asynchronous, relying on the state immediately after calling it is dangerous. The callback guarantees the state has updated."
+  },
+  {
+    "id": "re-q013",
+    "question": "How does React event handling differ from standard HTML event handling?",
+    "answer": "React events use camelCase instead of lowercase, and you must call preventDefault() explicitly rather than returning false.",
+    "options": [
+      "React events use camelCase instead of lowercase, and you must call preventDefault() explicitly rather than returning false.",
+      "React events use lowercase, and you can return false to prevent default behavior.",
+      "React completely disables all standard browser events and replaces them with a custom polling API.",
+      "React events are bound to the window object globally instead of individual DOM elements."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "React's synthetic event system standardizes event names to camelCase (`onClick` instead of `onclick`) and requires method calls to stop default behaviors."
+  },
+  {
+    "id": "re-q014",
+    "question": "What are Synthetic Events in React?",
+    "answer": "Cross-browser wrappers around the browser's native event to ensure identical behavior across different browsers.",
+    "options": [
+      "Events triggered artificially by automated testing libraries like Jest.",
+      "Events exclusively related to CSS transitions and animations.",
+      "Cross-browser wrappers around the browser's native event to ensure identical behavior across different browsers.",
+      "Fake events generated when a user interacts with the Virtual DOM before it renders to the Real DOM."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "These wrappers pool events and normalize their properties so they work identically across Chrome, Firefox, Safari, and IE."
+  },
+  {
+    "id": "re-q015",
+    "question": "What is the 'key' prop and why is it important in lists?",
+    "answer": "It is a special string attribute needed when creating lists of elements, helping React identify which items have changed, been added, or removed.",
+    "options": [
+      "It acts as a secure password parameter to fetch protected API data in lists.",
+      "It is a special string attribute needed when creating lists of elements, helping React identify which items have changed, been added, or removed.",
+      "It strictly defines the visual CSS order of elements displayed on the screen.",
+      "It automatically generates a unique database ID for new elements submitted in a form."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Keys give list elements a stable identity. Without them, React has to mutate every item in the list instead of simply reordering them."
+  },
+  {
+    "id": "re-q016",
+    "question": "What are Refs in React?",
+    "answer": "They provide a way to directly access DOM nodes or React elements created in the render method without using state.",
+    "options": [
+      "They provide a way to directly access DOM nodes or React elements created in the render method without using state.",
+      "They are mathematical reference algorithms used to speed up component sorting.",
+      "They represent the specific memory address of variables allocated by the browser.",
+      "They strictly act as routing links to navigate between different pages in a SPA."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Refs are useful as an 'escape hatch' to target specific elements to manage focus, text selection, or media playback directly."
+  },
+  {
+    "id": "re-q017",
+    "question": "What is Forwarding Refs (forwardRef)?",
+    "answer": "A technique for automatically passing a ref through a component to one of its children.",
+    "options": [
+      "A technique to bypass the Virtual DOM and render straight to the Real DOM.",
+      "A networking term for forwarding API requests through React components.",
+      "A technique for automatically passing a ref through a component to one of its children.",
+      "A method to rewind state history in time-travel debugging."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Usually, components hide their implementation details. `forwardRef` lets a parent reach down into a child component and grab a reference to a DOM node inside it."
+  },
+  {
+    "id": "re-q018",
+    "question": "What is React Fiber?",
+    "answer": "The core reconciliation engine in React 16+, designed to enable incremental rendering of the Virtual DOM.",
+    "options": [
+      "A third-party CSS framework built to style React components.",
+      "A network utility designed to handle WebSocket connections natively in React.",
+      "The core reconciliation engine in React 16+, designed to enable incremental rendering of the Virtual DOM.",
+      "An automated unit testing tool that replaces Enzyme and Jest."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Fiber allows React to pause, abort, or reuse work as new updates come in, keeping the main thread responsive during heavy renders."
+  },
+  {
+    "id": "re-q019",
+    "question": "What is a Controlled Component?",
+    "answer": "A component that renders form elements and controls their values by keeping the form data securely in the component's state.",
+    "options": [
+      "A component completely locked from user interaction.",
+      "A component where form data is handled entirely by the DOM itself using refs.",
+      "A component that relies exclusively on a Redux store for all internal logic.",
+      "A component that renders form elements and controls their values by keeping the form data securely in the component's state."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "In a controlled component, the React state is the 'single source of truth' for the input's value, updated via `onChange` events."
+  },
+  {
+    "id": "re-q020",
+    "question": "What is an Uncontrolled Component?",
+    "answer": "A component where form data is handled by the DOM itself using refs rather than being strictly managed by React state.",
+    "options": [
+      "A component that causes memory leaks due to lack of lifecycle management.",
+      "A component where form data is handled by the DOM itself using refs rather than being strictly managed by React state.",
+      "A component that randomly generates HTML elements without explicit structural logic.",
+      "A component designed explicitly to fetch data without rendering anything to the screen."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Uncontrolled components act more like traditional HTML forms. You pull the value from the DOM using a ref only when needed (e.g., on submit)."
+  },
+  {
+    "id": "re-q021",
+    "question": "What does Lifting State Up mean in React?",
+    "answer": "Moving state to the closest common ancestor of components that need it so they can share that state.",
+    "options": [
+      "Moving state variables to a centralized database server for safekeeping.",
+      "Pushing state data to the browser's localStorage.",
+      "Moving state to the closest common ancestor of components that need it so they can share that state.",
+      "Promoting primitive state values into complex object states for easier scaling."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "If two sibling components need to sync their states, you lift the state to their parent and pass it back down via props."
+  },
+  {
+    "id": "re-q022",
+    "question": "What are Higher-Order Components (HOC) in React?",
+    "answer": "An advanced technique for reusing component logic where a function takes a component and returns a new component.",
+    "options": [
+      "Special HTML elements that sit at the absolute top of the DOM tree.",
+      "An advanced technique for reusing component logic where a function takes a component and returns a new component.",
+      "Core internal classes that manage the Virtual DOM diffing algorithm.",
+      "Components that only process asynchronous HTTP requests."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "HOCs are a pattern that emerges from React's compositional nature. Examples include Redux's `connect` or React Router's `withRouter`."
+  },
+  {
+    "id": "re-q023",
+    "question": "What is the Context API in React?",
+    "answer": "A feature that provides a way to pass data through the component tree without having to pass props down manually at every level.",
+    "options": [
+      "A routing tool to map URLs to specific screen renders.",
+      "A testing module specifically designed to assert UI changes.",
+      "An API that natively connects React to SQL databases.",
+      "A feature that provides a way to pass data through the component tree without having to pass props down manually at every level."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Context is designed to share data that can be considered 'global' for a tree of React components, such as current authenticated user, theme, or language."
+  },
+  {
+    "id": "re-q024",
+    "question": "What are React Hooks?",
+    "answer": "A feature introduced in React 16.8 that lets you use state and other React lifecycle features without writing a class.",
+    "options": [
+      "A feature introduced in React 16.8 that lets you use state and other React lifecycle features without writing a class.",
+      "External security protocols designed to prevent Cross-Site Scripting (XSS).",
+      "Network endpoints used to listen for continuous server events.",
+      "Special CSS classes applied automatically to functional components."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Hooks like `useState` and `useEffect` fundamentally changed how React is written by making functional components fully stateful."
+  },
+  {
+    "id": "re-q025",
+    "question": "Which of the following is a strict Rule of Hooks?",
+    "answer": "Hooks must only be called at the top level of a React function component or a custom Hook.",
+    "options": [
+      "Hooks can only be executed inside traditional class components.",
+      "Hooks must only be called inside loops, conditions, or nested functions.",
+      "Hooks must only be called at the top level of a React function component or a custom Hook.",
+      "Hooks require the 'this' keyword to access component state properly."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "React relies on the order in which Hooks are called to associate local state with the correct Hook. Calling them conditionally breaks this order."
+  },
+  {
+    "id": "re-q026",
+    "question": "What is the purpose of the useState hook?",
+    "answer": "It allows developers to declare state variables in functional components.",
+    "options": [
+      "It allows developers to declare state variables in functional components.",
+      "It maps HTTP responses to internal JSON objects.",
+      "It permanently freezes a variable to prevent future modification.",
+      "It handles global routing state across the application."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "It returns an array with two elements: the current state value and a function to update it."
+  },
+  {
+    "id": "re-q027",
+    "question": "What does the useEffect hook do?",
+    "answer": "It lets you perform side effects (like data fetching or subscriptions) in functional components, similar to lifecycle methods in classes.",
+    "options": [
+      "It calculates styling transitions and animations synchronously.",
+      "It defines custom error boundaries around fragile logic.",
+      "It lets you perform side effects (like data fetching or subscriptions) in functional components, similar to lifecycle methods in classes.",
+      "It securely masks sensitive data before rendering it to the DOM."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` united into a single API."
+  },
+  {
+    "id": "re-q028",
+    "question": "What is the main purpose of the useRef hook?",
+    "answer": "It returns a mutable ref object whose '.current' property persists across re-renders without triggering a re-render itself.",
+    "options": [
+      "It connects functional components directly to a Redux store.",
+      "It forces the component to eagerly re-render upon variable changes.",
+      "It returns a mutable ref object whose '.current' property persists across re-renders without triggering a re-render itself.",
+      "It captures historical states to enable undo/redo capabilities."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "useRef is handy for keeping any mutable value around similarly to how you’d use instance fields in classes, and for accessing DOM elements directly."
+  },
+  {
+    "id": "re-q029",
+    "question": "What is the difference between useMemo and useCallback?",
+    "answer": "useMemo returns a memoized value from a calculation, whereas useCallback returns a memoized callback function itself.",
+    "options": [
+      "useMemo relies on class components, whereas useCallback relies on functional components.",
+      "useMemo is asynchronous, whereas useCallback executes synchronously.",
+      "useMemo returns a memoized value from a calculation, whereas useCallback returns a memoized callback function itself.",
+      "useMemo resets state on every render, whereas useCallback caches it permanently."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Both optimize performance. `useMemo` caches the result of a function, while `useCallback` caches the function definition so it isn't recreated on every render."
+  },
+  {
+    "id": "re-q030",
+    "question": "What does React Router primarily accomplish?",
+    "answer": "It is a standard library for routing in React, keeping the user interface perfectly in sync with the browser URL.",
+    "options": [
+      "It handles load balancing between different database servers.",
+      "It prevents unauthorized access to protected web folders.",
+      "It compiles raw JSX down to browser-friendly JavaScript.",
+      "It is a standard library for routing in React, keeping the user interface perfectly in sync with the browser URL."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "React Router enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps UI in sync with the URL."
+  },
+  {
+    "id": "re-q031",
+    "question": "What is the purpose of React.lazy()?",
+    "answer": "It allows developers to render a dynamic import as a regular component, essentially enabling code-splitting.",
+    "options": [
+      "It delays the loading of large image files until they enter the viewport.",
+      "It forces a component to skip the reconciliation process.",
+      "It allows developers to render a dynamic import as a regular component, essentially enabling code-splitting.",
+      "It automatically memoizes a component's output unconditionally."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Code-splitting via React.lazy reduces the initial bundle size of the application, drastically speeding up initial page load times."
+  },
+  {
+    "id": "re-q032",
+    "question": "What is the function of a Suspense component in React?",
+    "answer": "It allows you to specify a fallback indicator (like a loading spinner) while child components further down the tree are waiting to render.",
+    "options": [
+      "It completely suspends all JavaScript execution globally to free up CPU resources.",
+      "It allows you to specify a fallback indicator (like a loading spinner) while child components further down the tree are waiting to render.",
+      "It hides components with severe console errors.",
+      "It intercepts unauthorized HTTP requests gracefully."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Suspense is paired closely with React.lazy or data fetching libraries to gracefully handle asynchronous UI loading."
+  },
+  {
+    "id": "re-q033",
+    "question": "What are Error Boundaries in React?",
+    "answer": "Specialized components that catch JavaScript errors anywhere in their child component tree, log them, and display a fallback UI instead of crashing.",
+    "options": [
+      "Strict network protocols that prevent API data breaches.",
+      "Specialized components that catch JavaScript errors anywhere in their child component tree, log them, and display a fallback UI instead of crashing.",
+      "Built-in CSS wrappers that highlight incorrectly styled elements.",
+      "Warning boxes that trigger when you mutate state directly."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "They catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them, but they do not catch errors inside event handlers."
+  },
+  {
+    "id": "re-q034",
+    "question": "What is Strict Mode in React?",
+    "answer": "A wrapper tool that highlights potential problems in an application by activating additional checks and warnings for its descendants in development.",
+    "options": [
+      "A wrapper tool that highlights potential problems in an application by activating additional checks and warnings for its descendants in development.",
+      "A compiler setting that converts JavaScript errors directly into fatal system crashes.",
+      "An optimization setting that bypasses the Virtual DOM entirely for faster speeds.",
+      "A security mode that encrypts all props passed down the tree."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Strict Mode does not render any visible UI. It is heavily used in development to flag unsafe lifecycles, legacy API usage, and unexpected side effects."
+  },
+  {
+    "id": "re-q035",
+    "question": "What does ReactDOM.createPortal do?",
+    "answer": "It provides a first-class way to render children into a completely separate DOM node that exists outside the direct DOM hierarchy of the parent component.",
+    "options": [
+      "It opens an internal hidden iframe to execute complex scripts.",
+      "It provides a first-class way to render children into a completely separate DOM node that exists outside the direct DOM hierarchy of the parent component.",
+      "It creates an isolated Redux store inside an individual component.",
+      "It routes users securely to an external website without losing state."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Portals are commonly used for rendering UI overlays like modals, tooltips, or popup menus that need to visually break out of their parent container."
+  },
+  {
+    "id": "re-q036",
+    "question": "What is a Custom Hook?",
+    "answer": "A normal JavaScript function whose name starts with 'use' and that may call other core Hooks, allowing logic extraction into reusable functions.",
+    "options": [
+      "A deprecated class-based function used in React 15.",
+      "A normal JavaScript function whose name starts with 'use' and that may call other core Hooks, allowing logic extraction into reusable functions.",
+      "A hook created exclusively by manipulating the browser's service worker.",
+      "A strictly typed API used to alter the DOM without reconciliation."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Custom Hooks offer the flexibility of sharing logic across multiple components without adding more nested components to the DOM tree."
+  },
+  {
+    "id": "re-q037",
+    "question": "Can you use React Hooks inside a class component?",
+    "answer": "No, Hooks can only be used inside functional components or within other custom Hooks.",
+    "options": [
+      "Yes, they can be placed safely within the constructor method.",
+      "Yes, but only if they are wrapped inside a componentDidMount lifecycle.",
+      "No, Hooks can only be used inside functional components or within other custom Hooks.",
+      "No, Hooks are exclusively used in pure JavaScript files completely unrelated to React."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The architecture of Hooks requires functional closures to execute correctly. Classes must stick to `this.state` and traditional lifecycle methods."
+  },
+  {
+    "id": "re-q038",
+    "question": "What is the purpose of React.memo()?",
+    "answer": "It is a higher-order component that prevents functional components from re-rendering if their received props have not changed.",
+    "options": [
+      "It allows developers to append string memos directly into the browser console.",
+      "It forces a component to re-render constantly to ensure data freshness.",
+      "It is a higher-order component that prevents functional components from re-rendering if their received props have not changed.",
+      "It converts complex objects into plain JSON strings."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "It works exactly like `React.PureComponent` but is intended for functional components instead of classes."
+  },
+  {
+    "id": "re-q039",
+    "question": "What is Prop Drilling?",
+    "answer": "The process of passing data from a higher-level component all the way down to a deeply nested child through multiple intermediary components.",
+    "options": [
+      "The process of passing data from a higher-level component all the way down to a deeply nested child through multiple intermediary components.",
+      "An automated tool for formatting child component attributes.",
+      "A critical security flaw where props leak into the browser's console.",
+      "The method of looping through an array map using specific props."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Prop Drilling is often seen as an anti-pattern when it gets too deep, which is why the Context API or Redux are used to circumvent it."
+  },
+  {
+    "id": "re-q040",
+    "question": "How does React handle routing internally without a library like React Router?",
+    "answer": "React itself does not come with built-in routing; it relies on third-party libraries or custom history API implementations to handle URL navigation.",
+    "options": [
+      "It uses the native React.Router object built into the core library.",
+      "It relies exclusively on traditional anchor tag <a> href attributes to reload pages.",
+      "React itself does not come with built-in routing; it relies on third-party libraries or custom history API implementations to handle URL navigation.",
+      "It reads routing configurations strictly from an index.xml file."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "React is just a UI library, not a full framework. Features like routing and HTTP requests must be handled by other tools in the ecosystem."
+  },
+  {
+    "id": "re-q041",
+    "question": "What is the primary difference between class components and functional components?",
+    "answer": "Class components are ES6 classes that historically managed state and lifecycles, while functional components are simpler JavaScript functions that now use Hooks for state.",
+    "options": [
+      "Class components execute faster because they skip the virtual DOM.",
+      "Class components are ES6 classes that historically managed state and lifecycles, while functional components are simpler JavaScript functions that now use Hooks for state.",
+      "Functional components cannot accept props, whereas class components can.",
+      "There is absolutely no syntax difference; they are just different naming conventions."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Before Hooks (React 16.8), functional components were strictly 'dumb' or stateless. Now, functional components are the standard way to write React code."
+  },
+  {
+    "id": "re-q042",
+    "question": "What is the equivalent of componentDidMount in a functional component using hooks?",
+    "answer": "Using the useEffect hook with an empty dependency array [].",
+    "options": [
+      "Using the useState hook with an initial boolean value of true.",
+      "Using the useMemo hook passing no arguments.",
+      "Using the useEffect hook with an empty dependency array [].",
+      "Using the useCallback hook mapping to window.onload."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Providing an empty array means the effect doesn't depend on any values from props or state, so it never needs to re-run after the initial render."
+  },
+  {
+    "id": "re-q043",
+    "question": "In React, what is a fragment?",
+    "answer": "A common pattern (often written as <></>) that lets you group a list of children without adding extra DOM nodes like a wrapping <div>.",
+    "options": [
+      "A corrupted piece of virtual DOM that failed to render.",
+      "A common pattern (often written as <></>) that lets you group a list of children without adding extra DOM nodes like a wrapping <div>.",
+      "A partial component loaded asynchronously from an external API.",
+      "A specific chunk of memory allocated for handling heavy prop drilling."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Because a React component can only return one single root element, Fragments solve the issue of needing a wrapper element without cluttering the Real DOM."
+  },
+  {
+    "id": "re-q044",
+    "question": "What are React Mixins?",
+    "answer": "An older, deprecated way to reuse component logic in class components, largely replaced by Higher-Order Components and Hooks.",
+    "options": [
+      "A modern standard feature in React 18 for CSS blending.",
+      "An older, deprecated way to reuse component logic in class components, largely replaced by Higher-Order Components and Hooks.",
+      "A specific set of webpack plugins used to compile JSX.",
+      "A Redux specific action type used for asynchronous data calls."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Mixins introduced implicit dependencies, name clashes, and complexity. They are officially considered an anti-pattern in modern React."
+  },
+  {
+    "id": "re-q045",
+    "question": "Why is it important to use a 'key' prop when rendering lists of elements?",
+    "answer": "Keys help React identify which items have changed, been added, or removed, which ensures the list reconciles and re-renders efficiently.",
+    "options": [
+      "Keys allow components to securely encrypt their text content on the fly.",
+      "Keys prevent users from highlighting text within the rendered list.",
+      "Keys help React identify which items have changed, been added, or removed, which ensures the list reconciles and re-renders efficiently.",
+      "Keys are required by Babel to translate the map() function properly."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "If keys are not uniquely and consistently assigned (like using the array index instead of a unique ID), React may incorrectly mutate elements during reordering, causing bugs."
+  },
+  {
+    "id": "re-q046",
+    "question": "What does 'unmounting' mean in the React component lifecycle?",
+    "answer": "It is the phase when a component is being completely removed from the DOM.",
+    "options": [
+      "It is the phase when a component is initially attached to the DOM.",
+      "It is the phase when a component is actively receiving new props from its parent.",
+      "It is the phase when a component is being completely removed from the DOM.",
+      "It is the phase where static CSS files are stripped away from the element."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unmounting triggers cleanup code, such as clearing timers, closing websockets, or firing `componentWillUnmount` / the `useEffect` cleanup return function."
+  },
+  {
+    "id": "re-q047",
+    "question": "What is the purpose of 'shouldComponentUpdate' in class components?",
+    "answer": "It allows a developer to instruct React whether a component's output is affected by the current change in state or props, serving as a performance optimization.",
+    "options": [
+      "It acts as a forceful command to guarantee the component renders immediately.",
+      "It allows a developer to instruct React whether a component's output is affected by the current change in state or props, serving as a performance optimization.",
+      "It connects the component directly to a Redux store mapping dispatch to props.",
+      "It handles unhandled exceptions thrown during the render cycle."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "If it returns `false`, React skips the entire rendering process for that component and all its children for that cycle."
+  },
+  {
+    "id": "re-q048",
+    "question": "What happens if you provide an empty dependency array [] to useEffect?",
+    "answer": "The effect will only run once after the initial render, acting similarly to componentDidMount.",
+    "options": [
+      "The effect will run continuously in an infinite loop.",
+      "The effect will execute on every single state or prop change.",
+      "The effect will only run once after the initial render, acting similarly to componentDidMount.",
+      "The effect will be completely disabled and never execute."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The array tells React what variables to 'watch'. If the array is empty, React has nothing to watch, so it never fires the effect again."
+  },
+  {
+    "id": "re-q049",
+    "question": "What is the difference between useReducer and useState?",
+    "answer": "useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends heavily on the previous one.",
+    "options": [
+      "useState requires Redux, whereas useReducer functions independently.",
+      "useReducer executes on the server side, whereas useState executes on the client.",
+      "useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends heavily on the previous one.",
+      "There is no difference; they are exact aliases."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "useReducer uses an action-based Redux-like pattern, making it much easier to write predictable tests for complex state transformations."
+  },
+  {
+    "id": "re-q050",
+    "question": "What is Server-Side Rendering (SSR) in the context of React?",
+    "answer": "The process of rendering React components to initial HTML on the server, sending a fully formed HTML page to the client for better SEO and performance.",
+    "options": [
+      "The process of rendering React components to initial HTML on the server, sending a fully formed HTML page to the client for better SEO and performance.",
+      "The process of strictly managing SQL databases using React Hooks.",
+      "A pattern where the browser downloads an empty HTML file and renders UI solely using client-side JavaScript.",
+      "A security mechanism to protect APIs behind server-side firewalls."
+    ],
+    "category": "React",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Frameworks like Next.js utilize SSR heavily so search engine crawlers can read the fully populated DOM immediately without waiting for JavaScript execution."
+  },
+  {
+    "id": "re-q051",
+    "question": "True or False: React is a back-end framework for building scalable REST APIs.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. React is a front-end JavaScript library developed by Facebook specifically for building user interfaces."
+  },
+  {
+    "id": "re-q052",
+    "question": "True or False: The Virtual DOM updates much faster because it only updates the changed parts, whereas the Real DOM updates the entire tree.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. React's reconciliation engine compares the Virtual DOM to the Real DOM and applies only the exact needed patches."
+  },
+  {
+    "id": "re-q053",
+    "question": "True or False: JSX is an alternative to JSON used primarily for server-to-client data transmission.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. JSX is a syntax extension to JavaScript that allows developers to write HTML-like markup natively within React files."
+  },
+  {
+    "id": "re-q054",
+    "question": "True or False: Web browsers cannot read JSX directly, so it must be compiled by a tool like Babel.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Browsers only understand valid ECMA standard JavaScript, so JSX is transpiled into `React.createElement` functions."
+  },
+  {
+    "id": "re-q055",
+    "question": "True or False: The Virtual DOM is a heavy desktop application used to mock browser environments.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The Virtual DOM is simply a lightweight JavaScript object that perfectly maps to the visual representation of the Real DOM."
+  },
+  {
+    "id": "re-q056",
+    "question": "True or False: An Element describes what you want to see on the screen, while a Component is a function or class that optionally accepts inputs and returns a React element.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Components act as factories that yield Elements, which are the fundamental building blocks of React."
+  },
+  {
+    "id": "re-q057",
+    "question": "True or False: Pure Components in React execute completely synchronously blocking the main thread.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Pure Components are simply components that optimize rendering by performing a shallow comparison of props and state before triggering an update."
+  },
+  {
+    "id": "re-q058",
+    "question": "True or False: In React, state is an object that holds information that may change over the lifetime of the component, triggering a re-render when updated.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Managing this internal state correctly is what allows React components to be dynamically interactive."
+  },
+  {
+    "id": "re-q059",
+    "question": "True or False: Props in React are mutable variables used to manage internal component logic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Props are read-only inputs passed from a parent component down to a child. State is what is used for mutable internal component logic."
+  },
+  {
+    "id": "re-q060",
+    "question": "True or False: Props are passed to the component like function parameters, whereas state is managed internally within the component like variables.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This cleanly divides external configuration (props) from internal tracking (state)."
+  },
+  {
+    "id": "re-q061",
+    "question": "True or False: You should update React state directly (e.g., this.state.msg = 'Hello') because it physically locks the variables in browser memory.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. You should never update state directly. React won't recognize the direct mutation, meaning the component will fail to re-render. You must use setState()."
+  },
+  {
+    "id": "re-q062",
+    "question": "True or False: The purpose of passing a callback function as an argument to setState() is that it is invoked exactly when setState has finished and the component is completely re-rendered.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Because setState() acts asynchronously for performance reasons, the callback guarantees you execute code upon the updated state."
+  },
+  {
+    "id": "re-q063",
+    "question": "True or False: React events use lowercase, and you can return false to prevent default behavior.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. React events use camelCase, and returning false does not prevent default behavior; you must explicitly call preventDefault()."
+  },
+  {
+    "id": "re-q064",
+    "question": "True or False: Synthetic Events in React are cross-browser wrappers around the browser's native event to ensure identical behavior across different browsers.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. They abstract away the inconsistencies found in how different browsers handle DOM events natively."
+  },
+  {
+    "id": "re-q065",
+    "question": "True or False: The 'key' prop is a secure password parameter to fetch protected API data in lists.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The 'key' prop is a special string attribute used by React internally to identify which items in a list have changed, been added, or removed."
+  },
+  {
+    "id": "re-q066",
+    "question": "True or False: Refs in React provide a way to directly access DOM nodes or React elements created in the render method without using state.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. While React generally operates declaratively via state, Refs allow imperative access to the underlying DOM node."
+  },
+  {
+    "id": "re-q067",
+    "question": "True or False: Forwarding Refs (forwardRef) is a technique to bypass the Virtual DOM and render straight to the Real DOM.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Forwarding Refs is a technique used to automatically pass a ref object through a parent component down to one of its children."
+  },
+  {
+    "id": "re-q068",
+    "question": "True or False: React Fiber is the core reconciliation engine in React 16+, designed to enable incremental rendering of the Virtual DOM.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It completely rewrote the internal rendering mechanics of React to allow pausing and prioritizing rendering work."
+  },
+  {
+    "id": "re-q069",
+    "question": "True or False: A Controlled Component is completely locked from user interaction.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A Controlled Component is an input form element whose value is strictly controlled and driven by the component's React state."
+  },
+  {
+    "id": "re-q070",
+    "question": "True or False: An Uncontrolled Component is a component where form data is handled by the DOM itself using refs rather than being strictly managed by React state.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Uncontrolled components rely on DOM nodes to maintain their own state values implicitly."
+  },
+  {
+    "id": "re-q071",
+    "question": "True or False: Lifting State Up means moving state variables to a centralized database server for safekeeping.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Lifting State Up means moving a piece of state up the component tree to the closest common parent of the components that need to share it."
+  },
+  {
+    "id": "re-q072",
+    "question": "True or False: Higher-Order Components (HOC) are an advanced technique for reusing component logic where a function takes a component and returns a new component.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. They are an architectural pattern derived from JavaScript's functional nature, wrapping a component with extra capabilities."
+  },
+  {
+    "id": "re-q073",
+    "question": "True or False: The Context API is a routing tool to map URLs to specific screen renders.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The Context API provides a way to pass data deeply through the component tree without manually drilling props."
+  },
+  {
+    "id": "re-q074",
+    "question": "True or False: React Hooks are a feature introduced in React 16.8 that lets you use state and other React lifecycle features without writing a class.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Hooks eliminated the necessity for classes, making functional components the primary building blocks."
+  },
+  {
+    "id": "re-q075",
+    "question": "True or False: A strict Rule of Hooks is that they must only be called inside loops, conditions, or nested functions.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The primary rule is that Hooks must NOT be called inside loops, conditions, or nested functions. They must be called unconditionally at the top level."
+  },
+  {
+    "id": "re-q076",
+    "question": "True or False: The useState hook allows developers to declare state variables in functional components.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It provides a stateful value and a dispatch function to update it natively within a function block."
+  },
+  {
+    "id": "re-q077",
+    "question": "True or False: The useEffect hook calculates styling transitions and animations synchronously.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The useEffect hook allows you to perform side effects (data fetching, DOM updates) asynchronously after the component renders."
+  },
+  {
+    "id": "re-q078",
+    "question": "True or False: The useRef hook returns a mutable ref object whose '.current' property persists across re-renders without triggering a re-render itself.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Mutating a ref is a side effect that React does not track for visual updates, making it perfect for holding static DOM references."
+  },
+  {
+    "id": "re-q079",
+    "question": "True or False: useMemo returns a memoized callback function, whereas useCallback returns a memoized value from a calculation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It is exactly the reverse. useMemo returns the memoized result of a calculation, whereas useCallback returns the memoized callback function itself."
+  },
+  {
+    "id": "re-q080",
+    "question": "True or False: React Router is a standard library for routing in React, keeping the user interface perfectly in sync with the browser URL.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It is the most popular third-party tool for managing navigation in a single-page React application."
+  },
+  {
+    "id": "re-q081",
+    "question": "True or False: React.lazy() forces a component to skip the reconciliation process.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. React.lazy() allows you to render dynamic imports as regular components, enabling bundle code-splitting."
+  },
+  {
+    "id": "re-q082",
+    "question": "True or False: The Suspense component allows you to specify a fallback indicator (like a loading spinner) while child components further down the tree are waiting to render.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It provides a seamless way to handle asynchronous loading without crashing the UI."
+  },
+  {
+    "id": "re-q083",
+    "question": "True or False: Error Boundaries in React are strict network protocols that prevent API data breaches.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Error Boundaries are specialized class components that catch JavaScript errors anywhere in their child tree and display a fallback UI."
+  },
+  {
+    "id": "re-q084",
+    "question": "True or False: Strict Mode is a wrapper tool that highlights potential problems in an application by activating additional checks and warnings in development.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It intentionally double-invokes certain lifecycles in dev mode to expose hidden side effects."
+  },
+  {
+    "id": "re-q085",
+    "question": "True or False: ReactDOM.createPortal opens an internal hidden iframe to execute complex scripts.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. ReactDOM.createPortal provides a way to render a child element into a totally different DOM node structurally outside the parent component's hierarchy."
+  },
+  {
+    "id": "re-q086",
+    "question": "True or False: A Custom Hook is a normal JavaScript function whose name starts with 'use' and that may call other core Hooks, allowing logic extraction into reusable functions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. They are the standard method for sharing stateful logic across multiple functional components."
+  },
+  {
+    "id": "re-q087",
+    "question": "True or False: You can safely use React Hooks inside a class component if they are wrapped inside a componentDidMount lifecycle.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Hooks are fundamentally incompatible with class components and can only be called within functional components or other custom hooks."
+  },
+  {
+    "id": "re-q088",
+    "question": "True or False: React.memo() is a higher-order component that prevents functional components from re-rendering if their received props have not changed.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It optimizes renders specifically for pure functional components."
+  },
+  {
+    "id": "re-q089",
+    "question": "True or False: Prop Drilling is a critical security flaw where props leak into the browser's console.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Prop Drilling simply refers to the tedious architectural process of passing data manually through many layers of intermediate components."
+  },
+  {
+    "id": "re-q090",
+    "question": "True or False: React itself does not come with built-in routing; it relies on third-party libraries or custom history API implementations to handle URL navigation.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. React focuses purely on rendering the View layer of an application, leaving routing up to libraries like React Router."
+  },
+  {
+    "id": "re-q091",
+    "question": "True or False: Class components execute faster because they skip the virtual DOM entirely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Both Class and Functional components utilize the Virtual DOM. In modern React, Functional components tend to have slightly less overhead."
+  },
+  {
+    "id": "re-q092",
+    "question": "True or False: The equivalent of componentDidMount in a functional component using hooks is the useEffect hook with an empty dependency array [].",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. An empty array instructs the effect to fire solely after the component's initial mount."
+  },
+  {
+    "id": "re-q093",
+    "question": "True or False: In React, a fragment is a corrupted piece of virtual DOM that failed to render.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Fragment is a specific React tool (<React.Fragment> or <></>) that wraps multiple children without adding a redundant DOM node."
+  },
+  {
+    "id": "re-q094",
+    "question": "True or False: React Mixins are an older, deprecated way to reuse component logic in class components, largely replaced by Higher-Order Components and Hooks.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Mixins caused implicit dependencies and naming collisions, resulting in their removal from modern React."
+  },
+  {
+    "id": "re-q095",
+    "question": "True or False: Keys are important because they allow components to securely encrypt their text content on the fly.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Keys are primarily used by React's reconciliation engine to reliably map changes, additions, and removals in lists."
+  },
+  {
+    "id": "re-q096",
+    "question": "True or False: Unmounting is the phase in the React component lifecycle when a component is being completely removed from the DOM.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. During this phase, it is crucial to release memory and remove active event listeners."
+  },
+  {
+    "id": "re-q097",
+    "question": "True or False: The purpose of 'shouldComponentUpdate' is to act as a forceful command to guarantee the component renders immediately.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It does the opposite: it gives you manual control to *cancel* a re-render to optimize performance if state changes don't affect output."
+  },
+  {
+    "id": "re-q098",
+    "question": "True or False: If you provide an empty dependency array [] to useEffect, the effect will only run once after the initial render.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Because no dependencies are watched, it will never react to subsequent prop or state changes."
+  },
+  {
+    "id": "re-q099",
+    "question": "True or False: useReducer executes exclusively on the server side, whereas useState executes exclusively on the client.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Both execute locally on the component. useReducer is simply an alternative to useState designed for complex state logic."
+  },
+  {
+    "id": "re-q100",
+    "question": "True or False: Server-Side Rendering (SSR) in React is the process of generating React components into initial HTML on the server, sending a fully formed HTML page to the client.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "React",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This allows browsers and SEO crawlers to see content immediately before any JavaScript downloads or runs."
+  },
+  {
+    "id": "re-q101",
+    "question": "React is a front-end JavaScript library developed by ______ for building user interfaces.",
+    "answer": "Facebook",
+    "options": ["Google", "Facebook", "Microsoft", "Twitter"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "React was developed internally at Facebook and released as open source in 2013."
+  },
+  {
+    "id": "re-q102",
+    "question": "The ______ updates much faster because it only updates the changed parts, whereas the Real DOM updates the entire tree.",
+    "answer": "Virtual DOM",
+    "options": ["Shadow DOM", "Server DOM", "Virtual DOM", "Document Tree"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Virtual DOM abstracts the slow operation of manipulating the actual browser DOM by batching and diffing changes."
+  },
+  {
+    "id": "re-q103",
+    "question": "JSX is a syntax extension to JavaScript that allows developers to write ______-like code within React files.",
+    "answer": "HTML",
+    "options": ["XML", "SQL", "HTML", "JSON"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It visually resembles HTML but is converted purely into JavaScript functions underneath."
+  },
+  {
+    "id": "re-q104",
+    "question": "Web browsers cannot read JSX directly, so it must be compiled by a tool like ______.",
+    "answer": "Babel",
+    "options": ["Babel", "Webpack", "Redux", "NPM"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Babel acts as a JavaScript compiler that turns ES6+ and JSX syntax into backwards-compatible JavaScript."
+  },
+  {
+    "id": "re-q105",
+    "question": "The Virtual DOM is a lightweight JavaScript object representation of the actual ______.",
+    "answer": "DOM",
+    "options": ["Server", "API", "DOM", "Database"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "It holds the structure, properties, and values of the UI in an in-memory object."
+  },
+  {
+    "id": "re-q106",
+    "question": "An Element describes what you want to see on the screen, while a ______ is a function or class that optionally accepts inputs and returns a React element.",
+    "answer": "Component",
+    "options": ["Module", "Template", "Component", "Hook"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Components are the reusable building blocks that encapsulate element generation."
+  },
+  {
+    "id": "re-q107",
+    "question": "Pure Components in React do not re-render if their state and props have not changed, handled via a ______ comparison.",
+    "answer": "shallow",
+    "options": ["deep", "strict", "shallow", "nested"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "A shallow comparison checks for reference equality for objects and value equality for primitives, saving heavy computation time."
+  },
+  {
+    "id": "re-q108",
+    "question": "In React, ______ is an object that holds information that may change over the lifetime of the component, triggering a re-render when updated.",
+    "answer": "state",
+    "options": ["props", "state", "context", "store"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "State is the heart of interactive components, containing values like input strings, active toggle states, or fetched data."
+  },
+  {
+    "id": "re-q109",
+    "question": "In React, 'props' are ______ inputs passed from a parent component down to a child component.",
+    "answer": "read-only",
+    "options": ["dynamic", "mutable", "read-only", "global"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Child components cannot and should not alter their props, preserving predictable top-down data flow."
+  },
+  {
+    "id": "re-q110",
+    "question": "______ are passed to the component like function parameters, whereas state is managed internally within the component like variables.",
+    "answer": "Props",
+    "options": ["Methods", "Props", "Keys", "Refs"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Props configure the external behavior provided by the parent, while state tracks internal lifecycle data."
+  },
+  {
+    "id": "re-q111",
+    "question": "Mutating state directly will not trigger the component to re-render; you must use the ______ method.",
+    "answer": "setState()",
+    "options": ["forceUpdate()", "setState()", "updateState()", "render()"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "In class components, setState alerts React that the data has changed and a UI redraw is required."
+  },
+  {
+    "id": "re-q112",
+    "question": "The callback function passed to setState() is invoked exactly when the state update has finished and the component is completely ______.",
+    "answer": "re-rendered",
+    "options": ["compiled", "unmounted", "re-rendered", "destroyed"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This guarantees that any DOM measurements or actions relying on the new state reflect the true updated values."
+  },
+  {
+    "id": "re-q113",
+    "question": "React events use ______ instead of lowercase, and you must call preventDefault() explicitly rather than returning false.",
+    "answer": "camelCase",
+    "options": ["kebab-case", "snake_case", "PascalCase", "camelCase"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "For example, HTML uses `onclick`, while React uses `onClick`."
+  },
+  {
+    "id": "re-q114",
+    "question": "______ Events in React are cross-browser wrappers around the browser's native event to ensure identical behavior across different browsers.",
+    "answer": "Synthetic",
+    "options": ["Virtual", "Proxy", "Synthetic", "Mock"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "React pools and reuses these synthetic events behind the scenes to optimize performance and browser conformity."
+  },
+  {
+    "id": "re-q115",
+    "question": "The '______' prop is a special string attribute needed when creating lists of elements, helping React identify which items have changed.",
+    "answer": "key",
+    "options": ["id", "ref", "key", "hash"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Keys provide identity to map iterations, allowing React to quickly reconcile additions and deletions."
+  },
+  {
+    "id": "re-q116",
+    "question": "______ in React provide a way to directly access DOM nodes or React elements created in the render method without using state.",
+    "answer": "Refs",
+    "options": ["Props", "Keys", "Hooks", "Refs"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Refs are useful for triggering imperative animations, controlling text selection, or integrating third-party DOM libraries."
+  },
+  {
+    "id": "re-q117",
+    "question": "______ Refs (forwardRef) is a technique for automatically passing a ref through a component to one of its children.",
+    "answer": "Forwarding",
+    "options": ["Passing", "Forwarding", "Lifting", "Binding"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This is crucial when developing reusable component libraries where you need to attach a ref directly to an underlying `<button>` or `<input>`."
+  },
+  {
+    "id": "re-q118",
+    "question": "React ______ is the core reconciliation engine in React 16+, designed to enable incremental rendering of the Virtual DOM.",
+    "answer": "Fiber",
+    "options": ["Engine", "Router", "Fiber", "Core"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Fiber breaks rendering work into chunks, allowing React to yield to high-priority events like user interactions."
+  },
+  {
+    "id": "re-q119",
+    "question": "A ______ Component renders form elements and controls their values by keeping the form data securely in the component's state.",
+    "answer": "Controlled",
+    "options": ["Static", "Controlled", "Dumb", "Pure"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The value of the form field is always bound to `this.state.value` or the `useState` value."
+  },
+  {
+    "id": "re-q120",
+    "question": "An ______ Component handles form data via the DOM itself using refs rather than strictly managing it by React state.",
+    "answer": "Uncontrolled",
+    "options": ["Uncontrolled", "Abstract", "Async", "Detached"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This pattern is useful for quick, simple forms or when integrating with non-React codebases."
+  },
+  {
+    "id": "re-q121",
+    "question": "______ State Up means moving state to the closest common ancestor of components that need it so they can share that state.",
+    "answer": "Lifting",
+    "options": ["Pushing", "Lifting", "Binding", "Hoisting"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "This solves data-sharing problems between sibling components by centralizing their mutual state."
+  },
+  {
+    "id": "re-q122",
+    "question": "A ______-Order Component is an advanced technique for reusing component logic where a function takes a component and returns a new component.",
+    "answer": "Higher",
+    "options": ["Top", "First", "Higher", "Super"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "HOCs take an existing functional or class component and inject additional props or behavioral boundaries."
+  },
+  {
+    "id": "re-q123",
+    "question": "The ______ API provides a way to pass data through the component tree without having to pass props down manually at every level.",
+    "answer": "Context",
+    "options": ["State", "Redux", "Context", "Provider"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Context prevents prop drilling for variables required extensively across the entire app."
+  },
+  {
+    "id": "re-q124",
+    "question": "React ______ are a feature introduced in React 16.8 that lets you use state and other lifecycle features without writing a class.",
+    "answer": "Hooks",
+    "options": ["Mixins", "Hooks", "Helpers", "Bindings"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Hooks modernized React architecture by bringing massive functionality to clean functional scopes."
+  },
+  {
+    "id": "re-q125",
+    "question": "A strict Rule of Hooks is that they must only be called at the ______ level of a React function component or a custom Hook.",
+    "answer": "top",
+    "options": ["bottom", "top", "global", "nested"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Calling hooks outside the top level (e.g., inside an if-statement) confuses React's internal index tracking for that hook's memory."
+  },
+  {
+    "id": "re-q126",
+    "question": "The ______ hook allows developers to declare state variables in functional components.",
+    "answer": "useState",
+    "options": ["useContext", "useEffect", "useReducer", "useState"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It replaces `this.state` and `this.setState` entirely in modern React code."
+  },
+  {
+    "id": "re-q127",
+    "question": "The ______ hook lets you perform side effects (like data fetching or subscriptions) in functional components.",
+    "answer": "useEffect",
+    "options": ["useLayout", "useEffect", "useFetch", "useMount"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It unifies mounting, updating, and unmounting logical phases."
+  },
+  {
+    "id": "re-q128",
+    "question": "The ______ hook returns a mutable ref object whose '.current' property persists across re-renders without triggering a re-render itself.",
+    "answer": "useRef",
+    "options": ["useMemo", "useRef", "useCallback", "useValue"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Updating `myRef.current` happens synchronously and silently without disturbing the user interface."
+  },
+  {
+    "id": "re-q129",
+    "question": "useMemo returns a memoized value from a calculation, whereas ______ returns a memoized callback function itself.",
+    "answer": "useCallback",
+    "options": ["useMemo", "useCallback", "useEffect", "useReducer"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "useCallback is essential when passing functions down to highly optimized child components."
+  },
+  {
+    "id": "re-q130",
+    "question": "React ______ is a standard library for keeping the user interface perfectly in sync with the browser URL.",
+    "answer": "Router",
+    "options": ["Browser", "Router", "DOM", "Navigator"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It intercepts browser navigation events and dynamically swaps active components."
+  },
+  {
+    "id": "re-q131",
+    "question": "React.lazy() allows developers to render a dynamic import as a regular component, essentially enabling ______-splitting.",
+    "answer": "code",
+    "options": ["state", "file", "code", "route"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Code-splitting drastically shrinks javascript bundles by deferring downloads until users request them."
+  },
+  {
+    "id": "re-q132",
+    "question": "The ______ component allows you to specify a fallback indicator (like a loading spinner) while child components are waiting to render.",
+    "answer": "Suspense",
+    "options": ["Loader", "ErrorBoundary", "Suspense", "Fragment"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Suspense bridges the visual gap between asynchronous code-split assets arriving over the network."
+  },
+  {
+    "id": "re-q133",
+    "question": "Error ______ are specialized components that catch JavaScript errors anywhere in their child component tree and display a fallback UI.",
+    "answer": "Boundaries",
+    "options": ["Handlers", "Boundaries", "Catchers", "Wrappers"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "They prevent a small localized bug from blowing up the entire Single Page Application."
+  },
+  {
+    "id": "re-q134",
+    "question": "______ Mode is a wrapper tool that highlights potential problems in an application by activating additional checks and warnings in development.",
+    "answer": "Strict",
+    "options": ["Safe", "Debug", "Strict", "Dev"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Wrapping `<React.StrictMode>` around an app flags legacy methods and dangerous practices."
+  },
+  {
+    "id": "re-q135",
+    "question": "ReactDOM.createPortal renders children into a completely separate DOM node that exists outside the direct DOM ______ of the parent component.",
+    "answer": "hierarchy",
+    "options": ["styling", "hierarchy", "memory", "state"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This solves `z-index` and overflow clipping issues beautifully."
+  },
+  {
+    "id": "re-q136",
+    "question": "A ______ Hook is a normal JavaScript function whose name starts with 'use' and that may call other core Hooks.",
+    "answer": "Custom",
+    "options": ["State", "Custom", "Primary", "Pure"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Custom Hooks allow for powerful abstraction of business logic."
+  },
+  {
+    "id": "re-q137",
+    "question": "Hooks can only be used inside ______ components or within other custom Hooks.",
+    "answer": "functional",
+    "options": ["class", "functional", "abstract", "pure"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Hooks lean heavily on lexical closures which classes inherently bypass."
+  },
+  {
+    "id": "re-q138",
+    "question": "React.memo() is a higher-order component that prevents functional components from re-rendering if their received ______ have not changed.",
+    "answer": "props",
+    "options": ["methods", "variables", "props", "states"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "It essentially caches the visual output for unchanging parent inputs."
+  },
+  {
+    "id": "re-q139",
+    "question": "Prop ______ is the process of passing data from a higher-level component all the way down to a deeply nested child through multiple intermediary components.",
+    "answer": "Drilling",
+    "options": ["Passing", "Piping", "Drilling", "Dropping"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It creates tightly bound 'middleman' components that unnecessarily know about distant data structures."
+  },
+  {
+    "id": "re-q140",
+    "question": "React itself does not come with built-in routing; it relies on third-party libraries like React ______ to handle URL navigation.",
+    "answer": "Router",
+    "options": ["Link", "Router", "Nav", "History"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "This separation of concerns keeps React incredibly lean as a core library."
+  },
+  {
+    "id": "re-q141",
+    "question": "Class components are ES6 classes that historically managed state, while ______ components are simpler JavaScript functions that now use Hooks for state.",
+    "answer": "functional",
+    "options": ["pure", "abstract", "functional", "stateless"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Functional components have entirely overtaken classes as the industry standard."
+  },
+  {
+    "id": "re-q142",
+    "question": "The equivalent of componentDidMount in a functional component using hooks is the useEffect hook with an empty ______ array [].",
+    "answer": "dependency",
+    "options": ["state", "variable", "dependency", "prop"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The dependency array dictates when effects recalculate."
+  },
+  {
+    "id": "re-q143",
+    "question": "A ______ is a common pattern (often written as <></>) that lets you group a list of children without adding extra DOM nodes like a wrapping <div>.",
+    "answer": "fragment",
+    "options": ["segment", "group", "fragment", "node"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Fragments keep the DOM clean from structurally useless layout divs."
+  },
+  {
+    "id": "re-q144",
+    "question": "React ______ are an older, deprecated way to reuse component logic in class components, largely replaced by Higher-Order Components and Hooks.",
+    "answer": "Mixins",
+    "options": ["Imports", "Helpers", "Mixins", "Bindings"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Mixins merged methods implicitly, making inheritance chains extremely hard to debug."
+  },
+  {
+    "id": "re-q145",
+    "question": "Keys help React identify which items have changed, been added, or removed, which ensures the list reconciles and ______ efficiently.",
+    "answer": "re-renders",
+    "options": ["mounts", "re-renders", "deletes", "sorts"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Optimal list re-rendering is one of React's greatest performance advantages over direct DOM mapping."
+  },
+  {
+    "id": "re-q146",
+    "question": "______ is the phase in the React component lifecycle when a component is being completely removed from the DOM.",
+    "answer": "Unmounting",
+    "options": ["Detaching", "Unmounting", "Destroying", "Disposing"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Unmounting is the exact reverse of the Mounting phase."
+  },
+  {
+    "id": "re-q147",
+    "question": "The purpose of 'shouldComponentUpdate' is to instruct React whether a component's output is affected by the current change in state or props, serving as a performance ______.",
+    "answer": "optimization",
+    "options": ["bottleneck", "optimization", "requirement", "test"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "By returning false, it short-circuits pointless calculation trees."
+  },
+  {
+    "id": "re-q148",
+    "question": "If you provide an empty dependency array [] to useEffect, the effect will only run ______ after the initial render.",
+    "answer": "once",
+    "options": ["twice", "once", "never", "infinitely"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Since the dependencies never shift from the empty state, the effect triggers exclusively on initial paint."
+  },
+  {
+    "id": "re-q149",
+    "question": "______ is usually preferable to useState when you have complex state logic that involves multiple sub-values.",
+    "answer": "useReducer",
+    "options": ["useEffect", "useMemo", "useContext", "useReducer"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Patterned exactly like Redux stores, useReducer centralizes conditional switch logic securely."
+  },
+  {
+    "id": "re-q150",
+    "question": "Server-Side ______ (SSR) is the process of generating React components into initial HTML on the server, sending a fully formed HTML page to the client.",
+    "answer": "Rendering",
+    "options": ["Routing", "Rendering", "Caching", "Processing"],
+    "category": "React",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "SSR bridges the gap between fast backend HTML delivery and rich client-side interactivity."
+  }
+]

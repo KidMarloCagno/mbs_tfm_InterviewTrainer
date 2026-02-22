@@ -1,0 +1,2122 @@
+[
+  {
+    "id": "fe-q001",
+    "question": "What is the purpose of the DOCTYPE declaration in HTML?",
+    "answer": "It tells the web browser what version of HTML the page is written in, ensuring it renders the page in standards mode.",
+    "options": [
+      "It imports external CSS stylesheets into the HTML document.",
+      "It tells the web browser what version of HTML the page is written in, ensuring it renders the page in standards mode.",
+      "It securely encrypts the HTML source code from being inspected.",
+      "It acts as a placeholder for JavaScript imports."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The DOCTYPE declaration ensures that the browser uses standard rendering rules instead of falling back to legacy 'quirks mode'."
+  },
+  {
+    "id": "fe-q002",
+    "question": "What is the difference between Progressive Enhancement and Graceful Degradation?",
+    "answer": "Progressive Enhancement starts with a basic experience and adds features for advanced browsers, while Graceful Degradation builds for modern browsers and provides fallbacks for older ones.",
+    "options": [
+      "Progressive Enhancement is for CSS, while Graceful Degradation is exclusively for JavaScript.",
+      "Progressive Enhancement builds for modern browsers and provides fallbacks for older ones, while Graceful Degradation starts with a basic experience and adds features.",
+      "Progressive Enhancement starts with a basic experience and adds features for advanced browsers, while Graceful Degradation builds for modern browsers and provides fallbacks for older ones.",
+      "There is no difference; they are synonymous terms for making websites responsive."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Progressive Enhancement focuses on core content first (bottom-up), whereas Graceful Degradation focuses on the full experience first and patches older environments (top-down)."
+  },
+  {
+    "id": "fe-q003",
+    "question": "What are data- attributes good for in HTML5?",
+    "answer": "They allow you to store extra, custom information on standard HTML elements without requiring non-standard attributes or extra DOM properties.",
+    "options": [
+      "They are used to securely store user passwords in the DOM.",
+      "They automatically style elements based on the data provided.",
+      "They allow you to store extra, custom information on standard HTML elements without requiring non-standard attributes or extra DOM properties.",
+      "They are a deprecated feature replaced by the LocalStorage API."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Custom data attributes (data-*) provide a standard way to embed application-specific data right into HTML elements for JavaScript to use."
+  },
+  {
+    "id": "fe-q004",
+    "question": "What is the difference between the 'async' and 'defer' attributes on a script tag?",
+    "answer": "Both download scripts asynchronously, but 'async' executes the script as soon as it's ready, whereas 'defer' waits until the HTML parsing is completely finished.",
+    "options": [
+      "Both download scripts synchronously, but 'async' blocks HTML parsing.",
+      "Both download scripts asynchronously, but 'async' executes the script as soon as it's ready, whereas 'defer' waits until the HTML parsing is completely finished.",
+      "'defer' executes the script immediately, while 'async' waits for the window.onload event.",
+      "'async' is used for internal scripts, while 'defer' is strictly for external third-party scripts."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "'defer' guarantees execution in the order the scripts appear after parsing, whereas 'async' executes as soon as the download completes, potentially out of order."
+  },
+  {
+    "id": "fe-q005",
+    "question": "What does CORS stand for, and what problem does it solve?",
+    "answer": "Cross-Origin Resource Sharing; it is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.",
+    "options": [
+      "Cascading Object Resource Styles; it manages how CSS is shared across multiple web pages.",
+      "Cross-Origin Resource Sharing; it is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.",
+      "Custom Origin Routing System; it routes API requests through a secure proxy.",
+      "Centralized Online Rendering Server; it improves initial page load times."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "CORS safely bypasses the browser's Same-Origin Policy by using specific HTTP headers to authorize requests to cross-domain APIs."
+  },
+  {
+    "id": "fe-q006",
+    "question": "What is the CSS Box Model?",
+    "answer": "A box that wraps around every HTML element, consisting of margins, borders, padding, and the actual content.",
+    "options": [
+      "A layout algorithm used exclusively for creating 3D CSS transforms.",
+      "A CSS grid system used to align items in columns and rows.",
+      "A box that wraps around every HTML element, consisting of margins, borders, padding, and the actual content.",
+      "A method of structuring CSS files into modular, reusable components."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The box model dictates how the total size of an element is calculated based on its content width/height, padding, borders, and margins."
+  },
+  {
+    "id": "fe-q007",
+    "question": "How does CSS Specificity work?",
+    "answer": "It is a weight applied to a given CSS declaration, determined by the number of each selector type (inline styles, IDs, classes/attributes, elements) in the matching selector.",
+    "options": [
+      "It relies entirely on the 'z-index' property to determine which styles are applied.",
+      "It determines precedence strictly by the order in which rules appear in the stylesheet (last rule wins).",
+      "It is a weight applied to a given CSS declaration, determined by the number of each selector type (inline styles, IDs, classes/attributes, elements) in the matching selector.",
+      "It forces the browser to apply styles based on the file size of the stylesheet."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Specificity resolves conflicts when multiple rules target the same element. IDs beat classes, classes beat elements, and inline styles beat them all."
+  },
+  {
+    "id": "fe-q008",
+    "question": "What is the difference between 'resetting' and 'normalizing' CSS?",
+    "answer": "Resetting removes all built-in browser styling, while normalizing preserves useful defaults and corrects bugs and inconsistencies across different browsers.",
+    "options": [
+      "Resetting preserves useful defaults, while normalizing completely strips all browser styling.",
+      "Resetting is for mobile devices, while normalizing is for desktop browsers.",
+      "Resetting removes all built-in browser styling, while normalizing preserves useful defaults and corrects bugs and inconsistencies across different browsers.",
+      "There is no difference; they are exactly the same technique."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Resetting creates a blank slate by forcing elements to have zero margins/padding, while normalizing provides a consistent, sensible baseline across browsers."
+  },
+  {
+    "id": "fe-q009",
+    "question": "What is the difference between a CSS pseudo-class and a pseudo-element?",
+    "answer": "A pseudo-class targets an element based on its state (e.g., :hover), while a pseudo-element targets a specific part of an element (e.g., ::before).",
+    "options": [
+      "A pseudo-class targets an element based on its state (e.g., :hover), while a pseudo-element targets a specific part of an element (e.g., ::before).",
+      "A pseudo-class is used for animations, while a pseudo-element is used for layout.",
+      "A pseudo-class targets a specific part of an element, while a pseudo-element targets an element based on its state.",
+      "Pseudo-classes require double colons (::), whereas pseudo-elements require a single colon (:)."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Pseudo-classes represent a state (like :active), while pseudo-elements act as if you added a new HTML element (like ::after or ::first-line)."
+  },
+  {
+    "id": "fe-q010",
+    "question": "What is the purpose of 'box-sizing: border-box;' in CSS?",
+    "answer": "It tells the browser to account for any border and padding in the element's specified width and height.",
+    "options": [
+      "It adds a 1px solid black border around all elements for debugging.",
+      "It tells the browser to account for any border and padding in the element's specified width and height.",
+      "It forces the element to clear floats automatically.",
+      "It applies an inset box-shadow to mimic a border without adding width."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "By default, padding and borders increase an element's total width. 'border-box' keeps the element size locked to its declared width, absorbing padding inwards."
+  },
+  {
+    "id": "fe-q011",
+    "question": "What is the difference between 'display: none' and 'visibility: hidden'?",
+    "answer": "'display: none' completely removes the element from the document layout flow, whereas 'visibility: hidden' hides the element but leaves its space intact.",
+    "options": [
+      "'display: none' hides the element but leaves its space intact, whereas 'visibility: hidden' removes it from the flow.",
+      "'display: none' prevents screen readers from reading the element, while 'visibility: hidden' does not.",
+      "'display: none' completely removes the element from the document layout flow, whereas 'visibility: hidden' hides the element but leaves its space intact.",
+      "They behave identically in modern browsers."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Using 'display: none' forces other elements to collapse into its space, while 'visibility: hidden' renders the element completely transparent while preserving its geometry."
+  },
+  {
+    "id": "fe-q012",
+    "question": "What is a Closure in JavaScript?",
+    "answer": "A feature where an inner function has access to the outer (enclosing) function's variables, even after the outer function has returned.",
+    "options": [
+      "A way to completely destroy an object and free up memory.",
+      "A block of code that executes asynchronously.",
+      "A built-in method that prevents a form from submitting.",
+      "A feature where an inner function has access to the outer (enclosing) function's variables, even after the outer function has returned."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Closures allow functions to maintain a memory of the environment in which they were created, making them useful for data privacy and factories."
+  },
+  {
+    "id": "fe-q013",
+    "question": "What is Event Delegation in JavaScript?",
+    "answer": "A technique of attaching a single event listener to a parent element to catch events from its children via event bubbling.",
+    "options": [
+      "A technique of attaching a single event listener to a parent element to catch events from its children via event bubbling.",
+      "The process of passing a callback function as a parameter to another function.",
+      "A method to stop an event from triggering other event listeners on the same element.",
+      "Delegating the execution of an event to a Web Worker to improve main thread performance."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Event delegation reduces memory overhead by registering one listener on a parent instead of hundreds of listeners on dynamic child elements."
+  },
+  {
+    "id": "fe-q014",
+    "question": "How does the 'this' keyword work in JavaScript?",
+    "answer": "Its value is determined by how a function is called; in a method, it refers to the owner object, but in a standard function, it defaults to the global object (or undefined in strict mode).",
+    "options": [
+      "It always refers to the global window object, regardless of context.",
+      "Its value is determined by how a function is called; in a method, it refers to the owner object, but in a standard function, it defaults to the global object (or undefined in strict mode).",
+      "It strictly refers to the DOM element that triggered the current event.",
+      "It refers to the current executing function itself."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Unlike lexically scoped variables, 'this' is dynamically scoped based on the execution context at runtime unless it's an arrow function."
+  },
+  {
+    "id": "fe-q015",
+    "question": "What is the difference between 'call()', 'apply()', and 'bind()'?",
+    "answer": "'call' and 'apply' invoke a function immediately with a specified 'this' context ('call' takes separate arguments, 'apply' takes an array), while 'bind' returns a new function with the 'this' context permanently set.",
+    "options": [
+      "'bind' and 'apply' invoke immediately, while 'call' returns a new function.",
+      "'call' takes an array of arguments, while 'apply' takes separate arguments.",
+      "'call' and 'apply' invoke a function immediately with a specified 'this' context ('call' takes separate arguments, 'apply' takes an array), while 'bind' returns a new function with the 'this' context permanently set.",
+      "There is no functional difference; they are just different syntax for the exact same underlying mechanism."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "All three methods alter the 'this' context, but 'bind' defers execution by creating a new bound function."
+  },
+  {
+    "id": "fe-q016",
+    "question": "What is the difference between 'null' and 'undefined' in JavaScript?",
+    "answer": "'undefined' means a variable has been declared but has not yet been assigned a value, while 'null' is an assignment value representing no object or empty value.",
+    "options": [
+      "'null' is the default value for uninitialized variables, while 'undefined' is explicitly assigned by developers.",
+      "'undefined' means a variable has been declared but has not yet been assigned a value, while 'null' is an assignment value representing no object or empty value.",
+      "'null' evaluates to true in a boolean context, while 'undefined' evaluates to false.",
+      "They are exactly the same and represent the identical concept."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "While both represent an absence of value, 'undefined' is the default state of uninitialized variables, and 'null' is manually set."
+  },
+  {
+    "id": "fe-q017",
+    "question": "What is the difference between 'var', 'let', and 'const'?",
+    "answer": "'var' is function-scoped and hoisted, while 'let' and 'const' are block-scoped. 'const' variables cannot be reassigned after initialization.",
+    "options": [
+      "'var' and 'let' are block-scoped, while 'const' is global-scoped.",
+      "'let' and 'const' are hoisted with an initial value of undefined, while 'var' is trapped in the Temporal Dead Zone.",
+      "'var' is function-scoped and hoisted, while 'let' and 'const' are block-scoped. 'const' variables cannot be reassigned after initialization.",
+      "'const' makes objects completely immutable, whereas 'let' and 'var' do not."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Let and const fix the scoping issues of var and are not accessible before initialization."
+  },
+  {
+    "id": "fe-q018",
+    "question": "How do arrow functions differ from regular functions in JavaScript?",
+    "answer": "Arrow functions do not have their own 'this', 'arguments', or 'super' bindings, but instead inherit them from the enclosing lexical context.",
+    "options": [
+      "Arrow functions do not have their own 'this', 'arguments', or 'super' bindings, but instead inherit them from the enclosing lexical context.",
+      "Arrow functions are hoisted to the top of the scope, whereas regular functions are not.",
+      "Arrow functions must always return a boolean value.",
+      "Arrow functions can be used as constructors with the 'new' keyword."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Because they lack their own 'this' binding, arrow functions are perfect for callbacks where you want to access the parent scope."
+  },
+  {
+    "id": "fe-q019",
+    "question": "What is the JavaScript Event Loop?",
+    "answer": "A mechanism that constantly checks the call stack and the task queue, pushing callbacks from the queue to the stack once the stack is empty.",
+    "options": [
+      "A repetitive loop used to iterate over DOM elements automatically.",
+      "A browser API used to animate elements repeatedly at 60fps.",
+      "A mechanism that constantly checks the call stack and the task queue, pushing callbacks from the queue to the stack once the stack is empty.",
+      "A security feature that prevents infinite loops from crashing the browser."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Event Loop allows single-threaded JavaScript to execute asynchronous code without blocking the main execution thread."
+  },
+  {
+    "id": "fe-q020",
+    "question": "What is a Promise in JavaScript?",
+    "answer": "An object representing the eventual completion or failure of an asynchronous operation and its resulting value.",
+    "options": [
+      "An object representing the eventual completion or failure of an asynchronous operation and its resulting value.",
+      "A synchronous function that promises to return a value immediately.",
+      "A strict contract between a class and an interface.",
+      "A method used to guarantee that a CSS animation finishes smoothly."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Promises wrap asynchronous logic and provide clean, chainable methods (.then, .catch) instead of using heavily nested callbacks."
+  },
+  {
+    "id": "fe-q021",
+    "question": "What are the states of a Promise?",
+    "answer": "Pending, Fulfilled, and Rejected.",
+    "options": [
+      "Waiting, Active, and Finished.",
+      "Start, Progress, and End.",
+      "Pending, Fulfilled, and Rejected.",
+      "Initialized, Resolved, and Caught."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A Promise begins in the Pending state, and transitions into either Fulfilled (success) or Rejected (failure)."
+  },
+  {
+    "id": "fe-q022",
+    "question": "What is the difference between 'map()' and 'forEach()' in JavaScript?",
+    "answer": "'map()' returns a new array containing the results of calling a provided function on every element, whereas 'forEach()' returns undefined and is used for side effects.",
+    "options": [
+      "'map()' mutates the original array, whereas 'forEach()' creates a new array.",
+      "'map()' returns a new array containing the results of calling a provided function on every element, whereas 'forEach()' returns undefined and is used for side effects.",
+      "'forEach()' can be chained with other array methods, whereas 'map()' cannot.",
+      "'map()' stops execution if an error occurs, while 'forEach()' continues."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Since 'map' returns a new array, it can be chained with other methods like .filter(). 'forEach' simply runs the logic and discards the return value."
+  },
+  {
+    "id": "fe-q023",
+    "question": "What is the difference between LocalStorage, SessionStorage, and Cookies?",
+    "answer": "LocalStorage persists permanently, SessionStorage persists until the tab is closed, and Cookies are sent to the server with every HTTP request and have an expiration date.",
+    "options": [
+      "LocalStorage is sent to the server, while SessionStorage and Cookies remain client-side only.",
+      "LocalStorage persists permanently, SessionStorage persists until the tab is closed, and Cookies are sent to the server with every HTTP request and have an expiration date.",
+      "SessionStorage has the largest capacity limit, followed by Cookies, with LocalStorage being the smallest.",
+      "Cookies are accessible via Web Workers, while LocalStorage and SessionStorage are not."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "LocalStorage and SessionStorage offer larger storage (5MB+) strictly on the client, whereas Cookies are small (4KB) and primarily used for server state like authentication."
+  },
+  {
+    "id": "fe-q024",
+    "question": "What is BEM?",
+    "answer": "Block Element Modifier; it is a popular naming convention for classes in HTML and CSS aimed at making code more modular and reusable.",
+    "options": [
+      "Browser Execution Model; the underlying architecture of how browsers parse HTML.",
+      "Block Element Modifier; it is a popular naming convention for classes in HTML and CSS aimed at making code more modular and reusable.",
+      "Binary Event Manager; a JavaScript library for handling complex binary data streams.",
+      "Basic Element Margin; a CSS reset technique used to normalize spacing."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "BEM syntax (e.g., block__element--modifier) keeps CSS flat and scoped, reducing specificity wars and unexpected style bleeding."
+  },
+  {
+    "id": "fe-q025",
+    "question": "What is the Critical Rendering Path?",
+    "answer": "The sequence of steps the browser goes through to convert HTML, CSS, and JavaScript into pixels on the screen.",
+    "options": [
+      "The mandatory route user authentication takes before loading the homepage.",
+      "The sequence of steps the browser goes through to convert HTML, CSS, and JavaScript into pixels on the screen.",
+      "A specific set of Webpack configurations required for production builds.",
+      "The path an event follows during the capturing phase."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Optimizing the CRP (parsing HTML, building DOM/CSSOM, calculating layout, painting) is essential for fast initial page load times."
+  },
+  {
+    "id": "fe-q026",
+    "question": "What is the difference between a Repaint and a Reflow?",
+    "answer": "Reflow occurs when changes affect the layout (geometry) of a page, while repaint occurs when changes affect visibility (like color) but do not affect layout.",
+    "options": [
+      "Repaint is significantly slower and more performance-heavy than a Reflow.",
+      "Reflow occurs when changes affect the layout (geometry) of a page, while repaint occurs when changes affect visibility (like color) but do not affect layout.",
+      "Reflow is triggered by JavaScript, while Repaint is triggered strictly by CSS.",
+      "There is no difference; they are different terms for the exact same rendering process."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Reflows are highly expensive because changing an element's size/position forces the browser to recalculate the layout of surrounding elements."
+  },
+  {
+    "id": "fe-q027",
+    "question": "What does semantic HTML mean?",
+    "answer": "The use of HTML markup to reinforce the semantics, or meaning, of the information in web pages rather than merely to define its presentation.",
+    "options": [
+      "Using strictly <div> and <span> tags for all elements to ensure maximum browser compatibility.",
+      "The use of HTML markup to reinforce the semantics, or meaning, of the information in web pages rather than merely to define its presentation.",
+      "Using custom XML tags instead of standard HTML tags.",
+      "Adding metadata tags to the <head> of the document for SEO purposes only."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Using elements like <article>, <nav>, and <header> improves SEO and aids assistive technologies like screen readers."
+  },
+  {
+    "id": "fe-q028",
+    "question": "What does ARIA stand for, and what is its purpose?",
+    "answer": "Accessible Rich Internet Applications; it is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.",
+    "options": [
+      "Asynchronous Rendering Internet API; it helps render dynamic web pages faster.",
+      "Accessible Rich Internet Applications; it is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.",
+      "Advanced Responsive Image Architecture; it optimizes image loading across different screen sizes.",
+      "Application Routing Interface Algorithm; it dictates how single-page applications handle internal links."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ARIA attributes fill the gap when semantic HTML is insufficient, communicating dynamic state changes and complex widgets to screen readers."
+  },
+  {
+    "id": "fe-q029",
+    "question": "What are Web Components?",
+    "answer": "A suite of different technologies allowing you to create reusable custom elements with their functionality encapsulated away from the rest of your code.",
+    "options": [
+      "Third-party libraries like React, Angular, and Vue.",
+      "Pre-built UI libraries like Bootstrap and Tailwind.",
+      "A suite of different technologies allowing you to create reusable custom elements with their functionality encapsulated away from the rest of your code.",
+      "Plugins installed directly into the web browser."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "They rely on Custom Elements, Shadow DOM, and HTML Templates to create natively reusable, framework-agnostic UI widgets."
+  },
+  {
+    "id": "fe-q030",
+    "question": "What is 'use strict' in JavaScript?",
+    "answer": "A directive that enforces stricter parsing and error handling in JavaScript code, preventing the use of undeclared variables and throwing more exceptions.",
+    "options": [
+      "A directive that forces the browser to run JavaScript on a background thread.",
+      "A command that strictly enforces type checking for variables.",
+      "A directive that enforces stricter parsing and error handling in JavaScript code, preventing the use of undeclared variables and throwing more exceptions.",
+      "A module that automatically formats your code to adhere to PEP8 standards."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "'use strict' helps catch silent errors and prevents unsafe actions like assigning variables to the global scope accidentally."
+  },
+  {
+    "id": "fe-q031",
+    "question": "What is a Higher-Order Function?",
+    "answer": "A function that takes another function as an argument, returns a function as a result, or both.",
+    "options": [
+      "A function that executes before the global object is loaded.",
+      "A function that takes another function as an argument, returns a function as a result, or both.",
+      "A function that is mathematically pure and has no side effects.",
+      "A function specifically designed to run on a Web Worker."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This relies on JavaScript treating functions as First-Class citizens. Common examples are `map`, `filter`, and `reduce`."
+  },
+  {
+    "id": "fe-q032",
+    "question": "What is Destructuring Assignment in ES6?",
+    "answer": "A JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.",
+    "options": [
+      "A garbage collection method used to destroy unused objects.",
+      "A CSS rule that breaks a layout into smaller, separate grid cells.",
+      "A JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.",
+      "A webpack plugin used to split code into smaller bundles."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Destructuring saves boilerplate code when accessing multiple fields within an object, e.g., `const { name, age } = user;`."
+  },
+  {
+    "id": "fe-q033",
+    "question": "What is the difference between the Spread and Rest operators in JavaScript?",
+    "answer": "The Spread operator expands an iterable into individual elements, while the Rest operator collects multiple elements and condenses them into a single array.",
+    "options": [
+      "The Spread operator collects multiple elements into an array, while the Rest operator expands an array into individual elements.",
+      "The Spread operator expands an iterable into individual elements, while the Rest operator collects multiple elements and condenses them into a single array.",
+      "Spread is used exclusively for objects, while Rest is used exclusively for arrays.",
+      "There is no difference; they are the exact same operator used in different file types."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Both use the `...` syntax. Spread is used in function calls or object/array literals, while Rest is used in function definitions and destructuring."
+  },
+  {
+    "id": "fe-q034",
+    "question": "What is the CSS 'clearfix' hack used for?",
+    "answer": "It is used to force a container to expand to fit floated children, preventing layout issues where the parent collapses.",
+    "options": [
+      "It completely deletes all applied styles from a specific element.",
+      "It makes an element totally transparent without affecting layout.",
+      "It is used to force a container to expand to fit floated children, preventing layout issues where the parent collapses.",
+      "It aligns text vertically to the dead center of a container."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Because floated elements are removed from the normal document flow, their parent containers ignore their height, collapsing without a clearfix."
+  },
+  {
+    "id": "fe-q035",
+    "question": "What are CSS Custom Properties (CSS Variables)?",
+    "answer": "Entities defined by CSS authors that contain specific values to be reused throughout a document, accessed using the var() function.",
+    "options": [
+      "Variables compiled by preprocessors like Sass or LESS that are not readable by the browser natively.",
+      "Entities defined by CSS authors that contain specific values to be reused throughout a document, accessed using the var() function.",
+      "JavaScript variables injected into the DOM to change CSS dynamically.",
+      "Special HTML attributes used to hold styling information inline."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unlike SCSS variables, CSS Custom Properties cascade dynamically, can be updated via JavaScript in real-time, and are read natively by the browser."
+  },
+  {
+    "id": "fe-q036",
+    "question": "What is the difference between 'inline' and 'inline-block' display types?",
+    "answer": "'inline' elements flow with text and ignore width/height rules, while 'inline-block' elements flow with text but allow width and height to be set.",
+    "options": [
+      "'inline' elements allow width/height to be set, while 'inline-block' elements do not.",
+      "'inline' elements flow with text and ignore width/height rules, while 'inline-block' elements flow with text but allow width and height to be set.",
+      "'inline' starts on a new line, whereas 'inline-block' stays on the same line.",
+      "'inline-block' is an older specification and should be avoided in modern web development."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An 'inline' element (like <span>) will not accept vertical margins or manual dimensions, while 'inline-block' respects dimensions without breaking the text line."
+  },
+  {
+    "id": "fe-q037",
+    "question": "What is Event Bubbling in JavaScript?",
+    "answer": "The process where an event triggered on a deeply nested element propagates upward through its ancestors in the DOM tree.",
+    "options": [
+      "The process of creating multiple duplicate events to ensure they fire correctly.",
+      "The process where an event triggered on an ancestor element propagates downward to the target element.",
+      "The process where an event triggered on a deeply nested element propagates upward through its ancestors in the DOM tree.",
+      "An error state where an event loops infinitely."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "When an element receives an event, that event bubbles up to its parent, then the grandparent, until it reaches the window, unless `stopPropagation()` is called."
+  },
+  {
+    "id": "fe-q038",
+    "question": "What is a Service Worker?",
+    "answer": "A script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction, like caching and push notifications.",
+    "options": [
+      "A remote server script written in Node.js used to handle database connections.",
+      "A script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction, like caching and push notifications.",
+      "A built-in browser API strictly used to manipulate DOM nodes securely.",
+      "An automated bot used to scrape websites."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Service Workers intercept network requests and act as programmable proxies, which are foundational for creating Progressive Web Apps (PWAs)."
+  },
+  {
+    "id": "fe-q039",
+    "question": "What is XSS (Cross-Site Scripting)?",
+    "answer": "A vulnerability where an attacker injects malicious executable scripts into the code of a trusted application or website.",
+    "options": [
+      "A vulnerability where an attacker intercepts server responses.",
+      "A vulnerability where an attacker injects malicious executable scripts into the code of a trusted application or website.",
+      "A technique used to load fonts across different domains.",
+      "A modern browser feature that allows tabs to communicate with each other."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "XSS occurs when an application includes untrusted data in a web page without proper validation or escaping, allowing the script to steal cookies or hijack sessions."
+  },
+  {
+    "id": "fe-q040",
+    "question": "What is CSRF (Cross-Site Request Forgery)?",
+    "answer": "An attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.",
+    "options": [
+      "An attack where the attacker reads encrypted data from the database.",
+      "An attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.",
+      "An attack that injects CSS to alter the visual layout of a page.",
+      "An attack that overwhelms a server with excessive fake requests (DDoS)."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "CSRF exploits the fact that the browser automatically sends authentication cookies. It can be mitigated by anti-CSRF tokens."
+  },
+  {
+    "id": "fe-q041",
+    "question": "What is the main difference between Server-Side Rendering (SSR) and Client-Side Rendering (CSR)?",
+    "answer": "SSR renders the full HTML on the server before sending it to the browser, while CSR sends an empty HTML shell and uses JavaScript to render the UI in the browser.",
+    "options": [
+      "SSR uses JavaScript exclusively, while CSR relies entirely on HTML and CSS.",
+      "SSR renders the full HTML on the server before sending it to the browser, while CSR sends an empty HTML shell and uses JavaScript to render the UI in the browser.",
+      "CSR is always significantly faster for the initial page load than SSR.",
+      "SSR is deprecated and only CSR is supported in modern web development."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "SSR generally provides better SEO and faster time-to-first-byte, while CSR allows for rich, app-like interactions after the initial load."
+  },
+  {
+    "id": "fe-q042",
+    "question": "What is a MutationObserver?",
+    "answer": "A built-in Web API provided by modern browsers for detecting changes in the DOM tree, such as node addition, removal, or attribute modifications.",
+    "options": [
+      "A built-in Web API provided by modern browsers for detecting changes in the DOM tree, such as node addition, removal, or attribute modifications.",
+      "A tool that monitors JavaScript variables for state changes.",
+      "A CSS property that observes and responds to viewport width changes.",
+      "A testing library function used to mock DOM elements."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "MutationObservers replace older DOM mutation events, offering a highly performant way to react to dynamic changes in the document structure."
+  },
+  {
+    "id": "fe-q043",
+    "question": "What does 'requestAnimationFrame' do?",
+    "answer": "It tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.",
+    "options": [
+      "It halts all current animations on the page to save CPU power.",
+      "It sets up an interval that fires exactly every 100 milliseconds.",
+      "It tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.",
+      "It converts CSS animations into JavaScript-controlled animations."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Using `requestAnimationFrame` is much smoother and more battery-efficient than using `setTimeout` or `setInterval` for animations."
+  },
+  {
+    "id": "fe-q044",
+    "question": "What are WebSockets?",
+    "answer": "An advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server.",
+    "options": [
+      "A database standard used for storing highly relational data.",
+      "A one-way protocol for servers to send push notifications to clients.",
+      "An advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server.",
+      "A physical hardware device used to route web traffic."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "WebSockets allow for real-time data flow (like in chat applications) without the client needing to constantly poll the server for updates."
+  },
+  {
+    "id": "fe-q045",
+    "question": "What does the 'minmax()' function do in CSS Grid?",
+    "answer": "It defines a size range greater than or equal to a minimum value and less than or equal to a maximum value for grid tracks.",
+    "options": [
+      "It clamps the number of grid items to a minimum and maximum limit.",
+      "It defines a size range greater than or equal to a minimum value and less than or equal to a maximum value for grid tracks.",
+      "It determines the minimum and maximum gap between grid cells.",
+      "It sets the screen breakpoint values for responsive grids."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "It creates incredibly flexible grid layouts, preventing a column from shrinking too small while letting it expand to fill available space."
+  },
+  {
+    "id": "fe-q046",
+    "question": "What is the difference between 'position: absolute' and 'position: relative' in CSS?",
+    "answer": "'relative' positions an element relative to its normal position in the document flow, while 'absolute' removes it from the flow and positions it relative to its closest positioned ancestor.",
+    "options": [
+      "'relative' positions an element relative to the viewport, while 'absolute' positions it relative to the document.",
+      "'relative' removes the element from the document flow entirely, while 'absolute' keeps it in the flow.",
+      "'relative' positions an element relative to its normal position in the document flow, while 'absolute' removes it from the flow and positions it relative to its closest positioned ancestor.",
+      "There is no difference; they are interchangeable."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An absolutely positioned element searches up the DOM tree for a parent with `position: relative` to use as its anchor boundaries."
+  },
+  {
+    "id": "fe-q047",
+    "question": "What is Hoisting in JavaScript?",
+    "answer": "The JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.",
+    "options": [
+      "The JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.",
+      "A process where CSS styles are prioritized over HTML attributes.",
+      "The method by which a browser uploads a local file to a server.",
+      "A debugging technique used to lift errors to the browser console."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This allows you to call a function before it is physically defined in the source code, but variables initialized with 'var' will be hoisted as undefined."
+  },
+  {
+    "id": "fe-q048",
+    "question": "What is Webpack?",
+    "answer": "A static module bundler for modern JavaScript applications that takes modules with dependencies and generates static assets representing those modules.",
+    "options": [
+      "A cloud hosting provider for frontend applications.",
+      "A JavaScript framework used exclusively for building mobile apps.",
+      "A static module bundler for modern JavaScript applications that takes modules with dependencies and generates static assets representing those modules.",
+      "A CSS library similar to Bootstrap."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Webpack creates a dependency graph from an entry point, combining multiple JS, CSS, and image files into optimal bundles for the browser."
+  },
+  {
+    "id": "fe-q049",
+    "question": "What is the Temporal Dead Zone (TDZ) in JavaScript?",
+    "answer": "The period between entering block scope and the actual declaration of a 'let' or 'const' variable, during which it cannot be accessed.",
+    "options": [
+      "The time it takes for an asynchronous API request to complete.",
+      "The period between entering block scope and the actual declaration of a 'let' or 'const' variable, during which it cannot be accessed.",
+      "A specific state where the DOM is completely frozen and cannot be manipulated.",
+      "The memory space that the garbage collector is currently cleaning."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Unlike 'var', accessing a 'let' or 'const' variable inside its TDZ throws a ReferenceError, forcing safer coding habits."
+  },
+  {
+    "id": "fe-q050",
+    "question": "What is a Polyfill?",
+    "answer": "A piece of code (usually JavaScript) used to provide modern functionality on older browsers that do not natively support it.",
+    "options": [
+      "A geometric shape drawn on a Canvas element.",
+      "A tool that minifies and compresses JavaScript code.",
+      "A piece of code (usually JavaScript) used to provide modern functionality on older browsers that do not natively support it.",
+      "A security script that blocks malicious third-party tracking cookies."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "For example, providing a script to enable the use of `Promise` in older versions of Internet Explorer."
+  },
+  {
+    "id": "fe-q051",
+    "question": "What is the main difference between CSS Grid and Flexbox?",
+    "answer": "Flexbox is primarily designed for one-dimensional layouts (rows or columns), while CSS Grid is designed for two-dimensional layouts (rows and columns simultaneously).",
+    "options": [
+      "Flexbox is strictly for mobile design, while CSS Grid is for desktop.",
+      "Flexbox uses absolute positioning, while CSS Grid uses relative positioning.",
+      "Flexbox is primarily designed for one-dimensional layouts (rows or columns), while CSS Grid is designed for two-dimensional layouts (rows and columns simultaneously).",
+      "CSS Grid is an external library, while Flexbox is built natively into the browser."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "While they overlap in functionality, Grid excels at rigid page architecture, and Flexbox excels at aligning elements within a single axis."
+  },
+  {
+    "id": "fe-q052",
+    "question": "What does the 'z-index' property in CSS control?",
+    "answer": "It controls the vertical stacking order of elements that overlap.",
+    "options": [
+      "It controls the vertical stacking order of elements that overlap.",
+      "It sets the magnification level of an element when hovered.",
+      "It specifies the physical depth of an element in 3D CSS transforms.",
+      "It controls how text wraps around floating images."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Elements with a higher z-index value appear physically closer to the user (on top of) elements with a lower z-index. It only works on positioned elements."
+  },
+  {
+    "id": "fe-q053",
+    "question": "What does the CSS 'float' property do?",
+    "answer": "It specifies that an element should be taken from the normal flow and placed along the left or right side of its container, allowing text and inline elements to wrap around it.",
+    "options": [
+      "It makes an element transparent and unclickable.",
+      "It completely centers an element horizontally and vertically.",
+      "It specifies that an element should be taken from the normal flow and placed along the left or right side of its container, allowing text and inline elements to wrap around it.",
+      "It attaches an element strictly to the user's cursor."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Historically used for layout, float is now best used for its original purpose: wrapping text around images."
+  },
+  {
+    "id": "fe-q054",
+    "question": "In JavaScript, what does 'typeof null' return?",
+    "answer": "'object'",
+    "options": ["'null'", "'undefined'", "'string'", "'object'"],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This is a well-known historical bug in JavaScript from its earliest versions that remains unpatched for backwards compatibility."
+  },
+  {
+    "id": "fe-q055",
+    "question": "What is the 'DocumentFragment' interface in JavaScript?",
+    "answer": "A minimal document object that has no parent, used as a lightweight version of Document to store well-formed or potentially non-well-formed XML fragments.",
+    "options": [
+      "An isolated piece of CSS applied conditionally to the shadow DOM.",
+      "A minimal document object that has no parent, used as a lightweight version of Document to store well-formed or potentially non-well-formed XML fragments.",
+      "A corrupted piece of HTML that failed to parse correctly.",
+      "A secondary DOM window opened by a popup."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Appending nodes to a DocumentFragment and then appending the fragment to the DOM minimizes expensive Reflows, heavily boosting performance."
+  },
+  {
+    "id": "fe-q056",
+    "question": "What is the difference between 'em' and 'rem' CSS units?",
+    "answer": "'em' is relative to the font-size of its direct or nearest parent, whereas 'rem' is relative only to the root HTML element's font-size.",
+    "options": [
+      "'em' handles margin sizes, while 'rem' handles typography only.",
+      "'em' is relative to the font-size of its direct or nearest parent, whereas 'rem' is relative only to the root HTML element's font-size.",
+      "'rem' adapts to the viewport width, while 'em' adapts to the viewport height.",
+      "There is no difference; 'rem' is just a modernized alias for 'em'."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Using 'rem' avoids the compounding sizing issues often encountered when nesting multiple 'em' sized elements inside each other."
+  },
+  {
+    "id": "fe-q057",
+    "question": "What is the purpose of 'Promise.all()' in JavaScript?",
+    "answer": "It takes an iterable of promises and returns a single Promise that resolves when all of the input's promises have resolved, or rejects if any promise rejects.",
+    "options": [
+      "It takes an iterable of promises and returns a single Promise that resolves when all of the input's promises have resolved, or rejects if any promise rejects.",
+      "It resolves immediately after the fastest promise completes, ignoring the rest.",
+      "It forces all asynchronous promises to execute synchronously in a queue.",
+      "It automatically catches and silently ignores all rejected promises."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This method is useful when you have multiple asynchronous tasks that do not depend on each other and you want to wait until all are complete before proceeding."
+  },
+  {
+    "id": "fe-q058",
+    "question": "What is 'Debouncing' in JavaScript?",
+    "answer": "A programming practice used to ensure that time-consuming tasks do not fire so often, by delaying the execution of a function until after a certain amount of time has passed since it was last invoked.",
+    "options": [
+      "The process of cleaning up memory leaks in an application.",
+      "A programming practice used to ensure that time-consuming tasks do not fire so often, by delaying the execution of a function until after a certain amount of time has passed since it was last invoked.",
+      "A way to strictly limit a function to be executed exactly once per second.",
+      "A method of compressing HTTP responses to reduce payload sizes."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Debouncing is ideal for search inputs where you only want to trigger the API request after the user finishes typing."
+  },
+  {
+    "id": "fe-q059",
+    "question": "What is 'Throttling' in JavaScript?",
+    "answer": "A technique that limits the maximum number of times a function can be called over time, ensuring it executes at a regular interval.",
+    "options": [
+      "A technique that limits the maximum number of times a function can be called over time, ensuring it executes at a regular interval.",
+      "A technique to stop a function from executing until the user stops interacting with the page completely.",
+      "A method of splitting large files into smaller chunks for faster downloading.",
+      "A process that slows down animations to match the refresh rate of older monitors."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Throttling guarantees execution at steady intervals, making it ideal for tracking continuous events like window resizing or scrolling."
+  },
+  {
+    "id": "fe-q060",
+    "question": "What is a Content Security Policy (CSP)?",
+    "answer": "An added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.",
+    "options": [
+      "A legal document that outlines user privacy rights on a website.",
+      "An added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.",
+      "A browser setting that prevents users from downloading malicious executable files.",
+      "A server-side script that prevents SQL injection attacks exclusively."
+    ],
+    "category": "Frontend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "CSP is implemented via HTTP headers, restricting the domains from which the browser is allowed to load scripts, styles, or images."
+  },
+  {
+    "id": "fe-q061",
+    "question": "True or False: The DOCTYPE declaration in HTML tells the web browser what version of HTML the page is written in, ensuring it renders the page in standards mode.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Including the `<!DOCTYPE html>` declaration at the top of the file forces the browser out of quirks mode and into standards mode."
+  },
+  {
+    "id": "fe-q062",
+    "question": "True or False: Progressive Enhancement builds for modern browsers and provides fallbacks for older ones.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. That defines Graceful Degradation. Progressive Enhancement starts with basic functionality for older browsers and adds advanced features on top."
+  },
+  {
+    "id": "fe-q063",
+    "question": "True or False: The 'data-' attributes in HTML5 allow you to store extra, custom information on standard HTML elements without requiring non-standard attributes or extra DOM properties.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. These data attributes provide an official, safe way to embed structured data directly into the markup for JavaScript to parse."
+  },
+  {
+    "id": "fe-q064",
+    "question": "True or False: The 'async' script attribute waits until HTML parsing is completely finished before executing.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'defer' attribute waits until parsing finishes. 'async' executes the script as soon as its download completes, which might interrupt parsing."
+  },
+  {
+    "id": "fe-q065",
+    "question": "True or False: CORS stands for Cross-Origin Resource Sharing; it is a mechanism that allows restricted resources on a web page to be requested from another domain.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. CORS provides a secure, HTTP-header-based method for a browser to communicate with servers outside of its initial hosting origin."
+  },
+  {
+    "id": "fe-q066",
+    "question": "True or False: The CSS Box Model consists of typography, colors, padding, and the actual content.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The CSS Box Model consists of margins, borders, padding, and content."
+  },
+  {
+    "id": "fe-q067",
+    "question": "True or False: CSS Specificity is a weight applied to a given CSS declaration, determined by the number of each selector type in the matching selector.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This specific math algorithm decides which rule wins when multiple CSS rules attempt to style the exact same element."
+  },
+  {
+    "id": "fe-q068",
+    "question": "True or False: Resetting CSS preserves useful browser defaults, while normalizing completely strips all browser styling.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is exactly the reverse. Resetting violently removes all margins/padding defaults, whereas normalizing retains sensible defaults across browsers."
+  },
+  {
+    "id": "fe-q069",
+    "question": "True or False: A CSS pseudo-class targets an element based on its state, while a pseudo-element targets a specific part of an element.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Examples include `:hover` representing a state (pseudo-class), and `::before` representing a virtual part of the DOM (pseudo-element)."
+  },
+  {
+    "id": "fe-q070",
+    "question": "True or False: 'box-sizing: border-box;' tells the browser to ignore padding and borders when calculating the element's total width.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. It instructs the browser to actively INCLUDE padding and borders in the element's specified width, rather than adding them on top of the width."
+  },
+  {
+    "id": "fe-q071",
+    "question": "True or False: 'display: none' completely removes the element from the document layout flow.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It behaves as if the element does not exist on the page at all."
+  },
+  {
+    "id": "fe-q072",
+    "question": "True or False: A Closure completely destroys an object and frees up memory asynchronously.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A Closure is a feature where an inner function retains access to the outer function's variables even after the outer function has returned."
+  },
+  {
+    "id": "fe-q073",
+    "question": "True or False: Event Delegation is a technique of attaching a single event listener to a parent element to catch events from its children.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It utilizes the natural event bubbling process to handle dynamic child elements efficiently."
+  },
+  {
+    "id": "fe-q074",
+    "question": "True or False: The 'this' keyword in standard JavaScript always refers to the global window object, regardless of how the function is called.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. In standard functions, its value is dynamically determined by how the function is invoked (e.g., as a method of an object)."
+  },
+  {
+    "id": "fe-q075",
+    "question": "True or False: The 'bind()' method returns a new function with the 'this' context permanently set.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Unlike call() and apply(), it does not immediately invoke the function but creates a bound copy for future execution."
+  },
+  {
+    "id": "fe-q076",
+    "question": "True or False: 'undefined' is explicitly assigned by developers to represent no object, while 'null' is the default value for uninitialized variables.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. 'undefined' is the default state for declared but unassigned variables, whereas 'null' is manually assigned to represent an empty object."
+  },
+  {
+    "id": "fe-q077",
+    "question": "True or False: 'var' is function-scoped and hoisted, while 'let' and 'const' are block-scoped.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This scoping distinction represents the primary improvement introduced by ES6 variables."
+  },
+  {
+    "id": "fe-q078",
+    "question": "True or False: Arrow functions are hoisted to the top of the scope, whereas regular functions are not.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Standard function declarations are hoisted. Arrow functions (assigned to let/const/var) follow standard variable hoisting rules, meaning they are often stuck in the Temporal Dead Zone."
+  },
+  {
+    "id": "fe-q079",
+    "question": "True or False: The JavaScript Event Loop constantly checks the call stack and the task queue, pushing callbacks to the stack when empty.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This non-blocking concurrency model allows JavaScript to process async requests while running on a single thread."
+  },
+  {
+    "id": "fe-q080",
+    "question": "True or False: A Promise in JavaScript is a strictly synchronous function that promises to return a value immediately.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A Promise represents the eventual completion or failure of an ASYNCHRONOUS operation."
+  },
+  {
+    "id": "fe-q081",
+    "question": "True or False: The states of a Promise are Pending, Fulfilled, and Rejected.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Once a Promise moves from Pending to either Fulfilled or Rejected, it is considered 'settled'."
+  },
+  {
+    "id": "fe-q082",
+    "question": "True or False: 'map()' returns undefined and is used for side effects, whereas 'forEach()' returns a new array.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. 'map()' returns a new array with transformed elements, while 'forEach()' returns undefined and is meant for side effects."
+  },
+  {
+    "id": "fe-q083",
+    "question": "True or False: LocalStorage persists permanently, SessionStorage persists until the tab is closed, and Cookies are sent to the server with every HTTP request.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This accurately summarizes the varying scopes and purposes of browser storage methods."
+  },
+  {
+    "id": "fe-q084",
+    "question": "True or False: BEM stands for Binary Event Manager, a JavaScript library for handling complex binary data streams.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. BEM stands for Block Element Modifier, which is a popular naming methodology for CSS classes."
+  },
+  {
+    "id": "fe-q085",
+    "question": "True or False: The Critical Rendering Path is the sequence of steps the browser goes through to convert HTML, CSS, and JavaScript into pixels on the screen.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Understanding this path is vital for frontend performance optimization."
+  },
+  {
+    "id": "fe-q086",
+    "question": "True or False: Reflow occurs when changes affect visibility (like color), while repaint occurs when changes affect the geometry layout of a page.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Reflow is geometry (size/position). Repaint is purely visual visibility (color/opacity)."
+  },
+  {
+    "id": "fe-q087",
+    "question": "True or False: Semantic HTML uses markup to reinforce the semantics, or meaning, of the information in web pages.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This helps search engines and screen readers interpret the structural importance of the text."
+  },
+  {
+    "id": "fe-q088",
+    "question": "True or False: ARIA stands for Asynchronous Rendering Internet API.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. ARIA stands for Accessible Rich Internet Applications, a suite of web standards for disabled accessibility."
+  },
+  {
+    "id": "fe-q089",
+    "question": "True or False: Web Components are a suite of technologies allowing you to create reusable custom elements encapsulated away from the rest of your code.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. They utilize Custom Elements, Shadow DOM, and HTML Templates natively in the browser."
+  },
+  {
+    "id": "fe-q090",
+    "question": "True or False: 'use strict' is a directive that forces the browser to run JavaScript on a background thread.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. 'use strict' enforces stricter parsing and error handling, turning silent errors into thrown exceptions."
+  },
+  {
+    "id": "fe-q091",
+    "question": "True or False: A Higher-Order Function takes another function as an argument, returns a function as a result, or both.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Functions in JavaScript are First-Class, allowing them to be passed around dynamically."
+  },
+  {
+    "id": "fe-q092",
+    "question": "True or False: Destructuring Assignment is a CSS rule that breaks a layout into smaller, separate grid cells.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Destructuring is an ES6 JavaScript expression used to extract properties from objects or arrays into distinct variables."
+  },
+  {
+    "id": "fe-q093",
+    "question": "True or False: The Spread operator expands an iterable into individual elements, while the Rest operator collects multiple elements and condenses them into a single array.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Even though both use the '...' syntax, their operational contexts completely flip their behaviors."
+  },
+  {
+    "id": "fe-q094",
+    "question": "True or False: The CSS 'clearfix' hack makes an element totally transparent without affecting layout.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Clearfix is a CSS hack used to force a parent container to expand and encompass floated child elements so it does not collapse."
+  },
+  {
+    "id": "fe-q095",
+    "question": "True or False: CSS Custom Properties contain specific values to be reused throughout a document, accessed using the var() function.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. They bring programming variable logic natively to cascading stylesheets."
+  },
+  {
+    "id": "fe-q096",
+    "question": "True or False: 'inline' elements flow with text and ignore width/height rules, while 'inline-block' elements allow width and height to be set.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This makes 'inline-block' extremely useful for styling buttons inside text lines."
+  },
+  {
+    "id": "fe-q097",
+    "question": "True or False: Event Bubbling is the process where an event triggered on an ancestor element propagates downward to the target element.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Bubbling triggers from the innermost element UPWARD. Capturing (Trickling) goes DOWNWARD to the target."
+  },
+  {
+    "id": "fe-q098",
+    "question": "True or False: A Service Worker is a script that runs in the background, opening the door to features like caching and push notifications.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It acts as a network proxy that works even when the user has closed the browser tab."
+  },
+  {
+    "id": "fe-q099",
+    "question": "True or False: XSS (Cross-Site Scripting) is a vulnerability where an attacker injects malicious executable scripts into a trusted application.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Without input sanitization, an attacker can execute arbitrary JS on the victim's machine."
+  },
+  {
+    "id": "fe-q100",
+    "question": "True or False: CSRF (Cross-Site Request Forgery) is an attack where the attacker reads encrypted data directly from the server database.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. CSRF is an attack that forces an authenticated user to execute unwanted actions (like submitting a forged form)."
+  },
+  {
+    "id": "fe-q101",
+    "question": "True or False: SSR renders the full HTML on the server before sending it, while CSR sends an empty HTML shell and uses JavaScript to render the UI.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. SSR is traditional for SEO-heavy pages, while CSR powers fluid Single Page Applications (SPAs)."
+  },
+  {
+    "id": "fe-q102",
+    "question": "True or False: A MutationObserver is a CSS property that observes and responds to viewport width changes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A MutationObserver is a JavaScript API that listens for changes inside the DOM tree (e.g., elements being added/removed)."
+  },
+  {
+    "id": "fe-q103",
+    "question": "True or False: 'requestAnimationFrame' tells the browser you wish to perform an animation and requests a function call before the next repaint.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It syncs JavaScript animations natively with the monitor's refresh rate, making it much more efficient than setInterval."
+  },
+  {
+    "id": "fe-q104",
+    "question": "True or False: WebSockets are a database standard used strictly for storing highly relational data.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. WebSockets establish a permanent, full-duplex, two-way communication channel between browser and server."
+  },
+  {
+    "id": "fe-q105",
+    "question": "True or False: The 'minmax()' function in CSS Grid defines a size range greater than or equal to a minimum value and less than or equal to a maximum.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It allows columns and rows to act responsively while respecting predefined boundaries."
+  },
+  {
+    "id": "fe-q106",
+    "question": "True or False: 'position: absolute' positions an element relative to the viewport, while 'position: relative' positions it relative to the document.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. 'absolute' positions relative to the closest positioned parent. 'fixed' is what positions an element relative to the viewport."
+  },
+  {
+    "id": "fe-q107",
+    "question": "True or False: Hoisting is the JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Because of this, a named function can be called on line 1 even if it is defined on line 50."
+  },
+  {
+    "id": "fe-q108",
+    "question": "True or False: Webpack is a cloud hosting provider exclusively meant for frontend React applications.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Webpack is a local development tool—a static module bundler that packages code assets into single files."
+  },
+  {
+    "id": "fe-q109",
+    "question": "True or False: The Temporal Dead Zone (TDZ) is the period between entering block scope and the actual declaration of a 'let' or 'const' variable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Trying to call a variable inside its TDZ instantly throws an error."
+  },
+  {
+    "id": "fe-q110",
+    "question": "True or False: A Polyfill is a geometric shape drawn entirely on an HTML5 Canvas element.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A polyfill is a snippet of JavaScript that replicates missing modern API functionality on older web browsers."
+  },
+  {
+    "id": "fe-q111",
+    "question": "True or False: Flexbox is primarily designed for one-dimensional layouts, while CSS Grid is designed for two-dimensional layouts.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Flexbox handles rows OR columns, whereas Grid handles rows AND columns simultaneously."
+  },
+  {
+    "id": "fe-q112",
+    "question": "True or False: The 'z-index' property sets the magnification level of an element when hovered.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. 'z-index' controls the vertical stacking order (Z-axis overlap) of positioned elements."
+  },
+  {
+    "id": "fe-q113",
+    "question": "True or False: The CSS 'float' property specifies that an element should be taken from the normal flow and placed along the left or right side of its container.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Floating was originally designed to allow paragraphs of text to wrap tightly around an image block."
+  },
+  {
+    "id": "fe-q114",
+    "question": "True or False: In JavaScript, evaluating 'typeof null' correctly returns the string 'null'.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Due to a legacy bug in the JavaScript engine, `typeof null` incorrectly returns 'object'."
+  },
+  {
+    "id": "fe-q115",
+    "question": "True or False: A DocumentFragment is a minimal document object with no parent, used to safely store XML/HTML fragments before pushing them to the real DOM.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. DocumentFragments act as a lightweight, invisible staging area to assemble nodes, avoiding expensive reflows."
+  },
+  {
+    "id": "fe-q116",
+    "question": "True or False: The 'em' unit handles margins, while the 'rem' unit exclusively handles typography.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Both handle lengths. 'em' is relative to the parent's font-size, while 'rem' is relative solely to the root HTML element's font-size."
+  },
+  {
+    "id": "fe-q117",
+    "question": "True or False: 'Promise.all()' takes an iterable of promises and returns a single Promise that resolves when all input promises have resolved.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. However, if even one promise inside the array rejects, the entire `Promise.all()` immediately rejects."
+  },
+  {
+    "id": "fe-q118",
+    "question": "True or False: Debouncing is a way to strictly limit a function to be executed exactly once per second, regardless of pauses.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. That describes Throttling. Debouncing delays execution until a certain amount of idle time has passed since the last input."
+  },
+  {
+    "id": "fe-q119",
+    "question": "True or False: Throttling is a technique that limits the maximum number of times a function can be called over time.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Throttling ensures a heavy function (like a scroll listener) executes smoothly at a regular, capped interval."
+  },
+  {
+    "id": "fe-q120",
+    "question": "True or False: Content Security Policy (CSP) is a server-side script that prevents SQL injection attacks exclusively.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Frontend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. CSP is an HTTP header sent to the browser that mitigates frontend attacks like Cross-Site Scripting (XSS) by restricting asset origins."
+  },
+  {
+    "id": "fe-q121",
+    "question": "The ______ declaration tells the web browser what version of HTML the page is written in.",
+    "answer": "DOCTYPE",
+    "options": ["DOCTYPE", "charset", "metadata", "header"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Putting <!DOCTYPE html> at the very beginning of the document sets HTML5 standards mode."
+  },
+  {
+    "id": "fe-q122",
+    "question": "Graceful ______ builds for modern browsers and provides fallbacks for older ones.",
+    "answer": "Degradation",
+    "options": ["Enhancement", "Degradation", "Fallbacks", "Execution"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "It is the philosophical opposite of Progressive Enhancement."
+  },
+  {
+    "id": "fe-q123",
+    "question": "In HTML5, ______- attributes allow you to store extra, custom information on standard HTML elements.",
+    "answer": "data",
+    "options": ["custom", "meta", "data", "info"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The dataset property in JavaScript parses these attributes automatically."
+  },
+  {
+    "id": "fe-q124",
+    "question": "The '______' attribute waits until the HTML parsing is completely finished before executing the downloaded script.",
+    "answer": "defer",
+    "options": ["async", "defer", "wait", "onload"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Defer is generally preferred for scripts that rely on the DOM being completely built."
+  },
+  {
+    "id": "fe-q125",
+    "question": "______ stands for Cross-Origin Resource Sharing, a mechanism that allows restricted resources to be requested from another domain.",
+    "answer": "CORS",
+    "options": ["CORS", "JSONP", "REST", "SOAP"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "CORS requires the server to send Access-Control-Allow-Origin headers to pass browser security checks."
+  },
+  {
+    "id": "fe-q126",
+    "question": "The CSS ______ Model is a box wrapping HTML elements, consisting of margins, borders, padding, and content.",
+    "answer": "Box",
+    "options": ["Grid", "Flex", "Box", "Layout"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Mastering the Box Model is the foundational step in writing predictable CSS."
+  },
+  {
+    "id": "fe-q127",
+    "question": "CSS ______ determines precedence based on a weight calculated by the number of IDs, classes, and elements in the selector.",
+    "answer": "Specificity",
+    "options": ["Hierarchy", "Specificity", "Inheritance", "Cascading"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "An ID selector `#nav` will outrank a deeply nested class selector `.header .menu .item` due to higher specificity."
+  },
+  {
+    "id": "fe-q128",
+    "question": "______ CSS preserves useful defaults and corrects bugs across browsers, rather than stripping all styles.",
+    "answer": "Normalizing",
+    "options": ["Resetting", "Normalizing", "Sanitizing", "Minifying"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Normalize.css is a famous library used to make built-in elements render consistently."
+  },
+  {
+    "id": "fe-q129",
+    "question": "A pseudo-______ targets a specific visual part of an element (like ::before).",
+    "answer": "element",
+    "options": ["class", "state", "element", "selector"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pseudo-elements structurally inject or style a part of the document that isn't explicitly in the HTML source."
+  },
+  {
+    "id": "fe-q130",
+    "question": "'box-sizing: ______' tells the browser to account for border and padding inside the element's specified width.",
+    "answer": "border-box",
+    "options": ["padding-box", "border-box", "content-box", "margin-box"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Applying `box-sizing: border-box` globally is a highly recommended best practice in modern web design."
+  },
+  {
+    "id": "fe-q131",
+    "question": "'display: ______' completely removes the element from the document layout flow.",
+    "answer": "none",
+    "options": ["hidden", "none", "invisible", "block"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Because it abandons the layout space, it effectively collapses the gap where the element was."
+  },
+  {
+    "id": "fe-q132",
+    "question": "A ______ is a feature where an inner function has access to the outer function's variables, even after returning.",
+    "answer": "Closure",
+    "options": ["Promise", "Closure", "Callback", "Module"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The JavaScript engine preserves the lexical scope inside the closure, protecting it from garbage collection."
+  },
+  {
+    "id": "fe-q133",
+    "question": "Event ______ attaches a single event listener to a parent element to catch events from its children.",
+    "answer": "Delegation",
+    "options": ["Bubbling", "Capturing", "Delegation", "Emitting"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This relies heavily on analyzing the `event.target` property to find out which child was actually clicked."
+  },
+  {
+    "id": "fe-q134",
+    "question": "The '______' keyword's value is determined by how a function is called, defaulting to the global object in standard functions.",
+    "answer": "this",
+    "options": ["self", "this", "super", "global"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "'this' creates dynamic context, allowing methods to operate on the object invoking them."
+  },
+  {
+    "id": "fe-q135",
+    "question": "The ______ method returns a new function with the 'this' context permanently set.",
+    "answer": "bind()",
+    "options": ["apply()", "call()", "bind()", "map()"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Unlike call() or apply(), bind() prevents execution until the developer decides to invoke the returned copy."
+  },
+  {
+    "id": "fe-q136",
+    "question": "'______' is an assignment value representing no object or an empty value.",
+    "answer": "null",
+    "options": ["undefined", "NaN", "null", "false"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Developers explicitly use 'null' to indicate intentional absence of value."
+  },
+  {
+    "id": "fe-q137",
+    "question": "'______' variables are block-scoped and cannot be reassigned after their initial assignment.",
+    "answer": "const",
+    "options": ["var", "let", "const", "static"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "While 'const' stops reassignment, it does not recursively freeze objects or arrays deeply."
+  },
+  {
+    "id": "fe-q138",
+    "question": "______ functions do not have their own 'this', 'arguments', or 'super' bindings.",
+    "answer": "Arrow",
+    "options": ["Async", "Generator", "Anonymous", "Arrow"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Introduced in ES6, arrow functions provide a concise syntax specifically tailored for non-method callbacks."
+  },
+  {
+    "id": "fe-q139",
+    "question": "The Event ______ is a mechanism that pushes callbacks from the task queue to the call stack once the stack is empty.",
+    "answer": "Loop",
+    "options": ["Emitter", "Listener", "Loop", "Stack"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The Event Loop dictates the exact order of execution in JS environments like browsers and Node.js."
+  },
+  {
+    "id": "fe-q140",
+    "question": "A ______ is an object representing the eventual completion or failure of an asynchronous operation.",
+    "answer": "Promise",
+    "options": ["Callback", "Worker", "Promise", "Timeout"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Promises were added to avoid deeply nested pyramids of callback functions."
+  },
+  {
+    "id": "fe-q141",
+    "question": "The three states of a Promise are ______, Fulfilled, and Rejected.",
+    "answer": "Pending",
+    "options": ["Waiting", "Running", "Pending", "Loading"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Pending is the default initialized state before the asynchronous thread resolves."
+  },
+  {
+    "id": "fe-q142",
+    "question": "'______' returns a new array containing the results of calling a provided function on every element.",
+    "answer": "map()",
+    "options": ["reduce()", "forEach()", "filter()", "map()"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Map acts purely without mutating the original source array data."
+  },
+  {
+    "id": "fe-q143",
+    "question": "______ persists data only until the browser tab is closed.",
+    "answer": "SessionStorage",
+    "options": ["LocalStorage", "SessionStorage", "Cookies", "IndexedDB"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It provides a highly scoped memory bucket specifically for a single active browsing session."
+  },
+  {
+    "id": "fe-q144",
+    "question": "______ is a naming convention for classes in HTML and CSS aimed at making code more modular and reusable.",
+    "answer": "BEM",
+    "options": ["SMACSS", "BEM", "OOCSS", "Atomic"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "BEM stands for Block Element Modifier, drastically reducing CSS specificity collisions."
+  },
+  {
+    "id": "fe-q145",
+    "question": "The Critical ______ Path is the sequence of steps the browser goes through to convert code into pixels.",
+    "answer": "Rendering",
+    "options": ["Execution", "Rendering", "Compilation", "Painting"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Optimizing the Critical Rendering Path ensures users see content faster on slow networks."
+  },
+  {
+    "id": "fe-q146",
+    "question": "A ______ occurs when changes affect the layout (geometry) of a page.",
+    "answer": "Reflow",
+    "options": ["Repaint", "Re-render", "Reflow", "Redraw"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Animating properties that trigger Reflows (like width/margin) causes heavy CPU usage."
+  },
+  {
+    "id": "fe-q147",
+    "question": "______ HTML uses markup to reinforce the meaning of the information in web pages.",
+    "answer": "Semantic",
+    "options": ["Structural", "Dynamic", "Semantic", "Valid"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Tags like `<main>` and `<footer>` are semantic, whereas `<div>` is strictly presentational."
+  },
+  {
+    "id": "fe-q148",
+    "question": "______ defines attributes that make web content more accessible to people with disabilities.",
+    "answer": "ARIA",
+    "options": ["A11Y", "ARIA", "WCAG", "HTTP"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ARIA states and properties override standard HTML defaults specifically for screen readers."
+  },
+  {
+    "id": "fe-q149",
+    "question": "Web ______ allow you to create reusable custom elements with their functionality encapsulated away.",
+    "answer": "Components",
+    "options": ["Modules", "Widgets", "Fragments", "Components"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "These are built directly into the browser API, circumventing the need for React or Angular."
+  },
+  {
+    "id": "fe-q150",
+    "question": "'use ______' is a directive that enforces stricter parsing and error handling in JavaScript code.",
+    "answer": "strict",
+    "options": ["strict", "safe", "secure", "lint"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "It helps developers easily identify bad practices like unused variables or duplicate keys."
+  },
+  {
+    "id": "fe-q151",
+    "question": "A ______-Order Function is a function that takes another function as an argument or returns a function.",
+    "answer": "Higher",
+    "options": ["First", "Second", "Higher", "Master"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Array `.filter()` is a classic example of a higher-order function."
+  },
+  {
+    "id": "fe-q152",
+    "question": "______ Assignment is a JavaScript expression that unpacks values from arrays or objects into distinct variables.",
+    "answer": "Destructuring",
+    "options": ["Mapping", "Spreading", "Destructuring", "Cloning"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Destructuring extracts required properties elegantly without multiple assignment lines."
+  },
+  {
+    "id": "fe-q153",
+    "question": "The ______ operator expands an iterable into individual elements.",
+    "answer": "Spread",
+    "options": ["Rest", "Spread", "Destructuring", "Concat"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Spread `...` enables easy merging of arrays and objects."
+  },
+  {
+    "id": "fe-q154",
+    "question": "The CSS '______' hack forces a container to expand to fit floated children.",
+    "answer": "clearfix",
+    "options": ["overflow", "flexbox", "clearfix", "grid"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Clearfix traditionally uses `::after` pseudo-elements to clear floating logic."
+  },
+  {
+    "id": "fe-q155",
+    "question": "CSS Custom ______ contain specific values to be reused throughout a document, accessed via var().",
+    "answer": "Properties",
+    "options": ["Functions", "Properties", "Variables", "Mixins"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Also known as CSS Variables, they drastically simplify color theming implementations."
+  },
+  {
+    "id": "fe-q156",
+    "question": "'______' elements flow with text but allow width and height to be set.",
+    "answer": "inline-block",
+    "options": ["inline", "block", "inline-block", "flex"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "This display property marries horizontal layout rules with fixed dimension configurations."
+  },
+  {
+    "id": "fe-q157",
+    "question": "Event ______ is the process where an event triggered on a deeply nested element propagates upward.",
+    "answer": "Bubbling",
+    "options": ["Capturing", "Delegation", "Bubbling", "Trickling"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Bubbling triggers event handlers natively bound to any parent elements automatically."
+  },
+  {
+    "id": "fe-q158",
+    "question": "A ______ Worker runs in the background, opening the door to caching and push notifications.",
+    "answer": "Service",
+    "options": ["Web", "Background", "Shared", "Service"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Service Workers strictly require HTTPS to function securely."
+  },
+  {
+    "id": "fe-q159",
+    "question": "______ is a vulnerability where an attacker injects malicious executable scripts into the code.",
+    "answer": "XSS",
+    "options": ["CSRF", "SQLi", "XSS", "CORS"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "XSS is highly lethal, capable of hijacking sessions completely via `document.cookie`."
+  },
+  {
+    "id": "fe-q160",
+    "question": "______ is an attack that forces an end user to execute unwanted actions on an authenticated application.",
+    "answer": "CSRF",
+    "options": ["XSS", "CSRF", "DDoS", "Phishing"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Anti-forgery tokens attached to secure forms actively prevent CSRF vulnerabilities."
+  },
+  {
+    "id": "fe-q161",
+    "question": "______-Side Rendering renders the full HTML on the server before sending it to the browser.",
+    "answer": "Server",
+    "options": ["Client", "Static", "Server", "Proxy"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "SSR effectively boosts Search Engine Optimization parsing consistency."
+  },
+  {
+    "id": "fe-q162",
+    "question": "A ______ is a built-in Web API for detecting changes in the DOM tree.",
+    "answer": "MutationObserver",
+    "options": [
+      "ResizeObserver",
+      "IntersectionObserver",
+      "MutationObserver",
+      "DOMListener"
+    ],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "MutationObserver executes asynchronously, preventing it from locking the UI while parsing rapid structural shifts."
+  },
+  {
+    "id": "fe-q163",
+    "question": "______ tells the browser to perform an animation and calls a function to update it before the next repaint.",
+    "answer": "requestAnimationFrame",
+    "options": [
+      "setTimeout",
+      "setInterval",
+      "setImmediate",
+      "requestAnimationFrame"
+    ],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "By synchronizing with the browser refresh rate natively, the animation loop operates ultra smoothly."
+  },
+  {
+    "id": "fe-q164",
+    "question": "______ make it possible to open a two-way interactive communication session between the browser and a server.",
+    "answer": "WebSockets",
+    "options": ["Promises", "WebSockets", "Fetch API", "WebRTC"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This persistent TCP connection is critical for live messaging architectures."
+  },
+  {
+    "id": "fe-q165",
+    "question": "The ______ function in CSS Grid defines a size range greater than or equal to a minimum value and less than a maximum.",
+    "answer": "minmax()",
+    "options": ["clamp()", "minmax()", "calc()", "fit-content()"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It helps orchestrate highly responsive CSS grids without relying heavily on media queries."
+  },
+  {
+    "id": "fe-q166",
+    "question": "'position: ______' removes an element from the flow and positions it relative to its closest positioned ancestor.",
+    "answer": "absolute",
+    "options": ["relative", "fixed", "sticky", "absolute"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Absolute positioning relies heavily on discovering a parent with relative, fixed, or absolute styling."
+  },
+  {
+    "id": "fe-q167",
+    "question": "______ is the JavaScript mechanism where declarations are moved to the top of their scope before execution.",
+    "answer": "Hoisting",
+    "options": ["Bubbling", "Hoisting", "Scoping", "Binding"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Functions and 'var' declarations are hoisted, making them accessible virtually anywhere inside the executing file."
+  },
+  {
+    "id": "fe-q168",
+    "question": "______ is a static module bundler for modern JavaScript applications.",
+    "answer": "Webpack",
+    "options": ["Babel", "NPM", "Webpack", "Docker"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Webpack translates vast dependency maps into solitary deployable assets."
+  },
+  {
+    "id": "fe-q169",
+    "question": "The ______ is the period between entering block scope and the actual declaration of a 'let' or 'const' variable.",
+    "answer": "Temporal Dead Zone",
+    "options": [
+      "Execution Context",
+      "Temporal Dead Zone",
+      "Hoisting Phase",
+      "Lexical Scope"
+    ],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This strictly prevents programmers from attempting to read data before memory instantiation formally completes."
+  },
+  {
+    "id": "fe-q170",
+    "question": "A ______ is a piece of code used to provide modern functionality on older browsers that do not natively support it.",
+    "answer": "Polyfill",
+    "options": ["Transpiler", "Shim", "Polyfill", "Linter"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Polyfills simulate standard ES6+ operations securely on aging browser versions."
+  },
+  {
+    "id": "fe-q171",
+    "question": "______ is primarily designed for one-dimensional layouts (rows or columns).",
+    "answer": "Flexbox",
+    "options": ["CSS Grid", "Flexbox", "Table", "Float"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Flexbox dynamically distributes sizing constraints internally across individual axis alignments."
+  },
+  {
+    "id": "fe-q172",
+    "question": "The '______' property controls the vertical stacking order of elements that overlap.",
+    "answer": "z-index",
+    "options": ["display", "position", "z-index", "opacity"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Higher values place layers physically above lower values over the browser canvas."
+  },
+  {
+    "id": "fe-q173",
+    "question": "The CSS '______' property specifies that an element should be taken from the normal flow and placed along the left or right side.",
+    "answer": "float",
+    "options": ["align", "clear", "position", "float"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Float fundamentally permits texts to dynamically embrace image margins."
+  },
+  {
+    "id": "fe-q174",
+    "question": "In JavaScript, 'typeof null' erroneously returns '______'.",
+    "answer": "object",
+    "options": ["null", "undefined", "string", "object"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This known specification flaw was purposefully maintained to prevent internet-wide website breakages."
+  },
+  {
+    "id": "fe-q175",
+    "question": "The '______' interface is a minimal document object that has no parent, used to store XML fragments efficiently.",
+    "answer": "DocumentFragment",
+    "options": ["ShadowDOM", "VirtualDOM", "DocumentFragment", "NodeList"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Manipulating sub-trees utilizing DocumentFragments dramatically boosts loop rendering capacities natively."
+  },
+  {
+    "id": "fe-q176",
+    "question": "'______' is relative only to the root HTML element's font-size, avoiding compounding sizing issues.",
+    "answer": "rem",
+    "options": ["em", "px", "rem", "vw"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Root EM values respect global text settings identically across deep div nesting."
+  },
+  {
+    "id": "fe-q177",
+    "question": "'______' returns a single Promise that resolves when all input promises have resolved, or rejects if any reject.",
+    "answer": "Promise.all()",
+    "options": [
+      "Promise.race()",
+      "Promise.any()",
+      "Promise.all()",
+      "Promise.allSettled()"
+    ],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This concurrency operator accelerates disjointed backend fetches happening parallelly."
+  },
+  {
+    "id": "fe-q178",
+    "question": "______ is a practice used to delay the execution of a function until after a certain amount of time has passed since it was last invoked.",
+    "answer": "Debouncing",
+    "options": ["Throttling", "Polling", "Debouncing", "Caching"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Search bars utilize debouncing heavily to suppress useless API queries during rapid character typing."
+  },
+  {
+    "id": "fe-q179",
+    "question": "______ limits the maximum number of times a function can be called over time, ensuring it executes at a regular interval.",
+    "answer": "Throttling",
+    "options": ["Debouncing", "Pacing", "Throttling", "Streaming"],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Throttled scroll handlers guarantee frame drops are minimized reliably."
+  },
+  {
+    "id": "fe-q180",
+    "question": "A ______ (CSP) is an added layer of security that helps detect and mitigate Cross-Site Scripting and data injection.",
+    "answer": "Content Security Policy",
+    "options": [
+      "Cross-Site Protocol",
+      "Content Security Policy",
+      "Client Security Parser",
+      "Cookie Safety Policy"
+    ],
+    "category": "Frontend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "CSP implementation forms the defensive bedrock for securing executing external dependencies properly."
+  }
+]

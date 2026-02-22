@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "ang-q001",
+    "question": "What is Angular?",
+    "answer": "A TypeScript-based open-source web application framework.",
+    "options": [
+      "A JavaScript library for building user interfaces.",
+      "A TypeScript-based open-source web application framework.",
+      "A relational database management system.",
+      "A CSS preprocessor for styling web applications."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Angular is a comprehensive, TypeScript-based framework maintained by Google for building scalable web applications."
+  },
+  {
+    "id": "ang-q002",
+    "question": "What is the primary difference between Angular and AngularJS?",
+    "answer": "Angular is based on TypeScript and has a component-based architecture, whereas AngularJS is based on JavaScript and MVC.",
+    "options": [
+      "Angular uses JavaScript, while AngularJS uses TypeScript.",
+      "Angular is exclusively for mobile apps, while AngularJS is for web apps.",
+      "Angular is based on TypeScript and has a component-based architecture, whereas AngularJS is based on JavaScript and MVC.",
+      "There is no difference; they are just different version numbers of the same framework."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "AngularJS (version 1.x) was written in JavaScript using MVC, while Angular (version 2+) was completely rewritten in TypeScript using a component-based architecture."
+  },
+  {
+    "id": "ang-q003",
+    "question": "What is TypeScript?",
+    "answer": "A typed superset of JavaScript that compiles to plain JavaScript.",
+    "options": [
+      "A typed superset of JavaScript that compiles to plain JavaScript.",
+      "A backend server technology created by Google.",
+      "A lightweight data-interchange format.",
+      "An alternative to HTML for structuring web pages."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "TypeScript adds static typing to JavaScript, allowing developers to catch errors early at compile time before outputting standard JavaScript."
+  },
+  {
+    "id": "ang-q004",
+    "question": "What is a Component in Angular?",
+    "answer": "The most basic UI building block of an Angular app, which forms a tree of components.",
+    "options": [
+      "A database configuration file.",
+      "A background worker process.",
+      "The most basic UI building block of an Angular app, which forms a tree of components.",
+      "A utility class strictly used for HTTP requests."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Components are the core building blocks of Angular applications, encapsulating HTML, CSS, and TypeScript logic into a reusable UI element."
+  },
+  {
+    "id": "ang-q005",
+    "question": "What are Directives in Angular?",
+    "answer": "Classes that add new behavior or modify the DOM structure.",
+    "options": [
+      "Functions that compile TypeScript to JavaScript.",
+      "Classes that add new behavior or modify the DOM structure.",
+      "Routing rules that redirect user traffic.",
+      "Configuration files for the Angular CLI."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Directives allow you to attach behavior to DOM elements or transform the DOM structure itself."
+  },
+  {
+    "id": "ang-q006",
+    "question": "Which of the following is an example of a structural directive?",
+    "answer": "*ngIf",
+    "options": ["ngClass", "ngStyle", "ngModel", "*ngIf"],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "*ngIf is a structural directive because it physically adds or removes elements from the DOM based on a condition."
+  },
+  {
+    "id": "ang-q007",
+    "question": "What is the purpose of an attribute directive?",
+    "answer": "To change the appearance or behavior of a DOM element.",
+    "options": [
+      "To add or remove DOM elements.",
+      "To manage application state.",
+      "To change the appearance or behavior of a DOM element.",
+      "To handle HTTP interceptors."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Attribute directives look like regular HTML attributes and alter the behavior or visual appearance of the element they are attached to (e.g., ngClass)."
+  },
+  {
+    "id": "ang-q008",
+    "question": "What is data binding in Angular?",
+    "answer": "A core concept that allows communication between a component class and its corresponding template.",
+    "options": [
+      "A method to securely encrypt user passwords.",
+      "A core concept that allows communication between a component class and its corresponding template.",
+      "A way to link an SQL database directly to the DOM.",
+      "A technique to bundle JavaScript files together."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Data binding connects application data to the view, automatically keeping the template and the component's TypeScript class in sync."
+  },
+  {
+    "id": "ang-q009",
+    "question": "Which syntax is used for property binding in Angular?",
+    "answer": "[property]=\"value\"",
+    "options": [
+      "{{property}}",
+      "(property)=\"value\"",
+      "[property]=\"value\"",
+      "*property=\"value\""
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Square brackets [] are used for property binding, which sets a property of a view element to the value of a template expression."
+  },
+  {
+    "id": "ang-q010",
+    "question": "Which directive is used to achieve two-way data binding in Angular?",
+    "answer": "ngModel",
+    "options": ["ngBind", "ngModel", "ngTwoWay", "ngData"],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "ngModel is the primary directive used to achieve two-way data binding, combining both property binding and event binding syntax: [(ngModel)]."
+  },
+  {
+    "id": "ang-q011",
+    "question": "What is a Pipe in Angular?",
+    "answer": "A function that transforms input values to output values for display in a view.",
+    "options": [
+      "A communication channel between the backend and frontend.",
+      "A function that transforms input values to output values for display in a view.",
+      "A tool to inject dependencies into components.",
+      "A command-line interface utility."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Pipes take in data as input and transform it to a desired output format strictly for template rendering (e.g., dates, currencies)."
+  },
+  {
+    "id": "ang-q012",
+    "question": "What is Dependency Injection (DI) in Angular?",
+    "answer": "A design pattern where classes receive their dependencies from an external source rather than creating them.",
+    "options": [
+      "A design pattern where classes receive their dependencies from an external source rather than creating them.",
+      "A security flaw allowing malicious code to be executed.",
+      "A process of compiling CSS into JavaScript.",
+      "A method for routing between multiple web pages."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DI provides classes with the services they need to operate, promoting modularity and easier unit testing."
+  },
+  {
+    "id": "ang-q013",
+    "question": "What is an NgModule?",
+    "answer": "A class decorated with @NgModule that consolidates components, directives, and pipes into cohesive blocks of functionality.",
+    "options": [
+      "A built-in Node.js package manager.",
+      "A strict set of rules for naming Angular files.",
+      "A class decorated with @NgModule that consolidates components, directives, and pipes into cohesive blocks of functionality.",
+      "An automated testing tool for Angular."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "NgModules configure the injector and the compiler, helping organize related things together into functional sets."
+  },
+  {
+    "id": "ang-q014",
+    "question": "What is the primary purpose of Angular Services?",
+    "answer": "To organize and share business logic, data, or functions across multiple components.",
+    "options": [
+      "To style the application's user interface.",
+      "To organize and share business logic, data, or functions across multiple components.",
+      "To define the HTML layout of a page.",
+      "To manage server-side databases."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Services abstract complex logic, state management, or data fetching away from the UI components so it can be reused across the app."
+  },
+  {
+    "id": "ang-q015",
+    "question": "Which Angular lifecycle hook is called once, after the first ngOnChanges()?",
+    "answer": "ngOnInit()",
+    "options": [
+      "ngAfterViewInit()",
+      "ngOnDestroy()",
+      "ngDoCheck()",
+      "ngOnInit()"
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ngOnInit() is triggered right after Angular has initialized all data-bound properties, making it the perfect place for component setup."
+  },
+  {
+    "id": "ang-q016",
+    "question": "What is the difference between Constructor and ngOnInit?",
+    "answer": "The Constructor is used for initial class setup and DI, while ngOnInit is used for Angular-specific initialization like fetching data.",
+    "options": [
+      "They are identical and can be used interchangeably.",
+      "The Constructor is used for initial class setup and DI, while ngOnInit is used for Angular-specific initialization like fetching data.",
+      "ngOnInit is executed before the Constructor.",
+      "The Constructor is part of Angular, while ngOnInit is a standard TypeScript feature."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The constructor is a standard TypeScript feature that executes when the class is instantiated, whereas ngOnInit is an Angular-specific lifecycle hook."
+  },
+  {
+    "id": "ang-q017",
+    "question": "What is AOT Compilation in Angular?",
+    "answer": "Ahead-of-Time compilation, which compiles your app components and templates during the build process.",
+    "options": [
+      "Ahead-of-Time compilation, which compiles your app components and templates during the build process.",
+      "Asynchronous Output Transfer, used for lazy loading.",
+      "Angular Object Tracking, a memory management technique.",
+      "Array Output Transformation, used in pipes."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "AOT compiles your HTML and TypeScript code into efficient JavaScript before the browser downloads it, ensuring faster rendering."
+  },
+  {
+    "id": "ang-q018",
+    "question": "What is JIT Compilation?",
+    "answer": "Just-in-Time compilation, which compiles your app inside the browser at runtime.",
+    "options": [
+      "JavaScript Integration Testing, used for unit tests.",
+      "Just-in-Time compilation, which compiles your app inside the browser at runtime.",
+      "A method of fetching HTTP requests instantaneously.",
+      "A routing strategy that loads modules immediately."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "JIT compiles the application at runtime within the user's browser, which means a larger bundle size and slower initial load compared to AOT."
+  },
+  {
+    "id": "ang-q019",
+    "question": "What is RxJS?",
+    "answer": "A library for reactive programming using Observables to make it easier to compose asynchronous or callback-based code.",
+    "options": [
+      "A state management library specific to Angular.",
+      "A framework for writing unit tests.",
+      "A library for reactive programming using Observables to make it easier to compose asynchronous or callback-based code.",
+      "An alternative to TypeScript for writing Angular code."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "RxJS provides the core implementation of Observables and reactive patterns that Angular uses heavily for HTTP calls, routing, and form events."
+  },
+  {
+    "id": "ang-q020",
+    "question": "What is an Observable?",
+    "answer": "A representation of any set of values over any amount of time, allowing you to subscribe to its emissions.",
+    "options": [
+      "A variable that can only be read, never written.",
+      "A static HTML element that renders data.",
+      "A representation of any set of values over any amount of time, allowing you to subscribe to its emissions.",
+      "A built-in Angular service for tracking user mouse movements."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Observables represent data streams that you can subscribe to, enabling declarative handling of asynchronous operations."
+  },
+  {
+    "id": "ang-q021",
+    "question": "What is the primary difference between a Promise and an Observable?",
+    "answer": "A Promise handles a single event and is not cancellable, whereas an Observable handles a stream of events and can be cancelled.",
+    "options": [
+      "A Promise handles a stream of events, whereas an Observable handles a single event.",
+      "A Promise is synchronous, while an Observable is asynchronous.",
+      "A Promise handles a single event and is not cancellable, whereas an Observable handles a stream of events and can be cancelled.",
+      "There is no functional difference; they are just different naming conventions."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Observables provide advanced capabilities over native Promises, such as delivering multiple values over time, cancellation, and built-in RxJS operators."
+  },
+  {
+    "id": "ang-q022",
+    "question": "What is the purpose of the <router-outlet> directive?",
+    "answer": "It acts as a placeholder where the router should display the components for the activated route.",
+    "options": [
+      "To define the main navigation menu of the application.",
+      "It acts as a placeholder where the router should display the components for the activated route.",
+      "To securely pass data between different servers.",
+      "To automatically generate URLs for the application."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "When an Angular route is activated, the framework injects the corresponding component directly into the DOM exactly where <router-outlet> is placed."
+  },
+  {
+    "id": "ang-q023",
+    "question": "What is Lazy Loading in Angular routing?",
+    "answer": "A technique to load JavaScript components asynchronously when a specific route is activated, reducing the initial bundle size.",
+    "options": [
+      "Loading images only when they appear in the user's viewport.",
+      "A technique to load JavaScript components asynchronously when a specific route is activated, reducing the initial bundle size.",
+      "A method to delay the execution of an HTTP request.",
+      "Loading CSS stylesheets after the HTML is fully rendered."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "By lazy loading NgModules, you ensure that code for specific routes is only downloaded when the user actually navigates to them."
+  },
+  {
+    "id": "ang-q024",
+    "question": "What are Route Guards?",
+    "answer": "Interfaces that allow you to control access to or from a route based on conditions (e.g., user authentication).",
+    "options": [
+      "Security headers sent to the server to prevent XSS attacks.",
+      "Methods that protect local variables inside a component.",
+      "Interfaces that allow you to control access to or from a route based on conditions (e.g., user authentication).",
+      "Functions that automatically catch unhandled exceptions."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Guards like CanActivate or CanDeactivate evaluate logic to determine if the router should allow a navigation event to proceed."
+  },
+  {
+    "id": "ang-q025",
+    "question": "Which interface is used to prevent an unauthorized user from accessing a route?",
+    "answer": "CanActivate",
+    "options": ["CanDeactivate", "CanLoad", "Resolve", "CanActivate"],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The CanActivate interface implements a function that returns a boolean or Observable resolving to a boolean, dictating if the route can be accessed."
+  },
+  {
+    "id": "ang-q026",
+    "question": "What is the purpose of the Angular CLI?",
+    "answer": "A command-line interface tool to initialize, develop, scaffold, and maintain Angular applications.",
+    "options": [
+      "A graphical user interface for managing a database.",
+      "A command-line interface tool to initialize, develop, scaffold, and maintain Angular applications.",
+      "An automated testing environment strictly for End-to-End tests.",
+      "A library used exclusively to handle HTTP requests."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Angular CLI drastically simplifies application creation, automated code generation (components, services), testing, and production building."
+  },
+  {
+    "id": "ang-q027",
+    "question": "What is Content Projection in Angular?",
+    "answer": "A pattern in which you insert, or project, the content you want to use inside another component.",
+    "options": [
+      "A way to cast a variable from one data type to another.",
+      "A pattern in which you insert, or project, the content you want to use inside another component.",
+      "A technique to project database records onto the DOM.",
+      "An advanced styling feature using SCSS."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Content projection allows for highly reusable wrapper components (like modals or cards) that render custom HTML passed between their opening and closing tags."
+  },
+  {
+    "id": "ang-q028",
+    "question": "What tag is used to implement content projection in a component's template?",
+    "answer": "<ng-content>",
+    "options": [
+      "<ng-template>",
+      "<router-outlet>",
+      "<ng-container>",
+      "<ng-content>"
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The <ng-content> tag acts as a placeholder for any external content passed directly inside the component tags."
+  },
+  {
+    "id": "ang-q029",
+    "question": "What is ViewChild used for?",
+    "answer": "A decorator that configures a view query to get access to a child component, directive, or DOM element from the parent component class.",
+    "options": [
+      "To establish a routing child path.",
+      "A decorator that configures a view query to get access to a child component, directive, or DOM element from the parent component class.",
+      "To securely inherit CSS styles from a parent component.",
+      "To automatically inject services into a child component."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "ViewChild provides direct programmatic access to child elements or components rendered inside the parent component's view."
+  },
+  {
+    "id": "ang-q030",
+    "question": "What is the difference between Template-driven forms and Reactive forms?",
+    "answer": "Template-driven forms rely on directives in the template to create and manage the form model, while Reactive forms use an explicit model created in the component class.",
+    "options": [
+      "Template-driven forms are synchronous, while Reactive forms are asynchronous.",
+      "Template-driven forms rely on directives in the template to create and manage the form model, while Reactive forms use an explicit model created in the component class.",
+      "Template-driven forms are strictly for mobile, while Reactive forms are for desktop.",
+      "There is no difference; they are just two names for the same feature."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Reactive forms are more robust, testable, and strictly tied to logic defined in TypeScript, whereas Template-driven forms abstract much of the state tracking into HTML directives."
+  },
+  {
+    "id": "ang-q031",
+    "question": "What is the FormBuilder service?",
+    "answer": "A syntactic sugar that provides convenient methods for generating form controls, groups, and arrays in Reactive Forms.",
+    "options": [
+      "A CLI command to generate HTML forms automatically.",
+      "A syntactic sugar that provides convenient methods for generating form controls, groups, and arrays in Reactive Forms.",
+      "A third-party plugin for styling forms.",
+      "A service that automatically submits form data to a server."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "FormBuilder reduces boilerplate code by replacing explicit instantiation of FormGroup and FormControl with simple service methods."
+  },
+  {
+    "id": "ang-q032",
+    "question": "What is an HTTP Interceptor?",
+    "answer": "A mechanism that allows you to intercept and modify HTTP requests and responses globally.",
+    "options": [
+      "A firewall feature integrated into Angular.",
+      "A mechanism that allows you to intercept and modify HTTP requests and responses globally.",
+      "A pipe that formats HTTP response strings.",
+      "An automated tool for testing REST APIs."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Interceptors are perfect for attaching authentication tokens, adding global error handling, or logging out-bound requests."
+  },
+  {
+    "id": "ang-q033",
+    "question": "What is the purpose of the Async Pipe?",
+    "answer": "It subscribes to an Observable or Promise and returns the latest value it has emitted.",
+    "options": [
+      "It converts synchronous code to asynchronous code.",
+      "It delays the rendering of a component by a specified time.",
+      "It subscribes to an Observable or Promise and returns the latest value it has emitted.",
+      "It pushes data to the backend asynchronously."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The async pipe also automatically unsubscribes from the Observable when the component is destroyed, preventing memory leaks."
+  },
+  {
+    "id": "ang-q034",
+    "question": "Why is the base href tag (`<base href=\"/\">`) necessary in an Angular app?",
+    "answer": "It tells the Angular router how to compose navigation URLs and resolve assets.",
+    "options": [
+      "It applies the default styling to the application.",
+      "It connects the application to the backend API.",
+      "It acts as a fallback route for 404 errors.",
+      "It tells the Angular router how to compose navigation URLs and resolve assets."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Without the base href tag, the router would not know the relative root URL for pushing new history states or resolving static images/files."
+  },
+  {
+    "id": "ang-q035",
+    "question": "What is an Angular Workspace?",
+    "answer": "A folder generated by the Angular CLI that contains the configuration and code files for one or more Angular projects.",
+    "options": [
+      "The physical memory allocated to run the application.",
+      "A folder generated by the Angular CLI that contains the configuration and code files for one or more Angular projects.",
+      "The cloud server where the Angular app is deployed.",
+      "A specific IDE extension for writing Angular code."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A workspace tracks project-wide settings via angular.json, allowing you to manage multiple applications or libraries in a single repository."
+  },
+  {
+    "id": "ang-q036",
+    "question": "How do you define a custom pipe in Angular?",
+    "answer": "By decorating a class with @Pipe and implementing the PipeTransform interface.",
+    "options": [
+      "By inheriting from the built-in Pipe class.",
+      "By decorating a class with @Pipe and implementing the PipeTransform interface.",
+      "By adding the pipe configuration to the environment.ts file.",
+      "By writing a pure JavaScript function without decorators."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The PipeTransform interface enforces a 'transform()' method on the class, which executes the custom logic needed by the template."
+  },
+  {
+    "id": "ang-q037",
+    "question": "Which RxJS operator is commonly used to avoid making duplicate HTTP requests for every keystroke in a search input?",
+    "answer": "debounceTime",
+    "options": ["map", "filter", "debounceTime", "catchError"],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "debounceTime delays emitting values from the source Observable until a specified quiet period has passed since the last keystroke."
+  },
+  {
+    "id": "ang-q038",
+    "question": "What is the difference between pure and impure pipes?",
+    "answer": "A pure pipe is only executed when a pure change to the input value is detected, while an impure pipe is executed during every component change detection cycle.",
+    "options": [
+      "Pure pipes only work with strings, while impure pipes work with objects.",
+      "A pure pipe is only executed when a pure change to the input value is detected, while an impure pipe is executed during every component change detection cycle.",
+      "Pure pipes are built-in, while impure pipes are custom-made.",
+      "There is no difference; impure pipes are just pure pipes with errors."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Angular heavily optimizes pure pipes by only checking primitive values or object references, whereas impure pipes can cause serious performance issues if overused."
+  },
+  {
+    "id": "ang-q039",
+    "question": "What is Bootstrapping in Angular?",
+    "answer": "The process of initializing the root module to launch the application.",
+    "options": [
+      "Including the Bootstrap CSS framework in the application.",
+      "The process of initializing the root module to launch the application.",
+      "Securing the application against cross-site scripting attacks.",
+      "A technique for compiling code faster."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Bootstrapping defines the initial entry point, typically loading AppModule and attaching the main AppComponent to the DOM."
+  },
+  {
+    "id": "ang-q040",
+    "question": "What is the purpose of the polyfills.ts file?",
+    "answer": "To provide scripts that implement web standards in older browsers that do not natively support them.",
+    "options": [
+      "To store global variables accessible by all components.",
+      "To define the routing map for the application.",
+      "To provide scripts that implement web standards in older browsers that do not natively support them.",
+      "To configure environment-specific settings for production builds."
+    ],
+    "category": "Angular",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Polyfills bridge the gap between modern browser APIs used by Angular and missing implementations in older environments."
+  },
+  {
+    "id": "ang-q041",
+    "question": "True or False: Angular is a JavaScript library for building user interfaces.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Angular is a full, TypeScript-based open-source web application framework, not just a JavaScript UI library."
+  },
+  {
+    "id": "ang-q042",
+    "question": "True or False: Angular is based on TypeScript and has a component-based architecture, whereas AngularJS is based on JavaScript and MVC.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Angular (v2+) fundamentally rebuilt the architecture around components and TypeScript, leaving behind AngularJS's MVC model."
+  },
+  {
+    "id": "ang-q043",
+    "question": "True or False: TypeScript is a lightweight data-interchange format.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript."
+  },
+  {
+    "id": "ang-q044",
+    "question": "True or False: A Component is the most basic UI building block of an Angular app, which forms a tree of components.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Every Angular application has at least one root component that orchestrates a hierarchy of child components."
+  },
+  {
+    "id": "ang-q045",
+    "question": "True or False: Directives in Angular are routing rules that redirect user traffic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Directives are classes that add new behavior or modify the DOM structure, they are not routing rules."
+  },
+  {
+    "id": "ang-q046",
+    "question": "True or False: *ngIf is an example of a structural directive.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. *ngIf structurally modifies the DOM by adding or removing an element based on a boolean condition."
+  },
+  {
+    "id": "ang-q047",
+    "question": "True or False: The purpose of an attribute directive is to strictly add or remove DOM elements.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Adding/removing DOM elements is the job of structural directives. Attribute directives only change the appearance or behavior of existing elements."
+  },
+  {
+    "id": "ang-q048",
+    "question": "True or False: Data binding in Angular is a core concept that allows communication between a component class and its corresponding template.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Data binding abstracts away direct DOM manipulation, automatically linking TypeScript variables to the HTML layout."
+  },
+  {
+    "id": "ang-q049",
+    "question": "True or False: The syntax (property)=\"value\" is used for property binding in Angular.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Square brackets [property]=\"value\" are used for property binding. Parentheses () denote event binding."
+  },
+  {
+    "id": "ang-q050",
+    "question": "True or False: The ngModel directive is used to achieve two-way data binding in Angular.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Applying [(ngModel)] allows data to flow from the component to the view and back simultaneously."
+  },
+  {
+    "id": "ang-q051",
+    "question": "True or False: A Pipe in Angular is a tool used to inject dependencies into components.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Pipe is a function that transforms input values to output values strictly for display in a view."
+  },
+  {
+    "id": "ang-q052",
+    "question": "True or False: Dependency Injection (DI) is a design pattern where classes receive their dependencies from an external source rather than creating them.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. DI promotes loose coupling and simplifies testing by passing instances into a class's constructor."
+  },
+  {
+    "id": "ang-q053",
+    "question": "True or False: An NgModule is a strict set of rules for naming Angular files.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. An NgModule is a class decorated with @NgModule that consolidates components, directives, and pipes into functional blocks."
+  },
+  {
+    "id": "ang-q054",
+    "question": "True or False: The primary purpose of Angular Services is to organize and share business logic, data, or functions across multiple components.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Services act as singleton classes that can be injected anywhere in the application to share state and data fetch operations."
+  },
+  {
+    "id": "ang-q055",
+    "question": "True or False: The ngDoCheck() lifecycle hook is called once, after the first ngOnChanges().",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The correct lifecycle hook called immediately after the first ngOnChanges() is ngOnInit()."
+  },
+  {
+    "id": "ang-q056",
+    "question": "True or False: The Constructor is used for initial class setup and DI, while ngOnInit is used for Angular-specific initialization like fetching data.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. It is an Angular best practice to keep constructors clean and handle API calls inside ngOnInit."
+  },
+  {
+    "id": "ang-q057",
+    "question": "True or False: AOT Compilation stands for Asynchronous Output Transfer, used for lazy loading.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. AOT stands for Ahead-of-Time compilation, which compiles the application before the browser downloads it."
+  },
+  {
+    "id": "ang-q058",
+    "question": "True or False: JIT Compilation stands for Just-in-Time compilation, which compiles your app inside the browser at runtime.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. JIT compiling is typically used in local development to see changes quickly, but it executes directly in the user's browser."
+  },
+  {
+    "id": "ang-q059",
+    "question": "True or False: RxJS is a state management library specific only to Angular applications.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. RxJS is a library for reactive programming using Observables and can be used in any JavaScript environment, not just Angular."
+  },
+  {
+    "id": "ang-q060",
+    "question": "True or False: An Observable is a representation of any set of values over any amount of time, allowing you to subscribe to its emissions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Observables are the core building block of reactive programming, effectively handling async data streams."
+  },
+  {
+    "id": "ang-q061",
+    "question": "True or False: A Promise handles a stream of events and is cancellable, whereas an Observable handles only a single event.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The exact opposite is true. An Observable handles multiple events and is cancellable, whereas a Promise only resolves a single event once."
+  },
+  {
+    "id": "ang-q062",
+    "question": "True or False: The <router-outlet> directive acts as a placeholder where the router should display the components for the activated route.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Angular dynamically swaps the content rendered at <router-outlet> based on the current URL path."
+  },
+  {
+    "id": "ang-q063",
+    "question": "True or False: Lazy Loading in Angular routing is a method to delay the execution of an HTTP request until the user clicks a button.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Lazy Loading is a technique to load JavaScript bundles asynchronously when a route is activated, reducing the initial application load size."
+  },
+  {
+    "id": "ang-q064",
+    "question": "True or False: Route Guards are interfaces that allow you to control access to or from a route based on conditions like user authentication.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Route Guards prevent unauthenticated or unauthorized users from visiting protected URLs in the app."
+  },
+  {
+    "id": "ang-q065",
+    "question": "True or False: The CanDeactivate interface is used to prevent an unauthorized user from accessing a route.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. CanActivate controls access INTO a route. CanDeactivate controls if a user is allowed to LEAVE a route (e.g., stopping them if they have unsaved form data)."
+  },
+  {
+    "id": "ang-q066",
+    "question": "True or False: The Angular CLI is a command-line interface tool used to initialize, develop, scaffold, and maintain Angular applications.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. The Angular CLI automates complex build processes and ensures project files are created following best practices."
+  },
+  {
+    "id": "ang-q067",
+    "question": "True or False: Content Projection in Angular is a technique to cast a variable from one data type to another.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Content Projection is a pattern to insert or project HTML template content from a parent into a child component."
+  },
+  {
+    "id": "ang-q068",
+    "question": "True or False: The <ng-content> tag is used to implement content projection in a component's template.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Any markup nested between the custom component tags in the parent template will be rendered exactly where <ng-content> is placed."
+  },
+  {
+    "id": "ang-q069",
+    "question": "True or False: ViewChild is used to securely inherit CSS styles from a parent component.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. ViewChild is a decorator used to query and access a child component, directive, or DOM element directly from the parent class."
+  },
+  {
+    "id": "ang-q070",
+    "question": "True or False: Template-driven forms rely on directives in the template to create and manage the form model, while Reactive forms use an explicit model created in the component class.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Reactive forms provide a more explicit, programmatic approach to forms, whereas Template-driven forms rely heavily on HTML-side binding."
+  },
+  {
+    "id": "ang-q071",
+    "question": "True or False: The FormBuilder service is a CLI command used to generate HTML forms automatically.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. FormBuilder is a TypeScript service providing syntactic sugar to conveniently build complex form control groups and arrays in Reactive Forms."
+  },
+  {
+    "id": "ang-q072",
+    "question": "True or False: An HTTP Interceptor is a mechanism that allows you to intercept and modify HTTP requests and responses globally.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Interceptors can transform requests (like attaching headers) or handle centralized logic for processing HTTP errors."
+  },
+  {
+    "id": "ang-q073",
+    "question": "True or False: The purpose of the Async Pipe is to delay the rendering of a component by a specified time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The Async Pipe subscribes to an Observable or Promise directly inside the template, returning the latest emitted value automatically."
+  },
+  {
+    "id": "ang-q074",
+    "question": "True or False: The base href tag is necessary in an Angular app because it tells the Angular router how to compose navigation URLs and resolve assets.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Setting <base href=\"/\"> helps the router process nested route URLs safely."
+  },
+  {
+    "id": "ang-q075",
+    "question": "True or False: An Angular Workspace is the physical memory allocated by the browser to run the application.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. An Angular Workspace is the foundational folder hierarchy generated by the CLI containing configuration and source code for one or more projects."
+  },
+  {
+    "id": "ang-q076",
+    "question": "True or False: You define a custom pipe in Angular by decorating a class with @Pipe and implementing the PipeTransform interface.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. The PipeTransform interface mandates a transform() method where the custom formatting logic resides."
+  },
+  {
+    "id": "ang-q077",
+    "question": "True or False: The RxJS operator 'catchError' is commonly used to avoid making duplicate HTTP requests for every keystroke in a search input.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The 'debounceTime' operator is used to limit HTTP requests during rapid typing. 'catchError' handles exceptions."
+  },
+  {
+    "id": "ang-q078",
+    "question": "True or False: A pure pipe is only executed when a pure change to the input value is detected, while an impure pipe is executed during every component change detection cycle.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Impure pipes evaluate extremely often, taking a toll on performance, whereas pure pipes are cached and optimized."
+  },
+  {
+    "id": "ang-q079",
+    "question": "True or False: Bootstrapping in Angular refers to including the Bootstrap CSS framework within the application files.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Bootstrapping refers to the process of initializing the root module (AppModule) to launch the entire application execution flow."
+  },
+  {
+    "id": "ang-q080",
+    "question": "True or False: The purpose of the polyfills.ts file is to provide scripts that implement web standards in older browsers that do not natively support them.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Angular",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Polyfills ensure backwards compatibility so that modern Angular code works on older browsers."
+  },
+  {
+    "id": "ang-q081",
+    "question": "Angular is a ______-based open-source web application framework.",
+    "answer": "TypeScript",
+    "options": ["JavaScript", "TypeScript", "Python", "Ruby"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "TypeScript natively provides strong typing and advanced OOP concepts, powering the modern Angular framework."
+  },
+  {
+    "id": "ang-q082",
+    "question": "Angular is based on TypeScript and has a component-based architecture, whereas AngularJS is based on JavaScript and ______.",
+    "answer": "MVC",
+    "options": ["TypeScript", "Mobile-first", "REST", "MVC"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "AngularJS relied on the Model-View-Controller (MVC) architecture before the framework was redesigned."
+  },
+  {
+    "id": "ang-q083",
+    "question": "TypeScript is a typed superset of JavaScript that compiles to plain ______.",
+    "answer": "JavaScript",
+    "options": ["Java", "JavaScript", "HTML", "WebAssembly"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "TypeScript code cannot run natively in most browsers; it must be transpiled back to plain JavaScript."
+  },
+  {
+    "id": "ang-q084",
+    "question": "A ______ is the most basic UI building block of an Angular app, which forms a tree.",
+    "answer": "Component",
+    "options": ["Module", "Service", "Component", "Directive"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Every Angular app consists of a root Component encapsulating nested child components."
+  },
+  {
+    "id": "ang-q085",
+    "question": "Directives in Angular are classes that add new behavior or modify the ______ structure.",
+    "answer": "DOM",
+    "options": ["Server", "Routing", "DOM", "Database"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Directives interface directly with the Document Object Model (DOM) to mutate HTML node appearance or presence."
+  },
+  {
+    "id": "ang-q086",
+    "question": "An example of a ______ directive in Angular is *ngIf.",
+    "answer": "structural",
+    "options": ["component", "attribute", "structural", "module"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Structural directives alter the structure of the DOM, denoted by an asterisk (*) prefix."
+  },
+  {
+    "id": "ang-q087",
+    "question": "The purpose of an ______ directive is to change the appearance or behavior of a DOM element.",
+    "answer": "attribute",
+    "options": ["structural", "attribute", "component", "injection"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Attribute directives behave like standard HTML attributes to augment existing element properties."
+  },
+  {
+    "id": "ang-q088",
+    "question": "Data binding allows communication between a component ______ and its corresponding template.",
+    "answer": "class",
+    "options": ["service", "class", "module", "pipe"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Data binding connects the TypeScript logic class with the HTML view template."
+  },
+  {
+    "id": "ang-q089",
+    "question": "The syntax ______ is used for property binding in Angular.",
+    "answer": "[property]=\"value\"",
+    "options": [
+      "{{property}}",
+      "[property]=\"value\"",
+      "(property)=\"value\"",
+      "[(property)]"
+    ],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Square brackets [ ] are the definitive syntax for unidirectional property binding in Angular."
+  },
+  {
+    "id": "ang-q090",
+    "question": "The directive ______ is used to achieve two-way data binding in Angular.",
+    "answer": "ngModel",
+    "options": ["ngBind", "ngModel", "ngSubmit", "ngForm"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "ngModel synchronizes form inputs directly with class variables in real-time."
+  },
+  {
+    "id": "ang-q091",
+    "question": "A ______ is a function that transforms input values to output values for display in a view.",
+    "answer": "Pipe",
+    "options": ["Pipe", "Guard", "Service", "Component"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Pipes, denoted by the | character in templates, format data cleanly at the UI level."
+  },
+  {
+    "id": "ang-q092",
+    "question": "Dependency ______ is a design pattern where classes receive their dependencies from an external source.",
+    "answer": "Injection",
+    "options": ["Inversion", "Injection", "Integration", "Iteration"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Angular uses Dependency Injection (DI) extensively to supply component dependencies automatically."
+  },
+  {
+    "id": "ang-q093",
+    "question": "A class decorated with ______ consolidates components, directives, and pipes into cohesive blocks of functionality.",
+    "answer": "@NgModule",
+    "options": ["@Component", "@Injectable", "@NgModule", "@Directive"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The @NgModule decorator acts as an organizational metadata wrapper for specific application features."
+  },
+  {
+    "id": "ang-q094",
+    "question": "The primary purpose of Angular ______ is to organize and share business logic, data, or functions across multiple components.",
+    "answer": "Services",
+    "options": ["Pipes", "Templates", "Directives", "Services"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Services abstract complex logic out of the component layer to maintain the Single Responsibility Principle."
+  },
+  {
+    "id": "ang-q095",
+    "question": "The ______ lifecycle hook is called once, after the first ngOnChanges().",
+    "answer": "ngOnInit()",
+    "options": [
+      "ngOnInit()",
+      "ngAfterViewInit()",
+      "ngDoCheck()",
+      "ngOnDestroy()"
+    ],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ngOnInit is the standard lifecycle method for running initialization logic like API calls."
+  },
+  {
+    "id": "ang-q096",
+    "question": "The ______ is used for initial class setup and DI, while ngOnInit is used for Angular-specific initialization.",
+    "answer": "Constructor",
+    "options": ["Decorator", "Template", "Constructor", "Module"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The constructor is native to JavaScript/TypeScript, while ngOnInit hooks directly into the Angular rendering cycle."
+  },
+  {
+    "id": "ang-q097",
+    "question": "______ Compilation compiles your app components and templates during the build process.",
+    "answer": "AOT",
+    "options": ["JIT", "AOT", "AST", "CLI"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Ahead-Of-Time (AOT) compilation packages highly optimized JavaScript before the code reaches the browser."
+  },
+  {
+    "id": "ang-q098",
+    "question": "______ Compilation compiles your app inside the browser at runtime.",
+    "answer": "JIT",
+    "options": ["AOT", "AST", "JIT", "CLI"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Just-In-Time (JIT) compiles templates dynamically when the app executes in the environment."
+  },
+  {
+    "id": "ang-q099",
+    "question": "______ is a library for reactive programming using Observables to make it easier to compose asynchronous code.",
+    "answer": "RxJS",
+    "options": ["NgRx", "Redux", "RxJS", "Lodash"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "RxJS is deeply integrated into Angular for handling events, HTTP logic, and reactive states."
+  },
+  {
+    "id": "ang-q100",
+    "question": "An ______ is a representation of any set of values over any amount of time, allowing you to subscribe to its emissions.",
+    "answer": "Observable",
+    "options": ["Promise", "Observable", "Iterator", "Subject"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Observables represent asynchronous data streams that publish values iteratively."
+  },
+  {
+    "id": "ang-q101",
+    "question": "A Promise handles a single event and is not cancellable, whereas an ______ handles a stream of events and can be cancelled.",
+    "answer": "Observable",
+    "options": ["Callback", "Observable", "Awaiter", "Event"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Unlike Promises, Observables allow for stream cancellation and repeated value emissions."
+  },
+  {
+    "id": "ang-q102",
+    "question": "The ______ directive acts as a placeholder where the router should display the components for the activated route.",
+    "answer": "<router-outlet>",
+    "options": [
+      "<router-link>",
+      "<router-outlet>",
+      "<ng-template>",
+      "<app-root>"
+    ],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Angular uses <router-outlet> to know where to insert routed components in the layout."
+  },
+  {
+    "id": "ang-q103",
+    "question": "______ Loading is a technique to load JavaScript components asynchronously when a specific route is activated.",
+    "answer": "Lazy",
+    "options": ["Eager", "Pre", "Lazy", "Active"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Lazy loading dramatically decreases initial bundle sizes by fetching modules only when navigated to."
+  },
+  {
+    "id": "ang-q104",
+    "question": "Route ______ are interfaces that allow you to control access to or from a route based on conditions.",
+    "answer": "Guards",
+    "options": ["Pipes", "Interceptors", "Guards", "Resolvers"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Guards protect URL endpoints and enforce conditional access controls within the application."
+  },
+  {
+    "id": "ang-q105",
+    "question": "The ______ interface is used to prevent an unauthorized user from accessing a route.",
+    "answer": "CanActivate",
+    "options": ["CanDeactivate", "CanActivate", "CanLoad", "CanProtect"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "CanActivate evaluates logic (like a token check) before allowing navigation to proceed to the target route."
+  },
+  {
+    "id": "ang-q106",
+    "question": "The Angular ______ is a command-line interface tool to initialize, develop, scaffold, and maintain Angular applications.",
+    "answer": "CLI",
+    "options": ["SDK", "API", "CLI", "GUI"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The CLI is invoked via the 'ng' command to automate generation and builds."
+  },
+  {
+    "id": "ang-q107",
+    "question": "Content ______ is a pattern in which you insert the content you want to use inside another component.",
+    "answer": "Projection",
+    "options": ["Injection", "Projection", "Reflection", "Insertion"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Content Projection creates reusable wrapper templates that accept arbitrary nested markup."
+  },
+  {
+    "id": "ang-q108",
+    "question": "The ______ tag is used to implement content projection in a component's template.",
+    "answer": "<ng-content>",
+    "options": [
+      "<ng-template>",
+      "<ng-container>",
+      "<ng-content>",
+      "<router-outlet>"
+    ],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The <ng-content> element acts as the render destination for externally projected HTML."
+  },
+  {
+    "id": "ang-q109",
+    "question": "______ is a decorator that configures a view query to get access to a child component, directive, or DOM element.",
+    "answer": "ViewChild",
+    "options": ["Input", "Output", "ViewChild", "HostListener"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "ViewChild queries the DOM to retrieve instances of child components or raw native elements for TypeScript control."
+  },
+  {
+    "id": "ang-q110",
+    "question": "______ forms rely on directives in the template to create and manage the form model, while Reactive forms use an explicit model.",
+    "answer": "Template-driven",
+    "options": ["Template-driven", "Reactive", "Dynamic", "Component-driven"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Template-driven forms lean heavily on structural HTML attributes, offering an angularJS-style approach."
+  },
+  {
+    "id": "ang-q111",
+    "question": "The ______ service provides convenient methods for generating form controls, groups, and arrays in Reactive Forms.",
+    "answer": "FormBuilder",
+    "options": ["FormBuilder", "FormGroup", "FormControl", "FormService"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "FormBuilder drastically shortens the code required to instantiate complex reactive form state models."
+  },
+  {
+    "id": "ang-q112",
+    "question": "An HTTP ______ is a mechanism that allows you to intercept and modify HTTP requests and responses globally.",
+    "answer": "Interceptor",
+    "options": ["Guard", "Service", "Interceptor", "Pipe"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Interceptors catch outbound and inbound network traffic to systematically apply operations like attaching JWT tokens."
+  },
+  {
+    "id": "ang-q113",
+    "question": "The ______ Pipe subscribes to an Observable or Promise and returns the latest value it has emitted.",
+    "answer": "Async",
+    "options": ["Async", "Sync", "Date", "Json"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Async pipe is an elegant solution to manage stream subscriptions entirely from the HTML template."
+  },
+  {
+    "id": "ang-q114",
+    "question": "The ______ tag is necessary in an Angular app to tell the router how to compose navigation URLs and resolve assets.",
+    "answer": "base href",
+    "options": ["base href", "meta tag", "router tag", "link tag"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The base href URL indicates the relative starting point from which all path resolution should begin."
+  },
+  {
+    "id": "ang-q115",
+    "question": "An Angular ______ is a folder generated by the CLI that contains the configuration and code files for projects.",
+    "answer": "Workspace",
+    "options": ["Environment", "Package", "Workspace", "Directory"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A workspace handles overarching architectural settings and can house several applications in a monorepo fashion."
+  },
+  {
+    "id": "ang-q116",
+    "question": "You define a custom pipe in Angular by decorating a class with @Pipe and implementing the ______ interface.",
+    "answer": "PipeTransform",
+    "options": ["OnInit", "PipeTransform", "DoCheck", "Observable"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Implementing PipeTransform ensures the class contains the functional transform() method mandated by Angular."
+  },
+  {
+    "id": "ang-q117",
+    "question": "The RxJS operator ______ is commonly used to avoid making duplicate HTTP requests for every keystroke in a search input.",
+    "answer": "debounceTime",
+    "options": ["map", "catchError", "debounceTime", "throttleTime"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "debounceTime delays processing until the rapid succession of input events completely pauses."
+  },
+  {
+    "id": "ang-q118",
+    "question": "A ______ pipe is only executed when a strict change to the input value is detected.",
+    "answer": "pure",
+    "options": ["pure", "impure", "custom", "async"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Pure pipes yield massive performance benefits as Angular caches their results unless the reference inputs change."
+  },
+  {
+    "id": "ang-q119",
+    "question": "______ is the process of initializing the root module to launch the application.",
+    "answer": "Bootstrapping",
+    "options": ["Rendering", "Bootstrapping", "Compiling", "Routing"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Bootstrapping is how Angular connects the entry-point module (AppModule) and the root HTML element."
+  },
+  {
+    "id": "ang-q120",
+    "question": "The purpose of the ______ file is to provide scripts that implement web standards in older browsers.",
+    "answer": "polyfills.ts",
+    "options": ["environment.ts", "main.ts", "polyfills.ts", "angular.json"],
+    "category": "Angular",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The polyfills.ts configuration ensures that legacy systems can execute modern framework requirements seamlessly."
+  }
+]

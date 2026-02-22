@@ -1,0 +1,1312 @@
+[
+  {
+    "id": "sp-q001",
+    "question": "What is the Spring Framework?",
+    "answer": "An open-source application framework and inversion of control container for the Java platform.",
+    "options": [
+      "A JavaScript library for building responsive user interfaces.",
+      "An open-source application framework and inversion of control container for the Java platform.",
+      "A relational database management system completely written in Java.",
+      "A cloud deployment tool used to orchestrate containerized applications."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Spring Framework is an open-source framework and Inversion of Control (IoC) container that simplifies enterprise Java development."
+  },
+  {
+    "id": "sp-q002",
+    "question": "What does 'open source' mean in software development?",
+    "answer": "Source code that anyone can see, inspect, modify, and enhance.",
+    "options": [
+      "Software that is entirely free of security vulnerabilities.",
+      "Programs that do not require any compilation step before execution.",
+      "Source code that anyone can see, inspect, modify, and enhance.",
+      "Proprietary software that is sold with a one-time lifetime license."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Open source indicates that the original source code is made freely available and may be redistributed and modified by the community."
+  },
+  {
+    "id": "sp-q003",
+    "question": "What is an application framework?",
+    "answer": "A software library that provides a fundamental structure and skeletal support to build applications for a specific environment.",
+    "options": [
+      "A network firewall configured to protect backend services.",
+      "A strict set of coding guidelines enforced by the compiler.",
+      "A software library that provides a fundamental structure and skeletal support to build applications for a specific environment.",
+      "A physical server architecture optimized for enterprise web traffic."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An application framework abstracts away common low-level details, providing a foundation so developers can focus on business logic rather than boilerplate."
+  },
+  {
+    "id": "sp-q004",
+    "question": "Why is Spring considered lightweight compared to traditional Java EE applications?",
+    "answer": "It is highly modular and does not require a heavy Java EE application server to run.",
+    "options": [
+      "It limits the maximum file size of the compiled Java bytecode.",
+      "It uses exclusively primitive data types to save memory.",
+      "It restricts database connections to a single concurrent session.",
+      "It is highly modular and does not require a heavy Java EE application server to run."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Spring's lightweight nature comes from its modularity and the fact that its core container can run in any standard JVM without requiring a full Java EE application server."
+  },
+  {
+    "id": "sp-q005",
+    "question": "What is Inversion of Control (IoC) in software engineering?",
+    "answer": "A principle where the control of object creation and dependency management is transferred from the programmer to a container or framework.",
+    "options": [
+      "A security pattern that denies all access requests unless explicitly authorized.",
+      "A principle where the control of object creation and dependency management is transferred from the programmer to a container or framework.",
+      "A mechanism to invert binary data streams during network transmission.",
+      "A testing methodology where unit tests are written before the application code."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "IoC inverses the traditional flow of control. Instead of the application calling methods in a library, a container (like Spring) calls the application's components and injects their dependencies."
+  },
+  {
+    "id": "sp-q006",
+    "question": "What is the main goal of Aspect-Oriented Programming (AOP)?",
+    "answer": "To increase modularity by allowing the separation of cross-cutting concerns like logging and security.",
+    "options": [
+      "To compile code asynchronously in the background.",
+      "To increase modularity by allowing the separation of cross-cutting concerns like logging and security.",
+      "To enforce strict memory management policies to prevent memory leaks.",
+      "To completely eliminate the need for relational databases."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "AOP isolates secondary logic (like auditing, transactions, or security) from the primary business logic, avoiding tangled code."
+  },
+  {
+    "id": "sp-q007",
+    "question": "Which of the following is a core feature that makes Spring highly versatile?",
+    "answer": "It provides seamless integration support for various other frameworks like Hibernate, Struts, and JSF without forcing rewrites.",
+    "options": [
+      "It natively converts Java code directly into C++ for extreme performance.",
+      "It provides seamless integration support for various other frameworks like Hibernate, Struts, and JSF without forcing rewrites.",
+      "It strictly prohibits the use of third-party libraries.",
+      "It enforces a monolithic architecture that guarantees absolute data consistency."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring acts as a 'glue' framework, offering out-of-the-box integration templates and support for dozens of third-party libraries and frameworks."
+  },
+  {
+    "id": "sp-q008",
+    "question": "What is a key difference between Spring and Struts?",
+    "answer": "Spring is a comprehensive application framework covering all layers, whereas Struts is primarily a web MVC framework.",
+    "options": [
+      "Spring relies heavily on PHP, while Struts is strictly Java-based.",
+      "Spring is an obsolete framework, while Struts is modern and actively maintained by Google.",
+      "Spring is a comprehensive application framework covering all layers, whereas Struts is primarily a web MVC framework.",
+      "Spring is meant for desktop applications, while Struts is designed for mobile apps."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "While Struts only handles the web presentation and routing layer, Spring provides modules for data access, messaging, security, and more across all tiers."
+  },
+  {
+    "id": "sp-q009",
+    "question": "What is Java EE (Enterprise Edition)?",
+    "answer": "A set of specifications and APIs for developing distributed, transactional, and secure enterprise applications in Java.",
+    "options": [
+      "A lightweight testing utility bundled with standard Java installations.",
+      "A set of specifications and APIs for developing distributed, transactional, and secure enterprise applications in Java.",
+      "An IDE explicitly built for writing Spring-based microservices.",
+      "A database administration tool specifically designed for Oracle databases."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Java EE (now Jakarta EE) extends the Java SE platform with APIs for enterprise features such as distributed computing and web services."
+  },
+  {
+    "id": "sp-q010",
+    "question": "What is a major limitation of early Java EE (J2EE) APIs?",
+    "answer": "They were heavyweight, required complex XML configurations, and forced tight coupling to application servers.",
+    "options": [
+      "They completely lacked support for HTTP web requests.",
+      "They were heavyweight, required complex XML configurations, and forced tight coupling to application servers.",
+      "They were incapable of executing on Windows operating systems.",
+      "They forced developers to manage memory allocation and pointers manually."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Early versions of Java EE required massive amounts of configuration, boilerplate code, and specialized deployment descriptors that locked developers into heavy app servers like WebLogic or WebSphere."
+  },
+  {
+    "id": "sp-q011",
+    "question": "What is 'Boilerplate code'?",
+    "answer": "Sections of code that are repetitive, standardized, and required in many places with little to no alteration.",
+    "options": [
+      "Sections of code that are repetitive, standardized, and required in many places with little to no alteration.",
+      "Highly optimized assembly code embedded within a Java class.",
+      "Code that manages direct physical hardware communication.",
+      "Legacy code that is scheduled for deprecation in the next framework release."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Boilerplate code refers to verbose sections of code needed to achieve simple tasks (like opening and closing JDBC connections), which frameworks like Spring try to abstract away."
+  },
+  {
+    "id": "sp-q012",
+    "question": "Is Spring considered a complete replacement for Java EE?",
+    "answer": "No, Spring integrates and uses many Java EE specifications (like Servlets and JPA) but significantly simplifies their usage.",
+    "options": [
+      "Yes, Spring totally replaces the JVM and acts as its own compiler.",
+      "Yes, Spring abandoned all Java EE concepts to invent entirely proprietary protocols.",
+      "No, Spring is actually just a newer version of the Java SE language.",
+      "No, Spring integrates and uses many Java EE specifications (like Servlets and JPA) but significantly simplifies their usage."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Spring sits on top of many foundational Java EE APIs (such as the Servlet API, JPA, and JMS) to provide a better developer experience without entirely replacing the underlying standards."
+  },
+  {
+    "id": "sp-q013",
+    "question": "Which of the following best represents the main module groups available in the Spring Framework?",
+    "answer": "Core Container, Data Access/Integration, Web, AOP, Instrumentation, and Test.",
+    "options": [
+      "Frontend, Backend, Database, and DevOps.",
+      "Core Container, Data Access/Integration, Web, AOP, Instrumentation, and Test.",
+      "Compiler, Linker, Assembler, and Executor.",
+      "HTML Parser, CSS Renderer, JS Engine, and WebAssembly Interpreter."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Spring Framework is organized into around 20 modules that are grouped into the Core Container, Data Access/Integration, Web, AOP, Instrumentation, Messaging, and Test."
+  },
+  {
+    "id": "sp-q014",
+    "question": "What defines a POJO (Plain Old Java Object)?",
+    "answer": "An ordinary Java object that is not bound by any special restriction other than those forced by the Java Language Specification.",
+    "options": [
+      "A class that must inherit exclusively from the Spring 'AbstractBean' class.",
+      "A Java object that strictly interacts with NoSQL databases.",
+      "An ordinary Java object that is not bound by any special restriction other than those forced by the Java Language Specification.",
+      "A specialized Java class designed to handle complex asynchronous threading."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A POJO does not implement any special interfaces, extend specialized framework classes, or have framework annotations tightly coupling it."
+  },
+  {
+    "id": "sp-q015",
+    "question": "What makes a Java class a 'Java Bean'?",
+    "answer": "It implements Serializable, has a no-arg constructor, and provides getter/setter methods for its private properties.",
+    "options": [
+      "It contains at least one abstract method and requires inheritance.",
+      "It bypasses standard access modifiers to increase data retrieval speed.",
+      "It implements Serializable, has a no-arg constructor, and provides getter/setter methods for its private properties.",
+      "It must be annotated with @Entity and mapped to an SQL table."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Java Beans follow a strict convention standardizing how properties are exposed and instantiated, allowing tooling to introspect and manipulate them."
+  },
+  {
+    "id": "sp-q016",
+    "question": "What is a key relationship between a POJO and a Java Bean?",
+    "answer": "All Java Beans are POJOs, but not all POJOs are Java Beans because Beans follow strict naming and structural conventions.",
+    "options": [
+      "A POJO is an older concept that was completely replaced by Java Beans in Java 8.",
+      "All Java Beans are POJOs, but not all POJOs are Java Beans because Beans follow strict naming and structural conventions.",
+      "They are exact synonyms and can be used interchangeably in all contexts.",
+      "All POJOs are Java Beans, but a Java Bean is strictly restricted to enterprise servers."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A POJO becomes a Java Bean only when it conforms to the specific rules (serialization, default constructor, and getters/setters), meaning Beans are a subset of POJOs."
+  },
+  {
+    "id": "sp-q017",
+    "question": "What is a Spring Bean?",
+    "answer": "An object that is instantiated, assembled, and managed by a Spring IoC container.",
+    "options": [
+      "A custom data type used solely for logging HTTP requests.",
+      "An object that bypasses the JVM memory limits.",
+      "An object that is instantiated, assembled, and managed by a Spring IoC container.",
+      "A file that contains application configuration constants."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "In Spring terminology, the objects that form the backbone of an application and are managed by the container are called beans."
+  },
+  {
+    "id": "sp-q018",
+    "question": "How does a Spring Bean differ from a standard Java Bean?",
+    "answer": "A Spring Bean's lifecycle is entirely managed by the Spring IoC container, whereas a Java Bean is simply a class following specific structural conventions.",
+    "options": [
+      "A Spring Bean's lifecycle is entirely managed by the Spring IoC container, whereas a Java Bean is simply a class following specific structural conventions.",
+      "A Spring Bean cannot have properties, while a Java Bean must have getter/setter methods.",
+      "A Java Bean supports Dependency Injection, whereas a Spring Bean requires manual instantiation.",
+      "A Java Bean is strictly used for backend databases, while a Spring Bean is used for the presentation layer."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A Spring Bean does not necessarily need to follow standard Java Bean conventions (like having a no-arg constructor), its defining trait is being managed by the IoC container."
+  },
+  {
+    "id": "sp-q019",
+    "question": "In object-oriented programming, what are the primary ways objects collaborate?",
+    "answer": "Through Inheritance (IS-A relationship) and Composition (HAS-A relationship).",
+    "options": [
+      "Through Network Sockets and File Parsing.",
+      "Through the Java Virtual Machine's garbage collector cycles.",
+      "Through Compilation and Execution.",
+      "Through Inheritance (IS-A relationship) and Composition (HAS-A relationship)."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "OOP primarily utilizes Inheritance to share behavior vertically across class hierarchies, and Composition to share behavior horizontally by composing complex objects from simpler ones."
+  },
+  {
+    "id": "sp-q020",
+    "question": "What is the primary difference between Inheritance and Composition?",
+    "answer": "Inheritance derives a new class from an existing class, while Composition builds complex objects by combining simpler, independent objects.",
+    "options": [
+      "Inheritance is used for databases, while Composition is used for web interfaces.",
+      "Inheritance builds complex objects by combining simpler, independent objects, while Composition derives a new class from an existing class.",
+      "Inheritance derives a new class from an existing class, while Composition builds complex objects by combining simpler, independent objects.",
+      "Inheritance is a dynamic runtime feature, while Composition is strictly checked at compile-time."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Inheritance establishes an 'is-a' relationship (e.g., a Dog is an Animal), while composition establishes a 'has-a' relationship (e.g., a Car has an Engine)."
+  },
+  {
+    "id": "sp-q021",
+    "question": "When is the most appropriate time to use Inheritance?",
+    "answer": "When there is a clear 'IS-A' relationship and the subclass strictly extends the behavior of the parent class.",
+    "options": [
+      "When you need to copy-paste code quickly between unrelated classes.",
+      "When objects only need to share utility methods temporarily.",
+      "When there is a clear 'IS-A' relationship and the subclass strictly extends the behavior of the parent class.",
+      "When designing distributed systems that rely on REST APIs."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Inheritance is best used when Liskov's Substitution Principle holds true—a subclass should be perfectly substitutable for its parent."
+  },
+  {
+    "id": "sp-q022",
+    "question": "When should you use Composition over Inheritance?",
+    "answer": "When objects have a 'HAS-A' relationship and you want code reuse without the rigid, fragile hierarchy of inheritance.",
+    "options": [
+      "When the programming language does not support basic class instantiation.",
+      "When you want to force tightly coupled class structures across the application.",
+      "When objects have a 'HAS-A' relationship and you want code reuse without the rigid, fragile hierarchy of inheritance.",
+      "When you need to define a singleton class that restricts access globally."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Composition reduces code fragility by hiding internal implementations and allowing dependencies to be swapped at runtime."
+  },
+  {
+    "id": "sp-q023",
+    "question": "What is the difference between tight coupling and loose coupling?",
+    "answer": "Tight coupling means classes are highly dependent on concrete implementations, while loose coupling relies on abstractions or interfaces.",
+    "options": [
+      "Tight coupling uses public methods, while loose coupling relies strictly on private methods.",
+      "Tight coupling means classes are highly dependent on concrete implementations, while loose coupling relies on abstractions or interfaces.",
+      "Tight coupling executes faster on the CPU, whereas loose coupling causes memory leaks.",
+      "Tight coupling is required by Spring, while loose coupling is heavily discouraged."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Loose coupling makes systems easier to modify, scale, and test because changing one module's internal implementation does not severely break the others."
+  },
+  {
+    "id": "sp-q024",
+    "question": "What is the benefit of the design principle 'Favour composition over inheritance'?",
+    "answer": "It provides greater flexibility and allows changing behavior at runtime by swapping composed components instead of being locked into a static class hierarchy.",
+    "options": [
+      "It completely eliminates the need for unit testing.",
+      "It shrinks the overall file size of the compiled application by compressing classes.",
+      "It automatically converts standard Java applications into microservices.",
+      "It provides greater flexibility and allows changing behavior at runtime by swapping composed components instead of being locked into a static class hierarchy."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "This principle avoids the 'fragile base class' problem, where modifying a parent class inadvertently breaks inherited subclasses."
+  },
+  {
+    "id": "sp-q025",
+    "question": "What does the principle 'Program to an interface, not an implementation' mean?",
+    "answer": "Variables, return types, and method arguments should be declared as interfaces rather than concrete classes to decouple the code.",
+    "options": [
+      "Code should only be written via graphical user interfaces (GUIs), bypassing manual typing.",
+      "Variables, return types, and method arguments should be declared as interfaces rather than concrete classes to decouple the code.",
+      "Applications should never use abstract classes or inheritance.",
+      "It strictly forbids using basic primitive types like 'int' or 'boolean' in business logic."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Programming to an interface ensures your components depend on a contract, not a specific implementation, which enables polymorphism and simpler unit testing."
+  },
+  {
+    "id": "sp-q026",
+    "question": "What does the Open-Closed principle state?",
+    "answer": "Software entities should be open for extension, but closed for modification.",
+    "options": [
+      "A database connection must be opened and closed immediately after every query.",
+      "Open source software should remain closed off from commercial exploitation.",
+      "Software entities should be open for extension, but closed for modification.",
+      "Application ports should remain open on private networks but closed on public internet."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "You should be able to add new functionality to a system without altering existing, tested, and working code, typically achieved through interfaces and abstractions."
+  },
+  {
+    "id": "sp-q027",
+    "question": "What is a Design Pattern in software engineering?",
+    "answer": "A general, reusable solution to a commonly occurring problem within a given context in software design.",
+    "options": [
+      "A specific set of instructions that compiles directly into machine code.",
+      "A general, reusable solution to a commonly occurring problem within a given context in software design.",
+      "A visual UI diagram used exclusively by frontend developers.",
+      "A database indexing strategy to speed up slow SQL queries."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Design patterns are formalized best practices that programmers can use to solve common problems when designing an application or system."
+  },
+  {
+    "id": "sp-q028",
+    "question": "What is the primary role of the Spring IoC Container?",
+    "answer": "It is responsible for instantiating, configuring, and assembling Spring Beans, as well as managing their complete lifecycles.",
+    "options": [
+      "It handles incoming HTTP requests directly from the user's browser.",
+      "It manages the physical allocation of RAM to the operating system.",
+      "It is responsible for instantiating, configuring, and assembling Spring Beans, as well as managing their complete lifecycles.",
+      "It strictly acts as an object-relational mapping (ORM) tool."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The IoC container is the core of the Spring Framework, taking control over object creation and injecting necessary dependencies based on configuration."
+  },
+  {
+    "id": "sp-q029",
+    "question": "What is Configuration Metadata in Spring?",
+    "answer": "It represents how an application developer instructs the Spring container to instantiate, configure, and assemble the objects in the application.",
+    "options": [
+      "The tracking information attached to HTTP headers for security.",
+      "A specialized database table used to store user passwords securely.",
+      "The logging level configurations (INFO, DEBUG, ERROR) of the application.",
+      "It represents how an application developer instructs the Spring container to instantiate, configure, and assemble the objects in the application."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Configuration Metadata can be supplied to the container using XML files, Java annotations, or Java-based configuration classes."
+  },
+  {
+    "id": "sp-q030",
+    "question": "What are the two main types of IoC containers provided by Spring?",
+    "answer": "BeanFactory and ApplicationContext.",
+    "options": [
+      "Tomcat and Jetty.",
+      "BeanFactory and ApplicationContext.",
+      "DispatcherServlet and ViewResolver.",
+      "EntityManager and SessionFactory."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "BeanFactory is the fundamental container providing basic DI support, while ApplicationContext extends it with enterprise-level features."
+  },
+  {
+    "id": "sp-q031",
+    "question": "What is the primary difference between BeanFactory and ApplicationContext?",
+    "answer": "ApplicationContext is an advanced container that adds enterprise-specific functionality like event publishing and internationalization on top of BeanFactory.",
+    "options": [
+      "BeanFactory is used for database access, while ApplicationContext handles web requests.",
+      "ApplicationContext is an advanced container that adds enterprise-specific functionality like event publishing and internationalization on top of BeanFactory.",
+      "BeanFactory eagerly instantiates all beans, while ApplicationContext uses lazy loading exclusively.",
+      "There is no difference; they are completely synonymous interfaces in the Spring library."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Because it extends BeanFactory, ApplicationContext is generally recommended for all Spring applications unless there is a severe memory constraint (like applets or mobile)."
+  },
+  {
+    "id": "sp-q032",
+    "question": "What does 'Bean Scope' define in Spring?",
+    "answer": "The lifecycle and visibility of a bean instance within the contexts of the Spring container.",
+    "options": [
+      "The maximum memory size a bean can occupy during runtime.",
+      "The physical file path where the Java class is stored.",
+      "The lifecycle and visibility of a bean instance within the contexts of the Spring container.",
+      "The security roles permitted to access a specific class."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Scopes (such as Singleton, Prototype, Request, or Session) dictate how many instances of a bean the container will create and how long they will live."
+  },
+  {
+    "id": "sp-q033",
+    "question": "What are the primary types of dependency injection supported natively by Spring?",
+    "answer": "Constructor-based injection and Setter-based injection.",
+    "options": [
+      "Database-based injection and Network-based injection.",
+      "Compiler-based injection and Runtime-based injection.",
+      "Constructor-based injection and Setter-based injection.",
+      "Static injection and Dynamic injection."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring primarily uses these two forms. Although field injection (@Autowired on fields) is possible, it is internally resolved via reflection rather than traditional OOP methods and is less recommended."
+  },
+  {
+    "id": "sp-q034",
+    "question": "What is a key difference between Constructor injection and Setter injection?",
+    "answer": "Constructor injection ensures mandatory dependencies are provided making objects immutable, while Setter injection allows optional dependencies and runtime reconfiguration.",
+    "options": [
+      "Constructor injection ensures mandatory dependencies are provided making objects immutable, while Setter injection allows optional dependencies and runtime reconfiguration.",
+      "Setter injection is executed at compile time, whereas Constructor injection happens only at runtime.",
+      "Constructor injection is restricted to string variables, while Setter injection is for object references.",
+      "Setter injection inherently prevents circular dependencies, while Constructor injection encourages them."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Constructor injection enforces a rigid contract for object creation, guaranteeing a fully initialized state, while setter injection offers flexibility."
+  },
+  {
+    "id": "sp-q035",
+    "question": "Which dependency injection method does the Spring team generally recommend for mandatory dependencies?",
+    "answer": "Constructor injection.",
+    "options": [
+      "Field injection using @Autowired.",
+      "Setter injection.",
+      "Constructor injection.",
+      "Direct object instantiation via 'new' keyword."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Constructor injection allows components to be implemented as immutable objects and ensures that required dependencies are not null when instantiated."
+  },
+  {
+    "id": "sp-q036",
+    "question": "What usually causes type ambiguity in Spring constructor injection?",
+    "answer": "When a class has multiple constructors with parameters of the same number but different primitive wrapper types, confusing the container.",
+    "options": [
+      "When a developer imports two different classes with the exact same name into the project.",
+      "When a class has multiple constructors with parameters of the same number but different primitive wrapper types, confusing the container.",
+      "When using field injection instead of standard constructor injection.",
+      "When a Spring application attempts to connect to multiple disparate databases simultaneously."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If the Spring XML file doesn't clearly specify data types, providing string-based values might match multiple constructor signatures ambiguously."
+  },
+  {
+    "id": "sp-q037",
+    "question": "How can you resolve type ambiguity in constructor injection within a Spring XML configuration file?",
+    "answer": "By explicitly specifying the 'type', 'index', or 'name' attribute in the <constructor-arg> tag.",
+    "options": [
+      "By adding the @Primary annotation exclusively to the XML root node.",
+      "By completely avoiding constructor injection and relying only on static factory methods.",
+      "By explicitly specifying the 'type', 'index', or 'name' attribute in the <constructor-arg> tag.",
+      "By wrapping the entire bean configuration inside a <resolve-ambiguity> block."
+    ],
+    "category": "Spring",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Providing the precise 'type', 'index' order, or parameter 'name' ensures Spring injects arguments into the exact intended constructor."
+  },
+  {
+    "id": "sp-q038",
+    "question": "True or False: The Spring Framework is a cloud deployment tool used to orchestrate containerized applications.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The Spring Framework is an open-source application framework and inversion of control container for the Java platform, not a container orchestrator."
+  },
+  {
+    "id": "sp-q039",
+    "question": "True or False: In software development, 'open source' means source code that anyone can see, inspect, modify, and enhance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Open source software is publicly accessible for collaboration and modification."
+  },
+  {
+    "id": "sp-q040",
+    "question": "True or False: An application framework is a strict set of coding guidelines enforced by the Java compiler.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. An application framework is a software library that provides foundational structure and support to build applications, not a compiler guideline."
+  },
+  {
+    "id": "sp-q041",
+    "question": "True or False: Spring is considered lightweight compared to traditional Java EE applications because it is highly modular and does not require a heavy Java EE application server to run.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Spring operates smoothly in standard environments like Tomcat or even simple JVMs without needing full Enterprise application servers."
+  },
+  {
+    "id": "sp-q042",
+    "question": "True or False: Inversion of Control (IoC) is a principle where the control of object creation and dependency management remains entirely with the programmer, bypassing the framework.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. IoC transfers control of object creation and lifecycle management away from the programmer and hands it to a framework or container."
+  },
+  {
+    "id": "sp-q043",
+    "question": "True or False: The main goal of Aspect-Oriented Programming (AOP) is to increase modularity by allowing the separation of cross-cutting concerns like logging and security.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. AOP keeps business logic clean by intercepting executions and injecting cross-cutting behavior separately."
+  },
+  {
+    "id": "sp-q044",
+    "question": "True or False: Spring strictly prohibits the use of third-party libraries and enforces a monolithic architecture.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. One of Spring's core features is providing seamless integration support for various other third-party frameworks like Hibernate and JSF."
+  },
+  {
+    "id": "sp-q045",
+    "question": "True or False: Spring is a comprehensive application framework covering all layers, whereas Struts is primarily a web MVC framework.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. While Struts targets the presentation layer, Spring supports data access, transactions, and backend dependency injection."
+  },
+  {
+    "id": "sp-q046",
+    "question": "True or False: Java EE (Enterprise Edition) is a lightweight testing utility bundled with standard Java installations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Java EE is a set of specifications and APIs for developing distributed, transactional, and secure enterprise applications."
+  },
+  {
+    "id": "sp-q047",
+    "question": "True or False: A major limitation of early Java EE (J2EE) APIs was that they were heavyweight, required complex XML configurations, and forced tight coupling to application servers.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Spring was largely created to solve the sluggishness and complexity inherent in early J2EE development."
+  },
+  {
+    "id": "sp-q048",
+    "question": "True or False: 'Boilerplate code' refers to highly optimized assembly code embedded within a Java class for maximum performance.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Boilerplate code refers to repetitive, standardized code that is required in many places with little to no alteration."
+  },
+  {
+    "id": "sp-q049",
+    "question": "True or False: Spring is not a complete replacement for Java EE; rather, it integrates and simplifies many Java EE specifications like Servlets and JPA.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Spring embraces and enhances standard Java EE APIs instead of forcing developers to reinvent the wheel."
+  },
+  {
+    "id": "sp-q050",
+    "question": "True or False: The main module groups available in the Spring Framework are Frontend, Backend, Database, and DevOps.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The main module groups are Core Container, Data Access/Integration, Web, AOP, Instrumentation, and Test."
+  },
+  {
+    "id": "sp-q051",
+    "question": "True or False: A POJO (Plain Old Java Object) is an ordinary Java object that is not bound by any special restriction other than those forced by the Java Language Specification.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. POJOs represent clean objects unencumbered by framework-specific inheritance or interface implementations."
+  },
+  {
+    "id": "sp-q052",
+    "question": "True or False: To be a 'Java Bean', a class must be annotated with @Entity and mapped directly to an SQL table.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Java Bean simply implements Serializable, has a no-arg constructor, and provides getter/setter methods. SQL mapping is part of JPA/Hibernate, not standard Java Beans."
+  },
+  {
+    "id": "sp-q053",
+    "question": "True or False: All Java Beans are POJOs, but not all POJOs are Java Beans because Beans follow strict naming and structural conventions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Beans are a subset of POJOs that adhere to the specific getter/setter and no-arg constructor conventions."
+  },
+  {
+    "id": "sp-q054",
+    "question": "True or False: A Spring Bean is a custom data type used solely for logging HTTP requests.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Spring Bean is any object that is instantiated, assembled, and managed by a Spring IoC container."
+  },
+  {
+    "id": "sp-q055",
+    "question": "True or False: A Spring Bean's lifecycle is entirely managed by the Spring IoC container, whereas a standard Java Bean is simply a class following specific structural conventions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Spring Beans are defined by their relationship with the IoC container, regardless of whether they follow the strict Java Bean getter/setter structure."
+  },
+  {
+    "id": "sp-q056",
+    "question": "True or False: In object-oriented programming, objects primarily collaborate through Network Sockets and File Parsing.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Objects primarily collaborate through Inheritance (IS-A relationships) and Composition (HAS-A relationships)."
+  },
+  {
+    "id": "sp-q057",
+    "question": "True or False: Inheritance derives a new class from an existing class, while Composition builds complex objects by combining simpler, independent objects.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This accurately contrasts the structural approach of vertical inheritance versus horizontal composition."
+  },
+  {
+    "id": "sp-q058",
+    "question": "True or False: Inheritance is most appropriately used when objects only need to share utility methods temporarily.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Inheritance is appropriate when there is a strict, permanent 'IS-A' relationship. Temporary sharing of utility methods is better served by composition or static methods."
+  },
+  {
+    "id": "sp-q059",
+    "question": "True or False: You should use Composition over Inheritance when objects have a 'HAS-A' relationship and you want code reuse without the rigid, fragile hierarchy of inheritance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Composition creates flexible systems where component behaviors can be easily swapped."
+  },
+  {
+    "id": "sp-q060",
+    "question": "True or False: Tight coupling relies on abstractions or interfaces, while loose coupling means classes are highly dependent on concrete implementations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the exact opposite. Tight coupling relies on concrete implementations, while loose coupling relies on abstractions and interfaces."
+  },
+  {
+    "id": "sp-q061",
+    "question": "True or False: Favouring composition over inheritance provides greater flexibility and allows changing behavior at runtime by swapping composed components instead of being locked into a static class hierarchy.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Changing an object's behavior at runtime by altering its composed dependencies is a major advantage of the Strategy pattern and dependency injection."
+  },
+  {
+    "id": "sp-q062",
+    "question": "True or False: The principle 'Program to an interface, not an implementation' strictly forbids using basic primitive types like 'int' or 'boolean' in business logic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The principle means using interface types for object references and method parameters to decouple code; it has nothing to do with forbidding primitive types."
+  },
+  {
+    "id": "sp-q063",
+    "question": "True or False: The Open-Closed principle states that software entities should be open for extension, but closed for modification.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This foundational SOLID principle ensures that new features can be added without risking the stability of existing, tested code."
+  },
+  {
+    "id": "sp-q064",
+    "question": "True or False: A Design Pattern in software engineering is a specific set of instructions that compiles directly into machine code.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Design Pattern is a conceptual, reusable template for solving common software architecture problems, not literal executable code."
+  },
+  {
+    "id": "sp-q065",
+    "question": "True or False: The primary role of the Spring IoC Container is to instantiate, configure, and assemble Spring Beans, as well as manage their complete lifecycles.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. The container reads configuration metadata to figure out how to wire up the application's components automatically."
+  },
+  {
+    "id": "sp-q066",
+    "question": "True or False: Configuration Metadata in Spring represents a specialized database table used to store user passwords securely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Configuration Metadata is the set of instructions (via XML, Java configuration, or annotations) that tells the Spring container how to instantiate and wire objects."
+  },
+  {
+    "id": "sp-q067",
+    "question": "True or False: The two main types of IoC containers provided by Spring are BeanFactory and ApplicationContext.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. BeanFactory handles the basic DI mechanism, while ApplicationContext provides higher-level enterprise integrations."
+  },
+  {
+    "id": "sp-q068",
+    "question": "True or False: BeanFactory eagerly instantiates all beans, while ApplicationContext uses lazy loading exclusively.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It is generally the reverse: BeanFactory lazily initializes beans upon request, whereas ApplicationContext eagerly initializes all singleton beans on startup."
+  },
+  {
+    "id": "sp-q069",
+    "question": "True or False: 'Bean Scope' defines the lifecycle and visibility of a bean instance within the contexts of the Spring container.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Scopes like 'singleton' or 'prototype' dictate how bean instances are managed and shared across application requests."
+  },
+  {
+    "id": "sp-q070",
+    "question": "True or False: The primary types of dependency injection supported natively by Spring are Compiler-based injection and Runtime-based injection.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The two primary types of dependency injection officially supported by Spring are Constructor-based injection and Setter-based injection."
+  },
+  {
+    "id": "sp-q071",
+    "question": "True or False: Constructor injection ensures mandatory dependencies are provided making objects immutable, while Setter injection allows optional dependencies and runtime reconfiguration.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Constructors demand all arguments upon instantiation, whereas setters can be called conditionally or repeatedly after creation."
+  },
+  {
+    "id": "sp-q072",
+    "question": "True or False: The Spring team generally recommends Setter injection for mandatory dependencies.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The Spring team explicitly recommends Constructor injection for mandatory dependencies to guarantee object validity upon creation."
+  },
+  {
+    "id": "sp-q073",
+    "question": "True or False: Type ambiguity in Spring constructor injection is usually caused when a class has multiple constructors with parameters of the same number but different primitive wrapper types.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. If an XML config provides a plain string value, the IoC container might not know whether to cast it to an integer, double, or string constructor argument."
+  },
+  {
+    "id": "sp-q074",
+    "question": "True or False: You can resolve type ambiguity in constructor injection within a Spring XML configuration file by completely avoiding constructor injection and relying only on static factory methods.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. You resolve it directly by specifying the 'type', 'index', or 'name' attribute in the `<constructor-arg>` tag to guide the container."
+  },
+  {
+    "id": "sp-q075",
+    "question": "The ______ is an open-source application framework and inversion of control container for the Java platform.",
+    "answer": "Spring Framework",
+    "options": [
+      "Hibernate ORM",
+      "Struts System",
+      "Spring Framework",
+      "Java EE"
+    ],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Spring Framework is the standard dependency injection container for enterprise Java."
+  },
+  {
+    "id": "sp-q076",
+    "question": "In software development, '______ source' means source code that anyone can see, inspect, modify, and enhance.",
+    "answer": "open",
+    "options": ["free", "open", "public", "agile"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Open-source development encourages communal oversight and improvement of codebases like Spring."
+  },
+  {
+    "id": "sp-q077",
+    "question": "An application ______ is a software library that provides a fundamental structure and skeletal support to build applications for a specific environment.",
+    "answer": "framework",
+    "options": ["package", "compiler", "framework", "container"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Frameworks provide generic functionality out-of-the-box that developers can extend to implement their own features."
+  },
+  {
+    "id": "sp-q078",
+    "question": "Spring is considered ______ compared to traditional Java EE applications because it is highly modular and does not require a heavy Java EE application server to run.",
+    "answer": "lightweight",
+    "options": ["heavyweight", "monolithic", "lightweight", "obsolete"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Spring's lightweight nature allows it to run smoothly within a basic servlet container or standalone JVM."
+  },
+  {
+    "id": "sp-q079",
+    "question": "Inversion of ______ is a principle where the control of object creation and dependency management is transferred from the programmer to a container.",
+    "answer": "Control",
+    "options": ["State", "Execution", "Control", "Memory"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "IoC flips traditional program logic execution, letting frameworks call the code rather than the code calling the framework."
+  },
+  {
+    "id": "sp-q080",
+    "question": "The main goal of ______-Oriented Programming (AOP) is to increase modularity by allowing the separation of cross-cutting concerns like logging and security.",
+    "answer": "Aspect",
+    "options": ["Object", "Functional", "Aspect", "Service"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Aspects wrap around business methods to dynamically inject shared behaviors, keeping the core code clean."
+  },
+  {
+    "id": "sp-q081",
+    "question": "A core feature that makes Spring highly versatile is that it provides seamless ______ support for various other frameworks like Hibernate, Struts, and JSF without forcing rewrites.",
+    "answer": "integration",
+    "options": ["compilation", "integration", "migration", "execution"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Spring embraces other frameworks via its integration modules, acting as a unified architecture."
+  },
+  {
+    "id": "sp-q082",
+    "question": "Spring is a comprehensive application framework covering all layers, whereas ______ is primarily a web MVC framework.",
+    "answer": "Struts",
+    "options": ["Hibernate", "Struts", "JUnit", "Maven"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Struts is strictly an Apache web-layer technology, while Spring offers support from database to UI."
+  },
+  {
+    "id": "sp-q083",
+    "question": "Java ______ is a set of specifications and APIs for developing distributed, transactional, and secure enterprise applications in Java.",
+    "answer": "EE",
+    "options": ["SE", "ME", "EE", "FX"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Java Enterprise Edition (now Jakarta EE) provides standard blueprints for robust backend applications."
+  },
+  {
+    "id": "sp-q084",
+    "question": "A major limitation of early Java EE APIs was that they were ______, required complex XML configurations, and forced tight coupling to application servers.",
+    "answer": "heavyweight",
+    "options": ["asynchronous", "agile", "lightweight", "heavyweight"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The early J2EE platform severely slowed down development cycles due to its heavy bureaucratic setup."
+  },
+  {
+    "id": "sp-q085",
+    "question": "'______ code' refers to sections of code that are repetitive, standardized, and required in many places with little to no alteration.",
+    "answer": "Boilerplate",
+    "options": ["Spaghetti", "Legacy", "Boilerplate", "Byte"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Frameworks like Spring utilize templates (like JdbcTemplate) to hide boilerplate code from the developer."
+  },
+  {
+    "id": "sp-q086",
+    "question": "Spring integrates and uses many Java EE specifications (like Servlets and ______) but significantly simplifies their usage.",
+    "answer": "JPA",
+    "options": ["JDBC", "JPA", "JSON", "XML"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Java Persistence API (JPA) is a standard Java EE spec that Spring Data greatly enhances and simplifies."
+  },
+  {
+    "id": "sp-q087",
+    "question": "The main module groups available in the Spring Framework include the Core Container, Data Access/Integration, Web, AOP, Instrumentation, and ______.",
+    "answer": "Test",
+    "options": ["Deploy", "Test", "Security", "Cloud"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Test module natively supports integration testing with JUnit or TestNG via Spring Contexts."
+  },
+  {
+    "id": "sp-q088",
+    "question": "A ______ is an ordinary Java object that is not bound by any special restriction other than those forced by the Java Language Specification.",
+    "answer": "POJO",
+    "options": ["DTO", "POJO", "Bean", "Entity"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "POJOs (Plain Old Java Objects) ensure business logic remains unpolluted by intrusive framework base classes."
+  },
+  {
+    "id": "sp-q089",
+    "question": "A Java class is considered a 'Java ______' if it implements Serializable, has a no-arg constructor, and provides getter/setter methods for its private properties.",
+    "answer": "Bean",
+    "options": ["Model", "Record", "Bean", "Component"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Java Bean standard allows tools and frameworks to uniformly inspect and edit object properties."
+  },
+  {
+    "id": "sp-q090",
+    "question": "All Java Beans are POJOs, but not all POJOs are Java Beans because Beans follow strict naming and ______ conventions.",
+    "answer": "structural",
+    "options": ["deployment", "structural", "inheritance", "packaging"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A POJO missing a default constructor or using direct field access breaks the structural rules of a true Java Bean."
+  },
+  {
+    "id": "sp-q091",
+    "question": "An object that is instantiated, assembled, and managed by a Spring IoC container is called a Spring ______.",
+    "answer": "Bean",
+    "options": ["Controller", "Bean", "Service", "Component"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Spring uses the term 'Bean' to refer broadly to any application dependency managed by its context."
+  },
+  {
+    "id": "sp-q092",
+    "question": "A Spring Bean's lifecycle is entirely managed by the Spring IoC ______, whereas a Java Bean is simply a class following specific structural conventions.",
+    "answer": "container",
+    "options": ["compiler", "router", "container", "database"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The container acts as the factory, instantiating beans, wiring them together, and destroying them on shutdown."
+  },
+  {
+    "id": "sp-q093",
+    "question": "In object-oriented programming, objects collaborate primarily through ______ (IS-A relationship) and Composition (HAS-A relationship).",
+    "answer": "Inheritance",
+    "options": ["Encapsulation", "Polymorphism", "Abstraction", "Inheritance"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Inheritance handles structural code reuse vertically via superclasses and subclasses."
+  },
+  {
+    "id": "sp-q094",
+    "question": "______ builds complex objects by combining simpler, independent objects, whereas Inheritance derives a new class from an existing class.",
+    "answer": "Composition",
+    "options": ["Inheritance", "Polymorphism", "Composition", "Injection"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Composition combines behaviors by holding instances of other classes rather than extending them."
+  },
+  {
+    "id": "sp-q095",
+    "question": "Inheritance is most appropriate when there is a clear '______' relationship and the subclass strictly extends the behavior of the parent class.",
+    "answer": "IS-A",
+    "options": ["HAS-A", "USES-A", "IS-A", "BEHAVES-AS"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "For example, a 'CheckingAccount' IS-A 'BankAccount', which validates the use of inheritance."
+  },
+  {
+    "id": "sp-q096",
+    "question": "You should use Composition over Inheritance when objects have a '______' relationship and you want code reuse without the rigid hierarchy of inheritance.",
+    "answer": "HAS-A",
+    "options": ["HAS-A", "IS-A", "IS-PART-OF", "WORKS-WITH"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "For example, a 'Car' HAS-A 'Engine'. The Car does not inherit from Engine."
+  },
+  {
+    "id": "sp-q097",
+    "question": "______ coupling means classes are highly dependent on concrete implementations, while loose coupling relies on abstractions or interfaces.",
+    "answer": "Tight",
+    "options": ["Loose", "Static", "Dynamic", "Tight"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Tight coupling leads to rigid, hard-to-test code where changing one class cascades into many others."
+  },
+  {
+    "id": "sp-q098",
+    "question": "Favouring ______ over inheritance provides greater flexibility and allows changing behavior at runtime by swapping components.",
+    "answer": "composition",
+    "options": ["abstraction", "composition", "encapsulation", "polymorphism"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Composition aligns perfectly with Dependency Injection, allowing swapping of injected parts on the fly."
+  },
+  {
+    "id": "sp-q099",
+    "question": "The principle 'Program to an ______, not an implementation' means variables and return types should be declared as abstractions to decouple the code.",
+    "answer": "interface",
+    "options": ["object", "interface", "abstract class", "API"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Coding to interfaces allows the underlying implementation to change without disrupting the calling code."
+  },
+  {
+    "id": "sp-q100",
+    "question": "The Open-Closed principle states that software entities should be open for ______, but closed for modification.",
+    "answer": "extension",
+    "options": ["injection", "compilation", "extension", "execution"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Systems should allow new behavior by adding new code, not by tweaking and risking existing functional code."
+  },
+  {
+    "id": "sp-q101",
+    "question": "A Design ______ is a general, reusable solution to a commonly occurring problem within a given context in software design.",
+    "answer": "Pattern",
+    "options": ["Standard", "Pattern", "Concept", "Template"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Patterns like Singleton or Factory solve structural design challenges elegantly."
+  },
+  {
+    "id": "sp-q102",
+    "question": "The primary role of the Spring ______ Container is to instantiate, configure, and assemble Spring Beans, as well as manage their complete lifecycles.",
+    "answer": "IoC",
+    "options": ["AOP", "MVC", "ORM", "IoC"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Inversion of Control container orchestrates the entire application environment seamlessly."
+  },
+  {
+    "id": "sp-q103",
+    "question": "Configuration ______ in Spring represents how an application developer instructs the container to instantiate, configure, and assemble objects.",
+    "answer": "Metadata",
+    "options": ["Settings", "Metadata", "State", "Context"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Metadata is usually provided via Java annotations, `@Configuration` classes, or XML files."
+  },
+  {
+    "id": "sp-q104",
+    "question": "The two main types of IoC containers provided by Spring are BeanFactory and ______.",
+    "answer": "ApplicationContext",
+    "options": [
+      "WebContext",
+      "ApplicationContext",
+      "SessionContext",
+      "GlobalContext"
+    ],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "ApplicationContext is a superset of BeanFactory tailored for enterprise applications."
+  },
+  {
+    "id": "sp-q105",
+    "question": "______ is an advanced container that adds enterprise-specific functionality like event publishing and internationalization on top of BeanFactory.",
+    "answer": "ApplicationContext",
+    "options": [
+      "ApplicationContext",
+      "DispatcherServlet",
+      "ContextLoaderListener",
+      "BeanFactory"
+    ],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Because of these added capabilities, ApplicationContext is the preferred container for almost all modern Spring apps."
+  },
+  {
+    "id": "sp-q106",
+    "question": "'Bean ______' defines the lifecycle and visibility of a bean instance within the contexts of the Spring container.",
+    "answer": "Scope",
+    "options": ["State", "Context", "Scope", "Profile"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "By default, Spring uses the 'singleton' scope, meaning only one shared instance of a bean is created."
+  },
+  {
+    "id": "sp-q107",
+    "question": "The primary types of dependency injection supported natively by Spring are Constructor-based injection and ______-based injection.",
+    "answer": "Setter",
+    "options": ["Field", "Method", "Setter", "Interface"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "While @Autowired on fields works via reflection, Setter and Constructor injection are the official POJO-compliant methods."
+  },
+  {
+    "id": "sp-q108",
+    "question": "______ injection ensures mandatory dependencies are provided making objects immutable, while Setter injection allows optional dependencies and runtime reconfiguration.",
+    "answer": "Constructor",
+    "options": ["Field", "Setter", "Constructor", "Interface"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Using constructors guarantees that a bean cannot exist in a partially initialized, invalid state."
+  },
+  {
+    "id": "sp-q109",
+    "question": "The Spring team generally recommends ______ injection for mandatory dependencies.",
+    "answer": "Constructor",
+    "options": ["Field", "Setter", "Constructor", "Method"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This approach is preferred because it facilitates easier unit testing and safer, immutable object design."
+  },
+  {
+    "id": "sp-q110",
+    "question": "Type ______ in Spring constructor injection occurs when a class has multiple constructors with parameters of the same number but different primitive wrapper types.",
+    "answer": "ambiguity",
+    "options": ["erasure", "shadowing", "casting", "ambiguity"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "XML representations of primitives (like '123') are strings by default, making it hard for Spring to guess if a String or Integer constructor is intended."
+  },
+  {
+    "id": "sp-q111",
+    "question": "You can resolve type ambiguity in constructor injection within a Spring XML configuration file by explicitly specifying the '______', 'index', or 'name' attribute in the `<constructor-arg>` tag.",
+    "answer": "type",
+    "options": ["class", "type", "ref", "value"],
+    "category": "Spring",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The 'type' attribute explicitly maps a string input to its corresponding Java datatype for accurate constructor resolution."
+  }
+]

@@ -1,25 +1,1797 @@
 [
   {
     "id": "js-q001",
-    "question": "¿Qué describe mejor un closure en JavaScript?",
-    "answer": "Una función que conserva acceso al scope léxico donde fue creada.",
+    "question": "What is a prototype chain in JavaScript?",
+    "answer": "A mechanism where objects inherit features from one another by linking to a prototype object.",
     "options": [
-      "Una función que conserva acceso al scope léxico donde fue creada.",
-      "Una función que solo puede ejecutarse una vez.",
-      "Una función que no puede recibir argumentos.",
-      "Una función que siempre retorna una promesa."
+      "A sequence of loop iterations executed sequentially.",
+      "A mechanism where objects inherit features from one another by linking to a prototype object.",
+      "A strict type-checking method used in classes.",
+      "A security feature that prevents unauthorized object mutation."
     ],
     "category": "JavaScript",
     "type": "QUIZ_SIMPLE",
-    "level": "Beginner"
+    "level": "Intermediate",
+    "explanation": "In JavaScript, objects have a hidden internal property that references another object, creating a chain used for property and method inheritance."
   },
   {
     "id": "js-q002",
-    "question": "El Event Loop ejecuta primero la cola de microtasks antes de la cola de macrotasks.",
+    "question": "What is the primary difference between the call() and apply() methods?",
+    "answer": "The call() method takes arguments separately, while the apply() method takes arguments as an array.",
+    "options": [
+      "The call() method invokes the function asynchronously, while apply() is synchronous.",
+      "The call() method returns a new function, while apply() executes immediately.",
+      "The call() method takes arguments separately, while the apply() method takes arguments as an array.",
+      "There is no difference; they are exactly the same in every context."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Both methods invoke a function with a specified 'this' context, but call() expects a comma-separated list of arguments, whereas apply() expects an array of arguments."
+  },
+  {
+    "id": "js-q003",
+    "question": "What is the purpose of the bind() method in JavaScript?",
+    "answer": "It creates a new function that, when called, has its 'this' keyword set to the provided value.",
+    "options": [
+      "It instantly executes a function with a pre-defined scope.",
+      "It prevents a variable from being reassigned.",
+      "It creates a new function that, when called, has its 'this' keyword set to the provided value.",
+      "It merges two objects together into a single reference."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Unlike call() and apply() which invoke the function immediately, bind() returns a new bound function that can be executed later."
+  },
+  {
+    "id": "js-q004",
+    "question": "What is JSON?",
+    "answer": "A lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate.",
+    "options": [
+      "A lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate.",
+      "A built-in JavaScript array method to sort elements.",
+      "A strictly typed programming language used for database management.",
+      "An alternative to the DOM for rendering HTML elements."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JSON (JavaScript Object Notation) is a text format completely language independent but uses conventions familiar to C-family languages."
+  },
+  {
+    "id": "js-q005",
+    "question": "What is the behavior of the array slice() method?",
+    "answer": "It returns a shallow copy of a portion of an array into a new array object without modifying the original array.",
+    "options": [
+      "It physically removes items from the original array.",
+      "It returns a shallow copy of a portion of an array into a new array object without modifying the original array.",
+      "It replaces elements in an array with new elements.",
+      "It flattens multi-dimensional arrays into a single-level array."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "slice() is a non-mutating method that is frequently used to safely extract a subset of array elements."
+  },
+  {
+    "id": "js-q006",
+    "question": "What is the behavior of the array splice() method?",
+    "answer": "It changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
+    "options": [
+      "It changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
+      "It safely extracts a sub-array without mutating the original array.",
+      "It converts an array into a comma-separated string.",
+      "It calculates the sum of all numerical values in an array."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "splice() directly mutates the original array and returns an array containing the deleted elements."
+  },
+  {
+    "id": "js-q007",
+    "question": "What is the main difference between the == and === operators?",
+    "answer": "The == operator performs type coercion before comparing, while === compares both value and type without coercion.",
+    "options": [
+      "The == operator compares memory references, while === compares only values.",
+      "The == operator compares both value and type, while === only compares values.",
+      "The == operator performs type coercion before comparing, while === compares both value and type without coercion.",
+      "Both operators perform exactly the same function in modern JavaScript."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "=== is the strict equality operator, which is generally safer to use as it prevents unexpected true results caused by JavaScript's automatic type conversion."
+  },
+  {
+    "id": "js-q008",
+    "question": "What is a 'First-Class Function' in JavaScript?",
+    "answer": "A function that can be treated like any other variable, such as being passed as an argument, returned by another function, or assigned to a variable.",
+    "options": [
+      "A function that executes before all other functions in the global scope.",
+      "A function that can be treated like any other variable, such as being passed as an argument, returned by another function, or assigned to a variable.",
+      "A function strictly bound to a Class constructor.",
+      "A native method provided directly by the browser API."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "JavaScript supports First-Class Functions, which is the foundational concept that enables functional programming patterns like callbacks and higher-order functions."
+  },
+  {
+    "id": "js-q009",
+    "question": "What is a 'Higher-Order Function'?",
+    "answer": "A function that either takes one or more functions as arguments or returns a function as its result.",
+    "options": [
+      "A function that always runs synchronously on the main thread.",
+      "A function that requires administrative browser privileges to execute.",
+      "A function that modifies the global object window.",
+      "A function that either takes one or more functions as arguments or returns a function as its result."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Common examples of built-in Higher-Order Functions include map(), filter(), and reduce()."
+  },
+  {
+    "id": "js-q010",
+    "question": "What is 'Currying' in JavaScript?",
+    "answer": "The process of transforming a function with multiple arguments into a sequence of nested functions that each take a single argument.",
+    "options": [
+      "A method to securely encrypt functional source code.",
+      "The process of transforming a function with multiple arguments into a sequence of nested functions that each take a single argument.",
+      "The technique of bundling CSS files together with JavaScript components.",
+      "A syntax used to automatically iterate over arrays."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Currying helps in partial application of a function, allowing you to create customized functions by pre-filling some arguments."
+  },
+  {
+    "id": "js-q011",
+    "question": "What defines a 'Pure Function'?",
+    "answer": "A function where the return value is only determined by its input values, without observable side effects.",
+    "options": [
+      "A function that only utilizes primitive data types.",
+      "A function where the return value is only determined by its input values, without observable side effects.",
+      "A function that always returns a boolean value.",
+      "A function that does not use the 'return' keyword."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Pure functions are predictable and testable because they do not rely on or mutate external state (like global variables or DOM elements)."
+  },
+  {
+    "id": "js-q012",
+    "question": "What is the primary characteristic of variables declared with the 'let' keyword?",
+    "answer": "They are block-scoped and cannot be accessed before initialization due to the Temporal Dead Zone.",
+    "options": [
+      "They are globally scoped by default.",
+      "They can be re-declared multiple times in the same scope without error.",
+      "They are hoisted to the top and initialized as undefined.",
+      "They are block-scoped and cannot be accessed before initialization due to the Temporal Dead Zone."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unlike 'var', 'let' keeps variable scope restricted to the immediate block `{}` and enforces stricter initialization rules."
+  },
+  {
+    "id": "js-q013",
+    "question": "What is the Temporal Dead Zone (TDZ)?",
+    "answer": "The period between entering block scope and the actual declaration of a 'let' or 'const' variable, during which it cannot be accessed.",
+    "options": [
+      "The time it takes for the Garbage Collector to remove an object.",
+      "The period between entering block scope and the actual declaration of a 'let' or 'const' variable, during which it cannot be accessed.",
+      "A specific error state where the browser's main thread crashes.",
+      "The latency between sending an HTTP request and receiving the response."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Attempting to read or write to a variable inside its TDZ throws a ReferenceError, helping developers catch early access bugs."
+  },
+  {
+    "id": "js-q014",
+    "question": "What is an IIFE (Immediately Invoked Function Expression)?",
+    "answer": "A JavaScript function that runs as soon as it is defined.",
+    "options": [
+      "A JavaScript function that runs as soon as it is defined.",
+      "A function specifically designed to trigger events recursively.",
+      "An API endpoint that responds without requiring authentication.",
+      "A compiler optimization technique to inline variables."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "IIFEs are commonly used to create private scopes, preventing variable leakage into the global namespace."
+  },
+  {
+    "id": "js-q015",
+    "question": "What is Memoization?",
+    "answer": "An optimization technique that speeds up applications by storing the results of expensive function calls and returning the cached result when the same inputs occur again.",
+    "options": [
+      "A technique to automatically write inline documentation.",
+      "An optimization technique that speeds up applications by storing the results of expensive function calls and returning the cached result when the same inputs occur again.",
+      "The process of allocating RAM sequentially to variables.",
+      "A built-in database indexing algorithm."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Memoization trades memory for speed, acting as a cache for computationally heavy pure functions."
+  },
+  {
+    "id": "js-q016",
+    "question": "What is Hoisting in JavaScript?",
+    "answer": "The default behavior of moving variable and function declarations to the top of their containing scope during the compile phase.",
+    "options": [
+      "The process of pushing a local repository to GitHub.",
+      "The default behavior of moving variable and function declarations to the top of their containing scope during the compile phase.",
+      "A method used to lift DOM elements dynamically using CSS.",
+      "A security measure to prevent cross-site scripting attacks."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Due to hoisting, you can call a function declaration before it appears sequentially in the source code."
+  },
+  {
+    "id": "js-q017",
+    "question": "What is a Closure in JavaScript?",
+    "answer": "A feature where an inner function has access to the outer (enclosing) function's variables, even after the outer function has returned.",
+    "options": [
+      "A built-in event listener that fires when a window is closed.",
+      "A strict mode feature that prevents memory leaks.",
+      "A database connection that is safely terminated.",
+      "A feature where an inner function has access to the outer (enclosing) function's variables, even after the outer function has returned."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Closures are created every time a function is created, at function creation time, effectively 'remembering' the environment in which they were born."
+  },
+  {
+    "id": "js-q018",
+    "question": "What is the primary purpose of Service Workers?",
+    "answer": "To act as proxy servers that sit between web applications, the browser, and the network, enabling offline experiences and push notifications.",
+    "options": [
+      "To act as proxy servers that sit between web applications, the browser, and the network, enabling offline experiences and push notifications.",
+      "To automatically scan JavaScript code for syntax errors.",
+      "To handle intensive CPU tasks simultaneously in the background.",
+      "To encrypt data stored in the browser's localStorage."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Service workers intercept network requests, allowing you to serve cached responses when the user lacks an internet connection."
+  },
+  {
+    "id": "js-q019",
+    "question": "What is IndexedDB?",
+    "answer": "A low-level API for client-side storage of significant amounts of structured data, including files/blobs.",
+    "options": [
+      "A relational SQL database running strictly on the backend server.",
+      "A low-level API for client-side storage of significant amounts of structured data, including files/blobs.",
+      "A cloud-based NoSQL service provided by AWS.",
+      "A built-in JavaScript object used to map keys to memory addresses."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "IndexedDB is far more powerful and capacious than localStorage, offering asynchronous transactions and indexing for robust client-side storage."
+  },
+  {
+    "id": "js-q020",
+    "question": "What is the difference between localStorage and sessionStorage?",
+    "answer": "Data in localStorage persists until explicitly deleted, whereas data in sessionStorage is cleared when the page session (tab) closes.",
+    "options": [
+      "localStorage holds string data, whereas sessionStorage only holds integers.",
+      "localStorage is secure and encrypted, whereas sessionStorage is plain text.",
+      "Data in localStorage persists until explicitly deleted, whereas data in sessionStorage is cleared when the page session (tab) closes.",
+      "There is no difference; they are aliases for the same Web Storage API."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Both store string key-value pairs, but their lifespan and scope across browser tabs significantly differentiate them."
+  },
+  {
+    "id": "js-q021",
+    "question": "What is a Promise in JavaScript?",
+    "answer": "An object representing the eventual completion or failure of an asynchronous operation and its resulting value.",
+    "options": [
+      "A strictly synchronous method to iterate through arrays.",
+      "A loop that guarantees execution at least once.",
+      "An object representing the eventual completion or failure of an asynchronous operation and its resulting value.",
+      "A reserved keyword used to validate data types."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Promises provide a cleaner, more robust way to handle asynchronous code compared to older callback-based approaches."
+  },
+  {
+    "id": "js-q022",
+    "question": "What are the three possible states of a Promise?",
+    "answer": "Pending, Fulfilled, and Rejected.",
+    "options": [
+      "Pending, Fulfilled, and Rejected.",
+      "Start, Process, and End.",
+      "Waiting, Successful, and Failed.",
+      "Init, Resolve, and Catch."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A promise starts in the 'pending' state and eventually settles into either the 'fulfilled' (success) or 'rejected' (error) state."
+  },
+  {
+    "id": "js-q023",
+    "question": "What is a Callback function?",
+    "answer": "A function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.",
+    "options": [
+      "A function that strictly calls itself recursively.",
+      "A function used to automatically reconnect dropped network sockets.",
+      "A function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.",
+      "A class method that reverses an array's order."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Callbacks are the foundation of asynchronous JavaScript, allowing functions to execute logic only after a primary task has finished."
+  },
+  {
+    "id": "js-q024",
+    "question": "What is 'Callback Hell' (or Pyramid of Doom)?",
+    "answer": "A situation where multiple nested callbacks make the code difficult to read and maintain.",
+    "options": [
+      "An infinite loop caused by two functions calling each other repeatedly.",
+      "A situation where multiple nested callbacks make the code difficult to read and maintain.",
+      "A browser crash triggered by excessive event listeners.",
+      "A security vulnerability where callbacks expose private keys."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This deeply indented code structure is hard to debug, which led to the adoption of Promises and async/await syntax."
+  },
+  {
+    "id": "js-q025",
+    "question": "What is the purpose of the 'isNaN()' function?",
+    "answer": "To determine whether a value is an illegal number (Not-a-Number).",
+    "options": [
+      "To check if an object is null.",
+      "To determine whether a value is an illegal number (Not-a-Number).",
+      "To validate if a string contains any alphabet characters.",
+      "To convert a string into an integer."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Because NaN is the only value in JavaScript that is not equal to itself, isNaN() is necessary to check for mathematical execution errors."
+  },
+  {
+    "id": "js-q026",
+    "question": "What is the difference between 'undefined' and 'undeclared' variables?",
+    "answer": "An 'undefined' variable has been declared but has not yet been assigned a value, whereas an 'undeclared' variable does not exist in the current scope.",
+    "options": [
+      "They are exactly the same concept with different naming conventions.",
+      "An 'undeclared' variable is assigned the value null, while 'undefined' is just empty.",
+      "An 'undefined' variable has been declared but has not yet been assigned a value, whereas an 'undeclared' variable does not exist in the current scope.",
+      "'undefined' applies to functions, while 'undeclared' applies to primitive data types."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Attempting to access an undeclared variable throws a ReferenceError, while accessing an uninitialized (undefined) variable simply returns the primitive value 'undefined'."
+  },
+  {
+    "id": "js-q027",
+    "question": "What is Event Bubbling?",
+    "answer": "A method of event propagation where the event is first captured and handled by the innermost element and then propagated to outer elements.",
+    "options": [
+      "A method of event propagation where the event is first captured and handled by the innermost element and then propagated to outer elements.",
+      "The process of creating multiple duplicate events on the same element.",
+      "A phase where the event trickles down from the root to the target element.",
+      "An error state where an event constantly triggers without stopping."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "In bubbling, if you click a button inside a div, the button's click event triggers first, followed by the div's click event, radiating upward."
+  },
+  {
+    "id": "js-q028",
+    "question": "What is Event Capturing (Trickling)?",
+    "answer": "A method of event propagation where the event is captured by the outermost element and propagated to the inner elements.",
+    "options": [
+      "The process of stopping an event securely before it executes.",
+      "A method of event propagation where the event is captured by the outermost element and propagated to the inner elements.",
+      "Recording user mouse movements across the DOM.",
+      "Intercepting network requests via a Service Worker."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Capturing is the opposite of Bubbling. The event travels down from the Document root to the target element."
+  },
+  {
+    "id": "js-q029",
+    "question": "What is the difference between 'document load' and 'DOMContentLoaded' events?",
+    "answer": "DOMContentLoaded fires when the initial HTML document is completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading, whereas the load event waits for all of them.",
+    "options": [
+      "The load event fires immediately on HTTP response, while DOMContentLoaded waits for the DOM to render.",
+      "They fire at the exact same millisecond.",
+      "DOMContentLoaded fires when the initial HTML document is completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading, whereas the load event waits for all of them.",
+      "DOMContentLoaded is strictly for XML documents, while load is for HTML."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "DOMContentLoaded is the preferred event for initializing DOM-dependent scripts quickly without waiting for heavy media assets."
+  },
+  {
+    "id": "js-q030",
+    "question": "What is the Same-Origin Policy?",
+    "answer": "A critical security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin.",
+    "options": [
+      "A policy forcing all images to be stored on the same server as the HTML.",
+      "A critical security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin.",
+      "A rule that requires all JavaScript code to be written in a single file.",
+      "A CSS rule that prevents styles from bleeding into iframe elements."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This policy isolates potentially malicious documents, preventing scripts on a malicious site from reading sensitive data on another tab."
+  },
+  {
+    "id": "js-q031",
+    "question": "Is JavaScript a compiled or interpreted language?",
+    "answer": "Modern JavaScript is generally strictly considered a Just-In-Time (JIT) compiled language, though it historically started as strictly interpreted.",
+    "options": [
+      "It is purely compiled down to machine code before execution like C++.",
+      "Modern JavaScript is generally strictly considered a Just-In-Time (JIT) compiled language, though it historically started as strictly interpreted.",
+      "It is an assembly language that bypasses both compilation and interpretation.",
+      "It relies solely on server-side compilation."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Modern engines like V8 instantly compile JavaScript into machine code just right before it executes, heavily optimizing performance."
+  },
+  {
+    "id": "js-q032",
+    "question": "What is the BOM (Browser Object Model)?",
+    "answer": "A browser-specific convention providing objects that expose the web browser's functionality, allowing JavaScript to interact with the browser outside the DOM.",
+    "options": [
+      "The structural representation of an HTML document.",
+      "A specialized framework to build Mobile Applications.",
+      "A browser-specific convention providing objects that expose the web browser's functionality, allowing JavaScript to interact with the browser outside the DOM.",
+      "A package manager for downloading frontend libraries."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Objects like navigator, history, screen, and location are part of the BOM, not the DOM."
+  },
+  {
+    "id": "js-q033",
+    "question": "What is Event Delegation?",
+    "answer": "A technique of delegating events to a single common parent instead of adding multiple event listeners to individual child elements.",
+    "options": [
+      "A design pattern that completely disables event listeners on mobile devices.",
+      "A technique of delegating events to a single common parent instead of adding multiple event listeners to individual child elements.",
+      "The process of passing a function argument to an asynchronous callback.",
+      "Allowing the operating system to handle DOM clicks directly."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Event delegation leverages Event Bubbling, saving memory and processing power by listening on the parent (e.g., a `<ul>`) instead of many children (`<li>`)."
+  },
+  {
+    "id": "js-q034",
+    "question": "What does JSON stand for?",
+    "answer": "JavaScript Object Notation",
+    "options": [
+      "Java Server Object Network",
+      "JavaScript Object Notation",
+      "JavaScript Oriented Node",
+      "Just Simple Object Notation"
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JSON is a standard text-based format for representing structured data based on JavaScript object syntax."
+  },
+  {
+    "id": "js-q035",
+    "question": "What is the purpose of the 'setTimeout' function?",
+    "answer": "It calls a function or evaluates an expression after a specified number of milliseconds.",
+    "options": [
+      "It halts the execution of all JavaScript on the page temporarily.",
+      "It calls a function or evaluates an expression repeatedly at specified intervals.",
+      "It sets a maximum execution time limit for API requests.",
+      "It calls a function or evaluates an expression after a specified number of milliseconds."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "setTimeout is an asynchronous Web API function that schedules a callback to execute after a minimum delay."
+  },
+  {
+    "id": "js-q036",
+    "question": "What is 'Tree Shaking' in JavaScript?",
+    "answer": "A dead-code elimination technique used in module bundlers to remove unused code from the final bundle.",
+    "options": [
+      "An algorithm used to balance Binary Search Trees in Node.js.",
+      "A CSS rendering animation to create shaking effects on DOM elements.",
+      "A dead-code elimination technique used in module bundlers to remove unused code from the final bundle.",
+      "A method to automatically delete expired cookies from the browser."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Bundlers like Webpack or Rollup use tree shaking based on ES6 import/export statements to shrink the final JavaScript file size."
+  },
+  {
+    "id": "js-q037",
+    "question": "What is the 'window' object in JavaScript?",
+    "answer": "The global object in a web browser environment that represents the browser's window and holds global variables, functions, and the DOM.",
+    "options": [
+      "An object used exclusively to handle physical desktop windows in Electron apps.",
+      "The global object in a web browser environment that represents the browser's window and holds global variables, functions, and the DOM.",
+      "A specific HTML tag used to embed external websites.",
+      "A node module used for rendering graphical user interfaces."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The window object is the root of the browser's JavaScript environment, and any variable declared with 'var' in the global scope becomes its property."
+  },
+  {
+    "id": "js-q038",
+    "question": "What is a 'Unary Function'?",
+    "answer": "A function that accepts exactly one argument.",
+    "options": [
+      "A function that accepts exactly one argument.",
+      "A function that executes only once and destroys itself.",
+      "A function that handles single-threaded asynchronous logic.",
+      "A function that returns undefined."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A unary function has an arity of 1, which is a common concept in functional programming."
+  },
+  {
+    "id": "js-q039",
+    "question": "What is the main problem with global variables?",
+    "answer": "They can lead to naming collisions, are accessible from anywhere allowing accidental modifications, and make debugging difficult.",
+    "options": [
+      "They require too much boilerplate code to initialize.",
+      "They cannot be passed into functions.",
+      "They can lead to naming collisions, are accessible from anywhere allowing accidental modifications, and make debugging difficult.",
+      "They are instantly deleted by the garbage collector."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Polluting the global namespace increases the risk of unrelated scripts overwriting each other's data."
+  },
+  {
+    "id": "js-q040",
+    "question": "What is the use of the preventDefault() method?",
+    "answer": "It cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.",
+    "options": [
+      "It physically stops the event from propagating up the DOM tree.",
+      "It destroys the HTML element that triggered the event.",
+      "It throws a syntax error if the event is malformed.",
+      "It cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A common use case is calling preventDefault() on a submit button click to prevent the browser from automatically refreshing the page."
+  },
+  {
+    "id": "js-q041",
+    "question": "What is the use of the stopPropagation() method?",
+    "answer": "It prevents further propagation of the current event in the capturing and bubbling phases.",
+    "options": [
+      "It stops the browser from loading new HTTP assets.",
+      "It prevents further propagation of the current event in the capturing and bubbling phases.",
+      "It clears all global variables from the window object.",
+      "It pauses all active setTimeout calls on the page."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This method isolates event handling so parent elements do not trigger their own event listeners when a child element is interacted with."
+  },
+  {
+    "id": "js-q042",
+    "question": "What is ECMAScript?",
+    "answer": "A standard script language specification on which JavaScript is based.",
+    "options": [
+      "A backend server technology built on top of Java.",
+      "A specific brand of web browser engine.",
+      "A standard script language specification on which JavaScript is based.",
+      "A database querying language identical to SQL."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "ECMAScript is governed by TC39, and it provides the rules and guidelines that browser engines implement to run JavaScript."
+  },
+  {
+    "id": "js-q043",
+    "question": "How do you parse a JSON string into a JavaScript object?",
+    "answer": "By using the JSON.parse() method.",
+    "options": [
+      "By using the JSON.parse() method.",
+      "By using the Object.assign() method.",
+      "By using the JSON.stringify() method.",
+      "By using the String.toObject() method."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JSON.parse() is the built-in, secure method to convert valid JSON text into native JavaScript objects."
+  },
+  {
+    "id": "js-q044",
+    "question": "What is the purpose of the 'void 0' expression?",
+    "answer": "It is used to obtain the primitive 'undefined' value safely, ensuring it hasn't been overwritten.",
+    "options": [
+      "It throws an exception to stop script execution.",
+      "It resets the value of a variable to 0.",
+      "It creates a completely empty memory pointer.",
+      "It is used to obtain the primitive 'undefined' value safely, ensuring it hasn't been overwritten."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "In older browsers, the global 'undefined' variable could be reassigned a value. 'void 0' is guaranteed to always evaluate to the true primitive undefined."
+  },
+  {
+    "id": "js-q045",
+    "question": "What are PWAs (Progressive Web Apps)?",
+    "answer": "Web applications that use modern web capabilities to deliver an app-like experience to users, including offline support and push notifications.",
+    "options": [
+      "Applications that strictly run on iOS devices via Swift.",
+      "Web applications that use modern web capabilities to deliver an app-like experience to users, including offline support and push notifications.",
+      "Backend scripts that progressively migrate databases.",
+      "Websites built exclusively with older HTML4 standards."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "PWAs combine the reach of the web with the capabilities of native applications, largely powered by Service Workers and web manifests."
+  },
+  {
+    "id": "js-q046",
+    "question": "How do you check if a key exists in a JavaScript object?",
+    "answer": "By using the 'in' operator or the 'hasOwnProperty()' method.",
+    "options": [
+      "By using the 'in' operator or the 'hasOwnProperty()' method.",
+      "By using the Array.includes() method.",
+      "By strictly matching the key against null.",
+      "By using the Object.keys().search() method."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'in' operator checks the object and its prototype chain, while hasOwnProperty() only checks the object itself."
+  },
+  {
+    "id": "js-q047",
+    "question": "What does the 'Object.assign()' method do?",
+    "answer": "It is used to copy the values of all enumerable own properties from one or more source objects to a target object.",
+    "options": [
+      "It deeply freezes an object to prevent any mutations.",
+      "It converts a string into a manipulatable object.",
+      "It is used to copy the values of all enumerable own properties from one or more source objects to a target object.",
+      "It assigns a new memory address to an existing function."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Object.assign() performs a shallow copy, making it useful for merging objects or cloning the top-level properties of an object."
+  },
+  {
+    "id": "js-q048",
+    "question": "What is a Proxy object in ES6?",
+    "answer": "An object that wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own.",
+    "options": [
+      "A network utility for routing HTTP requests securely.",
+      "An object that wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own.",
+      "A temporary variable used to swap data between arrays.",
+      "A polyfill used to execute ES6 code in older browsers."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Proxies allow developers to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation)."
+  },
+  {
+    "id": "js-q049",
+    "question": "What does 'Object.seal()' do?",
+    "answer": "It prevents new properties from being added to an object and marks all existing properties as non-configurable, though existing property values can still be changed.",
+    "options": [
+      "It securely encrypts the object's properties so they cannot be read.",
+      "It prevents new properties from being added to an object and marks all existing properties as non-configurable, though existing property values can still be changed.",
+      "It makes the object completely immutable so no values can be altered.",
+      "It deletes all properties inside the object and seals the memory reference."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Unlike Object.freeze() which makes properties read-only, Object.seal() allows existing properties to be updated, but prevents structural additions or deletions."
+  },
+  {
+    "id": "js-q050",
+    "question": "Is it recommended to use the 'eval()' function?",
+    "answer": "No, because it executes arbitrary code passed as a string, which poses severe security risks and degrades performance.",
+    "options": [
+      "Yes, it is the standard way to evaluate mathematical formulas.",
+      "Yes, it securely parses JSON data faster than JSON.parse().",
+      "No, because it is obsolete and no longer supported by any modern browser.",
+      "No, because it executes arbitrary code passed as a string, which poses severe security risks and degrades performance."
+    ],
+    "category": "JavaScript",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Using eval() opens applications to cross-site scripting (XSS) attacks and forces the JavaScript engine to step out of its optimization paths."
+  },
+  {
+    "id": "js-q051",
+    "question": "True or False: A prototype chain in JavaScript is a mechanism where objects inherit features from one another by linking to a prototype object.",
     "answer": "True",
     "options": ["True", "False"],
     "category": "JavaScript",
     "type": "TRUE_FALSE",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "explanation": "True. JavaScript is a prototype-based language, meaning objects inherit properties and methods directly from other objects rather than from static class blueprints."
+  },
+  {
+    "id": "js-q052",
+    "question": "True or False: The call() method takes arguments as an array, while the apply() method takes arguments separately.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the exact opposite. The call() method takes arguments separately (comma-separated), while apply() takes them strictly as an array."
+  },
+  {
+    "id": "js-q053",
+    "question": "True or False: The bind() method in JavaScript creates a new function that, when called, has its 'this' keyword set to the provided value.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Bind allows you to fix the 'this' context of a function permanently for future invocations."
+  },
+  {
+    "id": "js-q054",
+    "question": "True or False: JSON is a strictly typed programming language used for database management.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. JSON (JavaScript Object Notation) is a lightweight data-interchange format, not a programming language or database tool."
+  },
+  {
+    "id": "js-q055",
+    "question": "True or False: The array slice() method returns a shallow copy of a portion of an array into a new array object without modifying the original array.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. slice() is non-destructive, making it safe for functional programming patterns."
+  },
+  {
+    "id": "js-q056",
+    "question": "True or False: The array splice() method safely extracts a sub-array without mutating the original array.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The splice() method changes the contents of an array by removing or replacing existing elements in place, meaning it deeply mutates the original array."
+  },
+  {
+    "id": "js-q057",
+    "question": "True or False: The == operator performs type coercion before comparing, while === compares both value and type without coercion.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This is why === (strict equality) is generally preferred to avoid unexpected type conversion bugs."
+  },
+  {
+    "id": "js-q058",
+    "question": "True or False: A 'First-Class Function' in JavaScript is a function that executes before all other functions in the global scope.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A First-Class Function means functions are treated as variables—they can be assigned, passed as arguments, or returned from other functions."
+  },
+  {
+    "id": "js-q059",
+    "question": "True or False: A 'Higher-Order Function' is a function that either takes one or more functions as arguments or returns a function as its result.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Methods like map, reduce, and filter are common examples of Higher-Order Functions."
+  },
+  {
+    "id": "js-q060",
+    "question": "True or False: 'Currying' is the technique of bundling CSS files together with JavaScript components.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Currying is a functional programming process that transforms a function with multiple arguments into a sequence of nested functions taking single arguments."
+  },
+  {
+    "id": "js-q061",
+    "question": "True or False: A 'Pure Function' is a function where the return value is only determined by its input values, without observable side effects.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Pure functions do not alter global state, mutate their arguments, or rely on external APIs/databases."
+  },
+  {
+    "id": "js-q062",
+    "question": "True or False: Variables declared with the 'let' keyword are globally scoped by default and can be accessed before initialization.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Variables declared with 'let' are block-scoped and are trapped in a Temporal Dead Zone until initialized, preventing early access."
+  },
+  {
+    "id": "js-q063",
+    "question": "True or False: The Temporal Dead Zone (TDZ) is the period between entering block scope and the actual declaration of a 'let' or 'const' variable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Accessing a variable inside its TDZ results in a strict ReferenceError."
+  },
+  {
+    "id": "js-q064",
+    "question": "True or False: An IIFE (Immediately Invoked Function Expression) is an API endpoint that responds without requiring authentication.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. An IIFE is purely a JavaScript code pattern for executing a function immediately upon definition, usually to create a private scope."
+  },
+  {
+    "id": "js-q065",
+    "question": "True or False: Memoization is an optimization technique that speeds up applications by storing the results of expensive function calls.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. If the function is called later with the exact same arguments, it bypasses computation and returns the cached result."
+  },
+  {
+    "id": "js-q066",
+    "question": "True or False: Hoisting is a security measure built into modern browsers to prevent cross-site scripting attacks.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Hoisting is the JavaScript engine's default behavior of moving variable and function declarations to the top of their scope before execution."
+  },
+  {
+    "id": "js-q067",
+    "question": "True or False: A Closure is a feature where an inner function has access to the outer function's variables, even after the outer function has returned.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. The inner function effectively 'closes over' its lexical environment, keeping parent variables alive in memory."
+  },
+  {
+    "id": "js-q068",
+    "question": "True or False: The primary purpose of Service Workers is to automatically scan JavaScript code for syntax errors in the background.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Service Workers act as network proxies, allowing developers to cache assets, handle offline routing, and push notifications."
+  },
+  {
+    "id": "js-q069",
+    "question": "True or False: IndexedDB is a low-level API for client-side storage of significant amounts of structured data.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It provides a robust, asynchronous database directly within the user's browser."
+  },
+  {
+    "id": "js-q070",
+    "question": "True or False: Data in sessionStorage persists until explicitly deleted, whereas data in localStorage is cleared when the tab closes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. It is the exact opposite. localStorage persists indefinitely, while sessionStorage is wiped when the tab (session) ends."
+  },
+  {
+    "id": "js-q071",
+    "question": "True or False: A Promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Promises are a modern approach to handling delayed logic like network requests, replacing deep callback nesting."
+  },
+  {
+    "id": "js-q072",
+    "question": "True or False: The three possible states of a Promise are Waiting, Successful, and Failed.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The strictly defined states in the Promise specification are: Pending, Fulfilled, and Rejected."
+  },
+  {
+    "id": "js-q073",
+    "question": "True or False: A Callback function is a function passed into another function as an argument, which is then invoked inside the outer function.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Passing behavior via callbacks allows functions to execute logic after they complete their main asynchronous tasks."
+  },
+  {
+    "id": "js-q074",
+    "question": "True or False: 'Callback Hell' refers to an infinite loop caused by two functions calling each other repeatedly.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Callback Hell (or the Pyramid of Doom) refers to heavily nested, hard-to-read asynchronous callback structures."
+  },
+  {
+    "id": "js-q075",
+    "question": "True or False: The purpose of the 'isNaN()' function is to determine whether a value is an illegal number (Not-a-Number).",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Because NaN !== NaN in JavaScript, you must use isNaN() to test if a mathematical operation resulted in an invalid number."
+  },
+  {
+    "id": "js-q076",
+    "question": "True or False: An 'undeclared' variable has been declared but has not yet been assigned a value, whereas an 'undefined' variable does not exist in the scope.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the exact reverse. 'Undefined' means the variable is declared but lacks a value. 'Undeclared' means it was never created using var/let/const."
+  },
+  {
+    "id": "js-q077",
+    "question": "True or False: Event Bubbling is a method of event propagation where the event is first captured by the innermost element and then propagates to outer elements.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. The event 'bubbles up' the DOM tree from the specific target element up to the document root."
+  },
+  {
+    "id": "js-q078",
+    "question": "True or False: Event Capturing (Trickling) is the process of stopping an event securely before it executes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Capturing is the phase where the event propagates from the outermost ancestor (Document) down to the target element."
+  },
+  {
+    "id": "js-q079",
+    "question": "True or False: DOMContentLoaded fires when the initial HTML document is completely loaded and parsed, without waiting for stylesheets and images.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This makes DOMContentLoaded fire much earlier than the window 'load' event, which waits for heavy assets."
+  },
+  {
+    "id": "js-q080",
+    "question": "True or False: The Same-Origin Policy is a rule that requires all JavaScript code to be written in a single file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is a critical browser security policy that restricts how documents or scripts can read data from domains, protocols, or ports other than their own."
+  },
+  {
+    "id": "js-q081",
+    "question": "True or False: Modern JavaScript is generally strictly considered a Just-In-Time (JIT) compiled language.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Browser engines like V8 and SpiderMonkey compile JS directly into native machine code just before execution to maximize speed."
+  },
+  {
+    "id": "js-q082",
+    "question": "True or False: The BOM (Browser Object Model) is a package manager for downloading frontend libraries.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The BOM provides JavaScript objects (like window, navigator, screen) that allow the script to interact with the browser itself, independent of the HTML document."
+  },
+  {
+    "id": "js-q083",
+    "question": "True or False: Event Delegation is a technique of delegating events to a single common parent instead of adding multiple event listeners to individual child elements.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This technique is highly memory-efficient because it relies on event bubbling to catch events from dynamic or numerous children."
+  },
+  {
+    "id": "js-q084",
+    "question": "True or False: JSON stands for Java Server Object Network.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. JSON stands for JavaScript Object Notation."
+  },
+  {
+    "id": "js-q085",
+    "question": "True or False: The 'setTimeout' function calls a function or evaluates an expression after a specified number of milliseconds.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It pushes a callback onto the message queue after the timer expires."
+  },
+  {
+    "id": "js-q086",
+    "question": "True or False: 'Tree Shaking' is an algorithm used to balance Binary Search Trees in Node.js.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Tree Shaking is a modern bundler optimization technique that removes dead, unused code from the final deployed JavaScript build."
+  },
+  {
+    "id": "js-q087",
+    "question": "True or False: The 'window' object in JavaScript is the global object in a web browser environment that represents the browser's window and holds global variables.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It is the root scope in the browser, containing methods like setTimeout, the DOM document object, and global variables."
+  },
+  {
+    "id": "js-q088",
+    "question": "True or False: A 'Unary Function' is a function that executes only once and destroys itself.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A unary function is simply a function that accepts exactly one argument."
+  },
+  {
+    "id": "js-q089",
+    "question": "True or False: The main problem with global variables is that they can lead to naming collisions and make debugging difficult.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Because they are universally accessible, third-party scripts or disconnected functions can accidentally overwrite them."
+  },
+  {
+    "id": "js-q090",
+    "question": "True or False: The preventDefault() method physically stops the event from propagating up the DOM tree.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. preventDefault() stops the browser's default behavior (like submitting a form). stopPropagation() is what stops the event from moving up the DOM."
+  },
+  {
+    "id": "js-q091",
+    "question": "True or False: The stopPropagation() method prevents further propagation of the current event in the capturing and bubbling phases.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This locks the event context so parent or child elements do not inadvertently run their handlers for the same event."
+  },
+  {
+    "id": "js-q092",
+    "question": "True or False: ECMAScript is a backend server technology built on top of Java.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. ECMAScript is the standard specification for the scripting language, defining the rules that languages like JavaScript and TypeScript follow."
+  },
+  {
+    "id": "js-q093",
+    "question": "True or False: You can parse a JSON string into a JavaScript object by using the JSON.parse() method.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. JSON.parse() parses the JSON string and constructs the JavaScript value or object described by the string."
+  },
+  {
+    "id": "js-q094",
+    "question": "True or False: The 'void 0' expression is used to reset the value of a variable to 0.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. 'void 0' evaluates to the primitive 'undefined' value safely. It is historically used because 'undefined' could be overwritten in older browsers."
+  },
+  {
+    "id": "js-q095",
+    "question": "True or False: PWAs (Progressive Web Apps) are web applications that use modern web capabilities to deliver an app-like experience to users.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. PWAs offer features like installability, offline usage, and background sync natively in the browser."
+  },
+  {
+    "id": "js-q096",
+    "question": "True or False: To check if a key exists in a JavaScript object, you must use the Array.includes() method.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. You should use the 'in' operator or the 'hasOwnProperty()' method on objects. Array.includes() is for arrays."
+  },
+  {
+    "id": "js-q097",
+    "question": "True or False: The 'Object.assign()' method is used to copy the values of all enumerable own properties from one or more source objects to a target object.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It is a common built-in method used to clone objects or merge multiple objects together."
+  },
+  {
+    "id": "js-q098",
+    "question": "True or False: A Proxy object in ES6 is a network utility for routing HTTP requests securely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A JavaScript Proxy is an object that wraps another object to intercept and redefine fundamental operations (like property lookups or assignments)."
+  },
+  {
+    "id": "js-q099",
+    "question": "True or False: 'Object.seal()' prevents new properties from being added to an object and marks all existing properties as non-configurable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Under Object.seal(), the structure of the object is locked, but you can still mutate the values of existing properties."
+  },
+  {
+    "id": "js-q100",
+    "question": "True or False: It is highly recommended to use the 'eval()' function because it evaluates mathematical formulas securely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "JavaScript",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'eval()' function is dangerous because it executes arbitrary code, opening the application to malicious injection attacks."
+  },
+  {
+    "id": "js-q101",
+    "question": "A ______ chain is a mechanism where objects inherit features from one another by linking to a prototype object.",
+    "answer": "prototype",
+    "options": ["method", "class", "prototype", "scope"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "JavaScript leverages this chain to look up properties. If a property isn't on the object itself, it climbs the prototype chain."
+  },
+  {
+    "id": "js-q102",
+    "question": "The ______ method takes arguments as an array, whereas call() takes them separately.",
+    "answer": "apply()",
+    "options": ["bind()", "apply()", "invoke()", "execute()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "apply() is very useful when you have an array of data that needs to be passed into a function expecting separate arguments."
+  },
+  {
+    "id": "js-q103",
+    "question": "The ______ method creates a new function that, when called, has its 'this' keyword set to the provided value.",
+    "answer": "bind()",
+    "options": ["bind()", "call()", "link()", "attach()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "bind() is heavily used in React and vanilla JavaScript to ensure callbacks retain the correct contextual 'this'."
+  },
+  {
+    "id": "js-q104",
+    "question": "______ is a lightweight data-interchange format that is easy for humans to read and write.",
+    "answer": "JSON",
+    "options": ["XML", "JSON", "YAML", "BSON"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "JSON maps perfectly to JavaScript objects, making it the dominant format for web APIs."
+  },
+  {
+    "id": "js-q105",
+    "question": "The array ______ method returns a shallow copy of a portion of an array without modifying the original array.",
+    "answer": "slice()",
+    "options": ["splice()", "split()", "slice()", "shift()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "slice() does not mutate. It extracts items from a start index up to an end index."
+  },
+  {
+    "id": "js-q106",
+    "question": "The array ______ method changes the contents of an array by removing or replacing existing elements in place.",
+    "answer": "splice()",
+    "options": ["slice()", "splice()", "filter()", "reduce()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "splice() destructively alters the target array, returning the elements it deleted."
+  },
+  {
+    "id": "js-q107",
+    "question": "The ______ operator compares both value and type without performing type coercion.",
+    "answer": "===",
+    "options": ["==", "=", "===", "!=="],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The strict equality operator requires both operands to share the exact same primitive type and value."
+  },
+  {
+    "id": "js-q108",
+    "question": "A ______ Function is a function that can be treated like any other variable.",
+    "answer": "First-Class",
+    "options": ["Higher-Order", "First-Class", "Pure", "Callback"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Because functions are objects in JavaScript, they have First-Class status, allowing dynamic execution patterns."
+  },
+  {
+    "id": "js-q109",
+    "question": "A ______ Function is a function that either takes one or more functions as arguments or returns a function.",
+    "answer": "Higher-Order",
+    "options": ["First-Class", "Unary", "Higher-Order", "Recursive"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Higher-order functions enable elegant array manipulations and abstract functional compositions."
+  },
+  {
+    "id": "js-q110",
+    "question": "______ is the process of transforming a function with multiple arguments into a sequence of nested functions that each take a single argument.",
+    "answer": "Currying",
+    "options": ["Hoisting", "Currying", "Binding", "Memoization"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Currying breaks f(a,b,c) into f(a)(b)(c), allowing you to construct specialized functions."
+  },
+  {
+    "id": "js-q111",
+    "question": "A ______ Function is a function where the return value is only determined by its input values, without observable side effects.",
+    "answer": "Pure",
+    "options": ["Static", "Void", "Pure", "Synchronous"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Pure functions guarantee that identical inputs will yield identical outputs every single time."
+  },
+  {
+    "id": "js-q112",
+    "question": "Variables declared with the '______' keyword are block-scoped and cannot be accessed before initialization.",
+    "answer": "let",
+    "options": ["var", "let", "global", "this"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "'let' was introduced in ES6 to provide safer, block-level scoping than traditional 'var'."
+  },
+  {
+    "id": "js-q113",
+    "question": "The ______ is the period between entering block scope and the actual declaration of a 'let' or 'const' variable.",
+    "answer": "Temporal Dead Zone",
+    "options": [
+      "Global Scope",
+      "Execution Context",
+      "Temporal Dead Zone",
+      "Event Loop"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The TDZ protects code from reading variables before they evaluate their initialization statement."
+  },
+  {
+    "id": "js-q114",
+    "question": "An ______ is a JavaScript function that runs as soon as it is defined.",
+    "answer": "IIFE",
+    "options": ["AJAX", "IIFE", "JSON", "DOM"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Immediately Invoked Function Expressions are enclosed in parenthesis followed by an execution call `()`."
+  },
+  {
+    "id": "js-q115",
+    "question": "______ is an optimization technique that speeds up applications by storing the results of expensive function calls.",
+    "answer": "Memoization",
+    "options": ["Garbage Collection", "Hoisting", "Currying", "Memoization"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Memoization heavily utilizes closures to maintain a private cache object of past parameters and outputs."
+  },
+  {
+    "id": "js-q116",
+    "question": "______ is the default behavior of moving variable and function declarations to the top of their containing scope.",
+    "answer": "Hoisting",
+    "options": ["Bubbling", "Capturing", "Hoisting", "Lexing"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Hoisting applies to 'var' and function declarations, though function expressions and arrow functions are not hoisted in the same way."
+  },
+  {
+    "id": "js-q117",
+    "question": "A ______ is a feature where an inner function has access to the outer function's variables, even after the outer function has returned.",
+    "answer": "Closure",
+    "options": ["Promise", "Proxy", "Closure", "Module"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Closures allow for state encapsulation, acting like private variables for functions."
+  },
+  {
+    "id": "js-q118",
+    "question": "______ act as proxy servers that sit between web applications, the browser, and the network, enabling offline experiences.",
+    "answer": "Service Workers",
+    "options": [
+      "Web Sockets",
+      "Service Workers",
+      "XMLHttpRequests",
+      "Promises"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Service Workers run in a background thread, separate from the main browser thread, and intercept network requests."
+  },
+  {
+    "id": "js-q119",
+    "question": "______ is a low-level API for client-side storage of significant amounts of structured data, including files/blobs.",
+    "answer": "IndexedDB",
+    "options": ["localStorage", "sessionStorage", "Cookies", "IndexedDB"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "IndexedDB provides a NoSQL-like transaction database directly inside the browser environment."
+  },
+  {
+    "id": "js-q120",
+    "question": "Data in ______ persists until explicitly deleted, whereas data in sessionStorage is cleared when the tab closes.",
+    "answer": "localStorage",
+    "options": ["sessionStorage", "cacheStorage", "localStorage", "IndexedDB"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "localStorage is commonly used to save user preferences globally across a browser application."
+  },
+  {
+    "id": "js-q121",
+    "question": "A ______ is an object representing the eventual completion or failure of an asynchronous operation.",
+    "answer": "Promise",
+    "options": ["Callback", "Timeout", "Promise", "Worker"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Promises allow chaining using .then() and .catch(), making async code significantly more readable."
+  },
+  {
+    "id": "js-q122",
+    "question": "The three possible states of a Promise are ______, Fulfilled, and Rejected.",
+    "answer": "Pending",
+    "options": ["Waiting", "Executing", "Pending", "Resolving"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Pending is the default initial state of a Promise before it resolves or rejects."
+  },
+  {
+    "id": "js-q123",
+    "question": "A ______ function is a function passed into another function as an argument to be invoked later.",
+    "answer": "Callback",
+    "options": ["Callback", "Promise", "Higher-Order", "Closure"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Callbacks form the basis of handling events, like a function executing only after a user clicks a button."
+  },
+  {
+    "id": "js-q124",
+    "question": "'Callback ______' is a situation where multiple nested callbacks make the code difficult to read and maintain.",
+    "answer": "Hell",
+    "options": ["Loop", "Hell", "Trap", "Pyramid"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Also known as the Pyramid of Doom, it is the primary reason ES6 Promises were adopted."
+  },
+  {
+    "id": "js-q125",
+    "question": "The purpose of the ______ function is to determine whether a value is an illegal number.",
+    "answer": "isNaN()",
+    "options": ["isFinite()", "isNaN()", "Number()", "parseInt()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "isNaN tests whether the JavaScript engine's attempt to coerce a value into a valid Number failed."
+  },
+  {
+    "id": "js-q126",
+    "question": "An '______' variable has been declared but has not yet been assigned a value.",
+    "answer": "undefined",
+    "options": ["null", "undeclared", "undefined", "NaN"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "JavaScript automatically assigns the primitive 'undefined' to newly hoisted variables lacking an assignment."
+  },
+  {
+    "id": "js-q127",
+    "question": "Event ______ is a method of event propagation where the event is handled by the innermost element first, then propagates outward.",
+    "answer": "Bubbling",
+    "options": ["Delegation", "Trickling", "Bubbling", "Capturing"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Bubbling is the default propagation behavior for almost all DOM events."
+  },
+  {
+    "id": "js-q128",
+    "question": "Event ______ is a method of event propagation where the event is captured by the outermost element and propagated to the inner elements.",
+    "answer": "Capturing",
+    "options": ["Hoisting", "Bubbling", "Capturing", "Cascading"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Capturing (or trickling) fires before bubbling. Listeners can be forced to capturing mode using a third boolean argument."
+  },
+  {
+    "id": "js-q129",
+    "question": "The ______ event fires when the initial HTML document is completely loaded and parsed, without waiting for stylesheets and images.",
+    "answer": "DOMContentLoaded",
+    "options": [
+      "window.onload",
+      "document.ready",
+      "DOMContentLoaded",
+      "onreadystatechange"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This event is critical for firing scripts securely right after the DOM nodes exist."
+  },
+  {
+    "id": "js-q130",
+    "question": "The ______ Policy is a critical security mechanism that restricts how a document from one origin can interact with resources from another.",
+    "answer": "Same-Origin",
+    "options": ["Same-Origin", "CORS", "Cross-Site", "Content-Security"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Two URLs have the same origin if they share identical protocols, ports, and hosts."
+  },
+  {
+    "id": "js-q131",
+    "question": "Modern JavaScript is generally considered a ______ compiled language.",
+    "answer": "Just-In-Time",
+    "options": ["Ahead-Of-Time", "Just-In-Time", "Strictly Interpreted", "Pre"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "JIT compilers trace code execution in real-time, replacing hot paths with heavily optimized machine instructions."
+  },
+  {
+    "id": "js-q132",
+    "question": "The ______ provides objects that expose the web browser's functionality, allowing JavaScript to interact outside the DOM.",
+    "answer": "BOM",
+    "options": ["DOM", "BOM", "API", "Service Worker"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Browser Object Model includes mechanisms for browser history, alerts, and viewport dimensions."
+  },
+  {
+    "id": "js-q133",
+    "question": "Event ______ is a technique of delegating events to a single common parent instead of adding multiple event listeners to individual children.",
+    "answer": "Delegation",
+    "options": ["Bubbling", "Delegation", "Capturing", "Targeting"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Delegation takes advantage of event bubbling and the target property, significantly saving memory."
+  },
+  {
+    "id": "js-q134",
+    "question": "JSON stands for JavaScript Object ______.",
+    "answer": "Notation",
+    "options": ["Network", "Node", "Name", "Notation"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "It became the industry standard API payload format, largely replacing XML."
+  },
+  {
+    "id": "js-q135",
+    "question": "The ______ function calls a function or evaluates an expression after a specified number of milliseconds.",
+    "answer": "setTimeout",
+    "options": ["setInterval", "setTimeout", "clearTimeout", "setImmediate"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "setTimeout is managed by the browser's Web APIs and executes in the event loop."
+  },
+  {
+    "id": "js-q136",
+    "question": "'______' is a dead-code elimination technique used in module bundlers to remove unused code from the final bundle.",
+    "answer": "Tree Shaking",
+    "options": ["Minification", "Uglification", "Tree Shaking", "Polyfilling"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Tree Shaking analyzes ES2015 import/export syntax to determine which modules are never executed."
+  },
+  {
+    "id": "js-q137",
+    "question": "The '______' object represents the global object in a web browser environment.",
+    "answer": "window",
+    "options": ["document", "navigator", "window", "global"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The window object is essentially the top-level container of the entire browser page interface."
+  },
+  {
+    "id": "js-q138",
+    "question": "A ______ Function is a function that accepts exactly one argument.",
+    "answer": "Unary",
+    "options": ["Binary", "Pure", "Unary", "Anonymous"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Mapping arrays using unary functions ensures that map's optional index/array arguments do not cause unexpected side effects."
+  },
+  {
+    "id": "js-q139",
+    "question": "Using ______ variables can lead to naming collisions and make debugging difficult because they are accessible from anywhere.",
+    "answer": "global",
+    "options": ["local", "block-scoped", "global", "closure"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Reducing global footprint using modules or IIFEs is a fundamental JavaScript best practice."
+  },
+  {
+    "id": "js-q140",
+    "question": "The ______ method cancels the event if it is cancelable, meaning its default action will not occur.",
+    "answer": "preventDefault()",
+    "options": [
+      "stopPropagation()",
+      "preventDefault()",
+      "cancelEvent()",
+      "returnFalse()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This method prevents standard behaviors like navigating to a link or refreshing the page on form submission."
+  },
+  {
+    "id": "js-q141",
+    "question": "The ______ method prevents further propagation of the current event in the capturing and bubbling phases.",
+    "answer": "stopPropagation()",
+    "options": [
+      "preventDefault()",
+      "stopPropagation()",
+      "halt()",
+      "blockEvent()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This ensures that event listeners registered on parent nodes do not react to the child node's event."
+  },
+  {
+    "id": "js-q142",
+    "question": "______ is a standard script language specification on which JavaScript is based.",
+    "answer": "ECMAScript",
+    "options": ["TypeScript", "V8 Engine", "ECMAScript", "CommonJS"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "ECMAScript releases yearly updates (like ES6 / ES2015) that standardize new syntax across browsers."
+  },
+  {
+    "id": "js-q143",
+    "question": "You can parse a JSON string into a JavaScript object by using the ______ method.",
+    "answer": "JSON.parse()",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "Object.assign()",
+      "String.toObject()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "JSON.parse is the primary mechanism to translate API payload responses into native application states."
+  },
+  {
+    "id": "js-q144",
+    "question": "The '______' expression is used to obtain the primitive undefined value safely.",
+    "answer": "void 0",
+    "options": ["null", "delete 0", "void 0", "typeof undefined"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Because 'undefined' is technically a property of the global object in ES3, 'void 0' safely guarantees returning the real primitive undefined."
+  },
+  {
+    "id": "js-q145",
+    "question": "______ are web applications that use modern web capabilities to deliver an app-like experience to users.",
+    "answer": "PWAs",
+    "options": ["SPAs", "PWAs", "APIs", "SSR"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Progressive Web Apps blur the line between a standard web page and a natively installed mobile application."
+  },
+  {
+    "id": "js-q146",
+    "question": "You can check if a key exists in a JavaScript object by using the 'in' operator or the '______' method.",
+    "answer": "hasOwnProperty()",
+    "options": [
+      "includes()",
+      "contains()",
+      "hasOwnProperty()",
+      "Object.keys()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "hasOwnProperty() guarantees you are checking the instance object and not mistakenly grabbing a property inherited from the prototype."
+  },
+  {
+    "id": "js-q147",
+    "question": "The '______' method is used to copy the values of all enumerable own properties from one or more source objects to a target object.",
+    "answer": "Object.assign()",
+    "options": [
+      "Object.assign()",
+      "Object.create()",
+      "Object.seal()",
+      "Object.clone()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Object.assign is widely used for shallow cloning objects or mutating state conservatively in functional state managers."
+  },
+  {
+    "id": "js-q148",
+    "question": "A ______ object in ES6 wraps another object and intercepts operations like reading and writing properties.",
+    "answer": "Proxy",
+    "options": ["Promise", "Symbol", "Proxy", "Generator"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Proxies provide a powerful 'meta-programming' hook allowing validation, reactive data tracking, or mocking properties."
+  },
+  {
+    "id": "js-q149",
+    "question": "'______' prevents new properties from being added to an object and marks all existing properties as non-configurable.",
+    "answer": "Object.seal()",
+    "options": [
+      "Object.freeze()",
+      "Object.seal()",
+      "Object.preventExtensions()",
+      "Object.lock()"
+    ],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Seal sits between preventExtensions and freeze, allowing mutation of existing values but restricting adding/removing keys."
+  },
+  {
+    "id": "js-q150",
+    "question": "It is not recommended to use the '______' function because it executes arbitrary code passed as a string, posing severe security risks.",
+    "answer": "eval()",
+    "options": ["setTimeout()", "exec()", "Function()", "eval()"],
+    "category": "JavaScript",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Beyond XSS risks, eval() slows down execution because it breaks the engine's ability to cache and optimize variable lookups."
   }
 ]

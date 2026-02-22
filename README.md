@@ -249,3 +249,11 @@ Before committing, it is highly recommended to run Snyk locally to check for vul
 - Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
 
 - For more details, see the [Snyk documentation](https://docs.snyk.io/).
+
+## TFM Summary Presentation
+
+https://www.canva.com/design/DAHCABAyb5M/0gU5hpEjyONfCnUk67MKmw/edit?utm_content=DAHCABAyb5M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Deployed Version
+
+Pending

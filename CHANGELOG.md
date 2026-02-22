@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-02-21
+
+### Added
+
+- 8 new question sets registered in `lib/questions-data.ts` and seeded to DB (1 503 total questions):
+  - **Angular** (120 questions, `ang-` prefix)
+  - **Backend** (150 questions, `be-` prefix)
+  - **Django** (45 questions, `dj-` prefix)
+  - **Frontend** (180 questions, `fe-` prefix)
+  - **Java** (90 questions, `jv-` prefix)
+  - **Python** (120 questions, `py-` prefix)
+  - **React** (150 questions, `re-` prefix)
+  - **Spring** (111 questions, `sp-` prefix)
+- Refactored `lib/questions-data.ts`: extracted `mapSet()` helper to eliminate per-topic boilerplate
+
 ## [1.3.1] - 2026-02-21
 
 ### Added

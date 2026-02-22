@@ -1,0 +1,1062 @@
+[
+  {
+    "id": "jv-q001",
+    "question": "What are the primary differences between the JDK, JRE, and JVM?",
+    "answer": "JDK is for development (contains JRE + tools), JRE is for running programs (contains JVM + libraries), and JVM executes the bytecode.",
+    "options": [
+      "JDK executes bytecode, JRE is for development, and JVM contains libraries.",
+      "JDK is for development (contains JRE + tools), JRE is for running programs (contains JVM + libraries), and JVM executes the bytecode.",
+      "JVM is the development kit, JRE executes code natively, and JDK compiles Java to machine code.",
+      "There is no difference; they are interchangeable terms for the Java compiler."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JDK is the full toolkit, JRE provides the runtime environment, and JVM is the virtual machine that actually executes the compiled bytecode."
+  },
+  {
+    "id": "jv-q002",
+    "question": "What is the difference between the '==' operator and the '.equals()' method in Java?",
+    "answer": "'==' compares object references (memory locations), while '.equals()' compares the actual content or value of the objects.",
+    "options": [
+      "'==' compares the actual content of objects, while '.equals()' compares memory locations.",
+      "'==' is used only for Strings, while '.equals()' is used for primitive data types.",
+      "'==' compares object references (memory locations), while '.equals()' compares the actual content or value of the objects.",
+      "Both '==' and '.equals()' perform the exact same memory reference comparison."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "'==' checks if both references point to the exact same memory location, while '.equals()' evaluates the logical equivalence of the objects' contents."
+  },
+  {
+    "id": "jv-q003",
+    "question": "Which of the following best describes Method Overloading in Java?",
+    "answer": "Defining multiple methods with the same name in the same class but with different parameter lists.",
+    "options": [
+      "Providing a specific implementation in a subclass for a method already defined in its superclass.",
+      "Defining multiple methods with the same name in the same class but with different parameter lists.",
+      "Hiding a method in the superclass by declaring a static method with the same name in the subclass.",
+      "Calling a method recursively until a StackOverflowError occurs."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Method overloading allows a class to have more than one method with the same name, provided their parameter lists (types or counts) differ."
+  },
+  {
+    "id": "jv-q004",
+    "question": "What are the core differences between String, StringBuilder, and StringBuffer?",
+    "answer": "String is immutable. StringBuilder is mutable but not thread-safe. StringBuffer is mutable and thread-safe.",
+    "options": [
+      "String is mutable. StringBuilder is immutable. StringBuffer is used exclusively for file I/O.",
+      "String is immutable. StringBuilder is mutable but not thread-safe. StringBuffer is mutable and thread-safe.",
+      "String is thread-safe. StringBuilder is immutable and thread-safe. StringBuffer is mutable and not thread-safe.",
+      "There is no functional difference; they are just aliases for the same underlying character array."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "String is immutable, making it safe but slow for modifications. StringBuilder is fast and mutable but not thread-safe. StringBuffer is mutable and thread-safe."
+  },
+  {
+    "id": "jv-q005",
+    "question": "What is the purpose of the 'static' keyword in Java?",
+    "answer": "It indicates that a member (variable or method) belongs to the class itself, rather than to instances of the class.",
+    "options": [
+      "It prevents a variable from ever being modified after initialization.",
+      "It indicates that a member (variable or method) belongs to the class itself, rather than to instances of the class.",
+      "It forces a method to be executed in a strictly synchronous, thread-safe manner.",
+      "It restricts access to a variable so it can only be used within the package."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'static' keyword binds a member to the class level, meaning it is shared across all instances of that class rather than being unique to each object."
+  },
+  {
+    "id": "jv-q006",
+    "question": "How does Java handle multiple inheritance?",
+    "answer": "Java does not support multiple inheritance of classes, but it allows a class to implement multiple interfaces.",
+    "options": [
+      "Java fully supports multiple inheritance for both classes and interfaces.",
+      "Java allows a class to extend multiple classes but only implement one interface.",
+      "Java does not support multiple inheritance of classes, but it allows a class to implement multiple interfaces.",
+      "Java completely forbids any form of multiple inheritance, including interfaces."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Java avoids the 'Diamond Problem' by disallowing multiple class inheritance, but allows a class to implement multiple interfaces to achieve polymorphic behavior."
+  },
+  {
+    "id": "jv-q007",
+    "question": "What is the fundamental difference between an Abstract Class and an Interface in modern Java (Java 8+)?",
+    "answer": "Abstract classes can have state (instance variables) and constructors, while interfaces cannot hold instance state and are implemented rather than extended.",
+    "options": [
+      "Abstract classes can only have abstract methods, while interfaces can have regular methods.",
+      "Abstract classes support multiple inheritance, while interfaces do not.",
+      "Abstract classes can have state (instance variables) and constructors, while interfaces cannot hold instance state and are implemented rather than extended.",
+      "Interfaces can be instantiated directly using the 'new' keyword, whereas abstract classes cannot."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Abstract classes can maintain state (instance variables) and constructors, which interfaces cannot do, even though modern interfaces can have default methods."
+  },
+  {
+    "id": "jv-q008",
+    "question": "What is Autoboxing and Unboxing in Java?",
+    "answer": "Autoboxing is the automatic conversion of primitives to their wrapper classes; Unboxing is the reverse conversion.",
+    "options": [
+      "Autoboxing is converting a subclass to a superclass; Unboxing is converting a superclass to a subclass.",
+      "Autoboxing is the automatic conversion of primitives to their wrapper classes; Unboxing is the reverse conversion.",
+      "Autoboxing is packaging Java code into a JAR file; Unboxing is extracting the JAR.",
+      "Autoboxing compresses object memory allocation; Unboxing decompresses it during runtime."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The compiler automatically converts primitive types (like int) to their corresponding wrapper classes (like Integer) via autoboxing, and vice versa via unboxing."
+  },
+  {
+    "id": "jv-q009",
+    "question": "What does the 'transient' keyword do in Java?",
+    "answer": "It prevents a variable from being serialized during the object serialization process.",
+    "options": [
+      "It forces a variable to be cached in the thread's local memory.",
+      "It makes a variable accessible only to the Garbage Collector.",
+      "It prevents a variable from being serialized during the object serialization process.",
+      "It marks a method to execute concurrently in a temporary background thread."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Marking a field as 'transient' signals the JVM to ignore it when serializing the object, meaning its value won't be saved to the byte stream."
+  },
+  {
+    "id": "jv-q010",
+    "question": "What is the difference between a Checked Exception and an Unchecked Exception?",
+    "answer": "Checked exceptions are checked at compile-time and must be declared or handled. Unchecked exceptions occur at runtime and do not force handling.",
+    "options": [
+      "Checked exceptions extend RuntimeException. Unchecked exceptions extend Exception.",
+      "Checked exceptions are handled by the JVM automatically. Unchecked exceptions require try-catch blocks.",
+      "Checked exceptions are checked at compile-time and must be declared or handled. Unchecked exceptions occur at runtime and do not force handling.",
+      "Checked exceptions only occur in multi-threaded environments. Unchecked exceptions happen in single-threaded environments."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Checked exceptions are verified by the compiler to ensure they are handled (try-catch or throws), whereas unchecked exceptions (RuntimeExceptions) are not enforced."
+  },
+  {
+    "id": "jv-q011",
+    "question": "Which of the following collections allows null keys and null values?",
+    "answer": "HashMap",
+    "options": ["TreeMap", "Hashtable", "ConcurrentHashMap", "HashMap"],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "HashMap permits one null key and multiple null values, unlike Hashtable or ConcurrentHashMap which do not allow nulls."
+  },
+  {
+    "id": "jv-q012",
+    "question": "How does a HashMap resolve collisions internally (prior to Java 8)?",
+    "answer": "By using a Linked List to store multiple entries falling into the same bucket array index.",
+    "options": [
+      "By throwing a HashCollisionException.",
+      "By using a Linked List to store multiple entries falling into the same bucket array index.",
+      "By automatically rehashing all elements with a new hash function.",
+      "By storing the colliding entry in the next available contiguous bucket array slot (linear probing)."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Before Java 8, when multiple keys hashed to the same bucket index, HashMap chained them together in a simple Linked List."
+  },
+  {
+    "id": "jv-q013",
+    "question": "What performance optimization was made to HashMap collisions in Java 8?",
+    "answer": "When a bucket's linked list exceeds a certain threshold (8), it transforms into a Balanced Binary Tree (Red-Black Tree).",
+    "options": [
+      "Collisions are now completely prevented by using SHA-256 for hashing.",
+      "When a bucket's linked list exceeds a certain threshold (8), it transforms into a Balanced Binary Tree (Red-Black Tree).",
+      "HashMap now creates a new thread for every bucket to parallelize lookups.",
+      "The bucket array dynamically resizes immediately upon any single collision."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "To prevent severe performance degradation (O(n) lookups) during many collisions, Java 8 converts long linked lists into a balanced tree (O(log n))."
+  },
+  {
+    "id": "jv-q014",
+    "question": "What is the difference between an ArrayList and a LinkedList?",
+    "answer": "ArrayList uses a dynamic array providing O(1) random access. LinkedList uses a doubly-linked list making insertions/deletions faster but random access O(n).",
+    "options": [
+      "ArrayList is thread-safe while LinkedList is not.",
+      "ArrayList uses a doubly-linked list providing O(1) random access. LinkedList uses a dynamic array.",
+      "ArrayList uses a dynamic array providing O(1) random access. LinkedList uses a doubly-linked list making insertions/deletions faster but random access O(n).",
+      "ArrayList implements the Set interface, whereas LinkedList implements the Map interface."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ArrayList relies on an underlying array structure (fast reads, slow shifts), whereas LinkedList uses node pointers (fast inserts/deletes, slow reads)."
+  },
+  {
+    "id": "jv-q015",
+    "question": "What is the 'volatile' keyword used for in Java?",
+    "answer": "It guarantees that a variable's value will be read from and written directly to main memory, preventing thread caching.",
+    "options": [
+      "It marks an object for immediate destruction by the Garbage Collector.",
+      "It allows a variable to bypass type-checking at runtime.",
+      "It makes a block of code mutually exclusive so only one thread can execute it at a time.",
+      "It guarantees that a variable's value will be read from and written directly to main memory, preventing thread caching."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Marking a variable as volatile ensures that threads do not cache its value locally, so all threads see the most up-to-date value from main memory."
+  },
+  {
+    "id": "jv-q016",
+    "question": "What is the key difference between the wait() and sleep() methods?",
+    "answer": "wait() releases the lock on the object and must be called inside a synchronized context. sleep() simply pauses the thread and holds its locks.",
+    "options": [
+      "wait() releases the lock on the object and must be called inside a synchronized context. sleep() simply pauses the thread and holds its locks.",
+      "wait() is a static method of the Thread class, while sleep() belongs to the Object class.",
+      "sleep() can only be woken up by notify(), while wait() wakes up automatically after a timeout.",
+      "There is no difference; they are interchangeable methods for pausing thread execution."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "wait() is used for inter-thread communication and releases locks, whereas sleep() is a time-delay mechanism that does not release any locks."
+  },
+  {
+    "id": "jv-q017",
+    "question": "Which of the following best describes 'Type Erasure' in Java Generics?",
+    "answer": "The compiler removes all generic type parameters and replaces them with their bounds or Object at compile time to ensure backward compatibility.",
+    "options": [
+      "The JVM removes unused objects from the heap memory to prevent OutOfMemory errors.",
+      "The compiler removes all generic type parameters and replaces them with their bounds or Object at compile time to ensure backward compatibility.",
+      "The IDE automatically formats variable types to use 'var' in Java 10+.",
+      "It is a runtime error thrown when a generic type is cast incorrectly."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Java implements generics using type erasure, meaning generic type info is discarded at compile time to maintain compatibility with older pre-generics Java versions."
+  },
+  {
+    "id": "jv-q018",
+    "question": "What is a 'Functional Interface' in Java?",
+    "answer": "An interface that contains exactly one abstract method. It can be implemented using a Lambda expression.",
+    "options": [
+      "An interface that contains exactly one abstract method. It can be implemented using a Lambda expression.",
+      "An interface that contains only default and static methods.",
+      "A class that provides pure mathematical functions without side effects.",
+      "An interface used exclusively by the Java Stream API to map data to functional components."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A functional interface has exactly one abstract method, making it eligible to be represented by a concise lambda expression."
+  },
+  {
+    "id": "jv-q019",
+    "question": "What is the primary purpose of the Java Stream API introduced in Java 8?",
+    "answer": "To process collections of objects in a declarative, functional style, supporting aggregate operations like filter, map, and reduce.",
+    "options": [
+      "To provide a new way to read and write bytes to external files.",
+      "To process collections of objects in a declarative, functional style, supporting aggregate operations like filter, map, and reduce.",
+      "To replace the traditional Thread class for building multithreaded GUI applications.",
+      "To serialize objects into continuous bit streams for network transmission."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Stream API enables developers to write clean, declarative code for processing collections (like filtering and mapping) without writing explicit loops."
+  },
+  {
+    "id": "jv-q020",
+    "question": "What does the 'Optional' class in Java provide?",
+    "answer": "A container object which may or may not contain a non-null value, aimed at reducing NullPointerExceptions.",
+    "options": [
+      "A way to mark a method argument as completely optional during compilation.",
+      "A container object which may or may not contain a non-null value, aimed at reducing NullPointerExceptions.",
+      "A utility class that generates optional configuration files for Maven projects.",
+      "A garbage collection algorithm that optionally pauses threads."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Optional is a wrapper class that forces developers to explicitly handle the presence or absence of a value, reducing accidental NullPointerExceptions."
+  },
+  {
+    "id": "jv-q021",
+    "question": "What is the main function of the 'finally' block in exception handling?",
+    "answer": "It is a block of code that is always executed, regardless of whether an exception is thrown or caught, typically used for resource cleanup.",
+    "options": [
+      "It acts as a fallback catch block for exceptions that were not explicitly handled.",
+      "It is a block of code that is always executed, regardless of whether an exception is thrown or caught, typically used for resource cleanup.",
+      "It guarantees the JVM will gracefully shut down after the current thread finishes.",
+      "It prevents the program from throwing any further exceptions after execution."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The finally block ensures that critical cleanup code (like closing files or database connections) runs regardless of whether the try block succeeded or threw an exception."
+  },
+  {
+    "id": "jv-q022",
+    "question": "How does 'try-with-resources' (introduced in Java 7) simplify code?",
+    "answer": "It automatically closes resources (like files or database connections) at the end of the statement, eliminating the need for a finally block.",
+    "options": [
+      "It automatically allocates more RAM resources to the JVM block during execution.",
+      "It automatically catches all checked exceptions without needing explicit catch blocks.",
+      "It automatically closes resources (like files or database connections) at the end of the statement, eliminating the need for a finally block.",
+      "It creates parallel threads to handle resource-heavy operations concurrently."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "By declaring AutoCloseable resources directly in the try statement, Java ensures they are automatically closed when the block exits, making code cleaner and safer."
+  },
+  {
+    "id": "jv-q023",
+    "question": "Which of the following best defines a 'Singleton' class in Java?",
+    "answer": "A class that restricts the instantiation of itself to one single instance across the entire Java Virtual Machine.",
+    "options": [
+      "A class that can only be extended by one unique child class.",
+      "A class that restricts the instantiation of itself to one single instance across the entire Java Virtual Machine.",
+      "A class that contains only a single method and no member variables.",
+      "A class designed to process streams sequentially in a single thread."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it."
+  },
+  {
+    "id": "jv-q024",
+    "question": "In Java 14+, what is the purpose of the 'record' keyword?",
+    "answer": "To create concise, immutable data carrier classes by automatically generating constructors, getters, equals(), hashCode(), and toString().",
+    "options": [
+      "To start an automatic audio/video recording stream.",
+      "To enforce strict database transaction logging for JDBC queries.",
+      "To create concise, immutable data carrier classes by automatically generating constructors, getters, equals(), hashCode(), and toString().",
+      "To define a mutable struct similar to those found in C/C++."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Records greatly reduce boilerplate code by auto-generating constructors, accessors, and standard Object methods for simple data-holding classes."
+  },
+  {
+    "id": "jv-q025",
+    "question": "What happens if you define a method as 'synchronized'?",
+    "answer": "It restricts access so that only one thread can execute the method on the given object instance at a time.",
+    "options": [
+      "It synchronizes the method's output with an external remote server.",
+      "It allows multiple threads to read data from the method simultaneously but prevents writing.",
+      "It forces the method to wait for garbage collection before executing.",
+      "It restricts access so that only one thread can execute the method on the given object instance at a time."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Synchronization is a concurrency control mechanism that prevents thread interference by locking the object while the synchronized method is executing."
+  },
+  {
+    "id": "jv-q026",
+    "question": "What is the difference between 'final', 'finally', and 'finalize'?",
+    "answer": "'final' is a keyword for constants/immutability. 'finally' is a block for cleanup in exception handling. 'finalize' is a method called by the GC before object destruction.",
+    "options": [
+      "'final' is a keyword for constants/immutability. 'finally' is a block for cleanup in exception handling. 'finalize' is a method called by the GC before object destruction.",
+      "'final' is a method. 'finally' is a class modifier. 'finalize' is an interface.",
+      "'final' prevents GC. 'finally' forces GC. 'finalize' pauses GC.",
+      "They are identical keywords introduced in different versions of Java for backwards compatibility."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Despite their similar names, these serve entirely different purposes: constant enforcement (final), exception cleanup (finally), and garbage collection hooks (finalize)."
+  },
+  {
+    "id": "jv-q027",
+    "question": "Which area of JVM memory stores class-level information, method data, and static variables?",
+    "answer": "The Method Area (or Metaspace in Java 8+).",
+    "options": [
+      "The Heap memory.",
+      "The Stack memory.",
+      "The Method Area (or Metaspace in Java 8+).",
+      "The PC Register."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Method Area (Metaspace) is the memory region where class structures, method code, and static fields are allocated, distinct from the object Heap."
+  },
+  {
+    "id": "jv-q028",
+    "question": "What is the primary role of the Java Garbage Collector?",
+    "answer": "To automatically identify and discard objects that are no longer referenced by the program, freeing up Heap memory.",
+    "options": [
+      "To clear unused variables from the Stack memory.",
+      "To uninstall outdated JDK versions automatically.",
+      "To close open database connections and file streams when exceptions occur.",
+      "To automatically identify and discard objects that are no longer referenced by the program, freeing up Heap memory."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector automates memory management by reclaiming heap space occupied by objects that are no longer reachable by the application code."
+  },
+  {
+    "id": "jv-q029",
+    "question": "What does the 'super' keyword refer to in Java?",
+    "answer": "It is a reference variable used to refer to the immediate parent class object, methods, or constructors.",
+    "options": [
+      "It refers to the current instance of the class (like 'this').",
+      "It is used to grant administrative privileges to a JVM thread.",
+      "It is a reference variable used to refer to the immediate parent class object, methods, or constructors.",
+      "It elevates a protected variable to public access globally."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'super' keyword acts as a bridge to the parent class, enabling a subclass to call parent constructors or access overridden parent methods."
+  },
+  {
+    "id": "jv-q030",
+    "question": "Can you override a static method in Java?",
+    "answer": "No, static methods cannot be overridden because they are bound to the class at compile-time, not dynamically bound to an object at runtime. (This is called method hiding).",
+    "options": [
+      "Yes, static methods can be overridden exactly like instance methods.",
+      "No, static methods cannot be overridden because they are bound to the class at compile-time, not dynamically bound to an object at runtime. (This is called method hiding).",
+      "Yes, but only if the subclass defines the static method with the 'final' keyword.",
+      "No, because static methods do not inherit from the Object class."
+    ],
+    "category": "Java",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Static methods belong to the class, not the instance. Re-declaring a static method in a subclass hides the parent method rather than overriding it polymorphically."
+  },
+  {
+    "id": "jv-q031",
+    "question": "True or False: The JVM is the development kit that contains tools for compiling Java code.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The JVM (Java Virtual Machine) executes the bytecode. The JDK (Java Development Kit) is the environment that contains the tools for compiling."
+  },
+  {
+    "id": "jv-q032",
+    "question": "True or False: In Java, the '==' operator compares object references (memory locations), while the '.equals()' method compares the actual content of the objects.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This is a fundamental difference in Java: '==' evaluates reference equality, while '.equals()' evaluates object equivalence."
+  },
+  {
+    "id": "jv-q033",
+    "question": "True or False: Method Overloading in Java refers to providing a specific implementation in a subclass for a method already defined in its superclass.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Providing a specific implementation in a subclass for a superclass method is Method Overriding. Overloading means multiple methods with the same name but different parameters in the same class."
+  },
+  {
+    "id": "jv-q034",
+    "question": "True or False: String is immutable, StringBuilder is mutable but not thread-safe, and StringBuffer is mutable and thread-safe.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This accurately describes the concurrency and mutability traits of these three string classes."
+  },
+  {
+    "id": "jv-q035",
+    "question": "True or False: The 'static' keyword in Java prevents a variable from ever being modified after initialization.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. That is the behavior of the 'final' keyword. The 'static' keyword indicates that the member belongs to the class itself, shared across all instances."
+  },
+  {
+    "id": "jv-q036",
+    "question": "True or False: Java does not support multiple inheritance of classes, but it allows a class to implement multiple interfaces.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Java restricts class inheritance to a single superclass to avoid the Diamond Problem, but allows implementing multiple interfaces."
+  },
+  {
+    "id": "jv-q037",
+    "question": "True or False: In modern Java, interfaces can have state (instance variables) and constructors, while abstract classes cannot.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the exact opposite. Abstract classes can have state and constructors, while interfaces cannot hold instance state."
+  },
+  {
+    "id": "jv-q038",
+    "question": "True or False: Autoboxing in Java is the automatic conversion of primitives to their wrapper classes, while Unboxing is the reverse conversion.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This feature seamlessly bridges primitives (like int) and object wrappers (like Integer)."
+  },
+  {
+    "id": "jv-q039",
+    "question": "True or False: The 'transient' keyword in Java forces a variable to be cached in the thread's local memory to improve performance.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'transient' keyword prevents a variable from being serialized. Caching in thread-local memory relates loosely to what 'volatile' aims to prevent."
+  },
+  {
+    "id": "jv-q040",
+    "question": "True or False: Checked exceptions are checked at compile-time and must be declared or handled, while unchecked exceptions occur at runtime.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This compiler enforcement is the primary distinction between Checked and Unchecked (Runtime) exceptions."
+  },
+  {
+    "id": "jv-q041",
+    "question": "True or False: ConcurrentHashMap is the collection that allows null keys and null values.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. ConcurrentHashMap does not allow null keys or values; HashMap is the Map implementation that allows them."
+  },
+  {
+    "id": "jv-q042",
+    "question": "True or False: Prior to Java 8, a HashMap resolved collisions internally by using a Linked List to store multiple entries falling into the same bucket.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This is known as separate chaining using linked lists."
+  },
+  {
+    "id": "jv-q043",
+    "question": "True or False: In Java 8, HashMap collisions are completely prevented by using SHA-256 for hashing keys.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Collisions aren't completely prevented; instead, performance is optimized by converting linked lists to Balanced Binary Trees when a collision threshold is exceeded."
+  },
+  {
+    "id": "jv-q044",
+    "question": "True or False: ArrayList uses a dynamic array providing O(1) random access, whereas LinkedList uses a doubly-linked list making random access O(n).",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This correctly summarizes the time complexity trade-offs between the two List implementations."
+  },
+  {
+    "id": "jv-q045",
+    "question": "True or False: The 'volatile' keyword in Java makes a block of code mutually exclusive so only one thread can execute it at a time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. That describes the 'synchronized' keyword. 'volatile' ensures visibility of a variable across threads by forcing reads/writes directly from main memory."
+  },
+  {
+    "id": "jv-q046",
+    "question": "True or False: The wait() method releases the lock on the object and must be called inside a synchronized context, whereas sleep() simply pauses the thread and holds its locks.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This is the fundamental difference in how they handle object locks during multithreading."
+  },
+  {
+    "id": "jv-q047",
+    "question": "True or False: Type Erasure is a runtime error thrown when a generic type is cast incorrectly in Java.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Type Erasure is a compile-time process where the compiler removes generic type parameters to ensure backward compatibility."
+  },
+  {
+    "id": "jv-q048",
+    "question": "True or False: A Functional Interface in Java is an interface that contains exactly one abstract method and can be implemented using a Lambda expression.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. While it can have multiple default or static methods, it must have exactly one abstract method."
+  },
+  {
+    "id": "jv-q049",
+    "question": "True or False: The primary purpose of the Java Stream API is to serialize objects into continuous bit streams for network transmission.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. That describes I/O streams. The Stream API (Java 8) is used to process collections of objects in a declarative, functional style."
+  },
+  {
+    "id": "jv-q050",
+    "question": "True or False: The 'Optional' class in Java provides a container object which may or may not contain a non-null value, aimed at reducing NullPointerExceptions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It forces developers to explicitly handle the case where a value might be missing."
+  },
+  {
+    "id": "jv-q051",
+    "question": "True or False: The 'finally' block in Java acts as a fallback catch block for exceptions that were not explicitly handled by the developer.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The 'finally' block doesn't catch exceptions; it contains code that is always executed, usually for resource cleanup, regardless of exceptions."
+  },
+  {
+    "id": "jv-q052",
+    "question": "True or False: 'Try-with-resources' automatically closes resources (like files or database connections) at the end of the statement, eliminating the need for a finally block.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Any object that implements AutoCloseable can be managed automatically this way."
+  },
+  {
+    "id": "jv-q053",
+    "question": "True or False: A 'Singleton' class in Java is a class that can only be extended by one unique child class.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A Singleton is a design pattern that restricts the instantiation of a class to one single instance across the JVM, not related to inheritance limits."
+  },
+  {
+    "id": "jv-q054",
+    "question": "True or False: In Java 14+, the 'record' keyword is used to create concise, immutable data carrier classes by automatically generating standard methods.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Records eliminate the boilerplate usually required for simple POJOs/data carriers."
+  },
+  {
+    "id": "jv-q055",
+    "question": "True or False: Defining a method as 'synchronized' allows multiple threads to read data from the method simultaneously but prevents writing.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Synchronized restricts access so only one thread can execute the method at a time, blocking both concurrent reads and writes from other threads on that lock."
+  },
+  {
+    "id": "jv-q056",
+    "question": "True or False: In Java, 'final' is for constants, 'finally' is for exception cleanup, and 'finalize' is called by the GC before object destruction.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This concisely summarizes the distinct functionality of these three similarly named keywords/methods."
+  },
+  {
+    "id": "jv-q057",
+    "question": "True or False: The Stack memory is the area of JVM memory that stores class-level information, method data, and static variables.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The Stack memory stores local variables and method call frames. Class-level information is stored in the Method Area / Metaspace."
+  },
+  {
+    "id": "jv-q058",
+    "question": "True or False: The primary role of the Java Garbage Collector is to automatically identify and discard objects that are no longer referenced, freeing up Heap memory.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This automated memory management saves developers from manual deallocation errors like memory leaks."
+  },
+  {
+    "id": "jv-q059",
+    "question": "True or False: The 'super' keyword in Java refers to the current instance of the class (acting identically to 'this').",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. 'super' refers to the immediate parent class object, whereas 'this' refers to the current instance of the class."
+  },
+  {
+    "id": "jv-q060",
+    "question": "True or False: Static methods cannot be overridden in Java because they are bound to the class at compile-time, not dynamically bound to an object at runtime.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. If a subclass defines a static method with the same signature, it 'hides' the superclass method instead of overriding it polymorphically."
+  },
+  {
+    "id": "jv-q061",
+    "question": "The ______ executes the bytecode during Java program execution.",
+    "answer": "JVM",
+    "options": ["JDK", "JRE", "JVM", "JIT"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "While the JDK compiles the code, the Java Virtual Machine (JVM) is the engine that actually runs the bytecode."
+  },
+  {
+    "id": "jv-q062",
+    "question": "In Java, the ______ operator compares object references or memory locations.",
+    "answer": "==",
+    "options": ["==", "===", ".equals()", ".compareTo()"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The '==' operator checks whether two variables point to the exact same memory address."
+  },
+  {
+    "id": "jv-q063",
+    "question": "Defining multiple methods with the same name in the same class but with different parameter lists is called Method ______.",
+    "answer": "Overloading",
+    "options": ["Overriding", "Overloading", "Hiding", "Shadowing"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Overloading provides flexibility by allowing the same method name to handle different inputs."
+  },
+  {
+    "id": "jv-q064",
+    "question": "While StringBuilder is mutable but not thread-safe, ______ is mutable and thread-safe.",
+    "answer": "StringBuffer",
+    "options": ["String", "StringBuffer", "CharSequence", "StringReader"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "StringBuffer methods are synchronized, making it safe for use in multithreaded environments."
+  },
+  {
+    "id": "jv-q065",
+    "question": "The ______ keyword indicates that a member belongs to the class itself, rather than to instances of the class.",
+    "answer": "static",
+    "options": ["final", "static", "abstract", "volatile"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Static members exist independently of any instances created for the class."
+  },
+  {
+    "id": "jv-q066",
+    "question": "Java does not support multiple inheritance of classes, but it allows a class to implement multiple ______.",
+    "answer": "interfaces",
+    "options": ["classes", "packages", "interfaces", "abstract classes"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Implementing multiple interfaces provides polymorphic flexibility without the state ambiguity of multiple class inheritance."
+  },
+  {
+    "id": "jv-q067",
+    "question": "Abstract classes can have state and constructors, while ______ cannot hold instance state and are implemented rather than extended.",
+    "answer": "interfaces",
+    "options": ["interfaces", "enums", "records", "annotations"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Even with modern additions like default methods, interfaces remain stateless contracts."
+  },
+  {
+    "id": "jv-q068",
+    "question": "The automatic conversion of primitive data types to their corresponding wrapper classes is known as ______.",
+    "answer": "Autoboxing",
+    "options": ["Unboxing", "Autoboxing", "Casting", "Type Erasure"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Autoboxing saves developers from manually instantiating wrapper objects (like Integer for int)."
+  },
+  {
+    "id": "jv-q069",
+    "question": "The ______ keyword prevents a variable from being serialized during the object serialization process.",
+    "answer": "transient",
+    "options": ["volatile", "transient", "final", "native"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Transient fields are skipped when converting an object's state into a byte stream."
+  },
+  {
+    "id": "jv-q070",
+    "question": "______ exceptions are checked at compile-time and must be explicitly declared or handled.",
+    "answer": "Checked",
+    "options": ["Unchecked", "Runtime", "Checked", "Error"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Checked exceptions represent anticipated failure conditions (like IOException) that the programmer must handle."
+  },
+  {
+    "id": "jv-q071",
+    "question": "The ______ collection in Java allows one null key and multiple null values.",
+    "answer": "HashMap",
+    "options": ["TreeMap", "Hashtable", "ConcurrentHashMap", "HashMap"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Unlike thread-safe or sorted alternatives, standard HashMaps permit null key/value entries."
+  },
+  {
+    "id": "jv-q072",
+    "question": "Prior to Java 8, HashMap resolved collisions internally by using a ______ to store multiple entries falling into the same bucket.",
+    "answer": "Linked List",
+    "options": ["Binary Tree", "Linked List", "Dynamic Array", "Hash Set"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This chaining method meant many collisions could slow lookups to O(n) traversing the linked list."
+  },
+  {
+    "id": "jv-q073",
+    "question": "In Java 8, when a HashMap bucket's linked list exceeds a certain threshold, it transforms into a ______.",
+    "answer": "Balanced Binary Tree",
+    "options": [
+      "Balanced Binary Tree",
+      "Doubly-Linked List",
+      "Stack",
+      "B-Tree"
+    ],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Converting long chains to Red-Black Trees ensures worst-case lookups remain at O(log n)."
+  },
+  {
+    "id": "jv-q074",
+    "question": "______ uses a doubly-linked list, making insertions and deletions faster but random access O(n).",
+    "answer": "LinkedList",
+    "options": ["ArrayList", "LinkedList", "Vector", "Stack"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "LinkedLists must traverse nodes sequentially, making them poor for random access but excellent for structural modifications."
+  },
+  {
+    "id": "jv-q075",
+    "question": "The ______ keyword guarantees that a variable's value will be read from and written directly to main memory, preventing thread caching.",
+    "answer": "volatile",
+    "options": ["synchronized", "transient", "volatile", "final"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Volatile provides a lightweight synchronization mechanism for variable visibility across threads."
+  },
+  {
+    "id": "jv-q076",
+    "question": "The ______ method releases the lock on the object and must be called inside a synchronized context.",
+    "answer": "wait()",
+    "options": ["sleep()", "wait()", "yield()", "join()"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "wait() pauses the thread and releases the object lock so other threads can enter the synchronized block."
+  },
+  {
+    "id": "jv-q077",
+    "question": "The process where the compiler removes all generic type parameters and replaces them with their bounds or Object at compile time is called ______.",
+    "answer": "Type Erasure",
+    "options": ["Autoboxing", "Type Erasure", "Polymorphism", "Upcasting"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Type Erasure was implemented so that binaries produced with generics could run on older JVMs that didn't understand generics."
+  },
+  {
+    "id": "jv-q078",
+    "question": "A ______ Interface in Java contains exactly one abstract method and can be implemented using a Lambda expression.",
+    "answer": "Functional",
+    "options": ["Marker", "Functional", "Serializable", "Cloneable"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Functional interfaces act as the foundation for Lambda expressions and method references in Java 8+."
+  },
+  {
+    "id": "jv-q079",
+    "question": "The Java ______ API was introduced in Java 8 to process collections of objects in a declarative, functional style using operations like filter and map.",
+    "answer": "Stream",
+    "options": ["Reflection", "Stream", "Collection", "I/O"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Streams provide a high-level abstraction for querying and processing data sets efficiently."
+  },
+  {
+    "id": "jv-q080",
+    "question": "The ______ class provides a container object which may or may not contain a non-null value, aimed at reducing NullPointerExceptions.",
+    "answer": "Optional",
+    "options": ["Nullable", "Optional", "Wrapper", "Container"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Optional encourages developers to explicitly design for missing values rather than returning silent nulls."
+  },
+  {
+    "id": "jv-q081",
+    "question": "The ______ block is always executed in exception handling, regardless of whether an exception is thrown or caught, and is typically used for resource cleanup.",
+    "answer": "finally",
+    "options": ["try", "catch", "finally", "throws"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The finally block is guaranteed execution, making it the safest place to close streams and connections."
+  },
+  {
+    "id": "jv-q082",
+    "question": "Introduced in Java 7, ______ automatically closes resources at the end of the statement, eliminating the need for a finally block.",
+    "answer": "try-with-resources",
+    "options": [
+      "garbage collection",
+      "try-with-resources",
+      "auto-boxing",
+      "finalization"
+    ],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Any class implementing java.lang.AutoCloseable can be automatically managed by this language feature."
+  },
+  {
+    "id": "jv-q083",
+    "question": "A ______ class restricts the instantiation of itself to one single instance across the entire Java Virtual Machine.",
+    "answer": "Singleton",
+    "options": ["Singleton", "Static", "Final", "Immutable"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Singleton pattern is commonly used for shared resources like database connection pools."
+  },
+  {
+    "id": "jv-q084",
+    "question": "In Java 14+, the ______ keyword is used to create concise, immutable data carrier classes by automatically generating constructors and accessors.",
+    "answer": "record",
+    "options": ["struct", "class", "record", "inline"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Records provide a built-in mechanism for creating pure data-holding objects without repetitive boilerplate."
+  },
+  {
+    "id": "jv-q085",
+    "question": "Defining a method as ______ restricts access so that only one thread can execute the method on the given object instance at a time.",
+    "answer": "synchronized",
+    "options": ["volatile", "transient", "synchronized", "atomic"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Synchronization is vital for preventing race conditions when modifying shared mutable state."
+  },
+  {
+    "id": "jv-q086",
+    "question": "While 'final' defines constants and 'finally' is used for cleanup, ______ is a method called by the GC before object destruction.",
+    "answer": "finalize",
+    "options": ["finalizer", "finalize", "GC.collect", "dispose"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "finalize() is inherited from Object and acts as a last-resort cleanup hook (though its use is generally discouraged in modern Java)."
+  },
+  {
+    "id": "jv-q087",
+    "question": "The area of JVM memory that stores class-level information, method data, and static variables is called the ______ (or Metaspace in Java 8+).",
+    "answer": "Method Area",
+    "options": ["Heap", "Stack", "Method Area", "PC Register"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The Method Area is a logical part of the JVM shared among all threads for storing structural definitions."
+  },
+  {
+    "id": "jv-q088",
+    "question": "The Java ______ automatically identifies and discards objects that are no longer referenced by the program to free up Heap memory.",
+    "answer": "Garbage Collector",
+    "options": [
+      "Heap Manager",
+      "Memory Allocator",
+      "Garbage Collector",
+      "Finalizer"
+    ],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Garbage collection tracks object roots and frees the developer from manual memory deallocation."
+  },
+  {
+    "id": "jv-q089",
+    "question": "The ______ keyword is a reference variable used to refer to the immediate parent class object, methods, or constructors.",
+    "answer": "super",
+    "options": ["this", "parent", "super", "base"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Using 'super' allows subclasses to explicitly invoke functionality defined in their parent hierarchy."
+  },
+  {
+    "id": "jv-q090",
+    "question": "Static methods cannot be overridden in Java because they are bound to the class at compile-time; defining the same method in a subclass is instead called method ______.",
+    "answer": "hiding",
+    "options": ["overriding", "shadowing", "hiding", "overloading"],
+    "category": "Java",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Method hiding means the static method executed is determined by the reference type at compile-time, not the object type at runtime."
+  }
+]
