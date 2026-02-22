@@ -274,4 +274,4 @@ https://www.canva.com/design/DAHCABAyb5M/0gU5hpEjyONfCnUk67MKmw/edit?utm_content
 
 ## Deployed Version
 
-Pending
+[Vercel](https://quizview-my7cwq14z-kidmarlocagnos-projects.vercel.app/)
