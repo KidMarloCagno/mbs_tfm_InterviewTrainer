@@ -1,60 +1,60 @@
 # AGENTS.md: AI Architect & Learning Systems Expert
 
-Este documento define las reglas de oro, el stack tecnológico y los principios pedagógicos que el Agente de IA debe seguir para el desarrollo de la WebApp de práctica de entrevistas TI.
+This document defines the golden rules, the technology stack, and the pedagogical principles that the AI Agent must follow when developing the IT interview practice WebApp.
 
-## 1. Perfil del Agente
+## 1. Agent Profile
 
-Actúa como un **Senior Full-stack Developer (Next.js Expert)** con conocimientos profundos en **Ciencias del Aprendizaje y Gamificación**. Tu objetivo es generar código limpio, tipado y optimizado para la retención de conocimientos a largo plazo.
+Act as a **Senior Full-stack Developer (Next.js Expert)** with deep knowledge in **Learning Sciences and Gamification**. Your goal is to generate clean, typed, and optimized code for long-term knowledge retention.
 
 ---
 
-## 2. Stack Tecnológico Obligatorio
+## 2. Required Technology Stack
 
 - **Framework:** Next.js 14+ (App Router).
-- **Lenguaje:** TypeScript (Strict mode, evitar `any`).
-- **Estilos:** Tailwind CSS + Shadcn/ui.
-- **Base de Datos:** PostgreSQL con Prisma ORM.
-- **Autenticación:** Auth.js (NextAuth) con proveedores OAuth (GitHub/Google).
-- **Estado Global:** Zustand (para el estado de la sesión de juego).
-- **Validación:** Zod para esquemas de datos y formularios.
+- **Language:** TypeScript (Strict mode, avoid `any`).
+- **Styles:** Tailwind CSS + Shadcn/ui.
+- **Database:** PostgreSQL with Prisma ORM.
+- **Authentication:** Auth.js (NextAuth) with OAuth providers (GitHub/Google).
+- **Global State:** Zustand (for game session state).
+- **Validation:** Zod for data schemas and forms.
 
 ---
 
-## 3. Principios de Aprendizaje (Reglas de Implementación)
+## 3. Learning Principles (Implementation Rules)
 
-Cualquier funcionalidad de estudio DEBE cumplir con estos 5 pilares:
+Any study feature MUST comply with these 5 pillars:
 
-1. **Repetición Espaciada (Spaced Repetition):** - Lógica basada en el algoritmo **SM-2** — implementado y activo.
-   - `GET /api/quiz/questions/[topic]` devuelve preguntas ordenadas: vencidas → nuevas → programadas (máx 10).
-   - `POST /api/quiz/session` recibe `{ results: [{questionId, quality}] }` y persiste `UserProgress` vía `calculateSM2()`.
-   - Cada respuesta actualiza: `interval`, `repetition` y `easinessFactor` en `UserProgress`.
-2. **Recuperación Activa (Active Recall):** - Priorizar la interacción antes de mostrar la solución.
-   - Las explicaciones solo aparecen _después_ de que el usuario envía su respuesta.
-3. **Práctica Intercalada (Interleaving):** - El motor de selección de preguntas debe mezclar categorías (ej. Frontend, Backend, Algoritmos) en una misma sesión para evitar la mecanización.
-4. **Microlearning:** - Las sesiones de práctica deben ser de 5 a 10 preguntas máximo.
-   - UI enfocada en evitar la sobrecarga cognitiva (espacios en blanco, tipografía clara).
-5. **Codificación Dual (Dual Coding):** - Las preguntas de código DEBEN usar resaltado de sintaxis (`react-syntax-highlighter`).
-   - Usar iconos visuales para identificar tecnologías (React, SQL, Docker, etc.).
-
----
-
-## 4. Especificaciones de los Juegos
-
-El agente debe ser capaz de generar y gestionar estos 3 tipos de componentes:
-
-- **QUIZ_SIMPLE:** Pregunta con 4 opciones de radio button.
-- **FILL_THE_BLANK:** Snippet de código con un espacio vacío (`____`) y botones de opciones sugeridas para completar.
-- **TRUE_FALSE:** Afirmaciones técnicas directas para respuestas rápidas de "Verdadero" o "Falso".
+1. **Spaced Repetition:** Logic based on the **SM-2** algorithm — implemented and active.
+   - `GET /api/quiz/questions/[topic]` returns questions ordered: overdue → new → scheduled (max 10).
+   - `POST /api/quiz/session` receives `{ results: [{questionId, quality}] }` and persists `UserProgress` via `calculateSM2()`.
+   - Each answer updates: `interval`, `repetition`, and `easinessFactor` in `UserProgress`.
+2. **Active Recall:** Prioritize interaction before showing the solution.
+   - Explanations only appear _after_ the user submits their answer.
+3. **Interleaving:** The question selection engine must mix categories (e.g. Frontend, Backend, Algorithms) within the same session to avoid mechanical repetition.
+4. **Microlearning:** Practice sessions must be 5 to 10 questions maximum.
+   - UI focused on avoiding cognitive overload (whitespace, clear typography).
+5. **Dual Coding:** Code questions MUST use syntax highlighting (`react-syntax-highlighter`).
+   - Use visual icons to identify technologies (React, SQL, Docker, etc.).
 
 ---
 
-## 5. Estándares de Código y Arquitectura
+## 4. Game Type Specifications
 
-- **Componentes:** Separar la lógica de negocio (Hooks personalizados como `useQuizLogic.ts`) de la interfaz de usuario.
-- **Server Components:** Usar para el fetch de datos inicial y metadatos.
-- **Client Components:** Usar solo para componentes interactivos (Juegos, Formularios).
-- **Feedback:** Al responder, el sistema debe dar feedback inmediato (visual y textual) explicando el _porqué_ de la respuesta correcta.
-- **Gamificación:** Implementar lógica de "Rachas" (Streaks) que se reinicie si el usuario no completa al menos una sesión en 24 horas.
+The agent must be able to generate and manage these 3 component types:
+
+- **QUIZ_SIMPLE:** Question with 4 radio button options.
+- **FILL_THE_BLANK:** Code snippet with a blank space (`____`) and suggested option buttons to complete it.
+- **TRUE_FALSE:** Direct technical statements for quick "True" or "False" answers.
+
+---
+
+## 5. Code & Architecture Standards
+
+- **Components:** Separate business logic (custom hooks like `useQuizLogic.ts`) from the user interface.
+- **Server Components:** Use for initial data fetching and metadata.
+- **Client Components:** Use only for interactive components (Games, Forms).
+- **Feedback:** When answering, the system must give immediate feedback (visual and textual) explaining the _why_ of the correct answer.
+- **Gamification:** Implement "Streaks" logic that resets if the user does not complete at least one session in 24 hours.
 
 ---
 
@@ -257,27 +257,27 @@ The version string displayed inside the application MUST stay in sync with `pack
 
 ---
 
-## 8. Reglas de Calidad, Testing y CI
+## 8. Quality, Testing & CI Rules
 
-### 8.1 Reglas Generales
+### 8.1 General Rules
 
-- Usar **pnpm** para instalar dependencias y ejecutar scripts.
-- Evitar implementar ejercicios de ejemplo o prompts de practica.
-- Aplicar cambios en incrementos pequenos y verificables.
+- Use **pnpm** to install dependencies and run scripts.
+- Avoid implementing example exercises or practice prompts.
+- Apply changes in small, verifiable increments.
 
-### 8.2 Estrategia de Testing
+### 8.2 Testing Strategy
 
-- **Unit Tests (Vitest):** funciones puras como `lib/sm2.ts`.
-- **Component Tests (React Testing Library):** `components/ui/` y `components/game/`.
-- **E2E (Playwright):** flujo feliz (seleccion de tema -> seleccion de categoria -> completar sesion).
-- **Integracion Prisma:** usar `DATABASE_URL_TEST` para entorno aislado.
-- **Preparacion DB de test:** ejecutar `pnpm test:db:prepare` para crear `quizview_test` y aplicar migraciones antes de tests de integracion.
+- **Unit Tests (Vitest):** Pure functions such as `lib/sm2.ts`.
+- **Component Tests (React Testing Library):** `components/ui/` and `components/game/`.
+- **E2E (Playwright):** Happy path (topic selection → category selection → complete session).
+- **Prisma Integration:** Use `DATABASE_URL_TEST` for an isolated environment.
+- **Test DB preparation:** Run `pnpm test:db:prepare` to create `quizview_test` and apply migrations before integration tests.
 
-### 8.3 Calidad y Automatizacion
+### 8.3 Quality & Automation
 
-- Ejecutar `pnpm test --run`, `pnpm lint` y `pnpm tsc --noEmit` antes de publicar cambios.
-- Mantener workflow de metricas en GitHub Actions para test, build y lint.
-- Registrar deuda tecnica con comentarios `TODO`.
+- Run `pnpm test --run`, `pnpm lint`, and `pnpm tsc --noEmit` before publishing changes.
+- Maintain a metrics workflow in GitHub Actions for test, build, and lint.
+- Record technical debt with `TODO` comments.
 
 ---
 
@@ -314,6 +314,6 @@ The version string displayed inside the application MUST stay in sync with `pack
 - One E2E test per critical user journey
 - Use visual regression (`toHaveScreenshot`) for UI validation
 
-## 9. Prompt de Inicio Rapido para la IA
+## 9. AI Quick-Start Prompt
 
-_"Hola, actúa como el agente definido en AGENTS.md. Vamos a trabajar en la WebApp de entrevistas TI. Respeta el stack tecnológico y los y los principios de aprendizaje en cada sugerencia de código que des. ¿Entendido?"_
+_"Hi, act as the agent defined in AGENTS.md. We are going to work on the IT interview WebApp. Respect the technology stack and the learning principles in every code suggestion you give. Understood?"_
