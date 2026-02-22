@@ -7,11 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.3.4] - 2026-02-21
+## [1.3.4] - 2026-02-22
+
+### Added
+
+- `__tests__/components/quiz/QuizPage.test.tsx` — 8 regression tests for the `savingProgress` race condition (IMPORTANT TIER, 259 tests total):
+  - Completion screen renders heading and score
+  - Button shows "Saving…" and is disabled while `POST /api/quiz/session` is in-flight
+  - Button re-enables and status line updates after POST resolves
+  - Navigation uses `globalThis.location.href` (hard reload), not `router.push` — verifies Router Cache bypass
+  - "Run Again" calls `globalThis.location.reload`
 
 ### Fixed
 
 - Remix card not activating after first session on Vercel: the "Back to Topics" button now waits for `POST /api/quiz/session` to complete before navigating to the dashboard, eliminating the race condition where the dashboard Server Component queried `UserProgress` before the write had committed. The button shows "Saving…" and is disabled during the save.
+- Replaced `router.push("/dashboard")` with `globalThis.location.href = "/dashboard"` on the completion screen to bypass Next.js Router Cache (30 s client-side TTL), which caused the dashboard to show stale data even after the DB write completed.
 
 ## [1.3.3] - 2026-02-21
 

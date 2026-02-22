@@ -148,7 +148,7 @@ export default function QuizPage() {
               disabled={savingProgress}
               onClick={() => {
                 resetSession();
-                router.push("/dashboard");
+                globalThis.location.href = "/dashboard";
               }}
             >
               {savingProgress ? "Saving…" : "Back to Topics"}
@@ -158,7 +158,7 @@ export default function QuizPage() {
               variant="outline"
               onClick={() => {
                 resetSession();
-                window.location.reload();
+                globalThis.location.reload();
               }}
             >
               Run Again
@@ -225,7 +225,7 @@ export default function QuizPage() {
           >
             Exit Session
           </Button>
-          {lastAnswerCorrect !== null ? (
+          {lastAnswerCorrect === null ? null : (
             <Button
               onClick={() => {
                 setLastAnswerCorrect(null);
@@ -235,7 +235,7 @@ export default function QuizPage() {
             >
               Next Question {"->"}
             </Button>
-          ) : null}
+          )}
         </div>
       </div>
     </div>
