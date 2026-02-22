@@ -19,6 +19,24 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 - **Brute-Force Protection**: Per-IP rate limiting on both login (10 attempts/15 min) and registration (5 attempts/15 min)
 - **Responsive Design**: Clean UI with semantic CSS design tokens and dark/neon themes
 
+## Question Library
+
+More than **1,500 questions** across **11 topics**:
+
+| Topic         | Focus area                                                |
+| ------------- | --------------------------------------------------------- |
+| Angular       | Framework architecture, components, directives, RxJS      |
+| Backend       | REST APIs, authentication, server patterns, microservices |
+| Database      | SQL, indexing, transactions, NoSQL fundamentals           |
+| Django        | ORM, views, middleware, REST framework                    |
+| Frontend      | HTML, CSS, browser APIs, performance, accessibility       |
+| Java          | Core language, OOP, concurrency, JVM internals            |
+| JavaScript    | Language fundamentals, async, closures, ES2015+           |
+| Python        | Language features, data structures, OOP, stdlib           |
+| React         | Hooks, component patterns, state management, rendering    |
+| Spring        | IoC/DI, Spring Boot, MVC, Spring Data                     |
+| System Design | Scalability, distributed systems, caching, messaging      |
+
 ## Tech Stack
 
 - Frontend: ![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
@@ -162,7 +180,28 @@ You can choose one of these rollout options:
 - Enable GitHub code scanning upload (SARIF) for Snyk Code findings.
 - Start with `--severity-threshold=high` and later tighten to `medium`.
 - Add `snyk monitor` in a separate scheduled workflow to track project history in Snyk dashboard.
--
+
+## 🛡️ Snyk Security Local Acanning (Recommended)
+
+Before committing, it is highly recommended to run Snyk locally to check for vulnerabilities in all project dependencies. This helps catch issues early and avoid failed commits due to security problems.
+
+- Run Snyk with the following command to scan all project manifests (including both package.json and pnpm-lock.yaml):
+
+  ```bash
+  snyk test --all-projects
+  ```
+
+- If vulnerabilities are found, you can attempt to auto-fix them:
+
+  ```bash
+  snyk fix --all-projects
+  ```
+
+- Note: Some vulnerabilities may require manual updates to package versions or human validation. If an upgrade implies significant code changes, carefully review whether the update is worth it for your project at this time.
+
+- Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
+
+- For more details, see the [Snyk documentation](https://docs.snyk.io/).
 
 ## ▲ Vercel Deployment Notes
 
@@ -228,28 +267,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions or feedback, please open an issue on GitHub.
-
-## 🛡️ Snyk Security Scanning (Recommended)
-
-Before committing, it is highly recommended to run Snyk locally to check for vulnerabilities in all project dependencies. This helps catch issues early and avoid failed commits due to security problems.
-
-- Run Snyk with the following command to scan all project manifests (including both package.json and pnpm-lock.yaml):
-
-  ```bash
-  snyk test --all-projects
-  ```
-
-- If vulnerabilities are found, you can attempt to auto-fix them:
-
-  ```bash
-  snyk fix --all-projects
-  ```
-
-- Note: Some vulnerabilities may require manual updates to package versions or human validation. If an upgrade implies significant code changes, carefully review whether the update is worth it for your project at this time.
-
-- Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
-
-- For more details, see the [Snyk documentation](https://docs.snyk.io/).
 
 ## TFM Summary Presentation
 

@@ -143,6 +143,22 @@ When a new `.json` file is dropped into `prisma/data/sets/`, or new questions ar
 
 ---
 
+### 6.4 DB Schema (Quick Reference)
+
+> Full canonical source: [`prisma/schema.prisma`](prisma/schema.prisma)
+
+| Model | Key fields |
+|-------|------------|
+| `User` | `id` (cuid), `username` (unique), `email` (unique), `passwordHash`, `streakCount`, `lastActivity` |
+| `Question` | `id` (string), `question`, `answer`, `options[]`, `category`, `type` (enum), `level` (enum) |
+| `UserProgress` | `id` (cuid), `userId→User`, `questionId` (plain string, no FK), `repetition`, `interval`, `easinessFactor`, `nextReview` |
+
+Enums: `QuestionType` (QUIZ_SIMPLE, FILL_THE_BLANK, TRUE_FALSE) · `DifficultyLevel` (Beginner, Intermediate, Advanced)
+
+Constraints: `UserProgress` has `@@unique([userId, questionId])` and `@@index([nextReview])`. `questionId` is intentionally a plain string (no FK to `Question`) so new question sets work without re-seeding the DB.
+
+---
+
 ## 7. Version Control & Changelog Management
 
 ### 7.1 Package Version Updates

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.5] - 2026-02-22
+
+### Fixed
+
+- Remix card never activating on Vercel: root cause was `UserProgress.questionId` having a FK constraint to the `Question` table. Any question ID not seeded in the DB caused the upsert to throw a FK violation → silently skipped → `saved: 0`. Removed the FK relation from `UserProgress` (migration `20260222165922_remove_question_fk`); `questionId` is now a plain string. New question sets work immediately without a DB re-seed.
+
 ## [1.3.4] - 2026-02-22
 
 ### Added

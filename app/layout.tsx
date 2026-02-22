@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en" data-theme="neon">
       <body>
         {children}
-        <p className="app-version">v1.3.4</p>
+        <p className="app-version">v1.3.5</p>
       </body>
     </html>
   );
