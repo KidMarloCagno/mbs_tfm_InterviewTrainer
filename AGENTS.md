@@ -269,28 +269,27 @@ The version string displayed inside the application MUST stay in sync with `pack
 
 #### Strategic Coverage (100/80/0 Rule)
 
-- **CORE TIER (100% coverage)**: Business logic that handles money/critical data
-  - Examples: calculateSubtotal, formatPrice, discount strategies
-  - All files in: `src/shared/utils/`, `src/shared/strategies/`
+- **CORE TIER (100% coverage)**: Business logic that handles critical data or happy path, for a new user, and for a user with some questions answered.
+  - Examples: Remix Card disabled (New User), Remix Card (User with passed sets)
+  - All files related to functions flow.
   - Thresholds: 100% statements, branches, functions, lines
 
 - **IMPORTANT TIER (80%+ coverage)**: User-facing features and components
-  - Examples: ProductCard, CartSummary, ShoppingCart
-  - All files in: `src/features/**/*.tsx`
+  - Examples: Login, Dashboard, etc
   - Thresholds: 80% statements/lines, 90% functions
 
 - **INFRASTRUCTURE TIER (0% strategic)**: TypeScript validates, no logic to test
   - Examples: Type definitions, interfaces, constants
   - Excluded from coverage: `src/shared/types/**`
 
-#### Testing Approach
+### Testing Approach
 
 - **Unit Tests**: Pure business logic functions (AAA pattern)
 - **Integration Tests**: Component + user interactions (Testing Library)
 - **E2E Tests**: Critical user flows (Playwright + Page Object Model)
 - **Coverage**: Run with `pnpm test:coverage` - enforces thresholds
 
-#### E2E Testing Rules (Playwright)
+### E2E Testing Rules (Playwright)
 
 - Use Page Object Model (POM) pattern for maintainability
 - Selectors priority: getByRole > getByLabel > getByTestId
