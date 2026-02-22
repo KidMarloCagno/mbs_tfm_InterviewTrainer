@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "be-q001",
+    "question": "What is the primary purpose of back-end development?",
+    "answer": "To handle server-side software, store and organize data, and deliver content to the front-end.",
+    "options": [
+      "To design the visual aesthetics and user interface of a website.",
+      "To handle server-side software, store and organize data, and deliver content to the front-end.",
+      "To exclusively manage local device hardware capabilities.",
+      "To compile front-end assets like CSS and HTML into executable binaries."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Back-end development focuses on the server side, encompassing databases, server logic, and APIs to deliver dynamic content to the client application."
+  },
+  {
+    "id": "be-q002",
+    "question": "Which of the following are widely considered top skills for remote working success as a backend developer?",
+    "answer": "Task focus, time management, careful planning, and self-learning initiative.",
+    "options": [
+      "Graphic design, typography, and animation.",
+      "Hardware repair, server racking, and cable management.",
+      "Task focus, time management, careful planning, and self-learning initiative.",
+      "Cold-calling, public speaking, and sales."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Remote backend developers must rely heavily on self-discipline, time management, and proactive learning to succeed independently."
+  },
+  {
+    "id": "be-q003",
+    "question": "Why does the TCP connection establishment require a 3-way handshake rather than a 2-way handshake?",
+    "answer": "To ensure both the client and server can independently verify that they can reliably send and receive data before establishing the connection.",
+    "options": [
+      "Because older routers cannot physically process 2-way handshakes.",
+      "To ensure both the client and server can independently verify that they can reliably send and receive data before establishing the connection.",
+      "To give the Domain Name System (DNS) time to resolve the IP address.",
+      "Because a 2-way handshake is strictly reserved for the UDP protocol."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A 3-way handshake prevents phantom connections and ensures both the initiator and the receiver are fully ready for bidirectional communication."
+  },
+  {
+    "id": "be-q004",
+    "question": "In the context of the TCP 3-way handshake, what do the flags 'SYN' and 'ACK' stand for?",
+    "answer": "Synchronize and Acknowledge",
+    "options": [
+      "System and Acknowledge",
+      "Synchronous and Asynchronous",
+      "Synchronize and Acknowledge",
+      "Symmetric and Active"
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "SYN is used to synchronize sequence numbers to initiate a connection, while ACK is used to acknowledge the receipt of packets."
+  },
+  {
+    "id": "be-q005",
+    "question": "Why is the HTTP protocol fundamentally considered 'stateless'?",
+    "answer": "Because each request is executed independently, without the server retaining any knowledge or memory of previous requests.",
+    "options": [
+      "Because it does not allow the transfer of static files like images.",
+      "Because the connection is dropped halfway if the server reboots.",
+      "Because each request is executed independently, without the server retaining any knowledge or memory of previous requests.",
+      "Because HTTP exclusively uses UDP, which does not track state."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "In a stateless protocol like HTTP, the server treats every request as an entirely new and independent transaction."
+  },
+  {
+    "id": "be-q006",
+    "question": "Since HTTP is stateless, how do web applications primarily maintain user sessions across multiple requests?",
+    "answer": "By exchanging a unique session identifier stored in a Cookie or passed in an Authorization header with each request.",
+    "options": [
+      "By keeping a persistent TCP tunnel open indefinitely for each user.",
+      "By strictly caching the IP address of the user on the server.",
+      "By exchanging a unique session identifier stored in a Cookie or passed in an Authorization header with each request.",
+      "By requiring the user to re-enter their username and password for every single API call."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Session IDs or tokens (like JWTs) sent in headers or cookies allow the server to re-identify the client across isolated HTTP requests."
+  },
+  {
+    "id": "be-q007",
+    "question": "What is a JSON Web Token (JWT) primarily used for in backend applications?",
+    "answer": "To securely transmit verified information between parties as a JSON object, most commonly for stateless authentication.",
+    "options": [
+      "To securely transmit verified information between parties as a JSON object, most commonly for stateless authentication.",
+      "To compress large video files before sending them to the client.",
+      "To establish a persistent, stateful socket connection with the database.",
+      "To execute server-side JavaScript securely."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "JWTs carry cryptographically signed payloads, allowing the backend to verify the sender's identity without querying a session database."
+  },
+  {
+    "id": "be-q008",
+    "question": "How does HTTPS secure communication over a network?",
+    "answer": "By using Transport Layer Security (TLS) or Secure Sockets Layer (SSL) to encrypt the HTTP requests and responses.",
+    "options": [
+      "By masking the client's IP address using a built-in proxy layer.",
+      "By using Transport Layer Security (TLS) or Secure Sockets Layer (SSL) to encrypt the HTTP requests and responses.",
+      "By relying on strictly hardware-level encryption in the router.",
+      "By automatically hashing all data using the MD5 algorithm."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "HTTPS wraps standard HTTP traffic inside a secure, encrypted TLS/SSL tunnel, protecting data from eavesdropping."
+  },
+  {
+    "id": "be-q009",
+    "question": "What is the primary role of a TCP proxy in networking?",
+    "answer": "It acts as an intermediary that intercepts TCP connections, forwarding traffic between the client and the destination server.",
+    "options": [
+      "It permanently blocks all incoming traffic to prevent DDoS attacks.",
+      "It caches static assets on the client's local hard drive.",
+      "It strictly translates IPv4 addresses into IPv6 format.",
+      "It acts as an intermediary that intercepts TCP connections, forwarding traffic between the client and the destination server."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A TCP proxy sits between the client and server, terminating the incoming TCP connection and establishing a secondary connection to the backend."
+  },
+  {
+    "id": "be-q010",
+    "question": "What generally happens at the Operating System level when a thread goes to 'sleep' or waits for I/O?",
+    "answer": "The OS scheduler puts the thread in a 'blocked' or 'waiting' state and performs a context switch to assign the CPU to another thread.",
+    "options": [
+      "The CPU completely pauses all operations until the thread wakes up.",
+      "The thread is permanently deleted from memory and must be recreated.",
+      "The OS scheduler puts the thread in a 'blocked' or 'waiting' state and performs a context switch to assign the CPU to another thread.",
+      "The OS executes the thread sequentially on a virtualized CPU."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The OS scheduler maximizes CPU utilization by pausing idle threads (context switching) and giving CPU cycles to active, ready threads."
+  },
+  {
+    "id": "be-q011",
+    "question": "What is the primary advantage of using a thread pool in backend applications?",
+    "answer": "It reuses a fixed number of pre-allocated threads to execute tasks, avoiding the massive overhead of constantly creating and destroying threads.",
+    "options": [
+      "It guarantees that every task will be executed entirely in parallel without any blocking.",
+      "It reuses a fixed number of pre-allocated threads to execute tasks, avoiding the massive overhead of constantly creating and destroying threads.",
+      "It eliminates the need for RAM by executing logic purely in CPU cache.",
+      "It acts as a physical security barrier against SQL injection."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Thread pools eliminate the performance penalty of thread instantiation and prevent the server from running out of memory under heavy load."
+  },
+  {
+    "id": "be-q012",
+    "question": "What does the OS concept 'Copy-On-Write' (COW) refer to?",
+    "answer": "An optimization strategy where multiple processes share the same memory page until one tries to modify it, at which point a private copy is created.",
+    "options": [
+      "An algorithm that securely backs up databases exactly when a write occurs.",
+      "An optimization strategy where multiple processes share the same memory page until one tries to modify it, at which point a private copy is created.",
+      "A rule that prevents memory from ever being duplicated.",
+      "A logging mechanism that writes to disk continuously to prevent data loss."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "COW drastically saves memory during operations like process forking, as the OS only duplicates memory if changes are actually made."
+  },
+  {
+    "id": "be-q013",
+    "question": "What is a 'critical section' in concurrent programming?",
+    "answer": "A segment of code where shared resources are accessed and modified, which must be protected from concurrent execution by multiple threads.",
+    "options": [
+      "A segment of code that handles catastrophic hardware failures.",
+      "A piece of memory allocated strictly for kernel-level OS instructions.",
+      "A segment of code where shared resources are accessed and modified, which must be protected from concurrent execution by multiple threads.",
+      "An isolated container where untrusted third-party code is executed."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Critical sections must be guarded using locks, mutexes, or semaphores to prevent race conditions and data corruption."
+  },
+  {
+    "id": "be-q014",
+    "question": "What causes a race condition in a multi-threaded backend environment?",
+    "answer": "When two or more threads concurrently access and modify shared data without proper synchronization, leading to unpredictable outcomes.",
+    "options": [
+      "When a single thread executes too quickly for the CPU to track.",
+      "When the operating system arbitrarily deletes threads to free up RAM.",
+      "When two or more threads concurrently access and modify shared data without proper synchronization, leading to unpredictable outcomes.",
+      "When network latency causes HTTP packets to arrive out of order."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Race conditions occur when the timing or sequence of thread scheduling unpredictably alters the intended logical output of the program."
+  },
+  {
+    "id": "be-q015",
+    "question": "What is the primary difference between a Mutex and a Semaphore?",
+    "answer": "A Mutex provides exclusive access to a single thread (locking mechanism), while a Semaphore allows a specified number of threads to access a resource (signaling mechanism).",
+    "options": [
+      "A Mutex allows multiple threads to read data, while a Semaphore allows only one thread to write.",
+      "A Mutex is a hardware device, while a Semaphore is purely a software concept.",
+      "A Mutex provides exclusive access to a single thread (locking mechanism), while a Semaphore allows a specified number of threads to access a resource (signaling mechanism).",
+      "A Mutex is an integer counter, whereas a Semaphore is strictly a binary lock."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A Mutex asserts strict mutual exclusion, while a Semaphore is fundamentally a counter that permits a finite number of concurrent accesses."
+  },
+  {
+    "id": "be-q016",
+    "question": "How does a Read-Write lock improve performance over a standard Mutex?",
+    "answer": "It allows multiple threads to read shared data simultaneously, but requires exclusive access only when a thread needs to write or modify the data.",
+    "options": [
+      "It completely ignores locking during write operations to boost database speeds.",
+      "It compresses the data block so that it requires less memory to lock.",
+      "It prevents any data reading until the application stops writing globally.",
+      "It allows multiple threads to read shared data simultaneously, but requires exclusive access only when a thread needs to write or modify the data."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "By recognizing that concurrent reads are harmless if data isn't changing, Read-Write locks reduce unnecessary bottlenecking."
+  },
+  {
+    "id": "be-q017",
+    "question": "In operating systems and databases, what describes a 'deadlock'?",
+    "answer": "A state where two or more processes are permanently blocked because each is waiting for a resource held by another process in the cycle.",
+    "options": [
+      "A state where a thread successfully executes and permanently goes to sleep.",
+      "A networking error where a client connection drops unexpectedly.",
+      "A scenario where the Garbage Collector deletes an object currently in use.",
+      "A state where two or more processes are permanently blocked because each is waiting for a resource held by another process in the cycle."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A deadlock occurs when a circular dependency forms, preventing any of the involved threads from continuing their execution."
+  },
+  {
+    "id": "be-q018",
+    "question": "What is the primary purpose of Virtual Memory in an Operating System?",
+    "answer": "It abstracts the physical memory into a uniform address space for each process, allowing programs to use more memory than is physically available.",
+    "options": [
+      "It abstracts the physical memory into a uniform address space for each process, allowing programs to use more memory than is physically available.",
+      "It strictly increases the clock speed of the CPU by allocating cache logic.",
+      "It stores the operating system's kernel entirely on an external USB drive.",
+      "It prevents programs from ever utilizing the computer's physical RAM."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Virtual Memory pages inactive data out to the hard drive, protecting processes from one another and creating the illusion of vast contiguous memory."
+  },
+  {
+    "id": "be-q019",
+    "question": "In the context of OS memory management, what is 'Paging'?",
+    "answer": "A memory management scheme that eliminates the need for contiguous allocation of physical memory by dividing memory into fixed-size blocks called pages.",
+    "options": [
+      "A process of sending notifications (pages) to the system administrator when the server crashes.",
+      "A memory management scheme that eliminates the need for contiguous allocation of physical memory by dividing memory into fixed-size blocks called pages.",
+      "The sequential reading of a database table line by line.",
+      "A way to divide hard drive space into smaller identical partitions permanently."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Paging solves physical memory fragmentation by allowing the OS to map non-contiguous physical frames to contiguous virtual pages."
+  },
+  {
+    "id": "be-q020",
+    "question": "Can two different OS processes map to the exact same physical memory address?",
+    "answer": "Yes, through shared memory segments or dynamically linked shared libraries, allowing efficient inter-process communication.",
+    "options": [
+      "No, the operating system strictly forbids this to prevent catastrophic kernel panics.",
+      "No, because physical memory addresses are uniquely hard-coded to a single process ID upon boot.",
+      "Yes, through shared memory segments or dynamically linked shared libraries, allowing efficient inter-process communication.",
+      "Yes, but only if the machine has exactly 1 megabyte of RAM available."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Shared memory avoids the overhead of duplicating identical library code or data, making the system much more efficient."
+  },
+  {
+    "id": "be-q021",
+    "question": "What is the main difference between Stack and Heap memory?",
+    "answer": "Stack memory is automatically managed and used for local variables and function calls, while Heap memory is used for dynamic allocation and must be managed or garbage-collected.",
+    "options": [
+      "Stack memory is automatically managed and used for local variables and function calls, while Heap memory is used for dynamic allocation and must be managed or garbage-collected.",
+      "Stack memory is much larger and slower, while Heap memory is tiny and lightning fast.",
+      "Stack memory requires explicit allocation by the developer, while Heap memory handles itself automatically.",
+      "Stack memory is only accessible globally, whereas Heap memory is strictly confined to a single function."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Stack operates in a rigid LIFO structure tied to thread execution, whereas the Heap provides flexible, global dynamic storage."
+  },
+  {
+    "id": "be-q022",
+    "question": "What is the most common cause of a Stack Overflow error in programming?",
+    "answer": "Excessively deep or infinite recursive function calls that exceed the allocated stack memory limit.",
+    "options": [
+      "A massive payload of data being inserted into the database simultaneously.",
+      "Using an overly large integer that exceeds a 64-bit boundary.",
+      "Excessively deep or infinite recursive function calls that exceed the allocated stack memory limit.",
+      "Failing to close a database connection after executing a query."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Each function call adds a new frame to the stack. Uncontrolled recursion rapidly exhausts this finite memory boundary."
+  },
+  {
+    "id": "be-q023",
+    "question": "What is the primary role of a Garbage Collector in backend runtimes like JVM or V8?",
+    "answer": "To automatically reclaim heap memory occupied by objects that are no longer reachable or referenced by the application.",
+    "options": [
+      "To automatically reclaim heap memory occupied by objects that are no longer reachable or referenced by the application.",
+      "To delete temporary log files from the server's hard drive.",
+      "To organize database indices for faster querying speeds.",
+      "To block incoming HTTP requests that carry malicious payloads."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Garbage Collection relieves the developer from manually freeing memory, preventing memory leaks in long-running backend processes."
+  },
+  {
+    "id": "be-q024",
+    "question": "What is meant by the Unix/Linux philosophy 'everything is a file'?",
+    "answer": "Almost all system resources (I/O devices, network sockets, directories) are abstracted and accessed via the same standard file descriptor interfaces.",
+    "options": [
+      "The operating system contains exactly one massive file that holds all data.",
+      "Almost all system resources (I/O devices, network sockets, directories) are abstracted and accessed via the same standard file descriptor interfaces.",
+      "Linux strictly refuses to process binary data and only reads plain text files.",
+      "Databases cannot be used in Linux; everything must be saved as a .txt file."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This abstraction allows standard tools designed for files to also manipulate hardware, sockets, and terminals natively."
+  },
+  {
+    "id": "be-q025",
+    "question": "What is a system call (syscall)?",
+    "answer": "The programmatic way a computer program requests a service or resource from the kernel of the operating system.",
+    "options": [
+      "An automated network ping to check if the server is online.",
+      "The programmatic way a computer program requests a service or resource from the kernel of the operating system.",
+      "A high-level logging function used exclusively by web frameworks.",
+      "A physical interrupt sent by the keyboard to the CPU."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Applications run in 'user mode' and must use syscalls (like `read()` or `write()`) to transition to 'kernel mode' to safely access hardware."
+  },
+  {
+    "id": "be-q026",
+    "question": "What caching eviction policy does 'LRU' stand for?",
+    "answer": "Least Recently Used; it evicts the items that have not been accessed for the longest time when the cache is full.",
+    "options": [
+      "Logical Redundancy Update; it ensures all cache nodes are perfectly synchronized.",
+      "Last Rendered Unit; it discards UI components that were painted last.",
+      "Least Recently Used; it evicts the items that have not been accessed for the longest time when the cache is full.",
+      "Low RAM Utility; a protocol that safely deletes memory safely when RAM is 99% full."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "LRU assumes that data accessed recently will likely be accessed again soon, purging old, cold data."
+  },
+  {
+    "id": "be-q027",
+    "question": "What is a 'Cache Stampede' (or thundering herd) in backend architecture?",
+    "answer": "A scenario where a highly requested cache key expires, causing multiple concurrent requests to bypass the cache and hit the database simultaneously.",
+    "options": [
+      "A scenario where the cache memory grows infinitely and consumes all available hard drive space.",
+      "An attack where hackers flood the cache with useless data to degrade application performance.",
+      "A scenario where a highly requested cache key expires, causing multiple concurrent requests to bypass the cache and hit the database simultaneously.",
+      "When a distributed cache cluster completely loses network connectivity."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "This sudden spike in backend database queries can cause instantaneous server overload and crashes if locks aren't implemented."
+  },
+  {
+    "id": "be-q028",
+    "question": "When comparing Quicksort and Merge sort, which of the following is generally true?",
+    "answer": "Merge sort guarantees O(N log N) worst-case time complexity, while Quicksort has an O(N^2) worst-case but is often faster in practice due to better cache locality.",
+    "options": [
+      "Quicksort requires more extra memory (O(N)) than Merge sort.",
+      "Merge sort guarantees O(N log N) worst-case time complexity, while Quicksort has an O(N^2) worst-case but is often faster in practice due to better cache locality.",
+      "Quicksort is strictly a stable sorting algorithm, whereas Merge sort is inherently unstable.",
+      "Both algorithms have an exact worst-case time complexity of O(N)."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Quicksort sorts in-place, meaning it uses less memory and heavily benefits from modern CPU caching, making it highly performant."
+  },
+  {
+    "id": "be-q029",
+    "question": "Why can SQL queries using deep pagination like `LIMIT 10 OFFSET 1000000` be highly inefficient?",
+    "answer": "Because the database must sequentially scan, count, and discard the first 1,000,000 rows before returning the requested 10 rows.",
+    "options": [
+      "Because the database must sequentially scan, count, and discard the first 1,000,000 rows before returning the requested 10 rows.",
+      "Because OFFSET commands lock the entire table, blocking any other operations.",
+      "Because LIMIT can only fetch exactly 100 rows per query natively.",
+      "Because modern databases no longer support the OFFSET keyword."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "This leads to massive CPU and IO overhead for large offsets, making 'keyset' or 'cursor-based' pagination preferable for big datasets."
+  },
+  {
+    "id": "be-q030",
+    "question": "How can a backend engineer best avoid a 'full table scan' on a relational database?",
+    "answer": "By creating appropriate indexes on the columns frequently used in WHERE, JOIN, and ORDER BY clauses.",
+    "options": [
+      "By strictly limiting the database to hold no more than 10,000 rows.",
+      "By converting all relational tables into JSON blobs.",
+      "By creating appropriate indexes on the columns frequently used in WHERE, JOIN, and ORDER BY clauses.",
+      "By restarting the database service daily to clear the scan cache."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Indexes act like a book's table of contents, allowing the query engine to rapidly locate data without scanning every single row."
+  },
+  {
+    "id": "be-q031",
+    "question": "What are the four fundamental principles of Object-Oriented Programming (OOP)?",
+    "answer": "Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+    "options": [
+      "Isolation, Normalization, Mutation, and Compilation.",
+      "Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+      "Iteration, Conditionals, Variables, and Functions.",
+      "Concurrency, Parallelism, Threading, and Locking."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "These four pillars dictate how modern object-oriented code models state, behavior, code reuse, and interfacing."
+  },
+  {
+    "id": "be-q032",
+    "question": "What does the design principle 'favor composition over inheritance' suggest?",
+    "answer": "Classes should achieve polymorphic behavior and code reuse by containing instances of other classes rather than inheriting from a base class.",
+    "options": [
+      "Developers should compose multiple databases instead of relying on a single monolithic one.",
+      "Classes should completely avoid using instance variables and rely on static states.",
+      "Classes should achieve polymorphic behavior and code reuse by containing instances of other classes rather than inheriting from a base class.",
+      "Functions should be written in long composed blocks rather than split into smaller inherited units."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Composition builds flexible 'has-a' relationships at runtime rather than creating rigid, tightly-coupled 'is-a' inheritance trees."
+  },
+  {
+    "id": "be-q033",
+    "question": "What is a classic distinction between an Interface and an Abstract Class in OOP?",
+    "answer": "An Interface defines a contract of methods without state, while an Abstract Class can provide default method implementations and hold state.",
+    "options": [
+      "An Interface can be instantiated directly, whereas an Abstract Class cannot.",
+      "An Interface defines a contract of methods without state, while an Abstract Class can provide default method implementations and hold state.",
+      "An Interface can only contain private methods, while Abstract Classes contain public methods.",
+      "There is no difference in modern object-oriented languages."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Interfaces are strictly behavioral contracts, whereas Abstract Classes act as foundational blueprints with partial logic."
+  },
+  {
+    "id": "be-q034",
+    "question": "In Functional Programming, what defines a 'pure function'?",
+    "answer": "A function that always produces the same output for the same input and has no side effects on the external state.",
+    "options": [
+      "A function that strictly contains no loops or condition statements.",
+      "A function that always produces the same output for the same input and has no side effects on the external state.",
+      "A function that does not accept any arguments and returns void.",
+      "A function executing in an isolated hardware memory sandbox."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Pure functions make testing incredibly reliable, as they do not manipulate databases, global variables, or console outputs."
+  },
+  {
+    "id": "be-q035",
+    "question": "Why is 'immutability' a crucial concept in functional and concurrent programming?",
+    "answer": "Because it guarantees that objects cannot be altered after creation, completely eliminating data race conditions among concurrent threads.",
+    "options": [
+      "Because it guarantees that objects cannot be altered after creation, completely eliminating data race conditions among concurrent threads.",
+      "Because it prevents the garbage collector from accidentally deleting active code blocks.",
+      "Because it strictly requires variables to be declared as global.",
+      "Because immutable objects execute up to 100 times faster in the CPU cache."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If data never changes, multiple threads can safely read it simultaneously without requiring complex and slow locking mechanisms."
+  },
+  {
+    "id": "be-q036",
+    "question": "What does it mean if a programming language treats functions as 'first-class citizens'?",
+    "answer": "Functions can be assigned to variables, passed as arguments to other functions, and returned from other functions.",
+    "options": [
+      "Functions are completely immune to any memory leaks or stack overflows.",
+      "Functions can be assigned to variables, passed as arguments to other functions, and returned from other functions.",
+      "Functions automatically take execution priority over classes.",
+      "Functions bypass the OS kernel entirely for faster compilation."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "This feature forms the bedrock of Functional Programming, allowing high degrees of abstraction via callbacks."
+  },
+  {
+    "id": "be-q037",
+    "question": "What is a 'higher-order function'?",
+    "answer": "A function that either takes one or more functions as arguments, or returns a function as its result.",
+    "options": [
+      "A function that executes with maximum administrative privileges on the server.",
+      "A function that operates asynchronously inside a dedicated thread.",
+      "A function that strictly computes complex calculus algorithms.",
+      "A function that either takes one or more functions as arguments, or returns a function as its result."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Classic examples include `map()`, `filter()`, and `reduce()`, which accept behavior injected via callback functions."
+  },
+  {
+    "id": "be-q038",
+    "question": "In Functional Programming, what is 'currying'?",
+    "answer": "The technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument.",
+    "options": [
+      "The technique of bundling CSS files alongside functional JavaScript components.",
+      "A memory optimization technique to erase unused variables.",
+      "The technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument.",
+      "Encrypting functional components to prevent reverse engineering."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Currying transforms `f(a, b, c)` into `f(a)(b)(c)`, allowing you to create customized variations of a function quickly."
+  },
+  {
+    "id": "be-q039",
+    "question": "What is the core philosophy behind a RESTful API?",
+    "answer": "Treating server-side entities as 'resources' that can be manipulated using standard HTTP methods (GET, POST, PUT, DELETE) in a stateless manner.",
+    "options": [
+      "Exposing the internal database structure directly to the client.",
+      "Maintaining a constant, stateful socket connection between client and server.",
+      "Relying exclusively on complex XML payloads encapsulated in SOAP envelopes.",
+      "Treating server-side entities as 'resources' that can be manipulated using standard HTTP methods (GET, POST, PUT, DELETE) in a stateless manner."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "REST (Representational State Transfer) standardizes client-server interactions around clear, URL-based identifiers for resources."
+  },
+  {
+    "id": "be-q040",
+    "question": "What does AJAX (Asynchronous JavaScript and XML) allow web applications to do?",
+    "answer": "Send and retrieve data from a server asynchronously in the background without requiring a full page reload.",
+    "options": [
+      "Send and retrieve data from a server asynchronously in the background without requiring a full page reload.",
+      "Compile backend Java applications directly inside the browser.",
+      "Execute raw SQL commands securely from the frontend.",
+      "Format and render static XML documents into PDFs."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "AJAX paved the way for seamless, dynamic web experiences (like single-page applications) communicating seamlessly with backends."
+  },
+  {
+    "id": "be-q041",
+    "question": "Which SQL JOIN type returns all records when there is a match in either the left or right table, potentially leading to high computational complexity?",
+    "answer": "FULL OUTER JOIN",
+    "options": ["INNER JOIN", "LEFT JOIN", "FULL OUTER JOIN", "RIGHT JOIN"],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A FULL OUTER JOIN merges the complete outputs of both LEFT and RIGHT joins, padding non-matches with NULLs."
+  },
+  {
+    "id": "be-q042",
+    "question": "Why don't developers normally manually deallocate local variables inside a function in high-level programming languages?",
+    "answer": "Because local variables are stored on the stack, and their memory is automatically reclaimed when the function execution completes and the stack frame pops.",
+    "options": [
+      "Because local variables require zero physical memory to exist.",
+      "Because local variables are permanently etched into the CPU registers.",
+      "Because local variables are stored on the stack, and their memory is automatically reclaimed when the function execution completes and the stack frame pops.",
+      "Because modern compilers completely ignore local variable assignments."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The stack handles memory inherently linked to execution flow, naturally unspooling when execution leaves the current scope."
+  },
+  {
+    "id": "be-q043",
+    "question": "What is the difference between 'pass by value' and 'pass by reference'?",
+    "answer": "Pass by value copies the data into a new memory space, whereas pass by reference passes the memory address, allowing the original data to be modified.",
+    "options": [
+      "Pass by value passes a memory address pointer, while pass by reference duplicates the entire object.",
+      "Pass by value copies the data into a new memory space, whereas pass by reference passes the memory address, allowing the original data to be modified.",
+      "Pass by value is strictly for strings, while pass by reference is strictly for integers.",
+      "They are two different names for the exact same compilation process."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "By reference passes the actual pointer to the data, granting the receiving function direct mutability power over the origin."
+  },
+  {
+    "id": "be-q044",
+    "question": "Why doesn't a class constructor explicitly return a value in Object-Oriented Programming?",
+    "answer": "Because its sole purpose is to initialize the newly created object's state in memory, implicitly returning the object instance itself.",
+    "options": [
+      "Because constructors act as void functions to prevent memory leaks.",
+      "Because constructors execute too slowly to return values safely.",
+      "Because its sole purpose is to initialize the newly created object's state in memory, implicitly returning the object instance itself.",
+      "Because returning values from a constructor violates the concept of polymorphism."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Constructors are triggered by the allocation phase. They only populate the allocated memory structure, not return standard data."
+  },
+  {
+    "id": "be-q045",
+    "question": "In OOP, what is the key difference between 'private' and 'protected' access modifiers?",
+    "answer": "Private members are accessible only within the declaring class, while protected members are accessible within the class and its subclasses.",
+    "options": [
+      "Private members are globally accessible, while protected members are strictly local.",
+      "Private members can only be read, whereas protected members can be modified.",
+      "Private members are completely hidden from all parts of the application except the OS kernel, while protected members are accessible by interfaces.",
+      "Private members are accessible only within the declaring class, while protected members are accessible within the class and its subclasses."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Protected enables safe inheritance design, allowing derived child classes to interact with the parent's protected variables."
+  },
+  {
+    "id": "be-q046",
+    "question": "What is 'Lazy Evaluation' in functional programming?",
+    "answer": "An evaluation strategy which delays the evaluation of an expression until its value is actually needed, saving memory and processing power.",
+    "options": [
+      "An evaluation strategy which delays the evaluation of an expression until its value is actually needed, saving memory and processing power.",
+      "A severe performance bug where a function refuses to return an output.",
+      "The process of loading frontend UI components behind a spinner.",
+      "A compiler mode that ignores all runtime errors to run faster."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Lazy evaluation allows the formulation of infinite data structures safely since elements are only computed precisely when requested."
+  },
+  {
+    "id": "be-q047",
+    "question": "What is the primary difference between Map and FlatMap in functional paradigms?",
+    "answer": "Map transforms each element independently producing a sequence of identical structure, while FlatMap transforms elements into sequences and then flattens the resulting sequences into a single sequence.",
+    "options": [
+      "Map mutates the original data, whereas FlatMap strictly acts on copies.",
+      "Map transforms each element independently producing a sequence of identical structure, while FlatMap transforms elements into sequences and then flattens the resulting sequences into a single sequence.",
+      "Map iterates asynchronously, while FlatMap iterates purely synchronously.",
+      "FlatMap can only be used on single-dimensional arrays, whereas Map works strictly on multi-dimensional matrices."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If a mapping operation returns nested collections, FlatMap un-nests them back into one primary level array."
+  },
+  {
+    "id": "be-q048",
+    "question": "What is an 'In-Memory Cache' (like Redis or Memcached)?",
+    "answer": "A fast data storage layer that stores data entirely in RAM rather than on a slower disk, allowing for drastically quicker data retrieval.",
+    "options": [
+      "A relational database that guarantees ACID compliance strictly through hard-disk writes.",
+      "A fast data storage layer that stores data entirely in RAM rather than on a slower disk, allowing for drastically quicker data retrieval.",
+      "A physical cache unit located directly inside the CPU processor.",
+      "A browser-specific storage API identical to LocalStorage."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Accessing RAM occurs in nanoseconds, eliminating the massive physical latency inherent in accessing standard disk drives."
+  },
+  {
+    "id": "be-q049",
+    "question": "Why is the query `SELECT COUNT(*) FROM table` sometimes slow on large relational database tables?",
+    "answer": "Because, depending on the engine (like PostgreSQL's MVCC), the database may need to perform a full sequential scan to calculate exactly how many rows are currently visible to the transaction.",
+    "options": [
+      "Because counting operations require complex floating-point math.",
+      "Because, depending on the engine (like PostgreSQL's MVCC), the database may need to perform a full sequential scan to calculate exactly how many rows are currently visible to the transaction.",
+      "Because the database inherently refuses to cache COUNT results.",
+      "Because COUNT(*) forces the database to download all column data locally to the client before counting."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Relational constraints require evaluating current transaction states across the entire table since row presence varies per concurrent connection."
+  },
+  {
+    "id": "be-q050",
+    "question": "What is a 'Context Switch' in operating systems?",
+    "answer": "The process of storing the state of an active process or thread so that it can be resumed later, allowing the CPU to execute a different process or thread.",
+    "options": [
+      "The process of securely swapping a user's logged-in session token.",
+      "The mechanism routers use to switch internet traffic paths.",
+      "The process of storing the state of an active process or thread so that it can be resumed later, allowing the CPU to execute a different process or thread.",
+      "A command that forces a backend application to reboot instantly."
+    ],
+    "category": "Backend",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Context switching is essential for modern multitasking, allowing a single CPU core to rapidly alternate tasks."
+  },
+  {
+    "id": "be-q051",
+    "question": "True or False: The primary purpose of back-end development is to handle server-side software, store and organize data, and deliver content to the front-end.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Back-end development encompasses all the hidden data processing and server infrastructure required to power a client application."
+  },
+  {
+    "id": "be-q052",
+    "question": "True or False: Graphic design, typography, and animation are widely considered top skills for remote working success as a backend developer.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Those are strictly frontend and UI/UX design skills. Task focus, time management, and self-learning are actual top skills for remote backend work."
+  },
+  {
+    "id": "be-q053",
+    "question": "True or False: The TCP connection establishment requires a 3-way handshake to ensure both the client and server can independently verify that they can reliably send and receive data.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This three-step process guarantees synchronization of sequence numbers to ensure reliable data packet delivery."
+  },
+  {
+    "id": "be-q054",
+    "question": "True or False: In the context of the TCP 3-way handshake, the flags 'SYN' and 'ACK' stand for System and Acknowledge.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. SYN stands for Synchronize, and ACK stands for Acknowledge."
+  },
+  {
+    "id": "be-q055",
+    "question": "True or False: The HTTP protocol is fundamentally considered 'stateless' because each request is executed independently without retaining memory of previous requests.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. The server treats each HTTP request as a completely new transaction."
+  },
+  {
+    "id": "be-q056",
+    "question": "True or False: Since HTTP is stateless, web applications primarily maintain user sessions by keeping a persistent TCP tunnel open indefinitely for each user.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Sessions are maintained via unique identifiers transmitted via Cookies or Authorization headers on every request, rather than holding open TCP connections indefinitely."
+  },
+  {
+    "id": "be-q057",
+    "question": "True or False: A JSON Web Token (JWT) is primarily used in backend applications to securely transmit verified information between parties for stateless authentication.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. The digital signature on a JWT guarantees the token was issued by a trusted source."
+  },
+  {
+    "id": "be-q058",
+    "question": "True or False: HTTPS secures communication over a network by masking the client's IP address using a built-in proxy layer.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. HTTPS uses TLS/SSL protocols to encrypt HTTP payloads, preventing interception, but it does not proxy or hide IP addresses."
+  },
+  {
+    "id": "be-q059",
+    "question": "True or False: The primary role of a TCP proxy is to act as an intermediary that intercepts TCP connections and forwards traffic between the client and destination server.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. TCP proxies are often used for load balancing, logging, and security."
+  },
+  {
+    "id": "be-q060",
+    "question": "True or False: When a thread goes to sleep, the CPU completely pauses all operations globally until the thread wakes up.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The OS scheduler places the sleeping thread into a 'blocked' state and performs a context switch to assign the CPU to a different active thread."
+  },
+  {
+    "id": "be-q061",
+    "question": "True or False: The primary advantage of using a thread pool is that it reuses pre-allocated threads, avoiding the overhead of constantly creating and destroying threads.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Thread pools drastically optimize CPU cycles and memory by caching idle worker threads."
+  },
+  {
+    "id": "be-q062",
+    "question": "True or False: The OS concept 'Copy-On-Write' refers to an algorithm that securely backs up databases exactly when a write occurs.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Copy-On-Write is an OS optimization strategy where memory is shared among processes until a modification is attempted, triggering a private copy to be allocated."
+  },
+  {
+    "id": "be-q063",
+    "question": "True or False: A 'critical section' is a segment of code where shared resources are accessed, which must be protected from concurrent execution.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This protection is typically implemented using locks or mutexes to ensure sequential access."
+  },
+  {
+    "id": "be-q064",
+    "question": "True or False: A race condition is caused when the operating system arbitrarily deletes threads to free up RAM.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Race conditions occur when multiple threads access and modify shared data simultaneously without proper synchronization logic."
+  },
+  {
+    "id": "be-q065",
+    "question": "True or False: A Mutex provides exclusive access to a single thread, while a Semaphore allows a specified number of threads to access a resource.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. A Mutex is a locking mechanism, whereas a Semaphore is a signaling counter."
+  },
+  {
+    "id": "be-q066",
+    "question": "True or False: A Read-Write lock prevents any data reading until the application stops writing globally.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A Read-Write lock allows concurrent reading by multiple threads, enforcing exclusivity only when a thread needs to write or modify."
+  },
+  {
+    "id": "be-q067",
+    "question": "True or False: A 'deadlock' is a state where two or more processes are permanently blocked because each is waiting for a resource held by another.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This circular dependency halts execution entirely."
+  },
+  {
+    "id": "be-q068",
+    "question": "True or False: Virtual Memory strictly increases the clock speed of the CPU by allocating cache logic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Virtual memory abstracts physical memory, preventing memory collisions and allowing systems to use hard drive space to augment limited RAM."
+  },
+  {
+    "id": "be-q069",
+    "question": "True or False: In OS memory management, 'Paging' eliminates the need for contiguous allocation of physical memory by dividing memory into fixed-size blocks.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Paging prevents severe external memory fragmentation."
+  },
+  {
+    "id": "be-q070",
+    "question": "True or False: The operating system strictly forbids two different OS processes from mapping to the exact same physical memory address.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Through shared memory segments, processes can efficiently map to the same physical address to share data rapidly."
+  },
+  {
+    "id": "be-q071",
+    "question": "True or False: Stack memory is automatically managed and used for local variables, while Heap memory is used for dynamic allocation.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. The Stack grows and shrinks predictably with function calls, while the Heap stores objects with dynamic lifespans."
+  },
+  {
+    "id": "be-q072",
+    "question": "True or False: A Stack Overflow error is most commonly caused by using an overly large integer that exceeds a 64-bit boundary.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. This error is caused by excessively deep or infinite recursive function calls exceeding the allocated stack frame limit."
+  },
+  {
+    "id": "be-q073",
+    "question": "True or False: The primary role of a Garbage Collector is to automatically reclaim heap memory occupied by objects that are no longer reachable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This saves developers from executing manual memory deallocation operations."
+  },
+  {
+    "id": "be-q074",
+    "question": "True or False: The Unix/Linux philosophy 'everything is a file' means the operating system contains exactly one massive file that holds all data.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It means virtually all resources (hardware devices, network sockets, logs) can be interacted with using standard file input/output APIs."
+  },
+  {
+    "id": "be-q075",
+    "question": "True or False: A system call (syscall) is the programmatic way a computer program requests a service or resource from the OS kernel.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Syscalls form the boundary between user-space code and hardware-level operations."
+  },
+  {
+    "id": "be-q076",
+    "question": "True or False: LRU stands for Logical Redundancy Update and ensures all cache nodes are perfectly synchronized.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. LRU stands for Least Recently Used, which is a cache eviction algorithm that drops old, unaccessed data."
+  },
+  {
+    "id": "be-q077",
+    "question": "True or False: A 'Cache Stampede' is a scenario where a highly requested cache key expires, causing concurrent requests to simultaneously query the database.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This concurrency spike can immediately crash the underlying database cluster."
+  },
+  {
+    "id": "be-q078",
+    "question": "True or False: Quicksort requires more extra memory (O(N)) than Merge sort.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Merge sort requires extra memory. Quicksort generally sorts in-place, offering better cache locality."
+  },
+  {
+    "id": "be-q079",
+    "question": "True or False: SQL queries using deep pagination like `OFFSET 1000000` are inefficient because the database must sequentially scan and discard the initial rows.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Processing vast offsets degrades speed significantly compared to cursor-based queries."
+  },
+  {
+    "id": "be-q080",
+    "question": "True or False: A backend engineer can best avoid a 'full table scan' by strictly limiting the database to hold no more than 10,000 rows.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Full table scans are avoided architecturally by creating efficient indexes on heavily queried table columns."
+  },
+  {
+    "id": "be-q081",
+    "question": "True or False: The four fundamental principles of Object-Oriented Programming (OOP) are Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. These concepts define the structure and behavior of OOP system architectures."
+  },
+  {
+    "id": "be-q082",
+    "question": "True or False: The principle 'favor composition over inheritance' suggests developers should compose multiple databases instead of relying on a single monolithic one.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It relates to class architecture, advising developers to use modular object instances internally rather than building rigid inheritance hierarchies."
+  },
+  {
+    "id": "be-q083",
+    "question": "True or False: An Interface defines a contract of methods without state, while an Abstract Class can provide default method implementations and hold state.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This summarizes the primary structural differences in strongly-typed OOP languages."
+  },
+  {
+    "id": "be-q084",
+    "question": "True or False: A 'pure function' is a function that strictly contains no loops or condition statements.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A pure function is defined by always returning the same output for identical inputs and causing zero side effects on external state."
+  },
+  {
+    "id": "be-q085",
+    "question": "True or False: Immutability is crucial because it guarantees objects cannot be altered, completely eliminating data race conditions among concurrent threads.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. If data cannot be overwritten, concurrent reads do not require complex locking mechanisms."
+  },
+  {
+    "id": "be-q086",
+    "question": "True or False: Treating functions as 'first-class citizens' means functions automatically take execution priority over classes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. It means functions can be assigned as variables, passed to other functions, and returned dynamically."
+  },
+  {
+    "id": "be-q087",
+    "question": "True or False: A 'higher-order function' either takes one or more functions as arguments, or returns a function as its result.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. These functions accept callback logic, enabling highly functional maps and reduction algorithms."
+  },
+  {
+    "id": "be-q088",
+    "question": "True or False: 'Currying' is the technique of bundling CSS files alongside functional JavaScript components.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Currying is evaluating a multi-argument function into a sequence of nested single-argument functions."
+  },
+  {
+    "id": "be-q089",
+    "question": "True or False: A RESTful API treats server-side entities as resources manipulated using standard HTTP methods in a stateless manner.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Adhering to stateless constraints and standardized HTTP requests defines REST architecture."
+  },
+  {
+    "id": "be-q090",
+    "question": "True or False: AJAX allows web applications to compile backend Java applications directly inside the browser.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. AJAX allows browsers to asynchronously send and receive XML/JSON payload data without reloading the active web page."
+  },
+  {
+    "id": "be-q091",
+    "question": "True or False: A FULL OUTER JOIN returns all records when there is a match in either the left or right table.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It pads rows with null values where no relation match occurs across both tables."
+  },
+  {
+    "id": "be-q092",
+    "question": "True or False: Developers don't manually deallocate local variables in high-level languages because they require zero physical memory to exist.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. They are stored in stack memory, which safely and automatically pops and deallocates upon function completion."
+  },
+  {
+    "id": "be-q093",
+    "question": "True or False: Pass by value copies the data into a new memory space, whereas pass by reference passes the memory address allowing modification.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This difference decides whether a function mutates the original variable or an isolated clone."
+  },
+  {
+    "id": "be-q094",
+    "question": "True or False: A class constructor doesn't explicitly return a value because constructors execute too slowly to return values safely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Its sole purpose is to initialize object state. It implicitly returns the newly constructed object instance."
+  },
+  {
+    "id": "be-q095",
+    "question": "True or False: Private members are accessible only within the declaring class, while protected members are accessible within the class and its subclasses.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Protected scopes permit proper inheritance modifications."
+  },
+  {
+    "id": "be-q096",
+    "question": "True or False: 'Lazy Evaluation' is a severe performance bug where a function refuses to return an output.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. Lazy Evaluation is an optimization strategy delaying execution until the specific resulting data is explicitly requested."
+  },
+  {
+    "id": "be-q097",
+    "question": "True or False: Map transforms each element producing an identical structure, while FlatMap transforms and flattens resulting sequences into a single sequence.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. FlatMap mitigates the creation of doubly-nested data collections natively."
+  },
+  {
+    "id": "be-q098",
+    "question": "True or False: An 'In-Memory Cache' is a relational database that guarantees ACID compliance strictly through hard-disk writes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. An In-Memory Cache like Redis uses RAM specifically to avoid slow, rigid hard-disk structures."
+  },
+  {
+    "id": "be-q099",
+    "question": "True or False: The query `SELECT COUNT(*) FROM table` can be slow on MVCC databases because it must perform a sequential scan of visible rows.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Due to concurrent transactions, row visibility shifts constantly, prohibiting a generic cached count."
+  },
+  {
+    "id": "be-q100",
+    "question": "True or False: A 'Context Switch' is the process of securely swapping a user's logged-in session token.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Backend",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Context switching refers to the OS preserving the execution state of one thread so the CPU can actively run another."
+  },
+  {
+    "id": "be-q101",
+    "question": "The primary purpose of ______ development is to handle server-side software, store and organize data, and deliver content to the front-end.",
+    "answer": "back-end",
+    "options": ["back-end", "design", "database", "devops"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Back-end encapsulates the APIs, architecture, and business logic of software systems."
+  },
+  {
+    "id": "be-q102",
+    "question": "Task focus, time management, careful planning, and self-learning initiative are widely considered top skills for ______ working success as a backend developer.",
+    "answer": "remote",
+    "options": ["agile", "corporate", "remote", "freelance"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Operating outside of structured office environments necessitates high discipline."
+  },
+  {
+    "id": "be-q103",
+    "question": "The TCP connection establishment requires a ______-way handshake rather than a 2-way handshake to ensure both sides verify reliable data transmission.",
+    "answer": "3-way",
+    "options": ["1-way", "2-way", "3-way", "4-way"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The SYN, SYN-ACK, ACK sequence guarantees connection stability."
+  },
+  {
+    "id": "be-q104",
+    "question": "In the TCP handshake, the flags 'SYN' and 'ACK' stand for ______ and Acknowledge.",
+    "answer": "Synchronize",
+    "options": ["System", "Synchronous", "Synthesize", "Synchronize"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "SYN sequences coordinate packet handling between connected nodes."
+  },
+  {
+    "id": "be-q105",
+    "question": "The HTTP protocol is fundamentally considered '______' because each request is executed independently.",
+    "answer": "stateless",
+    "options": ["stateless", "stateful", "synchronous", "blocking"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Without persistent connection memory, stateless HTTP scales incredibly efficiently."
+  },
+  {
+    "id": "be-q106",
+    "question": "Web applications primarily maintain user sessions by exchanging a unique ______ identifier stored in a Cookie or header.",
+    "answer": "session",
+    "options": ["device", "session", "packet", "system"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This identifier references server-stored context across disconnected HTTP requests."
+  },
+  {
+    "id": "be-q107",
+    "question": "A ______ Web Token is used to securely transmit verified information between parties, most commonly for stateless authentication.",
+    "answer": "JWT",
+    "options": ["CSRF", "OAUTH", "JWT", "REST"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "JWTs hold signed claims, making them highly tamper-resistant."
+  },
+  {
+    "id": "be-q108",
+    "question": "HTTPS secures communication by using ______ or Secure Sockets Layer to encrypt HTTP requests.",
+    "answer": "TLS",
+    "options": ["VPN", "TLS", "SSH", "MD5"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "TLS is the modern encryption protocol succeeding deprecated SSL standards."
+  },
+  {
+    "id": "be-q109",
+    "question": "A TCP ______ acts as an intermediary that intercepts connections and forwards traffic between the client and destination.",
+    "answer": "proxy",
+    "options": ["proxy", "router", "cache", "switch"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Proxies enhance network flexibility, balancing loads across internal subnets."
+  },
+  {
+    "id": "be-q110",
+    "question": "When a thread goes to sleep, the OS scheduler performs a ______ switch to assign the CPU to another thread.",
+    "answer": "context switch",
+    "options": [
+      "kernel switch",
+      "context switch",
+      "thread block",
+      "system call"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Context switching preserves local register states gracefully."
+  },
+  {
+    "id": "be-q111",
+    "question": "A ______ pool reuses a fixed number of pre-allocated threads to execute tasks, avoiding heavy creation overhead.",
+    "answer": "thread pool",
+    "options": ["process pool", "cache pool", "memory pool", "thread pool"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Servers use thread pools to bound maximum concurrency processing safely."
+  },
+  {
+    "id": "be-q112",
+    "question": "______ (COW) is an optimization where processes share memory pages until one attempts to modify it.",
+    "answer": "Copy-On-Write",
+    "options": [
+      "Copy-On-Write",
+      "Cache-On-Write",
+      "Clone-On-Wake",
+      "Commit-On-Write"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "COW drastically minimizes physical memory footprints during rapid forking."
+  },
+  {
+    "id": "be-q113",
+    "question": "A ______ section is a segment of code where shared resources are modified and must be protected from concurrent execution.",
+    "answer": "critical section",
+    "options": [
+      "synchronized section",
+      "critical section",
+      "locked block",
+      "atomic zone"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Defining clear critical sections dictates precise locking mechanics."
+  },
+  {
+    "id": "be-q114",
+    "question": "A ______ condition happens when multiple threads access and modify shared data without proper synchronization.",
+    "answer": "race condition",
+    "options": ["race condition", "deadlock", "memory leak", "stack overflow"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Unsynchronized variable mutation triggers volatile outcome races."
+  },
+  {
+    "id": "be-q115",
+    "question": "A Mutex provides exclusive access, while a ______ allows a specified number of threads to access a resource.",
+    "answer": "Semaphore",
+    "options": ["Monitor", "Spinlock", "Semaphore", "Condition"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Semaphores count remaining valid access slots before blocking incoming requests."
+  },
+  {
+    "id": "be-q116",
+    "question": "A ______ lock allows multiple threads to read data simultaneously but requires exclusive access when writing.",
+    "answer": "Read-Write",
+    "options": ["Pessimistic", "Optimistic", "Read-Write", "Reentrant"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This configuration heavily boosts throughput on fundamentally read-heavy data repositories."
+  },
+  {
+    "id": "be-q117",
+    "question": "A ______ is a state where two or more processes are permanently blocked waiting for resources held by each other.",
+    "answer": "deadlock",
+    "options": ["livelock", "starvation", "race condition", "deadlock"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Deadlocks essentially freeze application progression irreversibly."
+  },
+  {
+    "id": "be-q118",
+    "question": "______ Memory abstracts physical memory into a uniform address space for each process.",
+    "answer": "Virtual Memory",
+    "options": [
+      "Shared Memory",
+      "Cache Memory",
+      "Virtual Memory",
+      "Heap Memory"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Virtualizing memory secures operations while overcoming tight physical RAM caps."
+  },
+  {
+    "id": "be-q119",
+    "question": "______ eliminates the need for contiguous allocation of physical memory by dividing it into fixed-size blocks.",
+    "answer": "Paging",
+    "options": ["Swapping", "Paging", "Fragmentation", "Segmentation"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The OS memory management unit translates discrete virtual pages into physical structures."
+  },
+  {
+    "id": "be-q120",
+    "question": "Two different processes can map to the exact same physical memory address through ______ memory segments.",
+    "answer": "shared memory",
+    "options": [
+      "virtual memory",
+      "swap memory",
+      "shared memory",
+      "buffered memory"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Shared memory avoids redundant object duplication across execution bounds."
+  },
+  {
+    "id": "be-q121",
+    "question": "Stack memory is automatically managed for local variables, while ______ memory is used for dynamic allocation.",
+    "answer": "Heap",
+    "options": ["Heap", "Cache", "Virtual", "Static"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Developers explicitly request heap capacity via code syntax like 'new'."
+  },
+  {
+    "id": "be-q122",
+    "question": "Excessively deep or infinite ______ function calls commonly cause Stack Overflow errors.",
+    "answer": "recursive",
+    "options": ["asynchronous", "recursive", "callback", "blocking"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Recursive depths bypass physical stack limits easily when lacking base resolution cases."
+  },
+  {
+    "id": "be-q123",
+    "question": "The ______ automatically reclaims heap memory occupied by objects that are no longer referenced.",
+    "answer": "Garbage Collector",
+    "options": [
+      "Thread Scheduler",
+      "Memory Manager",
+      "Garbage Collector",
+      "Compiler"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Garbage collection defines memory safeties natively in Java and Python engines."
+  },
+  {
+    "id": "be-q124",
+    "question": "The Unix/Linux philosophy 'everything is a ______' abstracts almost all system resources via descriptor interfaces.",
+    "answer": "file",
+    "options": ["process", "thread", "file", "socket"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This profound architectural design dictates POSIX compliance functionally."
+  },
+  {
+    "id": "be-q125",
+    "question": "A ______ is the programmatic way a computer program requests a service from the OS kernel.",
+    "answer": "system call",
+    "options": [
+      "system call",
+      "command line",
+      "kernel flag",
+      "network request"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Syscalls safely bridge standard execution flows into privileged hardware actions."
+  },
+  {
+    "id": "be-q126",
+    "question": "The cache eviction policy ______ stands for Least Recently Used.",
+    "answer": "Least Recently Used",
+    "options": [
+      "Longest Running Utility",
+      "Logical Redundancy Update",
+      "Least Recently Used",
+      "Last Rendered Unit"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "LRU caches naturally purge data that experiences extended querying irrelevancy."
+  },
+  {
+    "id": "be-q127",
+    "question": "A ______ occurs when an expired cache key causes multiple concurrent requests to hit the database simultaneously.",
+    "answer": "Cache Stampede",
+    "options": ["Memory Leak", "Cache Miss", "Cache Stampede", "Data Race"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Also known as a thundering herd, this instantly degrades database viability."
+  },
+  {
+    "id": "be-q128",
+    "question": "______ guarantees O(N log N) worst-case time complexity, while Quicksort is often faster in practice due to cache locality.",
+    "answer": "Merge sort",
+    "options": ["Bubble sort", "Merge sort", "Insertion sort", "Heap sort"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Merge sort stabilizes data sets reliably under chaotic input variances."
+  },
+  {
+    "id": "be-q129",
+    "question": "SQL queries using deep pagination like LIMIT 10 ______ 1000000 are highly inefficient.",
+    "answer": "OFFSET",
+    "options": ["SKIP", "START", "OFFSET", "INDEX"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Offset forces manual traversal operations compounding CPU stress progressively."
+  },
+  {
+    "id": "be-q130",
+    "question": "A backend engineer can avoid a 'full table scan' by creating appropriate ______ on frequently queried columns.",
+    "answer": "indexes",
+    "options": ["views", "triggers", "schemas", "indexes"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Indexes organize target columns mathematically resolving lookup delays massively."
+  },
+  {
+    "id": "be-q131",
+    "question": "The four fundamental principles of OOP are Encapsulation, Abstraction, Inheritance, and ______.",
+    "answer": "Polymorphism",
+    "options": ["Mutation", "Polymorphism", "Modularity", "Composition"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Polymorphism permits single implementations satisfying multi-class interfacing natively."
+  },
+  {
+    "id": "be-q132",
+    "question": "The design principle 'favor ______ over inheritance' suggests creating instances of other classes rather than inheriting.",
+    "answer": "composition",
+    "options": ["encapsulation", "aggregation", "composition", "abstraction"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Composition builds un-tethered robust functionalities bypassing deep, fragile hierarchies."
+  },
+  {
+    "id": "be-q133",
+    "question": "An ______ defines a contract of methods without state, while an Abstract Class can provide default implementations.",
+    "answer": "Interface",
+    "options": ["Object", "Interface", "Instance", "Override"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Interfaces secure rigid functional mapping dependencies programmatically."
+  },
+  {
+    "id": "be-q134",
+    "question": "A ______ function always produces the same output for the same input and has no side effects.",
+    "answer": "pure function",
+    "options": [
+      "static function",
+      "void function",
+      "pure function",
+      "lambda function"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pure functions isolate algorithms reliably from unpredictable system environments."
+  },
+  {
+    "id": "be-q135",
+    "question": "______ guarantees that objects cannot be altered after creation, eliminating data race conditions among concurrent threads.",
+    "answer": "immutability",
+    "options": ["mutability", "synchronization", "immutability", "abstraction"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Immutability solves concurrent thread collision anomalies fundamentally."
+  },
+  {
+    "id": "be-q136",
+    "question": "If a programming language treats functions as '______ citizens', they can be assigned to variables and passed as arguments.",
+    "answer": "first-class",
+    "options": ["primary", "first-class", "native", "global"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "First-class functions spawn advanced lambda and callback architectures implicitly."
+  },
+  {
+    "id": "be-q137",
+    "question": "A ______ function either takes functions as arguments or returns a function as its result.",
+    "answer": "higher-order",
+    "options": ["nested", "recursive", "first-class", "higher-order"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Map and filter effectively summarize higher-order operational capabilities."
+  },
+  {
+    "id": "be-q138",
+    "question": "In Functional Programming, ______ translates a multi-argument function into a sequence of single-argument functions.",
+    "answer": "currying",
+    "options": ["hoisting", "mapping", "currying", "binding"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Currying fractures functions mathematically preserving strict single-variable scoping."
+  },
+  {
+    "id": "be-q139",
+    "question": "A RESTful API manipulates server-side resources using standard HTTP methods in a ______ manner.",
+    "answer": "stateless",
+    "options": ["stateful", "synchronous", "stateless", "persistent"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Statelessness preserves scale resilience uniformly balancing external API querying."
+  },
+  {
+    "id": "be-q140",
+    "question": "______ (Asynchronous JavaScript and XML) allows web applications to send and retrieve data in the background without reloading.",
+    "answer": "AJAX",
+    "options": ["AJAX", "JSON", "REST", "CORS"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "AJAX transformed clunky static webpages seamlessly into smooth applications."
+  },
+  {
+    "id": "be-q141",
+    "question": "A ______ JOIN returns all records when there is a match in either the left or right table.",
+    "answer": "FULL OUTER",
+    "options": ["INNER", "LEFT", "FULL OUTER", "RIGHT"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Full outer operations aggregate data tables fully generating comprehensive datasets."
+  },
+  {
+    "id": "be-q142",
+    "question": "Local variables are stored on the ______, and their memory is automatically reclaimed when the function completes.",
+    "answer": "stack",
+    "options": ["heap", "disk", "stack", "cache"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Stack memory inherently tracks contextual execution logic efficiently."
+  },
+  {
+    "id": "be-q143",
+    "question": "Pass by ______ passes the memory address, allowing the original data to be modified.",
+    "answer": "reference",
+    "options": ["value", "pointer", "reference", "variable"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Reference mutations circumvent copying entire heavy data elements pointlessly."
+  },
+  {
+    "id": "be-q144",
+    "question": "A class constructor's sole purpose is to ______ the newly created object's state in memory.",
+    "answer": "initialize",
+    "options": ["compile", "initialize", "return", "execute"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Initializing correctly boots class implementations perfectly."
+  },
+  {
+    "id": "be-q145",
+    "question": "In OOP, ______ members are accessible within the class and its subclasses.",
+    "answer": "protected",
+    "options": ["public", "private", "protected", "static"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Protected configurations lock out random integrations while securing inheritance chains."
+  },
+  {
+    "id": "be-q146",
+    "question": "______ is an evaluation strategy which delays the evaluation of an expression until its value is actually needed.",
+    "answer": "Lazy Evaluation",
+    "options": [
+      "Eager Evaluation",
+      "Lazy Evaluation",
+      "Strict Evaluation",
+      "Late Binding"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Lazy algorithms effectively skip unnecessary heavy computations gracefully."
+  },
+  {
+    "id": "be-q147",
+    "question": "______ transforms elements into sequences and then flattens the resulting sequences into a single sequence.",
+    "answer": "FlatMap",
+    "options": ["Reduce", "Filter", "Map", "FlatMap"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "FlatMap resolves multi-dimensional mapping collections inherently."
+  },
+  {
+    "id": "be-q148",
+    "question": "An ______ (like Redis) stores data entirely in RAM rather than on a slower disk.",
+    "answer": "In-Memory Cache",
+    "options": ["In-Memory Cache", "SQL Database", "Object Store", "SSD Drive"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "RAM retrieval completely eclipses HDD mechanical speeds seamlessly."
+  },
+  {
+    "id": "be-q149",
+    "question": "Depending on the engine, SELECT COUNT(*) may perform a full ______ to calculate how many rows are visible.",
+    "answer": "sequential scan",
+    "options": ["table drop", "binary search", "index tree", "sequential scan"],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Sequential scans cripple performance traversing gigabytes linearly."
+  },
+  {
+    "id": "be-q150",
+    "question": "A ______ is the process of storing the state of an active process so the CPU can execute a different process.",
+    "answer": "Context Switch",
+    "options": [
+      "Kernel Panic",
+      "Context Switch",
+      "Thread Block",
+      "Memory Dump"
+    ],
+    "category": "Backend",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Context switches emulate multitasking fluidly across constrained computing limits."
+  }
+]

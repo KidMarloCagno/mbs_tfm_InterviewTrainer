@@ -19,6 +19,24 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 - **Brute-Force Protection**: Per-IP rate limiting on both login (10 attempts/15 min) and registration (5 attempts/15 min)
 - **Responsive Design**: Clean UI with semantic CSS design tokens and dark/neon themes
 
+## Question Library
+
+More than **1,500 questions** across **11 topics**:
+
+| Topic         | Focus area                                                |
+| ------------- | --------------------------------------------------------- |
+| Angular       | Framework architecture, components, directives, RxJS      |
+| Backend       | REST APIs, authentication, server patterns, microservices |
+| Database      | SQL, indexing, transactions, NoSQL fundamentals           |
+| Django        | ORM, views, middleware, REST framework                    |
+| Frontend      | HTML, CSS, browser APIs, performance, accessibility       |
+| Java          | Core language, OOP, concurrency, JVM internals            |
+| JavaScript    | Language fundamentals, async, closures, ES2015+           |
+| Python        | Language features, data structures, OOP, stdlib           |
+| React         | Hooks, component patterns, state management, rendering    |
+| Spring        | IoC/DI, Spring Boot, MVC, Spring Data                     |
+| System Design | Scalability, distributed systems, caching, messaging      |
+
 ## Tech Stack
 
 - Frontend: ![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
@@ -34,7 +52,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the following repository:
 
    ```bash
    git clone https://github.com/KidMarloCagno/mbs_tfm_InterviewTrainer.git
@@ -128,6 +146,7 @@ mbs_tfm_InterviewTrainer/
 - `pnpm start`: Run the production server
 - `pnpm test:db:prepare`: Create/prepare `quizview_test` and apply Prisma migrations
 - `pnpm test`: Run unit tests with Vitest
+- `pnpm test:coverage`: Run tests with v8 coverage report (HTML + text)
 - `pnpm test:e2e`: Run end-to-end tests with Playwright
 - `pnpm lint`: Run ESLint for code quality
 - `pnpm prisma:studio`: Explore data with Prisma Studio
@@ -145,8 +164,6 @@ pnpm test
 - `pnpm test:db:prepare` creates `quizview_test` (if missing) and applies Prisma migrations.
 - `pnpm test` runs the test suite after the test database is ready.
 
-## ▲ Vercel Deployment Notes
-
 ## 🔐 Snyk Integration Options
 
 This repository supports Snyk as a GitHub Actions workflow (`.github/workflows/snyk.yml`) so scans can run automatically after pushes and on pull requests.
@@ -158,17 +175,35 @@ You can choose one of these rollout options:
 3. **Scheduled baseline scans**: add a weekly cron so new CVEs are detected even without new commits.
 4. **Manual scans**: use `workflow_dispatch` to run on-demand from the Actions tab.
 
-### Required secret
-
-Set `SNYK_TOKEN` in repository secrets:
-
-- GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
-
 ### Optional hardening
 
 - Enable GitHub code scanning upload (SARIF) for Snyk Code findings.
 - Start with `--severity-threshold=high` and later tighten to `medium`.
 - Add `snyk monitor` in a separate scheduled workflow to track project history in Snyk dashboard.
+
+## 🛡️ Snyk Security Local Acanning (Recommended)
+
+Before committing, it is highly recommended to run Snyk locally to check for vulnerabilities in all project dependencies. This helps catch issues early and avoid failed commits due to security problems.
+
+- Run Snyk with the following command to scan all project manifests (including both package.json and pnpm-lock.yaml):
+
+  ```bash
+  snyk test --all-projects
+  ```
+
+- If vulnerabilities are found, you can attempt to auto-fix them:
+
+  ```bash
+  snyk fix --all-projects
+  ```
+
+- Note: Some vulnerabilities may require manual updates to package versions or human validation. If an upgrade implies significant code changes, carefully review whether the update is worth it for your project at this time.
+
+- Not all issues can be fixed automatically. Always review Snyk's output and consider the impact of dependency upgrades on your codebase.
+
+- For more details, see the [Snyk documentation](https://docs.snyk.io/).
+
+## ▲ Vercel Deployment Notes
 
 - This project pins pnpm via `packageManager` in `package.json` to ensure CI and local environments use the same package manager version.
 - Vercel installs with a frozen lockfile by default (`pnpm install --frozen-lockfile`).
@@ -232,3 +267,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions or feedback, please open an issue on GitHub.
+
+## TFM Summary Presentation
+
+https://www.canva.com/design/DAHCABAyb5M/0gU5hpEjyONfCnUk67MKmw/edit?utm_content=DAHCABAyb5M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Deployed Version
+
+Pending

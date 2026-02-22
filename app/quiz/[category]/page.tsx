@@ -28,6 +28,7 @@ export default function QuizPage() {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(
     null,
   );
+  const [savingProgress, setSavingProgress] = useState(false);
 
   const {
     sessionQuestions,
@@ -60,16 +61,21 @@ export default function QuizPage() {
       .finally(() => setLoading(false));
   }, [categoryName, count, type, resetSession, startSession]);
 
-  // Persist session results to the DB via SM-2 once the session is done
+  // Persist session results to the DB via SM-2 once the session is done.
+  // savingProgress blocks the "Back to Topics" button until the write commits,
+  // preventing a race where the dashboard loads before UserProgress is saved.
   useEffect(() => {
     if (!isFinished || answeredResults.length === 0) return;
+    setSavingProgress(true);
     fetch("/api/quiz/session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ results: answeredResults }),
-    }).catch(() => {
-      // Best-effort — ignore network failures silently
-    });
+    })
+      .catch(() => {
+        // Best-effort — ignore network failures silently
+      })
+      .finally(() => setSavingProgress(false));
   }, [isFinished, answeredResults]);
 
   if (loading) {
@@ -133,23 +139,26 @@ export default function QuizPage() {
               Precision: {percentage}%
             </p>
             <p className="text-muted" style={{ margin: 0, fontSize: ".85rem" }}>
-              Progress saved · Questions scheduled for spaced repetition review
+              {savingProgress
+                ? "Saving progress…"
+                : "Progress saved · Questions scheduled for spaced repetition review"}
             </p>
             <Button
               className="ui-button-block"
+              disabled={savingProgress}
               onClick={() => {
                 resetSession();
-                router.push("/dashboard");
+                globalThis.location.href = "/dashboard";
               }}
             >
-              Back to Topics
+              {savingProgress ? "Saving…" : "Back to Topics"}
             </Button>
             <Button
               className="ui-button-block"
               variant="outline"
               onClick={() => {
                 resetSession();
-                window.location.reload();
+                globalThis.location.reload();
               }}
             >
               Run Again
@@ -216,7 +225,7 @@ export default function QuizPage() {
           >
             Exit Session
           </Button>
-          {lastAnswerCorrect !== null ? (
+          {lastAnswerCorrect === null ? null : (
             <Button
               onClick={() => {
                 setLastAnswerCorrect(null);
@@ -226,7 +235,7 @@ export default function QuizPage() {
             >
               Next Question {"->"}
             </Button>
-          ) : null}
+          )}
         </div>
       </div>
     </div>

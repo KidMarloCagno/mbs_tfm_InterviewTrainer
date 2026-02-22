@@ -35,17 +35,15 @@ model User {
 }
 
 model Question {
-  id         String         @id
+  id         String          @id
   question   String
   answer     String
   options    String[]
   category   String
   type       QuestionType
   level      DifficultyLevel
-  createdAt  DateTime       @default(now())
-  updatedAt  DateTime       @updatedAt
-
-  progress   UserProgress[]
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
 }
 
 model UserProgress {
@@ -60,7 +58,6 @@ model UserProgress {
   updatedAt      DateTime @updatedAt
 
   user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([userId, questionId])
   @@index([nextReview])

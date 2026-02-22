@@ -7,6 +7,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.5] - 2026-02-22
+
+### Fixed
+
+- Remix card never activating on Vercel: root cause was `UserProgress.questionId` having a FK constraint to the `Question` table. Any question ID not seeded in the DB caused the upsert to throw a FK violation → silently skipped → `saved: 0`. Removed the FK relation from `UserProgress` (migration `20260222165922_remove_question_fk`); `questionId` is now a plain string. New question sets work immediately without a DB re-seed.
+
+## [1.3.4] - 2026-02-22
+
+### Added
+
+- `__tests__/components/quiz/QuizPage.test.tsx` — 8 regression tests for the `savingProgress` race condition (IMPORTANT TIER, 259 tests total):
+  - Completion screen renders heading and score
+  - Button shows "Saving…" and is disabled while `POST /api/quiz/session` is in-flight
+  - Button re-enables and status line updates after POST resolves
+  - Navigation uses `globalThis.location.href` (hard reload), not `router.push` — verifies Router Cache bypass
+  - "Run Again" calls `globalThis.location.reload`
+
+### Fixed
+
+- Remix card not activating after first session on Vercel: the "Back to Topics" button now waits for `POST /api/quiz/session` to complete before navigating to the dashboard, eliminating the race condition where the dashboard Server Component queried `UserProgress` before the write had committed. The button shows "Saving…" and is disabled during the save.
+- Replaced `router.push("/dashboard")` with `globalThis.location.href = "/dashboard"` on the completion screen to bypass Next.js Router Cache (30 s client-side TTL), which caused the dashboard to show stale data even after the DB write completed.
+
+## [1.3.3] - 2026-02-21
+
+### Added
+
+- 7 new test files covering previously-untested API routes and utility modules (251 tests total):
+  - `__tests__/unit/loginRateLimit.test.ts` — CORE TIER, 8 tests (100% coverage target)
+  - `__tests__/unit/registerRateLimit.test.ts` — CORE TIER, 8 tests
+  - `__tests__/unit/questionsData.test.ts` — CORE TIER, 8 tests
+  - `__tests__/api/auth/checkAvailability.test.ts` — IMPORTANT TIER, 10 tests (≥80% target)
+  - `__tests__/api/auth/register.test.ts` — IMPORTANT TIER, 11 tests
+  - `__tests__/api/quiz/questions.test.ts` — IMPORTANT TIER, 13 tests
+  - `__tests__/api/quiz/session.test.ts` — IMPORTANT TIER, 10 tests
+
+### Fixed
+
+- Renamed `vitest.config.ts` → `vitest.config.mts` to suppress Vite CJS Node API deprecation warning; `.mts` extension forces ESM loading without affecting Next.js config files
+
+## [1.3.2] - 2026-02-21
+
+### Added
+
+- 8 new question sets registered in `lib/questions-data.ts` and seeded to DB (1 503 total questions):
+  - **Angular** (120 questions, `ang-` prefix)
+  - **Backend** (150 questions, `be-` prefix)
+  - **Django** (45 questions, `dj-` prefix)
+  - **Frontend** (180 questions, `fe-` prefix)
+  - **Java** (90 questions, `jv-` prefix)
+  - **Python** (120 questions, `py-` prefix)
+  - **React** (150 questions, `re-` prefix)
+  - **Spring** (111 questions, `sp-` prefix)
+- Refactored `lib/questions-data.ts`: extracted `mapSet()` helper to eliminate per-topic boilerplate
+
 ## [1.3.1] - 2026-02-21
 
 ### Added

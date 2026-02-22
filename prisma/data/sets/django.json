@@ -1,0 +1,522 @@
+[
+  {
+    "id": "dj-q001",
+    "question": "What is Django?",
+    "answer": "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+    "options": [
+      "A JavaScript library for building interactive user interfaces.",
+      "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      "A relational database management system built entirely in Python.",
+      "A Python package manager used to install third-party libraries."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Django emphasizes rapid development and clean, pragmatic design, separating itself from other Python frameworks by offering a built-in 'batteries-included' approach for web development."
+  },
+  {
+    "id": "dj-q002",
+    "question": "What architectural pattern does Django closely follow?",
+    "answer": "Model-Template-View (MTV)",
+    "options": [
+      "Model-View-Controller (MVC)",
+      "Model-Template-View (MTV)",
+      "Event-Driven Architecture",
+      "Microservices Architecture"
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Django uses the Model-Template-View (MTV) pattern, which is a variation of the traditional Model-View-Controller (MVC) architecture specifically tailored for web applications."
+  },
+  {
+    "id": "dj-q003",
+    "question": "In Django's MTV architecture, which component handles the logic traditionally managed by a 'Controller' in MVC?",
+    "answer": "Views",
+    "options": ["Models", "Templates", "Views", "Forms"],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "In Django's MTV pattern, the 'View' acts like the 'Controller' in MVC, handling the core business logic, accepting HTTP requests, and routing data between models and templates."
+  },
+  {
+    "id": "dj-q004",
+    "question": "Which of the following is an accurate description of the 'Templates' component in Django's MTV pattern?",
+    "answer": "It serves as the final presentation layer, taking the role of 'Views' in traditional MVC.",
+    "options": [
+      "It serves as the final presentation layer, taking the role of 'Views' in traditional MVC.",
+      "It contains the core business logic and database querying mechanisms.",
+      "It handles incoming HTTP requests and routes them to the correct model.",
+      "It provides a command-line interface to interact with the Django project."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Django Templates act as the 'View' in a traditional MVC pattern, meaning they are exclusively responsible for the presentation layer and generating HTML output."
+  },
+  {
+    "id": "dj-q005",
+    "question": "Which of the following files acts as a map for a Django project, examining incoming URLs to call the correct view function?",
+    "answer": "urls.py",
+    "options": ["manage.py", "settings.py", "urls.py", "wsgi.py"],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The urls.py file acts as the project's routing map, taking requested paths and matching them against patterns to fire the correct Python view functions."
+  },
+  {
+    "id": "dj-q006",
+    "question": "What occurs first when an HTTP request is received by the Django server?",
+    "answer": "The server looks for a match of the requested URL in its URL-config and returns the corresponding view function.",
+    "options": [
+      "The server immediately executes the manage.py file to restart the worker.",
+      "The server looks for a match of the requested URL in its URL-config and returns the corresponding view function.",
+      "The server queries the database to find a matching HTML template.",
+      "The server renders the base.html template regardless of the request."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "When an HTTP request arrives, Django first processes the URL configuration (urls.py) to find a matching pattern before executing the associated view."
+  },
+  {
+    "id": "dj-q007",
+    "question": "Why is Django often referred to as a 'loosely coupled' framework?",
+    "answer": "Its MTV architecture completely separates the server code (Models and Views) from the client's presentation (Templates).",
+    "options": [
+      "It relies entirely on third-party APIs instead of an internal database.",
+      "Its MTV architecture completely separates the server code (Models and Views) from the client's presentation (Templates).",
+      "It requires developers to write their own SQL queries to bypass the ORM.",
+      "It does not require a settings.py file to function properly."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Django's architecture ensures that the database logic, server-side processing, and frontend templates operate independently, creating a 'loosely coupled' environment."
+  },
+  {
+    "id": "dj-q008",
+    "question": "What happens immediately when a Django server starts?",
+    "answer": "It executes the settings.py file and loads specific engines and databases to quickly serve requests.",
+    "options": [
+      "It executes the settings.py file and loads specific engines and databases to quickly serve requests.",
+      "It automatically runs the latest unapplied migrations against the database.",
+      "It compiles all HTML templates into raw Python byte-code.",
+      "It initiates an automatic backup of the SQLite database."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Upon starting, the Django server initializes by loading settings.py to configure database connections, installed apps, caching, and middleware."
+  },
+  {
+    "id": "dj-q009",
+    "question": "Which of the following represents a valid built-in database engine setting in Django?",
+    "answer": "django.db.backends.postgresql_psycopg2",
+    "options": [
+      "django.db.engines.postgres",
+      "django.db.backends.postgresql_psycopg2",
+      "django.db.sql.mysql",
+      "django.core.databases.sqlite3"
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The 'django.db.backends.postgresql_psycopg2' setting is the official built-in engine to connect Django to PostgreSQL databases."
+  },
+  {
+    "id": "dj-q010",
+    "question": "What is the primary function of the Django ORM?",
+    "answer": "It acts as an abstraction between models and the database, allowing data manipulation in a pythonic way without writing SQL.",
+    "options": [
+      "It renders HTML templates asynchronously without reloading the browser page.",
+      "It acts as an abstraction between models and the database, allowing data manipulation in a pythonic way without writing SQL.",
+      "It securely hashes passwords and manages user authentication automatically.",
+      "It routes incoming HTTP requests to specific server ports based on IP address."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Object-Relational Mapper (ORM) translates Python code into SQL queries, hiding direct database complexity from the developer."
+  },
+  {
+    "id": "dj-q011",
+    "question": "In Django templates, how is control logic (such as loops or conditional statements) represented?",
+    "answer": "Using tags enclosed in {% %}.",
+    "options": [
+      "Using tags enclosed in {{ }}.",
+      "Using tags enclosed in {% %}.",
+      "Using tags enclosed in [[ ]].",
+      "Using tags enclosed in <?php ?>."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Django uses {% %} for control logic like 'if' and 'for' loops, while {{ }} is used strictly for outputting variable values."
+  },
+  {
+    "id": "dj-q012",
+    "question": "How does the session framework operate in Django?",
+    "answer": "It stores and retrieves arbitrary data on a per-site-visitor basis on the server side, abstracting the handling of cookies.",
+    "options": [
+      "It caches static files in the user's browser for faster subsequent loads.",
+      "It maintains a persistent WebSocket connection for real-time chat features.",
+      "It stores and retrieves arbitrary data on a per-site-visitor basis on the server side, abstracting the handling of cookies.",
+      "It strictly uses local storage on the client side to bypass server memory limits."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The session framework stores user-specific data (like carts or logged-in status) on the server database and maps it to a session ID cookie sent to the client."
+  },
+  {
+    "id": "dj-q013",
+    "question": "What is the purpose of running a migration in Django?",
+    "answer": "To propagate changes made to models (like adding fields or deleting models) into the actual database schema.",
+    "options": [
+      "To transfer the entire application codebase from development to a production server.",
+      "To propagate changes made to models (like adding fields or deleting models) into the actual database schema.",
+      "To convert Python 2 syntax into Python 3 syntax automatically.",
+      "To export database records into a portable CSV or JSON file."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Migrations are Django's automated system for updating the underlying database tables and columns to reflect the Python model definitions."
+  },
+  {
+    "id": "dj-q014",
+    "question": "During Django deployment, what is the role of the 'collectstatic' command?",
+    "answer": "To gather and copy all static files from various apps into the single directory defined by STATIC_ROOT.",
+    "options": [
+      "To compile all Python views into static HTML files for faster caching.",
+      "To gather and copy all static files from various apps into the single directory defined by STATIC_ROOT.",
+      "To compress and minify all JavaScript and CSS files in the project.",
+      "To clear out old or unused static files from previous application builds."
+    ],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The collectstatic command finds all static assets scattered across installed apps and copies them into the STATIC_ROOT directory for efficient production serving."
+  },
+  {
+    "id": "dj-q015",
+    "question": "In a standard Django project structure, which file sits at the top level of the project, at the same directory level as the main project folder?",
+    "answer": "manage.py",
+    "options": ["settings.py", "manage.py", "urls.py", "wsgi.py"],
+    "category": "Django",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The manage.py file is a command-line utility created at the root of the project to allow interaction with the Django application."
+  },
+  {
+    "id": "dj-q016",
+    "question": "True or False: Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Django is designed to help developers take applications from concept to completion as quickly as possible by providing built-in features."
+  },
+  {
+    "id": "dj-q017",
+    "question": "True or False: Django closely follows the Model-View-Controller (MVC) architectural pattern exactly as defined in other frameworks.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Django follows a variation called Model-Template-View (MTV), redefining what 'Views' and 'Templates' mean compared to strict MVC."
+  },
+  {
+    "id": "dj-q018",
+    "question": "True or False: In Django's MTV architecture, the 'Models' component handles the logic traditionally managed by a 'Controller' in MVC.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the 'Views' component that handles the controller logic in Django's MTV pattern."
+  },
+  {
+    "id": "dj-q019",
+    "question": "True or False: In Django, the 'Templates' component serves as the final presentation layer, taking the role of 'Views' in traditional MVC.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Templates are exclusively responsible for rendering the final HTML format returned to the client."
+  },
+  {
+    "id": "dj-q020",
+    "question": "True or False: The manage.py file acts as a map for a Django project, examining incoming URLs to call the correct view function.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The urls.py file acts as the URL router mapping paths to views. manage.py is just a command-line utility."
+  },
+  {
+    "id": "dj-q021",
+    "question": "True or False: When an HTTP request is received, the Django server first looks for a match of the requested URL in its URL-config and returns the corresponding view function.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Resolving the URL against urls.py is the primary step Django takes to handle an incoming HTTP request."
+  },
+  {
+    "id": "dj-q022",
+    "question": "True or False: Django is often referred to as a loosely coupled framework because it relies entirely on third-party APIs instead of an internal database.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is loosely coupled because its MTV architecture neatly separates the server code from the client's presentation layer, not because of APIs."
+  },
+  {
+    "id": "dj-q023",
+    "question": "True or False: Immediately when a Django server starts, it executes the settings.py file and loads specific engines and databases to quickly serve requests.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. The settings.py file handles all critical configuration mapping the moment the Django application boots up."
+  },
+  {
+    "id": "dj-q024",
+    "question": "True or False: `django.core.databases.sqlite3` represents a valid built-in database engine setting in Django.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. The correct built-in setting for SQLite in Django is `django.db.backends.sqlite3`."
+  },
+  {
+    "id": "dj-q025",
+    "question": "True or False: The primary function of the Django ORM is to act as an abstraction between models and the database, allowing data manipulation in a pythonic way.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. The Object-Relational Mapper lets developers manipulate data using Python class instances instead of raw SQL strings."
+  },
+  {
+    "id": "dj-q026",
+    "question": "True or False: In Django templates, control logic such as loops or conditional statements is represented using tags enclosed in {{ }}.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Control logic uses {% %} tags. Double curly braces {{ }} are strictly used for variable evaluation/output."
+  },
+  {
+    "id": "dj-q027",
+    "question": "True or False: The Django session framework stores and retrieves arbitrary data on a per-site-visitor basis on the server side, abstracting the handling of cookies.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Session data is stored on the backend database and linked to the user via a lightweight session ID cookie."
+  },
+  {
+    "id": "dj-q028",
+    "question": "True or False: The purpose of running a migration in Django is to export database records into a portable CSV or JSON file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Migrations are instructions used to propagate changes made to models (like adding new fields) into the actual database schema."
+  },
+  {
+    "id": "dj-q029",
+    "question": "True or False: During Django deployment, the 'collectstatic' command is used to gather and copy all static files from various apps into the single directory defined by STATIC_ROOT.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. Running `collectstatic` ensures that assets from all installed packages are merged into one production-ready directory."
+  },
+  {
+    "id": "dj-q030",
+    "question": "True or False: In a standard Django project structure, settings.py sits at the top level of the project, at the same directory level as the main project folder.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Django",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. `manage.py` sits at the top level. The `settings.py` file is located inside the inner configuration folder."
+  },
+  {
+    "id": "dj-q031",
+    "question": "Django is a high-level ______ web framework that encourages rapid development and clean, pragmatic design.",
+    "answer": "Python",
+    "options": ["JavaScript", "Ruby", "Python", "PHP"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Django is entirely built in and powered by Python."
+  },
+  {
+    "id": "dj-q032",
+    "question": "Django closely follows the ______ architectural pattern.",
+    "answer": "Model-Template-View (MTV)",
+    "options": [
+      "Model-View-Controller (MVC)",
+      "Event-Driven Architecture",
+      "Component-Based Architecture",
+      "Model-Template-View (MTV)"
+    ],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "While similar to MVC, Django's unique variation is known as the MTV (Model-Template-View) pattern."
+  },
+  {
+    "id": "dj-q033",
+    "question": "In Django's MTV architecture, the ______ component handles the logic traditionally managed by a 'Controller' in MVC.",
+    "answer": "Views",
+    "options": ["Models", "Views", "Templates", "Forms"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Views process HTTP requests, retrieve data via the ORM, and pass it down to templates."
+  },
+  {
+    "id": "dj-q034",
+    "question": "The ______ component serves as the final presentation layer, taking the role of 'Views' in traditional MVC.",
+    "answer": "Templates",
+    "options": ["Models", "Routes", "Views", "Templates"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Templates are responsible for generating the final HTML markup requested by the browser."
+  },
+  {
+    "id": "dj-q035",
+    "question": "The ______ file acts as a map for a Django project, examining incoming URLs to call the correct view function.",
+    "answer": "urls.py",
+    "options": ["settings.py", "manage.py", "wsgi.py", "urls.py"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The urls.py file contains the `urlpatterns` list that routes incoming web paths to specific view functions."
+  },
+  {
+    "id": "dj-q036",
+    "question": "When an HTTP request is received, the server first looks for a match in its ______ and returns the corresponding view function.",
+    "answer": "URL-config",
+    "options": [
+      "settings.py",
+      "URL-config",
+      "database schema",
+      "middleware layer"
+    ],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "URL matching against the URL configuration is the definitive first step in Django request handling."
+  },
+  {
+    "id": "dj-q037",
+    "question": "Django is a '______ coupled' framework because its MTV architecture completely separates the server code from the client's presentation.",
+    "answer": "loosely",
+    "options": ["tightly", "strictly", "loosely", "fully"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Loose coupling means modules can be changed or modified without directly breaking other components."
+  },
+  {
+    "id": "dj-q038",
+    "question": "Immediately when a Django server starts, it executes the ______ file and loads specific engines and databases.",
+    "answer": "settings.py",
+    "options": ["manage.py", "settings.py", "urls.py", "admin.py"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "settings.py controls core environment variables required for the Django application to run."
+  },
+  {
+    "id": "dj-q039",
+    "question": "A valid built-in PostgreSQL database engine setting in Django is `django.db.backends.______`.",
+    "answer": "postgresql_psycopg2",
+    "options": ["postgres", "postgresql_psycopg2", "pgsql", "psycopg_postgres"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Django natively connects to PostgreSQL databases using the `psycopg2` driver module via this setting."
+  },
+  {
+    "id": "dj-q040",
+    "question": "The Django ______ acts as an abstraction between models and the database, allowing data manipulation in a pythonic way without writing SQL.",
+    "answer": "ORM",
+    "options": ["API", "CLI", "MVC", "ORM"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Object-Relational Mapper (ORM) securely bridges the gap between Python and SQL statements."
+  },
+  {
+    "id": "dj-q041",
+    "question": "In Django templates, control logic (such as loops or conditional statements) is represented using tags enclosed in ______.",
+    "answer": "{% %}",
+    "options": ["{{ }}", "[[ ]]", "{% %}", "<? ?>"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Template logic syntax requires {% %} for evaluations like `{% if user.is_authenticated %}`."
+  },
+  {
+    "id": "dj-q042",
+    "question": "The ______ framework operates by storing and retrieving arbitrary data on a per-site-visitor basis on the server side.",
+    "answer": "session",
+    "options": ["authentication", "caching", "messaging", "session"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Session frameworks persist short-term data (like shopping cart items) across multiple HTTP requests without storing it directly in cookies."
+  },
+  {
+    "id": "dj-q043",
+    "question": "Running a ______ propagates changes made to models (like adding fields or deleting models) into the actual database schema.",
+    "answer": "migration",
+    "options": ["collection", "migration", "serialization", "query"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Running `python manage.py migrate` executes the generated Python migration files against the database."
+  },
+  {
+    "id": "dj-q044",
+    "question": "During Django deployment, the ______ command gathers and copies all static files into the single directory defined by STATIC_ROOT.",
+    "answer": "collectstatic",
+    "options": ["makemigrations", "runserver", "flush", "collectstatic"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This command ensures all assets from installed apps, like admin panel CSS, are centralized for web servers like Nginx to read."
+  },
+  {
+    "id": "dj-q045",
+    "question": "In a standard Django project structure, ______ sits at the top level of the project, at the same directory level as the main project folder.",
+    "answer": "manage.py",
+    "options": ["settings.py", "urls.py", "wsgi.py", "manage.py"],
+    "category": "Django",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The manage.py file provides a command-line interface directly pointing to your inner settings module."
+  }
+]

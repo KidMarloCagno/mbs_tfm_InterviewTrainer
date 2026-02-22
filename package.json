@@ -1,6 +1,6 @@
 {
   "name": "mbs-tfm-interview-trainer",
-  "version": "1.3.1",
+  "version": "1.3.5",
   "packageManager": "pnpm@10.29.3",
   "description": "Gamified IT interview practice platform with spaced repetition and active recall",
   "author": "Joaquin",
@@ -70,6 +70,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.1.9",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.1",

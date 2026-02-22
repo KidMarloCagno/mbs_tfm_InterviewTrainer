@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "py-q001",
+    "question": "How is Python primarily executed?",
+    "answer": "Python is an interpreted language, meaning code is executed line-by-line by the CPython interpreter without a separate compilation step for the developer.",
+    "options": [
+      "Python is purely compiled directly to machine code before execution, similar to C++.",
+      "Python is an interpreted language, meaning code is executed line-by-line by the CPython interpreter without a separate compilation step for the developer.",
+      "Python is a low-level language that runs directly on the CPU without interpretation or compilation.",
+      "Python code is executed entirely inside a web browser's DOM engine."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Python does compile to bytecode internally (.pyc), but from the developer's perspective, it is interpreted line-by-line by the Python virtual machine without explicit compilation steps."
+  },
+  {
+    "id": "py-q002",
+    "question": "What is PEP 8 in Python?",
+    "answer": "A document that provides style guidelines and best practices on how to format Python code for maximum readability.",
+    "options": [
+      "A built-in Python module for performing asynchronous network requests.",
+      "A Python package manager used exclusively for installing third-party data science libraries.",
+      "The default Python compiler algorithm used for extreme performance optimization.",
+      "A document that provides style guidelines and best practices on how to format Python code for maximum readability."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "PEP stands for Python Enhancement Proposal, and PEP 8 is the official style guide for writing clean, readable Python code."
+  },
+  {
+    "id": "py-q003",
+    "question": "How is memory allocation and garbage collection handled in Python?",
+    "answer": "Python manages memory automatically using a private heap space, Reference Counting, and a Cyclic Garbage Collector.",
+    "options": [
+      "Python forces the developer to manually allocate and free memory using malloc() and free().",
+      "Python relies entirely on the operating system's native memory management to prevent leaks.",
+      "Python manages memory automatically using a private heap space, Reference Counting, and a Cyclic Garbage Collector.",
+      "Python uses a strict stack-based memory allocation system with no garbage collection."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Memory is handled entirely under the hood. When an object's reference count drops to zero, or if it's caught in a cyclic reference, the garbage collector frees it."
+  },
+  {
+    "id": "py-q004",
+    "question": "Which of the following built-in data types are considered immutable in Python?",
+    "answer": "int, float, string, tuple, and frozenset.",
+    "options": [
+      "list, dictionary, set, and bytearray.",
+      "int, float, string, tuple, and frozenset.",
+      "string, list, tuple, and dictionary.",
+      "tuple, dictionary, set, and object."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Immutable means their state or content cannot be changed after they are created. Any operation that modifies them instead creates a new object in memory."
+  },
+  {
+    "id": "py-q005",
+    "question": "What is the main difference between a list and a tuple in Python?",
+    "answer": "Lists are mutable, allowing elements to be added or modified, whereas tuples are immutable once created.",
+    "options": [
+      "Lists can only store homogeneous data types, whereas tuples can store heterogeneous data types.",
+      "Lists are immutable once created, whereas tuples are mutable and allow dynamic resizing.",
+      "Lists are mutable, allowing elements to be added or modified, whereas tuples are immutable once created.",
+      "There is no difference; list and tuple are interchangeable terms for the same data structure."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Because tuples are immutable, they are typically faster and consume less memory than lists. Lists use brackets [], while tuples use parentheses ()."
+  },
+  {
+    "id": "py-q006",
+    "question": "In a try-except block, when does the 'else' block execute?",
+    "answer": "It executes only if the try block completes successfully without any exceptions being raised.",
+    "options": [
+      "It executes only if an exception is caught and handled by the except block.",
+      "It executes regardless of whether an exception occurred or not.",
+      "It executes only if the try block completes successfully without any exceptions being raised.",
+      "It executes immediately before the try block starts to validate inputs."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'else' block allows you to run code that should only occur if the operation in the 'try' block succeeds."
+  },
+  {
+    "id": "py-q007",
+    "question": "What is the primary purpose of the 'finally' block in Python exception handling?",
+    "answer": "It executes regardless of whether an exception occurred or not, typically used for resource cleanup like closing files or connections.",
+    "options": [
+      "It acts as a fallback exception handler if no except block catches the error.",
+      "It executes regardless of whether an exception occurred or not, typically used for resource cleanup like closing files or connections.",
+      "It forcibly terminates the Python program immediately after an exception is caught.",
+      "It is used exclusively to return values from within a try block."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'finally' block guarantees execution, making it the safest place to release external resources so they don't remain open indefinitely."
+  },
+  {
+    "id": "py-q008",
+    "question": "What is the difference between the '==' operator and the 'is' operator in Python?",
+    "answer": "The '==' operator evaluates value equality, while the 'is' operator evaluates object identity (whether they reference the exact same object in memory).",
+    "options": [
+      "The '==' operator evaluates object identity in memory, while the 'is' operator evaluates value equality.",
+      "The '==' operator is used for integers, while the 'is' operator is strictly used for strings.",
+      "The '==' operator performs strict type checking, while the 'is' operator allows type coercion.",
+      "The '==' operator evaluates value equality, while the 'is' operator evaluates object identity (whether they reference the exact same object in memory)."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Two identical lists have value equality (==), but because they exist separately in memory, they do not share object identity ('is' returns False)."
+  },
+  {
+    "id": "py-q009",
+    "question": "What is a lambda function in Python?",
+    "answer": "An anonymous, single-expression function defined using the 'lambda' keyword, often used for short, throwaway operations.",
+    "options": [
+      "A built-in mathematical function used to calculate complex algorithms.",
+      "A function that executes asynchronously on a separate thread.",
+      "An anonymous, single-expression function defined using the 'lambda' keyword, often used for short, throwaway operations.",
+      "A recursive function that continuously calls itself until a base case is met."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Lambdas are used heavily with higher-order functions like map(), filter(), and sorted() to pass small functional logic inline."
+  },
+  {
+    "id": "py-q010",
+    "question": "What is the purpose of '*args' in a Python function definition?",
+    "answer": "It allows a function to accept a variable number of positional arguments, packing them into a tuple.",
+    "options": [
+      "It allows a function to accept a variable number of keyword arguments, packing them into a dictionary.",
+      "It forces the function to accept exactly one argument that acts as a pointer.",
+      "It allows a function to accept a variable number of positional arguments, packing them into a tuple.",
+      "It strictly type-hints the arguments to ensure they are all strings."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Using *args lets you design flexible functions that can take anywhere from zero to infinite standard, comma-separated arguments."
+  },
+  {
+    "id": "py-q011",
+    "question": "What is the purpose of '**kwargs' in a Python function definition?",
+    "answer": "It allows a function to accept a variable number of keyword arguments, packing them into a dictionary.",
+    "options": [
+      "It allows a function to accept a variable number of positional arguments, packing them into a tuple.",
+      "It dynamically creates global variables based on the function's inputs.",
+      "It forces the function to automatically unpack nested lists.",
+      "It allows a function to accept a variable number of keyword arguments, packing them into a dictionary."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Keyword arguments (kwargs) passed as `name='value'` are caught by **kwargs and converted into a standard Python dictionary for easy iteration."
+  },
+  {
+    "id": "py-q012",
+    "question": "What are decorators in Python?",
+    "answer": "They are a design pattern that allows you to modify or enhance the behavior of a function or class without changing its actual source code, using the '@' symbol.",
+    "options": [
+      "They are built-in styling rules that format text outputs in the console.",
+      "They are a design pattern that allows you to modify or enhance the behavior of a function or class without changing its actual source code, using the '@' symbol.",
+      "They are security protocols used to encrypt sensitive variables inside a class.",
+      "They are external libraries strictly used for creating graphical user interfaces (GUIs)."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Decorators wrap a function, executing code before and after the wrapped function runs, commonly used for logging, access control, or caching."
+  },
+  {
+    "id": "py-q013",
+    "question": "How does Python handle passing arguments to functions?",
+    "answer": "Python uses 'Pass by Object Reference', where references to objects are passed by value, meaning mutable objects can be modified but reassigning the reference doesn't affect the original variable.",
+    "options": [
+      "Python strictly uses 'Pass by Value', meaning all arguments are entirely copied in memory.",
+      "Python strictly uses 'Pass by Reference', meaning any reassignment inside the function overwrites the global variable.",
+      "Python uses 'Pass by Object Reference', where references to objects are passed by value, meaning mutable objects can be modified but reassigning the reference doesn't affect the original variable.",
+      "Python forces the developer to manually define whether passing occurs by value or reference using keywords."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If you pass a list and append to it, the original list changes. If you reassign the list to a new list entirely, the original remains untouched."
+  },
+  {
+    "id": "py-q014",
+    "question": "What is the primary difference between a Set and a Dictionary in Python?",
+    "answer": "A Set is an unordered collection of unique, immutable elements, while a Dictionary is an unordered collection of key-value pairs where keys must be unique and immutable.",
+    "options": [
+      "A Set allows duplicate elements, while a Dictionary strictly forbids duplicate values.",
+      "A Set is an unordered collection of unique, immutable elements, while a Dictionary is an unordered collection of key-value pairs where keys must be unique and immutable.",
+      "A Set stores elements in strict alphabetical order, while a Dictionary has no concept of order.",
+      "A Set is mutable but a Dictionary is entirely immutable upon creation."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Both use curly braces {}, but sets store single items `{1, 2, 3}` while dictionaries store mapped pairs `{'a': 1, 'b': 2}`."
+  },
+  {
+    "id": "py-q015",
+    "question": "What does the 'pass' keyword do in Python?",
+    "answer": "It is a null statement that does nothing, commonly used as a placeholder in empty functions, classes, or loops to avoid SyntaxErrors.",
+    "options": [
+      "It skips the current iteration of a loop and moves to the next.",
+      "It terminates a loop completely and moves to the subsequent block of code.",
+      "It is a null statement that does nothing, commonly used as a placeholder in empty functions, classes, or loops to avoid SyntaxErrors.",
+      "It bypasses all exception handling and forces the program to continue execution."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Python relies on indentation for scope; an empty block with no statements causes an error. 'pass' safely fulfills the syntactical requirement."
+  },
+  {
+    "id": "py-q016",
+    "question": "What does the 'continue' keyword do within a loop?",
+    "answer": "It immediately skips the rest of the code inside the current loop iteration and jumps to the next iteration of the loop.",
+    "options": [
+      "It entirely breaks out of the loop and stops further iterations.",
+      "It acts as a placeholder that does absolutely nothing when executed.",
+      "It returns execution back to the very beginning of the program.",
+      "It immediately skips the rest of the code inside the current loop iteration and jumps to the next iteration of the loop."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unlike 'break' which destroys the loop, 'continue' just bypasses the remaining logic for that specific cycle."
+  },
+  {
+    "id": "py-q017",
+    "question": "What is Variable Scope in Python?",
+    "answer": "The specific region of code where a variable is defined, can be found, and is accessible, following the LEGB (Local, Enclosing, Global, Built-in) rule.",
+    "options": [
+      "The physical memory size allocated to a variable by the interpreter.",
+      "The specific region of code where a variable is defined, can be found, and is accessible, following the LEGB (Local, Enclosing, Global, Built-in) rule.",
+      "The process of casting a variable from one data type to another.",
+      "A strict naming convention applied to variables to prevent global conflicts."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Python checks for a variable's existence locally first, then in enclosing scopes, then globally, and finally in its built-ins."
+  },
+  {
+    "id": "py-q018",
+    "question": "How are docstrings accessed programmatically in Python?",
+    "answer": "They can be accessed using the '__doc__' attribute of the object or by passing the object to the built-in 'help()' function.",
+    "options": [
+      "They can be accessed using the '__doc__' attribute of the object or by passing the object to the built-in 'help()' function.",
+      "They can only be read inside an IDE and are completely stripped from the program at runtime.",
+      "They are accessed using the 'print(doc)' function.",
+      "They must be parsed directly from the .py source file using the 're' regex module."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Docstrings (created with triple quotes at the start of a function/class) are mapped by Python into the `__doc__` dunder attribute automatically."
+  },
+  {
+    "id": "py-q019",
+    "question": "What is the difference between Python Lists and Arrays (from the 'array' module)?",
+    "answer": "Arrays strictly store a collection of numeric elements that are all of the exact same data type, whereas Lists can store elements of various, heterogeneous data types.",
+    "options": [
+      "Arrays can store heterogeneous data types, whereas Lists strictly store elements of the same data type.",
+      "Arrays strictly store a collection of numeric elements that are all of the exact same data type, whereas Lists can store elements of various, heterogeneous data types.",
+      "Arrays are immutable, whereas Lists are mutable.",
+      "There is no difference; 'array' is simply an older keyword replaced by 'list' in Python 3."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Because module arrays are typed (homogenous), they are significantly more memory-efficient than lists when handling massive datasets."
+  },
+  {
+    "id": "py-q020",
+    "question": "What is a key difference between a shallow copy and a deep copy in Python?",
+    "answer": "A shallow copy constructs a new collection object and populates it with references to the child objects, while a deep copy recursively copies the child objects themselves.",
+    "options": [
+      "A deep copy is built into the standard assignment '=' operator, whereas a shallow copy requires the 'copy' module.",
+      "A shallow copy completely clones all nested objects, while a deep copy only clones the top-level references.",
+      "A shallow copy constructs a new collection object and populates it with references to the child objects, while a deep copy recursively copies the child objects themselves.",
+      "A deep copy executes significantly faster and requires less memory than a shallow copy."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If you shallow copy a list of lists, modifying a nested list affects both the copy and the original. Deep copy prevents this by duplicating the nested data."
+  },
+  {
+    "id": "py-q021",
+    "question": "Which sorting algorithm is utilized by Python's built-in 'sort()' and 'sorted()' functions?",
+    "answer": "Tim Sort, which is a hybrid stable sorting algorithm derived from merge sort and insertion sort.",
+    "options": [
+      "Quick Sort, which uses a divide-and-conquer strategy.",
+      "Tim Sort, which is a hybrid stable sorting algorithm derived from merge sort and insertion sort.",
+      "Bubble Sort, which repeatedly steps through the list to compare adjacent elements.",
+      "Heap Sort, which relies on a binary heap data structure."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Tim Sort is exceptionally fast on real-world data because it takes advantage of already partially-sorted sequences within the data."
+  },
+  {
+    "id": "py-q022",
+    "question": "What is the function of the 'yield' keyword in Python?",
+    "answer": "It pauses the execution of a function, saves its current state, and returns a generator object that can resume execution from where it left off.",
+    "options": [
+      "It completely stops the current thread to allow other threads to execute.",
+      "It forces a function to return a single value and instantly destroys its local variables.",
+      "It permanently assigns CPU priority to the executing function block.",
+      "It pauses the execution of a function, saves its current state, and returns a generator object that can resume execution from where it left off."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Yield turns a regular function into a Generator. This is perfect for streaming massive datasets piece-by-piece rather than loading everything into memory at once."
+  },
+  {
+    "id": "py-q023",
+    "question": "Does Python support multiple inheritance?",
+    "answer": "Yes, Python supports multiple inheritance, meaning a single child class can be derived from more than one base parent class.",
+    "options": [
+      "Yes, Python supports multiple inheritance, meaning a single child class can be derived from more than one base parent class.",
+      "No, Python intentionally restricted class inheritance to a single parent to prevent the Diamond Problem.",
+      "Yes, but only if the inherited classes strictly use the '@staticmethod' decorator.",
+      "No, Python forces the use of abstract interfaces to simulate multiple inheritance."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Python resolves multiple inheritance conflicts using the Method Resolution Order (MRO) algorithm, specifically the C3 linearization technique."
+  },
+  {
+    "id": "py-q024",
+    "question": "What is PIP in the Python ecosystem?",
+    "answer": "It stands for 'Pip Installs Packages' and is the standard package manager used to install and manage third-party software libraries in Python.",
+    "options": [
+      "It stands for 'Python Interface Protocol', used strictly for database connections.",
+      "It stands for 'Pip Installs Packages' and is the standard package manager used to install and manage third-party software libraries in Python.",
+      "It is an IDE extension that highlights syntax errors during runtime.",
+      "It is an internal garbage collection algorithm responsible for freeing unreferenced objects."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "PIP pulls packages from the official Python Package Index (PyPI), allowing developers to easily share and install code."
+  },
+  {
+    "id": "py-q025",
+    "question": "What does the built-in 'zip()' function do in Python?",
+    "answer": "It takes iterables (like lists or tuples), aggregates them element by element based on their corresponding indexes, and returns an iterator of tuples.",
+    "options": [
+      "It compresses file sizes heavily to save disk space before exporting.",
+      "It concatenates multiple string variables together into a single master string.",
+      "It takes iterables (like lists or tuples), aggregates them element by element based on their corresponding indexes, and returns an iterator of tuples.",
+      "It securely encrypts an iterable to prevent unauthorized runtime access."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "If you zip `[1, 2]` and `['a', 'b']`, it produces `(1, 'a')` and `(2, 'b')`. It stops at the shortest iterable."
+  },
+  {
+    "id": "py-q026",
+    "question": "What is 'Pickling' in Python?",
+    "answer": "The process of serializing a Python object hierarchy into a byte stream, allowing it to be saved to a file or transferred over a network.",
+    "options": [
+      "The process of compiling Python files (.py) into machine code files (.pyc).",
+      "The process of safely removing unused imports from a module.",
+      "The process of mapping relational SQL databases directly into Python classes.",
+      "The process of serializing a Python object hierarchy into a byte stream, allowing it to be saved to a file or transferred over a network."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'pickle' module converts objects into a binary format. Reconstructing the object from the byte stream is known as 'unpickling'."
+  },
+  {
+    "id": "py-q027",
+    "question": "How does a '@classmethod' differ from a standard instance method?",
+    "answer": "A '@classmethod' takes the class itself ('cls') as its first implicit argument rather than the instance ('self'), allowing it to modify class state that applies across all instances.",
+    "options": [
+      "A '@classmethod' takes neither 'self' nor 'cls' and functions like a standard external function.",
+      "A '@classmethod' takes the class itself ('cls') as its first implicit argument rather than the instance ('self'), allowing it to modify class state that applies across all instances.",
+      "A '@classmethod' is completely immutable and cannot alter any variables inside the class.",
+      "A '@classmethod' can only be executed immediately during class instantiation."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Class methods are highly useful as alternative constructors for instantiating objects in different configurations."
+  },
+  {
+    "id": "py-q028",
+    "question": "How does a '@staticmethod' differ from a standard instance method?",
+    "answer": "A '@staticmethod' takes neither 'self' nor 'cls' as a first argument, meaning it behaves like a plain function that belongs to the class's namespace but cannot modify object or class state.",
+    "options": [
+      "A '@staticmethod' executes automatically whenever the class is imported.",
+      "A '@staticmethod' takes neither 'self' nor 'cls' as a first argument, meaning it behaves like a plain function that belongs to the class's namespace but cannot modify object or class state.",
+      "A '@staticmethod' forces all variables passed to it to remain immutable.",
+      "A '@staticmethod' requires the 'cls' parameter to instantiate inherited child classes."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Static methods are essentially utility functions that logically relate to the class but do not need access to any instance-specific or class-specific data."
+  },
+  {
+    "id": "py-q029",
+    "question": "What is the purpose of the '__init__()' method in a Python class?",
+    "answer": "It acts as the constructor method that is automatically called when a new object of that class is instantiated, used to initialize the object's initial state.",
+    "options": [
+      "It acts as a destructor method to safely delete an object when it goes out of scope.",
+      "It registers the class into the Python Global Interpreter Lock (GIL).",
+      "It acts as the constructor method that is automatically called when a new object of that class is instantiated, used to initialize the object's initial state.",
+      "It reboots the Python compiler instance to load new dependencies."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The dunder (double underscore) `__init__` sets up the initial variables and parameters an object requires at the moment of its creation."
+  },
+  {
+    "id": "py-q030",
+    "question": "What does the 'self' parameter represent in a Python class method?",
+    "answer": "It represents the specific instance of the class, allowing access to the attributes and methods associated with that exact object.",
+    "options": [
+      "It acts as an overarching superclass pointer.",
+      "It represents the specific instance of the class, allowing access to the attributes and methods associated with that exact object.",
+      "It is a built-in module required to handle multi-threading inside objects.",
+      "It provides administrative access to the global scope from within a private method."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "While 'self' is the strong convention for this parameter, it is not a reserved Python keyword—you could technically name it anything, but PEP 8 dictates 'self'."
+  },
+  {
+    "id": "py-q031",
+    "question": "What is the correct syntax for slicing a sequence in Python?",
+    "answer": "[start:stop:step], where 'start' is inclusive, 'stop' is exclusive, and 'step' defines the interval.",
+    "options": [
+      "[start, stop, step], where all parameters are strictly inclusive.",
+      "(start:stop:step), using parentheses to yield a generator.",
+      "[start:stop:step], where 'start' is inclusive, 'stop' is exclusive, and 'step' defines the interval.",
+      "{start:stop}, where the step is implicitly defined by the sequence length."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "If omitted, 'start' defaults to 0, 'stop' defaults to the sequence length, and 'step' defaults to 1."
+  },
+  {
+    "id": "py-q032",
+    "question": "What is the difference between a .py file and a .pyc file in Python?",
+    "answer": "A .py file contains the raw, human-readable source code, while a .pyc file contains the compiled bytecode generated by the interpreter to save execution time upon subsequent imports.",
+    "options": [
+      "A .py file contains the raw, human-readable source code, while a .pyc file contains the compiled bytecode generated by the interpreter to save execution time upon subsequent imports.",
+      "A .py file is used for strictly object-oriented scripts, while .pyc is used for functional programming.",
+      "A .py file is a standard script, while a .pyc file is a compressed archive containing multiple .py files.",
+      "A .py file operates on Python 2, whereas a .pyc file operates strictly on Python 3."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The interpreter caches .pyc files inside the `__pycache__` directory so it doesn't have to repeatedly re-parse unchanged code."
+  },
+  {
+    "id": "py-q033",
+    "question": "What is the purpose of negative indexing in Python sequences?",
+    "answer": "It allows you to access elements from the end of a sequence, where '-1' represents the very last element.",
+    "options": [
+      "It reverses the entire sequence permanently in memory.",
+      "It generates a runtime error, as sequences can only be accessed using positive integers.",
+      "It allows you to access elements from the end of a sequence, where '-1' represents the very last element.",
+      "It deletes elements from the array without returning their values."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Negative indexing is a powerful shortcut that avoids having to calculate `len(sequence) - 1` to find the last item."
+  },
+  {
+    "id": "py-q034",
+    "question": "What is a dictionary comprehension in Python?",
+    "answer": "A concise, readable syntactic construct used to generate a new dictionary from an iterable in a single line of code.",
+    "options": [
+      "A built-in class used to strictly evaluate the depth of a nested dictionary.",
+      "A concise, readable syntactic construct used to generate a new dictionary from an iterable in a single line of code.",
+      "A memory compression algorithm used to shrink large JSON datasets.",
+      "A specific type of exception thrown when a key is missing from a dictionary."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Similar to list comprehensions, dict comprehensions use `{key: value for item in iterable}` to elegantly transform data structures."
+  },
+  {
+    "id": "py-q035",
+    "question": "What happens if you try to use a reserved keyword as a variable name in Python?",
+    "answer": "The Python interpreter will throw a SyntaxError, as keywords have special built-in meanings and cannot be redefined.",
+    "options": [
+      "The keyword is successfully overwritten but generates a Warning message.",
+      "The Python interpreter will throw a SyntaxError, as keywords have special built-in meanings and cannot be redefined.",
+      "The variable behaves identically to the keyword, merging their functionalities.",
+      "The execution stops entirely, requiring a full system restart to clear the cache."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Keywords like 'if', 'class', 'yield', and 'return' dictate the core logic structure of the language, locking them out of variable naming."
+  },
+  {
+    "id": "py-q036",
+    "question": "What does the built-in 'dir()' function do when called on an object?",
+    "answer": "It returns a list of all valid attributes and methods associated with that specific object or scope.",
+    "options": [
+      "It outputs the file directory path where the Python script is stored.",
+      "It returns a list of all valid attributes and methods associated with that specific object or scope.",
+      "It forcibly deletes the object and purges it from the global directory.",
+      "It lists all the currently active loops running inside the script."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Calling `dir()` without an argument returns variables in the local scope, while `dir(object)` attempts to list the object's properties, acting as a great debugging tool."
+  },
+  {
+    "id": "py-q037",
+    "question": "What does the 'len()' function do?",
+    "answer": "It returns the integer count of the number of items contained within an object, such as a list, string, or dictionary.",
+    "options": [
+      "It truncates a string down to a specified maximum length.",
+      "It returns the byte size of an object as allocated in RAM.",
+      "It returns the integer count of the number of items contained within an object, such as a list, string, or dictionary.",
+      "It calculates the physical length of a file in the system."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Under the hood, `len()` calls the object's `__len__()` dunder method."
+  },
+  {
+    "id": "py-q038",
+    "question": "In Python 3, what is the primary difference between '/' and '//' operators?",
+    "answer": "The '/' operator performs true floating-point division, while the '//' operator performs floor division, rounding down to the nearest integer.",
+    "options": [
+      "The '/' operator is used for integers, while the '//' operator is strictly used for floats.",
+      "The '/' operator performs true floating-point division, while the '//' operator performs floor division, rounding down to the nearest integer.",
+      "The '/' operator performs division, while the '//' operator performs exponential calculation.",
+      "There is no difference; they are alternative syntaxes for the same operation."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "For example, 5 / 2 yields 2.5, whereas 5 // 2 yields 2."
+  },
+  {
+    "id": "py-q039",
+    "question": "How do you achieve a multi-line comment in Python?",
+    "answer": "While Python does not have explicit multi-line comment syntax, developers conventionally use consecutive single-line '#' comments or unassigned triple-quoted strings (''' or \"\"\").",
+    "options": [
+      "By placing the code exclusively inside a /* and */ block.",
+      "While Python does not have explicit multi-line comment syntax, developers conventionally use consecutive single-line '#' comments or unassigned triple-quoted strings (''' or \"\"\").",
+      "By wrapping the text strictly within standard HTML comment tags.",
+      "By starting every block with the reserved 'comment' keyword."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An unassigned string literal (a string not stored in a variable) is effectively ignored by the interpreter at runtime."
+  },
+  {
+    "id": "py-q040",
+    "question": "Is indentation required in Python?",
+    "answer": "Yes, indentation is strictly required; it is used to define the boundaries of code blocks instead of relying on curly braces.",
+    "options": [
+      "No, it is merely a visual stylistic suggestion from PEP 8.",
+      "Yes, but only strictly required when writing a class; functions can use curly braces.",
+      "Yes, indentation is strictly required; it is used to define the boundaries of code blocks instead of relying on curly braces.",
+      "No, Python automatically formats unindented code upon execution."
+    ],
+    "category": "Python",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "This design choice ensures Python code remains highly readable and uniform across different developers."
+  },
+  {
+    "id": "py-q041",
+    "question": "True or False: Python is an interpreted language where code is executed line-by-line by the CPython interpreter.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. The interpreter processes Python code directly without a standalone, manual compilation phase into machine code."
+  },
+  {
+    "id": "py-q042",
+    "question": "True or False: PEP 8 is a built-in Python module for performing asynchronous network requests.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. PEP 8 is a documentation standard that provides style guidelines and best practices for formatting Python code."
+  },
+  {
+    "id": "py-q043",
+    "question": "True or False: Python manages memory automatically using a private heap space, Reference Counting, and a Cyclic Garbage Collector.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This abstracts the complexity of dynamic memory management and pointer destruction away from the developer."
+  },
+  {
+    "id": "py-q044",
+    "question": "True or False: Lists, dictionaries, and sets are considered immutable data types in Python.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Lists, dictionaries, and sets are mutable. Types like int, float, string, and tuple are immutable."
+  },
+  {
+    "id": "py-q045",
+    "question": "True or False: Lists are mutable, allowing elements to be added or modified, whereas tuples are immutable once created.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This makes tuples safer for fixed configurations and faster in terms of memory iteration."
+  },
+  {
+    "id": "py-q046",
+    "question": "True or False: In a try-except block, the 'else' block executes regardless of whether an exception occurred or not.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'else' block executes *only* if the try block completes without any exceptions. The 'finally' block is what executes regardless."
+  },
+  {
+    "id": "py-q047",
+    "question": "True or False: The 'finally' block executes regardless of whether an exception occurred or not, typically used for resource cleanup.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This ensures sensitive processes like database closures happen even if the logic crashes."
+  },
+  {
+    "id": "py-q048",
+    "question": "True or False: The '==' operator evaluates object identity in memory, while the 'is' operator evaluates value equality.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. It is the reverse: '==' evaluates value equality, and 'is' evaluates if they share the exact same object identity in memory."
+  },
+  {
+    "id": "py-q049",
+    "question": "True or False: A lambda function is an anonymous, single-expression function defined using the 'lambda' keyword.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Lambda functions are syntactically restricted to a single expression and are used for short, inline logic."
+  },
+  {
+    "id": "py-q050",
+    "question": "True or False: '*args' allows a function to accept a variable number of keyword arguments, packing them into a dictionary.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. '*args' packs positional arguments into a tuple. '**kwargs' is used to pack keyword arguments into a dictionary."
+  },
+  {
+    "id": "py-q051",
+    "question": "True or False: '**kwargs' allows a function to accept a variable number of keyword arguments, packing them into a dictionary.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This gives Python functions dynamic flexibility in handling arbitrary named parameters."
+  },
+  {
+    "id": "py-q052",
+    "question": "True or False: Decorators are built-in styling rules that format text outputs in the Python console.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Decorators are a design pattern used to modify the behavior of a function or class wrapping it without changing its source code, marked by the '@' symbol."
+  },
+  {
+    "id": "py-q053",
+    "question": "True or False: Python uses 'Pass by Object Reference', where references to objects are passed by value.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Modifying a passed mutable object affects the original, but reassigning the parameter to a new object entirely does not alter the original."
+  },
+  {
+    "id": "py-q054",
+    "question": "True or False: A Set stores elements in strict alphabetical order, while a Dictionary has no concept of order.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. A Set is an unordered collection of unique elements. It does not automatically sort data alphabetically."
+  },
+  {
+    "id": "py-q055",
+    "question": "True or False: The 'pass' keyword is a null statement that does nothing, commonly used as a placeholder to avoid SyntaxErrors.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It satisfies the strict indentation requirement for empty blocks without executing logic."
+  },
+  {
+    "id": "py-q056",
+    "question": "True or False: The 'continue' keyword entirely breaks out of the loop and stops further iterations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. The 'continue' keyword skips the rest of the current iteration and jumps to the next one. The 'break' keyword stops the loop entirely."
+  },
+  {
+    "id": "py-q057",
+    "question": "True or False: Variable Scope in Python follows the LEGB (Local, Enclosing, Global, Built-in) rule to determine accessibility.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This specific hierarchy dictates how Python resolves variable names logically."
+  },
+  {
+    "id": "py-q058",
+    "question": "True or False: Docstrings can only be read inside an IDE and are completely stripped from the program at runtime.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Docstrings are retained at runtime and can be programmatically accessed using the `__doc__` attribute or the `help()` function."
+  },
+  {
+    "id": "py-q059",
+    "question": "True or False: Arrays strictly store a collection of numeric elements of the same data type, whereas Lists can store heterogeneous data types.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. This makes arrays (from the 'array' module) more specialized and memory efficient for numeric sequences compared to standard lists."
+  },
+  {
+    "id": "py-q060",
+    "question": "True or False: A shallow copy recursively clones all nested objects, while a deep copy only clones the top-level references.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. It is the inverse. A deep copy recursively clones everything. A shallow copy only populates references to the original child objects."
+  },
+  {
+    "id": "py-q061",
+    "question": "True or False: Python's built-in 'sort()' and 'sorted()' functions utilize Tim Sort, a hybrid stable sorting algorithm.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. Tim Sort was designed specifically for Python, taking advantage of merge sort and insertion sort mechanics."
+  },
+  {
+    "id": "py-q062",
+    "question": "True or False: The 'yield' keyword completely stops the current thread to allow other threads to execute.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'yield' keyword pauses function execution and returns a generator, saving state so the function can resume execution later."
+  },
+  {
+    "id": "py-q063",
+    "question": "True or False: Python supports multiple inheritance, meaning a single child class can be derived from more than one base parent class.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Python uses the Method Resolution Order (MRO) to manage the complexities of multiple inheritance smoothly."
+  },
+  {
+    "id": "py-q064",
+    "question": "True or False: PIP stands for 'Python Interface Protocol', used strictly for database connections.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. PIP stands for 'Pip Installs Packages'. It is the official package manager for Python libraries."
+  },
+  {
+    "id": "py-q065",
+    "question": "True or False: The built-in 'zip()' function aggregates iterables element by element based on their corresponding indexes, returning an iterator of tuples.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "True. It effortlessly pairs data sequences together parallelly."
+  },
+  {
+    "id": "py-q066",
+    "question": "True or False: Pickling is the process of compiling Python files (.py) into machine code files (.pyc).",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. Pickling is the process of serializing object structures into byte streams for file saving or networking."
+  },
+  {
+    "id": "py-q067",
+    "question": "True or False: A '@classmethod' takes the class itself ('cls') as its first implicit argument rather than the instance ('self').",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "True. This permits class methods to manipulate variables that span across the class definition itself, rather than singular objects."
+  },
+  {
+    "id": "py-q068",
+    "question": "True or False: A '@staticmethod' requires the 'cls' parameter to instantiate inherited child classes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "False. A static method requires neither 'self' nor 'cls', functioning like a totally standard function boxed into a class namespace."
+  },
+  {
+    "id": "py-q069",
+    "question": "True or False: The '__init__()' method acts as the constructor method that is automatically called when a new object is instantiated.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This built-in dunder method is the first to execute upon object creation, initializing internal variables."
+  },
+  {
+    "id": "py-q070",
+    "question": "True or False: The 'self' parameter acts as an overarching superclass pointer.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. 'self' simply references the current specific instance of the class that invoked the method."
+  },
+  {
+    "id": "py-q071",
+    "question": "True or False: The correct syntax for slicing a sequence in Python is [start:stop:step].",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. This powerful bracket notation can extract subsets of lists, tuples, or strings efficiently."
+  },
+  {
+    "id": "py-q072",
+    "question": "True or False: A .py file is used for strictly object-oriented scripts, while .pyc is used for functional programming.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A .py file contains raw readable code, while a .pyc file contains compiled bytecode generated by the system interpreter."
+  },
+  {
+    "id": "py-q073",
+    "question": "True or False: Negative indexing in Python allows you to access elements from the end of a sequence, where '-1' represents the very last element.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Negative indexes reverse the sequence lookup, drastically simplifying end-of-list operations."
+  },
+  {
+    "id": "py-q074",
+    "question": "True or False: A dictionary comprehension is a built-in class used to strictly evaluate the depth of a nested dictionary.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. A dictionary comprehension is a syntactic trick used to rapidly build a dictionary from an iterable inside one line."
+  },
+  {
+    "id": "py-q075",
+    "question": "True or False: Trying to use a reserved keyword as a variable name in Python will cause the interpreter to throw a SyntaxError.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. Reserved keywords hold structural significance, preventing developers from overriding them as names."
+  },
+  {
+    "id": "py-q076",
+    "question": "True or False: The built-in 'dir()' function outputs the file directory path where the Python script is stored.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "False. The 'dir()' function enumerates and returns a list of valid attributes and methods within a scope or object."
+  },
+  {
+    "id": "py-q077",
+    "question": "True or False: The 'len()' function returns the integer count of the number of items contained within an object like a list or string.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. It safely evaluates sequence boundaries by referencing the object's `__len__()` method."
+  },
+  {
+    "id": "py-q078",
+    "question": "True or False: In Python 3, there is no difference between the '/' and '//' operators; they are alternative syntaxes for the same operation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. '/' performs true floating-point division, while '//' strictly rounds down for floor integer division."
+  },
+  {
+    "id": "py-q079",
+    "question": "True or False: Python does not have explicit multi-line comment syntax, so developers use consecutive '#' or triple-quoted strings.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "True. While ''' string literals aren't strictly comments, unassigned literals act flawlessly as multi-line documentation blocks."
+  },
+  {
+    "id": "py-q080",
+    "question": "True or False: Indentation in Python is merely a visual stylistic suggestion from PEP 8 and is not strictly required.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Python",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "False. Indentation is physically parsed by the compiler to dictate block scope entirely, replacing curly braces."
+  },
+  {
+    "id": "py-q081",
+    "question": "Python is an ______ language, meaning code is executed line-by-line by the CPython interpreter.",
+    "answer": "interpreted",
+    "options": ["compiled", "interpreted", "assembled", "asynchronous"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Because it is interpreted, Python can be rapidly executed without a manual build step."
+  },
+  {
+    "id": "py-q082",
+    "question": "______ is a document that provides style guidelines and best practices on how to format Python code.",
+    "answer": "PEP 8",
+    "options": ["PIP", "PEP 8", "PyDoc", "Lint 8"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "PEP 8 dictates things like indentation spaces, maximum line length, and blank lines to maintain readability."
+  },
+  {
+    "id": "py-q083",
+    "question": "Python manages memory automatically using a private heap space, Reference Counting, and a Cyclic ______ Collector.",
+    "answer": "Garbage",
+    "options": ["Variable", "Garbage", "Memory", "Data"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Garbage Collector detects when objects are no longer pointed to, deleting them from the heap."
+  },
+  {
+    "id": "py-q084",
+    "question": "In Python, built-in data types like int, float, string, tuple, and frozenset are considered ______.",
+    "answer": "immutable",
+    "options": ["dynamic", "mutable", "immutable", "static"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Immutable types cannot be fundamentally modified after their creation in memory."
+  },
+  {
+    "id": "py-q085",
+    "question": "Lists are mutable, allowing elements to be added or modified, whereas ______ are immutable once created.",
+    "answer": "tuples",
+    "options": ["arrays", "dictionaries", "sets", "tuples"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Tuples provide fixed datasets, often used to return multiple values from a function."
+  },
+  {
+    "id": "py-q086",
+    "question": "In a try-except block, the '______' block executes only if the try block completes successfully without any exceptions.",
+    "answer": "else",
+    "options": ["finally", "except", "else", "catch"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The else block is perfect for code that relies entirely on the 'try' execution succeeding without issues."
+  },
+  {
+    "id": "py-q087",
+    "question": "The primary purpose of the '______' block is to execute regardless of whether an exception occurred or not, typically for resource cleanup.",
+    "answer": "finally",
+    "options": ["finally", "catch", "else", "end"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Finally ensures critical cleanups, like `file.close()`, always happen safely."
+  },
+  {
+    "id": "py-q088",
+    "question": "The '==' operator evaluates value equality, while the '______' operator evaluates object identity in memory.",
+    "answer": "is",
+    "options": ["==", "===", "is", "in"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The 'is' operator checks whether both operands point to the exact same memory address."
+  },
+  {
+    "id": "py-q089",
+    "question": "An anonymous, single-expression function defined using the 'lambda' keyword is called a ______ function.",
+    "answer": "lambda",
+    "options": ["closure", "lambda", "yield", "decorator"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Lambdas are simple utility functions often embedded in `sorted()` or map operations."
+  },
+  {
+    "id": "py-q090",
+    "question": "In a function definition, ______ allows a function to accept a variable number of positional arguments, packing them into a tuple.",
+    "answer": "*args",
+    "options": ["**kwargs", "*args", "*vars", "&params"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "*args translates sequentially passed parameters into an internal tuple."
+  },
+  {
+    "id": "py-q091",
+    "question": "In a function definition, ______ allows a function to accept a variable number of keyword arguments, packing them into a dictionary.",
+    "answer": "**kwargs",
+    "options": ["**kwargs", "*args", "*params", "&&dict"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "**kwargs stores named arguments effectively creating key-value pairings within the dictionary."
+  },
+  {
+    "id": "py-q092",
+    "question": "______ are a design pattern that allows you to modify the behavior of a function without changing its source code, using the '@' symbol.",
+    "answer": "Decorators",
+    "options": ["Comprehensions", "Metaclasses", "Decorators", "Generators"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Decorators abstract pre-logic and post-logic into modular wraps."
+  },
+  {
+    "id": "py-q093",
+    "question": "Python uses 'Pass by Object ______', meaning references to objects are passed by value.",
+    "answer": "Reference",
+    "options": ["Value", "Reference", "Pointer", "Copy"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "This passing strategy enables objects to be mutated internally inside functions."
+  },
+  {
+    "id": "py-q094",
+    "question": "A Set is an unordered collection of unique elements, while a ______ is an unordered collection of key-value pairs.",
+    "answer": "Dictionary",
+    "options": ["Tuple", "List", "Dictionary", "Array"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Dictionaries hash their keys for extremely rapid lookup mapping."
+  },
+  {
+    "id": "py-q095",
+    "question": "The '______' keyword is a null statement that does nothing, commonly used as a placeholder to avoid SyntaxErrors.",
+    "answer": "pass",
+    "options": ["continue", "break", "yield", "pass"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Without the 'pass' keyword, empty blocks defined by colons would crash the interpreter."
+  },
+  {
+    "id": "py-q096",
+    "question": "The '______' keyword immediately skips the rest of the code inside the current loop iteration and jumps to the next iteration.",
+    "answer": "continue",
+    "options": ["break", "pass", "continue", "skip"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Continue prevents subsequent lines inside the block from running, quickly shifting the loop to its next cycle."
+  },
+  {
+    "id": "py-q097",
+    "question": "Variable Scope in Python follows the ______ (Local, Enclosing, Global, Built-in) rule.",
+    "answer": "LEGB",
+    "options": ["LIFO", "FIFO", "LEGB", "SOLID"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This namespace lookup resolves where a variable maps to when executed."
+  },
+  {
+    "id": "py-q098",
+    "question": "Docstrings can be accessed using the '______' attribute of the object or by passing the object to the built-in 'help()' function.",
+    "answer": "__doc__",
+    "options": ["__str__", "__repr__", "__doc__", "__info__"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This dunder variable internally tracks triple-quoted texts declared beneath class or function headers."
+  },
+  {
+    "id": "py-q099",
+    "question": "Arrays strictly store elements of the same data type, whereas ______ can store elements of various, heterogeneous data types.",
+    "answer": "Lists",
+    "options": ["Tuples", "Dictionaries", "Sets", "Lists"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Python lists function as highly dynamic general-purpose containers compared to typed C-style arrays."
+  },
+  {
+    "id": "py-q100",
+    "question": "A ______ copy constructs a new collection object and populates it with references to the child objects, rather than copying the children themselves.",
+    "answer": "shallow",
+    "options": ["deep", "nested", "shallow", "linked"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Shallow copying is rapid but poses risks of accidentally editing nested structures unintentionally."
+  },
+  {
+    "id": "py-q101",
+    "question": "Python's built-in 'sort()' and 'sorted()' functions utilize ______ Sort, a hybrid stable sorting algorithm.",
+    "answer": "Tim",
+    "options": ["Merge", "Quick", "Tim", "Bubble"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Tim Peters developed Tim Sort specifically for the standard CPython implementation."
+  },
+  {
+    "id": "py-q102",
+    "question": "The '______' keyword pauses the execution of a function and returns a generator object that can resume execution later.",
+    "answer": "yield",
+    "options": ["await", "yield", "pause", "return"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Yield guarantees state preservation, making massive object iterations possible within memory limits."
+  },
+  {
+    "id": "py-q103",
+    "question": "Python supports ______ inheritance, meaning a single child class can be derived from more than one base parent class.",
+    "answer": "multiple",
+    "options": ["single", "hierarchical", "multiple", "abstract"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Multiple inheritance merges functions from diverse parent classes into one."
+  },
+  {
+    "id": "py-q104",
+    "question": "PIP stands for 'Pip Installs ______' and is the standard package manager used to install third-party libraries in Python.",
+    "answer": "Packages",
+    "options": ["Python", "Programs", "Protocols", "Packages"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "PIP links directly to PyPI, pulling robust dependencies rapidly."
+  },
+  {
+    "id": "py-q105",
+    "question": "The built-in '______' function takes iterables, aggregates them element by element based on index, and returns an iterator of tuples.",
+    "answer": "zip()",
+    "options": ["map()", "join()", "zip()", "reduce()"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Zip merges arrays visually akin to the zippers traversing apparel."
+  },
+  {
+    "id": "py-q106",
+    "question": "______ is the process of serializing a Python object hierarchy into a byte stream so it can be saved to a file.",
+    "answer": "Pickling",
+    "options": ["Dumping", "Encoding", "Pickling", "Hashing"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "This native serialization tool makes transferring complex class objects externally possible."
+  },
+  {
+    "id": "py-q107",
+    "question": "A '@classmethod' takes the class itself, usually named '______', as its first implicit argument rather than the instance.",
+    "answer": "cls",
+    "options": ["self", "this", "cls", "obj"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Passing cls allows overriding or altering properties assigned universally across the class."
+  },
+  {
+    "id": "py-q108",
+    "question": "A '______' takes neither 'self' nor 'cls' as a first argument, meaning it behaves like a plain function in the class namespace.",
+    "answer": "@staticmethod",
+    "options": ["@classmethod", "@property", "@staticmethod", "@override"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Static methods organize helper functionality purely without needing instantiation insight."
+  },
+  {
+    "id": "py-q109",
+    "question": "The '______' method acts as the constructor method that is automatically called when a new object of that class is instantiated.",
+    "answer": "__init__()",
+    "options": ["__new__()", "__call__()", "__construct__()", "__init__()"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Init fundamentally populates instances precisely upon declaration."
+  },
+  {
+    "id": "py-q110",
+    "question": "The '______' parameter represents the specific instance of the class, allowing access to attributes and methods of that object.",
+    "answer": "self",
+    "options": ["this", "cls", "self", "var"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Self ensures internal values belong strictly to that spawned object instance."
+  },
+  {
+    "id": "py-q111",
+    "question": "The correct syntax for slicing a sequence in Python is [start:______:step].",
+    "answer": "stop",
+    "options": ["end", "stop", "limit", "finish"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Stop boundaries isolate ranges explicitly during iteration pulls."
+  },
+  {
+    "id": "py-q112",
+    "question": "A .py file contains raw source code, while a .______ file contains the compiled bytecode generated by the interpreter.",
+    "answer": "pyc",
+    "options": ["pyo", "pyc", "pyd", "pyx"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pyc compilation caches accelerate recurring application bootstrap routines."
+  },
+  {
+    "id": "py-q113",
+    "question": "Negative ______ in Python sequences allows you to access elements from the end of a sequence, starting with '-1'.",
+    "answer": "indexing",
+    "options": ["slicing", "counting", "indexing", "stepping"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Indexing negatively wraps around instantly rather than breaking out of bounds."
+  },
+  {
+    "id": "py-q114",
+    "question": "A dictionary ______ is a concise, readable syntactic construct used to generate a new dictionary from an iterable in a single line.",
+    "answer": "comprehension",
+    "options": ["mapping", "comprehension", "loop", "generator"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Comprehensions are uniquely pythonic architectures promoting elegant syntax structuring."
+  },
+  {
+    "id": "py-q115",
+    "question": "Trying to use a reserved ______ as a variable name in Python will cause the interpreter to throw a SyntaxError.",
+    "answer": "keyword",
+    "options": ["function", "method", "keyword", "primitive"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Reserved keywords guard root structural mechanics against catastrophic overwrites."
+  },
+  {
+    "id": "py-q116",
+    "question": "The built-in '______' function returns a list of all valid attributes and methods associated with a specific object.",
+    "answer": "dir()",
+    "options": ["list()", "help()", "dir()", "type()"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Dir extracts internal namespaces rapidly, granting developers visibility efficiently."
+  },
+  {
+    "id": "py-q117",
+    "question": "The '______' function returns the integer count of the number of items contained within an object.",
+    "answer": "len()",
+    "options": ["count()", "size()", "len()", "max()"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Len provides instant collection sizes reliably for structural validations."
+  },
+  {
+    "id": "py-q118",
+    "question": "The '/' operator performs true floating-point division, while the '//' operator performs ______ division.",
+    "answer": "floor",
+    "options": ["modulo", "floor", "integer", "absolute"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Floor division effectively isolates integers uniformly across negative numbers."
+  },
+  {
+    "id": "py-q119",
+    "question": "While Python lacks explicit multi-line comment syntax, developers conventionally use unassigned ______-quoted strings (''' or \"\"\").",
+    "answer": "triple",
+    "options": ["double", "single", "triple", "multi"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Triple quoted entries document large logic segments gracefully without throwing errors."
+  },
+  {
+    "id": "py-q120",
+    "question": "In Python, ______ is strictly required; it is used to define the boundaries of code blocks instead of relying on curly braces.",
+    "answer": "indentation",
+    "options": ["formatting", "indentation", "semicolons", "spacing"],
+    "category": "Python",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Indentation is an uncompromising design requirement dictating operational scope."
+  }
+]
