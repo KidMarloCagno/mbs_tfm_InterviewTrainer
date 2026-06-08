@@ -96,9 +96,25 @@ describe("POST /api/quiz/session", () => {
     expect(json).toHaveProperty("error", "Invalid session data.");
   });
 
-  it("returns 400 when results array has more than 20 items", async () => {
+  it("accepts a full 30-question configured session", async () => {
     // Arrange
-    const results = Array.from({ length: 21 }, (_, i) => ({
+    const results = Array.from({ length: 30 }, (_, i) => ({
+      questionId: `q${i}`,
+      quality: 5,
+    }));
+    const req = makeRequest({ results });
+    // Act
+    const res = await POST(req);
+    const json = await res.json();
+    // Assert
+    expect(res.status).toBe(200);
+    expect(json.saved).toBe(30);
+    expect(prisma.userProgress.upsert).toHaveBeenCalledTimes(30);
+  });
+
+  it("returns 400 when results array has more than 30 items", async () => {
+    // Arrange
+    const results = Array.from({ length: 31 }, (_, i) => ({
       questionId: `q${i}`,
       quality: 5,
     }));

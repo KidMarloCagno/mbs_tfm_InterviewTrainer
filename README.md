@@ -12,6 +12,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 - **Spaced Repetition**: SM-2 algorithm — per-user per-question progress persisted to PostgreSQL; sessions prioritise overdue reviews, then new questions, then scheduled ones automatically
 - **Remix Mode**: A cross-topic virtual session that mixes only the questions you have already studied, ordered by SM-2 priority; includes a topic selector so you can focus on a subset of your studied sets
 - **Session Configuration**: Choose question count (10 / 20 / 30) and type filter (Mixed, Multiple Choice, True/False, Fill the Blank) before every session
+- **Topic Visibility Controls**: Hide topics that are not interesting right now into Others and restore them with Add to Study when you want them back
 - **Theme Customization**: Switch between Neon and Summer themes
 - **Progress Tracking**: Track your performance across different categories
 - **Authentication**: Secure login with NextAuth.js and credential-based registration
@@ -122,6 +123,7 @@ mbs_tfm_InterviewTrainer/
 ## Main Functionalities
 
 - Topic-based quiz sessions with dynamic routing per category.
+- Dashboard topic visibility controls: hide low-priority topics into Others and restore them with Add to Study.
 - Pre-session configuration modal: choose question count (10 / 20 / 30) and type filter before starting.
 - SM-2 spaced repetition: sessions ordered as overdue → new → scheduled; progress persisted to `UserProgress` after every session.
 - **Remix mode**: cross-topic session scoped to the user's already-studied questions; configurable topic selector per session.

@@ -144,7 +144,11 @@ export default async function DashboardPage() {
         </div>
 
         <div style={{ flex: 1, minWidth: 0 }}>
-          <TopicGrid topics={topics} topicStats={topicStats} />
+          <TopicGrid
+            topics={topics}
+            topicStats={topicStats}
+            userId={session.user.id}
+          />
         </div>
       </div>
     </div>

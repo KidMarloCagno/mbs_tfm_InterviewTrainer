@@ -1035,3 +1035,111 @@ a {
   border-color: var(--primary);
   color: var(--text-primary);
 }
+
+/* ── Topic visibility controls ───────────────────────────── */
+.topic-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.topic-card-hide-button {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  text-transform: uppercase;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.topic-card-hide-button:hover {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.45);
+  color: #fca5a5;
+}
+
+.others-topics-block {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: var(--radius);
+  background: rgba(11, 14, 20, 0.45);
+  margin-top: 1.25rem;
+  padding: 1rem;
+}
+
+.others-topics-header,
+.others-topic-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.others-topics-header {
+  margin-bottom: 0.85rem;
+}
+
+.others-topics-eyebrow,
+.others-topics-count,
+.others-topic-name,
+.others-topic-description {
+  margin: 0;
+}
+
+.others-topics-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.others-topics-title {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 0.15rem 0 0;
+}
+
+.others-topics-count {
+  font-size: 0.82rem;
+}
+
+.others-topics-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.others-topic-row {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.06);
+  padding: 0.75rem;
+}
+
+.others-topic-name {
+  font-weight: 800;
+}
+
+.others-topic-description {
+  font-size: 0.84rem;
+  margin-top: 0.2rem;
+}
+
+[data-theme="summer"] .others-topics-block,
+[data-theme="summer"] .others-topic-row {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(0, 162, 173, 0.2);
+}
+
+@media (max-width: 640px) {
+  .others-topic-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
