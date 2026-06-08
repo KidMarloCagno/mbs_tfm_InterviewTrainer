@@ -90,7 +90,7 @@ export const useGameStore = create<GameSessionState>((set, get) => ({
   startSession: (questions) => {
     const mixedQuestions = get().interleaveQuestions(
       questions,
-      Math.min(10, questions.length),
+      questions.length,
     );
 
     set({

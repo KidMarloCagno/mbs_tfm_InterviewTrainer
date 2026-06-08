@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.6] - 2026-06-08
+
+### Fixed
+
+- Fixed configured session sizes larger than 10 being truncated in the client game store; sessions now keep every question returned by the API, so 20- and 30-question selections play at the requested size.
+- Preserved Remix topic filters when the quiz page requests questions from the API.
+
 ## [1.3.5] - 2026-02-22
 
 ### Fixed
