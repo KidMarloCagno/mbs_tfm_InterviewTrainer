@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.8] - 2026-06-08
+
+### Added
+
+- Added per-user dashboard topic visibility controls: topics can be hidden from the main study grid into an Others block and restored with Add to Study.
+
 ## [1.3.7] - 2026-06-08
 
 ### Fixed

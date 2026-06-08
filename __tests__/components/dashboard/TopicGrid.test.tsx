@@ -4,7 +4,8 @@
  * Strategy:
  * - Renders one card per topic in the topics array.
  * - Empty topics array renders the "No topics available" banner.
- * - Each topic card has a "Start Practice" button.
+ * - Each visible topic card has a "Start Practice" button.
+ * - Users can hide uninteresting topics into Others and restore them with Add to Study.
  * - Clicking "Start Practice" opens SessionConfigModal for that topic.
  * - The modal shows the topic description "{topic} — pick your drill settings".
  * - Clicking the modal's close button dismisses it.
@@ -12,7 +13,7 @@
  * - next/navigation is mocked because SessionConfigModal uses useRouter.
  */
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useRouter } from "next/navigation";
 import { TopicGrid } from "@/components/dashboard/TopicGrid";
@@ -42,6 +43,7 @@ const topicStats: Record<string, TypeCounts> = {
 describe("TopicGrid", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    window.localStorage.clear();
     vi.mocked(useRouter).mockReturnValue({
       push: vi.fn(),
       replace: vi.fn(),
@@ -69,6 +71,81 @@ describe("TopicGrid", () => {
     // Assert — there should be one Start Practice button per topic
     const buttons = screen.getAllByRole("button", { name: "Start Practice" });
     expect(buttons).toHaveLength(topics.length);
+  });
+
+  // ─── Topic visibility preferences ─────────────────────────────────────────
+
+  it("hides a topic from the main grid and moves it into Others", async () => {
+    // Arrange
+    const user = userEvent.setup();
+    render(
+      <TopicGrid topics={topics} topicStats={topicStats} userId="user-1" />,
+    );
+    // Act
+    await user.click(screen.getByRole("button", { name: "Hide JavaScript" }));
+    // Assert
+    expect(
+      screen.getAllByRole("button", { name: "Start Practice" }),
+    ).toHaveLength(topics.length - 1);
+    expect(screen.getByRole("heading", { name: "Others" })).toBeInTheDocument();
+    const others = screen.getByRole("region", { name: "Others" });
+    expect(within(others).getByText("JavaScript")).toBeInTheDocument();
+    expect(
+      within(others).getByRole("button", { name: "Add to Study" }),
+    ).toBeInTheDocument();
+  });
+
+  it('restores a hidden topic to the main grid when "Add to Study" is clicked', async () => {
+    // Arrange
+    const user = userEvent.setup();
+    render(
+      <TopicGrid topics={topics} topicStats={topicStats} userId="user-1" />,
+    );
+    await user.click(screen.getByRole("button", { name: "Hide JavaScript" }));
+    expect(screen.getByRole("heading", { name: "Others" })).toBeInTheDocument();
+    // Act
+    await user.click(screen.getByRole("button", { name: "Add to Study" }));
+    // Assert
+    expect(
+      screen.getAllByRole("button", { name: "Start Practice" }),
+    ).toHaveLength(topics.length);
+    expect(
+      screen.queryByRole("heading", { name: "Others" }),
+    ).not.toBeInTheDocument();
+  });
+
+  it("loads hidden topics from user-scoped local storage", async () => {
+    // Arrange
+    window.localStorage.setItem(
+      "quizview:hidden-topics:user-1",
+      JSON.stringify(["Python"]),
+    );
+    // Act
+    render(
+      <TopicGrid topics={topics} topicStats={topicStats} userId="user-1" />,
+    );
+    // Assert
+    await waitFor(() => {
+      expect(
+        screen.getAllByRole("button", { name: "Start Practice" }),
+      ).toHaveLength(topics.length - 1);
+    });
+    const others = screen.getByRole("region", { name: "Others" });
+    expect(within(others).getByText("Python")).toBeInTheDocument();
+  });
+
+  it("persists hidden topics using a per-user storage key", async () => {
+    // Arrange
+    const user = userEvent.setup();
+    render(
+      <TopicGrid topics={topics} topicStats={topicStats} userId="user-1" />,
+    );
+    // Act
+    await user.click(screen.getByRole("button", { name: "Hide Docker" }));
+    // Assert
+    expect(window.localStorage.getItem("quizview:hidden-topics:user-1")).toBe(
+      JSON.stringify(["Docker"]),
+    );
   });
 
   // ─── Empty state ──────────────────────────────────────────────────────────
