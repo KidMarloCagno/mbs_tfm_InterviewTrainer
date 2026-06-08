@@ -21,7 +21,7 @@ const sessionSchema = z.object({
       }),
     )
     .min(1)
-    .max(20),
+    .max(30),
 });
 
 interface ScheduledItem {
