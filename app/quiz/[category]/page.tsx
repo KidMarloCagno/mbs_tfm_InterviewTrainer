@@ -23,6 +23,7 @@ export default function QuizPage() {
   // Session config from modal (forwarded as query params)
   const count = searchParams?.get("count") ?? "10";
   const type = searchParams?.get("type") ?? "mixed";
+  const topics = searchParams?.get("topics") ?? "";
 
   const [loading, setLoading] = useState(true);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(
@@ -48,6 +49,9 @@ export default function QuizPage() {
     setLoading(true);
     resetSession();
     const qs = new URLSearchParams({ count, type });
+    if (topics) {
+      qs.set("topics", topics);
+    }
     fetch(
       `/api/quiz/questions/${encodeURIComponent(categoryName)}?${qs.toString()}`,
     )
@@ -59,7 +63,7 @@ export default function QuizPage() {
         startSession([]);
       })
       .finally(() => setLoading(false));
-  }, [categoryName, count, type, resetSession, startSession]);
+  }, [categoryName, count, type, topics, resetSession, startSession]);
 
   // Persist session results to the DB via SM-2 once the session is done.
   // savingProgress blocks the "Back to Topics" button until the write commits,
