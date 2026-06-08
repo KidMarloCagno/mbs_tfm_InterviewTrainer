@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.7] - 2026-06-08
+
+### Fixed
+
+- Fixed completed 30-question topic sessions being rejected by `POST /api/quiz/session`, which prevented newly studied topics from being added to Remix after finishing the session.
+
 ## [1.3.6] - 2026-06-08
 
 ### Fixed
