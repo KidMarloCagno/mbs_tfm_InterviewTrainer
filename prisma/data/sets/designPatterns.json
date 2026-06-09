@@ -1,0 +1,317 @@
+[
+  {
+    "id": "designpatterns-q001",
+    "question": "Which design pattern provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created?",
+    "answer": "Factory Method",
+    "options": ["Abstract Factory", "Builder", "Factory Method", "Prototype"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "According to Refactoring.Guru, the Factory Method pattern defines an interface for creating an object but lets subclasses decide which class to instantiate."
+  },
+  {
+    "id": "designpatterns-q002",
+    "question": "What is the primary architectural purpose of the Abstract Factory pattern?",
+    "answer": "To produce families of related or dependent objects without specifying their concrete classes",
+    "options": [
+      "To break down a complex object assembly process into independent sequential steps",
+      "To produce families of related or dependent objects without specifying their concrete classes",
+      "To duplicate existing objects through dynamic runtime memory cloning routines",
+      "To guarantee that an application class initializes only one global instance entry point"
+    ],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Abstract Factory provides an interface for creating families of related products without tying the client code to concrete product classes."
+  },
+  {
+    "id": "designpatterns-q003",
+    "question": "Which creational pattern is explicitly designed to construct complex objects step-by-step, allowing the same construction code to produce different representations?",
+    "answer": "Builder",
+    "options": ["Prototype", "Builder", "Singleton", "Factory Method"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Builder pattern extracts the object construction code out of its own class and moves it to separate objects called builders, allowing step-by-step assembly."
+  },
+  {
+    "id": "designpatterns-q004",
+    "question": "Which pattern lets you copy existing objects without making your code dependent on their explicit concrete classes?",
+    "answer": "Prototype",
+    "options": ["Adapter", "Flyweight", "Memento", "Prototype"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Prototype pattern delegates the cloning process to the actual objects that are being cloned, exposing a standard interface to duplicate instances."
+  },
+  {
+    "id": "designpatterns-q005",
+    "question": "What structural pattern acts as a wrapper that allows objects with incompatible interfaces to collaborate seamlessly?",
+    "answer": "Adapter",
+    "options": ["Bridge", "Adapter", "Facade", "Proxy"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An Adapter converts the interface of one object so that another object can understand it, wrapping it to catch and translate incoming calls."
+  },
+  {
+    "id": "designpatterns-q006",
+    "question": "Which design pattern focuses on splitting a massive class or a set of closely related classes into two separate hierarchies—Abstraction and Implementation—which can be developed independently?",
+    "answer": "Bridge",
+    "options": ["Composite", "Decorator", "Bridge", "Flyweight"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Bridge switches from inheritance to object composition, separating a structural abstraction from its low-level implementation logic."
+  },
+  {
+    "id": "designpatterns-q007",
+    "question": "Which structural pattern lets you compose objects into tree structures and work with these structures as if they were individual objects?",
+    "answer": "Composite",
+    "options": ["Facade", "Composite", "Proxy", "Adapter"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Composite pattern is ideal when the core model can be represented as a tree, allowing clients to treat leaves and containers uniformly."
+  },
+  {
+    "id": "designpatterns-q008",
+    "question": "Which design pattern is also referred to as the 'Wrapper' pattern and dynamically attaches new behaviors to objects by placing them inside special target wrappers?",
+    "answer": "Decorator",
+    "options": ["Proxy", "Adapter", "Facade", "Decorator"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Decorator pattern shares the same interface as the wrapped target object, allowing multiple decorators to layer additional operations on top of each other."
+  },
+  {
+    "id": "designpatterns-q009",
+    "question": "What is the primary responsibility of a Facade pattern?",
+    "answer": "To provide a simplified, singular interface to a complex library, framework, or subsystem of classes",
+    "options": [
+      "To intercept incoming system calls and cache structural database query operations",
+      "To manage a step-by-step object composition pipeline for user interface clients",
+      "To provide a simplified, singular interface to a complex library, framework, or subsystem of classes",
+      "To break down behavioral algorithmic routines into variable subclass steps"
+    ],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A Facade provides a simple entry point to a complex subsystem, unburdening clients from managing numerous internal dependencies directly."
+  },
+  {
+    "id": "designpatterns-q010",
+    "question": "Which structural pattern reduces RAM usage by sharing common parts of state among multiple fine-grained objects instead of keeping duplicate data in each instance?",
+    "answer": "Flyweight",
+    "options": ["Prototype", "Flyweight", "Composite", "Bridge"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Flyweight splits an object's state into intrinsic (constant, shared state) and extrinsic (contextual, unique state) to minimize memory footprints."
+  },
+  {
+    "id": "designpatterns-q011",
+    "question": "Which pattern provides a substitute or placeholder object to manage or control access to an underlying original target object?",
+    "answer": "Proxy",
+    "options": ["Facade", "Adapter", "Decorator", "Proxy"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A Proxy controls access to the original object, allowing you to perform operations before or after the request reaches the actual target (e.g., lazy loading, logging, access control)."
+  },
+  {
+    "id": "designpatterns-q012",
+    "question": "Which behavioral pattern sets up a sequential chain of handlers, passing an execution request along the line until a component processes it?",
+    "answer": "Chain of Responsibility",
+    "options": ["Command", "Chain of Responsibility", "Mediator", "State"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Chain of Responsibility links handlers sequentially. Upon receiving a request, each handler decides either to process it or pass it to the next link in the chain."
+  },
+  {
+    "id": "designpatterns-q013",
+    "question": "Which pattern encapsulates a request or action into a standalone object, enabling parameters passing, request queuing, and undoable operations?",
+    "answer": "Command",
+    "options": ["Strategy", "Observer", "Command", "Memento"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Command pattern converts an operation into a discrete object, turning requests into distinct entities that decouple callers from receivers."
+  },
+  {
+    "id": "designpatterns-q014",
+    "question": "Which design pattern provides a standardized way to traverse the elements of a collection without exposing its underlying internal data structures?",
+    "answer": "Iterator",
+    "options": [
+      "Visitor",
+      "Iterator",
+      "Template Method",
+      "Chain of Responsibility"
+    ],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Iterator pattern abstracts collection traversal, allowing various traversal algorithms to execute over data structures uniformly without revealing their internals."
+  },
+  {
+    "id": "designpatterns-q015",
+    "question": "Which behavioral pattern restricts direct communication between objects, forcing them to collaborate exclusively through a centralized controller component?",
+    "answer": "Mediator",
+    "options": ["Facade", "Observer", "Mediator", "Strategy"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Mediator pattern intercepts direct dependencies between classes, compelling them to route communications through a central hub to decrease systemic coupling."
+  },
+  {
+    "id": "designpatterns-q016",
+    "question": "Which pattern lets you capture and externalize an object's internal state without violating encapsulation, allowing the object to be restored to this state later?",
+    "answer": "Memento",
+    "options": ["Prototype", "Memento", "State", "Command"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Memento delegates state snapshot generation to the owner object (the Originator), keeping the snapshot contents opaque to external objects."
+  },
+  {
+    "id": "designpatterns-q017",
+    "question": "Which design pattern establishes a subscription model to notify multiple observer objects automatically about any changes or events occurring in the subject they are listening to?",
+    "answer": "Observer",
+    "options": ["Mediator", "Visitor", "Strategy", "Observer"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Observer defines a one-to-many dependency relationship, allowing a single observable publisher to broadcast state updates to numerous subscriber components."
+  },
+  {
+    "id": "designpatterns-q018",
+    "question": "Which pattern allows an object to alter its behavioral routines dynamically whenever its internal conditional state shifts, making it appear as if the object modified its class type?",
+    "answer": "State",
+    "options": ["Strategy", "State", "Command", "Template Method"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The State pattern encapsulates state-specific behaviors within separate classes, enabling a context object to swap its active state reference at runtime."
+  },
+  {
+    "id": "designpatterns-q019",
+    "question": "Which design pattern defines a family of interchangeable algorithms, encapsulates each one into an independent class, and allows them to be swapped dynamically at runtime?",
+    "answer": "Strategy",
+    "options": ["Template Method", "State", "Strategy", "Command"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Strategy utilizes composition over inheritance, allowing an executing context to accept varied strategic algorithm implementations interchangeably."
+  },
+  {
+    "id": "designpatterns-q020",
+    "question": "Which behavioral pattern outlines the overall skeletal structure of an algorithm in a base class method while allowing subclasses to override specific steps without modifying the overarching structural workflow?",
+    "answer": "Template Method",
+    "options": ["Strategy", "Factory Method", "Bridge", "Template Method"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Template Method uses class inheritance to break an algorithm into steps, allowing subclasses to redefine concrete parts while preserving the core algorithmic pipeline."
+  },
+  {
+    "id": "designpatterns-q021",
+    "question": "Which design pattern enables developers to add new operational behaviors to an existing group of objects without altering the actual structures or classes of those objects?",
+    "answer": "Visitor",
+    "options": ["Decorator", "Visitor", "Strategy", "Composite"],
+    "category": "Design Patterns",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Visitor pattern utilizes a double-dispatch mechanism to execute operations across a collection of elements without modifying their source code."
+  },
+  {
+    "id": "designpatterns-q022",
+    "question": "True or False: Design patterns are complete, concrete code blocks that a developer can copy-paste directly into an application to resolve an architectural problem.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Design patterns are not explicit blueprints; they are abstract conceptual models or templates that must be adapted to resolve specific project circumstances."
+  },
+  {
+    "id": "designpatterns-q023",
+    "question": "True or False: The Singleton design pattern resolves two problems at once: ensuring a class has only one instance and providing a global access point to that instance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Refactoring.Guru highlights that Singleton tackles both access and structural uniqueness, though it often violates the Single Responsibility Principle as a result."
+  },
+  {
+    "id": "designpatterns-q024",
+    "question": "True or False: A key conceptual difference between a Facade and a Proxy is that a Proxy manages the lifecycle of its service object, whereas a Facade rarely does.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "A Proxy mirrors the precise structural interface of its backend service object to control access, whereas a Facade streamlines a broad subsystem with a completely new, simplified interface."
+  },
+  {
+    "id": "designpatterns-q025",
+    "question": "True or False: The Strategy pattern is heavily rooted in class inheritance, forcing developers to override method blocks inside concrete child subclasses.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Strategy relies on object composition. It extracts the algorithms into standalone objects and delegates execution, whereas Template Method relies on class-level inheritance."
+  },
+  {
+    "id": "designpatterns-q026",
+    "question": "True or False: Idioms are the most complex, high-level, framework-agnostic architectural design patterns used across entire enterprise cloud systems.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Idioms are low-level patterns specific to a single programming language (e.g., the 'defer' keyword pattern in Go or 'RAII' in C++)."
+  },
+  {
+    "id": "designpatterns-q027",
+    "question": "True or False: In the Observer pattern, the subject (publisher) typically has a direct, hard-coded dependency on the specific concrete classes of its subscribers.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The publisher communicates exclusively via a generic subscriber interface, decoupling it completely from concrete observer class implementations."
+  },
+  {
+    "id": "designpatterns-q028",
+    "question": "True or False: The Flyweight pattern stores extrinsic state inside the flyweight object itself, keeping it constant and shared across all instances.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Intrinsic state is constant and stays inside the flyweight object. Extrinsic state changes depending on context and must be stored externally or passed in at runtime."
+  },
+  {
+    "id": "designpatterns-q029",
+    "question": "True or False: The Decorator and Composite patterns often share similar structural class UML relationships because both rely on recursive object composition.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "A Decorator looks like a single-child Composite, but a Decorator adds responsibilities to a wrapped target, while a Composite aggregates results down an entire structural tree node."
+  },
+  {
+    "id": "designpatterns-q030",
+    "question": "True or False: The Memento pattern allows an application to perform a multi-level 'Undo' operation by maintaining a historical stack of state snapshots.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Design Patterns",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "By storing an array or stack of historical Memento snapshots, a caretaker object can iteratively revert an originator component back to prior configurations."
+  }
+]

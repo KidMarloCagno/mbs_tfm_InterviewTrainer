@@ -1,0 +1,952 @@
+[
+  {
+    "id": "git-q001",
+    "question": "What is Git primarily used for?",
+    "answer": "Distributed version control",
+    "options": [
+      "Distributed version control",
+      "Deploying applications to the cloud",
+      "Writing and executing unit tests",
+      "Containerizing software environments"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Git is a distributed version control system that tracks changes in source code and enables multiple developers to collaborate without overwriting each other's work."
+  },
+  {
+    "id": "git-q002",
+    "question": "Which command initializes a new Git repository?",
+    "answer": "git init",
+    "options": ["git start", "git init", "git create", "git new"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git init' command creates a new hidden .git directory in your project folder, which houses all the necessary metadata and object database for the new repository."
+  },
+  {
+    "id": "git-q003",
+    "question": "How do you copy an existing remote repository to your local machine?",
+    "answer": "git clone",
+    "options": ["git copy", "git pull", "git clone", "git fetch"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git clone' command creates a local copy of a remote repository, automatically setting up the remote connection and checking out the default branch."
+  },
+  {
+    "id": "git-q004",
+    "question": "What is the purpose of the `git add` command?",
+    "answer": "To move changes from the working directory to the staging area",
+    "options": [
+      "To move changes from the working directory to the staging area",
+      "To permanently save changes to the local repository database",
+      "To upload changes directly to the remote repository",
+      "To create a new branch and add files to it"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git add' command updates the index (staging area) with the current content found in the working tree, preparing it for the next commit."
+  },
+  {
+    "id": "git-q005",
+    "question": "Which command permanently records a snapshot of the staging area?",
+    "answer": "git commit",
+    "options": ["git push", "git save", "git log", "git commit"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git commit' command captures the state of the staged changes and stores them safely as a permanent snapshot in the local repository."
+  },
+  {
+    "id": "git-q006",
+    "question": "How do you check the current state of tracked and untracked files?",
+    "answer": "git status",
+    "options": ["git check", "git state", "git status", "git diff"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git status' command displays the state of the working directory and the staging area, showing which changes have been staged, which haven't, and which files aren't being tracked."
+  },
+  {
+    "id": "git-q007",
+    "question": "Which command uploads your local repository content to a remote repository?",
+    "answer": "git push",
+    "options": ["git upload", "git push", "git send", "git commit"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git push' command is used to upload local repository content (commits) to a remote repository, updating the remote refs with local ones."
+  },
+  {
+    "id": "git-q008",
+    "question": "What does `git pull` effectively do under the hood?",
+    "answer": "It runs git fetch followed by git merge",
+    "options": [
+      "It runs git fetch followed by git merge",
+      "It runs git download followed by git apply",
+      "It runs git fetch followed by git commit",
+      "It runs git update followed by git rebase"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git pull' command is a shortcut that first fetches the latest changes from the remote repository and then immediately merges them into the current local branch."
+  },
+  {
+    "id": "git-q009",
+    "question": "Which command downloads commits, files, and refs from a remote repository into your local repo without merging them?",
+    "answer": "git fetch",
+    "options": ["git pull", "git fetch", "git sync", "git update"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git fetch' command downloads changes from the remote but does not modify your working directory, allowing you to review changes before merging."
+  },
+  {
+    "id": "git-q010",
+    "question": "How do you list all local branches in your repository?",
+    "answer": "git branch",
+    "options": [
+      "git show-branches",
+      "git list",
+      "git branch",
+      "git log --branches"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Running 'git branch' without any additional arguments will list all local branches in your repository and place an asterisk next to the currently active branch."
+  },
+  {
+    "id": "git-q011",
+    "question": "Which command is explicitly designed to switch from one branch to another?",
+    "answer": "git switch",
+    "options": ["git switch", "git branch -s", "git move", "git change"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Introduced in Git 2.23, 'git switch' is specifically designed to change branches, making the behavior clearer than the overloaded 'git checkout' command."
+  },
+  {
+    "id": "git-q012",
+    "question": "What does the `git merge` command do?",
+    "answer": "It integrates changes from another branch into the current working branch",
+    "options": [
+      "It deletes branches that are no longer needed",
+      "It pushes all branches to the remote repository",
+      "It renames a branch and combines its history",
+      "It integrates changes from another branch into the current working branch"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git merge' command takes the independent lines of development created by 'git branch' and integrates them into a single branch."
+  },
+  {
+    "id": "git-q013",
+    "question": "Which command shows the chronological commit history of a repository?",
+    "answer": "git log",
+    "options": ["git history", "git log", "git commits", "git timeline"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git log' command outputs a chronological list of commits made to a repository, including details like the commit hash, author, date, and message."
+  },
+  {
+    "id": "git-q014",
+    "question": "How can you view the specific line-by-line differences between your working directory and the staging area?",
+    "answer": "git diff",
+    "options": ["git status -v", "git show", "git log -p", "git diff"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git diff' command shows the differences between your working tree and the index (staging area), highlighting exactly what lines were added or removed."
+  },
+  {
+    "id": "git-q015",
+    "question": "What is the purpose of the `.gitignore` file?",
+    "answer": "To specify files and directories that Git should intentionally not track",
+    "options": [
+      "To automatically delete sensitive files from the remote server",
+      "To specify files and directories that Git should intentionally not track",
+      "To encrypt files so only authorized users can read them",
+      "To list files that should be deleted when running git clean"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A .gitignore file contains a list of patterns specifying untracked files that Git should completely ignore, such as build artifacts or local configuration files."
+  },
+  {
+    "id": "git-q016",
+    "question": "In Git, what are the three main states that a file can reside in?",
+    "answer": "Modified, Staged, and Committed",
+    "options": [
+      "Local, Remote, and Distributed",
+      "Pushed, Pulled, and Merged",
+      "Modified, Staged, and Committed",
+      "Tracked, Ignored, and Deleted"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Files in Git transition through three main states: modified (changed locally but not saved), staged (marked to go into the next commit), and committed (safely stored in the local database)."
+  },
+  {
+    "id": "git-q017",
+    "question": "Which command stops tracking a file and removes it from the working directory?",
+    "answer": "git rm",
+    "options": ["git delete", "git rm", "git remove", "git drop"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git rm' command removes files from both the Git index (staging area) and the local working directory."
+  },
+  {
+    "id": "git-q018",
+    "question": "How do you temporarily save uncommitted local changes without creating a formal commit?",
+    "answer": "git stash",
+    "options": ["git cache", "git hide", "git stash", "git pause"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git stash' command takes your modified tracked files and staged changes, saves them on a stack of unfinished changes, and leaves you with a clean working directory."
+  },
+  {
+    "id": "git-q019",
+    "question": "Which command manages connections to other repositories?",
+    "answer": "git remote",
+    "options": ["git connect", "git network", "git origin", "git remote"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git remote' command lets you create, view, and delete connections to other repositories, usually hosted on platforms like GitHub or GitLab."
+  },
+  {
+    "id": "git-q020",
+    "question": "What does the HEAD pointer represent in Git?",
+    "answer": "A reference to the currently checked-out commit or branch",
+    "options": [
+      "The latest commit on the remote server",
+      "A reference to the currently checked-out commit or branch",
+      "The oldest initial commit of the project",
+      "A pointer to the main developer's branch"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "In Git, HEAD is a special pointer that indicates the currently active branch or commit, effectively marking your current location in the repository's history."
+  },
+  {
+    "id": "git-q021",
+    "question": "Which command undoes local changes to the state of a specific previous commit by moving the branch pointer?",
+    "answer": "git reset",
+    "options": ["git revert", "git reset", "git undo", "git rewind"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The 'git reset' command alters the commit history by moving the branch pointer backwards. Depending on the flag used (--soft, --mixed, --hard), it can also modify the staging area and working directory."
+  },
+  {
+    "id": "git-q022",
+    "question": "How do you safely undo a public commit by creating a new commit with the opposite changes?",
+    "answer": "git revert",
+    "options": ["git undo", "git reset", "git revert", "git delete"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The 'git revert' command safely undoes a past commit by generating a brand new commit that inversely applies the changes, which is safe for shared public history."
+  },
+  {
+    "id": "git-q023",
+    "question": "What does it mean to be in a 'detached HEAD' state?",
+    "answer": "HEAD points directly to a specific commit hash rather than a branch reference",
+    "options": [
+      "Your local repository has completely disconnected from the remote",
+      "HEAD points directly to a specific commit hash rather than a branch reference",
+      "You have deleted the master branch",
+      "Your commit history is corrupt and unrecoverable"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A detached HEAD occurs when you check out a specific commit rather than a branch. Any new commits made in this state won't belong to any branch."
+  },
+  {
+    "id": "git-q024",
+    "question": "Which command integrates changes from one branch into another by reapplying them linearly?",
+    "answer": "git rebase",
+    "options": ["git merge", "git linearize", "git rebase", "git squash"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The 'git rebase' command takes the commits from your current branch and reapplies them sequentially on top of another base branch, creating a clean, linear history."
+  },
+  {
+    "id": "git-q025",
+    "question": "When does a merge conflict occur in Git?",
+    "answer": "When two branches have modified the exact same part of a file differently",
+    "options": [
+      "When you try to merge a branch that has no new commits",
+      "When the remote server goes offline during a git pull",
+      "When two branches have modified the exact same part of a file differently",
+      "When you forget to use the git add command before merging"
+    ],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Git can usually merge code automatically. However, if two branches change the same lines of a file, Git cannot decide which version to keep and flags a merge conflict requiring manual resolution."
+  },
+  {
+    "id": "git-q026",
+    "question": "Which command is used to set your author name and email address?",
+    "answer": "git config",
+    "options": ["git setup", "git auth", "git config", "git credentials"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'git config' command is used to get and set configuration variables that control all facets of how Git looks and operates, including user.name and user.email."
+  },
+  {
+    "id": "git-q027",
+    "question": "What is the standard flag used to add a commit message directly via the command line?",
+    "answer": "-m",
+    "options": ["-msg", "-m", "--text", "-c"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Adding the '-m' flag to 'git commit' allows you to pass the commit message directly in the terminal, bypassing the need to open a text editor."
+  },
+  {
+    "id": "git-q028",
+    "question": "How do you create a static pointer to a specific release point in history?",
+    "answer": "git tag",
+    "options": ["git label", "git mark", "git release", "git tag"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'git tag' command creates a reference to a specific point in Git history, most commonly used to capture points like specific version releases (e.g., v1.0.0)."
+  },
+  {
+    "id": "git-q029",
+    "question": "What is the default conventional name given to the primary remote repository?",
+    "answer": "origin",
+    "options": ["master", "main", "origin", "upstream"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "When you clone a repository, Git automatically adds that remote repository under the default alias 'origin'."
+  },
+  {
+    "id": "git-q030",
+    "question": "What type of cryptographic hash function does Git use to identify commits?",
+    "answer": "SHA-1",
+    "options": ["MD5", "SHA-256", "SHA-1", "bcrypt"],
+    "category": "Git Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Git traditionally relies on the SHA-1 hash function to generate a 40-character string that uniquely identifies every commit and object in the database."
+  },
+  {
+    "id": "git-q031",
+    "question": "True or False: Git is primarily a centralized version control system.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Git is a distributed version control system, meaning every developer has a full, independent copy of the entire repository history locally."
+  },
+  {
+    "id": "git-q032",
+    "question": "True or False: The `git init` command creates a new `.git` subdirectory in your current folder.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Running git init creates a hidden .git folder where all version control metadata and internal Git objects are stored."
+  },
+  {
+    "id": "git-q033",
+    "question": "True or False: You must use `git init` before you can use `git clone`.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "git clone automatically initializes a new repository (runs git init implicitly) before downloading the remote files."
+  },
+  {
+    "id": "git-q034",
+    "question": "True or False: The `git add` command automatically uploads your files to a remote server.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "git add only moves changes from your local working directory into your local staging area. To upload, you need to commit and then push."
+  },
+  {
+    "id": "git-q035",
+    "question": "True or False: Running `git commit` without any flags opens the default text editor to enter a message.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "If the -m flag is omitted, Git launches your environment's default text editor (like Vim or Nano) so you can draft a detailed commit message."
+  },
+  {
+    "id": "git-q036",
+    "question": "True or False: `git status` displays the commit history of the repository.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "git status shows the state of the working directory and staging area. You use git log to see the commit history."
+  },
+  {
+    "id": "git-q037",
+    "question": "True or False: `git push` downloads the latest changes from the remote repository.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "git push uploads your local commits to the remote server. To download changes, you use git fetch or git pull."
+  },
+  {
+    "id": "git-q038",
+    "question": "True or False: `git pull` is a combination of `git fetch` and `git merge`.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Executing git pull automatically fetches the latest data from the remote and immediately attempts to merge it into your active branch."
+  },
+  {
+    "id": "git-q039",
+    "question": "True or False: `git fetch` automatically merges remote changes into your local current branch.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "git fetch is a safe command that downloads remote objects without modifying your working directory. You must explicitly merge them afterward."
+  },
+  {
+    "id": "git-q040",
+    "question": "True or False: Running `git branch` with no arguments lists your local branches and highlights the current one.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "By default, git branch outputs all local branches, placing an asterisk and usually coloring the name of the branch you are currently on."
+  },
+  {
+    "id": "git-q041",
+    "question": "True or False: `git switch` is an older command that has been completely deprecated in favor of `git checkout`.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "It is the opposite; git switch is a newer command introduced in Git 2.23 specifically to separate branch-switching logic from the heavily overloaded git checkout command."
+  },
+  {
+    "id": "git-q042",
+    "question": "True or False: A fast-forward merge creates a new distinct merge commit object.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "In a fast-forward merge, Git simply moves the branch pointer forward in a linear path without creating a new merge commit, unless explicitly forced with --no-ff."
+  },
+  {
+    "id": "git-q043",
+    "question": "True or False: `git log` can be used to view the commit history.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "git log outputs the sequence of commits made to the repository, which helps track changes, dates, authors, and commit messages."
+  },
+  {
+    "id": "git-q044",
+    "question": "True or False: `git diff` shows the differences between your staging area and the last commit by default.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "By default, git diff shows the changes between the working directory and the staging area. To see staged changes vs the last commit, you use git diff --staged."
+  },
+  {
+    "id": "git-q045",
+    "question": "True or False: Adding a file to `.gitignore` will automatically delete it from the repository if it is already tracked.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "If a file is already being tracked by Git, adding it to .gitignore has no effect. You must untrack it first using git rm --cached."
+  },
+  {
+    "id": "git-q046",
+    "question": "True or False: The three main states in Git are Modified, Staged, and Committed.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "These correspond to the three main sections of a Git project: the working tree (modified), the index (staged), and the Git directory (committed)."
+  },
+  {
+    "id": "git-q047",
+    "question": "True or False: `git rm --cached` removes a file from the staging area but keeps it in your local working directory.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The --cached flag tells Git to stop tracking the file (remove it from the index) but leaves the physical file untouched on your hard drive."
+  },
+  {
+    "id": "git-q048",
+    "question": "True or False: Stashed changes are automatically pushed to the remote repository when you run `git push`.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Stashes are strictly local to your machine and repository instance. They are never pushed or sent to remote servers."
+  },
+  {
+    "id": "git-q049",
+    "question": "True or False: A Git repository can only have one single remote associated with it.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "A local Git repository can connect to multiple remotes. It is common in open source to have 'origin' (your fork) and 'upstream' (the main project)."
+  },
+  {
+    "id": "git-q050",
+    "question": "True or False: The HEAD pointer usually points to the currently checked-out branch.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Normally, HEAD is a symbolic reference to the branch you are currently on. As you make new commits, the branch pointer moves, and HEAD moves with it."
+  },
+  {
+    "id": "git-q051",
+    "question": "True or False: `git reset --hard` safely undoes commits without modifying your working directory files.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "The --hard flag is destructive. It resets the branch pointer, the staging area, AND forcefully modifies your working directory to match the target commit, discarding uncommitted work."
+  },
+  {
+    "id": "git-q052",
+    "question": "True or False: `git revert` creates a brand new commit that negates the changes of a specified previous commit.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Unlike reset, revert does not delete history. It moves history forward by appending a new commit that exactly mirrors and cancels out the changes of the target commit."
+  },
+  {
+    "id": "git-q053",
+    "question": "True or False: A 'detached HEAD' state means your repository is corrupted and must be re-cloned.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Detached HEAD is a normal state occurring when you check out a specific commit hash or tag rather than a branch. You can return to normal by checking out an existing branch."
+  },
+  {
+    "id": "git-q054",
+    "question": "True or False: `git rebase` rewrites the project history by creating brand new commits for each original commit.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Rebase unplugs your branch's commits and replays them on a new base. Because the base changes, Git generates entirely new commit hashes for the replayed changes."
+  },
+  {
+    "id": "git-q055",
+    "question": "True or False: Git will always automatically resolve merge conflicts without requiring human intervention.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "While Git handles most merges gracefully, if two branches modify the exact same lines of code differently, Git requires a human to manually resolve the resulting conflict."
+  },
+  {
+    "id": "git-q056",
+    "question": "True or False: Global Git configurations are stored in the `.git/config` file within your specific project folder.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Global configurations (applied with --global) are stored in the user's home directory (e.g., ~/.gitconfig). Project-specific configurations are in `.git/config`."
+  },
+  {
+    "id": "git-q057",
+    "question": "True or False: The `-m` flag in `git commit -m` stands for 'message'.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The -m flag allows the user to immediately provide the commit message inline, speeding up the commit process by bypassing the text editor."
+  },
+  {
+    "id": "git-q058",
+    "question": "True or False: Git tags are typically used to mark specific release versions, like v1.0.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Tags are static pointers that don't move as new commits are added, making them ideal for creating permanent milestones like software releases."
+  },
+  {
+    "id": "git-q059",
+    "question": "True or False: 'master' or 'main' is the default name for the remote repository connection.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "'master' and 'main' are common names for branches. The default standard name for the remote repository connection itself is 'origin'."
+  },
+  {
+    "id": "git-q060",
+    "question": "True or False: Git uses SHA-1 to generate a 40-character hexadecimal string to identify objects.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Git Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Git relies heavily on the SHA-1 algorithm to securely hash and identify blobs, trees, commits, and tags within its internal database."
+  },
+  {
+    "id": "git-q061",
+    "question": "Git is a ______ version control system, meaning every developer has a full copy of the repository.",
+    "answer": "distributed",
+    "options": ["centralized", "distributed", "linear", "monolithic"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "In a distributed system, clones aren't just checked-out snapshots; they fully mirror the entire repository history locally."
+  },
+  {
+    "id": "git-q062",
+    "question": "To start tracking a project with Git, you must first run `git ______` inside the project directory.",
+    "answer": "init",
+    "options": ["start", "create", "init", "run"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The init command establishes the .git directory framework required to turn a normal directory into a repository."
+  },
+  {
+    "id": "git-q063",
+    "question": "The `git ______` command downloads an entire remote repository to your local machine.",
+    "answer": "clone",
+    "options": ["clone", "pull", "copy", "mirror"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Clone is the command used to grab a repository from a server and set it up seamlessly for local development."
+  },
+  {
+    "id": "git-q064",
+    "question": "Files must be moved to the ______ area using `git add` before they can be committed.",
+    "answer": "staging",
+    "options": ["saving", "staging", "production", "buffer"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The staging area (or index) is an intermediate layer where you format and review a commit before making it permanent."
+  },
+  {
+    "id": "git-q065",
+    "question": "A `git ______` represents a permanent snapshot of your project at a specific point in time.",
+    "answer": "commit",
+    "options": ["push", "branch", "commit", "diff"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A commit stores the complete state of the directory structure and files, accompanied by an author timestamp and descriptive message."
+  },
+  {
+    "id": "git-q066",
+    "question": "To see which files are currently tracked, untracked, or staged, use `git ______`.",
+    "answer": "status",
+    "options": ["log", "status", "show", "info"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The status command is highly utilized to understand the immediate context and differences between the working tree and the staging area."
+  },
+  {
+    "id": "git-q067",
+    "question": "To upload your locally committed changes to GitHub, you use the `git ______` command.",
+    "answer": "push",
+    "options": ["send", "upload", "push", "sync"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Push takes local commits that a remote branch does not have and updates the remote repository to match."
+  },
+  {
+    "id": "git-q068",
+    "question": "Running `git ______` is equivalent to fetching the latest changes and immediately merging them.",
+    "answer": "pull",
+    "options": ["update", "pull", "sync", "fetch-merge"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pull is a convenient composite command, integrating remote changes directly into your active working branch."
+  },
+  {
+    "id": "git-q069",
+    "question": "The `git ______` command downloads new data from a remote repository, but does not alter your working files.",
+    "answer": "fetch",
+    "options": ["fetch", "pull", "clone", "download"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Fetch updates local copies of remote-tracking branches, allowing you to manually inspect changes before executing a merge."
+  },
+  {
+    "id": "git-q070",
+    "question": "A ______ in Git represents an independent line of development, allowing you to work without affecting the main codebase.",
+    "answer": "branch",
+    "options": ["tag", "fork", "commit", "branch"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Branches allow developers to diverge from the main line of development, work on features, and merge back seamlessly."
+  },
+  {
+    "id": "git-q071",
+    "question": "To switch between different branches, you can use the `git ______` command.",
+    "answer": "switch",
+    "options": ["move", "switch", "jump", "change"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Git switch was introduced specifically to handle changing branches safely, reducing confusion with the old checkout command."
+  },
+  {
+    "id": "git-q072",
+    "question": "The process of joining two different branches together into one is called a ______.",
+    "answer": "merge",
+    "options": ["rebase", "join", "merge", "bind"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Merging creates a special commit that has two parents, combining the histories of both branches."
+  },
+  {
+    "id": "git-q073",
+    "question": "You can review the entire history of commits for a repository by typing `git ______`.",
+    "answer": "log",
+    "options": ["history", "log", "commits", "journal"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The log command shows the commit timeline, which is essential for understanding project evolution and finding previous changes."
+  },
+  {
+    "id": "git-q074",
+    "question": "To see exactly what lines of code have changed in a file before staging it, run `git ______`.",
+    "answer": "diff",
+    "options": ["compare", "diff", "changes", "show"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Diff shows the exact line-level differences, highlighting removed lines in red and added lines in green."
+  },
+  {
+    "id": "git-q075",
+    "question": "The `______` file is used to tell Git which files or directories it should completely ignore.",
+    "answer": ".gitignore",
+    "options": [".gitconfig", ".gitmodules", ".gitignore", ".githidden"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The .gitignore file ensures that compiled code, secrets, and system files aren't accidentally tracked and committed."
+  },
+  {
+    "id": "git-q076",
+    "question": "A file in Git is considered ______ if it has been safely stored in the local database.",
+    "answer": "committed",
+    "options": ["staged", "committed", "pushed", "modified"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Committed files are securely preserved in the repository history as snapshots."
+  },
+  {
+    "id": "git-q077",
+    "question": "The `git ______` command is used to simultaneously delete a file from the disk and the Git index.",
+    "answer": "rm",
+    "options": ["rm", "delete", "trash", "clear"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Git rm handles the deletion and automatically stages the file removal for the next commit."
+  },
+  {
+    "id": "git-q078",
+    "question": "If you are in the middle of working on a feature but need to switch branches quickly, you can use `git ______` to shelve your incomplete work.",
+    "answer": "stash",
+    "options": ["save", "hide", "stash", "hold"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Stashing temporarily shelves changes so you can clean your working directory and switch contexts without losing progress."
+  },
+  {
+    "id": "git-q079",
+    "question": "A ______ is a reference to a version of your repository hosted on a network or the internet.",
+    "answer": "remote",
+    "options": ["cloud", "server", "remote", "node"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Remotes are versions of your project hosted elsewhere, enabling team collaboration through push and pull operations."
+  },
+  {
+    "id": "git-q080",
+    "question": "The ______ pointer is a special reference in Git that indicates the currently checked out commit or branch.",
+    "answer": "HEAD",
+    "options": ["MAIN", "HEAD", "ROOT", "TOP"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "HEAD acts like a cursor, letting Git know where you are presently located within the commit graph."
+  },
+  {
+    "id": "git-q081",
+    "question": "The `git ______` command moves the current branch pointer backward to a previous commit, potentially discarding changes.",
+    "answer": "reset",
+    "options": ["reset", "revert", "restore", "rewind"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Reset alters history directly by changing where the branch pointer sits, which can be dangerous if the commits were already pushed."
+  },
+  {
+    "id": "git-q082",
+    "question": "Unlike resetting, the `git ______` command creates a completely new commit that reverses the effects of a past commit.",
+    "answer": "revert",
+    "options": ["revert", "undo", "rollback", "reset"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Revert is the safest way to undo pushed commits, as it maintains the linear history rather than erasing it."
+  },
+  {
+    "id": "git-q083",
+    "question": "If you check out a specific commit hash instead of a branch name, you enter a ______ HEAD state.",
+    "answer": "detached",
+    "options": ["floating", "broken", "detached", "severed"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "In a detached HEAD state, your HEAD pointer references a commit hash directly, so new commits will not update any branch reference."
+  },
+  {
+    "id": "git-q084",
+    "question": "Instead of merging, you can use `git ______` to take a series of commits and re-apply them directly on top of another branch.",
+    "answer": "rebase",
+    "options": ["transplant", "cherry-pick", "rebase", "stack"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Rebasing creates a clean, linear project history by migrating branch commits to a new starting point."
+  },
+  {
+    "id": "git-q085",
+    "question": "When Git cannot automatically resolve differences during a merge, it results in a merge ______.",
+    "answer": "conflict",
+    "options": ["error", "fault", "collision", "conflict"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Conflicts must be resolved manually by a developer before the merge process can be successfully completed."
+  },
+  {
+    "id": "git-q086",
+    "question": "You use the `git ______` command to define author credentials like your username and email.",
+    "answer": "config",
+    "options": ["setup", "config", "profile", "auth"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Config allows you to set local and global variables that dictate Git's operational behavior and identity stamps."
+  },
+  {
+    "id": "git-q087",
+    "question": "The `-m` option is passed to `git commit` so you can inline a commit ______.",
+    "answer": "message",
+    "options": ["macro", "merge", "message", "metadata"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A message is required for every commit to provide context and intent for the snapshot being saved."
+  },
+  {
+    "id": "git-q088",
+    "question": "A ______ is primarily used to mark specific milestones like v1.0 or v2.5.",
+    "answer": "tag",
+    "options": ["bookmark", "pin", "label", "tag"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Tags are immovable pointers often used to memorialize software releases inside the Git history."
+  },
+  {
+    "id": "git-q089",
+    "question": "By default, when you clone a repository, Git automatically names the remote server `______`.",
+    "answer": "origin",
+    "options": ["master", "upstream", "main", "origin"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Origin is standard convention; it's a shorthand alias for the URL you originally cloned the project from."
+  },
+  {
+    "id": "git-q090",
+    "question": "Git relies on the ______ hashing algorithm to generate unique 40-character identifiers for commits.",
+    "answer": "SHA-1",
+    "options": ["MD5", "SHA-256", "SHA-1", "AES"],
+    "category": "Git Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "SHA-1 generates cryptographic checksums ensuring data integrity and providing unique identifiers for every object in Git."
+  }
+]
