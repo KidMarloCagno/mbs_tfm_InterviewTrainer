@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "kf-q001",
+    "question": "What is the primary role of a Broker in an Apache Kafka architecture?",
+    "answer": "To receive, store, and serve messages to clients",
+    "options": [
+      "To receive, store, and serve messages to clients",
+      "To execute real-time stream transformation logic",
+      "To manage schema definitions for message serialization",
+      "To route traffic exclusively between producers and zookeeper"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A Kafka broker is a single server instance responsible for hosting data partitions, receiving incoming messages from producers, persisting them to disk, and serving data to consumers."
+  },
+  {
+    "id": "kf-q002",
+    "question": "In Apache Kafka, what abstraction represents a logical stream of messages to which producers publish data?",
+    "answer": "Topic",
+    "options": ["Topic", "Queue", "Exchange", "Channel"],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A Topic is the core structural category or feed name used to isolate and organize records in Kafka, allowing multiple producers and consumers to interact with the same stream."
+  },
+  {
+    "id": "kf-q003",
+    "question": "How does Apache Kafka achieve parallel processing and horizontal scalability within a single Topic?",
+    "answer": "By splitting the topic into multiple partitions distributed across brokers",
+    "options": [
+      "By splitting the topic into multiple partitions distributed across brokers",
+      "By copying the entire topic file onto every consumer instance",
+      "By utilizing multithreading algorithms inside a single log file",
+      "By dynamic payload compression handled natively by ZooKeeper"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Partitions split a topic's log into multiple segments across brokers, allowing concurrent writes and reads, which directly drives Kafka's scale and throughput limits."
+  },
+  {
+    "id": "kf-q004",
+    "question": "What immutable, sequentially assigned identification number uniquely marks each message record within a specific Kafka partition?",
+    "answer": "Offset",
+    "options": ["Offset", "SequenceId", "Timestamp", "MessageKey"],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "An offset is a monotonically increasing integer identifier assigned by the broker to each record as it arrives in a partition, serving as the definitive sequential marker."
+  },
+  {
+    "id": "kf-q005",
+    "question": "What is the consequence of Kafka's immutable commit log design regarding message consumption?",
+    "answer": "Reading a message does not delete it from the log, allowing reprocessing",
+    "options": [
+      "Reading a message does not delete it from the log, allowing reprocessing",
+      "Messages are instantly purged from memory once retrieved by a consumer",
+      "Consumers are locked out of a partition if another consumer group starts reading",
+      "Data payload structures can be modified in-place by the consumer group"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Because Kafka writes data to an append-only, immutable disk log, message consumption is non-destructive, meaning records persist based on retention policies rather than reader status."
+  },
+  {
+    "id": "kf-q006",
+    "question": "Which component in an event-driven architecture is explicitly responsible for determining which partition a message goes to?",
+    "answer": "The Producer",
+    "options": [
+      "The Producer",
+      "The Broker",
+      "The Consumer",
+      "The Coordinator"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Producer application contains the partitioning strategy (hashing, round-robin, or custom logic) that dictates which specific partition target receives the record."
+  },
+  {
+    "id": "kf-q007",
+    "question": "What happens by default if a producer publishes messages with the exact same non-null record key to a Kafka topic?",
+    "answer": "All those messages are routed to the exact same partition",
+    "options": [
+      "All those messages are routed to the exact same partition",
+      "The broker rejects the duplicate keys and throws an exception",
+      "Kafka dynamically distributes them across all active brokers to maintain balance",
+      "The subsequent messages overwrite the initial record in-place"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka's default partitioner uses a hash of the message key to map it to a specific partition, guaranteeing that records sharing a key maintain strict ordering within that partition."
+  },
+  {
+    "id": "kf-q008",
+    "question": "What group configuration concept allows multiple consumer instances to cooperate and divide the workload of reading from a topic?",
+    "answer": "Consumer Group",
+    "options": [
+      "Consumer Group",
+      "Cluster Node",
+      "Partition Pool",
+      "Subscriber Registry"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A Consumer Group coordinates a pool of consumers where each partition in a subscribed topic is assigned to exactly one member instance of the group, enabling parallel extraction."
+  },
+  {
+    "id": "kf-q009",
+    "question": "If a Consumer Group has 5 member instances and subscribes to a topic with exactly 3 partitions, how many consumers will remain completely idle?",
+    "answer": "2",
+    "options": ["0", "2", "3", "5"],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "To avoid race conditions and guarantee order, Kafka restricts each partition to a maximum of one consumer per group. Surplus consumers stay idle as hot standby instances."
+  },
+  {
+    "id": "kf-q010",
+    "question": "What mechanism does Kafka use to track which messages a specific Consumer Group has successfully processed?",
+    "answer": "Committing offsets to an internal Kafka topic named __consumer_offsets",
+    "options": [
+      "Committing offsets to an internal Kafka topic named __consumer_offsets",
+      "Deleting records physically from disk logs immediately after read receipt",
+      "Updating database indexes dynamically inside the local Zookeeper quorum",
+      "Sending confirmation ACK packets back to the original producing application"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka tracks consumer progress by writing current offset positions into a specialized, internal compacted topic called __consumer_offsets."
+  },
+  {
+    "id": "kf-q011",
+    "question": "What event triggers within a Consumer Group when a member instance fails, leaves, or a new partition is added to a topic?",
+    "answer": "Rebalance",
+    "options": ["Rebalance", "Compaction", "Failover", "Resegmentation"],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A rebalance occurs when the group coordinator redistributes partition assignments among the surviving or newly scaled members of a consumer group."
+  },
+  {
+    "id": "kf-q012",
+    "question": "What role does the 'Leader' partition replica perform compared to 'Follower' replicas in a Kafka cluster?",
+    "answer": "It handles all producer write requests and consumer read requests exclusively by default",
+    "options": [
+      "It handles all producer write requests and consumer read requests exclusively by default",
+      "It coordinates cluster node configuration changes inside the raft consensus",
+      "It balances load by handling only write data while followers handle all reads",
+      "It aggregates metrics from downstream external consumer platforms"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "By default, the leader replica manages all network read/write operations for a partition, while follower replicas sync data passively to provide fault tolerance."
+  },
+  {
+    "id": "kf-q013",
+    "question": "What does the term 'In-Sync Replicas' (ISR) represent in Apache Kafka?",
+    "answer": "The set of partition replicas that are actively keeping up with the leader's data log",
+    "options": [
+      "The set of partition replicas that are actively keeping up with the leader's data log",
+      "The active connections currently established between a broker and its producers",
+      "The network buffers used to synchronize consumer offsets across discrete regions",
+      "The total collection of all active brokers running inside a local data cluster"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The ISR list includes the partition leader and any followers that have caught up within the configured timeout window, ensuring safe backup copies exist."
+  },
+  {
+    "id": "kf-q014",
+    "question": "Setting a producer's 'acks' configuration parameter to 'all' guarantees what behavior?",
+    "answer": "The leader will wait for acknowledgment from all In-Sync Replicas before confirming success",
+    "options": [
+      "The leader will wait for acknowledgment from all In-Sync Replicas before confirming success",
+      "The message will be broadcast to every active consumer group instantly",
+      "The record is simultaneously written to both memory buffers and local disk storage",
+      "The cluster leader ignores any future duplicate message transmissions matching the key"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Using acks=all (or acks=-1) ensures maximum durability because the leader blocks confirmation until the full ISR set records the message."
+  },
+  {
+    "id": "kf-q015",
+    "question": "What core characteristic makes Apache Kafka an event-streaming platform rather than a traditional message broker like RabbitMQ?",
+    "answer": "Logs are inherently persistent, replayable, and designed as a unified commit log",
+    "options": [
+      "Logs are inherently persistent, replayable, and designed as a unified commit log",
+      "It guarantees absolute, global message order across all discrete topics",
+      "It uses synchronous push routing to deliver data directly to network endpoints",
+      "It relies strictly on short-lived transient memory structures for speed"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Traditional message queues delete messages upon acknowledgment. Kafka is built as a durable, distributed append-only log, allowing consumers to rewind and replay historical data streams."
+  },
+  {
+    "id": "kf-q016",
+    "question": "What is the primary difference between Kafka's KRaft mode and legacy Kafka deployments?",
+    "answer": "KRaft removes the external dependency on Apache ZooKeeper for cluster metadata management",
+    "options": [
+      "KRaft removes the external dependency on Apache ZooKeeper for cluster metadata management",
+      "KRaft changes the underlying data format from binary payload byte arrays to JSON structures",
+      "KRaft enables automatic payload translation between AMQP and Kafka protocols",
+      "KRaft forces all consumers to pull data synchronously rather than asynchronously"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "KRaft (Kafka Raft metadata mode) handles consensus and cluster coordination natively within Kafka itself, eliminating the operational complexity of managing ZooKeeper nodes."
+  },
+  {
+    "id": "kf-q017",
+    "question": "What cleanup policy can be enabled to retain only the most recent message value for each unique key within a Kafka partition log?",
+    "answer": "Log Compaction",
+    "options": [
+      "Log Compaction",
+      "Segment Eviction",
+      "Key Pruning",
+      "Index Truncation"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Log Compaction guarantees that Kafka keeps at least the last known message value for each key within a topic partition log, optimization suited for state restoring."
+  },
+  {
+    "id": "kf-q018",
+    "question": "In an asynchronous, event-driven framework, how does Kafka deliver messages from brokers to consumers?",
+    "answer": "Consumers pull data batches from brokers using long-polling loops",
+    "options": [
+      "Consumers pull data batches from brokers using long-polling loops",
+      "Brokers push individual records to consumers via active RPC connections",
+      "ZooKeeper broadcasts message events directly to registered application sockets",
+      "Producers must alert consumers directly via an external HTTP webhook request"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka implements a pull-based model where consumer applications poll brokers for batches of data, letting consumers control their consumption rate according to their processing capacity."
+  },
+  {
+    "id": "kf-q019",
+    "question": "What architectural problem can occur if a consumer instance takes longer to process a batch of messages than the configured max.poll.interval.ms threshold?",
+    "answer": "The coordinator assumes the consumer is dead and triggers a rebalance",
+    "options": [
+      "The coordinator assumes the consumer is dead and triggers a rebalance",
+      "The broker automatically purges those unacknowledged messages from the log",
+      "The consumer application memory is cleared and restarts the JVM node",
+      "The producer blocks any subsequent messages to that partition globally"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If the message processing loop exceeds max.poll.interval.ms, Kafka assumes the consumer has hung or died, prompting the broker to evict it and reassign its partitions."
+  },
+  {
+    "id": "kf-q020",
+    "question": "What is the scope of message ordering guarantees provided by Apache Kafka out of the box?",
+    "answer": "Ordering is strictly guaranteed only within an individual partition",
+    "options": [
+      "Ordering is strictly guaranteed only within an individual partition",
+      "Ordering is guaranteed globally across all distinct topics in a cluster",
+      "Ordering is maintained at the consumer group level regardless of partition assignment",
+      "Ordering is guaranteed only if no data replication configurations are enabled"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka guarantees total ordering of records sequentially inside a single partition. It does not provide ordering guarantees across different partitions of a topic."
+  },
+  {
+    "id": "kf-q021",
+    "question": "Which parameter controls the minimum number of identical replicas that must successfully acknowledge a write transaction when a producer uses acks=all?",
+    "answer": "min.insync.replicas",
+    "options": [
+      "min.insync.replicas",
+      "replica.fetch.max.bytes",
+      "replication.factor",
+      "acks.minimum.count"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The min.insync.replicas property defines how many replicas must be online and matching for an acks=all write to succeed, protecting the system against split-brain scenarios."
+  },
+  {
+    "id": "kf-q022",
+    "question": "What delivery guarantee is achieved when a consumer reads messages, processes them, saves data to a database, and finally commits offsets to Kafka?",
+    "answer": "At-Least-Once Delivery",
+    "options": [
+      "At-Least-Once Delivery",
+      "At-Most-Once Delivery",
+      "Exactly-Once Delivery",
+      "Zero-Loss Delivery"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "If processing completes but the application crashes before saving the offset to Kafka, the new consumer will re-read the data, ensuring at-least-once delivery."
+  },
+  {
+    "id": "kf-q023",
+    "question": "What delivery guarantee is achieved when a consumer commits message offsets immediately upon retrieval, prior to processing the payload logic?",
+    "answer": "At-Most-Once Delivery",
+    "options": [
+      "At-Least-Once Delivery",
+      "At-Most-Once Delivery",
+      "Exactly-Once Delivery",
+      "Non-Guaranteed Delivery"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Committing offsets early means that if a crash occurs during processing, the messages won't be replayed, potentially leading to data loss but avoiding duplicates (at-most-once)."
+  },
+  {
+    "id": "kf-q024",
+    "question": "What component is used in Kafka ecosystems to ensure producers and consumers use uniform schemas without sending full structural definitions in each payload?",
+    "answer": "Schema Registry",
+    "options": [
+      "Schema Registry",
+      "Metadata Coordinator",
+      "Avro Serializer",
+      "Cluster Catalog"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "An external Schema Registry stores schema definitions, allowing components to exchange a lean schema ID rather than embedding full, repetitive metadata in each payload."
+  },
+  {
+    "id": "kf-q025",
+    "question": "What performance optimization technique allows Kafka to send multiple records together over the network rather than one by one?",
+    "answer": "Batching",
+    "options": ["Batching", "Compacting", "Streaming", "Multiplexing"],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Batching combines multiple records into a single network payload based on size or time limits, reducing network overhead and increasing throughput."
+  },
+  {
+    "id": "kf-q026",
+    "question": "What is the underlying storage structure used by a Kafka partition broker on a local disk filesystem?",
+    "answer": "An append-only log file split into segments",
+    "options": [
+      "An append-only log file split into segments",
+      "A relational relational database table structure",
+      "An encrypted high-speed key-value memory map",
+      "A distributed object storage directory of JSON arrays"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Kafka partitions are written as sequential, append-only log files broken into manageable segments, which allows for fast, sequential disk I/O operations."
+  },
+  {
+    "id": "kf-q027",
+    "question": "What property dictates how long a message record remains retrievable inside a Kafka partition before it is deleted by the broker clean task?",
+    "answer": "log.retention.hours",
+    "options": [
+      "log.retention.hours",
+      "message.max.bytes",
+      "session.timeout.ms",
+      "offset.expiry.days"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Retention parameters like log.retention.hours (or log.retention.bytes) tell Kafka how long or how large logs can grow before historical data segments are dropped."
+  },
+  {
+    "id": "kf-q028",
+    "question": "Which term describes a consumer lag scenario in an asynchronous messaging architecture?",
+    "answer": "The difference between the latest offset written by producers and the current offset read by consumers",
+    "options": [
+      "The difference between the latest offset written by producers and the current offset read by consumers",
+      "The network latency time delay between active follower nodes and the primary partition leader",
+      "The processing time overhead required to serialize an object payload into a byte array",
+      "The total duration a consumer spends waiting during an active cluster rebalance phase"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Consumer lag measures how far behind a consumer group is relative to the newest available data in a topic partition, serving as a critical operational health metric."
+  },
+  {
+    "id": "kf-q029",
+    "question": "What behavior is triggered if a producer sends a record to a cluster where the specified topic does not exist, and auto.create.topics.enable is turned true?",
+    "answer": "The cluster creates the topic automatically using default configurations",
+    "options": [
+      "The cluster creates the topic automatically using default configurations",
+      "The producer app crashes immediately with an UnknownTopicOrPartitionException",
+      "The message payload is discarded silently without sending an ACK alert",
+      "The broker holds the connection open until an administrator configures the topic manually"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "When auto-creation is enabled, Kafka automatically builds a new topic with the cluster's default partition count and replication factor upon receiving the first write attempt."
+  },
+  {
+    "id": "kf-q030",
+    "question": "What low-level operating system technology does Kafka leverage to copy data from the disk cache straight to the network socket, bypassing application space?",
+    "answer": "Zero-Copy",
+    "options": [
+      "Zero-Copy",
+      "Memory Mapping",
+      "Direct Memory Access",
+      "Virtual Buffering"
+    ],
+    "category": "Kafka Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Kafka uses the OS Zero-Copy transfer capability via the sendfile API, shifting data straight from the page cache to the network socket to eliminate memory copying overhead."
+  },
+  {
+    "id": "kf-q031",
+    "question": "True or False: The primary role of a Broker in an Apache Kafka architecture is to execute real-time stream transformation logic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The primary role of a broker is to receive, store, and serve messages. Stream transformation logic is handled by client applications or specialized libraries like Kafka Streams."
+  },
+  {
+    "id": "kf-q032",
+    "question": "True or False: In Apache Kafka, what abstraction represents a logical stream of messages to which producers publish data is a Topic.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Topics serve as the fundamental organizational structure for categorization, acting as named streams where producers publish data logs."
+  },
+  {
+    "id": "kf-q033",
+    "question": "True or False: Apache Kafka achieves parallel processing and horizontal scalability within a single Topic by copying the entire topic file onto every consumer instance.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Kafka achieves scale by splitting a topic into discrete, separate partitions that are distributed across different brokers in the cluster."
+  },
+  {
+    "id": "kf-q034",
+    "question": "True or False: An immutable, sequentially assigned identification number that uniquely marks each message record within a specific Kafka partition is an Offset.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Offsets act as local sequential positions inside a partition, tracking message ordering and allowing consumers to log progress accurately."
+  },
+  {
+    "id": "kf-q035",
+    "question": "True or False: The consequence of Kafka's immutable commit log design regarding message consumption is that reading a message automatically deletes it from the log.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Reading data is completely non-destructive in Kafka; records remain safely stored on disk to allow reprocessing until retention limits are met."
+  },
+  {
+    "id": "kf-q036",
+    "question": "True or False: The component in an event-driven architecture explicitly responsible for determining which partition a message goes to is the Producer.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The producer client contains the internal partitioner configuration that dictates the target partition destination before sending data packets."
+  },
+  {
+    "id": "kf-q037",
+    "question": "True or False: If a producer publishes messages with the exact same non-null record key to a Kafka topic, the broker rejects the duplicate keys and throws an exception.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Messages sharing the same key are successfully routed to the exact same partition by the hashing mechanism, which preserves strict key-level order."
+  },
+  {
+    "id": "kf-q038",
+    "question": "True or False: The group configuration concept that allows multiple consumer instances to cooperate and divide the workload of reading from a topic is a Consumer Group.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Consumer groups isolate horizontal tracking scopes, splitting the topic partitions smoothly across multiple coordinated application threads."
+  },
+  {
+    "id": "kf-q039",
+    "question": "True or False: If a Consumer Group has 5 member instances and subscribes to a topic with exactly 3 partitions, 2 consumers will remain completely idle.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Because a single partition cannot be read by multiple consumers in the same group at once, surplus consumer instances act as idle standby workers."
+  },
+  {
+    "id": "kf-q040",
+    "question": "True or False: The mechanism Kafka uses to track consumer group progress is deleting records physically from disk logs immediately after read receipt.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Kafka tracks consumer progress by writing current index positions into an internal metadata storage topic named __consumer_offsets."
+  },
+  {
+    "id": "kf-q041",
+    "question": "True or False: The event triggered within a Consumer Group when a member instance fails, leaves, or a new partition is added to a topic is a Rebalance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Rebalances dynamically re-map partition assignments across current group members to ensure processing continues uninterrupted."
+  },
+  {
+    "id": "kf-q042",
+    "question": "True or False: The 'Leader' partition replica handles all producer write requests and consumer read requests exclusively by default.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "By default, the partition leader serves as the central network entry point for client reads and writes, while followers synchronize passively."
+  },
+  {
+    "id": "kf-q043",
+    "question": "True or False: The term 'In-Sync Replicas' (ISR) represents the active connections currently established between a broker and its producers.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "The ISR is the group of partition replicas (leader and followers) that are actively up-to-date with the leader's commit log history."
+  },
+  {
+    "id": "kf-q044",
+    "question": "True or False: Setting a producer's 'acks' configuration parameter to 'all' guarantees that the leader will wait for acknowledgment from all In-Sync Replicas before confirming success.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Using acks=all guarantees data durability by blocking success confirmations until the data is written to all active replicas in the ISR set."
+  },
+  {
+    "id": "kf-q045",
+    "question": "True or False: The core characteristic that makes Apache Kafka an event-streaming platform rather than a traditional message broker is that it guarantees absolute, global message order across all distinct topics.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Kafka's distinct feature is its durable, replayable commit log. It does not provide global order across all topics, only sequential ordering inside individual partitions."
+  },
+  {
+    "id": "kf-q046",
+    "question": "True or False: KRaft mode removes the external dependency on Apache ZooKeeper for cluster metadata management.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "KRaft shifts cluster consensus inside Kafka using a built-in Raft protocol layer, simplifying architecture by removing the need for an external ZooKeeper ensemble."
+  },
+  {
+    "id": "kf-q047",
+    "question": "True or False: The cleanup policy that can be enabled to retain only the most recent message value for each unique key within a Kafka partition log is Log Compaction.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Log compaction trims the log history by purging stale records for a key while preserving its latest state change record."
+  },
+  {
+    "id": "kf-q048",
+    "question": "True or False: In an asynchronous, event-driven framework, Kafka delivers messages by having brokers push individual records to consumers via active RPC connections.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Kafka uses a pull-based strategy where consumers issue polling loops to fetch batches of records from brokers at their own pace."
+  },
+  {
+    "id": "kf-q049",
+    "question": "True or False: If a consumer instance takes longer to process a batch of messages than the max.poll.interval.ms threshold, the coordinator assumes the consumer is dead and triggers a rebalance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Exceeding the poll interval threshold tells the group coordinator that processing has stalled, prompting it to evict the consumer and reallocate its partitions."
+  },
+  {
+    "id": "kf-q050",
+    "question": "True or False: The scope of message ordering guarantees provided by Apache Kafka out of the box is that ordering is guaranteed globally across all distinct topics in a cluster.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Kafka's ordering guarantee is restricted to the partition level. Records distributed across different partitions have no deterministic processing sequence order."
+  },
+  {
+    "id": "kf-q051",
+    "question": "True or False: The parameter min.insync.replicas controls the minimum number of identical replicas that must successfully acknowledge a write transaction when a producer uses acks=all.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "This parameter sets a baseline threshold for the number of matching replicas required to satisfy an all-acknowledgment write request."
+  },
+  {
+    "id": "kf-q052",
+    "question": "True or False: At-Least-Once Delivery is achieved when a consumer commits message offsets immediately upon retrieval, prior to processing the payload logic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Committing offsets before processing yields at-most-once delivery, because an intermediate application crash will result in skipped records when the consumer restarts."
+  },
+  {
+    "id": "kf-q053",
+    "question": "True or False: At-Most-Once Delivery is achieved when a consumer commits message offsets immediately upon retrieval, prior to processing the payload logic.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Because offsets move forward before processing completes, any crash during execution prevents reprocessing of those in-flight records."
+  },
+  {
+    "id": "kf-q054",
+    "question": "True or False: The component used in Kafka ecosystems to ensure producers and consumers use uniform schemas without sending full structural definitions in each payload is Schema Registry.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Schema Registry decouples metadata transmission by storing common schemas centrally and passing small identification tokens instead."
+  },
+  {
+    "id": "kf-q055",
+    "question": "True or False: The performance optimization technique that allows Kafka to send multiple records together over the network rather than one by one is Batching.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Batching groups individual events into combined network frames, which improves performance and throughput across I/O channels."
+  },
+  {
+    "id": "kf-q056",
+    "question": "True or False: The underlying storage structure used by a Kafka partition broker on a local disk filesystem is a relational database table structure.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Kafka relies on sequential append-only flat log files split into segments on disk, avoiding the overhead of complex relational database engines."
+  },
+  {
+    "id": "kf-q057",
+    "question": "True or False: The property log.retention.hours dictates how long a message record remains retrievable inside a Kafka partition before it is deleted by the broker clean task.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "This setting sets a temporal baseline for log lifecycle management, discarding aged log segments once the time limit expires."
+  },
+  {
+    "id": "kf-q058",
+    "question": "True or False: Consumer lag describes the network latency time delay between active follower nodes and the primary partition leader.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Consumer lag tracks how far a consumer's processed offset position falls behind the maximum available write offset in a partition log."
+  },
+  {
+    "id": "kf-q059",
+    "question": "True or False: If a producer sends a record to a cluster where the specified topic does not exist, and auto.create.topics.enable is turned true, the cluster creates the topic automatically using default configurations.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Dynamic auto-creation lets Kafka instantiate missing stream profiles instantly on demand using predefined system cluster properties."
+  },
+  {
+    "id": "kf-q060",
+    "question": "True or False: Zero-Copy is the low-level operating system technology that Kafka leverages to copy data from the disk cache straight to the network socket, bypassing application space.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Kafka Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Zero-Copy reduces CPU overhead by copying data straight from kernel page space to network resources, boosting data transfer speeds."
+  },
+  {
+    "id": "kf-q061",
+    "question": "The core server unit responsible for receiving, writing, and hosting topic streams inside a Kafka network cluster is called a **Broker**.",
+    "answer": "Broker",
+    "options": ["Broker", "Exchange", "Worker", "Channel"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Kafka brokers form the storage backbone layer of the event-driven system architecture, persisting logs to disk and serving data downstream."
+  },
+  {
+    "id": "kf-q062",
+    "question": "An abstract, named stream bucket configuration holding organized logical categories of events in Kafka is termed a **Topic**.",
+    "answer": "Topic",
+    "options": ["Queue", "Topic", "Segment", "Cluster"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Topics serve as standard operational endpoints where developers organize domain events into isolated data categories."
+  },
+  {
+    "id": "kf-q063",
+    "question": "To achieve data parallel scaling limits, a single Kafka topic stream is divided structurally into multiple **partitions**.",
+    "answer": "partitions",
+    "options": ["segments", "clusters", "partitions", "indexes"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Partitions spread the storage and processing load across multiple cluster nodes, enabling concurrent reading and writing."
+  },
+  {
+    "id": "kf-q064",
+    "question": "Each event message written inside an individual partition layout is tracked by a unique sequential index integer called an **offset**.",
+    "answer": "offset",
+    "options": ["offset", "uuid", "timestamp", "pointer"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "An offset uniquely identifies a message's position within a partition, serving as a progress marker for consumers."
+  },
+  {
+    "id": "kf-q065",
+    "question": "Because Kafka writes messages to an **immutable commit log**, reading an event record does not cause its structural erasure.",
+    "answer": "immutable commit log",
+    "options": [
+      "ephemeral RAM buffer",
+      "immutable commit log",
+      "relational database system",
+      "volatile virtual directory"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Kafka's append-only design treats data logs as historical records, decoupling consumer reading activity from data retention policies."
+  },
+  {
+    "id": "kf-q066",
+    "question": "The component application responsible for calculating and designating partition destinations for records is the **Producer**.",
+    "answer": "Producer",
+    "options": ["Broker", "Consumer", "Producer", "Coordinator"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Producers contain the application logic and partitioning algorithms used to distribute incoming messages across topic partitions."
+  },
+  {
+    "id": "kf-q067",
+    "question": "Messages sharing a matching, identical **non-null key** will always land together sequentially inside the exact same partition target.",
+    "answer": "non-null key",
+    "options": [
+      "non-null key",
+      "payload size",
+      "schema profile",
+      "timestamp flag"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Hashing the message key ensures that all related events are routed to the same partition, preserving chronological ordering for that key."
+  },
+  {
+    "id": "kf-q068",
+    "question": "A logical team collection combining multiple application readers to share processing duties is a **Consumer Group**.",
+    "answer": "Consumer Group",
+    "options": [
+      "Worker Ensemble",
+      "Consumer Group",
+      "Cluster Pool",
+      "Channel Node"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Consumer groups coordinate partition assignments dynamically, allowing for parallel consumption without message duplication."
+  },
+  {
+    "id": "kf-q069",
+    "question": "If a group includes more consumer instances than active topic partitions, the surplus readers remain **idle**.",
+    "answer": "idle",
+    "options": ["active", "idle", "blocked", "terminated"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "To prevent concurrent access anomalies, Kafka limits partition assignments to one consumer per group, leaving extra instances as idle standbys."
+  },
+  {
+    "id": "kf-q070",
+    "question": "Kafka manages group progress tracking statistics by writing indices to an internal system topic named **__consumer_offsets**.",
+    "answer": "__consumer_offsets",
+    "options": [
+      "__cluster_metadata",
+      "__consumer_offsets",
+      "__system_log",
+      "__partition_registry"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The dedicated __consumer_offsets topic stores checkpoint information, enabling consumers to pick up where they left off after a restart."
+  },
+  {
+    "id": "kf-q071",
+    "question": "When cluster conditions shift or members drop offline, a consumer group initiates a partition **rebalance**.",
+    "answer": "rebalance",
+    "options": ["compaction", "rebalance", "failover", "truncation"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A rebalance dynamically shifts partition ownership to ensure all available partitions are assigned to active group members."
+  },
+  {
+    "id": "kf-q072",
+    "question": "The node replica instance assigned to handle all client read and write request streams is the **Leader**.",
+    "answer": "Leader",
+    "options": ["Leader", "Follower", "Coordinator", "Aggregator"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The partition leader processes all active I/O traffic, while follower replicas sync data in the background for fault tolerance."
+  },
+  {
+    "id": "kf-q073",
+    "question": "The set of partition replicas that match the leader's log state within a timeout window is called the **In-Sync Replicas** list.",
+    "answer": "In-Sync Replicas",
+    "options": [
+      "Active Node Pool",
+      "In-Sync Replicas",
+      "Cluster Standbys",
+      "Committed Quorum"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The ISR list identifies healthy, up-to-date replicas capable of taking over as the leader if the current leader fails."
+  },
+  {
+    "id": "kf-q074",
+    "question": "Setting the producer's configuration parameter to **acks=all** requires the leader to wait for confirmations from all ISRs before responding.",
+    "answer": "acks=all",
+    "options": ["acks=0", "acks=1", "acks=all", "acks=none"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Configuring acks=all prevents data loss by ensuring messages are replicated across multiple nodes before an acknowledgment is returned."
+  },
+  {
+    "id": "kf-q075",
+    "question": "Unlike classic short-lived messaging models, Kafka's core value rests on a **durable, replayable append-only** commit log structure.",
+    "answer": "durable, replayable append-only",
+    "options": [
+      "transient memory-mapped volatile",
+      "durable, replayable append-only",
+      "relational tabular row-oriented",
+      "dynamic rule-based hierarchical"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Kafka's durable, append-only log retains historical data, allowing multiple consumers to consume and replay data independently."
+  },
+  {
+    "id": "kf-q076",
+    "question": "Kafka can manage metadata consensus internally without an external ZooKeeper dependency by enabling **KRaft mode**.",
+    "answer": "KRaft mode",
+    "options": [
+      "ZooKeeper mode",
+      "KRaft mode",
+      "Raft-Sync protocol",
+      "Cluster-Mesh architecture"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "KRaft mode integrates cluster coordination directly into Kafka, simplifying operational architecture by removing ZooKeeper."
+  },
+  {
+    "id": "kf-q077",
+    "question": "To retain only the latest state changes for specific record identifiers, use a cleanup policy called **Log Compaction**.",
+    "answer": "Log Compaction",
+    "options": [
+      "Log Compaction",
+      "Segment Purging",
+      "Key Eviction",
+      "Index Dropping"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Log compaction trims historical data by keeping only the most recent message value for each unique key within a partition."
+  },
+  {
+    "id": "kf-q078",
+    "question": "Kafka applications manage data extraction workloads by using consumers that **pull data batches** from broker partitions.",
+    "answer": "pull data batches",
+    "options": [
+      "receive pushed individual records",
+      "pull data batches",
+      "intercept synchronous direct broad-casts",
+      "query database tables directly"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A pull-based model allows consumers to fetch data at their own pace, preventing them from being overwhelmed during traffic spikes."
+  },
+  {
+    "id": "kf-q079",
+    "question": "If the message processing time loop takes too long and exceeds **max.poll.interval.ms**, a cluster rebalance is triggered.",
+    "answer": "max.poll.interval.ms",
+    "options": [
+      "session.timeout.ms",
+      "max.poll.interval.ms",
+      "heartbeat.interval.ms",
+      "request.timeout.ms"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The max.poll.interval.ms setting acts as a consumer health check. Exceeding it signals a processing stall, causing the coordinator to reassign partitions."
+  },
+  {
+    "id": "kf-q080",
+    "question": "Out of the box, Kafka's message ordering guarantees are strictly limited to **individual partition boundaries**.",
+    "answer": "individual partition boundaries",
+    "options": [
+      "global cluster namespaces",
+      "individual partition boundaries",
+      "consumer group network threads",
+      "parent topic configurations globally"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Kafka guarantees strict message ordering within a single partition, but does not preserve ordering across different partitions."
+  },
+  {
+    "id": "kf-q081",
+    "question": "The property that enforces a minimum number of online matching replicas for an acks=all write to succeed is **min.insync.replicas**.",
+    "answer": "min.insync.replicas",
+    "options": [
+      "replication.factor",
+      "min.insync.replicas",
+      "acks.count.minimum",
+      "replica.requirement"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The min.insync.replicas configuration sets the minimum number of matching replicas required to satisfy an acks=all write request."
+  },
+  {
+    "id": "kf-q082",
+    "question": "Committing offsets only after data is successfully stored in a target database achieves **At-Least-Once** delivery.",
+    "answer": "At-Least-Once",
+    "options": [
+      "At-Most-Once",
+      "At-Least-Once",
+      "Exactly-Once",
+      "Non-Guaranteed"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Post-processing offset commits ensure that if an application crashes mid-flight, the data will be reprocessed upon restart, avoiding data loss."
+  },
+  {
+    "id": "kf-q083",
+    "question": "Committing tracking indexes immediately upon reading data batches before processing begins results in **At-Most-Once** delivery.",
+    "answer": "At-Most-Once",
+    "options": [
+      "At-Most-Once",
+      "At-Least-Once",
+      "Exactly-Once",
+      "Idempotent-Stream"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Pre-processing offset commits eliminate duplicate processing risks but introduce the potential for data loss if a crash occurs before processing finishes."
+  },
+  {
+    "id": "kf-q084",
+    "question": "To decouple metadata structures and share schemas via lightweight ID numbers, developers integrate a **Schema Registry**.",
+    "answer": "Schema Registry",
+    "options": [
+      "Metadata Repository",
+      "Schema Registry",
+      "Format Catalog",
+      "Payload Coordinator"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "An external Schema Registry ensures data compatibility across producers and consumers without bloating payloads with redundant metadata."
+  },
+  {
+    "id": "kf-q085",
+    "question": "Grouping multiple message records together into a single network transmission to improve throughput is called **Batching**.",
+    "answer": "Batching",
+    "options": ["Batching", "Compacting", "Streaming", "Multiplexing"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Batching reduces network overhead and disk I/O operations by grouping multiple events into a single transaction."
+  },
+  {
+    "id": "kf-q086",
+    "question": "Kafka achieves high-performance disk storage operations by writing partition data to **append-only log segments**.",
+    "answer": "append-only log segments",
+    "options": [
+      "relational index tables",
+      "append-only log segments",
+      "structured XML documents",
+      "volatile memory heaps"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Kafka partitions are saved as append-only log segments on disk, maximizing sequential disk I/O performance."
+  },
+  {
+    "id": "kf-q087",
+    "question": "The time duration a record remains valid and accessible on disk before it is eligible for deletion is managed by **log.retention.hours**.",
+    "answer": "log.retention.hours",
+    "options": [
+      "log.retention.hours",
+      "session.timeout.ms",
+      "message.expiry.ms",
+      "max.lifecycle.days"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The log.retention.hours configuration sets the time baseline for data retention, automatically cleaning up old log segments after the threshold is reached."
+  },
+  {
+    "id": "kf-q088",
+    "question": "The measurement tracking how far behind a consumer group's read position is relative to the latest written record is called **consumer lag**.",
+    "answer": "consumer lag",
+    "options": [
+      "network jitter",
+      "consumer lag",
+      "sync delay",
+      "offset buffer"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Consumer lag measures processing delays by tracking the distance between the producer's latest log entry and the consumer's last committed offset."
+  },
+  {
+    "id": "kf-q089",
+    "question": "When client apps publish to a missing topic and auto-provisioning is enabled, Kafka instantiates the stream using **default cluster properties**.",
+    "answer": "default cluster properties",
+    "options": [
+      "default cluster properties",
+      "blank metadata overrides",
+      "producer-supplied runtime configurations",
+      "ZooKeeper structural layouts"
+    ],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "With auto-creation enabled, Kafka automatically builds missing topics using the cluster's default partition and replication configurations."
+  },
+  {
+    "id": "kf-q090",
+    "question": "Kafka bypasses user-space application memory buffers when transferring data from disk cache to network sockets by leveraging **Zero-Copy** technology.",
+    "answer": "Zero-Copy",
+    "options": ["Direct IO", "Memory Mapping", "Zero-Copy", "Kernel Buffering"],
+    "category": "Kafka Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Zero-Copy technology allows Kafka to pipe data directly from the kernel page cache to the network socket, minimizing CPU and memory overhead."
+  }
+]

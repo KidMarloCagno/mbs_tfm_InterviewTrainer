@@ -22,7 +22,7 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ## Question Library
 
-More than **1,500 questions** across **17 topics**:
+More than **1,600 questions** across **19 topics**:
 
 | Topic              | Focus area                                                           |
 | ------------------ | -------------------------------------------------------------------- |
@@ -36,6 +36,8 @@ More than **1,500 questions** across **17 topics**:
 | Java               | Core language, OOP, concurrency, JVM internals                       |
 | JI Java            | Java interview patterns, job interview concepts, practical debugging |
 | JavaScript         | Language fundamentals, async, closures, ES2015+                      |
+| Kafka Basics       | Brokers, topics, partitions, consumer groups, replication, ISR       |
+| Maven Basics       | Maven lifecycle, dependency management, build config, repositories   |
 | Python             | Language features, data structures, OOP, stdlib                      |
 | React              | Hooks, component patterns, state management, rendering               |
 | Spring             | IoC/DI, Spring Boot, MVC, Spring Data                                |

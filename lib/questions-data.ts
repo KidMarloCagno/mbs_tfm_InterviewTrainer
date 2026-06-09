@@ -11,6 +11,8 @@ import springBootBasicsQuestions from "@/prisma/data/sets/springBootBasics.json"
 import javaQuestions from "@/prisma/data/sets/java.json";
 import jiJavaQuestions from "@/prisma/data/sets/jiJava.json";
 import javascriptQuestions from "@/prisma/data/sets/javascript.json";
+import kafkaBasicsQuestions from "@/prisma/data/sets/kafkaBasics.json";
+import mavenBasicsQuestions from "@/prisma/data/sets/mavenBasics.json";
 import pythonQuestions from "@/prisma/data/sets/python.json";
 import reactQuestions from "@/prisma/data/sets/react.json";
 import springQuestions from "@/prisma/data/sets/spring.json";
@@ -84,6 +86,16 @@ const questionsData: Record<string, GameQuestion[]> = {
     gitBasicsQuestions as QuestionSetItem[],
     "Git Basics",
     "gb",
+  ),
+  "Kafka Basics": mapSet(
+    kafkaBasicsQuestions as QuestionSetItem[],
+    "Kafka Basics",
+    "kf",
+  ),
+  "Maven Basics": mapSet(
+    mavenBasicsQuestions as QuestionSetItem[],
+    "Maven Basics",
+    "mvn",
   ),
   SystemsDesign: mapSet(
     systemdesignQuestions as QuestionSetItem[],

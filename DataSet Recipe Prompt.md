@@ -40,8 +40,7 @@ Rules for Step 1:
    - One option that exactly matches the "answer" field
    - 3 plausible distractors
 5. Do NOT include an "explanation" field in Step 1.
-
----
+   > IMPORTANT: The final output must be valid JSON. Do not use trailing commas, comments, or any non-standard JSON syntax, and do not add extra fields beyond those explicitly listed.---
 
 **STEP 2 (Internal): Expand 30 Base Questions into 90 Total**
 

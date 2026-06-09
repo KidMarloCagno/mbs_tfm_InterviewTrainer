@@ -42,6 +42,8 @@ describe("getAvailableTopics", () => {
       "Java",
       "JI Java",
       "JavaScript",
+      "Kafka Basics",
+      "Maven Basics",
       "Python",
       "React",
       "Spring",
