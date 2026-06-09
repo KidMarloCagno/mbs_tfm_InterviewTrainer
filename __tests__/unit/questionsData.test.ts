@@ -25,7 +25,7 @@ describe("getAvailableTopics", () => {
     expect(topics).toEqual(sorted);
   });
 
-  it("includes all 11 registered topic keys", () => {
+  it("includes all registered topic keys", () => {
     // Arrange & Act
     const topics = getAvailableTopics();
     // Assert — one entry per JSON set in prisma/data/sets/
@@ -36,6 +36,7 @@ describe("getAvailableTopics", () => {
       "Django",
       "Frontend",
       "Java",
+      "Java Dev Job Interview",
       "JavaScript",
       "Python",
       "React",

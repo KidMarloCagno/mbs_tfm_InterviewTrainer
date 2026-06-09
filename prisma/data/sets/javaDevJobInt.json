@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "java-q001",
+    "question": "Which memory area in the JVM is primarily responsible for storing local variables and method execution frames?",
+    "answer": "Stack Memory",
+    "options": ["Heap Memory", "Stack Memory", "Method Area", "PC Register"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Stack memory dynamically allocates a frame for each method invocation to store local variables and immediate results, clearing it upon method return."
+  },
+  {
+    "id": "java-q002",
+    "question": "What is the primary role of the Java Garbage Collector regarding memory allocation?",
+    "answer": "To reclaim heap space occupied by objects that are no longer reachable",
+    "options": [
+      "To automatically increase physical RAM size dynamically",
+      "To reclaim heap space occupied by objects that are no longer reachable",
+      "To shift local variable contexts out of stack frames",
+      "To optimize thread execution order across CPU cores"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector automatically scans the heap to identify and destroy objects that have no valid paths of references from root elements."
+  },
+  {
+    "id": "java-q003",
+    "question": "Which access modifier or keyword completely prevents a Java class from being extended by a subclass?",
+    "answer": "final",
+    "options": ["static", "abstract", "final", "private"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Declaring a class with the 'final' keyword prevents inheritance, locking down its API design and behavior from extension."
+  },
+  {
+    "id": "java-q004",
+    "question": "What describes the core design characteristic of an immutable object instance in Java?",
+    "answer": "Its state cannot be modified after its construction phase completes",
+    "options": [
+      "It can only reside within the JVM Metaspace region",
+      "Its state cannot be modified after its construction phase completes",
+      "It automatically synchronizes all method calls across threads",
+      "It must be declared as an abstract structure"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Immutable objects like String or custom records guarantee that internal data remains perfectly static throughout their entire lifecycle."
+  },
+  {
+    "id": "java-q005",
+    "question": "Which core subsystem of the JVM architecture is responsible for dynamically loading class binaries at execution time?",
+    "answer": "ClassLoader",
+    "options": [
+      "Execution Engine",
+      "ClassLoader",
+      "JIT Compiler",
+      "Garbage Collector"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The ClassLoader component locates, verifies, and initializes binary compiled classes into memory when they are first referenced by code."
+  },
+  {
+    "id": "java-q006",
+    "question": "What concurrent memory guarantee is established when a developer marks an instance variable as 'volatile'?",
+    "answer": "Writes to the variable are immediately visible to all executing threads",
+    "options": [
+      "The variable is safely locked against all simultaneous writes",
+      "Writes to the variable are immediately visible to all executing threads",
+      "The variable value is duplicated per executing thread frame",
+      "The field is completely skipped by the Garbage Collector"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The 'volatile' keyword forces reads and writes to bypass local CPU caches and go directly to main memory, preventing stale data visibility issues."
+  },
+  {
+    "id": "java-q007",
+    "question": "Which Java Collections Framework class allows null elements and preserves explicit insertion order?",
+    "answer": "ArrayList",
+    "options": ["HashSet", "TreeMap", "ArrayList", "TreeSet"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "ArrayList implements the List interface using an internal resizable array, ensuring elements remain exactly in their added sequence while permitting nulls."
+  },
+  {
+    "id": "java-q008",
+    "question": "Which interface must a class implement to explicitly define its natural sorting behavior?",
+    "answer": "Comparable",
+    "options": ["Comparator", "Runnable", "Cloneable", "Comparable"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Comparable interface contains the 'compareTo' method, allowing collection utilities to sort arrays or lists of custom objects natively."
+  },
+  {
+    "id": "java-q009",
+    "question": "What happens if a subclass overrides a method and adds a broader checked exception to the signature?",
+    "answer": "A compile-time error occurs immediately",
+    "options": [
+      "The code runs safely unless the exception triggers",
+      "A compile-time error occurs immediately",
+      "The parent method automatically adapts its contract",
+      "The JVM catches the exception and prints a warning log"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Java method overriding rules prohibit subclasses from introducing broader or entirely new checked exceptions to preserve polymorphism principles."
+  },
+  {
+    "id": "java-q010",
+    "question": "Which Java 8 functional interface accepts exactly one argument and executes an action with no return value?",
+    "answer": "Consumer",
+    "options": ["Predicate", "Supplier", "Function", "Consumer"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Consumer interface defines an 'accept' method that processes a single input argument and returns a void result type."
+  },
+  {
+    "id": "java-q011",
+    "question": "Why are terminal operations required when constructing functional pipelines via Java Streams?",
+    "answer": "They initiate processing of intermediate steps to produce a concrete outcome",
+    "options": [
+      "They transform data structures into lazy evaluation components",
+      "They initiate processing of intermediate steps to produce a concrete outcome",
+      "They filter elements asynchronously to optimize background threading",
+      "They sort items immediately before memory storage takes place"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Java Stream operations are lazy by default; no data processing occurs until a terminal operation like collect() or forEach() is invoked."
+  },
+  {
+    "id": "java-q012",
+    "question": "Which core contract rule must be upheld alongside overriding the 'equals' method to ensure proper behavior in a HashMap?",
+    "answer": "The hashCode method must be overridden to maintain structural alignment",
+    "options": [
+      "The toString method must format all instance fields",
+      "The hashCode method must be overridden to maintain structural alignment",
+      "The class must explicitly implement the Cloneable interface",
+      "All internal fields must be designated as final constants"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "If two objects are equal based on equals(), they must produce identical integer hash codes to map to the exact same hash bucket."
+  },
+  {
+    "id": "java-q013",
+    "question": "What is the specific behavior of a field marked with the 'transient' keyword during execution?",
+    "answer": "The variable field is entirely bypassed during the object serialization process",
+    "options": [
+      "The field value is protected against unexpected concurrency deadlocks",
+      "The variable field is entirely bypassed during the object serialization process",
+      "The variable is permanently cached in local CPU registers",
+      "The field becomes immutable immediately following its first read"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Transient variables are excluded from serialization mechanics, resetting to their default type initialization values upon deserialization."
+  },
+  {
+    "id": "java-q014",
+    "question": "Under what condition does an executing Java thread enter a formal BLOCKED state?",
+    "answer": "When waiting to claim a monitor lock currently owned by another active thread",
+    "options": [
+      "When pausing execution via an explicit Thread.sleep() invocation",
+      "When waiting to claim a monitor lock currently owned by another active thread",
+      "When waiting for a notification signal from an object wait pool",
+      "When its underlying call stack finishes processing its execution steps"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A thread enters the BLOCKED state when it attempts to enter a synchronized block or method that is already locked by another thread."
+  },
+  {
+    "id": "java-q015",
+    "question": "Which classic design pattern restricts a class instantiation to one single unique instance with a shared global hook?",
+    "answer": "Singleton Pattern",
+    "options": [
+      "Factory Pattern",
+      "Singleton Pattern",
+      "Observer Pattern",
+      "Builder Pattern"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Singleton pattern uses a private constructor and static access methods to guarantee only one class instance exists across the application context."
+  },
+  {
+    "id": "java-q016",
+    "question": "In a Spring Boot web architecture, which annotation designates a class as a controller returning serialized data directly instead of a template view?",
+    "answer": "@RestController",
+    "options": ["@Controller", "@Component", "@RestController", "@Service"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "@RestController combines @Controller and @ResponseBody, ensuring method return values are automatically serialized into JSON payloads."
+  },
+  {
+    "id": "java-q017",
+    "question": "Which dependency injection style is recognized as best practice for mandatory object dependencies within Spring components?",
+    "answer": "Constructor Injection",
+    "options": [
+      "Setter Injection",
+      "Field Injection",
+      "Constructor Injection",
+      "Interface Injection"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Constructor injection ensures class instances are immutable, prevents null pointer states during creation, and facilitates straightforward unit testing."
+  },
+  {
+    "id": "java-q018",
+    "question": "What is the primary guarantee provided by the 'finally' block within a structured try-catch-finally block?",
+    "answer": "It executes its code blocks regardless of whether exceptions are thrown or caught",
+    "options": [
+      "It intercepts checked exceptions before they reach caller boundaries",
+      "It forces immediate garbage collection routines across the local scope",
+      "It executes its code blocks regardless of whether exceptions are thrown or caught",
+      "It terminates background daemon threads running concurrently"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The finally block executes reliably after try-catch completion, ensuring resources like databases or streams are safely closed under all outcomes."
+  },
+  {
+    "id": "java-q019",
+    "question": "What describes a multi-threaded 'deadlock' scenario in concurrent programming architectures?",
+    "answer": "Two or more threads are permanently stalled waiting for resources held by each other",
+    "options": [
+      "A thread enters an infinite execution loop consuming maximum CPU cycles",
+      "Two or more threads are permanently stalled waiting for resources held by each other",
+      "The main application execution path exits due to memory exhaustion",
+      "A concurrent modification task throws an unchecked collection error"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Deadlocks occur when thread A holds resource 1 and waits for resource 2, while thread B holds resource 2 and waits for resource 1."
+  },
+  {
+    "id": "java-q020",
+    "question": "Which mutable utility class offers the best performance for intensive string concatenation within single-threaded scopes?",
+    "answer": "StringBuilder",
+    "options": ["String", "StringBuffer", "StringBuilder", "StringJoiner"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "StringBuilder modifies characters in place without the heavy thread-synchronization overhead present in the legacy StringBuffer class."
+  },
+  {
+    "id": "java-q021",
+    "question": "What happens under the hood when you execute the start() method on a new Java Thread instance?",
+    "answer": "A new OS-level thread context is allocated and its run() path gets scheduled",
+    "options": [
+      "The code inside run() executes synchronously within the caller's call stack",
+      "A new OS-level thread context is allocated and its run() path gets scheduled",
+      "The target thread immediately enters a permanent BLOCKED state",
+      "The runtime halts other threads until this specific task finishes"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Calling start() requests the OS and JVM to spin up a fresh execution thread context, which asynchronously invokes the run() method."
+  },
+  {
+    "id": "java-q022",
+    "question": "What is the operational function of the 'super' keyword when invoked directly inside a subclass constructor definition?",
+    "answer": "It calls a constructor defined by the direct parent class",
+    "options": [
+      "It marks the current class as a global utility reference",
+      "It creates a static mirror instance of the superclass structure",
+      "It calls a constructor defined by the direct parent class",
+      "It overrides private method accessibility limits dynamically"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Invoking super() passes parameters up to parent initializers, which must complete before the specific subclass constructor logic runs."
+  },
+  {
+    "id": "java-q023",
+    "question": "Which data collection architecture rejects duplicate element values and relies on a hashing mechanism?",
+    "answer": "HashSet",
+    "options": ["ArrayList", "LinkedList", "HashSet", "Vector"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A HashSet relies internally on a HashMap structure, delivering near constant-time performance for basic membership checks while preventing duplicates."
+  },
+  {
+    "id": "java-q024",
+    "question": "In object-relational mapping frameworks like Hibernate, what is the design purpose of lazy loading strategies?",
+    "answer": "To delay fetching nested entities from databases until they are explicitly read by code",
+    "options": [
+      "To execute SQL queries completely on worker background thread channels",
+      "To convert primary data records directly into transient serialization flows",
+      "To delay fetching nested entities from databases until they are explicitly read by code",
+      "To load all database table indexes directly during application startup routines"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Lazy loading prevents unnecessary database queries by fetching related entity records only when their accessor methods are called."
+  },
+  {
+    "id": "java-q025",
+    "question": "Which specialized class feature introduced in modern Java provides concise immutable syntax for basic data-carrier structures?",
+    "answer": "Records",
+    "options": ["Enums", "Interfaces", "Records", "Annotations"],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Records auto-generate standard boilerplate code like getters, equals(), hashCode(), and toString() based entirely on their field definitions."
+  },
+  {
+    "id": "java-q026",
+    "question": "What is the defining structural property required to classify an interface as a functional interface?",
+    "answer": "It must contain exactly one abstract method signature",
+    "options": [
+      "It must be completely devoid of default method declarations",
+      "It must contain exactly one abstract method signature",
+      "It must lock internal state variables using static modifiers",
+      "It must be annotated explicitly with the @Serializable flag"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Functional interfaces must expose exactly one abstract method, providing the explicit structural target for lambda expressions."
+  },
+  {
+    "id": "java-q027",
+    "question": "Which HTTP status code is implicitly returned by standard Spring controllers when a payload validation check fails via @Valid?",
+    "answer": "400 Bad Request",
+    "options": [
+      "404 Not Found",
+      "500 Internal Server Error",
+      "400 Bad Request",
+      "401 Unauthorized"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A validation breakdown indicates malformed or illegal client payload content, which maps to an HTTP 400 Bad Request status code."
+  },
+  {
+    "id": "java-q028",
+    "question": "Which JVM runtime mechanism dynamically determines which specific method implementation to execute when handling polymorphism?",
+    "answer": "Dynamic Method Dispatch",
+    "options": [
+      "Static Method Binding",
+      "Dynamic Method Dispatch",
+      "Bytecode Verification Processing",
+      "Type Casting Checks"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Dynamic Method Dispatch resolves overridden method references at runtime based on the actual object instance type rather than reference type."
+  },
+  {
+    "id": "java-q029",
+    "question": "What occurs if you attempt to add an element to a collection generated through an explicit Arrays.asList() invocation?",
+    "answer": "An UnsupportedOperationException is thrown at runtime",
+    "options": [
+      "The underlying array automatically expands to safely hold the item",
+      "An UnsupportedOperationException is thrown at runtime",
+      "The insertion process is quietly ignored with no errors logged",
+      "The application fails to compile due to mismatched method signatures"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Arrays.asList() provides a fixed-size wrapper linked to a standard primitive array, making structure-altering operations illegal."
+  },
+  {
+    "id": "java-q030",
+    "question": "Which statement accurately describes the characteristics of the Garbage-First (G1) collector?",
+    "answer": "It breaks heap space into discrete regions to deliver highly predictable execution pauses",
+    "options": [
+      "It processes memory tasks using a single-threaded architecture suited for small footprints",
+      "It breaks heap space into discrete regions to deliver highly predictable execution pauses",
+      "It defers all object cleanup actions until the host system encounters a memory warning",
+      "It functions exclusively within local thread stacks to clean primitive variables"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "G1 models the heap as distinct memory regions, focusing collection sweeps on regions containing high counts of dead objects first."
+  },
+  {
+    "id": "java-q031",
+    "question": "True or False: Stack Memory in the JVM is primarily responsible for storing large object instances and tracking application global states.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Stack memory only stores primitive values and active references; all custom object allocations reside on the Heap."
+  },
+  {
+    "id": "java-q032",
+    "question": "True or False: The primary role of the Java Garbage Collector regarding memory allocation is to reclaim heap space occupied by objects that are no longer reachable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The collector periodically locates and reclaims unreferenced heap allocations to prevent out-of-memory errors."
+  },
+  {
+    "id": "java-q033",
+    "question": "True or False: The 'abstract' access modifier completely prevents a Java class from being extended by a subclass.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The 'abstract' keyword explicitly requires a class to be extended, whereas the 'final' modifier blocks subclassing entirely."
+  },
+  {
+    "id": "java-q034",
+    "question": "True or False: What describes the core design characteristic of an immutable object instance in Java is that its state cannot be modified after its construction phase completes.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Immutable objects provide a secure design constraint because their state remains perfectly unchanged once instantiated."
+  },
+  {
+    "id": "java-q035",
+    "question": "True or False: The JIT Compiler core subsystem of the JVM architecture is responsible for dynamically loading class binaries at execution time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The ClassLoader manages the loading of classes, while the JIT Compiler translates bytecode into optimal native machine code during execution."
+  },
+  {
+    "id": "java-q036",
+    "question": "True or False: What concurrent memory guarantee is established when a developer marks an instance variable as 'volatile' is that writes to the variable are immediately visible to all executing threads.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Volatile writes flush instantly to primary memory, ensuring cross-thread visibility without explicit mutex synchronization blocks."
+  },
+  {
+    "id": "java-q037",
+    "question": "True or False: TreeMap is the Java Collections Framework class that allows null elements and preserves explicit insertion order.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "ArrayList retains insertion order. TreeMap sorts components based on keys and systematically throws exceptions on null values."
+  },
+  {
+    "id": "java-q038",
+    "question": "True or False: The interface that must a class implement to explicitly define its natural sorting behavior is Comparable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Implementing Comparable defines an internal mechanism for objects to order themselves relative to other type instances."
+  },
+  {
+    "id": "java-q039",
+    "question": "True or False: If a subclass overrides a method, it can safely add broader checked exceptions to its signature without generating errors.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Overriding methods can only contract or specialize exceptions; widening checked exceptions breaks polymorphism guarantees."
+  },
+  {
+    "id": "java-q040",
+    "question": "True or False: The Predicate functional interface accepts exactly one argument and executes an action with no return value.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Predicate interfaces return a boolean. The Consumer interface accepts a value and yields a void response."
+  },
+  {
+    "id": "java-q041",
+    "question": "True or False: Terminal operations are required when constructing functional pipelines via Java Streams because they initiate processing of intermediate steps to produce a concrete outcome.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Stream processing steps remain lazy and idle until a final terminal operation triggers compilation and iteration."
+  },
+  {
+    "id": "java-q042",
+    "question": "True or False: Overriding the equals method demands that the toString method also be overridden to protect mapping architectures from failing.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The core contract links equals exclusively with hashCode; overriding toString is good practice but irrelevant to map mechanics."
+  },
+  {
+    "id": "java-q043",
+    "question": "True or False: What is the specific behavior of a field marked with the 'transient' keyword during execution is that the variable field is entirely bypassed during the object serialization process.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Marking fields transient lets developers omit sensitive or unneeded data points from target serialized streams."
+  },
+  {
+    "id": "java-q044",
+    "question": "True or False: Under what condition does an executing Java thread enter a formal BLOCKED state is when it is pausing execution via an explicit Thread.sleep() invocation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Thread.sleep() puts a thread into TIMED_WAITING. Threads enter the BLOCKED state specifically while waiting for an unavailable monitor lock."
+  },
+  {
+    "id": "java-q045",
+    "question": "True or False: Which classic design pattern restricts a class instantiation to one single unique instance with a shared global hook is the Singleton Pattern.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Singleton patterns isolate instantiation steps, managing access paths to ensure state consistency across objects."
+  },
+  {
+    "id": "java-q046",
+    "question": "True or False: In a Spring Boot web architecture, the @Component annotation designates a class as a controller returning serialized data directly instead of a template view.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "@RestController is required for direct serialization; @Component is a generic stereotype annotation for bean management."
+  },
+  {
+    "id": "java-q047",
+    "question": "True or False: Which dependency injection style is recognized as best practice for mandatory object dependencies within Spring components is Constructor Injection.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Constructor injection ensures class components receive their explicit dependencies reliably before processing any operations."
+  },
+  {
+    "id": "java-q048",
+    "question": "True or False: The primary guarantee provided by the 'finally' block within a structured try-catch-finally block is that it executes its code blocks regardless of whether exceptions are thrown or caught.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Finally block code executes following try-catch evaluation to guarantee proper close routines for active resource descriptors."
+  },
+  {
+    "id": "java-q049",
+    "question": "True or False: A deadlock scenario describes a condition where a thread processes data inside an infinite execution loop, taking up all CPU core capacity.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Infinite loops represent infinite processing execution steps; deadlocks denote permanent, blocked waiting states with no execution occurring."
+  },
+  {
+    "id": "java-q050",
+    "question": "True or False: Which mutable utility class offers the best performance for intensive string concatenation within single-threaded scopes is StringBuilder.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "By avoiding internal synchronization checks, StringBuilder handles sequential modifications much faster than standard strings."
+  },
+  {
+    "id": "java-q051",
+    "question": "True or False: Calling the start() method on a new Java Thread instance executes the code inside run() synchronously within the caller's call stack.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Invoking start() spins up a new concurrent path; invoking run() explicitly causes ordinary synchronous method behavior."
+  },
+  {
+    "id": "java-q052",
+    "question": "True or False: What is the operational function of the 'super' keyword when invoked directly inside a subclass constructor definition is that it calls a constructor defined by the direct parent class.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The super execution pass establishes initial parent parameters securely before running custom subtype initializations."
+  },
+  {
+    "id": "java-q053",
+    "question": "True or False: ArrayList is the data collection architecture that rejects duplicate element values and relies on a hashing mechanism.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "ArrayList permits duplicates freely. HashSet relies on hashing algorithms to ensure item uniqueness."
+  },
+  {
+    "id": "java-q054",
+    "question": "True or False: In object-relational mapping frameworks like Hibernate, what is the design purpose of lazy loading strategies is to delay fetching nested entities from databases until they are explicitly read by code.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Lazy loading prevents unnecessary overhead by restricting data fetching strictly to entities that are read by active code paths."
+  },
+  {
+    "id": "java-q055",
+    "question": "True or False: Interfaces introduced in modern Java provide concise immutable syntax for basic data-carrier structures and automatically write getters.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Interfaces act as operational blueprints; 'Records' are the feature that auto-generates data carrier mechanics implicitly."
+  },
+  {
+    "id": "java-q056",
+    "question": "True or False: What is the defining structural property required to classify an interface as a functional interface is that it must contain exactly one abstract method signature.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Interfaces with exactly one abstract method serve as compatible structural foundations for modern lambda expression compilation blocks."
+  },
+  {
+    "id": "java-q057",
+    "question": "True or False: Which HTTP status code is implicitly returned by standard Spring controllers when a payload validation check fails via @Valid is 500 Internal Server Error.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Validation failures represent bad user payloads, mapping cleanly to a 400 Bad Request rather than an internal server breakdown."
+  },
+  {
+    "id": "java-q058",
+    "question": "True or False: Which JVM runtime mechanism dynamically determines which specific method implementation to execute when handling polymorphism is Dynamic Method Dispatch.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Dynamic Method Dispatch matches messages to execution logic based dynamically on object type information loaded at runtime."
+  },
+  {
+    "id": "java-q059",
+    "question": "True or False: When attempting to append items into a fixed collection structure initialized via Arrays.asList(), the structure automatically resizes to support execution.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Resizing operations violate fixed arrays constraints, resulting in immediate UnsupportedOperationException errors."
+  },
+  {
+    "id": "java-q060",
+    "question": "True or False: Which statement accurately describes the characteristics of the Garbage-First (G1) collector is that it breaks heap space into discrete regions to deliver highly predictable execution pauses.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Dev J.I.",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "G1 groups heap regions cleanly to target locations containing mostly dead elements, optimizing application pause durations."
+  },
+  {
+    "id": "java-q061",
+    "question": "In the JVM memory model, ______ is the allocation sector utilized for managing executing thread call frames and tracking local variable parameters.",
+    "answer": "Stack Memory",
+    "options": ["Heap Memory", "Stack Memory", "Method Area", "Metaspace"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Stack memory handles sequential execution contexts by adding isolated calculation frames for every invoked method block."
+  },
+  {
+    "id": "java-q062",
+    "question": "The primary role of the Java ______ regarding memory allocation is to reclaim heap space occupied by objects that are no longer reachable.",
+    "answer": "Garbage Collector",
+    "options": [
+      "ClassLoader",
+      "JIT Compiler",
+      "Garbage Collector",
+      "Execution Engine"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector removes memory leaks by continuously sweeping unreferenced objects out of the main heap scope."
+  },
+  {
+    "id": "java-q063",
+    "question": "The ______ keyword completely prevents a Java class from being extended by a subclass.",
+    "answer": "final",
+    "options": ["abstract", "static", "final", "private"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Applying final prevents inheritance, creating secure immutable or specialized implementation blocks across object designs."
+  },
+  {
+    "id": "java-q064",
+    "question": "An object whose configuration cannot experience updates or field alterations after instantiation completes is categorized as an ______ object structure.",
+    "answer": "immutable",
+    "options": ["abstract", "immutable", "volatile", "transient"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Immutable architectures avoid concurrency side effects because object values remain unalterable throughout execution."
+  },
+  {
+    "id": "java-q065",
+    "question": "The JVM relies directly on the ______ architecture subsystem to dynamically trace, read, and instantiate compiled class binaries into active runtime memory context blocks.",
+    "answer": "ClassLoader",
+    "options": [
+      "JIT Compiler",
+      "Execution Engine",
+      "ClassLoader",
+      "Garbage Collector"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ClassLoader workflows load system classes from source locations and verify structural compliance before runtime execution."
+  },
+  {
+    "id": "java-q066",
+    "question": "Marking an instance variable as ______ enforces visibility rules by forcing data modifications to synchronize straight to main memory.",
+    "answer": "volatile",
+    "options": ["synchronized", "transient", "static", "volatile"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The volatile modifier prevents threads from reading stale, locally cached variable values during multi-threaded processing operations."
+  },
+  {
+    "id": "java-q067",
+    "question": "Within the Collections framework, the ______ class implements list behaviors over expandable internal arrays while supporting null elements and keeping explicit user insertion orders.",
+    "answer": "ArrayList",
+    "options": ["HashSet", "ArrayList", "TreeMap", "TreeSet"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "ArrayList implements efficient index-based access behaviors by structuring records on top of simple resizing arrays."
+  },
+  {
+    "id": "java-q068",
+    "question": "Custom classes use the ______ interface to define default relational sorting policies used during native collection sorting logic execution.",
+    "answer": "Comparable",
+    "options": ["Comparator", "Cloneable", "Comparable", "Runnable"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Comparable implementations define a clear baseline sort order via the compareTo method, supporting collection sort utilities."
+  },
+  {
+    "id": "java-q069",
+    "question": "If an overriding subclass method includes a checked exception signature that is broader than its parent definition, a ______ error occurs immediately.",
+    "answer": "compile-time",
+    "options": ["runtime", "compile-time", "linkage", "serialization"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Compiler enforcement blocks expanded checked exceptions on overrides to guarantee object behavior contracts don't break at runtime."
+  },
+  {
+    "id": "java-q070",
+    "question": "The ______ functional interface handles logic flows by accepting an input argument while yielding a void result.",
+    "answer": "Consumer",
+    "options": ["Supplier", "Predicate", "Function", "Consumer"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Consumer targets process inputs directly through an accept() action statement, supporting pipeline side effects with no data feedback."
+  },
+  {
+    "id": "java-q071",
+    "question": "Intermediate functional actions inside a Java Stream remain completely lazy and execute data transforms only when a ______ operation is invoked.",
+    "answer": "terminal",
+    "options": ["intermediate", "terminal", "parallel", "lazy"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Terminal operations process data pipelines by terminating lazy stream definitions and compiling results into objects or collections."
+  },
+  {
+    "id": "java-q072",
+    "question": "To avoid breaking collection hashing routing mechanics, custom classes overriding equals() must also redefine their native ______ method implementation.",
+    "answer": "hashCode",
+    "options": ["toString", "hashCode", "clone", "finalize"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The matching hashCode specification ensures equal items share an identical bucket location inside associative lookup structures."
+  },
+  {
+    "id": "java-q073",
+    "question": "Field variables designated with the ______ keyword are omitted during serialization steps, reverting to standard type initializations upon restoration.",
+    "answer": "transient",
+    "options": ["volatile", "static", "transient", "final"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The transient keyword informs serialization streams to completely exclude specific fields, ensuring sensitive state values are not preserved."
+  },
+  {
+    "id": "java-q074",
+    "question": "A thread moves into a structural ______ state when it stalls at a synchronized checkpoint while waiting to claim an unavailable monitor lock.",
+    "answer": "BLOCKED",
+    "options": ["WAITING", "TIMED_WAITING", "BLOCKED", "TERMINATED"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Threads are restricted to a BLOCKED state if another thread context holds ownership of a required critical monitor block."
+  },
+  {
+    "id": "java-q075",
+    "question": "The ______ restricts application instantiation flows to a single unique object reference while maintaining a shared access point.",
+    "answer": "Singleton Pattern",
+    "options": [
+      "Factory Pattern",
+      "Builder Pattern",
+      "Singleton Pattern",
+      "Observer Pattern"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Singleton patterns isolate instantiation steps, managing access paths to ensure state consistency across objects."
+  },
+  {
+    "id": "java-q076",
+    "question": "In Spring Boot development, mapping JSON serialization data flows directly out of endpoint classes is handled using the ______ stereotype configuration annotation.",
+    "answer": "@RestController",
+    "options": ["@Controller", "@Component", "@RestController", "@Service"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "@RestController configures classes as data hubs, appending implicit response body descriptors onto all nested endpoint routing methods."
+  },
+  {
+    "id": "java-q077",
+    "question": "Spring architectures rely heavily on ______ Injection patterns to handle mandatory class components cleanly without creating hidden parameters.",
+    "answer": "Constructor Injection",
+    "options": [
+      "Field Injection",
+      "Setter Injection",
+      "Constructor Injection",
+      "Interface Injection"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Constructor injection structures robust components by forcing container validation of mandatory objects during system startup cycles."
+  },
+  {
+    "id": "java-q078",
+    "question": "Resource close steps and memory cleanup statements are explicitly structured inside the ______ statement sector to ensure execution following try-catch sequences.",
+    "answer": "finally",
+    "options": ["catch", "finally", "throw", "synchronized"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The finally section runs following try-catch evaluation blocks to guarantee proper cleanup of open resource descriptors."
+  },
+  {
+    "id": "java-q079",
+    "question": "A complete blockage of concurrent system processing driven by circular lock dependencies among independent threads is known as a ______ scenario.",
+    "answer": "deadlock",
+    "options": ["livelock", "race condition", "deadlock", "starvation"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Deadlocks completely stall processing flows because involved threads remain locked while waiting on each other's current resource allocations."
+  },
+  {
+    "id": "java-q080",
+    "question": "Single-threaded string mutations run most efficiently when managed through the unsynchronized ______ utility framework.",
+    "answer": "StringBuilder",
+    "options": ["StringBuffer", "String", "StringBuilder", "StringJoiner"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "By avoiding internal synchronization checks, StringBuilder handles sequential modifications much faster than standard strings."
+  },
+  {
+    "id": "java-q081",
+    "question": "Allocating separate machine scheduling space and invoking runtime multi-threaded paths requires developers to call the Thread object's native ______ method.",
+    "answer": "start()",
+    "options": ["run()", "start()", "init()", "execute()"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Invoking start() requests the underlying system layer to allocate necessary execution pipelines before triggering the main run method."
+  },
+  {
+    "id": "java-q082",
+    "question": "Subclass initializers pass variables directly up to parent structures by using the explicit ______ method call expression.",
+    "answer": "super",
+    "options": ["this", "super", "parent", "base"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The super execution pass establishes initial parent parameters securely before running custom subtype initializations."
+  },
+  {
+    "id": "java-q083",
+    "question": "The ______ collection uses an interior hash structure to reject redundant entries while keeping storage values unique.",
+    "answer": "HashSet",
+    "options": ["ArrayList", "LinkedList", "HashSet", "Vector"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "A HashSet achieves near constant-time membership validation by managing elements internally via a hashing architecture."
+  },
+  {
+    "id": "java-q084",
+    "question": "Persistence managers leverage ______ strategies to optimize network consumption by delaying the retrieval of associated entity dependencies until requested.",
+    "answer": "lazy loading",
+    "options": ["eager fetching", "lazy loading", "caching", "serialization"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Lazy loading prevents unnecessary overhead by restricting database actions strictly to data entities read by active code paths."
+  },
+  {
+    "id": "java-q085",
+    "question": "Java 14 introduces ______ to eliminate data-carrier boilerplate by automatically implementing getters, hash calculation methods, and identity checks.",
+    "answer": "Records",
+    "options": ["Enums", "Records", "Interfaces", "Annotations"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Records provide an optimal data transport mechanism by generating standard immutable object schemas directly from field declarations."
+  },
+  {
+    "id": "java-q086",
+    "question": "An interface that limits its abstract content strictly to a single method signature is a ______ interface, making it compatible with lambda assignments.",
+    "answer": "functional",
+    "options": ["marker", "functional", "dynamic", "static"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Interfaces with exactly one abstract method serve as compatible structural foundations for modern lambda expression compilation blocks."
+  },
+  {
+    "id": "java-q087",
+    "question": "If incoming JSON request parameters fail data validation rules configured on a controller via @Valid, Spring Boot returns a ______ status code.",
+    "answer": "400 Bad Request",
+    "options": [
+      "404 Not Found",
+      "500 Internal Error",
+      "400 Bad Request",
+      "401 Unauthorized"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A 400 Bad Request response alerts calling clients that a payload structure violated validation boundaries."
+  },
+  {
+    "id": "java-q088",
+    "question": "Java resolves overridden method execution points dynamically during runtime processing through a system pattern known as ______.",
+    "answer": "Dynamic Method Dispatch",
+    "options": [
+      "Static Binding",
+      "Dynamic Method Dispatch",
+      "Type Erasure",
+      "Bytecode Verification"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Dynamic Method Dispatch matches messages to execution logic based dynamically on object type information loaded at runtime."
+  },
+  {
+    "id": "java-q089",
+    "question": "Attempting structural additions or removals from within a list wrapper produced by Arrays.asList() results in an explicit ______ at runtime.",
+    "answer": "UnsupportedOperationException",
+    "options": [
+      "NullPointerException",
+      "IndexOutOfBoundsException",
+      "UnsupportedOperationException",
+      "ConcurrentModificationException"
+    ],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Resizing operations violate fixed arrays constraints, resulting in immediate UnsupportedOperationException errors."
+  },
+  {
+    "id": "java-q090",
+    "question": "The ______ garbage collection engine segments the heap into distinct physical regions to maintain highly predictable application execution pauses.",
+    "answer": "G1",
+    "options": ["Serial GC", "Parallel GC", "G1", "ZGC"],
+    "category": "Java Dev J.I.",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "G1 groups heap regions cleanly to target locations containing mostly dead elements, optimizing application pause durations."
+  }
+]

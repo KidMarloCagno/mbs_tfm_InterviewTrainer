@@ -4,6 +4,7 @@ import databaseQuestions from "@/prisma/data/sets/database.json";
 import djangoQuestions from "@/prisma/data/sets/django.json";
 import frontendQuestions from "@/prisma/data/sets/frontend.json";
 import javaQuestions from "@/prisma/data/sets/java.json";
+import javaDevJobIntQuestions from "@/prisma/data/sets/javaDevJobInt.json";
 import javascriptQuestions from "@/prisma/data/sets/javascript.json";
 import pythonQuestions from "@/prisma/data/sets/python.json";
 import reactQuestions from "@/prisma/data/sets/react.json";
@@ -45,6 +46,11 @@ const questionsData: Record<string, GameQuestion[]> = {
   Django: mapSet(djangoQuestions as QuestionSetItem[], "Django", "dj"),
   Frontend: mapSet(frontendQuestions as QuestionSetItem[], "Frontend", "fe"),
   Java: mapSet(javaQuestions as QuestionSetItem[], "Java", "jv"),
+  "Java Dev Job Interview": mapSet(
+    javaDevJobIntQuestions as QuestionSetItem[],
+    "Java Dev J.I.",
+    "java",
+  ),
   JavaScript: mapSet(
     javascriptQuestions as QuestionSetItem[],
     "JavaScript",
