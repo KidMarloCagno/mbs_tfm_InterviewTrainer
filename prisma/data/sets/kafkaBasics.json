@@ -726,7 +726,7 @@
   },
   {
     "id": "kf-q061",
-    "question": "The core server unit responsible for receiving, writing, and hosting topic streams inside a Kafka network cluster is called a **Broker**.",
+    "question": "The core server unit responsible for receiving, writing, and hosting topic streams inside a Kafka network cluster is called a ______.",
     "answer": "Broker",
     "options": ["Broker", "Exchange", "Worker", "Channel"],
     "category": "Kafka Basics",
@@ -736,7 +736,7 @@
   },
   {
     "id": "kf-q062",
-    "question": "An abstract, named stream bucket configuration holding organized logical categories of events in Kafka is termed a **Topic**.",
+    "question": "An abstract, named stream bucket configuration holding organized logical categories of events in Kafka is termed a ______.",
     "answer": "Topic",
     "options": ["Queue", "Topic", "Segment", "Cluster"],
     "category": "Kafka Basics",
@@ -746,7 +746,7 @@
   },
   {
     "id": "kf-q063",
-    "question": "To achieve data parallel scaling limits, a single Kafka topic stream is divided structurally into multiple **partitions**.",
+    "question": "To achieve data parallel scaling limits, a single Kafka topic stream is divided structurally into multiple ______.",
     "answer": "partitions",
     "options": ["segments", "clusters", "partitions", "indexes"],
     "category": "Kafka Basics",
@@ -756,7 +756,7 @@
   },
   {
     "id": "kf-q064",
-    "question": "Each event message written inside an individual partition layout is tracked by a unique sequential index integer called an **offset**.",
+    "question": "Each event message written inside an individual partition layout is tracked by a unique sequential index integer called an ______.",
     "answer": "offset",
     "options": ["offset", "uuid", "timestamp", "pointer"],
     "category": "Kafka Basics",
@@ -766,7 +766,7 @@
   },
   {
     "id": "kf-q065",
-    "question": "Because Kafka writes messages to an **immutable commit log**, reading an event record does not cause its structural erasure.",
+    "question": "Because Kafka writes messages to an ______, reading an event record does not cause its structural erasure.",
     "answer": "immutable commit log",
     "options": [
       "ephemeral RAM buffer",
@@ -781,7 +781,7 @@
   },
   {
     "id": "kf-q066",
-    "question": "The component application responsible for calculating and designating partition destinations for records is the **Producer**.",
+    "question": "The component application responsible for calculating and designating partition destinations for records is the ______.",
     "answer": "Producer",
     "options": ["Broker", "Consumer", "Producer", "Coordinator"],
     "category": "Kafka Basics",
@@ -791,7 +791,7 @@
   },
   {
     "id": "kf-q067",
-    "question": "Messages sharing a matching, identical **non-null key** will always land together sequentially inside the exact same partition target.",
+    "question": "Messages sharing a matching, identical ______ will always land together sequentially inside the exact same partition target.",
     "answer": "non-null key",
     "options": [
       "non-null key",
@@ -806,7 +806,7 @@
   },
   {
     "id": "kf-q068",
-    "question": "A logical team collection combining multiple application readers to share processing duties is a **Consumer Group**.",
+    "question": "A logical team collection combining multiple application readers to share processing duties is a ______.",
     "answer": "Consumer Group",
     "options": [
       "Worker Ensemble",
@@ -821,7 +821,7 @@
   },
   {
     "id": "kf-q069",
-    "question": "If a group includes more consumer instances than active topic partitions, the surplus readers remain **idle**.",
+    "question": "If a group includes more consumer instances than active topic partitions, the surplus readers remain ______.",
     "answer": "idle",
     "options": ["active", "idle", "blocked", "terminated"],
     "category": "Kafka Basics",
@@ -831,7 +831,7 @@
   },
   {
     "id": "kf-q070",
-    "question": "Kafka manages group progress tracking statistics by writing indices to an internal system topic named **__consumer_offsets**.",
+    "question": "Kafka manages group progress tracking statistics by writing indices to an internal system topic named ______.",
     "answer": "__consumer_offsets",
     "options": [
       "__cluster_metadata",
@@ -846,7 +846,7 @@
   },
   {
     "id": "kf-q071",
-    "question": "When cluster conditions shift or members drop offline, a consumer group initiates a partition **rebalance**.",
+    "question": "When cluster conditions shift or members drop offline, a consumer group initiates a partition ______.",
     "answer": "rebalance",
     "options": ["compaction", "rebalance", "failover", "truncation"],
     "category": "Kafka Basics",
@@ -856,7 +856,7 @@
   },
   {
     "id": "kf-q072",
-    "question": "The node replica instance assigned to handle all client read and write request streams is the **Leader**.",
+    "question": "The node replica instance assigned to handle all client read and write request streams is the ______.",
     "answer": "Leader",
     "options": ["Leader", "Follower", "Coordinator", "Aggregator"],
     "category": "Kafka Basics",
@@ -866,7 +866,7 @@
   },
   {
     "id": "kf-q073",
-    "question": "The set of partition replicas that match the leader's log state within a timeout window is called the **In-Sync Replicas** list.",
+    "question": "The set of partition replicas that match the leader's log state within a timeout window is called the ______ list.",
     "answer": "In-Sync Replicas",
     "options": [
       "Active Node Pool",
@@ -881,7 +881,7 @@
   },
   {
     "id": "kf-q074",
-    "question": "Setting the producer's configuration parameter to **acks=all** requires the leader to wait for confirmations from all ISRs before responding.",
+    "question": "Setting the producer's configuration parameter to ______ requires the leader to wait for confirmations from all ISRs before responding.",
     "answer": "acks=all",
     "options": ["acks=0", "acks=1", "acks=all", "acks=none"],
     "category": "Kafka Basics",
@@ -891,7 +891,7 @@
   },
   {
     "id": "kf-q075",
-    "question": "Unlike classic short-lived messaging models, Kafka's core value rests on a **durable, replayable append-only** commit log structure.",
+    "question": "Unlike classic short-lived messaging models, Kafka's core value rests on a ______ commit log structure.",
     "answer": "durable, replayable append-only",
     "options": [
       "transient memory-mapped volatile",
@@ -906,7 +906,7 @@
   },
   {
     "id": "kf-q076",
-    "question": "Kafka can manage metadata consensus internally without an external ZooKeeper dependency by enabling **KRaft mode**.",
+    "question": "Kafka can manage metadata consensus internally without an external ZooKeeper dependency by enabling ______.",
     "answer": "KRaft mode",
     "options": [
       "ZooKeeper mode",
@@ -921,7 +921,7 @@
   },
   {
     "id": "kf-q077",
-    "question": "To retain only the latest state changes for specific record identifiers, use a cleanup policy called **Log Compaction**.",
+    "question": "To retain only the latest state changes for specific record identifiers, use a cleanup policy called ______.",
     "answer": "Log Compaction",
     "options": [
       "Log Compaction",
@@ -936,7 +936,7 @@
   },
   {
     "id": "kf-q078",
-    "question": "Kafka applications manage data extraction workloads by using consumers that **pull data batches** from broker partitions.",
+    "question": "Kafka applications manage data extraction workloads by using consumers that ______ from broker partitions.",
     "answer": "pull data batches",
     "options": [
       "receive pushed individual records",
@@ -951,7 +951,7 @@
   },
   {
     "id": "kf-q079",
-    "question": "If the message processing time loop takes too long and exceeds **max.poll.interval.ms**, a cluster rebalance is triggered.",
+    "question": "If the message processing time loop takes too long and exceeds ______, a cluster rebalance is triggered.",
     "answer": "max.poll.interval.ms",
     "options": [
       "session.timeout.ms",
@@ -966,7 +966,7 @@
   },
   {
     "id": "kf-q080",
-    "question": "Out of the box, Kafka's message ordering guarantees are strictly limited to **individual partition boundaries**.",
+    "question": "Out of the box, Kafka's message ordering guarantees are strictly limited to ______.",
     "answer": "individual partition boundaries",
     "options": [
       "global cluster namespaces",
@@ -981,7 +981,7 @@
   },
   {
     "id": "kf-q081",
-    "question": "The property that enforces a minimum number of online matching replicas for an acks=all write to succeed is **min.insync.replicas**.",
+    "question": "The property that enforces a minimum number of online matching replicas for an acks=all write to succeed is ______.",
     "answer": "min.insync.replicas",
     "options": [
       "replication.factor",
@@ -996,7 +996,7 @@
   },
   {
     "id": "kf-q082",
-    "question": "Committing offsets only after data is successfully stored in a target database achieves **At-Least-Once** delivery.",
+    "question": "Committing offsets only after data is successfully stored in a target database achieves ______ delivery.",
     "answer": "At-Least-Once",
     "options": [
       "At-Most-Once",
@@ -1011,7 +1011,7 @@
   },
   {
     "id": "kf-q083",
-    "question": "Committing tracking indexes immediately upon reading data batches before processing begins results in **At-Most-Once** delivery.",
+    "question": "Committing tracking indexes immediately upon reading data batches before processing begins results in ______ delivery.",
     "answer": "At-Most-Once",
     "options": [
       "At-Most-Once",
@@ -1026,7 +1026,7 @@
   },
   {
     "id": "kf-q084",
-    "question": "To decouple metadata structures and share schemas via lightweight ID numbers, developers integrate a **Schema Registry**.",
+    "question": "To decouple metadata structures and share schemas via lightweight ID numbers, developers integrate a ______.",
     "answer": "Schema Registry",
     "options": [
       "Metadata Repository",
@@ -1041,7 +1041,7 @@
   },
   {
     "id": "kf-q085",
-    "question": "Grouping multiple message records together into a single network transmission to improve throughput is called **Batching**.",
+    "question": "Grouping multiple message records together into a single network transmission to improve throughput is called ______.",
     "answer": "Batching",
     "options": ["Batching", "Compacting", "Streaming", "Multiplexing"],
     "category": "Kafka Basics",
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "kf-q086",
-    "question": "Kafka achieves high-performance disk storage operations by writing partition data to **append-only log segments**.",
+    "question": "Kafka achieves high-performance disk storage operations by writing partition data to ______.",
     "answer": "append-only log segments",
     "options": [
       "relational index tables",
@@ -1066,7 +1066,7 @@
   },
   {
     "id": "kf-q087",
-    "question": "The time duration a record remains valid and accessible on disk before it is eligible for deletion is managed by **log.retention.hours**.",
+    "question": "The time duration a record remains valid and accessible on disk before it is eligible for deletion is managed by ______.",
     "answer": "log.retention.hours",
     "options": [
       "log.retention.hours",
@@ -1081,7 +1081,7 @@
   },
   {
     "id": "kf-q088",
-    "question": "The measurement tracking how far behind a consumer group's read position is relative to the latest written record is called **consumer lag**.",
+    "question": "The measurement tracking how far behind a consumer group's read position is relative to the latest written record is called ______.",
     "answer": "consumer lag",
     "options": [
       "network jitter",
@@ -1096,7 +1096,7 @@
   },
   {
     "id": "kf-q089",
-    "question": "When client apps publish to a missing topic and auto-provisioning is enabled, Kafka instantiates the stream using **default cluster properties**.",
+    "question": "When client apps publish to a missing topic and auto-provisioning is enabled, Kafka instantiates the stream using ______.",
     "answer": "default cluster properties",
     "options": [
       "default cluster properties",
@@ -1111,7 +1111,7 @@
   },
   {
     "id": "kf-q090",
-    "question": "Kafka bypasses user-space application memory buffers when transferring data from disk cache to network sockets by leveraging **Zero-Copy** technology.",
+    "question": "Kafka bypasses user-space application memory buffers when transferring data from disk cache to network sockets by leveraging ______ technology.",
     "answer": "Zero-Copy",
     "options": ["Direct IO", "Memory Mapping", "Zero-Copy", "Kernel Buffering"],
     "category": "Kafka Basics",
