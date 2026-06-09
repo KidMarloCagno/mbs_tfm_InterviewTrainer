@@ -706,7 +706,7 @@
   },
   {
     "id": "mvn-q061",
-    "question": "The central XML project orchestration profile layout file for a Maven installation configuration is named **pom.xml**.",
+    "question": "The central XML project orchestration profile layout file for a Maven installation configuration is named ______.",
     "answer": "pom.xml",
     "options": ["settings.xml", "pom.xml", "build.gradle", "manifest.mf"],
     "category": "Maven Basics",
@@ -716,7 +716,7 @@
   },
   {
     "id": "mvn-q062",
-    "question": "Maven coordinates require a groupId, an artifactId, and a **version** to uniquely pinpoint an artifact location.",
+    "question": "Maven coordinates require a groupId, an artifactId, and a ______ to uniquely pinpoint an artifact location.",
     "answer": "version",
     "options": ["classifier", "scope", "version", "extension"],
     "category": "Maven Basics",
@@ -726,7 +726,7 @@
   },
   {
     "id": "mvn-q063",
-    "question": "To transform source files into executable machine runtime classes, the default lifecycle passes through the **compile** phase.",
+    "question": "To transform source files into executable machine runtime classes, the default lifecycle passes through the ______ phase.",
     "answer": "compile",
     "options": ["validate", "compile", "package", "verify"],
     "category": "Maven Basics",
@@ -736,7 +736,7 @@
   },
   {
     "id": "mvn-q064",
-    "question": "The global user-level caching location folder for stored artifacts is situated under the path **~/.m2/repository**.",
+    "question": "The global user-level caching location folder for stored artifacts is situated under the path ______.",
     "answer": "~/.m2/repository",
     "options": [
       "~/.m2/repository",
@@ -751,7 +751,7 @@
   },
   {
     "id": "mvn-q065",
-    "question": "When an external testing library is excluded from final deployment targets, it should be configured using the **test** scope.",
+    "question": "When an external testing library is excluded from final deployment targets, it should be configured using the ______ scope.",
     "answer": "test",
     "options": ["runtime", "provided", "compile", "test"],
     "category": "Maven Basics",
@@ -761,7 +761,7 @@
   },
   {
     "id": "mvn-q066",
-    "question": "The phase context that wipes out old local build structures and cleans target paths is **clean**.",
+    "question": "The phase context that wipes out old local build structures and cleans target paths is ______.",
     "answer": "clean",
     "options": ["purge", "delete", "clean", "reset"],
     "category": "Maven Basics",
@@ -771,7 +771,7 @@
   },
   {
     "id": "mvn-q067",
-    "question": "To successfully package an application and distribute it to a local machine repository structure, you invoke **mvn install**.",
+    "question": "To successfully package an application and distribute it to a local machine repository structure, you invoke ______.",
     "answer": "mvn install",
     "options": ["mvn package", "mvn compile", "mvn install", "mvn deploy"],
     "category": "Maven Basics",
@@ -781,7 +781,7 @@
   },
   {
     "id": "mvn-q068",
-    "question": "The default root path location structure designated for main system source code structures is **src/main/java**.",
+    "question": "The default root path location structure designated for main system source code structures is ______.",
     "answer": "src/main/java",
     "options": ["src/java", "source/main", "src/main/java", "app/src/java"],
     "category": "Maven Basics",
@@ -791,7 +791,7 @@
   },
   {
     "id": "mvn-q069",
-    "question": "To specify a library provided by an external application server or hosting web environment at execution, select the **provided** scope.",
+    "question": "To specify a library provided by an external application server or hosting web environment at execution, select the ______ scope.",
     "answer": "provided",
     "options": ["system", "provided", "runtime", "compile"],
     "category": "Maven Basics",
@@ -801,7 +801,7 @@
   },
   {
     "id": "mvn-q070",
-    "question": "The feature that automatically evaluates and imports secondary dependencies required by your primary libraries is called **transitive** dependency resolution.",
+    "question": "The feature that automatically evaluates and imports secondary dependencies required by your primary libraries is called ______ dependency resolution.",
     "answer": "transitive",
     "options": ["transitive", "recursive", "dynamic", "inherited"],
     "category": "Maven Basics",
@@ -811,7 +811,7 @@
   },
   {
     "id": "mvn-q071",
-    "question": "Sharing baseline build variables and universal structural rules among sub-modules is achieved using **Parent POM inheritance**.",
+    "question": "Sharing baseline build variables and universal structural rules among sub-modules is achieved using ______.",
     "answer": "Parent POM inheritance",
     "options": [
       "Global properties",
@@ -826,7 +826,7 @@
   },
   {
     "id": "mvn-q072",
-    "question": "To lock target configurations without directly applying them to sub-modules, define libraries within the **dependencyManagement** block.",
+    "question": "To lock target configurations without directly applying them to sub-modules, define libraries within the ______ block.",
     "answer": "dependencyManagement",
     "options": [
       "dependencyManagement",
@@ -841,7 +841,7 @@
   },
   {
     "id": "mvn-q073",
-    "question": "The standard execution handler responsible for launching automated test structures during validation routines is the **maven-surefire-plugin**.",
+    "question": "The standard execution handler responsible for launching automated test structures during validation routines is the ______.",
     "answer": "maven-surefire-plugin",
     "options": [
       "maven-failsafe-plugin",
@@ -856,7 +856,7 @@
   },
   {
     "id": "mvn-q074",
-    "question": "To block a specific down-stream transitive dependency from joining your project classpath, use the **exclusions** tag.",
+    "question": "To block a specific down-stream transitive dependency from joining your project classpath, use the ______ tag.",
     "answer": "exclusions",
     "options": ["exclusions", "omissions", "deletions", "dependencies"],
     "category": "Maven Basics",
@@ -866,7 +866,7 @@
   },
   {
     "id": "mvn-q075",
-    "question": "When deep structural dependency nodes clash at identical tree depths, Maven chooses the artifact based on **declaration order**.",
+    "question": "When deep structural dependency nodes clash at identical tree depths, Maven chooses the artifact based on ______.",
     "answer": "declaration order",
     "options": [
       "semantic versioning",
@@ -881,7 +881,7 @@
   },
   {
     "id": "mvn-q076",
-    "question": "Global workspace attributes, external server login credentials, and proxy routes are defined inside **settings.xml**.",
+    "question": "Global workspace attributes, external server login credentials, and proxy routes are defined inside ______.",
     "answer": "settings.xml",
     "options": [
       "pom.xml",
@@ -896,7 +896,7 @@
   },
   {
     "id": "mvn-q077",
-    "question": "An aggregator or structural orchestrator project that yields no raw binary output sets its packaging type to **pom**.",
+    "question": "An aggregator or structural orchestrator project that yields no raw binary output sets its packaging type to ______.",
     "answer": "pom",
     "options": ["jar", "war", "pom", "zip"],
     "category": "Maven Basics",
@@ -906,7 +906,7 @@
   },
   {
     "id": "mvn-q078",
-    "question": "To review the total structural end-result combination of all profile rules and parent layouts, trigger **mvn help:effective-pom**.",
+    "question": "To review the total structural end-result combination of all profile rules and parent layouts, trigger ______.",
     "answer": "mvn help:effective-pom",
     "options": [
       "mvn dependency:tree",
@@ -921,7 +921,7 @@
   },
   {
     "id": "mvn-q079",
-    "question": "The master base system blueprint layout from which all active projects derive background configurations is the **Super POM**.",
+    "question": "The master base system blueprint layout from which all active projects derive background configurations is the ______.",
     "answer": "Super POM",
     "options": ["Master XML", "Super POM", "Core Profile", "Root Archetype"],
     "category": "Maven Basics",
@@ -931,7 +931,7 @@
   },
   {
     "id": "mvn-q080",
-    "question": "The three standard engine core execution environments built natively into the tool framework are default, clean, and **site**.",
+    "question": "The three standard engine core execution environments built natively into the tool framework are default, clean, and ______.",
     "answer": "site",
     "options": ["compile", "package", "site", "deploy"],
     "category": "Maven Basics",
@@ -941,7 +941,7 @@
   },
   {
     "id": "mvn-q081",
-    "question": "To execute complex end-to-end integration flows that require live packaging environments, Maven uses the **integration-test** phase.",
+    "question": "To execute complex end-to-end integration flows that require live packaging environments, Maven uses the ______ phase.",
     "answer": "integration-test",
     "options": ["test", "verify", "integration-test", "install"],
     "category": "Maven Basics",
@@ -951,7 +951,7 @@
   },
   {
     "id": "mvn-q082",
-    "question": "To activate target configuration overrides depending on environmental parameters, you define **Maven Profiles**.",
+    "question": "To activate target configuration overrides depending on environmental parameters, you define ______.",
     "answer": "Maven Profiles",
     "options": [
       "Build Variants",
@@ -966,7 +966,7 @@
   },
   {
     "id": "mvn-q083",
-    "question": "The command parameter flag character syntax utilized to introduce a specific targeted profile activation at runtime is **-P**.",
+    "question": "The command parameter flag character syntax utilized to introduce a specific targeted profile activation at runtime is ______.",
     "answer": "-P",
     "options": ["-A", "-Profile", "--activate", "-P"],
     "category": "Maven Basics",
@@ -976,7 +976,7 @@
   },
   {
     "id": "mvn-q084",
-    "question": "To track dependency paths and inspect conflicting transitive library versions, execute the **mvn dependency:tree** command.",
+    "question": "To track dependency paths and inspect conflicting transitive library versions, execute the ______ command.",
     "answer": "mvn dependency:tree",
     "options": [
       "mvn dependency:tree",
@@ -991,7 +991,7 @@
   },
   {
     "id": "mvn-q085",
-    "question": "An active development build identifier tag that tells Maven to regularly pull updates from remote repositories is **-SNAPSHOT**.",
+    "question": "An active development build identifier tag that tells Maven to regularly pull updates from remote repositories is ______.",
     "answer": "-SNAPSHOT",
     "options": ["-BETA", "-RELEASE", "-SNAPSHOT", "-NIGHTLY"],
     "category": "Maven Basics",
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "mvn-q086",
-    "question": "To pack your custom binary classes along with all dependencies into a single deployment file, configure the **maven-shade-plugin**.",
+    "question": "To pack your custom binary classes along with all dependencies into a single deployment file, configure the ______.",
     "answer": "maven-shade-plugin",
     "options": [
       "maven-jar-plugin",
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "mvn-q087",
-    "question": "Custom build plugin definitions and execution bindings are declared inside the **&lt;build&gt;&lt;plugins&gt;** block.",
+    "question": "Custom build plugin definitions and execution bindings are declared inside the ______ block.",
     "answer": "<build><plugins>",
     "options": [
       "<dependencies>",
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "mvn-q088",
-    "question": "The specific setup step that triggers immediately after packaging and precedes integration routines is **pre-integration-test**.",
+    "question": "The specific setup step that triggers immediately after packaging and precedes integration routines is ______.",
     "answer": "pre-integration-test",
     "options": ["test", "verify", "pre-integration-test", "post-package"],
     "category": "Maven Basics",
@@ -1041,7 +1041,7 @@
   },
   {
     "id": "mvn-q089",
-    "question": "To bootstrap an unconfigured workspace from a predefined structural template model, run **archetype:generate**.",
+    "question": "To bootstrap an unconfigured workspace from a predefined structural template model, run ______.",
     "answer": "archetype:generate",
     "options": [
       "project:init",
@@ -1056,7 +1056,7 @@
   },
   {
     "id": "mvn-q090",
-    "question": "To skip compilation visibility but ensure availability during test execution and final delivery, assign the **runtime** scope.",
+    "question": "To skip compilation visibility but ensure availability during test execution and final delivery, assign the ______ scope.",
     "answer": "runtime",
     "options": ["compile", "provided", "system", "runtime"],
     "category": "Maven Basics",
