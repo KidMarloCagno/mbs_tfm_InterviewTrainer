@@ -22,24 +22,27 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ## Question Library
 
-More than **1,500 questions** across **14 topics**:
+More than **1,500 questions** across **17 topics**:
 
-| Topic           | Focus area                                                           |
-| --------------- | -------------------------------------------------------------------- |
-| Angular         | Framework architecture, components, directives, RxJS                 |
-| Backend         | REST APIs, authentication, server patterns, microservices            |
-| Database        | SQL, indexing, transactions, NoSQL fundamentals                      |
-| Design Patterns | Common architecture patterns, creational, structural, behavioral     |
-| Django          | ORM, views, middleware, REST framework                               |
-| Frontend        | HTML, CSS, browser APIs, performance, accessibility                  |
-| Git Basics      | Git commands, branching, merge workflows, commit history             |
-| Java            | Core language, OOP, concurrency, JVM internals                       |
-| JI Java         | Java interview patterns, job interview concepts, practical debugging |
-| JavaScript      | Language fundamentals, async, closures, ES2015+                      |
-| Python          | Language features, data structures, OOP, stdlib                      |
-| React           | Hooks, component patterns, state management, rendering               |
-| Spring          | IoC/DI, Spring Boot, MVC, Spring Data                                |
-| System Design   | Scalability, distributed systems, caching, messaging                 |
+| Topic              | Focus area                                                           |
+| ------------------ | -------------------------------------------------------------------- |
+| Angular            | Framework architecture, components, directives, RxJS                 |
+| Backend            | REST APIs, authentication, server patterns, microservices            |
+| Database           | SQL, indexing, transactions, NoSQL fundamentals                      |
+| Design Patterns    | Common architecture patterns, creational, structural, behavioral     |
+| Django             | ORM, views, middleware, REST framework                               |
+| Frontend           | HTML, CSS, browser APIs, performance, accessibility                  |
+| Git Basics         | Git commands, branching, merge workflows, commit history             |
+| Java               | Core language, OOP, concurrency, JVM internals                       |
+| JI Java            | Java interview patterns, job interview concepts, practical debugging |
+| JavaScript         | Language fundamentals, async, closures, ES2015+                      |
+| Python             | Language features, data structures, OOP, stdlib                      |
+| React              | Hooks, component patterns, state management, rendering               |
+| Spring             | IoC/DI, Spring Boot, MVC, Spring Data                                |
+| System Design      | Scalability, distributed systems, caching, messaging                 |
+| CI/CD Basics       | Continuous integration and delivery pipelines, build tooling         |
+| DevOps Basics      | Deployment practices, observability, infrastructure as code          |
+| Spring Boot Basics | Spring Boot starters, auto-configuration, actuator, packaging        |
 
 ## New Question Set Authoring
 

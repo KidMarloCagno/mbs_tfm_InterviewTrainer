@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "springboot-q001",
+    "question": "What is the primary architectural goal of the Spring Boot framework?",
+    "answer": "To simplify Spring application development by providing opinionated, out-of-the-box configuration defaults",
+    "options": [
+      "To completely replace the core Java virtual machine compilation process",
+      "To simplify Spring application development by providing opinionated, out-of-the-box configuration defaults",
+      "To enforce a strict front-end graphical rendering standard across applications",
+      "To eliminate the need for writing back-end Java code entirely"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring Boot simplifies application bootstrapping by assuming reasonable defaults (opinionated configuration), eliminating extensive XML or programmatic setup."
+  },
+  {
+    "id": "springboot-q002",
+    "question": "What are Spring Boot 'Starters' in a project build configuration?",
+    "answer": "Convenient dependency descriptors that group related libraries together for rapid integration",
+    "options": [
+      "Special server instances used strictly to test application code performance",
+      "Graphic design templates utilized to style web client login portals",
+      "Convenient dependency descriptors that group related libraries together for rapid integration",
+      "Command line utilities dedicated to compiling local bytecode profiles"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Starters are curated sets of dependency descriptors that pull in all required jars for a specific feature (like web or data), streamlining build file maintenance."
+  },
+  {
+    "id": "springboot-q003",
+    "question": "Which annotation serves as the main entry point marker for a standard Spring Boot application?",
+    "answer": "@SpringBootApplication",
+    "options": [
+      "@SpringMainConfiguration",
+      "@SpringBootApplication",
+      "@EnableSpringComponents",
+      "@AutoConfigureApplication"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The `@SpringBootApplication` annotation marks the main class containing the application's bootstrap logic, consolidating multiple core configuration options."
+  },
+  {
+    "id": "springboot-q004",
+    "question": "Which three core annotations are encapsulated within the composite `@SpringBootApplication` annotation?",
+    "answer": "@SpringBootConfiguration, @EnableAutoConfiguration, and @ComponentScan",
+    "options": [
+      "@Configuration, @Service, and @Repository",
+      "@RestController, @ResponseBody, and @Autowired",
+      "@SpringBootConfiguration, @EnableAutoConfiguration, and @ComponentScan",
+      "@EnableMvc, @Component, and @Value"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "`@SpringBootApplication` functions as a convenience macro, activating configuration capabilities, automated classpaths scanning, and opinionated context initialization."
+  },
+  {
+    "id": "springboot-q005",
+    "question": "Which web server is embedded and executed by default within the `spring-boot-starter-web` module?",
+    "answer": "Apache Tomcat",
+    "options": [
+      "Eclipse Jetty",
+      "Red Hat Undertow",
+      "Apache Tomcat",
+      "Nginx Web Host"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "By default, the web starter bundles Apache Tomcat as its embedded servlet container, allowing apps to run directly without installing external web containers."
+  },
+  {
+    "id": "springboot-q006",
+    "question": "What are the two standard file formats supported out-of-the-box for externalizing Spring Boot configurations?",
+    "answer": ".properties and .yml (YAML)",
+    "options": [
+      ".properties and .yml (YAML)",
+      ".xml and .json",
+      ".ini and .conf",
+      ".txt and .csv"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring Boot scans `application.properties` or `application.yml` files out of the box to resolve environment-specific runtime configurations."
+  },
+  {
+    "id": "springboot-q007",
+    "question": "Which callback interface is used to execute a block of code immediately after the Spring Application Context completely starts?",
+    "answer": "CommandLineRunner",
+    "options": [
+      "ApplicationShutdownListener",
+      "ContextRefreshedFinalizer",
+      "CommandLineRunner",
+      "ServletContainerInitializer"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Implementing `CommandLineRunner` or `ApplicationRunner` provides access to a `run()` method that Spring executes right after the application boots up."
+  },
+  {
+    "id": "springboot-q008",
+    "question": "What is the primary objective of introducing the Spring Boot Actuator module into a system?",
+    "answer": "To expose production-ready features like application health checks, metrics, and environment details via HTTP endpoints",
+    "options": [
+      "To optimize raw database query transaction compiling durations",
+      "To automatically generate client-side JavaScript user interface components",
+      "To expose production-ready features like application health checks, metrics, and environment details via HTTP endpoints",
+      "To encrypt local data transport layers across cloud server arrays"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Actuator brings production-grade telemetry, monitoring endpoints, metrics tracking, and thread-dumps out of the box without manual development."
+  },
+  {
+    "id": "springboot-q009",
+    "question": "Which configuration property is explicitly used to specify the active profile environment name at runtime?",
+    "answer": "spring.profiles.active",
+    "options": [
+      "spring.environment.target",
+      "spring.profiles.active",
+      "spring.config.profile-name",
+      "spring.run.mode"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Setting `spring.profiles.active` triggers environment-specific configurations (e.g., dev, prod) by loading corresponding properties files."
+  },
+  {
+    "id": "springboot-q010",
+    "question": "What developer benefit does the `spring-boot-devtools` module provide during active application creation cycles?",
+    "answer": "Automatic application restarts and live reload features when changes are detected on the classpath",
+    "options": [
+      "Automated profiling of database cluster connection speeds",
+      "Automatic application restarts and live reload features when changes are detected on the classpath",
+      "Dynamic legal software license monitoring during deployment steps",
+      "Complete code generation of front-end dashboard presentation templates"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DevTools accelerates the inner-development loop by automatically restarting the application context whenever localized code finishes compilation."
+  },
+  {
+    "id": "springboot-q011",
+    "question": "What is the standard command line syntax used to execute a packaged self-contained Spring Boot application archive?",
+    "answer": "java -jar application-name.jar",
+    "options": [
+      "java -run application-name.war",
+      "run-springboot application-name.jar",
+      "java -jar application-name.jar",
+      "compile-java application-name.class"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring Boot packages applications into an executable 'fat' JAR containing all classes and dependencies, runnable via standard `java -jar` commands."
+  },
+  {
+    "id": "springboot-q012",
+    "question": "What is the foundational role of the Inversion of Control (IoC) Container within the Spring ecosystem?",
+    "answer": "Managing the instantiation, configuration, wiring, and lifecycle management of application beans",
+    "options": [
+      "Enforcing strict database encryption constraints on runtime records",
+      "Managing the instantiation, configuration, wiring, and lifecycle management of application beans",
+      "Optimizing network payload compression rules across internet routers",
+      "Generating automated documentation sheets from source code comments"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The IoC container takes responsibility for constructing objects, orchestrating dependencies, and managing their lifespan via dependency injection mechanisms."
+  },
+  {
+    "id": "springboot-q013",
+    "question": "Which stereotype annotation explicitly tells Spring that a class declares one or more factory methods producing context-managed beans?",
+    "answer": "@Configuration",
+    "options": ["@Service", "@Component", "@Configuration", "@Repository"],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Classes marked with `@Configuration` indicate source structures containing factory methods targeted by the bean initialization engine."
+  },
+  {
+    "id": "springboot-q014",
+    "question": "What is the default architectural scope assigned to a newly declared Spring bean?",
+    "answer": "Singleton",
+    "options": ["Prototype", "Request", "Session", "Singleton"],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "By default, Spring instantiates exactly one instance of a declared bean per IoC container session, sharing that unique instance across all injection points."
+  },
+  {
+    "id": "springboot-q015",
+    "question": "Which annotation requests automatic resolution and injection of a matching dependency into a target component field or constructor?",
+    "answer": "@Autowired",
+    "options": [
+      "@InjectComponent",
+      "@Autowired",
+      "@ResolveBean",
+      "@ResourceAllocation"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@Autowired` signals to the IoC metadata engine that a field, setter, or constructor parameters must be resolved and bound using existing container beans."
+  },
+  {
+    "id": "springboot-q016",
+    "question": "Which injection paradigm is recommended by the modern Spring team to enforce immutability and ease component testing?",
+    "answer": "Constructor Injection",
+    "options": [
+      "Field Injection via direct class variables",
+      "Setter Injection via public method endpoints",
+      "Constructor Injection",
+      "Interface Injection via external inheritance paths"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Constructor injection ensures required properties are non-null, allows immutable `final` assignments, and simplifies testing without specialized injection frameworks."
+  },
+  {
+    "id": "springboot-q017",
+    "question": "Which specific annotation is applied at the class level to designate a specialized RESTful controller where all methods return raw data payloads?",
+    "answer": "@RestController",
+    "options": [
+      "@WebController",
+      "@RestController",
+      "@DataController",
+      "@HttpEndpoint"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@RestController` explicitly configures web controllers to handle structural web objects, outputting responses directly in formats like JSON or XML."
+  },
+  {
+    "id": "springboot-q018",
+    "question": "The `@RestController` stereotypic annotation functions as a shorthand combination of which two distinct sub-annotations?",
+    "answer": "@Controller and @ResponseBody",
+    "options": [
+      "@Component and @ConfigurationProperties",
+      "@Controller and @ResponseBody",
+      "@Service and @Autowired",
+      "@WebEndpoint and @ManagedBean"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "`@RestController` combines structural view controller logic (`@Controller`) with automatic serialization mapping of output responses (`@ResponseBody`)."
+  },
+  {
+    "id": "springboot-q019",
+    "question": "Which shorthand annotation is explicitly designed to handle incoming HTTP GET requests for targeted endpoint paths?",
+    "answer": "@GetMapping",
+    "options": ["@GetAction", "@FetchMapping", "@GetMapping", "@HttpRetrieve"],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@GetMapping` provides a clean shortcut for `@RequestMapping(method = RequestMethod.GET)`, clarifying standard HTTP retrieval processing paths."
+  },
+  {
+    "id": "springboot-q020",
+    "question": "Which annotation binds an incoming URL template path variable (e.g., `/users/{id}`) directly onto a Java controller method parameter?",
+    "answer": "@PathVariable",
+    "options": [
+      "@RequestParam",
+      "@PathVariable",
+      "@UrlVariable",
+      "@QueryAttribute"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@PathVariable` extracts dynamic path tokens straight from the requested URI structure, passing them as arguments into your method signature."
+  },
+  {
+    "id": "springboot-q021",
+    "question": "Which annotation maps standard HTTP query string arguments (e.g., `?page=2`) into incoming controller arguments?",
+    "answer": "@RequestParam",
+    "options": [
+      "@PathVariable",
+      "@QueryValue",
+      "@RequestParam",
+      "@RequestHeader"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@RequestParam` binds explicit web query parameters or form parameters directly to Java data variables during endpoint handling."
+  },
+  {
+    "id": "springboot-q022",
+    "question": "Which annotation triggers automatic deserialization of an incoming HTTP request body payload directly into a target Java POJO?",
+    "answer": "@RequestBody",
+    "options": ["@RequestPayload", "@ModelData", "@RequestBody", "@HttpInput"],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "`@RequestBody` routes incoming JSON, XML, or form content through internal message converters to reconstruct structural Java objects dynamically."
+  },
+  {
+    "id": "springboot-q023",
+    "question": "Which property key is modified inside `application.properties` to switch the embedded web container listening port from 8080 to a custom alternative?",
+    "answer": "server.port",
+    "options": [
+      "spring.web.port-number",
+      "server.port",
+      "http.container.port",
+      "tomcat.listening.address"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The `server.port` key configures the listening port of the active embedded web engine, supporting custom ports or random allocations using `0`."
+  },
+  {
+    "id": "springboot-q024",
+    "question": "What is the core function of the web utility found at start.spring.io (Spring Initializr)?",
+    "answer": "To generate an empty, ready-to-import Spring Boot project structure with customized starter configurations",
+    "options": [
+      "To monitor active production server memory usages directly",
+      "To compile local Java source files into cloud executable byte formats",
+      "To generate an empty, ready-to-import Spring Boot project structure with customized starter configurations",
+      "To automatically translate SQL database structures into front-end components"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Spring Initializr bootstraps project generation, allowing developers to define build engines, metadata, and core dependencies through an intuitive portal."
+  },
+  {
+    "id": "springboot-q025",
+    "question": "Which mechanism does Spring Boot auto-configuration use to determine if a bean should be loaded based on environment properties?",
+    "answer": "Conditional Annotations",
+    "options": [
+      "Dynamic Reflection Loops",
+      "Static Aspect Jars",
+      "Conditional Annotations",
+      "Manual Manifest Scanning"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Conditional annotations (such as `@ConditionalOnProperty` or `@ConditionalOnClass`) evaluate environment states at startup to conditionally construct components."
+  },
+  {
+    "id": "springboot-q026",
+    "question": "What is the default logging framework implementation integrated into Spring Boot starters via SLF4J?",
+    "answer": "Logback",
+    "options": ["Log4j", "Logback", "Java Util Logging", "Commons Logging"],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Spring Boot leverages SLF4J as a facade and configures Logback by default for standardized console and file logging formatting."
+  },
+  {
+    "id": "springboot-q027",
+    "question": "What is the default scanning boundary used by Spring Boot if no explicit base packages are specified in `@ComponentScan`?",
+    "answer": "The package containing the main application configuration class and all of its sub-packages",
+    "options": [
+      "The entire collection of external dependency jars inside the maven path",
+      "The package containing the main application configuration class and all of its sub-packages",
+      "Only the root-level java package matching the system hostname",
+      "Classes explicitly marked within the project metadata file layout"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Spring Boot infers the scanning root from the package containing the `@SpringBootApplication` file, automatically indexing all underlying child packages."
+  },
+  {
+    "id": "springboot-q028",
+    "question": "What specific file name must be placed inside the project classpath resources folder to override the default startup ascii text logo?",
+    "answer": "banner.txt",
+    "options": [
+      "logo.ascii",
+      "spring-logo.txt",
+      "banner.txt",
+      "startup-art.properties"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Placing a text file named `banner.txt` into the root resources path allows customization of the ASCII art displayed during application boot."
+  },
+  {
+    "id": "springboot-q029",
+    "question": "What packaging format does Spring Boot heavily encourage for cloud-native microservices over traditional application servers?",
+    "answer": "Executable JAR",
+    "options": [
+      "Traditional WAR",
+      "Enterprise EAR",
+      "Executable JAR",
+      "Zipped Resource Classes"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Executable JAR packaging suits cloud infrastructure because it abstracts away application server installations by bundling runtime engines directly."
+  },
+  {
+    "id": "springboot-q030",
+    "question": "What is the key functional difference between `CommandLineRunner` and `ApplicationRunner` arguments?",
+    "answer": "ApplicationRunner parses arguments into an abstract ApplicationArguments object rather than raw String arrays",
+    "options": [
+      "CommandLineRunner runs asynchronously while ApplicationRunner runs sequentially",
+      "ApplicationRunner executes before the embedded server initializes completely",
+      "ApplicationRunner parses arguments into an abstract ApplicationArguments object rather than raw String arrays",
+      "CommandLineRunner can only be declared inside external XML configurations"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "`ApplicationRunner` wraps command arguments inside an `ApplicationArguments` structure, simplifying the processing of option keys and positional strings."
+  },
+  {
+    "id": "springboot-q031",
+    "question": "True or False: Spring Boot completely replaces the core Spring Framework, meaning you no longer use core Spring paradigms like IoC.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Spring Boot is an extension layer built on top of the Spring Framework, designed to simplify configuration while relying on core Spring IoC and AOP."
+  },
+  {
+    "id": "springboot-q032",
+    "question": "True or False: The `@SpringBootApplication` annotation should ideally be placed on the main class containing the application's executable main method.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Placing `@SpringBootApplication` on the main entry point ensures standard configuration, component scanning, and auto-configuration bootstrap correctly."
+  },
+  {
+    "id": "springboot-q033",
+    "question": "True or False: Running a standard Spring Boot web application requires manually downloading and installing a standalone Tomcat server instance locally.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Spring Boot embeds a Tomcat server directly within its starter package, allowing applications to start self-sufficiently without external server tools."
+  },
+  {
+    "id": "springboot-q034",
+    "question": "True or False: Configuration data structured inside an application.yml file maintains a hierarchical format compared to dot-notated application.properties.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "YAML provides nesting via white space, structuring configurations cleanly compared to repetitive dot-notated flat key rows."
+  },
+  {
+    "id": "springboot-q035",
+    "question": "True or False: All Spring Boot Actuator endpoints, including /env and /beans, are fully exposed and visible over HTTP public web channels by default.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "For security reasons, newer versions of Spring Boot restrict public web access to only `/health` and `/info` by default, requiring explicit exposure via parameters."
+  },
+  {
+    "id": "springboot-q036",
+    "question": "True or False: The component stereotype annotation `@Component` functions as a specialized form of the `@Service` annotation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The inverse is true: `@Component` is the generic base meta-annotation, while `@Service`, `@Repository`, and `@Controller` are specialized targets."
+  },
+  {
+    "id": "springboot-q037",
+    "question": "True or False: Spring containers instantiate components as Prototype scope by default, meaning every class call fetches a completely new memory instance.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Spring containers manage objects as Singleton instances by default, initializing a single reusable instance per application scope."
+  },
+  {
+    "id": "springboot-q038",
+    "question": "True or False: When `spring-boot-devtools` is active, updating a compiled class file triggers an automatic reload of the application context.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "DevTools actively monitors classpath state, triggering automated restarts upon change detection to speed up interactive local code modifications."
+  },
+  {
+    "id": "springboot-q039",
+    "question": "True or False: A running Spring Boot application can have multiple configuration profiles active simultaneously.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "You can declare a comma-separated list of values (e.g., `dev,mysql,cloud`) to layer active operational properties simultaneously."
+  },
+  {
+    "id": "springboot-q040",
+    "question": "True or False: When utilizing `@RestController`, every individual endpoint method inside that class must be explicitly marked with `@ResponseBody`.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The `@RestController` annotation implies `@ResponseBody` globally across all methods, automatically serializing data outputs."
+  },
+  {
+    "id": "springboot-q041",
+    "question": "True or False: Spring Boot demands an active database connection profile to successfully initialize any application, even a basic terminal console log.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "A database connection is only sought if explicit data persistency dependencies (like JPA or JDBC starters) are present on the project classpath."
+  },
+  {
+    "id": "springboot-q042",
+    "question": "True or False: The `spring-boot-maven-plugin` handles compiling code classes and packaging everything into an executable fat JAR structural layout.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "This build plugin hooks into packaging cycles to build executable archives containing source components and nested dependency jars."
+  },
+  {
+    "id": "springboot-q043",
+    "question": "True or False: Values explicitly specified in `application.properties` always override parameter modifications passed as terminal command-line arguments.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Spring Boot enforces a strict configuration hierarchy where command-line arguments take precedence over internal properties file settings."
+  },
+  {
+    "id": "springboot-q044",
+    "question": "True or False: Implementing Constructor Injection allows developers to mark dependency fields as final, enforcing structural class immutability.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Because arguments pass directly into constructors during instantiation, components can assign them to `final` variables safely."
+  },
+  {
+    "id": "springboot-q045",
+    "question": "True or False: The `@Qualifier` annotation resolves runtime injection ambiguity when multiple bean implementations match a requested type destination.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "`@Qualifier` isolates target candidates by specifying the exact name of the component required at that dependency boundary."
+  },
+  {
+    "id": "springboot-q046",
+    "question": "True or False: Spring Boot's auto-configuration evaluating engine parses conditional markers to create infrastructure beans dynamically based on classpath states.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Auto-configuration scans classpaths for missing components or keys using conditional parameters, initializing required features on demand."
+  },
+  {
+    "id": "springboot-q047",
+    "question": "True or False: To change the startup ASCII text graphics, you must name your text configuration file `spring-banner.txt` inside target resource directories.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The file must be named exactly `banner.txt` inside the root classpath resources path to be processed automatically."
+  },
+  {
+    "id": "springboot-q048",
+    "question": "True or False: Setter method injection is currently championed as the single best practice by the modern Spring Framework core architecture team.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Constructor injection is heavily favored over setter injection because it ensures required dependencies are present and supports immutability."
+  },
+  {
+    "id": "springboot-q049",
+    "question": "True or False: The `@Value` annotation injects configuration values from property sources straight into managed application component variables.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "`@Value(\"${property.name}\")` allows fields to resolve external values, simplifying environment parameter integration."
+  },
+  {
+    "id": "springboot-q050",
+    "question": "True or False: The default global framework terminal logging output verbosity level across standard Spring Boot configurations is set to DEBUG.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The default logging level is `INFO`. Outputting `DEBUG` level data requires explicit adjustments via configuration properties."
+  },
+  {
+    "id": "springboot-q051",
+    "question": "True or False: Thymeleaf is a server-side template engine that provides a dedicated, auto-configured Spring Boot starter dependency.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Including `spring-boot-starter-thymeleaf` configures template view handlers automatically to serve dynamic web content."
+  },
+  {
+    "id": "springboot-q052",
+    "question": "True or False: The active running application context can be shut down programmatically by calling a close operation on the returned initialized context instance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "`SpringApplication.run()` returns a `ConfigurableApplicationContext` object, which exposes a `.close()` method to trigger orderly shutdowns."
+  },
+  {
+    "id": "springboot-q053",
+    "question": "True or False: Specifying `server.port=0` inside properties configurations instructs Spring Boot to listen on a random, unallocated network port.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Setting the port parameter to `0` forces the embedded container to bind to a dynamically available port, which is useful for isolated integration testing."
+  },
+  {
+    "id": "springboot-q054",
+    "question": "True or False: Spring Boot Starters generally act as abstract dependency containers that contain no actual programmatic source code files themselves.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Starters are essentially empty structural descriptors (POM files) designed to aggregate transitive library references for a specific feature set."
+  },
+  {
+    "id": "springboot-q055",
+    "question": "True or False: The `@SpringBootTest` annotation instructs the test framework to bootstrap the full application context for integration testing.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "`@SpringBootTest` loads the entire structural bean hierarchy, simulating full production context states for system integration tests."
+  },
+  {
+    "id": "springboot-q056",
+    "question": "True or False: MockMvc enables developers to execute automated tests against web controllers without starting a live web server.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "MockMvc simulates HTTP request cycles against the servlet layer, providing fast controller verification without network socket overhead."
+  },
+  {
+    "id": "springboot-q057",
+    "question": "True or False: Spring Boot applications are restricted to executable JAR profiles and cannot be built as traditional WAR packages for external deployment.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "By extending `SpringBootServletInitializer` and modifying build files, projects can compile into WAR archives deployable to traditional application servers."
+  },
+  {
+    "id": "springboot-q058",
+    "question": "True or False: Method blocks marked with `@Bean` must typically be declared inside structural classes annotated with `@Configuration` to be managed correctly.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "While `@Bean` methods can be evaluated inside generic components, declaring them within `@Configuration` classes ensures safe scoping proxy interception."
+  },
+  {
+    "id": "springboot-q059",
+    "question": "True or False: The `@ConfigurationProperties` annotation provides a type-safe way to map flat property keys into structured Java objects.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "`@ConfigurationProperties` maps hierarchical configuration data directly onto object fields via standard getter and setter methods."
+  },
+  {
+    "id": "springboot-q060",
+    "question": "True or False: Spring Boot strict auto-configuration rules lock infrastructure states, preventing developers from manually overriding built-in configurations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Spring Boot Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Auto-configuration is non-invasive. Declaring a custom bean implementation replaces the default fallback bean configuration immediately."
+  },
+  {
+    "id": "springboot-q061",
+    "question": "The primary execution point of a Spring Boot application invokes the static `SpringApplication.______` mechanism.",
+    "answer": "run",
+    "options": ["run", "start", "execute", "bootstrap"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The static `SpringApplication.run(MainClass.class, args)` command initializes the core Spring container and runs the application."
+  },
+  {
+    "id": "springboot-q062",
+    "question": "The out-of-the-box embedded web container bundled inside the `spring-boot-starter-web` package is ______.",
+    "answer": "Tomcat",
+    "options": ["Tomcat", "Jetty", "Glassfish", "Undertow"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Apache Tomcat is bundled by default with the web starter to host application endpoints without external deployment steps."
+  },
+  {
+    "id": "springboot-q063",
+    "question": "To monitor metrics, check logs, and inspect runtime health indicators in a production environment, developers include Spring Boot ______.",
+    "answer": "Actuator",
+    "options": ["Actuator", "DevTools", "Initializr", "Security"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Spring Boot Actuator exposes operational endpoints for monitoring application status, health metrics, and runtime statistics."
+  },
+  {
+    "id": "springboot-q064",
+    "question": "The meta-annotation `@SpringBootApplication` bundles `@ComponentScan`, `@SpringBootConfiguration`, and `@EnableAuto______`.",
+    "answer": "Configuration",
+    "options": ["Configuration", "WebMvc", "Context", "Management"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "`@EnableAutoConfiguration` directs the framework to guess and auto-configure required beans based on classpath dependencies."
+  },
+  {
+    "id": "springboot-q065",
+    "question": "The configuration key used to explicitly state the target active profile file name path is `spring.profiles.______`.",
+    "answer": "active",
+    "options": ["active", "target", "current", "enabled"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `spring.profiles.active` property defines which environmental profile configurations are loaded at application startup."
+  },
+  {
+    "id": "springboot-q066",
+    "question": "To group and map related external properties cleanly into an immutable type-safe POJO class, use `@Configuration______`.",
+    "answer": "Properties",
+    "options": ["Properties", "Values", "Variables", "Mapping"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The `@ConfigurationProperties` annotation binds flat configuration keys cleanly into structured, type-safe Java object classes."
+  },
+  {
+    "id": "springboot-q067",
+    "question": "The standard configuration file format alternative that relies on structured indentation rather than flat dot-notation keys is ______.",
+    "answer": "YAML",
+    "options": ["YAML", "JSON", "XML", "INI"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "YAML (`.yml` or `.yaml`) files offer a clean, hierarchical way to structure configurations using nested indentations."
+  },
+  {
+    "id": "springboot-q068",
+    "question": "To reassign the target web server network port inside properties configurations, you adjust the property named `server.______`.",
+    "answer": "port",
+    "options": ["port", "address", "location", "endpoint"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `server.port` key configures the web container's listening port, overriding the default port value of 8080."
+  },
+  {
+    "id": "springboot-q069",
+    "question": "The stereotype annotation applied to map data-driven endpoints where methods serialize return values directly into response payloads is `@______Controller`.",
+    "answer": "Rest",
+    "options": ["Rest", "Web", "Data", "Json"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "`@RestController` combines generic web controller routing with automated response body serialization."
+  },
+  {
+    "id": "springboot-q070",
+    "question": "To request automated type-matching object resolution and assignment for an internal dependency, use the `@______` annotation.",
+    "answer": "Autowired",
+    "options": ["Autowired", "Inject", "Resource", "Bean"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `@Autowired` annotation triggers Spring dependency injection to resolve and inject a matching bean into the target component."
+  },
+  {
+    "id": "springboot-q071",
+    "question": "When only one single shared bean instance is constructed and maintained across the entire application lifecycle, the bean's scope is ______.",
+    "answer": "Singleton",
+    "options": ["Singleton", "Prototype", "Request", "Global"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Singleton scope is Spring's default behavior, ensuring a component is initialized once and shared across all injection targets."
+  },
+  {
+    "id": "springboot-q072",
+    "question": "A bean scope configuration that forces the framework to construct a fresh object instance every time it is requested is ______.",
+    "answer": "Prototype",
+    "options": ["Prototype", "Singleton", "Session", "Thread"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Setting a bean's scope to prototype tells the container to return a new instance for every single program request or injection point."
+  },
+  {
+    "id": "springboot-q073",
+    "question": "To run an executable fat JAR via terminal shell lines, use the standard system syntax execution command `java -______ application.jar`.",
+    "answer": "jar",
+    "options": ["jar", "run", "cp", "bin"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `-jar` flag instructs the Java virtual machine to run a packaged archive containing an embedded main manifest entry point."
+  },
+  {
+    "id": "springboot-q074",
+    "question": "To bind incoming HTTP POST requests to a controller method, use the `@______Mapping` shorthand annotation.",
+    "answer": "Post",
+    "options": ["Post", "Create", "Push", "Send"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "`@PostMapping` routes incoming HTTP POST requests directly to the annotated handler method."
+  },
+  {
+    "id": "springboot-q075",
+    "question": "The browser configuration tool located at start.spring.io used to initialize project dependency layouts is Spring ______.",
+    "answer": "Initializr",
+    "options": ["Initializr", "Bootstrapper", "Generator", "Manager"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Spring Initializr is the official scaffolding tool used to quickly configure and download customized starter project structures."
+  },
+  {
+    "id": "springboot-q076",
+    "question": "The functional interface used to run custom initialization logic immediately after application startup via a raw string array parameter is `______Runner`.",
+    "answer": "CommandLineRunner",
+    "options": [
+      "CommandLineRunner",
+      "ApplicationRunner",
+      "ContextRunner",
+      "InstanceRunner"
+    ],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "`CommandLineRunner` provides access to raw string arguments, executing its `run` method immediately after the application boots up."
+  },
+  {
+    "id": "springboot-q077",
+    "question": "To bind a dynamic path placeholder segment from a URL directly to an endpoint method parameter, use `@______`.",
+    "answer": "PathVariable",
+    "options": ["PathVariable", "RequestParam", "QueryParam", "MatrixVariable"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `@PathVariable` annotation extracts data directly from the URI path structure (e.g., `/api/items/{id}`) and binds it to a method argument."
+  },
+  {
+    "id": "springboot-q078",
+    "question": "The annotation that functions as a structural shortcut combining `@Controller` and `@ResponseBody` is `@______Controller`.",
+    "answer": "Rest",
+    "options": ["Rest", "Web", "Data", "View"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "`@RestController` removes the need to annotate every individual method with `@ResponseBody`, automatically serializing all return values."
+  },
+  {
+    "id": "springboot-q079",
+    "question": "To specify a unique bean identifier when multiple implementations match a target injection type, use the `@______` annotation.",
+    "answer": "Qualifier",
+    "options": ["Qualifier", "Primary", "Resource", "Name"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "`@Qualifier` resolves dependency conflicts by specifying the exact bean name that should be injected into a target point."
+  },
+  {
+    "id": "springboot-q080",
+    "question": "The default console logging framework configuration implementation integrated into starter bundles out-of-the-box is ______.",
+    "answer": "Logback",
+    "options": ["Logback", "Log4j", "Slf4j", "ConsoleLogger"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Spring Boot routes all internal diagnostics through SLF4J and defaults to Logback for out-of-the-box log formatting."
+  },
+  {
+    "id": "springboot-q081",
+    "question": "To declare that a specific method within a configuration class produces a container-managed bean instance, mark it with `@______`.",
+    "answer": "Bean",
+    "options": ["Bean", "Component", "Service", "Factory"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `@Bean` annotation indicates that a method instantiates, configures, and initializes an object to be managed by the Spring IoC container."
+  },
+  {
+    "id": "springboot-q082",
+    "question": "To run automated integration tests that completely bootstrap the application context, use `@______Test`.",
+    "answer": "SpringBootTest",
+    "options": ["SpringBootTest", "ContextTest", "IntegrationTest", "MvcTest"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "`@SpringBootTest` loads the entire application context, allowing full integration testing of all components and dependencies."
+  },
+  {
+    "id": "springboot-q083",
+    "question": "To inject an explicit environment property value from configuration source files directly into a Java field, use `@______`.",
+    "answer": "Value",
+    "options": ["Value", "Property", "Inject", "Variable"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `@Value` annotation evaluates expression strings (e.g., `\"${app.title}\"`) to inject property configurations straight into your class fields."
+  },
+  {
+    "id": "springboot-q084",
+    "question": "The optional configuration dependency module providing automatic context restarts and instant live-reloads is Spring Boot ______.",
+    "answer": "DevTools",
+    "options": ["DevTools", "Actuator", "Initializr", "CLI"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Spring Boot DevTools monitors the classpath for file changes, automatically restarting the local server to speed up development workflows."
+  },
+  {
+    "id": "springboot-q085",
+    "question": "Pre-packaged collections of dependencies designed to streamline build file configurations are known as ______.",
+    "answer": "Starters",
+    "options": ["Starters", "Plugins", "Libraries", "Modules"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Starters are convenient dependency bundles that aggregate standard libraries needed to activate specific architectural features."
+  },
+  {
+    "id": "springboot-q086",
+    "question": "The annotation directive instructing Spring Boot to initialize beans automatically based on found classpath jars is `@EnableAuto______`.",
+    "answer": "Configuration",
+    "options": ["Configuration", "Context", "Wiring", "Components"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "`@EnableAutoConfiguration` tells the framework to scan dependencies and guess which infrastructure components need to be instantiated."
+  },
+  {
+    "id": "springboot-q087",
+    "question": "To bind a traditional web query parameter (e.g., `?sort=desc`) directly to a controller method parameter, use `@______`.",
+    "answer": "RequestParam",
+    "options": ["RequestParam", "PathVariable", "QueryParam", "HeaderParam"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `@RequestParam` annotation extracts key-value parameters from the URL's query string and passes them as arguments into your handler."
+  },
+  {
+    "id": "springboot-q088",
+    "question": "To customize the ASCII logo printed to the console on application startup, place a file named ______ in the resources folder.",
+    "answer": "banner.txt",
+    "options": ["banner.txt", "logo.txt", "spring.txt", "startup.txt"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Spring Boot automatically scans the root classpath resources for a file named `banner.txt` to print custom startup graphics."
+  },
+  {
+    "id": "springboot-q089",
+    "question": "To use a web server like Jetty instead of the default container, you must exclude Tomcat from the `spring-boot-starter-______` dependency.",
+    "answer": "web",
+    "options": ["web", "tomcat", "jetty", "server"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Excluding the default Tomcat dependency from `spring-boot-starter-web` allows you to add another server runner, like Jetty or Undertow."
+  },
+  {
+    "id": "springboot-q090",
+    "question": "The architectural pattern that hands off object creation and lifecycle management to an underlying framework container is Inversion of ______.",
+    "answer": "Control",
+    "options": ["Control", "Configuration", "Component", "Context"],
+    "category": "Spring Boot Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Inversion of Control (IoC) shifts the responsibility of lifecycle management and dependency wiring from the application code to the framework."
+  }
+]

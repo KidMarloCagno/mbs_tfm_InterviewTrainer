@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "devops-q001",
+    "question": "What primary organizational challenge does the DevOps paradigm seek to resolve?",
+    "answer": "The operational silos and friction between software development and IT operations",
+    "options": [
+      "The architectural limitations of relational database management systems",
+      "The operational silos and friction between software development and IT operations",
+      "The physical networking distance between global cloud data centers",
+      "The legal licensing disputes regarding open-source code repositories"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "DevOps bridges the historical gap between Developers (who favor rapid change) and Operations (who favor system stability), breaking down organizational silos."
+  },
+  {
+    "id": "devops-q002",
+    "question": "In the foundational CALMS framework of DevOps, what does the letter 'C' explicitly stand for?",
+    "answer": "Culture",
+    "options": ["Compliance", "Compilation", "Culture", "Containerization"],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Culture is the cornerstone of CALMS, stressing that tooling is ineffective without a shared mind-shift toward collaboration, transparency, and shared responsibility."
+  },
+  {
+    "id": "devops-q003",
+    "question": "Within the CALMS model, which pillar emphasizes removing manual toil through self-service workflows?",
+    "answer": "Automation",
+    "options": ["Automation", "Architecture", "Allocation", "Aggregration"],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Automation focuses on replacing manual, error-prone tasks with automated code paths, enhancing delivery speed and system repeatability."
+  },
+  {
+    "id": "devops-q004",
+    "question": "What is the primary target of the 'Lean' pillar within the CALMS DevOps evaluation framework?",
+    "answer": "Identifying and systematically eliminating waste and unnecessary handoffs in the lifecycle",
+    "options": [
+      "Minimizing the physical memory footprint of production container runtimes",
+      "Reducing the number of engineers hired within a development department",
+      "Identifying and systematically eliminating waste and unnecessary handoffs in the lifecycle",
+      "Enforcing minimalist design patterns in front-end graphical user interfaces"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Lean principles inside DevOps emphasize continuous value streaming by removing bottlenecks, large batches, and excessive process handoffs."
+  },
+  {
+    "id": "devops-q005",
+    "question": "What core activity defines the 'Measurement' pillar of the CALMS conceptual framework?",
+    "answer": "Collecting data and telemetry across the entire delivery chain to drive improvement",
+    "options": [
+      "Tracking the precise physical dimensions of office server hardware racks",
+      "Counting the literal lines of code committed by individual software developers",
+      "Calculating the financial salary distributions of engineering teams",
+      "Collecting data and telemetry across the entire delivery chain to drive improvement"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Measurement focuses on telemetry and tracking key indicators (like cycle time and error rates) to prove whether operational improvements are working."
+  },
+  {
+    "id": "devops-q006",
+    "question": "Why is the 'Sharing' aspect of CALMS considered vital to sustaining long-term DevOps health?",
+    "answer": "It builds a feedback loop where successful patterns, failures, and lessons are institutionalized",
+    "options": [
+      "It allows competitive corporations to share proprietary source code publicly",
+      "It requires all engineering departments to use a single shared administrative password",
+      "It builds a feedback loop where successful patterns, failures, and lessons are institutionalized",
+      "It enforces sharing physical computing workstations among remote team members"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Sharing breaks communication barriers, ensuring that lessons discovered by one team propagate across the organization to prevent repeated mistakes."
+  },
+  {
+    "id": "devops-q007",
+    "question": "What does the industry term 'The Wall of Confusion' historically describe?",
+    "answer": "The structural isolation where developers push code over a barrier to operations without context",
+    "options": [
+      "A network firewall configuration error that accidentally blocks valid DNS queries",
+      "The structural isolation where developers push code over a barrier to operations without context",
+      "The complex visual arrangement of localized monitoring dashboards in a network center",
+      "An unmapped dependency tree found inside legacy monolithic codebases"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Wall of Confusion represents the traditional silo boundary where developers deliver applications to operations without understanding deployment or runtime conditions."
+  },
+  {
+    "id": "devops-q008",
+    "question": "Which software engineering methodology is Site Reliability Engineering (SRE) most closely related to?",
+    "answer": "It is a specific implementation of DevOps focused on reliability engineering through software",
+    "options": [
+      "It is an alternative form of manual cascading waterfall systems design",
+      "It is a specific implementation of DevOps focused on reliability engineering through software",
+      "It is an old mainframe hardware management technique completely separate from DevOps",
+      "It is a database optimization practice restricted strictly to front-end data systems"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "As famously stated in the industry, SRE is what happens when you ask a software engineer to design an operations function, embodying concrete DevOps goals."
+  },
+  {
+    "id": "devops-q009",
+    "question": "Who is historically credited with coining the portmanteau term 'DevOps' by organizing the first DevOpsDays?",
+    "answer": "Patrick Debois",
+    "options": [
+      "Martin Fowler",
+      "Linus Torvalds",
+      "Patrick Debois",
+      "James Gosling"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Patrick Debois coined the term 'DevOps' in 2009 when he founded the first 'DevOpsDays' event in Ghent, Belgium, bringing the movement to light."
+  },
+  {
+    "id": "devops-q010",
+    "question": "According to 'The Three Ways' of DevOps, what is the core focus of the First Way?",
+    "answer": "Optimizing the fast, continuous left-to-right flow of work from development to operations",
+    "options": [
+      "Establishing intensive security review meetings at the end of quarterly intervals",
+      "Optimizing the fast, continuous left-to-right flow of work from development to operations",
+      "Creating isolated sandboxes where engineers can write software independently",
+      "Enforcing manual paper documentation for cloud asset allocations"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The First Way focuses on the holistic performance of the system, accelerating the flow of work from development over to operational production targets."
+  },
+  {
+    "id": "devops-q011",
+    "question": "What is the primary technical objective defined by the Second Way of DevOps?",
+    "answer": "Creating right-to-left feedback loops to identify and fix issues immediately at the source",
+    "options": [
+      "Creating right-to-left feedback loops to identify and fix issues immediately at the source",
+      "Standardizing on a single proprietary automation vendor for all team operations",
+      "Restricting code access rules so that operations can never read application source code",
+      "Maximizing the size of software release batches to reduce deployment frequency"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Second Way is about amplifying feedback loops from operations back to development, allowing teams to discover, understand, and fix quality problems instantly."
+  },
+  {
+    "id": "devops-q012",
+    "question": "What operational environment is cultivated by practicing the Third Way of DevOps?",
+    "answer": "A culture of continual learning, experimentation, and safety to take calculated risks",
+    "options": [
+      "A rigid regulatory system where every process step requires multi-tier legal clearance",
+      "A culture of continual learning, experimentation, and safety to take calculated risks",
+      "An organization that relies exclusively on outsourced third-party service support",
+      "A strict top-down structure focused completely on tracking individual error quotas"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Third Way focuses on fostering an adaptive engineering culture that prioritizes continuous learning, calculated experimentation, and mastering complex resilience engineering."
+  },
+  {
+    "id": "devops-q013",
+    "question": "What does the service reliability metric 'MTTR' represent in operational engineering?",
+    "answer": "Mean Time To Repair (or Resolution)",
+    "options": [
+      "Maximum Time To Release",
+      "Mean Time To Repair (or Resolution)",
+      "Minimum Time To Retest",
+      "Main Traffic Transmission Rate"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "MTTR measures the average time required to troubleshoot, fix, and recover a production system from an active service outage or failure condition."
+  },
+  {
+    "id": "devops-q014",
+    "question": "What metric evaluates the statistical average lifespan of an infrastructure component before encountering a failure?",
+    "answer": "MTTF (Mean Time To Failure)",
+    "options": [
+      "MTTR (Mean Time To Repair)",
+      "MTBC (Mean Time Between Commits)",
+      "MTTF (Mean Time To Failure)",
+      "MTTD (Mean Time To Detection)"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "MTTF tracks the expected uptime or lifespan of non-repairable items (or system modules) before an error or failure stops execution."
+  },
+  {
+    "id": "devops-q015",
+    "question": "What is the core working methodology of Chaos Engineering?",
+    "answer": "Intentionally injecting controlled failures into production to proactively find systemic weaknesses",
+    "options": [
+      "Allowing developers to push untested code directly to production whenever they want",
+      "Intentionally injecting controlled failures into production to proactively find systemic weaknesses",
+      "Eliminating logging entirely to see if infrastructure self-heals in complete isolation",
+      "Deploying microservices without configuring access controls or network firewalls"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Chaos Engineering uncovers hidden vulnerabilities (like bad fallback logic or cascade triggers) by introducing systemic disruptions into production environments under controlled parameters."
+  },
+  {
+    "id": "devops-q016",
+    "question": "Which software utility pioneered by Netflix is widely famous for initiating Chaos Engineering practices?",
+    "answer": "Chaos Monkey",
+    "options": ["Docker Swarm", "Chaos Monkey", "Logstash", "SonarQube"],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Netflix designed Chaos Monkey to randomly terminate active virtual instances in production, forcing engineering teams to build resilient cloud architectures that easily tolerate hardware loss."
+  },
+  {
+    "id": "devops-q017",
+    "question": "What is the foundational requirement of an effective post-mortem review process?",
+    "answer": "It must be blameless, focusing on systemic failures rather than human mistakes",
+    "options": [
+      "It must identify the single human engineer responsible to assign penalties",
+      "It must be blameless, focusing on systemic failures rather than human mistakes",
+      "It must be conducted exclusively via legal counsel without technical inputs",
+      "It must remain entirely confidential and hidden from other engineering teams"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Blameless post-mortems assume engineers operate with good intent given the context they had. De-stigmatizing errors allows uncovering root infrastructural and procedural gaps."
+  },
+  {
+    "id": "devops-q018",
+    "question": "What is ChatOps within a modern DevOps workflow?",
+    "answer": "Using messaging platforms to execute operational scripts, view telemetry, and trigger pipelines",
+    "options": [
+      "Enforcing voice call systems to handle standard developer peer code reviews",
+      "Using messaging platforms to execute operational scripts, view telemetry, and trigger pipelines",
+      "Restricting developer access to instant chat tools during active coding windows",
+      "Automating marketing text messages directly to customers when software crashes"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "ChatOps links communication channels with system automation tools, allowing engineers to interact with infrastructure transparently within team chat environments."
+  },
+  {
+    "id": "devops-q019",
+    "question": "What is the primary benefit of conducting Value Stream Mapping?",
+    "answer": "To map and measure steps from code concept to production, exposing delay points",
+    "options": [
+      "To calculate the total financial equity value of an enterprise corporate stock",
+      "To map and measure steps from code concept to production, exposing delay points",
+      "To assign performance scorecards to individual engineers based on typing velocity",
+      "To automatically generate database schemas from architectural design graphs"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Value Stream Mapping tracks the journey from product ideation to customer delivery, helping teams visualize delays, wait times, and procedural waste."
+  },
+  {
+    "id": "devops-q020",
+    "question": "In DORA metrics, how is 'Lead Time for Changes' precisely defined?",
+    "answer": "The time it takes for a code commit to successfully run through verification and reach production",
+    "options": [
+      "The duration of an initial discovery meeting prior to drafting code requirements",
+      "The time it takes for a developer to accept an assigned ticket in an agile sprint",
+      "The time it takes for a code commit to successfully run through verification and reach production",
+      "The time needed to physically purchase and install a hardware blade server"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Lead Time for Changes measures engineering agility by tracking how fast a written and committed line of code successfully traverses automated gates to go live."
+  },
+  {
+    "id": "devops-q021",
+    "question": "What does the DORA metric 'Deployment Frequency' assess?",
+    "answer": "How often an organization successfully releases software modifications to production",
+    "options": [
+      "The speed at which a single cloud node can compile an application package",
+      "How often an organization successfully releases software modifications to production",
+      "The total volume of network bandwidth consumed during code sync operations",
+      "The frequency of manual server hardware restarts executed by operational crews"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Deployment Frequency serves as a measure of throughput, assessing how fluidly and regularly an engineering org pushes iterations out to live targets."
+  },
+  {
+    "id": "devops-q022",
+    "question": "What calculation determines the 'Change Failure Rate' in DORA tracking metrics?",
+    "answer": "The percentage of production deployments that result in service degradation or require rollbacks",
+    "options": [
+      "The number of local code compilations that fail on developer workstations",
+      "The percentage of production deployments that result in service degradation or require rollbacks",
+      "The statistical ratio of security audits that find non-compliant code dependencies",
+      "The frequency at which developers modify the architecture schema definitions"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Change Failure Rate measures release quality, calculating the ratio of software deployments that cause incidents, outages, or immediate hotfixes."
+  },
+  {
+    "id": "devops-q023",
+    "question": "What concept does the term 'DevSecOps' advocate for?",
+    "answer": "Integrating automated security validations as a continuous part of the DevOps lifecycle",
+    "options": [
+      "Employing a completely separate external firm to run security audits after delivery",
+      "Restricting code access exclusively to certified network security experts",
+      "Integrating automated security validations as a continuous part of the DevOps lifecycle",
+      "Encrypting all application source code so that developers cannot read it local"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DevSecOps infuses security early into development and automation workflows, shifting security checks left rather than treating them as an afterthought."
+  },
+  {
+    "id": "devops-q024",
+    "question": "What does the deployment strategy known as 'Dark Launching' entail?",
+    "answer": "Releasing code modifications to production behind the scenes without public interface changes",
+    "options": [
+      "Releasing code modifications to production behind the scenes without public interface changes",
+      "Running server deployments during scheduled midnight power outages to cut costs",
+      "Pasting code alterations straight into terminal hosts without saving git tracking logs",
+      "Using command line tools that run exclusively in specialized high-contrast screen formats"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Dark Launching pushes backend services into production ahead of time, testing performance metrics under live conditions before exposing features to users via UX controls."
+  },
+  {
+    "id": "devops-q025",
+    "question": "What is the fundamental utility of deploying Feature Flags (Toggles)?",
+    "answer": "Decoupling technical code deployment actions from customer-facing feature activation",
+    "options": [
+      "Forforcing compilers to compress output libraries into smaller target formats",
+      "Decoupling technical code deployment actions from customer-facing feature activation",
+      "Tracking the total clock cycles dedicated to compiling backend packages",
+      "Allowing unauthorized internal administrators to bypass active network firewalls"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Feature Flags isolate software shipping from business exposure. Code can go live inactive, then toggle on dynamically without running a new deployment pipeline."
+  },
+  {
+    "id": "devops-q026",
+    "question": "How is an 'Error Budget' mathematically and conceptually utilized inside SRE practices?",
+    "answer": "It defines the acceptable error rate, allowing team speed up releases if the budget is full",
+    "options": [
+      "The literal cash funds set aside to pay compliance penalties for data loss",
+      "The total count of syntax mistakes a junior developer is permitted per month",
+      "It defines the acceptable error rate, allowing team speed up releases if the budget is full",
+      "The physical storage allocation reserved for database crash report dumps"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "An Error Budget balances velocity and reliability. If an app has a 99.9% availability target, the 0.1% buffer is an error budget that can be spent on deployment risk."
+  },
+  {
+    "id": "devops-q027",
+    "question": "What type of team architecture helps eliminate handoffs and accelerates DevOps velocity?",
+    "answer": "Cross-functional, autonomous teams that own services from development through operations",
+    "options": [
+      "Highly segmented departments separated by specialized software tool configurations",
+      "Cross-functional, autonomous teams that own services from development through operations",
+      "Outsourced administrative units located entirely in independent corporate entities",
+      "Silos where engineers only interact via structured bureaucratic support tickets"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DevOps values cross-functional squads containing developers, testers, and ops expertise, owning product lifecycles end-to-end to eliminate inter-departmental delays."
+  },
+  {
+    "id": "devops-q028",
+    "question": "What operational problem does configuration management automation (e.g., Ansible, Puppet) resolve?",
+    "answer": "The manual configuration drift that occurs across independent host operating systems",
+    "options": [
+      "The automatic compiling of local source files into binary packages",
+      "The manual configuration drift that occurs across independent host operating systems",
+      "The physical routing of high voltage electrical lines inside server rooms",
+      "The tracking of software developer hour metrics for billing registries"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Configuration management ensures infrastructure assets match defined baselines programmatically, eliminating ad-hoc adjustments and snowflake configurations."
+  },
+  {
+    "id": "devops-q029",
+    "question": "What is the role of an 'SLO' (Service Level Objective) in site reliability metrics?",
+    "answer": "A specific target value or range for a service level that the team aims to satisfy",
+    "options": [
+      "The legal agreement defining total financial refunds issued to external clients",
+      "A specific target value or range for a service level that the team aims to satisfy",
+      "The technical metric representing the clock frequency of a central database core",
+      "The name of the automated pipeline script used to clean up build errors"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "SLOs define quantitative target metrics for stability and performance (e.g., API requests must reply within 200ms 99% of the time), guiding operational priorities."
+  },
+  {
+    "id": "devops-q030",
+    "question": "In DevOps telemetry, what is the core focus of 'Observability' compared to basic Monitoring?",
+    "answer": "Inferring internal system states by analyzing external outputs like logs, metrics, and traces",
+    "options": [
+      "Inferring internal system states by analyzing external outputs like logs, metrics, and traces",
+      "Manually reading terminal windows continuously to find unexpected strings",
+      "Counting the literal physical components installed across cloud server facilities",
+      "Setting up external firewalls to record incoming network connections"
+    ],
+    "category": "DevOps Core",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Monitoring alerts you *when* a system fails. Observability combines telemetry data types (logs, metrics, distributed traces) to help you understand *why* complex systems fail."
+  },
+  {
+    "id": "devops-q031",
+    "question": "True or False: DevOps is purely a collection of tools and software licenses that an enterprise can purchase.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "DevOps is an organizational culture and methodology; tooling simply facilitates and enforces those underlying cultural shifts."
+  },
+  {
+    "id": "devops-q032",
+    "question": "True or False: The CALMS framework stands for Culture, Automation, Lean, Measurement, and Sharing.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Coined by Jez Humble and expanded across the industry, CALMS defines the core dimensions of a successful DevOps transformation."
+  },
+  {
+    "id": "devops-q033",
+    "question": "True or False: Site Reliability Engineering (SRE) can be viewed as a concrete implementation pattern of DevOps principles.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "SRE aligns with DevOps objectives, focusing on software-driven solutions to achieve predictable reliability and operational scale."
+  },
+  {
+    "id": "devops-q034",
+    "question": "True or False: A blameless post-mortem focuses heavily on identifying and disciplining the specific person who made a mistake.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Blameless post-mortems intentionally bypass personal blame to identify the underlying architectural and procedural weaknesses that allowed human error to occur."
+  },
+  {
+    "id": "devops-q035",
+    "question": "True or False: In a high-performing DevOps culture, the metric Mean Time to Repair (MTTR) should ideally be as high as possible.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Teams aim to minimize MTTR, ensuring that when an incident occurs, automated recovery and telemetry help restore services rapidly."
+  },
+  {
+    "id": "devops-q036",
+    "question": "True or False: The 'Wall of Confusion' refers to the communication gap and conflicting incentives between isolated Dev and Ops teams.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "This term captures the classic disconnect where developers throw code over a wall to operators who are penalized for system downtime, stalling delivery."
+  },
+  {
+    "id": "devops-q037",
+    "question": "True or False: The First Way of DevOps focuses on building rapid, short feedback loops from right to left in the delivery chain.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The First Way focuses on the left-to-right flow of value from concept to customer; it is the Second Way that handles right-to-left feedback loops."
+  },
+  {
+    "id": "devops-q038",
+    "question": "True or False: Chaos Engineering involves intentionally destroying or disrupting production system elements under controlled conditions.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Chaos Engineering actively exercises system faults in production to verify resilience mechanisms operate as designed before a real failure hits."
+  },
+  {
+    "id": "devops-q039",
+    "question": "True or False: Lead time for changes measures the clock time from code commit to successful operation in production.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "This standard DORA metric reflects code delivery speed, tracking how efficiently changes move from the repository to live infrastructure."
+  },
+  {
+    "id": "devops-q040",
+    "question": "True or False: Value Stream Mapping is an optimization technique used to isolate waste, wait times, and delays in delivery systems.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Adopted from Lean manufacturing, Value Stream Mapping charts the exact steps required to ship a software change, highlighting process bottlenecks."
+  },
+  {
+    "id": "devops-q041",
+    "question": "True or False: Change Failure Rate calculates the percentage of production deployments that require immediate hotfixes or rollbacks.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Change Failure Rate measures stability, evaluating the percentage of changes that degrade production performance upon release."
+  },
+  {
+    "id": "devops-q042",
+    "question": "True or False: ChatOps means requiring developers to answer customer support chat logs as part of their engineering sprint.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "ChatOps is the practice of running infrastructure commands and operational activities directly via team messaging platforms like Slack or Teams."
+  },
+  {
+    "id": "devops-q043",
+    "question": "True or False: Feature flags allow software changes to be present in production while restricting visibility to target users via runtime configuration.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Feature flags separate deployment from release, allowing code to sit dormant until toggled on via external dashboards without redeploying."
+  },
+  {
+    "id": "devops-q044",
+    "question": "True or False: In SRE, an error budget dictates the permissible level of service failure before development velocity must slow down to prioritize stability.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Error budgets establish an agreement between product and engineering: if you exhaust the budget, deployments freeze until reliability metrics recover."
+  },
+  {
+    "id": "devops-q045",
+    "question": "True or False: Dark Launching is a code deployment method that requires darkening or shutting down monitor setups during operations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Dark Launching means shipping software changes secretly to production nodes, routing traffic internally to test processing metrics before updating the UI."
+  },
+  {
+    "id": "devops-q046",
+    "question": "True or False: DevSecOps means implementing security validation gates exclusively as a manual audit step after production release.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "DevSecOps infuses automated security scanning directly into every phase of the CI/CD pipeline, catching structural vulnerabilities early."
+  },
+  {
+    "id": "devops-q047",
+    "question": "True or False: Cross-functional teams decrease handoffs because the same team designs, tests, deploys, and maintains a service.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Grouping diverse functional specializations into one autonomous unit eliminates the delays caused by handing tickets off between departments."
+  },
+  {
+    "id": "devops-q048",
+    "question": "True or False: The Third Way of DevOps advocates for a culture that avoids experimentation to maximize process predictability.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The Third Way explicitly encourages calculated experimentation and continuous risk practice, learning from failures to build systemic resilience."
+  },
+  {
+    "id": "devops-q049",
+    "question": "True or False: Deployment Frequency is a key metric tracked by the DevOps Research and Assessment (DORA) organization.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "DORA isolates four primary indicators—Deployment Frequency, Lead Time for Changes, MTTR, and Change Failure Rate—to measure software team performance."
+  },
+  {
+    "id": "devops-q050",
+    "question": "True or False: Automation toolings solve all DevOps team conflicts automatically without needing behavioral shifts.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Tooling without a culture of empathy, transparency, and shared metrics creates fast pipelines for bad software and deeper systemic friction."
+  },
+  {
+    "id": "devops-q051",
+    "question": "True or False: Telemetry data within DevOps tracks system behaviors, logs, application execution traces, and infrastructure metrics continuously.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Telemetry gives engineering groups visibility into production behavior, allowing them to detect regressions or failures instantly."
+  },
+  {
+    "id": "devops-q052",
+    "question": "True or False: SRE was originally formulated and popularized by Google to manage large-scale production architectures.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Ben Treynor Sloss at Google founded the first SRE team, defining an engineering-first paradigm for managing highly distributed operations."
+  },
+  {
+    "id": "devops-q053",
+    "question": "True or False: Toil in SRE refers to engineering work that is manual, repetitive, automatable, and lacks long-term value.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Toil drains engineering capacity. SRE teams track and cap toil at 50% of their workload, automating the remainder away to preserve innovation bandwidth."
+  },
+  {
+    "id": "devops-q054",
+    "question": "True or False: Continuous feedback channels are essential to help developers understand downstream operational impacts.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Providing immediate visibility into production telemetry helps developers appreciate and account for operational stability while coding features."
+  },
+  {
+    "id": "devops-q055",
+    "question": "True or False: The Lean methodology emphasizes maximizing the inventory size of unreleased software modules to prepare for unexpected spikes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Lean advocates for small batch sizes and minimal Work-in-Process (WIP). Unreleased software represents dead inventory that masks code integration risks."
+  },
+  {
+    "id": "devops-q056",
+    "question": "True or False: Observability tools infer internal runtime software issues by correlating external signals like logs, metrics, and traces.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Observability provides structural context, enabling teams to debug unexpected failure patterns inside complex microservices systems without redeploying code."
+  },
+  {
+    "id": "devops-q057",
+    "question": "True or False: MTTF tracks the statistical average recovery time needed to fix a failed web instance.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "MTTF stands for Mean Time To Failure, measuring the duration a resource operates reliably *before* encountering an unrepairable breakdown."
+  },
+  {
+    "id": "devops-q058",
+    "question": "True or False: In DevOps, deployment and release are distinct steps; code can be deployed without being released to users.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Deployment moves the binary onto production infrastructure, while release toggles user access via routing changes or feature flags."
+  },
+  {
+    "id": "devops-q059",
+    "question": "True or False: DevOps practices mandate that software development groups use zero open-source code packages to prevent legal drifts.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "DevOps uses open-source libraries extensively, leveraging automated package scanners in pipelines to manage security and license compliance."
+  },
+  {
+    "id": "devops-q060",
+    "question": "True or False: Psychological safety is critical in DevOps cultures, allowing engineers to surface errors without fear of retribution.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "DevOps Core",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Without psychological safety, teams hide mistakes, silence operational alarms, and skip post-mortems, blocking genuine systemic improvements."
+  },
+  {
+    "id": "devops-q061",
+    "question": "DevOps breaks organizational boundaries by merging software development with IT ______.",
+    "answer": "Operations",
+    "options": ["Operations", "Finances", "Marketing", "Recruiting"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The portmanteau 'DevOps' unites software development squads with IT operations groups to create shared deployment responsibilities."
+  },
+  {
+    "id": "devops-q062",
+    "question": "In the CALMS diagnostic structure, the letter 'M' represents ______.",
+    "answer": "Measurement",
+    "options": ["Management", "Measurement", "Microservices", "Migration"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Measurement focuses on telemetry collection, establishing factual benchmarks to track pipeline efficiency and application stability."
+  },
+  {
+    "id": "devops-q063",
+    "question": "The historical workflow gap where developers ship packages blindly to operations is called the Wall of ______.",
+    "answer": "Confusion",
+    "options": ["Firewalls", "Confusion", "Silos", "Isolation"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Wall of Confusion highlights the friction created when code is handed off without deployment context or operational empathy."
+  },
+  {
+    "id": "devops-q064",
+    "question": "Site Reliability Engineering (SRE) utilizes an error ______ to balance risk between release speed and product uptime.",
+    "answer": "budget",
+    "options": ["limit", "budget", "threshold", "margin"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "An error budget translates an SLO target into a clear metric, defining exactly how much failure risk a team can accept during updates."
+  },
+  {
+    "id": "devops-q065",
+    "question": "The time required to fix, validate, and restore an infrastructure service from an active failure is tracked as ______.",
+    "answer": "MTTR",
+    "options": ["MTTR", "MTTF", "DORA", "SLO"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Mean Time to Repair (MTTR) is a key reliability metric, measuring a team's speed in diagnosing and resolving production incidents."
+  },
+  {
+    "id": "devops-q066",
+    "question": "The First Way of DevOps focuses on accelerating the continuous left-to-right ______ of value.",
+    "answer": "flow",
+    "options": ["accumulation", "flow", "auditing", "branching"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The First Way emphasizes optimizing global workflows, accelerating code flow from early development out to production endpoints."
+  },
+  {
+    "id": "devops-q067",
+    "question": "The practice of injecting controlled failure scenarios into production to verify resiliency is called ______ Engineering.",
+    "answer": "Chaos",
+    "options": ["Stress", "Chaos", "Dynamic", "Systemic"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Chaos Engineering checks cloud robustness by deliberately breaking components, uncovering hidden failure modes under live load conditions."
+  },
+  {
+    "id": "devops-q068",
+    "question": "A post-mortem incident review must remain ______ to ensure engineering groups openly share mistakes without fear.",
+    "answer": "blameless",
+    "options": ["confidential", "blameless", "informal", "undocumented"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Blameless post-mortems analyze the systemic gaps behind an incident rather than assigning fault, building an open culture of continuous learning."
+  },
+  {
+    "id": "devops-q069",
+    "question": "Executing deployment infrastructure adjustments straight via communication tools like Slack is called ______.",
+    "answer": "ChatOps",
+    "options": ["ChatOps", "SlackOps", "BotOps", "TeamOps"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "ChatOps surfaces administrative functions inside group chat windows, simplifying tasks and giving the team visibility into operational actions."
+  },
+  {
+    "id": "devops-q070",
+    "question": "To trace process delays between developer code creation and actual customer release, teams perform Value Stream ______.",
+    "answer": "Mapping",
+    "options": ["Tracking", "Mapping", "Analysis", "Slicing"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Value Stream Mapping diagrams delivery workflows visually, revealing queue bottlenecks and manual process waste."
+  },
+  {
+    "id": "devops-q071",
+    "question": "The DORA metric 'Lead Time for Changes' tracks elapsed time from a code commit to execution in ______.",
+    "answer": "production",
+    "options": ["staging", "testing", "production", "code review"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Lead Time tracks lifecycle throughput, measuring how fast a code change completes verification and runs live for end users."
+  },
+  {
+    "id": "devops-q072",
+    "question": "Infusing security controls early into the development pipeline represents a focus on Dev______Ops.",
+    "answer": "Sec",
+    "options": ["Sec", "Test", "QA", "Cloud"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "DevSecOps integrates automated security and vulnerability scanning directly into active continuous integration stages."
+  },
+  {
+    "id": "devops-q073",
+    "question": "Toggling features on or off dynamically in production without updating binary code utilizes Feature ______.",
+    "answer": "Flags",
+    "options": ["Toggles", "Flags", "Switches", "Triggers"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Feature Flags (or Toggles) separate code deployment from user release, enabling teams to activate features on the fly via remote controls."
+  },
+  {
+    "id": "devops-q074",
+    "question": "Teams containing developers, operations, and security specialists working autonomously are called cross-______ teams.",
+    "answer": "functional",
+    "options": ["functional", "siloed", "platform", "departmental"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Cross-functional teams bring together all the skills needed to design, build, deploy, and support a product, reducing handoff delays."
+  },
+  {
+    "id": "devops-q075",
+    "question": "Automated tools like Ansible avoid server setup divergence by correcting configuration ______.",
+    "answer": "drift",
+    "options": ["drift", "decay", "shift", "leak"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Configuration management keeps systems aligned with a defined baseline, automatically correcting manual server adjustments and drift."
+  },
+  {
+    "id": "devops-q076",
+    "question": "The metric representing the statistical average lifetime duration of hardware before breaking is known as ______.",
+    "answer": "MTTF",
+    "options": ["MTTR", "MTTF", "SLO", "SLI"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Mean Time to Failure (MTTF) calculates systemic runtime lifespan, tracking the durability of system components before failure."
+  },
+  {
+    "id": "devops-q077",
+    "question": "In SRE telemetry metrics, SLI stands for Service Level ______.",
+    "answer": "Indicator",
+    "options": ["Indicator", "Integration", "Interface", "Incident"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "An SLI provides a quantifiable metric of service performance in real-time (such as success rate percentage), showing how a service is running."
+  },
+  {
+    "id": "devops-q078",
+    "question": "Inferring internal software bugs by monitoring system outputs like logs, metrics, and traces defines ______.",
+    "answer": "Observability",
+    "options": ["Observability", "Tracing", "Monitoring", "Debugging"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Observability uses deep telemetry to help teams understand the root cause of complex failure loops inside distributed systems."
+  },
+  {
+    "id": "devops-q079",
+    "question": "The Netflix open-source software that kicked off automated failure injection testing is named ______ Monkey.",
+    "answer": "Chaos",
+    "options": ["Chaos", "Simian", "Docker", "Cloud"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Chaos Monkey randomly terminates production servers, forcing engineers to build systems that automatically recover without human intervention."
+  },
+  {
+    "id": "devops-q080",
+    "question": "Deploying code components onto servers silently without altering public UI layouts is called ______ launching.",
+    "answer": "dark",
+    "options": ["dark", "shadow", "canary", "rolling"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Dark Launching shifts changes into production behind the scenes, allowing teams to test backend stability and scalability using real-world traffic."
+  },
+  {
+    "id": "devops-q081",
+    "question": "The letter 'L' in the CALMS paradigm refers to software delivery optimizations inspired by ______ manufacturing.",
+    "answer": "Lean",
+    "options": ["Lean", "Linear", "Logistical", "Local"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Lean principles help software teams eliminate process waste, reduce batch sizes, and optimize the flow of value to end users."
+  },
+  {
+    "id": "devops-q082",
+    "question": "The culture element 'S' in CALMS ensures successful patterns and technical lessons are propagated via ______.",
+    "answer": "Sharing",
+    "options": ["Sourcing", "Sharing", "Scaling", "Scripting"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Sharing breaks down team silos, ensuring that institutional knowledge and incident lessons are shared broadly across the organization."
+  },
+  {
+    "id": "devops-q083",
+    "question": "In SRE terminology, boring, manual, repetitive work that yields no long-term engineering value is called ______.",
+    "answer": "toil",
+    "options": ["toil", "overhead", "debt", "waste"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Toil represents administrative, routine tasks that scale linearly with service size; SREs actively work to automate away this work."
+  },
+  {
+    "id": "devops-q084",
+    "question": "Establishing shared team safety so engineers feel secure reporting failures requires psychological ______.",
+    "answer": "safety",
+    "options": ["safety", "alignment", "assurance", "compliance"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Psychological safety encourages a culture of transparency, ensuring engineers surface errors quickly without fear of blame or punishment."
+  },
+  {
+    "id": "devops-q085",
+    "question": "The DORA metric that tracks the percentage of production deployments causing an outage is Change ______ Rate.",
+    "answer": "Failure",
+    "options": ["Failure", "Incident", "Defect", "Outage"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Change Failure Rate tracks deployment quality by calculating the ratio of releases that require immediate hotfixes or rollbacks."
+  },
+  {
+    "id": "devops-q086",
+    "question": "The Second Way of DevOps emphasizes building short, rapid right-to-left ______ loops.",
+    "answer": "feedback",
+    "options": ["feedback", "deployment", "review", "monitoring"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Second Way accelerates feedback loops from production back to developers, helping teams catch and fix issues earlier."
+  },
+  {
+    "id": "devops-q087",
+    "question": "The Third Way of DevOps fosters an organizational environment centered on continual learning and ______.",
+    "answer": "experimentation",
+    "options": [
+      "experimentation",
+      "documentation",
+      "budgeting",
+      "standardization"
+    ],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Third Way builds an adaptive engineering culture, encouraging innovation and risk management through experimentation."
+  },
+  {
+    "id": "devops-q088",
+    "question": "A legal contract that explicitly defines penalties if software accessibility targets fall short is an ______.",
+    "answer": "SLA",
+    "options": ["SLA", "SLO", "SLI", "SRE"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Service Level Agreements (SLAs) are formal business commitments outlining financial or support penalties if performance targets are missed."
+  },
+  {
+    "id": "devops-q089",
+    "question": "An organizational unit that manages core delivery infrastructure as a service for other internal groups is a ______ team.",
+    "answer": "Platform",
+    "options": ["Platform", "Siloed", "Support", "Security"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Platform engineering teams deliver internal infrastructure and self-service portals, reducing cognitive load for application developers."
+  },
+  {
+    "id": "devops-q090",
+    "question": "In DevOps telemetry, tracking the path of a transaction through independent microservices uses distributed ______.",
+    "answer": "tracing",
+    "options": ["tracing", "logging", "debugging", "monitoring"],
+    "category": "DevOps Core",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Distributed tracing maps the end-to-end journey of a request across services, helping teams isolate latency issues inside complex architectures."
+  }
+]

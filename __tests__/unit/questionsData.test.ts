@@ -37,12 +37,15 @@ describe("getAvailableTopics", () => {
       "Django",
       "Frontend",
       "Git Basics",
+      "CI/CD Basics",
+      "DevOps Basics",
       "Java",
       "JI Java",
       "JavaScript",
       "Python",
       "React",
       "Spring",
+      "Spring Boot Basics",
       "SystemsDesign",
     ];
     for (const t of expected) {

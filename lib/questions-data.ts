@@ -5,8 +5,11 @@ import designPatternsQuestions from "@/prisma/data/sets/designPatterns.json";
 import djangoQuestions from "@/prisma/data/sets/django.json";
 import frontendQuestions from "@/prisma/data/sets/frontend.json";
 import gitBasicsQuestions from "@/prisma/data/sets/gitBasics.json";
+import ciCdBasicsQuestions from "@/prisma/data/sets/ciCdBasics.json";
+import devOpsBasicsQuestions from "@/prisma/data/sets/devOpsBasics.json";
+import springBootBasicsQuestions from "@/prisma/data/sets/springBootBasics.json";
 import javaQuestions from "@/prisma/data/sets/java.json";
-import javaDevJobIntQuestions from "@/prisma/data/sets/javaDevJobInt.json";
+import jiJavaQuestions from "@/prisma/data/sets/jiJava.json";
 import javascriptQuestions from "@/prisma/data/sets/javascript.json";
 import pythonQuestions from "@/prisma/data/sets/python.json";
 import reactQuestions from "@/prisma/data/sets/react.json";
@@ -48,11 +51,7 @@ const questionsData: Record<string, GameQuestion[]> = {
   Django: mapSet(djangoQuestions as QuestionSetItem[], "Django", "dj"),
   Frontend: mapSet(frontendQuestions as QuestionSetItem[], "Frontend", "fe"),
   Java: mapSet(javaQuestions as QuestionSetItem[], "Java", "jv"),
-  "JI Java": mapSet(
-    javaDevJobIntQuestions as QuestionSetItem[],
-    "JI Java",
-    "java",
-  ),
+  "JI Java": mapSet(jiJavaQuestions as QuestionSetItem[], "JI Java", "java"),
   JavaScript: mapSet(
     javascriptQuestions as QuestionSetItem[],
     "JavaScript",
@@ -65,6 +64,21 @@ const questionsData: Record<string, GameQuestion[]> = {
     designPatternsQuestions as QuestionSetItem[],
     "Design Patterns",
     "dp",
+  ),
+  "CI/CD Basics": mapSet(
+    ciCdBasicsQuestions as QuestionSetItem[],
+    "CI/CD Basics",
+    "ci",
+  ),
+  "DevOps Basics": mapSet(
+    devOpsBasicsQuestions as QuestionSetItem[],
+    "DevOps Basics",
+    "do",
+  ),
+  "Spring Boot Basics": mapSet(
+    springBootBasicsQuestions as QuestionSetItem[],
+    "Spring Boot Basics",
+    "sb",
   ),
   "Git Basics": mapSet(
     gitBasicsQuestions as QuestionSetItem[],

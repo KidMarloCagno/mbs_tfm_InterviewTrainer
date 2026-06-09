@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added new question sets `Design Patterns` and `Git Basics` and registered them in `lib/questions-data.ts` so they appear in dashboard practice topics.
 - Documented the `DataSet Recipe Prompt.md` file as the recommended authoring guide for creating new JSON question sets under `prisma/data/sets/`.
+- Added new question sets `CI/CD Basics`, `DevOps Basics`, and `Spring Boot Basics` and registered them in `lib/questions-data.ts`.
+- Registered all new dataset files so they are immediately available in the dashboard without a DB re-seed.
 
 ## [1.3.8] - 2026-06-08
 

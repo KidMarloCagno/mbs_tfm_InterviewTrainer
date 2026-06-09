@@ -13,7 +13,7 @@ Question sets live in: `prisma/data/sets/<topic>.json`
 | Angular       | https://github.com/sudheerj/angular-interview-questions                                           | 2026-02-21    |                             |
 | Django        | https://github.com/Ujjawal-Anand/django-interview                                                 | 2026-02-21    |                             |
 | Java          | https://github.com/Devinterview-io/java-interview-questions                                       | 2026-02-21    |                             |
-| JI Java       | custom dataset added manually                                                                     | 2026-06-08    | Added `javaDevJobInt.json`  |
+| JI Java       | custom dataset added manually                                                                     | 2026-06-08    | Added `jiJava.json`         |
 | Spring        | https://github.com/altafjava/spring-interview-questions-answers                                   | 2026-02-21    |                             |
 | Python        | https://github.com/Devinterview-io/python-interview-questions                                     | 2026-02-21    |                             |
 | React         | https://github.com/sudheerj/reactjs-interview-questions                                           | 2026-02-21    |                             |
