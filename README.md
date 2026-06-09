@@ -22,21 +22,37 @@ QuizView is a gamified IT interview practice app that blends active recall with 
 
 ## Question Library
 
-More than **1,500 questions** across **11 topics**:
+More than **1,600 questions** across **19 topics**:
 
-| Topic         | Focus area                                                |
-| ------------- | --------------------------------------------------------- |
-| Angular       | Framework architecture, components, directives, RxJS      |
-| Backend       | REST APIs, authentication, server patterns, microservices |
-| Database      | SQL, indexing, transactions, NoSQL fundamentals           |
-| Django        | ORM, views, middleware, REST framework                    |
-| Frontend      | HTML, CSS, browser APIs, performance, accessibility       |
-| Java          | Core language, OOP, concurrency, JVM internals            |
-| JavaScript    | Language fundamentals, async, closures, ES2015+           |
-| Python        | Language features, data structures, OOP, stdlib           |
-| React         | Hooks, component patterns, state management, rendering    |
-| Spring        | IoC/DI, Spring Boot, MVC, Spring Data                     |
-| System Design | Scalability, distributed systems, caching, messaging      |
+| Topic              | Focus area                                                           |
+| ------------------ | -------------------------------------------------------------------- |
+| Angular            | Framework architecture, components, directives, RxJS                 |
+| Backend            | REST APIs, authentication, server patterns, microservices            |
+| Database           | SQL, indexing, transactions, NoSQL fundamentals                      |
+| Design Patterns    | Common architecture patterns, creational, structural, behavioral     |
+| Django             | ORM, views, middleware, REST framework                               |
+| Frontend           | HTML, CSS, browser APIs, performance, accessibility                  |
+| Git Basics         | Git commands, branching, merge workflows, commit history             |
+| Java               | Core language, OOP, concurrency, JVM internals                       |
+| JI Java            | Java interview patterns, job interview concepts, practical debugging |
+| JavaScript         | Language fundamentals, async, closures, ES2015+                      |
+| Kafka Basics       | Brokers, topics, partitions, consumer groups, replication, ISR       |
+| Maven Basics       | Maven lifecycle, dependency management, build config, repositories   |
+| Python             | Language features, data structures, OOP, stdlib                      |
+| React              | Hooks, component patterns, state management, rendering               |
+| Spring             | IoC/DI, Spring Boot, MVC, Spring Data                                |
+| System Design      | Scalability, distributed systems, caching, messaging                 |
+| CI/CD Basics       | Continuous integration and delivery pipelines, build tooling         |
+| DevOps Basics      | Deployment practices, observability, infrastructure as code          |
+| Spring Boot Basics | Spring Boot starters, auto-configuration, actuator, packaging        |
+
+## New Question Set Authoring
+
+To add a new dataset:
+
+1. Create a JSON file in `prisma/data/sets/` with the same question schema.
+2. Register that file in `lib/questions-data.ts` with a new topic key and a unique ID prefix.
+3. Optionally use `DataSet Recipe Prompt.md` as the question generation guide for consistent categories, formats, and structured output.
 
 ## Tech Stack
 

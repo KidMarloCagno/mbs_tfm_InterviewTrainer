@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "mvn-q001",
+    "question": "Which file serves as the primary configuration file for a Apache Maven project, containing project coordinates, dependencies, and plugin configurations?",
+    "answer": "pom.xml",
+    "options": ["pom.xml", "build.gradle", "maven.xml", "settings.xml"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Project Object Model (pom.xml) file is the fundamental unit of work in Maven and contains all necessary configuration information for building the project."
+  },
+  {
+    "id": "mvn-q002",
+    "question": "What are the three core coordinates required to uniquely identify a Maven artifact in a repository?",
+    "answer": "groupId, artifactId, version",
+    "options": [
+      "groupId, artifactId, version",
+      "name, path, extension",
+      "namespace, identity, tag",
+      "repository, group, module"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Maven uses the combination of groupId, artifactId, and version (GAV) to uniquely locate and manage dependencies within repositories."
+  },
+  {
+    "id": "mvn-q003",
+    "question": "Which Maven build lifecycle phase compiles the source code of the application?",
+    "answer": "compile",
+    "options": ["validate", "compile", "test", "package"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The compile phase executes the compiler plugin to compile the main source code files located in src/main/java."
+  },
+  {
+    "id": "mvn-q004",
+    "question": "Where is the default location of the local Maven repository on a developer machine?",
+    "answer": "~/.m2/repository",
+    "options": [
+      "~/.m2/repository",
+      "/usr/local/maven",
+      "~/.maven/cache",
+      "C:\\Maven\\repo"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "By default, Maven stores downloaded dependencies and locally installed artifacts in the user's home directory under the .m2/repository folder."
+  },
+  {
+    "id": "mvn-q005",
+    "question": "Which scope should be used for a dependency required to compile and run tests, but not required to run or package the application?",
+    "answer": "test",
+    "options": ["compile", "provided", "runtime", "test"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The test scope limits the dependency availability to the test compilation and execution phases, omitting it from the final packaged artifact."
+  },
+  {
+    "id": "mvn-q006",
+    "question": "When executing 'mvn clean package', what is the exact purpose of the 'clean' phase?",
+    "answer": "Deletes the target directory containing previous build artifacts",
+    "options": [
+      "Deletes the target directory containing previous build artifacts",
+      "Clears the local ~/.m2 repository cache",
+      "Removes unused dependencies from the pom.xml",
+      "Resets the environment variables for Maven"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The clean lifecycle contains the clean phase, which invokes the maven-clean-plugin to remove the project's target directory before a new build starts."
+  },
+  {
+    "id": "mvn-q007",
+    "question": "Which command is used to build a Maven project and install its packaged artifact directly into the local repository?",
+    "answer": "mvn install",
+    "options": ["mvn compile", "mvn package", "mvn install", "mvn deploy"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The 'mvn install' command runs all lifecycle phases up to 'install', which copies the final packaged artifact into your local ~/.m2/repository."
+  },
+  {
+    "id": "mvn-q008",
+    "question": "What is the standard directory structure defined by Maven for main Java source code files?",
+    "answer": "src/main/java",
+    "options": ["src/java", "src/main/java", "app/src/main", "source/main"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Maven enforces a standard directory layout where production Java source files must reside in src/main/java to be automatically recognized by plugins."
+  },
+  {
+    "id": "mvn-q009",
+    "question": "Which Maven scope indicates that the dependency is expected to be provided at runtime by a container or a web server, such as a servlet API?",
+    "answer": "provided",
+    "options": ["compile", "provided", "runtime", "system"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The provided scope means the dependency is needed for compilation but is excluded from the package because the target runtime container already supplies it."
+  },
+  {
+    "id": "mvn-q010",
+    "question": "What is transitive dependency resolution in Maven?",
+    "answer": "Automatically downloading dependencies of your direct dependencies",
+    "options": [
+      "Automatically downloading dependencies of your direct dependencies",
+      "Converting external JAR dependencies into Maven plugins",
+      "Resolving version conflicts by picking the oldest version",
+      "Overriding local configurations with remote configurations"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Transitive dependency management allows Maven to automatically discover, pull in, and construct a dependency tree for libraries required by your direct dependencies."
+  },
+  {
+    "id": "mvn-q011",
+    "question": "Which Maven mechanism allows multiple related projects to share common configurations, properties, and dependency management definitions?",
+    "answer": "Parent POM inheritance",
+    "options": [
+      "Parent POM inheritance",
+      "Maven Archetypes",
+      "The settings.xml file",
+      "The assembly plugin"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Parent POM inheritance enables sub-modules or independent projects to inherit configurations, plugin setups, and properties defined in a single centralized parent pom.xml."
+  },
+  {
+    "id": "mvn-q012",
+    "question": "What is the primary difference between the <dependencies> section and the <dependencyManagement> section in a parent POM?",
+    "answer": "dependencyManagement only declares versions and configurations without forcing inheritance on sub-modules",
+    "options": [
+      "dependencies section elements are automatically excluded from compilation",
+      "dependencyManagement only declares versions and configurations without forcing inheritance on sub-modules",
+      "dependencyManagement downloads artifacts immediately, while dependencies defers until runtime",
+      "There is no difference; they are interchangeable aliases"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The <dependencyManagement> section specifies the version and configuration of dependencies, which sub-modules can opt into using by declaring the dependency without a version tag."
+  },
+  {
+    "id": "mvn-q013",
+    "question": "Which plugin is responsible for running unit tests during the 'test' phase of the default Maven lifecycle?",
+    "answer": "maven-surefire-plugin",
+    "options": [
+      "maven-compiler-plugin",
+      "maven-surefire-plugin",
+      "maven-failsafe-plugin",
+      "maven-test-plugin"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The maven-surefire-plugin is bound to the test phase of the default lifecycle to execute unit tests using testing frameworks like JUnit or TestNG."
+  },
+  {
+    "id": "mvn-q014",
+    "question": "How can you exclude a specific transitive dependency from being added to your classpath by a direct dependency?",
+    "answer": "Using the <exclusions> tag inside the specific <dependency> declaration",
+    "options": [
+      "Using the <exclusions> tag inside the specific <dependency> declaration",
+      "Deleting the artifact from your local ~/.m2 directory",
+      "Setting the scope of the transitive dependency to 'none' in your POM",
+      "Using a global exclusions property in settings.xml"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "By adding an <exclusions> block with the groupId and artifactId inside a <dependency> element, you prevent Maven from fetching that specific transitive dependency."
+  },
+  {
+    "id": "mvn-q015",
+    "question": "If a project has two transitive paths to different versions of the same artifact at equal depths in the dependency tree, how does Maven break the tie?",
+    "answer": "It selects the version declared first in the POM file",
+    "options": [
+      "It selects the newest semantic version available",
+      "It throws a circular dependency compilation error",
+      "It selects the version declared first in the POM file",
+      "It downloads both versions and merges them into the classpath"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Maven resolves dependency conflicts using the 'nearest definition' rule. When depths are identical, it defaults to the declaration order in the POM file."
+  },
+  {
+    "id": "mvn-q016",
+    "question": "What file is used to configure proxy settings, active server credentials, and mirror paths globally for a local Maven installation?",
+    "answer": "settings.xml",
+    "options": ["pom.xml", "settings.xml", "config.properties", "profiles.xml"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The settings.xml file (found in MAVEN_HOME/conf or ~/.m2/) manages global operational parameters such as local repository location, proxy configurations, and repository credentials."
+  },
+  {
+    "id": "mvn-q017",
+    "question": "What happens when you specify a packaging type of 'pom' in a project's pom.xml file?",
+    "answer": "The project functions as a parent or aggregator and does not produce a JAR/WAR binary",
+    "options": [
+      "Maven compiles the project into an executable executable script",
+      "The project functions as a parent or aggregator and does not produce a JAR/WAR binary",
+      "Maven generates a specialized documentation website only",
+      "The project is converted into an external Maven plugin directly"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A packaging type of 'pom' instructs Maven that this project is purely structural, acting as a parent POM or an aggregator for multi-module projects without building any code artifacts."
+  },
+  {
+    "id": "mvn-q018",
+    "question": "Which command allows you to view the fully resolved and flattened effective POM configuration for your project?",
+    "answer": "mvn help:effective-pom",
+    "options": [
+      "mvn pom:show",
+      "mvn dependency:tree",
+      "mvn help:effective-pom",
+      "mvn clean view-pom"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The 'mvn help:effective-pom' command combines your project's POM, all parent POMs, and the Maven Super POM into a single output displaying the exact build configuration."
+  },
+  {
+    "id": "mvn-q019",
+    "question": "What is the purpose of the Maven 'Super POM'?",
+    "answer": "It is Maven's internal default POM that all projects implicitly inherit from",
+    "options": [
+      "It is a plugin that speeds up compilation times across multi-core processors",
+      "It is Maven's internal default POM that all projects implicitly inherit from",
+      "It is a central directory storing security tokens for remote deployments",
+      "It is the master list of all approved open-source libraries globally"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The Super POM is Maven's internal base configuration file. It specifies default layouts, default plugin configurations, and standard repositories inherited by every Maven project."
+  },
+  {
+    "id": "mvn-q020",
+    "question": "Which lifecycles are natively built into Maven by default?",
+    "answer": "default, clean, site",
+    "options": [
+      "compile, test, package",
+      "build, release, deploy",
+      "default, clean, site",
+      "validate, verify, install"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Maven has three standard built-in lifecycles: 'clean' for project cleanup, 'default' for project deployment, and 'site' for project documentation creation."
+  },
+  {
+    "id": "mvn-q021",
+    "question": "Which phase of the default lifecycle executes integration tests that require a deployed environment?",
+    "answer": "integration-test",
+    "options": ["test", "verify", "integration-test", "package"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The integration-test phase is designed to execute integration testing frameworks via tools like the maven-failsafe-plugin after packaging is finished."
+  },
+  {
+    "id": "mvn-q022",
+    "question": "What is the purpose of Maven Profiles?",
+    "answer": "To enable conditional configurations based on target environments or operating parameters",
+    "options": [
+      "To manage user access permissions inside an enterprise repository",
+      "To enable conditional configurations based on target environments or operating parameters",
+      "To define personal bios for developers participating in an open-source project",
+      "To track the performance metrics and build times of plugin execution"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Maven profiles allow developers to customize builds for different environments (e.g., dev, test, prod) by modifying dependencies, properties, or plugin behaviors contextually."
+  },
+  {
+    "id": "mvn-q023",
+    "question": "How do you activate a specific Maven profile named 'production' from the command line interface?",
+    "answer": "-Pproduction",
+    "options": [
+      "--profile production",
+      "-Pproduction",
+      "-profile=production",
+      "-Dprofile=production"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The `-P` flag followed by the profile ID activates one or more specific profiles during a Maven command invocation."
+  },
+  {
+    "id": "mvn-q024",
+    "question": "What command can be executed to generate a complete visual map of a project's dependency tree and trace version conflicts?",
+    "answer": "mvn dependency:tree",
+    "options": [
+      "mvn dependency:tree",
+      "mvn project:dependencies",
+      "mvn dependency:list-all",
+      "mvn help:dependencies"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The `dependency:tree` goal from the maven-dependency-plugin renders a nested text-based hierarchy of all direct and transitive dependencies."
+  },
+  {
+    "id": "mvn-q025",
+    "question": "What is the key difference between a SNAPSHOT version and a release version in Maven?",
+    "answer": "SNAPSHOT versions are treated as unstable and can be updated continuously in remote repositories without changing the version identifier",
+    "options": [
+      "SNAPSHOT versions require a separate enterprise subscription fee",
+      "SNAPSHOT versions can only be compiled on local machines and never pushed online",
+      "SNAPSHOT versions are treated as unstable and can be updated continuously in remote repositories without changing the version identifier",
+      "Release versions cannot contain third-party transitive dependencies"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A SNAPSHOT suffix tells Maven that the code is under active development. Maven will routinely look for updated builds of the same version from remote development repositories."
+  },
+  {
+    "id": "mvn-q026",
+    "question": "Which plugin is natively utilized to combine project outputs, dependencies, and resources into a single executable JAR file (fat JAR)?",
+    "answer": "maven-shade-plugin",
+    "options": [
+      "maven-compiler-plugin",
+      "maven-jar-plugin",
+      "maven-shade-plugin",
+      "maven-war-plugin"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The maven-shade-plugin provides packaging artifact boundaries capability, allowing developers to package class structures and dependencies into an uber-JAR, or fat JAR."
+  },
+  {
+    "id": "mvn-q027",
+    "question": "How are Maven plugins configured within the pom.xml file?",
+    "answer": "Inside the <build><plugins> or <build><pluginManagement> sections",
+    "options": [
+      "Inside the <dependencies><plugins> structure",
+      "Inside the <build><plugins> or <build><pluginManagement> sections",
+      "Within custom global attributes of the root <project> element",
+      "Via external system properties files solely"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Plugins are added, configured, and bound to lifecycle execution steps inside the `<build><plugins>` section of the project configuration file."
+  },
+  {
+    "id": "mvn-q028",
+    "question": "What phase immediately follows the 'package' phase in the default Maven lifecycle?",
+    "answer": "pre-integration-test",
+    "options": ["compile", "test", "verify", "pre-integration-test"],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The default lifecycle proceeds sequentially from package to pre-integration-test, integration-test, post-integration-test, and then verify."
+  },
+  {
+    "id": "mvn-q029",
+    "question": "Which Maven goal is used to create a new project structure from an existing predefined layout template?",
+    "answer": "archetype:generate",
+    "options": [
+      "project:create",
+      "init:project",
+      "archetype:generate",
+      "template:apply"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The `archetype:generate` goal allows users to generate complex starter scaffolding configurations from official or community-driven project templates."
+  },
+  {
+    "id": "mvn-q030",
+    "question": "What is the purpose of the <scope>runtime</scope> setting for a dependency?",
+    "answer": "The library is required for execution but must not be accessible during compilation",
+    "options": [
+      "The library is required for execution but must not be accessible during compilation",
+      "The library is optimized exclusively for multithreading execution",
+      "The dependency is deleted automatically once the JVM shuts down",
+      "The dependency is only active when running test frameworks"
+    ],
+    "category": "Maven Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The runtime scope indicates that a dependency is not needed for compiling the application code, but is required to run the application (e.g., a JDBC database driver implementation)."
+  },
+  {
+    "id": "mvn-q031",
+    "question": "True or False: The primary configuration file for a Maven project is named build.gradle.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The primary configuration file for an Apache Maven project is always named pom.xml. The file build.gradle is utilized by the Gradle build system."
+  },
+  {
+    "id": "mvn-q032",
+    "question": "True or False: The three core coordinates needed to uniquely identify an artifact in Maven are groupId, artifactId, and version.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Maven relies on the unique GAV (groupId, artifactId, version) coordinate coordinate system to query and manage files within repositories."
+  },
+  {
+    "id": "mvn-q033",
+    "question": "True or False: The 'compile' phase of the default Maven lifecycle runs unit tests against the source code.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The compile phase only compiles the production source code files. Unit tests are executed during the separate 'test' phase."
+  },
+  {
+    "id": "mvn-q034",
+    "question": "True or False: By default, the local Maven repository is located at ~/.m2/repository across operating systems.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Maven defaults to placing local downloaded files in the user home directory structure under the `.m2/repository` path layout."
+  },
+  {
+    "id": "mvn-q035",
+    "question": "True or False: A dependency with a scope of 'test' will be included inside the final production JAR packaging file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Dependencies set to the test scope are excluded from target packages, as they are only available during test compilation and test runtime executions."
+  },
+  {
+    "id": "mvn-q036",
+    "question": "True or False: Executing 'mvn clean' completely clears out the global local ~/.m2 repository cache.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The 'clean' phase only deletes the local project's target folder containing previous compilation outputs; it does not impact the global local cache."
+  },
+  {
+    "id": "mvn-q037",
+    "question": "True or False: The 'mvn install' command runs all necessary lifecycle build phases up to the install step, including compilation, testing, and packaging.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Maven build phases are sequential; triggering 'install' forces all preceding phases in the default lifecycle to execute successfully first."
+  },
+  {
+    "id": "mvn-q038",
+    "question": "True or False: The standard directory structure defined by Maven for primary production Java source files is src/main/java.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Maven uses Convention over Configuration, establishing 'src/main/java' as the default source root location for Java source structures."
+  },
+  {
+    "id": "mvn-q039",
+    "question": "True or False: A dependency marked with a scope of 'provided' is packaged directly into the final application archive file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The provided scope signals that the hosting runtime container will provide this dependency, so Maven omits it from the packaged artifact."
+  },
+  {
+    "id": "mvn-q040",
+    "question": "True or False: Transitive dependency resolution automatically pulls libraries required by your explicitly declared dependencies.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Maven resolves dependencies transitively by parsing the POM files of your direct dependencies and automatically including their dependencies."
+  },
+  {
+    "id": "mvn-q041",
+    "question": "True or False: Parent POM inheritance is a feature used to share build configurations and dependency version locks among multiple modules.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Inheritance permits modular or separate projects to reuse settings, configurations, and central versions from a single abstract parent document."
+  },
+  {
+    "id": "mvn-q042",
+    "question": "True or False: Declaring a dependency within the <dependencyManagement> block of a parent POM automatically injects that dependency into all child modules.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The dependencyManagement tag only centralizes configurations and versions; child modules must explicitly declare the dependency (without a version tag) to inherit it."
+  },
+  {
+    "id": "mvn-q043",
+    "question": "True or False: The maven-surefire-plugin is the default tool assigned to execute standard unit tests during the lifecycle.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The surefire plugin handles testing execution blocks during the test phase of standard project build lifecycles."
+  },
+  {
+    "id": "mvn-q044",
+    "question": "True or False: You can prevent a specific transitive library from loading by configuring an <exclusions> block inside that specific dependency declaration.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Exclusions strip out unwanted dependencies introduced transitively by a direct dependency."
+  },
+  {
+    "id": "mvn-q045",
+    "question": "True or False: If two conflicting versions of a dependency exist at identical depths in a tree, Maven resolves this conflict by picking the newest semantic version.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "When depth configurations are equal, Maven settles version conflicts based on declaration sequence order within the POM file, not semantic age."
+  },
+  {
+    "id": "mvn-q046",
+    "question": "True or False: Global proxy configurations and internal server repository security credentials should be managed within the project's local pom.xml file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Sensitive environment parameters like user login tokens and networking proxy values belong in the personal settings.xml configuration file."
+  },
+  {
+    "id": "mvn-q047",
+    "question": "True or False: Setting a project packaging definition to 'pom' indicates that the artifact does not compile into its own separate standalone JAR or WAR file.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "A pom packaging setting denotes metadata wrappers, aggregation contexts, or parent baseline objects that generate no structural binaries."
+  },
+  {
+    "id": "mvn-q048",
+    "question": "True or False: Running 'mvn dependency:tree' is the correct tool command to display the fully merged, total effective POM layout.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The 'mvn help:effective-pom' command outputs the total effective POM. The 'mvn dependency:tree' command outputs the graph of project dependencies."
+  },
+  {
+    "id": "mvn-q049",
+    "question": "True or False: The Super POM acts as an invisible background base configuration inherited by every active Maven project instance.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The Super POM anchors all system defaults, standard directory assumptions, and central core endpoints for every running execution."
+  },
+  {
+    "id": "mvn-q050",
+    "question": "True or False: Maven natively possesses only one single lifecycle string that handles clean, build, and documentation tasks at once.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Maven manages three distinct separate lifecycles: clean, default, and site. Each runs independently depending on the command executed."
+  },
+  {
+    "id": "mvn-q051",
+    "question": "True or False: The integration-test phase is part of the native clean lifecycle structure.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The integration-test phase is part of the default build lifecycle, which is completely distinct from the clean lifecycle."
+  },
+  {
+    "id": "mvn-q052",
+    "question": "True or False: Maven Profiles are intended to facilitate separate environmental configurations within a uniform project file context.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Profiles enable conditional build adjustments, shifting targets, parameters, or configurations based on runtime variables or flags."
+  },
+  {
+    "id": "mvn-q053",
+    "question": "True or False: To trigger a specific profile invocation via command line flags, you must type the prefix value '--active-profile'.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Maven utilizes the `-P` command parameter shortcut flag to handle custom runtime profile activations."
+  },
+  {
+    "id": "mvn-q054",
+    "question": "True or False: The goal command 'mvn dependency:tree' displays the resolution order and hierarchy structural map of all required libraries.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The dependency tree goal prints out an indented visualization tracking all direct and downstream dependent modules."
+  },
+  {
+    "id": "mvn-q055",
+    "question": "True or False: A version marked with the suffix '-SNAPSHOT' represents a static locked immutable version that can never change over time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "-SNAPSHOT labels mutable, unstable ongoing builds under active construction. Maven updates these files frequently during remote artifact checks."
+  },
+  {
+    "id": "mvn-q056",
+    "question": "True or False: The maven-shade-plugin can be used to compile class components and all dependency elements into a consolidated single executable 'fat JAR'.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "The shade plugin consolidates multiple dependencies and code targets into an unified Single Archive Jar output artifact."
+  },
+  {
+    "id": "mvn-q057",
+    "question": "True or False: Plugin details and internal execution configuration steps are declared inside the <dependencies> element block of the POM file.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Plugin operational details belong inside the `<build><plugins>` section, separate from application dependencies listed in the `<dependencies>` block."
+  },
+  {
+    "id": "mvn-q058",
+    "question": "True or False: In the default Maven build lifecycle, the 'pre-integration-test' phase runs immediately after the 'package' phase.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "The sequence of the default build lifecycle flows directly from the package step into the pre-integration-test step."
+  },
+  {
+    "id": "mvn-q059",
+    "question": "True or False: The goal 'archetype:generate' sets up a placeholder skeleton framework initialization from a standardized blueprint layout.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Archetypes serve as project templates, helping developers quickly scaffold a standard Maven project structure."
+  },
+  {
+    "id": "mvn-q060",
+    "question": "True or False: A dependency with runtime scope is fully accessible during the primary compilation phase of production source code classes.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Maven Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Runtime scope hides target libraries from compilation tasks, making them available only during test executions and application runtime."
+  },
+  {
+    "id": "mvn-q061",
+    "question": "The central XML project orchestration profile layout file for a Maven installation configuration is named **pom.xml**.",
+    "answer": "pom.xml",
+    "options": ["settings.xml", "pom.xml", "build.gradle", "manifest.mf"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The pom.xml file forms the fundamental configuration paradigm block for managing builds inside the Maven framework."
+  },
+  {
+    "id": "mvn-q062",
+    "question": "Maven coordinates require a groupId, an artifactId, and a **version** to uniquely pinpoint an artifact location.",
+    "answer": "version",
+    "options": ["classifier", "scope", "version", "extension"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The version coordinate denotes the specific incremental design iteration label of a trackable library component."
+  },
+  {
+    "id": "mvn-q063",
+    "question": "To transform source files into executable machine runtime classes, the default lifecycle passes through the **compile** phase.",
+    "answer": "compile",
+    "options": ["validate", "compile", "package", "verify"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The compile phase triggers the compilation step on code resources residing within standard project directories."
+  },
+  {
+    "id": "mvn-q064",
+    "question": "The global user-level caching location folder for stored artifacts is situated under the path **~/.m2/repository**.",
+    "answer": "~/.m2/repository",
+    "options": [
+      "~/.m2/repository",
+      "/var/maven/cache",
+      "~/.maven/store",
+      "C:\\maven\\artifacts"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Maven organizes all external fetched structures and built extensions in the shared user directory at ~/.m2/repository."
+  },
+  {
+    "id": "mvn-q065",
+    "question": "When an external testing library is excluded from final deployment targets, it should be configured using the **test** scope.",
+    "answer": "test",
+    "options": ["runtime", "provided", "compile", "test"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The test scope configures libraries so they are visible only during unit testing and validation phases."
+  },
+  {
+    "id": "mvn-q066",
+    "question": "The phase context that wipes out old local build structures and cleans target paths is **clean**.",
+    "answer": "clean",
+    "options": ["purge", "delete", "clean", "reset"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The clean phase deletes the target output folder, ensuring subsequent build steps compile fresh code."
+  },
+  {
+    "id": "mvn-q067",
+    "question": "To successfully package an application and distribute it to a local machine repository structure, you invoke **mvn install**.",
+    "answer": "mvn install",
+    "options": ["mvn package", "mvn compile", "mvn install", "mvn deploy"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The install phase publishes the packaged binaries into your local machine's repository cache."
+  },
+  {
+    "id": "mvn-q068",
+    "question": "The default root path location structure designated for main system source code structures is **src/main/java**.",
+    "answer": "src/main/java",
+    "options": ["src/java", "source/main", "src/main/java", "app/src/java"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Maven expects source files to be organized in 'src/main/java' to compile them automatically without extra configuration."
+  },
+  {
+    "id": "mvn-q069",
+    "question": "To specify a library provided by an external application server or hosting web environment at execution, select the **provided** scope.",
+    "answer": "provided",
+    "options": ["system", "provided", "runtime", "compile"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The provided scope informs Maven that the runtime container supplies the dependency, preventing its inclusion in the final build artifact."
+  },
+  {
+    "id": "mvn-q070",
+    "question": "The feature that automatically evaluates and imports secondary dependencies required by your primary libraries is called **transitive** dependency resolution.",
+    "answer": "transitive",
+    "options": ["transitive", "recursive", "dynamic", "inherited"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Transitive dependency resolution allows Maven to automatically discover and include sub-dependencies required by your explicit dependencies."
+  },
+  {
+    "id": "mvn-q071",
+    "question": "Sharing baseline build variables and universal structural rules among sub-modules is achieved using **Parent POM inheritance**.",
+    "answer": "Parent POM inheritance",
+    "options": [
+      "Global properties",
+      "Parent POM inheritance",
+      "Settings synchronization",
+      "Archetype instantiation"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Parent POM inheritance centralizes configuration management across multi-module projects, reducing duplication in child configurations."
+  },
+  {
+    "id": "mvn-q072",
+    "question": "To lock target configurations without directly applying them to sub-modules, define libraries within the **dependencyManagement** block.",
+    "answer": "dependencyManagement",
+    "options": [
+      "dependencyManagement",
+      "pluginManagement",
+      "dependencies",
+      "profileManagement"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The dependencyManagement block defines version locks and configurations that child modules can inherit if they declare the dependency."
+  },
+  {
+    "id": "mvn-q073",
+    "question": "The standard execution handler responsible for launching automated test structures during validation routines is the **maven-surefire-plugin**.",
+    "answer": "maven-surefire-plugin",
+    "options": [
+      "maven-failsafe-plugin",
+      "maven-test-plugin",
+      "maven-surefire-plugin",
+      "maven-compiler-plugin"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The maven-surefire-plugin automatically executes unit tests using testing frameworks like JUnit during the test lifecycle phase."
+  },
+  {
+    "id": "mvn-q074",
+    "question": "To block a specific down-stream transitive dependency from joining your project classpath, use the **exclusions** tag.",
+    "answer": "exclusions",
+    "options": ["exclusions", "omissions", "deletions", "dependencies"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The exclusions element allows developers to explicitly remove specific sub-dependencies introduced by a library."
+  },
+  {
+    "id": "mvn-q075",
+    "question": "When deep structural dependency nodes clash at identical tree depths, Maven chooses the artifact based on **declaration order**.",
+    "answer": "declaration order",
+    "options": [
+      "semantic versioning",
+      "declaration order",
+      "file size",
+      "alphabetical name"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "If a version conflict occurs at the same depth, Maven resolves it by selecting the first declaration found in the POM file."
+  },
+  {
+    "id": "mvn-q076",
+    "question": "Global workspace attributes, external server login credentials, and proxy routes are defined inside **settings.xml**.",
+    "answer": "settings.xml",
+    "options": [
+      "pom.xml",
+      "config.properties",
+      "settings.xml",
+      "credentials.json"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The settings.xml file isolates environment-specific values, like credentials and proxies, from the shareable project POM file."
+  },
+  {
+    "id": "mvn-q077",
+    "question": "An aggregator or structural orchestrator project that yields no raw binary output sets its packaging type to **pom**.",
+    "answer": "pom",
+    "options": ["jar", "war", "pom", "zip"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Setting packaging to 'pom' specifies a non-binary artifact used for configuration sharing or multi-module aggregation."
+  },
+  {
+    "id": "mvn-q078",
+    "question": "To review the total structural end-result combination of all profile rules and parent layouts, trigger **mvn help:effective-pom**.",
+    "answer": "mvn help:effective-pom",
+    "options": [
+      "mvn dependency:tree",
+      "mvn help:effective-pom",
+      "mvn project:status",
+      "mvn show:pom"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The effective-pom goal evaluates all active properties, profiles, and parent settings to output the complete active build configuration."
+  },
+  {
+    "id": "mvn-q079",
+    "question": "The master base system blueprint layout from which all active projects derive background configurations is the **Super POM**.",
+    "answer": "Super POM",
+    "options": ["Master XML", "Super POM", "Core Profile", "Root Archetype"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Super POM provides Maven's out-of-the-box defaults, ensuring basic build workflows operate without extensive custom setup."
+  },
+  {
+    "id": "mvn-q080",
+    "question": "The three standard engine core execution environments built natively into the tool framework are default, clean, and **site**.",
+    "answer": "site",
+    "options": ["compile", "package", "site", "deploy"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The site lifecycle handles generating project documentation, reporting metrics, and structural webpage assets."
+  },
+  {
+    "id": "mvn-q081",
+    "question": "To execute complex end-to-end integration flows that require live packaging environments, Maven uses the **integration-test** phase.",
+    "answer": "integration-test",
+    "options": ["test", "verify", "integration-test", "install"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The integration-test phase runs post-packaging integration checks using tools like the maven-failsafe-plugin."
+  },
+  {
+    "id": "mvn-q082",
+    "question": "To activate target configuration overrides depending on environmental parameters, you define **Maven Profiles**.",
+    "answer": "Maven Profiles",
+    "options": [
+      "Build Variants",
+      "Maven Profiles",
+      "Property Bundles",
+      "Lifecycle Hooks"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Maven profiles let you conditionally modify the build configuration for different target environments (e.g., development vs. production)."
+  },
+  {
+    "id": "mvn-q083",
+    "question": "The command parameter flag character syntax utilized to introduce a specific targeted profile activation at runtime is **-P**.",
+    "answer": "-P",
+    "options": ["-A", "-Profile", "--activate", "-P"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The `-P` flag followed by the profile ID activates that specific profile for the current Maven command execution."
+  },
+  {
+    "id": "mvn-q084",
+    "question": "To track dependency paths and inspect conflicting transitive library versions, execute the **mvn dependency:tree** command.",
+    "answer": "mvn dependency:tree",
+    "options": [
+      "mvn dependency:tree",
+      "mvn library:list",
+      "mvn trace:dependencies",
+      "mvn validation:show"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The dependency:tree goal generates a hierarchical text map of all dependencies, which is useful for diagnosing version conflicts."
+  },
+  {
+    "id": "mvn-q085",
+    "question": "An active development build identifier tag that tells Maven to regularly pull updates from remote repositories is **-SNAPSHOT**.",
+    "answer": "-SNAPSHOT",
+    "options": ["-BETA", "-RELEASE", "-SNAPSHOT", "-NIGHTLY"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The -SNAPSHOT suffix identifies a mutable development version that can be updated continuously without incrementing the version number."
+  },
+  {
+    "id": "mvn-q086",
+    "question": "To pack your custom binary classes along with all dependencies into a single deployment file, configure the **maven-shade-plugin**.",
+    "answer": "maven-shade-plugin",
+    "options": [
+      "maven-jar-plugin",
+      "maven-shade-plugin",
+      "maven-assembly-plugin",
+      "maven-war-plugin"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The maven-shade-plugin packages dependencies into a single fat JAR and provides class relocation capabilities to avoid classpath conflicts."
+  },
+  {
+    "id": "mvn-q087",
+    "question": "Custom build plugin definitions and execution bindings are declared inside the **&lt;build&gt;&lt;plugins&gt;** block.",
+    "answer": "<build><plugins>",
+    "options": [
+      "<dependencies>",
+      "<build><plugins>",
+      "<management>",
+      "<extensions>"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The `<build><plugins>` section isolates build lifecycle extensions from standard runtime application libraries."
+  },
+  {
+    "id": "mvn-q088",
+    "question": "The specific setup step that triggers immediately after packaging and precedes integration routines is **pre-integration-test**.",
+    "answer": "pre-integration-test",
+    "options": ["test", "verify", "pre-integration-test", "post-package"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The pre-integration-test phase sets up the environment (e.g., starting databases or containers) before integration tests run."
+  },
+  {
+    "id": "mvn-q089",
+    "question": "To bootstrap an unconfigured workspace from a predefined structural template model, run **archetype:generate**.",
+    "answer": "archetype:generate",
+    "options": [
+      "project:init",
+      "archetype:generate",
+      "template:create",
+      "scaffold:run"
+    ],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The archetype:generate goal creates a new project structure from an existing predefined Maven template layout."
+  },
+  {
+    "id": "mvn-q090",
+    "question": "To skip compilation visibility but ensure availability during test execution and final delivery, assign the **runtime** scope.",
+    "answer": "runtime",
+    "options": ["compile", "provided", "system", "runtime"],
+    "category": "Maven Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The runtime scope ensures dependencies (such as database drivers) are excluded during compilation but included during execution."
+  }
+]

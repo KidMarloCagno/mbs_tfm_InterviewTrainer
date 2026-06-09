@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "cicd-q001",
+    "question": "What does the term 'CI' primarily stand for in modern software engineering workflows?",
+    "answer": "Continuous Integration",
+    "options": [
+      "Continuous Integration",
+      "Continuous Infrastructure",
+      "Code Integration",
+      "Centralized Installation"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "CI stands for Continuous Integration, which is the practice of automating the integration of code changes from multiple contributors into a single software project."
+  },
+  {
+    "id": "cicd-q002",
+    "question": "When automated delivery extends all the way to production without human intervention, it is called continuous ______.",
+    "answer": "Deployment",
+    "options": ["Delivery", "Development", "Deployment", "Distribution"],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Continuous Deployment takes automated pipeline updates and rolls them out directly into the live production environment without any manual gating."
+  },
+  {
+    "id": "cicd-q003",
+    "question": "What is the primary overarching goal of practicing Continuous Integration?",
+    "answer": "To frequently merge code changes into a shared repository and detect issues early",
+    "options": [
+      "To completely eliminate the need for QA engineers",
+      "To encrypt source code before saving it to a public cloud repository",
+      "To frequently merge code changes into a shared repository and detect issues early",
+      "To automatically generate client-facing marketing documentation"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Continuous Integration minimizes the cost and friction of merging code by having developers integrate daily, triggering automated builds and tests to identify errors immediately."
+  },
+  {
+    "id": "cicd-q004",
+    "question": "Which pipeline phase typically executes immediately after a engineer pushes code changes to the remote repository?",
+    "answer": "Build and Unit Testing",
+    "options": [
+      "Production Deployment",
+      "Build and Unit Testing",
+      "User Acceptance Testing",
+      "Canary Traffic Routing"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The build and unit testing phase is the first gate in a pipeline, validating that the source code compiles successfully and that basic functional components operate as intended."
+  },
+  {
+    "id": "cicd-q005",
+    "question": "What is the primary business and technical benefit of incorporating an automated build system?",
+    "answer": "Ensures consistent, repeatable builds independent of individual developer setups",
+    "options": [
+      "Guarantees that the software will be completely free of semantic errors",
+      "Ensures consistent, repeatable builds independent of individual developer setups",
+      "Reduces the physical size of source code repositories by compressing raw text",
+      "Eliminates the requirement for local version control systems"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Automated build systems run in standardized environments, removing local environmental variables ('it works on my machine') from the compilation equation."
+  },
+  {
+    "id": "cicd-q006",
+    "question": "Which of the following best defines a CI/CD pipeline?",
+    "answer": "A structured sequence of automated steps required to deliver a new version of software",
+    "options": [
+      "A hardware infrastructure connecting office computers directly to the server room",
+      "A sequential checklist that developers must manually complete before writing code",
+      "A structured sequence of automated steps required to deliver a new version of software",
+      "A relational database management system designed to track developer velocity"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A CI/CD pipeline represents the automated workflow path—encompassing linting, compilation, testing, packaging, and deploying—that code traverses to reach production."
+  },
+  {
+    "id": "cicd-q007",
+    "question": "What explicitly differentiates Continuous Delivery from Continuous Deployment?",
+    "answer": "Continuous Delivery requires a manual approval or trigger to deploy to production",
+    "options": [
+      "Continuous Delivery does not include automated testing phases",
+      "Continuous Delivery requires a manual approval or trigger to deploy to production",
+      "Continuous Deployment can only be applied to monolithic mobile applications",
+      "Continuous Delivery is restricted entirely to local developer machines"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "In Continuous Delivery, code is always in a deployable state, but the actual release to production requires manual validation or a scheduled business decision."
+  },
+  {
+    "id": "cicd-q008",
+    "question": "What is the core focus of unit testing within an automated execution pipeline?",
+    "answer": "To isolate and verify individual components or functions of code in absolute isolation",
+    "options": [
+      "To test end-to-end network latency across distributed cloud instances",
+      "To determine how human users interact with UI elements",
+      "To isolate and verify individual components or functions of code in absolute isolation",
+      "To assess the penetration vulnerability of the application database"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Unit testing checks the smallest testable parts of an application independently, providing the fastest and cheapest mechanism to ensure functional code blocks behave properly."
+  },
+  {
+    "id": "cicd-q009",
+    "question": "In the context of CI/CD, what is an 'artifact'?",
+    "answer": "A deployable package or binary file generated during the build pipeline phase",
+    "options": [
+      "An obsolete block of source code that should be removed from git",
+      "A deployable package or binary file generated during the build pipeline phase",
+      "The historical log file documenting server crashes over the past year",
+      "A developer credentials file used for secure command line access"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Artifacts are compiled outputs—such as JARs, WARs, zip files, or container images—produced by build steps that can be safely versioned and deployed."
+  },
+  {
+    "id": "cicd-q010",
+    "question": "What does the engineering paradigm 'Pipeline as Code' refer to?",
+    "answer": "Defining the CI/CD workflow configurations in text files stored inside version control",
+    "options": [
+      "Writing pipeline logic exclusively in raw hardware assembly language",
+      "Defining the CI/CD workflow configurations in text files stored inside version control",
+      "Using visual graphical editors on a cloud platform to drag and drop build steps",
+      "Hardcoding environment connection strings directly into application business logic"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Pipeline as Code allows workflows to be described via files (like YAML or Jenkinsfile) so that changes to build processes are tracked, peer-reviewed, and versioned just like source code."
+  },
+  {
+    "id": "cicd-q011",
+    "question": "Which tool is historically recognized as an open-source automation server widely used for CI/CD pipelines?",
+    "answer": "Jenkins",
+    "options": ["Jenkins", "Kubernetes", "Nginx", "Prometheus"],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Jenkins is a foundational, extensible open-source automation server containing hundreds of plugins to support building, deploying, and automating projects."
+  },
+  {
+    "id": "cicd-q012",
+    "question": "What is the primary operational role of a CI/CD runner or agent?",
+    "answer": "To provide the physical or virtual execution environment where pipeline jobs run",
+    "options": [
+      "To monitor production traffic volume and scale infrastructure up or down",
+      "To automatically accept or decline pull requests based on contributor authority",
+      "To provide the physical or virtual execution environment where pipeline jobs run",
+      "To serve as the central repository storing historical source code commits"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Runners or agents receive tasks distributed by the CI/CD orchestrator, executing build commands, running tests, and returning outputs back to the coordinator."
+  },
+  {
+    "id": "cicd-q013",
+    "question": "Which deployment strategy maintains two identical hardware environments to enable instant switching and zero-downtime rollouts?",
+    "answer": "Blue-Green Deployment",
+    "options": [
+      "Blue-Green Deployment",
+      "Canary Deployment",
+      "Shadow Deployment",
+      "Linear Replacement"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Blue-Green deployment mitigates deployment risk by having one active target environment (e.g., Blue) and one idle environment (e.g., Green), routing traffic via a load balancer once testing is verified."
+  },
+  {
+    "id": "cicd-q014",
+    "question": "What is the defining characteristic of a Canary Deployment strategy?",
+    "answer": "Exposing a new software version to a small subset of production traffic before full release",
+    "options": [
+      "Exposing a new software version to a small subset of production traffic before full release",
+      "Shutting down all application servers completely to update the central database",
+      "Deploying updates exclusively onto internal staging machines for employee testing",
+      "Duplicating live database production requests to a parallel offline test cluster"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Canary deployments act as early warning systems by rolling updates out to a fraction of live traffic, allowing engineers to analyze real-world metrics for regressions before a complete rollout."
+  },
+  {
+    "id": "cicd-q015",
+    "question": "What does Static Code Analysis (linting) accomplish during automated execution?",
+    "answer": "Evaluates code syntax, style, and security flaws without actually executing the program",
+    "options": [
+      "Simulates heavy concurrent user traffic to measure CPU performance bottlenecks",
+      "Evaluates code syntax, style, and security flaws without actually executing the program",
+      "Verifies that database connections successfully authenticate over TLS",
+      "Recompiles source code into high-performance byte arrays"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Static code analysis scans source files against pre-configured rulesets to enforce code quality standards, identify anti-patterns, and uncover vulnerabilities prior to runtime compilation."
+  },
+  {
+    "id": "cicd-q016",
+    "question": "What mechanism allows a Git platform to immediately inform a CI/CD server that a code push has occurred?",
+    "answer": "Webhook",
+    "options": ["SSH Handshake", "Webhook", "REST Polling daemon", "Cron Job"],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A webhook is an event-driven HTTP callback mechanism that allows a source platform (like GitHub) to push real-time notifications to a target automation server (like Jenkins)."
+  },
+  {
+    "id": "cicd-q017",
+    "question": "What is the core recommendation of the 'Shift Left' testing philosophy?",
+    "answer": "Moving testing processes earlier into the software development life cycle",
+    "options": [
+      "Shifting deployment ownership completely from developers back to system administrators",
+      "Moving testing processes earlier into the software development life cycle",
+      "Restricting code integration actions strictly to the left branch of a git history tree",
+      "Executing all intensive test scenarios on local workstations instead of cloud systems"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Shifting left emphasizes discovering bugs as close to code creation as possible, utilizing linting and unit testing within the developer workflow rather than waiting for post-build operations."
+  },
+  {
+    "id": "cicd-q018",
+    "question": "What is the exact purpose of establishing a staging environment?",
+    "answer": "To closely mirror production for final validation, integration testing, and user sign-off",
+    "options": [
+      "To serve as an offline backup system if production is physically destroyed",
+      "To host experimental features that developers do not intend to release",
+      "To closely mirror production for final validation, integration testing, and user sign-off",
+      "To provide a sandbox for junior developers to learn basic syntax"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A staging environment mimics production configuration, data structures, and architecture as closely as possible to serve as the definitive proving ground before actual release."
+  },
+  {
+    "id": "cicd-q019",
+    "question": "What does the phrase 'environmental drift' describe?",
+    "answer": "The gradual accumulation of configuration discrepancies between isolated environments over time",
+    "options": [
+      "The physical migration of server data centers across geographic zones",
+      "The gradual accumulation of configuration discrepancies between isolated environments over time",
+      "Fluctuations in public cloud cost pricing models across billing intervals",
+      "The shifting of application interface styling based on user location data"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Environmental drift occurs when ad-hoc manual tweaks, un-tracked hotfixes, or independent updates cause dev, staging, and production environments to deviate from one another, breaking pipeline consistency."
+  },
+  {
+    "id": "cicd-q020",
+    "question": "Which deployment strategy replaces instances of the old application version with the new version progressively, instance by instance?",
+    "answer": "Rolling Deployment",
+    "options": [
+      "Recreate Deployment",
+      "Blue-Green Deployment",
+      "Rolling Deployment",
+      "Atomic Swap Deployment"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A rolling deployment updates nodes sequentially rather than all at once, which maintains system availability and prevents full service outages during the deployment window."
+  },
+  {
+    "id": "cicd-q021",
+    "question": "What characterizes the foundational operational approach of GitOps?",
+    "answer": "Using Git repositories as the single source of truth for infrastructure and cluster state definitions",
+    "options": [
+      "Requiring system operators to write code entirely via command-line text editors",
+      "Using Git repositories as the single source of truth for infrastructure and cluster state definitions",
+      "Eliminating cloud resources completely to run software directly on physical desktop git instances",
+      "Automatically emailing software binaries to customers upon every single code commit"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "GitOps uses declarative infrastructure files stored in Git, leveraging automated continuous sync loops to ensure that the live infrastructure state always matches the repository configuration."
+  },
+  {
+    "id": "cicd-q022",
+    "question": "What is the primary structural objective of running integration tests?",
+    "answer": "To evaluate how independent software components or external systems interact with each other",
+    "options": [
+      "To evaluate how independent software components or external systems interact with each other",
+      "To test an individual line of a basic math function in complete isolation",
+      "To guarantee that the CSS styles render uniformly across legacy browsers",
+      "To benchmark the raw throughput of physical memory buses"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Unlike unit tests, integration tests look at interactions, discovering issues that arise when different code modules, database drivers, or microservices are linked together."
+  },
+  {
+    "id": "cicd-q023",
+    "question": "What does the software principle 'fail fast' specify within a CI/CD automation pipeline?",
+    "answer": "Halting the execution immediately upon any job failure to maximize feedback velocity",
+    "options": [
+      "Ignoring validation errors to deploy software quickly to production",
+      "Forcing systems to reboot entirely whenever a compiler warns about deprecated syntax",
+      "Halting the execution immediately upon any job failure to maximize feedback velocity",
+      "Deactivating security infrastructure to expedite unit testing schedules"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Failing fast ensures that if a syntax lint, build compilation, or early test fails, the pipeline aborts immediately, saving compute resources and instantly alerting developers."
+  },
+  {
+    "id": "cicd-q024",
+    "question": "Why is containerization technology (e.g., Docker) frequently coupled with CI/CD?",
+    "answer": "It encapsulates runtime dependencies, guaranteeing identical behavior across all environments",
+    "options": [
+      "It completely replaces the need to manage application source code versions",
+      "It encapsulates runtime dependencies, guaranteeing identical behavior across all environments",
+      "It automatically optimizes long-running relational database query strings",
+      "It provides hardware-level structural isolation from public internet networks"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Containers bind application files, runtimes, and dependencies into a uniform entity, eliminating underlying environmental differences between testing machines and production nodes."
+  },
+  {
+    "id": "cicd-q025",
+    "question": "What is a pipeline build trigger?",
+    "answer": "An configured event that automatically kicks off the execution of a workflow",
+    "options": [
+      "A database error constraint that terminates active network requests",
+      "An configured event that automatically kicks off the execution of a workflow",
+      "The physical power command initialized to boot up clean server racks",
+      "A code compilation error that crashes a localized system build"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Triggers automate the launch of pipelines based on specific criteria, such as a code commit, a merged pull request, a periodic schedule, or an external API request."
+  },
+  {
+    "id": "cicd-q026",
+    "question": "What is the primary function of executing a smoke test after a deployment?",
+    "answer": "To run a shallow suite of core assertions confirming the deployment is stable and up",
+    "options": [
+      "To evaluate maximum load-carrying capability over extended stress durations",
+      "To run a shallow suite of core assertions confirming the deployment is stable and up",
+      "To check if background application styling conforms to marketing standard palettes",
+      "To completely re-validate every single edge case function written over the product history"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Smoke testing provides a rapid sanity check to confirm that the application successfully boots, basic endpoints reply, and fundamental architecture integrations aren't completely broken."
+  },
+  {
+    "id": "cicd-q027",
+    "question": "Which statement accurately describes the core thesis of Infrastructure as Code (IaC)?",
+    "answer": "Managing and provisioning server resources using machine-readable configuration files",
+    "options": [
+      "Configuring hardware servers manually through an interactive web-based interface",
+      "Embedding database backup logic directly into front-end JavaScript scripts",
+      "Managing and provisioning server resources using machine-readable configuration files",
+      "Requiring systems engineers to program custom operating system kernels from scratch"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Infrastructure as Code allows operators to script cloud architectures, enabling infrastructure setups to be run through pipelines, versioned, and replicated reliably."
+  },
+  {
+    "id": "cicd-q028",
+    "question": "Why do engineering groups deploy centralized artifact repositories like JFrog Artifactory or Sonatype Nexus?",
+    "answer": "To store, version, and manage dependencies and compiled build outputs securely",
+    "options": [
+      "To host public-facing customer help documentation and technical blogs",
+      "To track real-time developer typing speeds and code formatting correctness",
+      "To store, version, and manage dependencies and compiled build outputs securely",
+      "To act as a central firewall screening incoming web production traffic"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Artifact repositories house built packages securely, ensuring that upstream dependencies are cached and that downstream deployment pipelines draw from a immutable, verified package source."
+  },
+  {
+    "id": "cicd-q029",
+    "question": "What objective defines the practice of Continuous Monitoring within DevOps cycles?",
+    "answer": "Tracking production performance, logs, and health metrics in real-time to detect runtime issues",
+    "options": [
+      "Constantly reading through raw developer git commit logs manually to audit velocity",
+      "Tracking production performance, logs, and health metrics in real-time to detect runtime issues",
+      "Recording webcam streams of software development teams to evaluate physical output",
+      "Running continuous vulnerability scans exclusively on offline local hard drives"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Continuous Monitoring bridges deployment and operations, ensuring telemetry loops alert engineers to production degradations, errors, or anomalies immediately."
+  },
+  {
+    "id": "cicd-q030",
+    "question": "In pipeline automation engineering, what does the property of 'idempotency' guarantee?",
+    "answer": "Executing an operation multiple times leaves the system in the exact same state as the first run",
+    "options": [
+      "That a deployment file will double in size every single time it is compiled",
+      "That an script fails intentionally on alternating execution attempts to challenge error loops",
+      "Executing an operation multiple times leaves the system in the exact same state as the first run",
+      "That code executes entirely in parallel configurations without requiring structural synchronicity"
+    ],
+    "category": "CI/CD Basics",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "An idempotent script verifies the state of an infrastructure asset and makes only the modifications needed to align it with target configuration, safely allowing repetitive executions without side effects."
+  },
+  {
+    "id": "cicd-q031",
+    "question": "True or False: CI stands for Centralized Installation in enterprise engineering environments.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "CI universally stands for Continuous Integration, representing the automation of code aggregation and testing."
+  },
+  {
+    "id": "cicd-q032",
+    "question": "True or False: Continuous Deployment always requires a manual business sign-off before code goes live.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Continuous Deployment is fully automated up to production; it is Continuous Delivery that retains a manual gate or approval step before publication."
+  },
+  {
+    "id": "cicd-q033",
+    "question": "True or False: The main goal of Continuous Integration is to integrate code changes at the end of a multi-month development cycle.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Continuous Integration aims to merge changes multiple times a day to avoid the massive conflicts common with long-lived feature branches."
+  },
+  {
+    "id": "cicd-q034",
+    "question": "True or False: The build phase usually runs immediately after code is pushed to the repository in a standard CI pipeline.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Standard configurations trigger pipelines automatically upon push events, executing code compilation and early validation instantly."
+  },
+  {
+    "id": "cicd-q035",
+    "question": "True or False: Automated build systems guarantee that code will have absolutely zero runtime bugs.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Automated build systems confirm syntax validity, compilation success, and passing test statuses, but they cannot inherently predict logic errors or runtime bugs."
+  },
+  {
+    "id": "cicd-q036",
+    "question": "True or False: A CI/CD pipeline is a manual checklist that developers must execute before every release.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "A CI/CD pipeline is explicitly designed to replace manual checklists with consistent, repeatable, automated software tasks."
+  },
+  {
+    "id": "cicd-q037",
+    "question": "True or False: Continuous Delivery requires manual approval to deploy to production, whereas Continuous Deployment does it automatically.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "This distinction is critical: Delivery automates deployment readiness, while Deployment automates the actual production release execution."
+  },
+  {
+    "id": "cicd-q038",
+    "question": "True or False: Unit testing verifies that multiple integrated services interact correctly under heavy load.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Unit testing verifies code structures in complete isolation; testing service interactions under load falls under integration and performance testing."
+  },
+  {
+    "id": "cicd-q039",
+    "question": "True or False: An artifact in CI/CD is an output file or package produced by a build stage that is ready for deployment.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Artifacts capture compiled code results and form the foundational objects shipped to downstream hosting environments."
+  },
+  {
+    "id": "cicd-q040",
+    "question": "True or False: 'Pipeline as code' means writing the deployment configurations into text files that are version-controlled alongside the application.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Treating configuration files as code allows pipelines to be managed, edited, and audited via standard development methodologies."
+  },
+  {
+    "id": "cicd-q041",
+    "question": "True or False: Jenkins is entirely closed-source proprietary software owned by a single cloud provider.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Jenkins is a highly customizable, fully open-source automation server backed by a massive community plugin ecosystem."
+  },
+  {
+    "id": "cicd-q042",
+    "question": "True or False: A CI/CD runner or agent is the machine or container that actually executes the tasks defined in a pipeline.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The orchestrator issues tasks, but the heavy lifting of code building and testing falls on independent runners or agents."
+  },
+  {
+    "id": "cicd-q043",
+    "question": "True or False: Blue-Green deployment requires updating a single set of production servers incrementally while they handle live traffic.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Blue-Green deployment leverages two completely separate, identical environments to route live traffic instantly away from the outdated cluster."
+  },
+  {
+    "id": "cicd-q044",
+    "question": "True or False: Canary deployment involves routing a small fraction of real production traffic to a new software version to observe its stability.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Canaries act as limited initial field trials, exposing a tiny subset of users to changes to test telemetry reliability before global deployment."
+  },
+  {
+    "id": "cicd-q045",
+    "question": "True or False: Static code analysis requires executing the application in a production environment to find memory leaks.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Static code analysis evaluates the code un-executed ('statically') checking design flaws, style compliance, and obvious security vulnerabilities."
+  },
+  {
+    "id": "cicd-q046",
+    "question": "True or False: Webhooks allow version control systems to notify CI/CD servers automatically whenever new code is pushed.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Webhooks remove the need for continuous polling by allowing git systems to instantly announce commit pushes over standard HTTP requests."
+  },
+  {
+    "id": "cicd-q047",
+    "question": "True or False: The 'Shift Left' concept refers to delaying all automated tests until the application is deployed to production.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Shifting left advocates moving tests as early as possible in the timeline, maximizing code validation steps prior to compiling or merging."
+  },
+  {
+    "id": "cicd-q048",
+    "question": "True or False: A staging environment is designed to closely resemble the production environment for final verification.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Staging models target architectures accurately to act as an uncompromised, final testing environment before releasing builds to production users."
+  },
+  {
+    "id": "cicd-q049",
+    "question": "True or False: Environmental drift occurs when development, staging, and production environments maintain identical configurations over time.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Environmental drift is the problematic divergence of environments caused by un-tracked changes, making deployments highly unpredictable."
+  },
+  {
+    "id": "cicd-q050",
+    "question": "True or False: A rolling deployment replaces older instances of an application with new instances sequentially to maintain availability.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "By trickling updates to sub-sections of production clusters, rolling strategies prevent service drop-offs by keeping alternative nodes active."
+  },
+  {
+    "id": "cicd-q051",
+    "question": "True or False: GitOps uses a spreadsheet as the single source of truth for cluster state and cloud configurations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "GitOps leverages declarative code profiles explicitly committed inside a Git version control system as the sole source of structural state truth."
+  },
+  {
+    "id": "cicd-q052",
+    "question": "True or False: Integration testing focuses exclusively on testing individual functions or methods in absolute isolation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Integration testing evaluates communication paths between independent software packages, external databases, or third-party web endpoints."
+  },
+  {
+    "id": "cicd-q053",
+    "question": "True or False: A 'fail fast' system continues running subsequent deployment steps even if early build or test steps fail.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Fail-fast pipelines terminate immediately when an anomaly hits, prioritizing immediate notification delivery and computing economy."
+  },
+  {
+    "id": "cicd-q054",
+    "question": "True or False: Containerization helps eliminate the 'it works on my machine' problem by standardizing the runtime environment across CI/CD stages.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Containers bind binaries and operational file systems together, isolating them from variations in node architecture configurations."
+  },
+  {
+    "id": "cicd-q055",
+    "question": "True or False: A build trigger is a manual-only action that cannot be automated by code commits.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Build triggers are highly automated, commonly relying on repository webhooks to execute code paths immediately upon change identification."
+  },
+  {
+    "id": "cicd-q056",
+    "question": "True or False: Smoke testing is an exhaustive, deep regression test suite that takes hours or days to execute completely.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Smoke testing provides quick, shallow verification that essential server components boot and handle simple validation checks properly."
+  },
+  {
+    "id": "cicd-q057",
+    "question": "True or False: Infrastructure as Code (IaC) allows infrastructure provisioning to be managed via machine-readable definition files.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "IaC substitutes manual administrative portal operations with auditable, programmatic configuration files processed via automated systems."
+  },
+  {
+    "id": "cicd-q058",
+    "question": "True or False: An artifact repository is only used to store old source code files, never compiled binaries or Docker images.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Artifact repositories house compiled output packages, libraries, and images; Git repositories are used to retain source files."
+  },
+  {
+    "id": "cicd-q059",
+    "question": "True or False: Continuous monitoring provides real-time visibility into the performance and health of applications running in production.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Monitoring feeds observability metrics back to engineering departments, finishing the cycle from deployment tracking to telemetry logging."
+  },
+  {
+    "id": "cicd-q060",
+    "question": "True or False: An idempotent deployment script produces completely different states each time it is executed with the same parameters.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "CI/CD Basics",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Idempotency mandates that multiple invocations of a script return the system to the identical state, neutralizing duplicate application side effects."
+  },
+  {
+    "id": "cicd-q061",
+    "question": "CI stands for Continuous ______, which automates merging code changes into a central repository.",
+    "answer": "Integration",
+    "options": [
+      "Integration",
+      "Infrastructure",
+      "Implementation",
+      "Installation"
+    ],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Continuous Integration establishes automated processes to continuously pool modifications into central shared filesets."
+  },
+  {
+    "id": "cicd-q062",
+    "question": "When automated delivery extends all the way to production without manual gatekeeping, it is called Continuous ______.",
+    "answer": "Deployment",
+    "options": ["Development", "Distribution", "Deployment", "Delivery"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Continuous Deployment ensures updates satisfying all validation tests proceed down automation tracks directly into user hands."
+  },
+  {
+    "id": "cicd-q063",
+    "question": "Continuous Integration aims to find bugs early by automating the ______ and testing of code changes.",
+    "answer": "build",
+    "options": ["build", "deletion", "encryption", "marketing"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Automatically triggering software compilation and test patterns uncovers functional breaks or regressions immediately."
+  },
+  {
+    "id": "cicd-q064",
+    "question": "The phase in a CI/CD pipeline that compiles source code into executable software is known as the ______ phase.",
+    "answer": "build",
+    "options": ["staging", "build", "canary", "monitoring"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The build step parses source definitions and compiles them into consumable runtime structures."
+  },
+  {
+    "id": "cicd-q065",
+    "question": "Automating the pipeline ensures that builds are consistent and ______ across all runs.",
+    "answer": "repeatable",
+    "options": ["volatile", "randomized", "repeatable", "temporary"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Repeatability ensures that executing identical workflow states against unchanging code returns reliable, predictable results."
+  },
+  {
+    "id": "cicd-q066",
+    "question": "A CI/CD ______ represents the automated sequence of steps from code commit to production deployment.",
+    "answer": "pipeline",
+    "options": ["pipeline", "network", "database", "gateway"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Pipelines map execution logic linearly, walking changes through distinct checkpoints to optimize code flow safety."
+  },
+  {
+    "id": "cicd-q067",
+    "question": "Unlike Continuous Deployment, Continuous ______ requires a manual approval step before releasing to production.",
+    "answer": "Delivery",
+    "options": ["Integration", "Delivery", "Development", "Distribution"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Continuous Delivery standardizes fully tested artifacts, making actual deployments to production a manual decision."
+  },
+  {
+    "id": "cicd-q068",
+    "question": "To test individual code functions or classes in isolation, developers use ______ tests.",
+    "answer": "unit",
+    "options": ["smoke", "unit", "integration", "stress"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Unit testing verifies targeted logical loops without connecting to live components like networks or filesystems."
+  },
+  {
+    "id": "cicd-q069",
+    "question": "A deployable package or binary output created by a pipeline build step is called an ______.",
+    "answer": "artifact",
+    "options": ["artifact", "archive", "agent", "asset"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Artifact generation marks the end of compilation steps, yielding transportable packages optimized for infrastructure staging."
+  },
+  {
+    "id": "cicd-q070",
+    "question": "Defining CI/CD workflows using files like YAML or JSON stored in git is known as pipeline as ______.",
+    "answer": "code",
+    "options": ["service", "code", "infrastructure", "data"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pipeline as Code allows configuration settings to benefit from standard code tools like branching, tracking, and peer reviews."
+  },
+  {
+    "id": "cicd-q071",
+    "question": "______ is a highly popular, open-source automation server used for building CI/CD pipelines.",
+    "answer": "Jenkins",
+    "options": ["Docker", "Kubernetes", "Jenkins", "Ansible"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Jenkins functions as an orchestrator, utilizing customizable scripting tasks to streamline workflow automation."
+  },
+  {
+    "id": "cicd-q072",
+    "question": "The software component or machine responsible for executing jobs assigned by the CI/CD master is called a ______.",
+    "answer": "runner",
+    "options": ["runner", "webhook", "proxy", "trigger"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Runners or agents isolate pipeline processes from the primary management console, providing clean nodes to build code."
+  },
+  {
+    "id": "cicd-q073",
+    "question": "A deployment strategy utilizing two identical hosting environments named ______ and green minimizes downtime during updates.",
+    "answer": "blue",
+    "options": ["blue", "red", "canary", "shadow"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Blue-Green systems change user access routing instantly, removing long offline windows during production deployments."
+  },
+  {
+    "id": "cicd-q074",
+    "question": "Routing a small percentage of production traffic to a new deployment to evaluate its stability is a ______ deployment.",
+    "answer": "canary",
+    "options": ["rolling", "blue-green", "canary", "recreate"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Canary practices expose changes to real users incrementally, isolating structural dependencies before a global release."
+  },
+  {
+    "id": "cicd-q075",
+    "question": "Analyzing source code for quality, security, and style issues without executing it is called ______ code analysis.",
+    "answer": "static",
+    "options": ["dynamic", "static", "functional", "regression"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Static validation isolates style non-conformance and shallow syntax faults before initiating compilation tools."
+  },
+  {
+    "id": "cicd-q076",
+    "question": "A Git repository can trigger a pipeline automatically via a ______, which sends an HTTP POST request upon a push event.",
+    "answer": "webhook",
+    "options": ["runner", "webhook", "cron job", "listener"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Webhooks alert orchestration tools immediately when code updates are pushed, removing the need for manual pipeline executions."
+  },
+  {
+    "id": "cicd-q077",
+    "question": "The practice of testing earlier in the software development life cycle is often called shifting ______.",
+    "answer": "left",
+    "options": ["right", "left", "up", "down"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Shifting left integrates testing earlier in the development process, catching issues when they are faster and cheaper to fix."
+  },
+  {
+    "id": "cicd-q078",
+    "question": "An environment that replicates production precisely for final pre-release validation is called a ______ environment.",
+    "answer": "staging",
+    "options": ["development", "staging", "local", "sandbox"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Staging gives engineers a high-fidelity environment to run integration workflows prior to releasing code live."
+  },
+  {
+    "id": "cicd-q079",
+    "question": "When configurations between environments diverge over time due to manual updates, it is called environmental ______.",
+    "answer": "drift",
+    "options": ["drift", "shift", "decay", "leak"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Drift breaks automation stability because hidden differences across environments cause pipelines to fail unpredictably."
+  },
+  {
+    "id": "cicd-q080",
+    "question": "A ______ deployment strategy incrementally replaces old instances of an application with new ones over time.",
+    "answer": "rolling",
+    "options": ["canary", "blue-green", "rolling", "recreate"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Rolling updates upgrade clusters step-by-step, ensuring underlying systems preserve operational processing capacity."
+  },
+  {
+    "id": "cicd-q081",
+    "question": "The operational practice of using Git repositories as the single source of truth for infrastructure definitions is called ______.",
+    "answer": "GitOps",
+    "options": ["SysOps", "GitOps", "CloudOps", "SecOps"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "GitOps applies git management workflows to configuration files, using automated loops to keep infrastructure states accurate."
+  },
+  {
+    "id": "cicd-q082",
+    "question": "Tests designed to ensure that multiple distinct software modules or services function correctly together are called ______ tests.",
+    "answer": "integration",
+    "options": ["unit", "smoke", "integration", "sanity"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Integration tests evaluate how data flows across complex systems, such as between APIs and database networks."
+  },
+  {
+    "id": "cicd-q083",
+    "question": "The design principle of stopping a pipeline execution immediately upon encountering any error is called fail ______.",
+    "answer": "fast",
+    "options": ["safe", "fast", "late", "soft"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Failing fast avoids wasting computing time on broken builds and gives developers immediate feedback on errors."
+  },
+  {
+    "id": "cicd-q084",
+    "question": "Utilizing tools like ______ allows developers to package an application with all its dependencies for environmental consistency.",
+    "answer": "Docker",
+    "options": ["Jenkins", "Git", "Docker", "Prometheus"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Containers standardize environments, ensuring that applications run identically from local machines to production nodes."
+  },
+  {
+    "id": "cicd-q085",
+    "question": "A code commit or pull request that initiates an automated pipeline run is called a build ______.",
+    "answer": "trigger",
+    "options": ["agent", "hook", "runner", "trigger"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Triggers remove manual steps from the development workflow, automatically starting pipelines based on repository changes."
+  },
+  {
+    "id": "cicd-q086",
+    "question": "A minimal set of automated checks run right after deployment to verify basic availability is called a ______ test.",
+    "answer": "smoke",
+    "options": ["smoke", "stress", "load", "unit"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Smoke testing provides a quick health check to verify that a deployed service is online and responding before running deeper test suites."
+  },
+  {
+    "id": "cicd-q087",
+    "question": "Managing and provisioning cloud infrastructure using machine-readable configuration files is called Infrastructure as ______.",
+    "answer": "Code",
+    "options": ["Code", "a Service", "Platform", "Software"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Infrastructure as Code allows teams to manage environments using version-controlled configuration files rather than manual dashboard setups."
+  },
+  {
+    "id": "cicd-q088",
+    "question": "Tools like Sonatype Nexus or JFrog Artifactory are examples of centralized ______ repositories.",
+    "answer": "artifact",
+    "options": ["source", "artifact", "database", "metadata"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Artifact repositories safely cache external code dependencies and store compiled binaries generated by internal workflows."
+  },
+  {
+    "id": "cicd-q089",
+    "question": "Observing application performance metrics and log aggregation live in production is called continuous ______.",
+    "answer": "monitoring",
+    "options": ["integration", "deployment", "monitoring", "testing"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Continuous monitoring feeds operational data back into the development loop, helping teams identify anomalies and regressions early."
+  },
+  {
+    "id": "cicd-q090",
+    "question": "A script is considered ______ if running it repeatedly results in the exact same infrastructure state without adverse side effects.",
+    "answer": "idempotent",
+    "options": ["idempotent", "volatile", "stateless", "immutable"],
+    "category": "CI/CD Basics",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Idempotency prevents scripts from causing unintended side effects or creating duplicate configuration items when executed repeatedly."
+  }
+]

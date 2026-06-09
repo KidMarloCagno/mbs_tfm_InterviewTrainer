@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { GameQuestion } from "@/components/game/GameEngine";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface TrueFalseProps {
@@ -25,7 +26,22 @@ export function TrueFalse({ question, onAnswered }: TrueFalseProps) {
   return (
     <Card style={{ maxWidth: 700, margin: "0 auto" }}>
       <CardHeader>
-        <CardTitle>True / False Sprint</CardTitle>
+        <div className="header-row">
+          <CardTitle>True / False Sprint</CardTitle>
+          <Badge>{question.level}</Badge>
+        </div>
+        <div
+          className="text-muted"
+          style={{
+            display: "flex",
+            gap: ".55rem",
+            alignItems: "center",
+            fontSize: ".8rem",
+          }}
+        >
+          <span className="mono">◉ {question.category}</span>
+          {question.technologyIcon}
+        </div>
       </CardHeader>
       <CardContent>
         <p style={{ fontSize: "1.05rem", fontWeight: 600 }}>

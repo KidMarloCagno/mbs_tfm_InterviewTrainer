@@ -25,7 +25,7 @@ describe("getAvailableTopics", () => {
     expect(topics).toEqual(sorted);
   });
 
-  it("includes all 11 registered topic keys", () => {
+  it("includes all registered topic keys", () => {
     // Arrange & Act
     const topics = getAvailableTopics();
     // Assert — one entry per JSON set in prisma/data/sets/
@@ -33,13 +33,21 @@ describe("getAvailableTopics", () => {
       "Angular",
       "Backend",
       "Database",
+      "Design Patterns",
       "Django",
       "Frontend",
+      "Git Basics",
+      "CI/CD Basics",
+      "DevOps Basics",
       "Java",
+      "JI Java",
       "JavaScript",
+      "Kafka Basics",
+      "Maven Basics",
       "Python",
       "React",
       "Spring",
+      "Spring Boot Basics",
       "SystemsDesign",
     ];
     for (const t of expected) {

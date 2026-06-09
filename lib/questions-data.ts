@@ -1,10 +1,18 @@
 import angularQuestions from "@/prisma/data/sets/angular.json";
 import backendQuestions from "@/prisma/data/sets/backend.json";
 import databaseQuestions from "@/prisma/data/sets/database.json";
+import designPatternsQuestions from "@/prisma/data/sets/designPatterns.json";
 import djangoQuestions from "@/prisma/data/sets/django.json";
 import frontendQuestions from "@/prisma/data/sets/frontend.json";
+import gitBasicsQuestions from "@/prisma/data/sets/gitBasics.json";
+import ciCdBasicsQuestions from "@/prisma/data/sets/ciCdBasics.json";
+import devOpsBasicsQuestions from "@/prisma/data/sets/devOpsBasics.json";
+import springBootBasicsQuestions from "@/prisma/data/sets/springBootBasics.json";
 import javaQuestions from "@/prisma/data/sets/java.json";
+import jiJavaQuestions from "@/prisma/data/sets/jiJava.json";
 import javascriptQuestions from "@/prisma/data/sets/javascript.json";
+import kafkaBasicsQuestions from "@/prisma/data/sets/kafkaBasics.json";
+import mavenBasicsQuestions from "@/prisma/data/sets/mavenBasics.json";
 import pythonQuestions from "@/prisma/data/sets/python.json";
 import reactQuestions from "@/prisma/data/sets/react.json";
 import springQuestions from "@/prisma/data/sets/spring.json";
@@ -26,7 +34,7 @@ function mapSet(
   category: string,
   prefix: string,
 ): GameQuestion[] {
-  return (items as QuestionSetItem[]).map((q, idx) => ({
+  return items.map((q, idx) => ({
     id: q.id || `${prefix}-${idx}`,
     question: q.question,
     answer: q.answer,
@@ -45,6 +53,7 @@ const questionsData: Record<string, GameQuestion[]> = {
   Django: mapSet(djangoQuestions as QuestionSetItem[], "Django", "dj"),
   Frontend: mapSet(frontendQuestions as QuestionSetItem[], "Frontend", "fe"),
   Java: mapSet(javaQuestions as QuestionSetItem[], "Java", "jv"),
+  "JI Java": mapSet(jiJavaQuestions as QuestionSetItem[], "JI Java", "java"),
   JavaScript: mapSet(
     javascriptQuestions as QuestionSetItem[],
     "JavaScript",
@@ -53,6 +62,41 @@ const questionsData: Record<string, GameQuestion[]> = {
   Python: mapSet(pythonQuestions as QuestionSetItem[], "Python", "py"),
   React: mapSet(reactQuestions as QuestionSetItem[], "React", "re"),
   Spring: mapSet(springQuestions as QuestionSetItem[], "Spring", "sp"),
+  "Design Patterns": mapSet(
+    designPatternsQuestions as QuestionSetItem[],
+    "Design Patterns",
+    "dp",
+  ),
+  "CI/CD Basics": mapSet(
+    ciCdBasicsQuestions as QuestionSetItem[],
+    "CI/CD Basics",
+    "ci",
+  ),
+  "DevOps Basics": mapSet(
+    devOpsBasicsQuestions as QuestionSetItem[],
+    "DevOps Basics",
+    "do",
+  ),
+  "Spring Boot Basics": mapSet(
+    springBootBasicsQuestions as QuestionSetItem[],
+    "Spring Boot Basics",
+    "sb",
+  ),
+  "Git Basics": mapSet(
+    gitBasicsQuestions as QuestionSetItem[],
+    "Git Basics",
+    "gb",
+  ),
+  "Kafka Basics": mapSet(
+    kafkaBasicsQuestions as QuestionSetItem[],
+    "Kafka Basics",
+    "kf",
+  ),
+  "Maven Basics": mapSet(
+    mavenBasicsQuestions as QuestionSetItem[],
+    "Maven Basics",
+    "mvn",
+  ),
   SystemsDesign: mapSet(
     systemdesignQuestions as QuestionSetItem[],
     "System Design",
