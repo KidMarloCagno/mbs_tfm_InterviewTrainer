@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "ing-q001",
+    "question": "En el ciclo de vida del desarrollo de software, ¿cuál es el objetivo principal de la fase de Análisis de Requisitos?",
+    "answer": "Entender y documentar las necesidades del cliente y usuarios para definir qué debe hacer el sistema.",
+    "options": [
+      "Escribir el código fuente utilizando un lenguaje de programación específico.",
+      "Entender y documentar las necesidades del cliente y usuarios para definir qué debe hacer el sistema.",
+      "Ejecutar pruebas automatizadas para encontrar fallos de rendimiento.",
+      "Instalar la aplicación en los servidores de producción para los usuarios finales."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El Análisis de Requisitos es la fase inicial donde se recopilan, aclaran y detallan las necesidades del proyecto para asegurar que el equipo sepa exactamente qué construir."
+  },
+  {
+    "id": "ing-q002",
+    "question": "Un equipo necesita desarrollar un software donde los requisitos están perfectamente definidos desde el inicio y no cambiarán. ¿Qué modelo de ciclo de vida es el más adecuado?",
+    "answer": "Modelo en Cascada",
+    "options": [
+      "Modelo en Cascada",
+      "Modelo Ágil",
+      "Modelo DevOps",
+      "Modelo Espiral"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El modelo en Cascada es secuencial y documentado, siendo ideal para proyectos estables con requisitos fijos y predecibles desde el comienzo."
+  },
+  {
+    "id": "ing-q003",
+    "question": "Asocie las características principales de los modelos de desarrollo: ¿Cuál es el enfoque central del modelo en Espiral?",
+    "answer": "La gestión y reducción sistemática de riesgos en cada iteración.",
+    "options": [
+      "La entrega lineal y estricta sin volver nunca a una fase anterior.",
+      "La eliminación total de cualquier tipo de documentación escrita.",
+      "La gestión y reducción sistemática de riesgos en cada iteración.",
+      "El despliegue continuo de código cada cinco minutos a producción."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El modelo Espiral combina la naturaleza iterativa con un fuerte enfoque en la evaluación y mitigación de riesgos, ideal para proyectos críticos."
+  },
+  {
+    "id": "ing-q004",
+    "question": "¿En qué consiste el antipatrón de desarrollo conocido como 'Cascada disfrazada de Ágil'?",
+    "answer": "Trabajar en Sprints cortos pero sin entregar software funcional ni recibir feedback real de los usuarios.",
+    "options": [
+      "Utilizar herramientas en la nube para automatizar las pruebas unitarias.",
+      "Trabajar en Sprints cortos pero sin entregar software funcional ni recibir feedback real de los usuarios.",
+      "Mezclar código de programación funcional con programación orientada a objetos.",
+      "Documentar la arquitectura del sistema antes de comenzar a escribir el código."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Este antipatrón ocurre cuando un equipo adopta ceremonias ágiles de forma superficial, pero mantiene una mentalidad rígida y secuencial sin inspección ni adaptación real."
+  },
+  {
+    "id": "ing-q005",
+    "question": "En las métricas de rendimiento de entrega de software, ¿qué mide exactamente el 'Lead Time'?",
+    "answer": "El tiempo total que transcurre desde que se concibe una idea hasta que está desplegada en producción.",
+    "options": [
+      "El número total de líneas de código escritas por un programador al día.",
+      "El porcentaje de código que está cubierto por pruebas unitarias.",
+      "El tiempo total que transcurre desde que se concibe una idea hasta que está desplegada en producción.",
+      "El tiempo que tarda un servidor en reiniciarse tras una caída crítica."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El Lead Time es una métrica clave de DevOps que evalúa la eficiencia de todo el flujo de valor, midiendo la velocidad para llevar una idea a manos del usuario."
+  },
+  {
+    "id": "ing-q006",
+    "question": "Si un sistema requiere que 'el tiempo de respuesta para iniciar sesión sea menor a 2 segundos', ¿ante qué tipo de requisito nos encontramos?",
+    "answer": "Requisito No Funcional",
+    "options": [
+      "Requisito Funcional",
+      "Requisito No Funcional",
+      "Requisito de Datos",
+      "Requisito de Usuario"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los requisitos no funcionales especifican criterios de operación y cualidades del sistema (como rendimiento, seguridad o disponibilidad) en lugar de comportamientos específicos."
+  },
+  {
+    "id": "ing-q007",
+    "question": "En el desarrollo Ágil, la estructura: 'Como [USUARIO], quiero [OBJETIVO] para [BENEFICIO]', se utiliza para definir:",
+    "answer": "Una Historia de Usuario",
+    "options": [
+      "Un Criterio de Aceptación",
+      "Una Historia de Usuario",
+      "Un Diagrama de Casos de Uso UML",
+      "Una Restricción de Negocio"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Esta plantilla es el estándar de oro para escribir Historias de Usuario, enfocando el desarrollo desde la perspectiva del valor que recibe el usuario final."
+  },
+  {
+    "id": "ing-q008",
+    "question": "Los criterios de aceptación escritos con el formato 'Dado que (Given) - Cuando (When) - Entonces (Then)' sirven principalmente para:",
+    "answer": "Definir el comportamiento esperado del sistema ante escenarios específicos de forma clara y ejecutable.",
+    "options": [
+      "Establecer el presupuesto financiero y los costos operativos del proyecto.",
+      "Escribir la documentación técnica interna de la base de datos.",
+      "Definir el comportamiento esperado del sistema ante escenarios específicos de forma clara y ejecutable.",
+      "Diseñar la interfaz gráfica mediante bocetos de alta fidelidad."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El formato Given-When-Then ayuda a alinear a desarrolladores, QAs y stakeholders mediante ejemplos claros de comportamiento que pueden automatizarse como pruebas."
+  },
+  {
+    "id": "ing-q009",
+    "question": "Utilizando la técnica de priorización MoSCoW, ¿qué significa que un requisito sea clasificado como 'Must'?",
+    "answer": "Que es un requisito obligatorio y crítico; el proyecto no puede lanzarse sin él.",
+    "options": [
+      "Que es una característica deseable pero que puede posponerse indefinidamente.",
+      "Que es un requisito obligatorio y crítico; el proyecto no puede lanzarse sin él.",
+      "Que el equipo ha decidido descartarlo permanentemente por falta de presupuesto.",
+      "Que solo se implementará si sobra tiempo al final del ciclo de desarrollo."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "En MoSCoW, las siglas significan Must (Obligatorio), Should (Debería), Could (Podría) y Won't (No por ahora). Los 'Must' son indispensables para el éxito."
+  },
+  {
+    "id": "ing-q010",
+    "question": "En el contexto de la ingeniería de requisitos, ¿cuál es la diferencia clave entre Validación y Verificación?",
+    "answer": "La validación asegura que construimos el producto correcto (aporta valor), mientras que la verificación asegura que lo construimos correctamente (cumple especificaciones).",
+    "options": [
+      "La validación la hace el programador y la verificación la hace el cliente final exclusivamente.",
+      "La validación se hace con diagramas UML y la verificación se hace únicamente escribiendo código fuente.",
+      "La validación asegura que construimos el producto correcto (aporta valor), mientras que la verificación asegura que lo construimos correctamente (cumple especificaciones).",
+      "No existe ninguna diferencia; ambos conceptos significan exactamente lo mismo en ingeniería de software."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Validación se enfoca en la utilidad y el valor del producto para el usuario. Verificación comprueba la conformidad técnica con los requisitos especificados."
+  },
+  {
+    "id": "ing-q011",
+    "question": "¿Qué técnica se considera una práctica de Validación para confirmar que el software aporta valor al usuario?",
+    "answer": "Demos frecuentes con los usuarios finales",
+    "options": [
+      "Revisiones de código por pares (Peer review)",
+      "Pruebas unitarias de funciones aisladas",
+      "Demos frecuentes con los usuarios finales",
+      "Análisis estático de la estructura del código"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Las demostraciones frecuentes con los usuarios reales permiten obtener feedback directo para validar si el camino tomado satisface sus verdaderas necesidades."
+  },
+  {
+    "id": "ing-q012",
+    "question": "¿Qué paradigma de programación se caracteriza por tratar el desarrollo mediante la evaluación de funciones matemáticas puras y evitando cambios de estado y datos mutables?",
+    "answer": "Programación Funcional",
+    "options": [
+      "Programación Orientada a Objetos",
+      "Programación Estructurada",
+      "Programación Funcional",
+      "Programación Orientada a Eventos"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La programación funcional se basa en funciones puras e inmutabilidad, reduciendo los efectos secundarios no deseados en la ejecución del software."
+  },
+  {
+    "id": "ing-q013",
+    "question": "El principio fundamental de SOLID 'Principio de Responsabilidad Única (SRP)' establece que:",
+    "answer": "Una clase o módulo debe tener una, y solo una, razón para cambiar, manteniéndose enfocada.",
+    "options": [
+      "Cada desarrollador en el equipo debe escribir un único componente del software.",
+      "Una clase o módulo debe tener una, y solo una, razón para cambiar, manteniéndose enfocada.",
+      "Todo el programa debe compilarse e instalarse en un único servidor centralizado.",
+      "Las interfaces deben contener todos los métodos posibles para que sirvan para cualquier caso."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El SRP busca la alta cohesión. Al asegurar que una clase se encarga de una sola tarea conceptual, el código se vuelve más legible y fácil de mantener."
+  },
+  {
+    "id": "ing-q014",
+    "question": "De acuerdo al principio Abierto/Cerrado (OCP) de SOLID, ¿cómo se debe diseño del software para agregar nuevas funcionalidades?",
+    "answer": "El código debe estar abierto para su extensión pero cerrado para su modificación.",
+    "options": [
+      "Se debe modificar el código original existente cada vez que se necesite un cambio.",
+      "El código debe estar abierto para su extensión pero cerrado para su modificación.",
+      "Los archivos de código fuente deben bloquearse para que nadie pueda editarlos.",
+      "El sistema debe reescribirse desde cero en cada ciclo de actualización."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El OCP promueve el uso de abstracciones e interfaces para que el comportamiento pueda extenderse sin alterar el código que ya funciona, evitando introducir bugs colaterales."
+  },
+  {
+    "id": "ing-q015",
+    "question": "¿Qué significan las siglas de las buenas prácticas de diseño DRY y YAGNI?",
+    "answer": "DRY: No te repitas (evitar duplicación); YAGNI: No vas a necesitarlo (evitar complejidad innecesaria).",
+    "options": [
+      "DRY: Desarrolla rápido ya; YAGNI: Ya agregamos grandes nuevas ideas.",
+      "DRY: Diseña con robustez y orden; YAGNI: Genera interfaces intuitivas.",
+      "DRY: No te repitas (evitar duplicación); YAGNI: No vas a necesitarlo (evitar complejidad innecesaria).",
+      "DRY: Despliega requisitos ya; YAGNI: No ignores ninguna interfaz."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "DRY (Don't Repeat Yourself) previene la redundancia de código, mientras que YAGNI (You Aren't Gonna Need It) nos recuerda no implementar funciones hasta que sean realmente necesarias."
+  },
+  {
+    "id": "ing-q016",
+    "question": "¿Cómo se clasifican tradicionalmente los patrones de diseño clásicos según el libro del 'Gang of Four' (GoF)?",
+    "answer": "Creacionales, Estructurales y Comportamentales",
+    "options": [
+      "Funcionales, Secuenciales y Asíncronos",
+      "Creacionales, Estructurales y Comportamentales",
+      "Simples, Intermedios y Avanzados",
+      "Locales, Remotos y Distribuidos"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los patrones se dividen según su propósito: Creacionales (instanciación de objetos), Estructurales (composición de clases/objetos) y Comportamentales (interacción y responsabilidades)."
+  },
+  {
+    "id": "ing-q017",
+    "question": "Si desea implementar el patrón 'Strategy' de forma nativa y limpia en un lenguaje moderno que soporta funciones de primera clase, ¿qué alternativa es la más adecuada?",
+    "answer": "Pasar funciones puras directamente como argumentos a otras funciones.",
+    "options": [
+      "Crear una jerarquía compleja de clases abstractas e interfaces heredadas.",
+      "Utilizar módulos de importación masiva ES6 distribuidos.",
+      "Pasar funciones puras directamente como argumentos a otras funciones.",
+      "Implementar un objeto global único (God Object) para manejar todas las variables."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Las funciones de primera clase permiten inyectar comportamientos de forma directa e interactiva, reemplazando la necesidad de estructuras de clases pesadas para el patrón Strategy."
+  },
+  {
+    "id": "ing-q018",
+    "question": "¿En qué consiste el antipatrón de diseño conocido como 'God Object' (Objeto Dios)?",
+    "answer": "Una sola clase o componente que acumula demasiadas responsabilidades y sabe demasiado del sistema.",
+    "options": [
+      "Un objeto que está perfectamente optimizado para consumir cero memoria en el servidor.",
+      "Una sola clase o componente que acumula demasiadas responsabilidades y sabe demasiado del sistema.",
+      "Un patrón que automatiza la base de datos de manera mágica sin requerir configuraciones.",
+      "El componente principal de la interfaz gráfica que hereda todas las propiedades visuales."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El God Object rompe directamente el Principio de Responsabilidad Única, resultando en un archivo masivo, altamente acoplado y sumamente difícil de mantener o testear."
+  },
+  {
+    "id": "ing-q019",
+    "question": "¿Cuál es el propósito del patrón de diseño creacional 'Factory'?",
+    "answer": "Proporcionar una interfaz para crear objetos en una superclase, permitiendo a las subclases alterar el tipo de objetos creados.",
+    "options": [
+      "Asegurar que una clase tenga una única instancia global accesible desde cualquier punto.",
+      "Proporcionar una interfaz para crear objetos en una superclase, permitiendo a las subclases alterar el tipo de objetos creados.",
+      "Permitir que objetos no relacionados colaboren intercambiando mensajes asíncronos.",
+      "Monitorear los cambios de estado en un objeto para notificar automáticamente a múltiples dependientes."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El patrón Factory delega la lógica de instanciación, evitando que el código cliente dependa de clases concretas y facilitando la extensión de tipos de objetos."
+  },
+  {
+    "id": "ing-q020",
+    "question": "En la fase de Diseño del software, ¿cuál es la actividad central que se lleva a cabo?",
+    "answer": "Definir la arquitectura del sistema, estructuras de datos, componentes e interfaces técnicas.",
+    "options": [
+      "Instalar parches de seguridad en el servidor de producción del cliente.",
+      "Definir la arquitectura del sistema, estructuras de datos, componentes e interfaces técnicas.",
+      "Escribir scripts automatizados de integración continua.",
+      "Hacer entrevistas de negocio con los stakeholders para definir metas presupuestales."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La fase de diseño traduce los requisitos abstractos obtenidos previamente en planos técnicos y estructuras arquitectónicas que los desarrolladores usarán de guía."
+  },
+  {
+    "id": "ing-q021",
+    "question": "¿Cuál es la característica principal del modelo de desarrollo 'Incremental'?",
+    "answer": "El software se divide en múltiples módulos que se entregan por partes funcionales sucesivas, aportando valor de forma temprana.",
+    "options": [
+      "Todo el sistema se desarrolla y entrega en una única fecha final fija sin versiones previas.",
+      "El software se divide en múltiples módulos que se entregan por partes funcionales sucesivas, aportando valor de forma temprana.",
+      "Se detiene el desarrollo en cada ciclo para reescribir toda la documentación técnica desde cero.",
+      "Depende exclusivamente de que el cliente valide los diseños gráficos antes de escribir código."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El modelo incremental permite deconstruir un proyecto amplio en bloques lógicos funcionales de menor tamaño, permitiendo al usuario utilizar partes del sistema de forma temprana."
+  },
+  {
+    "id": "ing-q022",
+    "question": "¿En qué consiste el antipatrón denominado 'Incremental sin integración'?",
+    "answer": "Desarrollar componentes o módulos de forma aislada sin combinarlos frecuentemente, provocando fallos masivos al juntarlos al final.",
+    "options": [
+      "Desarrollar componentes o módulos de forma aislada sin combinarlos frecuentemente, provocando fallos masivos al juntarlos al final.",
+      "Duplicar el mismo bloque de código funcional en múltiples repositorios del sistema.",
+      "Utilizar un modelo de base de datos relacional en lugar de una base de datos NoSQL.",
+      "Automatizar los despliegues de la aplicación utilizando contenedores ligeros."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Si los bloques incrementales no se prueban juntos continuamente mediante integración, el equipo descubrirá incompatibilidades severas de arquitectura en las fases finales."
+  },
+  {
+    "id": "ing-q023",
+    "question": "En el contexto de DevOps, la métrica 'Frecuencia de despliegue' sirve principalmente para medir:",
+    "answer": "Qué tan a menudo el equipo despliega código funcional de manera segura a entornos de producción.",
+    "options": [
+      "El número de errores de sintaxis que detecta el compilador local de desarrollo.",
+      "La cantidad de memoria RAM consumida por la plataforma durante las horas pico.",
+      "Qué tan a menudo el equipo despliega código funcional de manera segura a entornos de producción.",
+      "El tiempo promedio que le toma a un desarrollador nuevo configurar su entorno local."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La frecuencia de despliegue evalúa el grado de agilidad y automatización de los pipelines de una organización, reflejando su capacidad de entregar valor continuo."
+  },
+  {
+    "id": "ing-q024",
+    "question": "El principio SOLID llamado 'Principio de Inversión de Dependencia (DIP)' recomienda:",
+    "answer": "Depender de abstracciones (interfaces) y no de implementaciones concretas.",
+    "options": [
+      "Hacer que las clases de bajo nivel controlen directamente la lógica de las clases de alto nivel.",
+      "Depender de abstracciones (interfaces) y no de implementaciones concretas.",
+      "Eliminar la herencia en el desarrollo de software para usar únicamente variables globales.",
+      "Garantizar que todos los métodos devuelvan colecciones mutables de datos."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El DIP desacopla los componentes del sistema al interponer abstracciones entre ellos, lo cual flexibiliza el código ante modificaciones técnicas drásticas (como cambiar de base de datos)."
+  },
+  {
+    "id": "ing-q025",
+    "question": "El principio SOLID 'Principio de Sustitución de Liskov (LSP)' postula esencialmente que:",
+    "answer": "Las clases derivadas deben poder sustituir por completo a sus clases base sin alterar el comportamiento correcto del programa.",
+    "options": [
+      "Una clase hija debe sobrescribir todos los métodos de la clase padre arrojando excepciones de error.",
+      "Las clases derivadas deben poder sustituir por completo a sus clases base sin alterar el comportamiento correcto del programa.",
+      "El código debe escribirse usando una estructura puramente secuencial eliminando los objetos.",
+      "Las interfaces deben segregarse en componentes masivos que agrupen todas las funciones."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El LSP asegura el diseño correcto de la herencia, garantizando que las extensiones respeten los contratos y supuestos establecidos por la clase base."
+  },
+  {
+    "id": "ing-q026",
+    "question": "El acrónimo KISS como buena práctica de diseño de software promueve:",
+    "answer": "Mantener el diseño del código lo más simple y directo posible, evitando complejidades innecesarias.",
+    "options": [
+      "Duplicar el código en múltiples carpetas para tener respaldos inmediatos de seguridad.",
+      "Mantener el diseño del código lo más simple y directo posible, evitando complejidades innecesarias.",
+      "Escribir la mayor cantidad de código en una sola línea para optimizar el peso del archivo.",
+      "Acoplar fuertemente todos los módulos para asegurar que se comuniquen velozmente."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "KISS (Keep It Simple, Stupid) nos recuerda que las soluciones simples son más fáciles de mantener, probar y comprender, disminuyendo la propensión a bugs."
+  },
+  {
+    "id": "ing-q027",
+    "question": "El patrón de diseño de tipo comportamental 'Observer' se encarga de:",
+    "answer": "Definir una relación de dependencia de uno a muchos, de modo que cuando un objeto cambia de estado se notifica a sus dependientes.",
+    "options": [
+      "Impedir que se creen nuevas instancias de una clase dentro del sistema distribuido.",
+      "Definir una relación de dependencia de uno a muchos, de modo que cuando un objeto cambia de estado se notifica a sus dependientes.",
+      "Cambiar algoritmos lógicos en tiempo de ejecución de manera transparente para el cliente.",
+      "Interceptar llamadas a funciones para inyectar logs visuales de depuración."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Observer acopla de manera laxa a los objetos, permitiendo que múltiples componentes reaccionen a eventos de un objeto central sin conocer su implementación."
+  },
+  {
+    "id": "ing-q028",
+    "question": "¿Qué lenguaje moderno aprovecha la característica nativa de los 'Módulos ES6' para resolver de forma limpia la necesidad del patrón Singleton?",
+    "answer": "JavaScript / TypeScript",
+    "options": [
+      "JavaScript / TypeScript",
+      "C clásico",
+      "SQL estándar",
+      "Assembly"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Los módulos de ES6 se evalúan y ejecutan una sola vez al importarse; exportar una instancia directamente desde un módulo simula de forma limpia un Singleton nativo."
+  },
+  {
+    "id": "ing-q029",
+    "question": "¿Qué representa el antipatrón de diseño llamado 'Golden Hammer' (Martillo de Oro)?",
+    "answer": "Utilizar siempre la misma tecnología o patrón para resolver cualquier problema, sin importar si es adecuada o no.",
+    "options": [
+      "Una herramienta automatizada de testing que repara bugs de forma autónoma.",
+      "Diseñar una base de datos con claves primarias masivas e indexadas en exceso.",
+      "Utilizar siempre la misma tecnología o patrón para resolver cualquier problema, sin importar si es adecuada o no.",
+      "Una metodología ágil que garantiza cero errores en la fase de producción técnica."
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El Golden Hammer ocurre cuando un equipo se obsesiona con una herramienta conocida y la aplica ciegamente a problemas cuyos requisitos exigen soluciones diferentes."
+  },
+  {
+    "id": "ing-q030",
+    "question": "¿A qué paradigma corresponde el desarrollo de software estructurado con un flujo de control guiado por clics del usuario, sensores o mensajes de otros programas?",
+    "answer": "Programación Orientada a Eventos (Event-Driven)",
+    "options": [
+      "Programación Estructurada",
+      "Programación Orientada a Eventos (Event-Driven)",
+      "Programación Funcional Pura",
+      "Programación Concurrente"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La programación orientada a eventos organiza el flujo basándose en hilos de eventos externos, ideal para interfaces gráficas y arquitecturas de microservicios asíncronos."
+  },
+  {
+    "id": "ing-q031",
+    "question": "True or False: El Análisis de Requisitos tiene como objetivo principal escribir el código fuente utilizando un lenguaje de programación específico.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El Análisis de Requisitos se encarga de entender y documentar las necesidades del cliente, no de codificar la aplicación; eso ocurre en la fase de Programación o Desarrollo."
+  },
+  {
+    "id": "ing-q032",
+    "question": "True or False: El Modelo en Cascada es secuencial y documentado, siendo ideal para proyectos estables con requisitos fijos y predecibles desde el comienzo.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. La rigidez y secuencialidad de la Cascada funcionan de manera óptima cuando los requisitos están claros y no van a cambiar durante la ejecución del proyecto."
+  },
+  {
+    "id": "ing-q033",
+    "question": "True or False: El enfoque central del modelo en Espiral es la entrega lineal y estricta sin volver nunca a una fase anterior.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El modelo en Espiral es profundamente iterativo y su verdadero foco e insignia es el análisis y control continuo de los riesgos en cada ciclo."
+  },
+  {
+    "id": "ing-q034",
+    "question": "True or False: El antipatrón 'Cascada disfrazada de Ágil' consiste en trabajar en Sprints cortos pero sin entregar software funcional ni recibir feedback real de los usuarios.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Ocurre cuando se simula una metodología ágil externamente mediante reuniones breves, pero la cultura de entrega continua de valor real y feedback está ausente."
+  },
+  {
+    "id": "ing-q035",
+    "question": "True or False: En las métricas de rendimiento de entrega de software, el Lead Time mide el número total de líneas de código escritas por un programador al día.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El Lead Time mide el tiempo transcurrido desde el nacimiento de una idea o solicitud hasta que esta se encuentra completamente desplegada en producción."
+  },
+  {
+    "id": "ing-q036",
+    "question": "True or False: Si un sistema requiere que 'el tiempo de respuesta para iniciar sesión sea menor a 2 segundos', se considera un Requisito No Funcional.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Los atributos de rendimiento, velocidad y eficiencia corresponden a Requisitos No Funcionales, ya que dictan cómo debe operar el sistema."
+  },
+  {
+    "id": "ing-q037",
+    "question": "True or False: En el desarrollo Ágil, la estructura: 'Como [USUARIO], quiero [OBJETIVO] para [BENEFICIO]', se utiliza para definir un Criterio de Aceptación.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Esta estructura se utiliza para definir Historias de Usuario. Los criterios de aceptación suelen estructurarse utilizando el formato Dado-Cuando-Entonces."
+  },
+  {
+    "id": "ing-q038",
+    "question": "True or False: Los criterios de aceptación escritos con el formato 'Dado que (Given) - Cuando (When) - Entonces (Then)' sirven principalmente para definir el comportamiento esperado del sistema ante escenarios específicos de forma clara y ejecutable.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Este formato aclara las condiciones previas, la acción desencadenante y el resultado esperado, facilitando tanto el desarrollo como el testing automatizado."
+  },
+  {
+    "id": "ing-q039",
+    "question": "True or False: Utilizando la técnica de priorización MoSCoW, que un requisito sea clasificado como 'Must' significa que el equipo ha decidido descartarlo permanentemente por falta de presupuesto.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Un requisito 'Must' es de carácter mandatorio y esencial; el software no puede ser desplegado sin él bajo ninguna circunstancia."
+  },
+  {
+    "id": "ing-q040",
+    "question": "True or False: La validación asegura que construimos el producto correcto (aporta valor), mientras que la verificación asegura que lo construimos correctamente (cumple especificaciones).",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Esta distinción es clásica en la ingeniería de software: validar mira hacia las necesidades del negocio/usuario; verificar mira hacia los planos técnicos."
+  },
+  {
+    "id": "ing-q041",
+    "question": "True or False: Las revisiones de código por pares (Peer review) se consideran la principal práctica de Validación para confirmar que el software aporta valor al usuario.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. Las revisiones por pares son una técnica de Verificación técnica. Para la Validación de valor con el usuario se ocupan herramientas como demos frecuentes o pruebas de usabilidad."
+  },
+  {
+    "id": "ing-q042",
+    "question": "True or False: El paradigma de programación funcional se caracteriza por tratar el desarrollo mediante la evaluación de funciones matemáticas puras y evitando cambios de estado y datos mutables.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. La inmutabilidad de los datos y el uso de funciones sin efectos secundarios son los pilares fundamentales del paradigma de programación funcional."
+  },
+  {
+    "id": "ing-q043",
+    "question": "True or False: El principio fundamental de SOLID 'Principio de Responsabilidad Única (SRP)' establece que las interfaces deben contener todos los métodos posibles para que sirvan para cualquier caso.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El SRP indica que un componente debe encargarse de una única tarea o responsabilidad. Poner muchos métodos en una interfaz violaría el Principio de Segregación de Interfaces (ISP)."
+  },
+  {
+    "id": "ing-q044",
+    "question": "True or False: De acuerdo al principio Abierto/Cerrado (OCP) de SOLID, el código debe estar abierto para su extensión pero cerrado para su modificación.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. El OCP promueve agregar características heredando o extendiendo abstracciones, protegiendo el código base existente de alteraciones y nuevos errores."
+  },
+  {
+    "id": "ing-q045",
+    "question": "True or False: Las siglas DRY significan 'Desarrolla rápido ya' y YAGNI significa 'Ya agregamos grandes nuevas ideas'.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. DRY significa 'Don't Repeat Yourself' (No te repitas) y YAGNI significa 'You Aren't Gonna Need It' (No lo vas a necesitar), orientados a la simplicidad del código."
+  },
+  {
+    "id": "ing-q046",
+    "question": "True or False: Los patrones de diseño clásicos según el libro del 'Gang of Four' (GoF) se clasifican tradicionalmente en Creacionales, Estructurales y Comportamentales.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Esta categorización organiza los patrones de diseño según resuelvan problemas de creación de objetos, estructuración de clases o comportamiento/comunicación entre ellos."
+  },
+  {
+    "id": "ing-q047",
+    "question": "True or False: Si desea implementar el patrón 'Strategy' de forma nativa y limpia en un lenguaje moderno que soporta funciones de primera clase, se debe crear una jerarquía compleja de clases abstractas e interfaces heredadas.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. Con funciones de primera clase, basta con pasar la función que contiene el algoritmo dinámico directamente como parámetro, simplificando radicalmente el diseño."
+  },
+  {
+    "id": "ing-q048",
+    "question": "True or False: El antipatrón de diseño conocido como 'God Object' (Objeto Dios) representa una sola clase o componente que acumula demasiadas responsabilidades y sabe demasiado del sistema.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Un 'God Object' centraliza lógicas que deberían estar distribuidas, creando cuellos de botella para el mantenimiento y violando las bases del buen diseño de software."
+  },
+  {
+    "id": "ing-q049",
+    "question": "True or False: El propósito del patrón de diseño creacional 'Factory' es asegurar que una clase tenga una única instancia global accesible desde cualquier punto.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El propósito de Factory es delegar e independizar la creación de múltiples instancias u objetos concretos. El patrón descrito en el error corresponde a Singleton."
+  },
+  {
+    "id": "ing-q050",
+    "question": "True or False: En la fase de Diseño del software, la actividad central consiste en definir la arquitectura del sistema, estructuras de datos, componentes e interfaces técnicas.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. El Diseño traduce funcionalmente los requerimientos conceptuales del cliente en modelos y arquitecturas técnicas concretas que estructuran la programación."
+  },
+  {
+    "id": "ing-q051",
+    "question": "True or False: La característica principal del modelo de desarrollo 'Incremental' es que todo el sistema se desarrolla y entrega en una única fecha final fija sin versiones previas.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El modelo incremental se basa en deconstruir el software para desarrollarlo y entregarlo en pequeños bloques funcionales sucesivos, no en una sola entrega masiva."
+  },
+  {
+    "id": "ing-q052",
+    "question": "True or False: El antipatrón denominado 'Incremental sin integración' consiste en desarrollar componentes o módulos de forma aislada sin combinarlos frecuentemente, provocando fallos masivos al juntarlos al final.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Construir bloques de código sin conectarlos constantemente genera silos de desarrollo que colapsan al acoplarse tardíamente debido a desalineaciones técnicas."
+  },
+  {
+    "id": "ing-q053",
+    "question": "True or False: En el contexto de DevOps, la métrica 'Frecuencia de despliegue' mide el número de errores de sintaxis que detecta el compilador local de desarrollo.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Mide la frecuencia con la que la organización es capaz de inyectar y liberar código de valor de manera automatizada y segura en el entorno de producción real."
+  },
+  {
+    "id": "ing-q054",
+    "question": "True or False: El principio SOLID llamado 'Principio de Inversión de Dependencia (DIP)' recomienda depender de abstracciones (interfaces) y no de implementaciones concretas.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. El DIP desvincula los módulos de alto nivel de las especificaciones de bajo nivel mediante contratos abstractos, protegiendo al sistema ante mutaciones de infraestructura."
+  },
+  {
+    "id": "ing-q055",
+    "question": "True or False: El principio SOLID 'Principio de Sustitución de Liskov (LSP)' postula esencialmente que una clase hija debe sobrescribir todos los métodos de la clase padre arrojando excepciones de error.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. LSP decreta que los subtipos deben ser perfectamente intercambiables por sus tipos base sin alterar la consistencia ni romper el funcionamiento del programa."
+  },
+  {
+    "id": "ing-q056",
+    "question": "True or False: El acrónimo KISS como buena práctica de diseño de software promueve mantener el diseño del código lo más simple y directo posible, evitando complejidades innecesarias.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. KISS aboga por la simplicidad técnica. Una estructura simple reduce fallas latentes y simplifica enormemente las futuras fases de mantenimiento."
+  },
+  {
+    "id": "ing-q057",
+    "question": "True or False: El patrón de diseño de tipo comportamental 'Observer' se encarga de impedir que se creen nuevas instancias de una clase dentro del sistema distribuido.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El patrón Observer establece un canal de comunicación de tipo uno-a-muchos para notificar automáticamente mutaciones de estado de un objeto a múltiples suscriptores interesados."
+  },
+  {
+    "id": "ing-q058",
+    "question": "True or False: JavaScript / TypeScript aprovecha los 'Módulos ES6' nativos para resolver de forma limpia la necesidad del patrón Singleton sin requerir código complejo adicional.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Debido a que los módulos de ES6 guardan en caché la primera evaluación de sus exportaciones, exportar una instancia directamente actúa como un Singleton nativo e inmutable."
+  },
+  {
+    "id": "ing-q059",
+    "question": "True or False: El antipatrón de diseño llamado 'Golden Hammer' (Martillo de Oro) consiste en diseñar una base de datos con claves primarias masivas e indexadas en exceso.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Golden Hammer es un sesgo técnico que induce a un desarrollador a aplicar la misma solución o herramienta conocida para resolver cualquier tipo de problema, sea apta o no."
+  },
+  {
+    "id": "ing-q060",
+    "question": "True or False: El desarrollo de software estructurado con un flujo de control guiado por clics del usuario o mensajes asíncronos corresponde al paradigma de Programación Orientada a Eventos.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. La Programación Orientada a Eventos cede el control del flujo a agentes externos o interrupciones, operando de manera altamente reactiva."
+  },
+  {
+    "id": "ing-q061",
+    "question": "En el ciclo de vida del desarrollo de software, la fase de ______ se encarga principalmente de recopilar y definir las necesidades del cliente y usuarios antes del desarrollo técnico.",
+    "answer": "Análisis de Requisitos",
+    "options": [
+      "Programación o Desarrollo",
+      "Análisis de Requisitos",
+      "Pruebas de Software",
+      "Mantenimiento Correctivo"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El Análisis de Requisitos establece los cimientos del proyecto aclarando qué se va a construir, previniendo malentendidos costosos en fases posteriores."
+  },
+  {
+    "id": "ing-q062",
+    "question": "El modelo ______ se caracteriza por ser estrictamente secuencial y documentado, siendo ideal para proyectos estables con requisitos fijos.",
+    "answer": "en Cascada",
+    "options": ["Ágil", "DevOps", "en Cascada", "Incremental"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El modelo en Cascada avanza etapa por etapa de forma lineal, lo que otorga predictibilidad siempre que los requerimientos no changen."
+  },
+  {
+    "id": "ing-q063",
+    "question": "El modelo de desarrollo ______ introduce un enfoque iterativo fuertemente centrado en la evaluación, identificación y mitigación de riesgos en proyectos críticos.",
+    "answer": "Espiral",
+    "options": ["Cascada", "Espiral", "Ágil", "Estructurado"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El modelo Espiral destaca por sus cuadrantes dedicados expresamente a analizar riesgos técnicos y de negocio en cada ciclo de vida del producto."
+  },
+  {
+    "id": "ing-q064",
+    "question": "Cuando un equipo realiza ceremonias de Scrum pero no entrega incrementos funcionales ni obtiene retroalimentación del usuario, cae en el antipatrón '______'.",
+    "answer": "Cascada disfrazada de Ágil",
+    "options": [
+      "Incremental sin integración",
+      "Documentación cero",
+      "Cascada disfrazada de Ágil",
+      "DevOps sin cultura"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Este antipatrón expone la falsa agilidad, donde se simulan los ritos ágiles pero se mantiene el flujo de entregas rígido y masivo propio de la cascada tradicional."
+  },
+  {
+    "id": "ing-q065",
+    "question": "La métrica DevOps que evalúa el tiempo total transcurrido desde que nace una idea hasta que se encuentra en un entorno de producción real se denomina ______.",
+    "answer": "Lead Time",
+    "options": [
+      "Frecuencia de despliegue",
+      "Lead Time",
+      "MTTR",
+      "Cobertura de tests"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El Lead Time ayuda a identificar cuellos de botella operativos y burocráticos dentro del proceso de desarrollo y entrega de software."
+  },
+  {
+    "id": "ing-q066",
+    "question": "Los requisitos orientados a restricciones del sistema como el rendimiento, la seguridad o los tiempos de respuesta se categorizan como ______.",
+    "answer": "Requisitos No Funcionales",
+    "options": [
+      "Requisitos Funcionales",
+      "Requisitos No Funcionales",
+      "Historias de Usuario",
+      "Requisitos de Datos"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los Requisitos No Funcionales definen las propiedades y cualidades globales del sistema que condicionan la experiencia general del usuario."
+  },
+  {
+    "id": "ing-q067",
+    "question": "La plantilla 'Como [USUARIO], quiero [OBJETIVO] para [BENEFICIO]' es el estándar ágil por excelencia para redactar una ______.",
+    "answer": "Historia de Usuario",
+    "options": [
+      "Restricción de Negocio",
+      "Prueba Unitaria",
+      "Historia de Usuario",
+      "Especificación UML"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las historias de usuario expresan los requerimientos de forma simple y centrada en la persona que usará la característica desarrollada."
+  },
+  {
+    "id": "ing-q068",
+    "question": "El formato 'Dado que - Cuando - Entonces' se emplea para estructurar de manera clara y ejecutable los ______ de una funcionalidad.",
+    "answer": "Criterios de Aceptación",
+    "options": [
+      "Casos de Uso UML",
+      "Diagramas de Datos",
+      "Criterios de Aceptación",
+      "Modelos de Dominio"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Los criterios de aceptación en este formato facilitan las pruebas BDD (Behavior-Driven Development), guiando al desarrollador a cumplir exactamente lo esperado."
+  },
+  {
+    "id": "ing-q069",
+    "question": "Dentro de la priorización bajo la metodología MoSCoW, los requisitos categorizados bajo la letra M (______) representan los componentes obligatorios e indispensables para el lanzamiento.",
+    "answer": "Must",
+    "options": ["Must", "Should", "Could", "Won't"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los requisitos 'Must' componen el núcleo mínimo viable del producto. Si uno de ellos falta, el sistema se considera incompleto o inoperante."
+  },
+  {
+    "id": "ing-q070",
+    "question": "Asegurar que estamos construyendo el producto correcto que aporta valor real al usuario se conoce como ______, mientras que certificar el cumplimiento técnico de los planos es verificar.",
+    "answer": "Validación",
+    "options": [
+      "Verificación",
+      "Codificación",
+      "Validación",
+      "Refactorización"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La validación conecta al equipo técnico con la realidad del mercado y las necesidades reales del usuario final."
+  },
+  {
+    "id": "ing-q071",
+    "question": "Las demostraciones (demos) frecuentes con los usuarios finales constituyen una excelente técnica de ______ para recolectar feedback de valor.",
+    "answer": "Validación",
+    "options": [
+      "Verificación",
+      "Validación",
+      "Análisis Estático",
+      "Optimización"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Enseñar el producto real a los usuarios mitiga desviaciones tempranas, asegurando que se está construyendo la solución adecuada."
+  },
+  {
+    "id": "ing-q072",
+    "question": "El paradigma de ______ se basa fundamentalmente en la inmutabilidad de las variables y el uso de funciones piras, evitando alterar estados globales.",
+    "answer": "Programación Funcional",
+    "options": [
+      "Programación Estructurada",
+      "Programación Orientada a Objetos",
+      "Programación Funcional",
+      "Programación Orientada a Eventos"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Este paradigma minimiza los efectos secundarios colaterales, facilitando el razonamiento matemático y el testing del software."
+  },
+  {
+    "id": "ing-q073",
+    "question": "El Principio de Responsabilidad Única (SRP) de SOLID busca que una clase tenga una sola razón para cambiar, promoviendo un código más ______.",
+    "answer": "enfocado",
+    "options": ["complejo", "enfocado", "acoplado", "extenso"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Al enfocar cada clase en un único propósito conceptual, reducimos el impacto que tendrán futuras modificaciones sobre el sistema."
+  },
+  {
+    "id": "ing-q074",
+    "question": "El principio OCP de SOLID establece que el código debe estructurarse de modo que quede ______ para su extensión pero cerrado para su modificación.",
+    "answer": "abierto",
+    "options": ["abierto", "oculto", "bloqueado", "reducido"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El Principio de Abierto/Cerrado (OCP) evita que los desarrolladores rompan lógica existente ya probada al incorporar nuevos requerimientos."
+  },
+  {
+    "id": "ing-q075",
+    "question": "La práctica de evitar escribir código duplicado o redundante se engloba bajo el principio clásico denominado ______.",
+    "answer": "DRY",
+    "options": ["YAGNI", "KISS", "DRY", "SOLID"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "DRY (Don't Repeat Yourself) promueve centralizar el conocimiento de una lógica en una única pieza de código limpia y reutilizable."
+  },
+  {
+    "id": "ing-q076",
+    "question": "Los patrones clásicos GoF dedicados a encapsular el proceso de creación e instanciación de objetos pertenecen al grupo de patrones ______.",
+    "answer": "Creacionales",
+    "options": [
+      "Estructurales",
+      "Comportamentales",
+      "Creacionales",
+      "Funcionales"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los patrones creacionales aíslan el sistema de cómo sus objetos son creados, compuestos y representados internamente."
+  },
+  {
+    "id": "ing-q077",
+    "question": "Pasar funciones de primera clase como argumentos es una alternativa nativa moderna para implementar de forma limpia el patrón ______, sin recurrir a complejas interfaces.",
+    "answer": "Strategy",
+    "options": ["Singleton", "Strategy", "Observer", "Decorator"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Las capacidades de los lenguajes modernos reducen el uso de patrones GoF verbosos, permitiendo inyecciones dinámicas directas a través de funciones."
+  },
+  {
+    "id": "ing-q078",
+    "question": "El antipatrón consistente en diseñar una única clase centralizada con excesiva cantidad de responsabilidades y dependencias se denomina ______.",
+    "answer": "God Object",
+    "options": [
+      "Golden Hammer",
+      "Alto Acoplamiento",
+      "God Object",
+      "Cascada Disfrazada"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Un Objeto Dios rompe la modularidad básica y centraliza de forma nociva la lógica, volviendo el mantenimiento una tarea sumamente compleja."
+  },
+  {
+    "id": "ing-q079",
+    "question": "El patrón ______ es un ejemplo clásico de tipo creacional cuyo objetivo es encapsular e independizar por completo el método de creación de familias de objetos.",
+    "answer": "Factory",
+    "options": ["Strategy", "Observer", "Factory", "Command"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Factory centraliza las reglas de negocio vinculadas a la instanciación, librando al código llamador de acoplarse a constructores particulares."
+  },
+  {
+    "id": "ing-q080",
+    "question": "La especificación del plano arquitectónico técnico, diagramas estructurales e interfaces del sistema se consolidan formalmente durante la fase de ______.",
+    "answer": "Diseño",
+    "options": ["Análisis", "Diseño", "Programación", "Despliegue"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La etapa de diseño reduce la incertidumbre abstracta, traduciendo lo que el usuario quiere en mapas estables de construcción lógica."
+  },
+  {
+    "id": "ing-q081",
+    "question": "Construir y distribuir el sistema entregando iterativamente bloques modulares que suman valor usable y temprano corresponde al enfoque ______.",
+    "answer": "Incremental",
+    "options": ["en Cascada", "Incremental", "Estructural", "Monolítico"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El desarrollo incremental mitiga el riesgo de entregas fallidas de largo alcance al madurar el ecosistema del producto pieza por pieza."
+  },
+  {
+    "id": "ing-q082",
+    "question": "El antipatrón '______' describe la anomalía donde los módulos se programan de manera aislada y sufren colisiones catastróficas al unirse tardíamente.",
+    "answer": "Incremental sin integración",
+    "options": [
+      "Cascada disfrazada de Ágil",
+      "Incremental sin integración",
+      "Golden Hammer",
+      "Documentación cero"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La falta de prácticas como integración continua (CI) en procesos incrementales enmascara errores de compatibilidad que estallan al cierre de fases."
+  },
+  {
+    "id": "ing-q083",
+    "question": "Para verificar la agilidad operativa y la capacidad de lanzar parches estables con rapidez, los equipos analizan la ______ en producción.",
+    "answer": "Frecuencia de despliegue",
+    "options": [
+      "Cobertura de tests",
+      "Frecuencia de despliegue",
+      "Tasa de fallos en desarrollo",
+      "Complejidad ciclomática"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Una alta frecuencia de despliegue denota madurez técnica en pruebas automáticas y mecanismos fluidos de entrega continua."
+  },
+  {
+    "id": "ing-q084",
+    "question": "El principio DIP de SOLID nos instruye a romper dependencias acopladas forzando a que las clases interactúen a través de ______ y no de implementaciones fijas.",
+    "answer": "abstracciones",
+    "options": [
+      "abstracciones",
+      "herencias directas",
+      "variables globales",
+      "métodos estáticos"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El uso de abstracciones actúa como un amortiguador técnico, blindando las lógicas principales contra las variaciones en librerías secundarias."
+  },
+  {
+    "id": "ing-q085",
+    "question": "Asegurar que cualquier objeto de tipo hijo pueda reemplazar a un objeto de tipo padre sin corromper el flujo operativo responde al principio de ______.",
+    "answer": "Sustitución de Liskov",
+    "options": [
+      "Responsabilidad Única",
+      "Segregación de Interfaces",
+      "Inversión de Dependencia",
+      "Sustitución de Liskov"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Liskov (LSP) impide distorsiones de jerarquía donde las extensiones o subclases violan de forma imprevista las promesas de la clase base."
+  },
+  {
+    "id": "ing-q086",
+    "question": "La directiva de diseño ______ nos advierte que mantengamos el desarrollo claro y conciso, evitando ingeniería de software sobre-reducida o rebuscada.",
+    "answer": "KISS",
+    "options": ["KISS", "DRY", "SOLID", "YAGNI"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "KISS combate la tendencia de los programadores a sobrediseñar soluciones complejas para problemas que se solventan con simplicidad elemental."
+  },
+  {
+    "id": "ing-q087",
+    "question": "Para coordinar componentes distribuidos de modo que reaccionen en tiempo real ante variaciones de un objeto emisor, se aplica el patrón ______.",
+    "answer": "Observer",
+    "options": ["Factory", "Strategy", "Observer", "Singleton"],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Observer desacopla los flujos informativos masivos, permitiendo a los suscriptores enlazarse dinámicamente y reaccionar asíncronamente a cambios."
+  },
+  {
+    "id": "ing-q088",
+    "question": "Los desarrolladores aprovechan los ______ nativos para prescindir del patrón Singleton clásico, asegurando instancias únicas por archivo de forma directa.",
+    "answer": "Módulos ES6",
+    "options": [
+      "Módulos ES6",
+      "Union Types",
+      "Callbacks asíncronos",
+      "Punteros de memoria"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Aprovechar las mecánicas internas del lenguaje moderno ahorra la inclusión de patrones heredados complejos que cargan sintaxis extra al proyecto."
+  },
+  {
+    "id": "ing-q089",
+    "question": "Creer ciegamente que una base de datos o un framework específico solucionará mágicamente cualquier problema del proyecto nos hace caer en el antipatrón ______.",
+    "answer": "Golden Hammer",
+    "options": [
+      "God Object",
+      "Alto Acoplamiento",
+      "Golden Hammer",
+      "Cascada Disfrazada"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El Martillo de Oro desatiende las particularidades del requerimiento técnico, queriendo forzar soluciones estándar a problemas de naturaleza disímil."
+  },
+  {
+    "id": "ing-q090",
+    "question": "El paradigma de ______ se enfoca en estructurar el software como una red reactiva que responde a eventos asíncronos en lugar de ejecutar un guion lineal.",
+    "answer": "Programación Orientada a Eventos",
+    "options": [
+      "Programación Estructurada",
+      "Programación Orientada a Eventos",
+      "Programación Funcional",
+      "Programación Concurrente"
+    ],
+    "category": "BS_01_Ingenieria_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Este paradigma dota a los sistemas modernos de alta resiliencia y desacoplamiento ante picos de demanda o interacciones desordenadas de usuarios."
+  }
+]

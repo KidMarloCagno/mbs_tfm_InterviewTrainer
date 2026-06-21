@@ -1,0 +1,552 @@
+[
+  {
+    "id": "arq-q001",
+    "question": "¿Cuál es el propósito principal de la Arquitectura de Software en un proyecto?",
+    "answer": "Definir la organización global y las decisiones estructurales del sistema.",
+    "options": [
+      "Escribir líneas de código específicas para funciones matemáticas.",
+      "Definir la organización global y las decisiones estructurales del sistema.",
+      "Diseñar la interfaz gráfica y los colores de la aplicación.",
+      "Configurar los repositorios locales de Git de los desarrolladores."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La arquitectura se enfoca en las decisiones globales y estructurales del sistema, como elegir entre un monolito o microservicios, asegurando bases como la escalabilidad y mantenibilidad."
+  },
+  {
+    "id": "arq-q002",
+    "question": "Si la Programación se enfoca en el código específico y la Arquitectura en la organización global, ¿en qué se enfoca principalmente la Ingeniería de Software?",
+    "answer": "En la estructura interna, patrones y principios de diseño como SOLID.",
+    "options": [
+      "En la estructura interna, patrones y principios de diseño como SOLID.",
+      "En la infraestructura física de los servidores del cliente.",
+      "Exclusivamente en la negociación de contratos y presupuestos.",
+      "En el diseño de logotipos y marcas del producto."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La ingeniería de software actúa como el puente intermedio, enfocándose en la estructura interna del código mediante el uso de patrones y principios como SOLID."
+  },
+  {
+    "id": "arq-q003",
+    "question": "¿Qué herramienta o documento se utiliza en arquitectura para registrar de forma justificada las decisiones de diseño estructural?",
+    "answer": "ADR (Architectural Decision Records)",
+    "options": [
+      "Un archivo de configuración .env",
+      "ADR (Architectural Decision Records)",
+      "Un script de migración de base de datos",
+      "Un log de auditoría de seguridad"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los ADR (Architectural Decision Records) son documentos breves que sirven para registrar y explicar el contexto y las razones detrás de una decisión arquitectónica."
+  },
+  {
+    "id": "arq-q004",
+    "question": "¿Qué principio busca que los componentes del sistema tengan un foco claro y manejen una sola parte de la funcionalidad para facilitar su mantenimiento?",
+    "answer": "Separación de responsabilidades y modularidad",
+    "options": [
+      "Cifrado de datos en tránsito",
+      "Separación de responsabilidades y modularidad",
+      "Acoplamiento temporal síncrono",
+      "Evolución por canary releases"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La separación de responsabilidades y la modularidad funcional dividen el sistema en componentes claros, enfocados y fáciles de probar de manera independiente."
+  },
+  {
+    "id": "arq-q005",
+    "question": "En el contexto de Resiliencia, ¿qué combinación de estrategias evita que un sistema falle inmediatamente al fallar una red, permitiendo reintentar la operación tras una espera?",
+    "answer": "Timeouts y Retries",
+    "options": [
+      "Autenticación y Autorización",
+      "Logs estructurados y Trazas",
+      "Timeouts y Retries",
+      "Feature flags y Rollbacks"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los timeouts evitan esperas indefinidas y los retries permiten volver a intentar la operación de forma controlada ante fallos temporales de red."
+  },
+  {
+    "id": "arq-q006",
+    "question": "¿Qué principio de seguridad establece que los usuarios y servicios deben tener únicamente los accesos estrictamente necesarios para realizar sus funciones?",
+    "answer": "Principio de mínimo privilegio",
+    "options": [
+      "Principio de mínimo privilegio",
+      "Seguridad por oscuridad",
+      "Retro-compatibilidad obligatoria",
+      "Aislamiento del dominio"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El principio de mínimo privilegio limita los accesos a lo estrictamente necesario, reduciendo el radio de impacto ante incidentes de seguridad."
+  },
+  {
+    "id": "arq-q007",
+    "question": "Dentro de la Observabilidad, ¿cuál es la diferencia conceptual entre un SLI y un SLO?",
+    "answer": "El SLI es el indicador medible concreto y el SLO es el objetivo numérico que se desea alcanzar.",
+    "options": [
+      "El SLI es una traza distribuida y el SLO es un log estructurado.",
+      "El SLI es el indicador medible concreto y el SLO es el objetivo numérico que se desea alcanzar.",
+      "El SLI mide la seguridad y el SLO mide el rendimiento de las consultas SQL.",
+      "No hay diferencia; ambos términos significan exactamente lo mismo en microservicios."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El SLI (Service Level Indicator) representa la métrica real actual (ej. latencia), mientras que el SLO (Service Level Objective) es la meta acordada (ej. < 200ms)."
+  },
+  {
+    "id": "arq-q008",
+    "question": "¿Qué mecanismo de evolución segura permite activar o desactivar funciones en producción para ciertos usuarios sin necesidad de desplegar código nuevo?",
+    "answer": "Feature flags",
+    "options": [
+      "Migraciones versionadas",
+      "Feature flags",
+      "Esquemas mermaid.js",
+      "Cifrado de secretos"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las feature flags (o banderas de característica) permiten habilitar o deshabilitar funcionalidades en tiempo real para mitigar riesgos en lanzamientos."
+  },
+  {
+    "id": "arq-q009",
+    "question": "La Ley de Conway (Conway's Law) es un criterio clave para elegir estilos arquitectónicos. ¿Qué establece principalmente esta ley?",
+    "answer": "Que la estructura de un sistema de software refleja la estructura de comunicación de la organización que lo diseña.",
+    "options": [
+      "Que el rendimiento de un sistema se duplica cada dieciocho meses automáticamente.",
+      "Que los sistemas distribuidos siempre deben comunicarse mediante el protocolo HTTP de forma síncrona.",
+      "Que la estructura de un sistema de software refleja la estructura de comunicación de la organización que lo diseña.",
+      "Que las bases de datos relacionales no pueden usarse en arquitecturas de microservicios."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La Ley de Conway resalta que la organización de los equipos humanos influye directamente en los límites y acoplamientos del software que producen."
+  },
+  {
+    "id": "arq-q010",
+    "question": "¿Cuál es la principal ventaja y desventaja del estilo de arquitectura de Microservicios?",
+    "answer": "Aporta alta autonomía y escalabilidad, pero incrementa notablemente la complejidad operativa.",
+    "options": [
+      "Es extremadamente sencillo de desplegar, pero tiene un riesgo alto de volverse una bola de barro.",
+      "Aporta alta autonomía y escalabilidad, pero incrementa notablemente la complejidad operativa.",
+      "Elimina por completo la necesidad de usar redes de comunicación, pero es difícil de testear.",
+      "Garantiza transacciones atómicas globales automáticas, pero requiere disciplina extra de capas."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los microservicios permiten que equipos trabajen independientemente, pero introducen desafíos de red, consistencia y monitoreo distribuido."
+  },
+  {
+    "id": "arq-q011",
+    "question": "¿Cuál es la característica central de las arquitecturas Hexagonal (Ports & Adapters) y Clean Architecture?",
+    "answer": "Separar las reglas de negocio (el qué) de los detalles tecnológicos externos (el cómo) mediante capas o puertos.",
+    "options": [
+      "Obligar a que toda la aplicación se empaquete y despliegue siempre en un único servidor monolítico.",
+      "Separar las reglas de negocio (el qué) de los detalles tecnológicos externos (el cómo) mediante capas o puertos.",
+      "Basar toda la comunicación exclusivamente en mensajes asíncronos y colas de eventos distribuidas.",
+      "Eliminar el uso de bases de datos relacionales para priorizar archivos de texto estructurados."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Tanto la arquitectura Hexagonal como Clean buscan aislar el dominio o lógica central de tecnologías volátiles como frameworks, bases de datos o interfaces."
+  },
+  {
+    "id": "arq-q012",
+    "question": "En el contexto de Event-Driven Architecture (EDA), ¿qué problema específico viene a resolver el patrón Transactional Outbox?",
+    "answer": "Garantizar que un evento se guarde y publique de forma consistente junto con la actualización de la base de datos.",
+    "options": [
+      "Aumentar el rendimiento de las consultas de lectura denormalizadas en la interfaz.",
+      "Validar los tokens de autorización OAuth2 en el API Gateway.",
+      "Garantizar que un evento se guarde y publique de forma consistente junto con la actualización de la base de datos.",
+      "Reemplazar por completo el uso de Clean Architecture mediante el uso de puertos y adaptadores."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El patrón Outbox asegura la atomicidad: el estado del negocio y el evento de notificación se guardan en la misma transacción local, evitando la pérdida de mensajes."
+  },
+  {
+    "id": "arq-q013",
+    "question": "¿Qué define fundamentalmente a una Arquitectura Distribuida?",
+    "answer": "Los componentes del sistema viven en nodos separados y se comunican a través de una red.",
+    "options": [
+      "El uso exclusivo de un único lenguaje de programación en todo el código fuente.",
+      "Los componentes del sistema viven en nodos separados y se comunican a través de una red.",
+      "La ejecución de todas las funciones dentro del mismo proceso de memoria en un único servidor.",
+      "El almacenamiento de datos únicamente en la memoria caché local del navegador del usuario."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las arquitecturas distribuidas constan de múltiples servicios autónomos ubicados en diferentes entornos que colaboran mediante protocolos de red."
+  },
+  {
+    "id": "arq-q014",
+    "question": "¿Cuál es un ejemplo correcto de comunicación síncrona y asíncrona entre servicios, respectivamente?",
+    "answer": "Síncrona: REST/HTTP; Asíncrona: Mensajes/Eventos.",
+    "options": [
+      "Síncrona: Eventos; Asíncrona: gRPC sobre HTTP.",
+      "Síncrona: REST/HTTP; Asíncrona: Mensajes/Eventos.",
+      "Síncrona: Archivos compartidos; Asíncrona: Llamadas gRPC.",
+      "Síncrona: Colas de mensajería; Asíncrona: Consultas directas a bases de datos."
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las llamadas HTTP/REST requieren que el emisor espere la respuesta inmediata (síncrona), mientras que el uso de eventos permite continuar el flujo sin esperar al receptor (asíncrona)."
+  },
+  {
+    "id": "arq-q015",
+    "question": "True or False: La Arquitectura de Software se encarga de definir el código específico de funciones individuales como calcularTotal().",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "La programación se encarga del código específico de funciones puntuales, mientras que la arquitectura determina la organización y decisiones globales del sistema."
+  },
+  {
+    "id": "arq-q016",
+    "question": "True or False: La Ingeniería de Software se enfoca en la estructura interna utilizando patrones y principios como SOLID.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "La ingeniería de software gestiona los componentes y su diseño mediante principios y patrones estructurales reutilizables."
+  },
+  {
+    "id": "arq-q017",
+    "question": "True or False: Los Architectural Decision Records (ADR) se utilizan exclusivamente para almacenar contraseñas y secretos de producción.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Los ADR documentan decisiones de diseño arquitectónico y sus justificaciones; las contraseñas se almacenan de forma segura en vaults o variables de entorno."
+  },
+  {
+    "id": "arq-q018",
+    "question": "True or False: La modularidad funcional busca crear componentes independientes que sean fáciles de mantener y probar de forma aislada.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "La modularidad divide el sistema en bloques lógicos bien definidos, lo que simplifica su mantenimiento y la ejecución de pruebas unitarias o de integración."
+  },
+  {
+    "id": "arq-q019",
+    "question": "True or False: La estrategia de Circuit Breaker impide que un sistema reintente infinitamente una petición a un servicio externo que se sabe que está caído.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "El patrón Circuit Breaker corta las peticiones hacia un servicio fallido para proteger los recursos del sistema emisor y permitir la recuperación del receptor."
+  },
+  {
+    "id": "arq-q020",
+    "question": "True or False: El principio de mínimo privilegio dicta que todos los desarrolladores y servicios deben tener permisos de administrador total en producción para agilizar despliegues.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "El principio exige otorgar los mínimos accesos indispensables para operar, reduciendo riesgos de seguridad por errores humanos o ataques."
+  },
+  {
+    "id": "arq-q021",
+    "question": "True or False: Un SLO (Service Level Objective) es el indicador medible real, mientras que un SLI es la meta numérica que el equipo aspira cumplir.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Es al revés: el SLI es el indicador (métrica concreta) y el SLO es el objetivo numérico medible que se desea alcanzar."
+  },
+  {
+    "id": "arq-q022",
+    "question": "True or False: Las Feature Flags permiten activar o desactivar flujos de código en producción dinámicamente sin necesidad de realizar un despliegue completo de software.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Las feature flags separan el despliegue de código de la liberación de la característica al usuario, controlando su exposición de forma dinámica."
+  },
+  {
+    "id": "arq-q023",
+    "question": "True or False: Según la Ley de Conway, el diseño técnico de un sistema de software no se ve influenciado por la estructura de los equipos de la organización.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "La Ley de Conway establece explícitamente que los diseños de los sistemas están limitados a imitar las estructuras de comunicación de las organizaciones."
+  },
+  {
+    "id": "arq-q024",
+    "question": "True or False: Una de las principales ventajas de los Microservicios es su extrema sencillez operativa y la facilidad para realizar debugging local directo.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Los microservicios ofrecen alta independencia, pero su desventaja principal es el incremento drástico de la complejidad operativa y el debugging distribuido."
+  },
+  {
+    "id": "arq-q025",
+    "question": "True or False: Las arquitecturas Hexagonal y Clean eliminan por completo el concepto de lógica de dominio, centrando toda la aplicación en el framework de persistencia.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Estas arquitecturas ponen la lógica de dominio en el centro, aislándola de los frameworks y detalles técnicos externos para facilitar pruebas y cambios."
+  },
+  {
+    "id": "arq-q026",
+    "question": "True or False: El patrón Transactional Outbox se utiliza dentro de arquitecturas dirigidas por eventos para asegurar que la escritura en la base de datos y la publicación del evento ocurran de manera consistente.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Este patrón guarda el evento en una tabla temporal dentro de la misma transacción de datos, previniendo inconsistencias si el broker de mensajería falla momentáneamente."
+  },
+  {
+    "id": "arq-q027",
+    "question": "True or False: En una arquitectura distribuida, todos los componentes se ejecutan obligatoriamente en el mismo hilo de memoria interna de un único servidor centralizado.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Las arquitecturas distribuidas se caracterizan por tener componentes alojados en nodos de red físicamente separados que operan de forma independiente."
+  },
+  {
+    "id": "arq-q028",
+    "question": "True or False: El protocolo HTTP/REST representa un modelo común de comunicación síncrona donde el emisor típicamente espera la respuesta inmediata del receptor.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_02_Arq_Software",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "La comunicación síncrona acopla temporalmente los servicios, obligando al cliente a detenerse a la espera del resultado enviado por el servidor."
+  },
+  {
+    "id": "arq-q029",
+    "question": "La arquitectura define la organización global de un sistema de software, mientras que la ______ se enfoca en escribir el código específico de funciones detalladas.",
+    "answer": "Programación",
+    "options": [
+      "Programación",
+      "Ingeniería de Software",
+      "Observabilidad",
+      "Persistencia"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La programación se sitúa en el nivel de implementación granular de lógica y algoritmos, bajo los lineamientos de la ingeniería y la arquitectura."
+  },
+  {
+    "id": "arq-q030",
+    "question": "Los principios de diseño estructural interno de componentes, tales como SOLID y patrones de diseño reutilizables, son el foco principal de la ______.",
+    "answer": "Ingeniería de Software",
+    "options": [
+      "Observabilidad distribuida",
+      "Ingeniería de Software",
+      "Infraestructura en la nube",
+      "Seguridad por oscuridad"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La ingeniería de software aplica metodologías, patrones y buenas prácticas de diseño para organizar internamente el código base."
+  },
+  {
+    "id": "arq-q031",
+    "question": "Para documentar de forma clara y rastreable las decisiones estructurales más críticas de un proyecto, los arquitectos emplean documentos llamados ______.",
+    "answer": "ADR",
+    "options": ["Logs de auditoría", "SLOs", "ADR", "Métricas de memoria"],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los ADR (Architectural Decision Records) capturan el contexto, las opciones evaluadas, las consecuencias y la decisión final elegida en el diseño del sistema."
+  },
+  {
+    "id": "arq-q032",
+    "question": "La división del sistema en componentes enfocados con foco claro e independencia técnica se conoce como ______.",
+    "answer": "Modularidad funcional",
+    "options": [
+      "Acoplamiento síncrono",
+      "Modularidad funcional",
+      "Cifrado simétrico",
+      "Trazabilidad distribuida"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La modularidad funcional organiza el software en secciones independientes y auto-contenidas que exponen interfaces claras."
+  },
+  {
+    "id": "arq-q033",
+    "question": "En el diseño de sistemas resilientes, los ______ limitan el tiempo máximo de espera por una respuesta de red externa para evitar colgar hilos de ejecución de forma indefinida.",
+    "answer": "Timeouts",
+    "options": [
+      "Logs estructurados",
+      "Timeouts",
+      "Rollbacks",
+      "Esquemas mermaid.js"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los timeouts aseguran que el sistema desista de llamadas fallidas o infinitamente lentas, permitiendo activar flujos alternativos o reintentos."
+  },
+  {
+    "id": "arq-q034",
+    "question": "El control de accesos estricto fundamentado en conceder sólo los permisos mínimos necesarios se asocia directamente al principio de ______.",
+    "answer": "Mínimo privilegio",
+    "options": [
+      "Mínimo privilegio",
+      "Aislamiento de dominio",
+      "Retro-compatibilidad",
+      "Escalabilidad organizacional"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El principio de mínimo privilegio reduce vulnerabilidades al restringir los permisos de usuarios, procesos y sistemas al mínimo indispensable."
+  },
+  {
+    "id": "arq-q035",
+    "question": "Al estructurar la observabilidad, un ______ define el objetivo numérico medible u objetivo de nivel de servicio (por ejemplo, asegurar que el 99% de las peticiones tarden menos de 200ms).",
+    "answer": "SLO",
+    "options": ["SLI", "ADR", "SLO", "Vault"],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El SLO (Service Level Objective) establece la meta de fiabilidad que el equipo técnico se compromete a mantener ante el negocio."
+  },
+  {
+    "id": "arq-q036",
+    "question": "Para mitigar riesgos al lanzar nuevas características, se utilizan las ______ para activar o desactivar la lógica dinámicamente sin redesplegar la aplicación.",
+    "answer": "Feature flags",
+    "options": [
+      "Feature flags",
+      "Consultas denormalizadas",
+      "Migraciones versionadas",
+      "Trazas distribuidas"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las feature flags otorgan flexibilidad operativa extrema en producción, facilitando pruebas controladas como los canary releases."
+  },
+  {
+    "id": "arq-q037",
+    "question": "La ______ establece que la estructura técnica de un sistema de software tenderá a reflejar los canales de comunicación internos de la organización que lo desarrolla.",
+    "answer": "Ley de Conway",
+    "options": [
+      "Ley de Conway",
+      "Arquitectura Limpia",
+      "Resiliencia por diseño",
+      "Separación de responsabilidades"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La Ley de Conway demuestra la inevitable conexión que existe entre el diseño organizacional y las topologías de software resultantes."
+  },
+  {
+    "id": "arq-q038",
+    "question": "El estilo arquitectónico de ______ permite que diferentes equipos trabajen con alta autonomía y escalen servicios independientes, a cambio de gestionar una alta complejidad operativa.",
+    "answer": "Microservicios",
+    "options": [
+      "Monolito Modular",
+      "Microservicios",
+      "Arquitectura de Nivel Único",
+      "Clean Architecture"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los microservicios descentralizan los datos y el despliegue, requiriendo un ecosistema de infraestructura robusto debido a la distribución en red."
+  },
+  {
+    "id": "arq-q039",
+    "question": "La Arquitectura ______ propone el desacoplamiento mediante capas concéntricas, protegiendo las reglas de negocio en el núcleo contra dependencias de frameworks externos.",
+    "answer": "Clean",
+    "options": [
+      "Monolítica básica",
+      "Dirigida por Eventos",
+      "Clean",
+      "Síncrona clásica"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Clean Architecture (y conceptos similares como Hexagonal) enfoca sus esfuerzos de diseño en mantener el dominio puro y altamente testable."
+  },
+  {
+    "id": "arq-q040",
+    "question": "Para evitar la pérdida de eventos cuando falla el broker de mensajería, se implementa el patrón ______ para escribir localmente el estado de negocio y el evento en una misma transacción.",
+    "answer": "Transactional Outbox",
+    "options": [
+      "Circuit Breaker",
+      "Transactional Outbox",
+      "Canary Release",
+      "API Versioning"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El patrón Transactional Outbox utiliza la base de datos local como almacenamiento seguro intermedio antes de la entrega final del mensaje al broker."
+  },
+  {
+    "id": "arq-q041",
+    "question": "Cuando los componentes lógicos de una aplicación están desplegados en nodos o servidores separados físicamente, estamos ante una arquitectura ______.",
+    "answer": "Distribuida",
+    "options": [
+      "Centralizada de un solo hilo",
+      "Monolítica tradicional",
+      "Distribuida",
+      "Cerrada sin red"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La dispersión en múltiples nodos introduce ventajas de escalabilidad física, pero añade las complejidades inherentes a la comunicación por red."
+  },
+  {
+    "id": "arq-q042",
+    "question": "Los protocolos asíncronos en arquitecturas distribuidas comúnmente operan basándose en el intercambio de ______ a través de un broker, sin bloquear al emisor.",
+    "answer": "Eventos",
+    "options": [
+      "Llamadas REST",
+      "Eventos",
+      "Peticiones síncronas gRPC",
+      "Esquemas Mermaid"
+    ],
+    "category": "BS_02_Arq_Software",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La transmisión asíncrona mediante mensajes o eventos desacopla temporalmente los sistemas, optimizando la tolerancia a caídas temporales."
+  }
+]

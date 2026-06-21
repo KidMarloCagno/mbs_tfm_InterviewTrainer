@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "java-mod-q001",
+    "question": "Which object-oriented principle is primary when isolating an object's state from direct modification and forcing interaction through secure methods?",
+    "answer": "Encapsulation",
+    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Encapsulation hides the internal state of an object and requires all interaction to be performed through well-defined public methods like getters and setters."
+  },
+  {
+    "id": "java-mod-q002",
+    "question": "When a subclass redefines a parent class method with the exact same signature and return type, which mechanism is being used?",
+    "answer": "Method Overriding",
+    "options": [
+      "Method Overloading",
+      "Method Overriding",
+      "Dynamic Binding",
+      "Encapsulation"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Method overriding allows a subclass to provide a specific implementation of a method that is already provided by its parent class."
+  },
+  {
+    "id": "java-mod-q003",
+    "question": "Which modifier should be applied to a Java class to completely prevent any other class from extending or inheriting from it?",
+    "answer": "final",
+    "options": ["abstract", "static", "sealed", "final"],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The final modifier applied to a class declaration prevents it from being subclassed, securing its architectural integrity."
+  },
+  {
+    "id": "java-mod-q004",
+    "question": "What is the primary benefit of using Java Generics when declaring collections such as List or Set?",
+    "answer": "Type safety at compile time",
+    "options": [
+      "Faster execution speed",
+      "Automatic memory allocation",
+      "Type safety at compile time",
+      "Reduced bytecode size"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Generics provide compile-time type checking, eliminating the need for manual type casting and preventing ClassCastException at runtime."
+  },
+  {
+    "id": "java-mod-q005",
+    "question": "Which component of the Java Virtual Machine (JVM) automatically frees heap memory by reclaiming objects that are no longer reachable?",
+    "answer": "Garbage Collector",
+    "options": [
+      "Class Loader",
+      "Just-In-Time Compiler",
+      "Garbage Collector",
+      "Execution Engine"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector manages heap memory automatically by destroying objects that have no active references pointing to them."
+  },
+  {
+    "id": "java-mod-q006",
+    "question": "In Java 14+ Switch Expressions, what is the purpose of the 'yield' keyword inside a multi-line case block?",
+    "answer": "To return a value from the switch expression",
+    "options": [
+      "To break out of the switch block without returning a value",
+      "To fall through to the next case branch",
+      "To return a value from the switch expression",
+      "To throw a checked exception immediately"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The yield keyword is used in a multi-line code block within a switch expression to specify the value that the expression should evaluate to."
+  },
+  {
+    "id": "java-mod-q007",
+    "question": "Introduced as an LTS feature in Java 17, what does a 'record' implicitly generate for its components?",
+    "answer": "Private final fields, public accessors, constructor, equals, hashCode, and toString",
+    "options": [
+      "Public mutable fields, setters, constructor, and equals",
+      "Private final fields, public accessors, constructor, equals, hashCode, and toString",
+      "Protected fields, public getters, public setters, and a clone method",
+      "Abstract methods for all fields alongside standard constructor configurations"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Java records are immutable data carriers that automatically generate boilerplate methods based on the state description in the record header."
+  },
+  {
+    "id": "java-mod-q008",
+    "question": "Which keyword is paired with 'sealed' to explicitly specify the subclasses permitted to extend a sealed class?",
+    "answer": "permits",
+    "options": ["allows", "extends", "permits", "implements"],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A sealed class uses the permits clause to list the specific subclasses allowed to directly inherit from it."
+  },
+  {
+    "id": "java-mod-q009",
+    "question": "What happens when a programmer forgets to handle or declare a checked exception in a Java method?",
+    "answer": "A compilation error occurs",
+    "options": [
+      "A compilation error occurs",
+      "The JVM crashes at runtime",
+      "The exception is silently swallowed",
+      "The method returns null automatically"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Checked exceptions are verified at compile time, meaning the compiler will reject the code if they are not caught or declared in the method signature."
+  },
+  {
+    "id": "java-mod-q010",
+    "question": "Which of the following is an architectural rule governing Java 21 Virtual Threads?",
+    "answer": "They are managed by the JVM rather than mapped 1:1 to OS threads",
+    "options": [
+      "They must be created using the native 'Thread' constructor exclusively",
+      "They require manual CPU core binding to execute efficiently",
+      "They are managed by the JVM rather than mapped 1:1 to OS threads",
+      "They consume more call-stack memory than standard platform threads"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Virtual threads are lightweight threads managed by the Java runtime, allowing applications to run millions of concurrent tasks on minimal OS threads."
+  },
+  {
+    "id": "java-mod-q011",
+    "question": "What must be true about a method for it to be mathematically classified as a 'Pure Method'?",
+    "answer": "It has no side effects and returns identical output for identical arguments",
+    "options": [
+      "It is marked with the static modifier and returns void",
+      "It utilizes synchronized blocks to avoid concurrent state updates",
+      "It has no side effects and returns identical output for identical arguments",
+      "It resides within an interface and utilizes default method syntax"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A pure method is deterministic (same inputs yield same outputs) and produces zero side effects, making it ideal for safe parallel processing."
+  },
+  {
+    "id": "java-mod-q012",
+    "question": "Why is it highly recommended to use pure methods inside Java Stream API operations like .map() or .filter()?",
+    "answer": "It allows safe execution when converting streams to parallelStreams",
+    "options": [
+      "It guarantees the Garbage Collector flushes unreferenced streams immediately",
+      "It enables the JIT compiler to bypass type checking operations",
+      "It allows safe execution when converting streams to parallelStreams",
+      "It forces the application to bypass standard heap memory rules"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Pure methods lack side effects, ensuring that parallel streams can process elements concurrently without introducing race conditions or state corruption."
+  },
+  {
+    "id": "java-mod-q013",
+    "question": "What type of data structures are best suited for key-value pair lookups with an average time complexity of O(1)?",
+    "answer": "HashMap",
+    "options": ["ArrayList", "LinkedList", "HashMap", "TreeSet"],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "A HashMap utilizes hashing functions to map keys to buckets, providing constant-time performance for basic search operations on average."
+  },
+  {
+    "id": "java-mod-q014",
+    "question": "How do Java 21 Virtual Threads handle blocking operations such as network I/O?",
+    "answer": "The JVM unmounts the virtual thread from the carrier thread, freeing the OS thread",
+    "options": [
+      "They block the underlying OS carrier thread until I/O completes",
+      "The JVM unmounts the virtual thread from the carrier thread, freeing the OS thread",
+      "They throw a modern ConcurrentBlockingException immediately",
+      "They fallback to standard platform thread scheduling mechanics entirely"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "When a virtual thread blocks on I/O, the Java runtime yields it, unmounting it from the OS carrier thread so other virtual tasks can utilize that platform thread."
+  },
+  {
+    "id": "java-mod-q015",
+    "question": "Which design paradigm is violated if a subclass is forced to implement methods from a parent class that it does not need or cannot logically use?",
+    "answer": "Liskov Substitution Principle",
+    "options": [
+      "Liskov Substitution Principle",
+      "Single Responsibility Principle",
+      "Encapsulation",
+      "Polymorphism"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "The Liskov Substitution Principle dictates that subclasses must be substitutable for their base classes without breaking correctness or forcing invalid behaviors."
+  },
+  {
+    "id": "java-mod-q016",
+    "question": "What is a core technical difference between an Interface and an Abstract Class regarding state management?",
+    "answer": "Abstract classes can declare mutable instance fields, interfaces cannot",
+    "options": [
+      "Interfaces support private constructor parameters, abstract classes do not",
+      "Abstract classes can declare mutable instance fields, interfaces cannot",
+      "Interfaces can maintain full state inside static declaration blocks only",
+      "Abstract classes prohibit the initialization of final constants"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Abstract classes can hold instance variables that represent mutable state, whereas interfaces are stateless contracts restricted to public static final constants."
+  },
+  {
+    "id": "java-mod-q017",
+    "question": "Which feature introduced in Java 21 allows a switch block to inspect the class type of an object and automatically extract internal components?",
+    "answer": "Pattern Matching for switch",
+    "options": [
+      "Switch Expressions",
+      "Pattern Matching for switch",
+      "Sealed Class Permutations",
+      "Type Inference Lookups"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Pattern Matching for switch allows a switch statement or expression to test an object against a type pattern, casting and extracting variables automatically if matched."
+  },
+  {
+    "id": "java-mod-q018",
+    "question": "What major risk is associated with declaring a mutable public variable with the 'static' modifier in a multi-threaded web environment?",
+    "answer": "Race conditions and data corruption across requests",
+    "options": [
+      "An immediate NullPointerException on startup",
+      "A compilation error due to thread protection rules",
+      "Race conditions and data corruption across requests",
+      "Automatic migration of the data to the stack segment"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Static fields are shared globally across all threads in a single class loader instance, making mutable static state highly vulnerable to concurrent data corruption."
+  },
+  {
+    "id": "java-mod-q019",
+    "question": "Which Garbage Collector is designed specifically for multi-gigabyte heaps with a focus on keeping pause times under one millisecond?",
+    "answer": "ZGC",
+    "options": ["Serial GC", "Parallel GC", "CMS", "ZGC"],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "ZGC (Z Garbage Collector) is a scalable, low-latency garbage collector introduced to handle massive heaps with ultra-short pause times."
+  },
+  {
+    "id": "java-mod-q020",
+    "question": "What requirement must all permitted direct subclasses of a sealed class satisfy in Java?",
+    "answer": "They must be declared as final, sealed, or non-sealed",
+    "options": [
+      "They must reside in a completely separate root package",
+      "They must implement a constructor with generic type bounds",
+      "They must be declared as final, sealed, or non-sealed",
+      "They must override all static methods from the parent"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "To maintain architectural boundaries, direct subclasses of a sealed class must explicitly declare whether they are final, sealed (further restricted), or non-sealed (open)."
+  },
+  {
+    "id": "java-mod-q021",
+    "question": "If you create a Java record, why is it impossible to create a class that extends this record?",
+    "answer": "All records are implicitly final",
+    "options": [
+      "Records are treated as interfaces under the hood",
+      "All records are implicitly final",
+      "Records lack standard constructors required for extensions",
+      "The compiler treats records as abstract components"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Java records are designed to be immutable, unalterable data structures, and the compiler automatically marks every record class as final."
+  },
+  {
+    "id": "java-mod-q022",
+    "question": "Which code segment avoids the danger of traditional switch fall-through without using explicit break keywords?",
+    "answer": "case \"VAL\" -> System.out.println();",
+    "options": [
+      "case \"VAL\": System.out.println();",
+      "case \"VAL\" -> System.out.println();",
+      "case \"VAL\" yield System.out.println();",
+      "case \"VAL\": System.out.println(); continue;"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "The arrow operator syntax (`->`) in modern switch expressions executes only the statement or block to its right, with no possibility of fall-through."
+  },
+  {
+    "id": "java-mod-q023",
+    "question": "What is the computational benefit of using an explicit capacity declaration when initializing an ArrayList with a large known dataset?",
+    "answer": "It eliminates the overhead of multiple internal array resizing operations",
+    "options": [
+      "It prevents the Garbage Collector from processing the collection elements",
+      "It eliminates the overhead of multiple internal array resizing operations",
+      "It forces the compiler to allocate the collection memory to the stack",
+      "It dynamically alters the time complexity of element insertion to O(1) permanently"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "An ArrayList resizing operation requires allocating a new, larger backing array and copying all existing elements, which can be avoided by pre-allocating memory."
+  },
+  {
+    "id": "java-mod-q024",
+    "question": "Which interface represents a behavior or contract that can be executed as a lambda expression containing exactly one abstract method?",
+    "answer": "Functional Interface",
+    "options": [
+      "Marker Interface",
+      "Functional Interface",
+      "Abstract Interface",
+      "Generic Contract"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "A functional interface is an interface that contains exactly one abstract method, making it suitable to serve as the target type for lambda expressions."
+  },
+  {
+    "id": "java-mod-q025",
+    "question": "What mechanism does Java use to implement Generics under the hood, ensuring compatibility with legacy non-generic bytecode?",
+    "answer": "Type Erasure",
+    "options": [
+      "Type Reification",
+      "Dynamic Proxy Bindings",
+      "Type Erasure",
+      "Bytecode Subsumption"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "Type erasure removes all generic type parameters at compile time, replacing them with raw types or bounds, so the resulting bytecode matches standard class representations."
+  },
+  {
+    "id": "java-mod-q026",
+    "question": "When a lambda expression utilizes a local variable declared outside its block, what rule must that variable follow?",
+    "answer": "It must be final or effectively final",
+    "options": [
+      "It must be declared with the volatile modifier",
+      "It must be an active instance property of a class",
+      "It must be final or effectively final",
+      "It must be re-initialized inside the lambda block"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Java lambdas capturing local variables require them to be final or effectively final (unchanged after initialization) to preserve concurrent memory safety."
+  },
+  {
+    "id": "java-mod-q027",
+    "question": "What type of exception hierarchy must a programmer explicitly catch or declare in a method signature to pass compilation?",
+    "answer": "Checked Exception",
+    "options": [
+      "Unchecked Exception",
+      "RuntimeException",
+      "Checked Exception",
+      "Error"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Checked exceptions (subclasses of Exception excluding RuntimeException) are subject to compile-time verification rules."
+  },
+  {
+    "id": "java-mod-q028",
+    "question": "Which of the following is a direct consequence of an application encountering a Java Memory Leak?",
+    "answer": "The heap is filled with unreachable or poorly referenced objects, causing OutOfMemoryError",
+    "options": [
+      "The application switches execution to platform stack configurations",
+      "The heap is filled with unreachable or poorly referenced objects, causing OutOfMemoryError",
+      "The JIT compiler forces all objects to compile directly into native storage",
+      "The Garbage Collector runs once and permanently disables further allocation scans"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Memory leaks happen when objects that are no longer needed remain referenced in the application state, preventing the Garbage Collector from freeing up heap space."
+  },
+  {
+    "id": "java-mod-q029",
+    "question": "Which structural design pattern is fundamentally facilitated by using Interfaces to swap concrete backend logic without touching the controller?",
+    "answer": "Strategy Pattern",
+    "options": [
+      "Singleton Pattern",
+      "Strategy Pattern",
+      "Adapter Pattern",
+      "Decorator Pattern"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Interfaces act as operational contracts, allowing developers to switch concrete algorithms or database logic (strategies) dynamically without changing the execution engine."
+  },
+  {
+    "id": "java-mod-q030",
+    "question": "What is the primary operational difference between a standard 'Stream' and a 'parallelStream' in Java?",
+    "answer": "A parallelStream splits data across multiple threads using the ForkJoinPool",
+    "options": [
+      "A parallelStream utilizes the disk segment to cache intermediate transformations",
+      "A parallelStream completely ignores the execution requirements of checked exceptions",
+      "A parallelStream splits data across multiple threads using the ForkJoinPool",
+      "A parallelStream enforces synchronous single-threaded delivery to avoid overhead"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "QUIZ_SIMPLE",
+    "level": "Advanced",
+    "explanation": "A parallelStream breaks the input data collection down into segments, executing transformations concurrently across worker threads within the shared ForkJoinPool."
+  },
+  {
+    "id": "java-mod-q031",
+    "question": "True or False: Encapsulation encourages public fields so external layers can directly read and modify internal object states.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Encapsulation requires fields to be private, exposing access only through validated public channels to ensure system integrity."
+  },
+  {
+    "id": "java-mod-q032",
+    "question": "True or False: Method overriding allows a child class to rewrite a parent class method while keeping the exact same signature.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Method overriding is the practice of redefining an inherited method's implementation while maintaining identical naming and arguments."
+  },
+  {
+    "id": "java-mod-q033",
+    "question": "True or False: If a class is declared with the final modifier, any other class can still inherit from it as long as they reside in the same package.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The final modifier completely blocks inheritance globally across all packages; no exceptions are made based on module placement."
+  },
+  {
+    "id": "java-mod-q034",
+    "question": "True or False: Java Generics offer type validation at compile time, eliminating the risk of many type casting errors at runtime.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Generics exist to provide explicit compile-time safety constraints, ensuring invalid types are rejected before building."
+  },
+  {
+    "id": "java-mod-q035",
+    "question": "True or False: The Garbage Collector only sweeps static reference variables from stack allocations, completely ignoring heap storage allocation blocks.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector acts exclusively on heap memory blocks to remove unreferenced objects; it does not clean the stack frame directly."
+  },
+  {
+    "id": "java-mod-q036",
+    "question": "True or False: In a Java 14+ switch expression, the 'yield' keyword is required even if you use the short single-line arrow (->) syntax.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The single-line arrow syntax implicitly returns the evaluation result on its right side; yield is only mandatory inside multi-line brace blocks."
+  },
+  {
+    "id": "java-mod-q037",
+    "question": "True or False: Java 17 records automatically provide default public setters for every field defined in their constructor parameter list.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Records represent strictly immutable structures; their underlying fields are marked final, meaning no setters are generated."
+  },
+  {
+    "id": "java-mod-q038",
+    "question": "True or False: When declaring a sealed class, you must explicitly use the 'permits' keyword to define the authorized subclass chain.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The permits keyword lists the explicit child implementations that can bypass the compiler's inheritance lock on a sealed interface or class."
+  },
+  {
+    "id": "java-mod-q039",
+    "question": "True or False: Forgetting to catch or declare a checked exception has no impact on code compilation and is only validated at runtime.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Checked exceptions trigger immediate compilation failures if they are not explicitly wrapped in try-catch statements or propagated via throws declarations."
+  },
+  {
+    "id": "java-mod-q040",
+    "question": "True or False: Virtual Threads are lightweight hilos managed by the JVM, which allows millions of them to run without overwhelming the OS.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Virtual threads break the 1:1 hardware constraint by executing purely within the Java runtime, freeing up system thread context allocation thresholds."
+  },
+  {
+    "id": "java-mod-q041",
+    "question": "True or False: A method qualifies as a Pure Method if it reads or edits mutable global state variables during its internal calculation phase.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Pure methods cannot rely on or modify any mutable global state; their calculations must be strictly isolated to argument structures."
+  },
+  {
+    "id": "java-mod-q042",
+    "question": "True or False: Functions containing side effects are perfectly safe for conversion to parallel streams without causing concurrent data race conditions.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Methods with side effects corrupt heap integrity when parallel streams execute across separate worker threads simultaneously."
+  },
+  {
+    "id": "java-mod-q043",
+    "question": "True or False: A HashMap offers average search lookups of O(1) by utilizing hash codes to resolve direct bucket lookups.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "The mathematical hashing mechanism behind a HashMap maps unique keys to distinct buckets, creating incredibly fast near-instant lookups."
+  },
+  {
+    "id": "java-mod-q044",
+    "question": "True or False: When a virtual thread encounters blocking network input operations, it completely halts the underlying OS carrier thread.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "The JVM unmounts the blocking virtual thread, preserving the active carrier platform thread so it can execute other waiting virtual tasks."
+  },
+  {
+    "id": "java-mod-q045",
+    "question": "True or False: Forcing subclasses to implement empty placeholder logic for unrelated parent class methods satisfies the Liskov Substitution Principle.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Forcing child classes to provide broken placeholder implementations violates substitution design contracts, indicating poor structural modeling."
+  },
+  {
+    "id": "java-mod-q046",
+    "question": "True or False: Unlike interfaces, abstract classes have the distinct capability to maintain mutable instance variables.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Abstract classes allow the creation of full instance state structures, while interfaces are limited to stateless constant models."
+  },
+  {
+    "id": "java-mod-q047",
+    "question": "True or False: Pattern Matching for switch completely eliminates the requirement for developer-written manual object casting inside matched case clauses.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Pattern matching casts and binds the matched object to a targeted local variable automatically right inside the case assignment statement."
+  },
+  {
+    "id": "java-mod-q048",
+    "question": "True or False: Declaring a shared variable as mutable public static introduces absolutely zero synchronization risk in standard enterprise multi-threaded requests.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Shared mutable static state variables generate severe concurrent race conditions if multiple processing threads read and modify them at once."
+  },
+  {
+    "id": "java-mod-q049",
+    "question": "True or False: The ZGC garbage collector is architected to keep application freeze times below one millisecond on multi-gigabyte environments.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "ZGC prioritizes predictable, minimal pause durations by executing garbage collection concurrently alongside active application processing tasks."
+  },
+  {
+    "id": "java-mod-q050",
+    "question": "True or False: Direct subclasses of a sealed class can ignore design constraints and remain undeclared as final, sealed, or non-sealed.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Java enforces strict structural reporting; direct child classes must specify whether they are final, sealed, or explicitly non-sealed."
+  },
+  {
+    "id": "java-mod-q051",
+    "question": "True or False: Because records are implicitly final, it is impossible for a programmer to declare a subclass that extends an active record model.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Records are designated final structural types by design to preserve absolute data immutability, preventing inheritance extensions."
+  },
+  {
+    "id": "java-mod-q052",
+    "question": "True or False: Traditional switch blocks using standard colon punctuation automatically prevent fall-through errors without requiring explicit break keywords.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Traditional colon-style switch structures cascade execution directly down adjacent labels unless intercepted by a break statement."
+  },
+  {
+    "id": "java-mod-q053",
+    "question": "True or False: Pre-allocating capacity inside an ArrayList for a large dataset eliminates internal array resizing overhead.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Setting initial capacity prevents the runtime from performing resource-heavy array migrations as the data set grows."
+  },
+  {
+    "id": "java-mod-q054",
+    "question": "True or False: A Functional Interface is restricted to defining exactly three abstract operational methods to support lambda configurations.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Functional interfaces must contain exactly one abstract method to serve as valid target types for single-expression lambda mappings."
+  },
+  {
+    "id": "java-mod-q055",
+    "question": "True or False: Type Erasure preserves full type information inside bytecode during production execution, enabling runtime generic evaluation.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "Type erasure strips out generic parameter details during compilation to ensure smooth execution compatibility with legacy architectures."
+  },
+  {
+    "id": "java-mod-q056",
+    "question": "True or False: Local variables utilized inside lambda expressions must be final or effectively final to maintain thread safety.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Java rules demand lambda-captured variables remain unmutated outside the scope block to avoid concurrent data synchronization bugs."
+  },
+  {
+    "id": "java-mod-q057",
+    "question": "True or False: RuntimeException subclasses are categorized as Unchecked Exceptions and do not require mandatory compile-time try-catch wrapping.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Unchecked exceptions indicate system or logic errors that are exempt from strict compile-time signature declaration constraints."
+  },
+  {
+    "id": "java-mod-q058",
+    "question": "True or False: A Memory Leak occurs when active, unused references prevent the Garbage Collector from freeing up dead heap elements.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Retaining unintended references locks objects inside heap allocations, causing memory pressure and eventually triggering OutOfMemoryError failures."
+  },
+  {
+    "id": "java-mod-q059",
+    "question": "True or False: Implementing the Strategy Pattern is impossible if you use Interfaces instead of concrete class types inside the architecture.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Interfaces are actually the preferred vehicle for the Strategy Pattern because they decouple the parent controller from specific implementation frameworks."
+  },
+  {
+    "id": "java-mod-q060",
+    "question": "True or False: Parallel streams split data processing workloads across internal system cores by utilizing the shared ForkJoinPool engine.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "Java Mod POO-Conc",
+    "type": "TRUE_FALSE",
+    "level": "Advanced",
+    "explanation": "A parallelStream automatically segments data collections to execute transformations concurrently across the global ForkJoinPool architecture."
+  },
+  {
+    "id": "java-mod-q061",
+    "question": "The structural practice of restricting direct property modification by enforcing public method channels is called __.",
+    "answer": "Encapsulation",
+    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Encapsulation protects class properties from outside corruption by restricting direct access and offering clean public entry methods."
+  },
+  {
+    "id": "java-mod-q062",
+    "question": "Redefining an inherited class method while maintaining an identical signature configuration is called method __.",
+    "answer": "overriding",
+    "options": ["overloading", "overriding", "shadowing", "binding"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Method overriding empowers direct subclass structures to substitute inherited parent definitions with domain-specific runtime logic."
+  },
+  {
+    "id": "java-mod-q063",
+    "question": "To secure a class and permanently deny any external class inheritance attempt, you must add the modifier __.",
+    "answer": "final",
+    "options": ["abstract", "sealed", "static", "final"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The final keyword acts as an explicit structural block, terminating further inheritance modifications across class hierarchies."
+  },
+  {
+    "id": "java-mod-q064",
+    "question": "Java Generics provide robust validation benefits by executing explicit type safety checking at __ time.",
+    "answer": "compile",
+    "options": ["runtime", "compile", "deployment", "initialization"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Validating type structures at compile time catches invalid assignments early, preventing catastrophic ClassCastException errors in production."
+  },
+  {
+    "id": "java-mod-q065",
+    "question": "The internal JVM system element that automatically locates and flushes dead, unreferenced object assets from the heap is the __.",
+    "answer": "Garbage Collector",
+    "options": [
+      "Class Loader",
+      "Just-In-Time Compiler",
+      "Garbage Collector",
+      "Memory Allocator"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "The Garbage Collector keeps application memory healthy by identifying and sweeping unreachable objects out of the heap."
+  },
+  {
+    "id": "java-mod-q066",
+    "question": "Inside a multi-line case segment of a modern switch expression, you must emit values back using the keyword __.",
+    "answer": "yield",
+    "options": ["return", "break", "yield", "emit"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The yield keyword serves as the return vehicle within multi-line switch case blocks to output values safely without causing fall-through."
+  },
+  {
+    "id": "java-mod-q067",
+    "question": "A compact, final, immutable data structure introduced to eliminate state management boilerplate is known as a __.",
+    "answer": "record",
+    "options": ["record", "interface", "abstract class", "enum"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Java records automatically handle standard boilerplates like constructors, accessors, and hashing contracts for immutable data carries."
+  },
+  {
+    "id": "java-mod-q068",
+    "question": "To declare a restricted class that explicitly names its direct children, you pair the sealed modifier with the modifier __.",
+    "answer": "permits",
+    "options": ["allows", "extends", "permits", "limits"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The permits modifier provides the precise checklist of authorized classes allowed to extend a sealed class."
+  },
+  {
+    "id": "java-mod-q069",
+    "question": "Exceptions that are validated by the compiler and must be either caught or declared in the signature are known as __ exceptions.",
+    "answer": "checked",
+    "options": ["unchecked", "runtime", "checked", "internal"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Checked exceptions enforce upfront error-handling code patterns by failing compilation if they are ignored."
+  },
+  {
+    "id": "java-mod-q070",
+    "question": "Ultra-lightweight concurrency units managed inside the runtime environment instead of 1:1 OS thread models are called __ threads.",
+    "answer": "virtual",
+    "options": ["platform", "virtual", "native", "asynchronous"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Virtual threads run within the JVM layer, making it easy to handle millions of concurrent operations on minimal hardware threads."
+  },
+  {
+    "id": "java-mod-q071",
+    "question": "A method that returns completely predictable outputs without altering outside state metrics is classified as a __ method.",
+    "answer": "pure",
+    "options": ["static", "pure", "synchronized", "void"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pure methods guarantee deterministic execution and zero side effects, providing a safe foundation for asynchronous systems."
+  },
+  {
+    "id": "java-mod-q072",
+    "question": "Using pure methods inside Stream configurations ensures application safety if processing shifts to a __ stream.",
+    "answer": "parallelStream",
+    "options": ["sequential", "parallelStream", "file", "buffered"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Parallel streams run processing chunks across different worker threads, which requires pure, side-effect-free methods to prevent data corruption."
+  },
+  {
+    "id": "java-mod-q073",
+    "question": "The Java collection type ideal for key-value pairings that provides average lookups of O(1) is __.",
+    "answer": "HashMap",
+    "options": ["ArrayList", "TreeMap", "HashMap", "LinkedList"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "A HashMap distributes entries across internal bucket arrays based on hash values, providing ultra-fast lookups."
+  },
+  {
+    "id": "java-mod-q074",
+    "question": "When a virtual thread hits a blocking network call, the JVM dynamically __ it from the underlying carrier thread.",
+    "answer": "unmounts",
+    "options": ["blocks", "unmounts", "terminates", "destroys"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Unmounting a blocked virtual thread keeps the OS thread clear to process other active tasks without picking up hardware-level lag."
+  },
+  {
+    "id": "java-mod-q075",
+    "question": "Forcing a child class to implement dummy methods it cannot logically execute breaks the __ Substitution Principle.",
+    "answer": "Liskov",
+    "options": ["Liskov", "Single", "Open", "Interface"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The Liskov Substitution Principle demands that subclasses remain fully compatible with base contracts without forcing dummy or broken logic."
+  },
+  {
+    "id": "java-mod-q076",
+    "question": "While interfaces represent stateless contracts, abstract classes retain the distinct ability to manage __ instance variables.",
+    "answer": "mutable",
+    "options": ["constant", "static", "mutable", "final"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Abstract classes can hold mutable instance variables to manage object state across a shared family line."
+  },
+  {
+    "id": "java-mod-q077",
+    "question": "Java 21 feature that allows a switch block to test an object's type and automatically deconstruct its fields is called __.",
+    "answer": "Pattern Matching",
+    "options": [
+      "Type Inference",
+      "Pattern Matching",
+      "Encapsulation",
+      "Lambda Expression"
+    ],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pattern matching simplifies type checking by automatically casting objects and extracting their variables inside switch expressions."
+  },
+  {
+    "id": "java-mod-q078",
+    "question": "Exposing a mutable variable with the public static modifier invites severe data race risks inside multi-threaded __ architectures.",
+    "answer": "web",
+    "options": ["single-threaded", "web", "offline", "isolated"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Web servers handle incoming requests across multiple threads; shared mutable static properties will quickly cause data corruption without synchronization."
+  },
+  {
+    "id": "java-mod-q079",
+    "question": "The low-latency concurrent garbage collector designed to maintain pause times under one millisecond on huge heaps is __.",
+    "answer": "ZGC",
+    "options": ["Serial", "Parallel", "CMS", "ZGC"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "ZGC shifts almost all memory cleanup workloads to run concurrently with application threads, keeping stop-the-world pauses under a millisecond."
+  },
+  {
+    "id": "java-mod-q080",
+    "question": "Direct descendants of an active sealed class structure must declare their boundaries by being marked final, sealed, or __.",
+    "answer": "non-sealed",
+    "options": ["public", "abstract", "non-sealed", "protected"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The non-sealed modifier allows a specific subclass to open up its side of the family tree while preserving the original parent class boundaries."
+  },
+  {
+    "id": "java-mod-q081",
+    "question": "Because record structures are explicitly designated as __ by the compiler, you cannot inherit from them.",
+    "answer": "final",
+    "options": ["abstract", "final", "non-sealed", "static"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Records are made final to preserve absolute data immutability, blocking other classes from extending them."
+  },
+  {
+    "id": "java-mod-q082",
+    "question": "Modern switch expression logic completely bypasses fall-through risks by utilizing arrow syntax instead of the traditional __.",
+    "answer": "colon",
+    "options": ["colon", "semicolon", "brace", "comma"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Arrow syntax separates case conditions from execution blocks cleanly, running only the matching branch without leaking downward."
+  },
+  {
+    "id": "java-mod-q083",
+    "question": "Initializing a massive ArrayList with an explicit initial capacity prevents performance drops from internal array __.",
+    "answer": "resizing",
+    "options": ["resizing", "sorting", "traversal", "garbage collection"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Pre-allocating space prevents the system from having to pause, reallocate memory, and copy elements over during large data loads."
+  },
+  {
+    "id": "java-mod-q084",
+    "question": "An interface that acts as the target type for a lambda expression by declaring exactly one abstract method is a __ interface.",
+    "answer": "Functional",
+    "options": ["Marker", "Functional", "Dynamic", "Static"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Functional interfaces provide a single abstract method contract, allowing lambda expressions to substitute for anonymous class definitions."
+  },
+  {
+    "id": "java-mod-q085",
+    "question": "To maintain bytecode compatibility with older environments, Java strips out generic parameter restrictions at compile time using Type __.",
+    "answer": "Erasure",
+    "options": ["Erasure", "Reification", "Inference", "Migration"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "Type Erasure replaces generic parameters with raw object types during compilation, ensuring smooth execution across older JVM configurations."
+  },
+  {
+    "id": "java-mod-q086",
+    "question": "Local variables captured inside an active lambda definition must be final or effectively __.",
+    "answer": "final",
+    "options": ["static", "mutable", "final", "volatile"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Enforcing effectively final rules prevents multi-threaded lambdas from encountering race conditions on shared local frames."
+  },
+  {
+    "id": "java-mod-q087",
+    "question": "Exceptions that inherit from RuntimeException are called __ exceptions and bypass mandatory compiler check validations.",
+    "answer": "unchecked",
+    "options": ["checked", "unchecked", "global", "fatal"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Unchecked exceptions usually stem from software logic errors, meaning they do not require explicit method signatures or try-catch blocks to compile."
+  },
+  {
+    "id": "java-mod-q088",
+    "question": "When active but forgotten references prevent the Garbage Collector from freeing up dead heap elements, the system has a __.",
+    "answer": "memory leak",
+    "options": ["stack overflow", "memory leak", "deadlock", "race condition"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Stale references keep unused elements locked in heap memory, causing memory pressure that can eventually crash the app with an OutOfMemoryError."
+  },
+  {
+    "id": "java-mod-q089",
+    "question": "Swapping concrete algorithms or business operations at runtime without altering the parent controller is achieved via the __ Pattern.",
+    "answer": "Strategy",
+    "options": ["Singleton", "Strategy", "Observer", "Adapter"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "The Strategy Pattern relies on interface contracts to swap underlying business rules or logic patterns at runtime without changing the master class."
+  },
+  {
+    "id": "java-mod-q090",
+    "question": "A parallelStream divides its data processing workload across multiple active thread components using the shared __ pool engine.",
+    "answer": "ForkJoin",
+    "options": ["ThreadPoolExecutor", "ForkJoin", "Scheduled", "VirtualThread"],
+    "category": "Java Mod POO-Conc",
+    "type": "FILL_THE_BLANK",
+    "level": "Advanced",
+    "explanation": "The ForkJoinPool manages parallelStream operations by breaking data collections down and distributing chunks across worker threads."
+  }
+]
