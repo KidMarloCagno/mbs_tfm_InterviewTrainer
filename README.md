@@ -48,11 +48,89 @@ More than **1,600 questions** across **19 topics**:
 
 ## New Question Set Authoring
 
-To add a new dataset:
+To add a new dataset and have it visible in the app and persisted to PostgreSQL, follow this full flow:
 
 1. Create a JSON file in `prisma/data/sets/` with the same question schema.
 2. Register that file in `lib/questions-data.ts` with a new topic key and a unique ID prefix.
 3. Optionally use `DataSet Recipe Prompt.md` as the question generation guide for consistent categories, formats, and structured output.
+4. Add the JSON file(s)
+
+- Place one or more files in `prisma/data/sets/`.
+- Each file must be an array of question objects matching the expected schema used in `prisma/seed.ts`:
+  - `id`
+  - `question`
+  - `answer`
+  - `options`
+  - `category`
+  - `type` (`QUIZ_SIMPLE` | `TRUE_FALSE` | `FILL_THE_BLANK`)
+  - `level` (`Beginner` | `Intermediate` | `Advanced`)
+
+5. Register the dataset for UI visibility
+
+- Update `lib/questions-data.ts`:
+  - Add an import for the new file.
+  - Add a new entry in `questionsData` with the display topic name and a unique short prefix.
+
+Example:
+
+```ts
+import myTopicQuestions from "@/prisma/data/sets/myTopic.json";
+
+// inside questionsData
+"My Topic": mapSet(
+  myTopicQuestions as QuestionSetItem[],
+  "My Topic",
+  "mt",
+),
+```
+
+- Dashboard topics are derived from `getAvailableTopics()`, which reads keys from `questionsData`.
+- If a topic is not in `questionsData`, it will not appear in the dashboard even if the JSON file exists.
+
+6. Ensure database config is ready
+
+- Verify `.env` has:
+  - `POSTGRES_PRISMA_URL`
+  - `POSTGRES_URL_NON_POOLING`
+
+7. Apply Prisma schema and generate client
+
+```bash
+pnpm prisma:migrate:deploy
+pnpm prisma:push
+pnpm prisma:generate
+```
+
+Notes:
+
+- Use `prisma:migrate:deploy` for committed migration flow.
+- Use `prisma:push` for direct schema sync (local/dev convenience).
+- Running both is acceptable for local setup.
+
+8. Seed all question sets into DB
+
+```bash
+pnpm prisma:seed
+```
+
+- `prisma/seed.ts` automatically scans all `.json` files in `prisma/data/sets`.
+- It upserts questions into `Question` by `id` and also upserts the demo user (`QuizView`).
+
+9. Validate in app
+
+```bash
+pnpm dev
+```
+
+- Sign in and open dashboard.
+- Confirm the new topic appears in the Topic Grid.
+- Start a session to verify `/api/quiz/questions/[topic]` returns questions for that topic.
+
+Operational tips
+
+- Keep question `id` values stable after release; `UserProgress` references `questionId` and stable IDs preserve spaced-repetition history.
+- Keep topic display names consistent between `questionsData` key and `mapSet(..., category, ...)` category for clearer UX.
+- Optionally use `DataSet Recipe Prompt.md` for consistent dataset generation style and structure.
 
 ## Tech Stack
 

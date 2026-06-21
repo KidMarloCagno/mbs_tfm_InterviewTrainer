@@ -1,0 +1,377 @@
+[
+  {
+    "id": "doc-q001",
+    "question": "¿Qué significan tradicionalmente las siglas de la expresión 'RTFM' en el ámbito del desarrollo de software?",
+    "answer": "Read The Fucking Manual",
+    "options": [
+      "Read The Fucking Manual",
+      "Read Time For Maintenance",
+      "Real Time File Management",
+      "Reset The Factory Model"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "RTFM es un acrónimo de la cultura hacker y de desarrollo que se utiliza para indicar que la respuesta a una pregunta se encuentra fácilmente en la documentación oficial existente."
+  },
+  {
+    "id": "doc-q002",
+    "question": "¿Cuál es el propósito principal de un Architecture Decision Record (ADR)?",
+    "answer": "Documentar una decisión de arquitectura significativa junto con su contexto y consecuencias",
+    "options": [
+      "Documentar una decisión de arquitectura significativa junto con su contexto y consecuencias",
+      "Registrar el tiempo que tarda un desarrollador en escribir una línea de código",
+      "Generar un reporte automático de los errores de sintaxis en el backend",
+      "Almacenar las contraseñas e identificadores de acceso de los servidores"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Un ADR es un documento de texto corto que captura una decisión de diseño arquitectónico, permitiendo a futuros miembros del equipo entender el 'porqué' de la estructura actual."
+  },
+  {
+    "id": "doc-q003",
+    "question": "En la técnica de prompting conocida como RCFT (Role Context Task Format), ¿qué elemento define las restricciones, el público objetivo o los antecedentes de la solicitud?",
+    "answer": "Context (Contexto)",
+    "options": [
+      "Context (Contexto)",
+      "Role (Rol)",
+      "Task (Tarea)",
+      "Format (Formato)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El 'Context' proporciona la información de fondo y el escenario necesario para que el modelo de lenguaje entienda la situación antes de ejecutar la acción."
+  },
+  {
+    "id": "doc-q004",
+    "question": "¿Cómo funciona fundamentalmente el patrón arquitectónico Retrieval-Augmented Generation (RAG)?",
+    "answer": "Optimiza la salida de un LLM consultando una base de conocimientos externa antes de generar la respuesta",
+    "options": [
+      "Optimiza la salida de un LLM consultando una base de conocimientos externa antes de generar la respuesta",
+      "Reescribe el código fuente de una aplicación de manera síncrona usando comandos Bash",
+      "Elimina la redundancia de una base de datos relacional mediante la ejecución de cronjobs",
+      "Cifra los tokens JWT dentro de las cookies del navegador web del cliente"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "RAG combina modelos generativos con sistemas de recuperación de información para proporcionar respuestas más precisas, actualizadas y basadas en datos propios del negocio."
+  },
+  {
+    "id": "doc-q005",
+    "question": "En un Architecture Decision Record (ADR), ¿qué sección se encarga de listar el impacto técnico y los compromisos (trade-offs) asumidos tras elegir una solución?",
+    "answer": "Consequences (Consecuencias)",
+    "options": [
+      "Consequences (Consecuencias)",
+      "Status (Estado)",
+      "Context (Contexto)",
+      "Title (Título)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La sección de consecuencias detalla las implicaciones de la decisión, permitiendo visibilizar tanto los beneficios como la deuda técnica adquirida."
+  },
+  {
+    "id": "doc-q006",
+    "question": "Dentro del formato de prompting RCFT, ¿qué componente describe la acción explícita u objetivo concreto que el modelo de lenguaje debe realizar?",
+    "answer": "Task (Tarea)",
+    "options": [
+      "Task (Tarea)",
+      "Role (Rol)",
+      "Context (Contexto)",
+      "Format (Formato)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La 'Task' representa la instrucción central del prompt, delimitando exactamente qué entregable o procesamiento se requiere del LLM."
+  },
+  {
+    "id": "doc-q007",
+    "question": "En la arquitectura Retrieval-Augmented Generation (RAG), ¿cuál es el componente encargado de almacenar los documentos segmentados en vectores para su rápida localización?",
+    "answer": "Vector Database (Base de datos vectorial)",
+    "options": [
+      "Vector Database (Base de datos vectorial)",
+      "Relational Database (SQL)",
+      "Bash Terminal Cache",
+      "Cronjob Scheduler"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Las bases de datos vectoriales indexan y buscan embeddings matemáticos de texto, permitiendo la fase de recuperación de información (Retrieval)."
+  },
+  {
+    "id": "doc-q008",
+    "question": "Cuando un documento de decisiones arquitectónicas (ADR) cambia su estado a 'Superseded', significa que la decisión:",
+    "answer": "Ha sido reemplazada o superada por un nuevo registro ADR",
+    "options": [
+      "Ha sido reemplazada o superada por un nuevo registro ADR",
+      "Está actualmente en revisión y no debe implementarse",
+      "Ha sido aprobada de manera definitiva sin opción a cambios",
+      "Contiene errores de sintaxis críticos que rompen el sistema"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El estado 'Superseded' denota obsolescencia cronológica, apuntando al nuevo ADR que modifica la estrategia técnica previa."
+  },
+  {
+    "id": "doc-q009",
+    "question": "¿Qué elemento del formato RCFT define la estructura de salida de la respuesta de la IA (por ejemplo: un bloque de código JSON, una tabla o Markdown)?",
+    "answer": "Format (Formato)",
+    "options": [
+      "Format (Formato)",
+      "Role (Rol)",
+      "Context (Contexto)",
+      "Task (Tarea)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El componente 'Format' le indica al modelo de IA la presentación final de la información para facilitar su parsing o lectura automática."
+  },
+  {
+    "id": "doc-q010",
+    "question": "En una infraestructura RAG, la técnica que divide textos extensos en bloques pequeños con el fin de no saturar la ventana de contexto del LLM se denomina:",
+    "answer": "Chunking",
+    "options": ["Chunking", "Prompting", "Logging", "Encapsulamiento"],
+    "category": "BS_00_Intro",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El 'Chunking' segmenta la información original en unidades semánticas manejables que pueden ser convertidas eficientemente en vectores."
+  },
+  {
+    "id": "doc-q011",
+    "question": "True or False: La expresión 'RTFM' resalta la importancia de la autonomía del desarrollador mediante el uso correcto de las fuentes de documentación técnica disponibles.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Alienta a inspeccionar exhaustivamente manuales oficiales e hilos de soporte antes de derivar consultas básicas al equipo."
+  },
+  {
+    "id": "doc-q012",
+    "question": "True or False: Los Architecture Decision Records (ADRs) deben almacenarse idealmente en el mismo repositorio de código para garantizar el control de versiones junto al software.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Al guardarse como archivos Markdown junto al proyecto, cualquier desarrollador puede rastrear el historial de decisiones usando herramientas Git ordinarias."
+  },
+  {
+    "id": "doc-q013",
+    "question": "True or False: En la estrategia RCFT, asignar el componente 'Role' obliga a la inteligencia artificial a restringir la consulta a una base de datos vectorial externa.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El 'Role' establece la identidad o perspectiva que asume el LLM (por ejemplo, 'Senior Backend Developer'); no controla arquitecturas físicas de almacenamiento."
+  },
+  {
+    "id": "doc-q014",
+    "question": "True or False: La ventaja de usar sistemas Retrieval-Augmented Generation (RAG) es que mitigan sustancialmente las alucinaciones de los modelos al forzarlos a basarse en documentos reales provistos.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Al inyectar fragmentos de conocimiento validados en el prompt, el modelo genera respuestas basadas en evidencia, reduciendo invenciones lógicas."
+  },
+  {
+    "id": "doc-q015",
+    "question": "True or False: El estándar clásico de un documento ADR indica que el estado o 'Status' de una decisión de arquitectura debe eliminarse del archivo una vez aprobada.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El campo 'Status' es obligatorio y dinámico, permitiendo reflejar estados cronológicos del diseño como 'Proposed', 'Accepted', o 'Superseded'."
+  },
+  {
+    "id": "doc-q016",
+    "question": "True or False: Estructurar un prompt sin proveerle un 'Context' dentro del esquema RCFT anula por completo la capacidad técnica de la IA para procesar código de programación.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Los modelos pueden responder instrucciones directas sin contexto profundo, aunque la calidad y precisión del resultado final decrecen."
+  },
+  {
+    "id": "doc-q017",
+    "question": "True or False: La técnica RAG elimina la necesidad absoluta de realizar procesos de inferencia en un modelo de lenguaje de gran tamaño (LLM).",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. RAG optimiza el prompt adjuntando información recuperada de fuentes confiables, pero sigue dependiendo del LLM para consolidar y generar el texto final."
+  },
+  {
+    "id": "doc-q018",
+    "question": "True or False: El término 'RTFM' se asocia principalmente con la automatización síncrona de pruebas automatizadas unitarias en entornos NoSQL.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Es un acrónimo cultural del desarrollo de software enfocado puramente en remitir a la lectura directa de manuales de uso."
+  },
+  {
+    "id": "doc-q019",
+    "question": "True or False: Dentro de un ADR, la sección 'Context' debe describir la situación actual y los factores de negocio o técnicos que impulsan la necesidad de tomar una decisión.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. El contexto expone los motivos por los cuales el equipo técnico se encuentra ante una disyuntiva específica de diseño."
+  },
+  {
+    "id": "doc-q020",
+    "question": "True or False: En ingeniería de prompts, el uso recurrente de formatos estructurados como RCFT garantiza una reproducibilidad y consistencia mucho mayor en las respuestas automatizadas de la IA.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Intro",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Reducir la ambigüedad en las instrucciones de entrada optimiza los flujos operacionales que dependen directamente de las respuestas lógicas del modelo."
+  },
+  {
+    "id": "doc-q021",
+    "question": "Para evitar responder de memoria dudas técnicas cuyas soluciones están descritas en las guías oficiales, los desarrolladores suelen recurrir al principio de ______.",
+    "answer": "RTFM",
+    "options": ["RTFM", "ADR", "RAG", "RCFT"],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "RTFM insta al programador a investigar y procesar los recursos documentales existentes de forma previa a requerir soporte presencial."
+  },
+  {
+    "id": "doc-q022",
+    "question": "Un ______ sirve para congelar en el tiempo los justificantes, consecuencias y el estado actual de una elección crítica de software.",
+    "answer": "Architecture Decision Record (ADR)",
+    "options": [
+      "Architecture Decision Record (ADR)",
+      "Formato RCFT",
+      "Sistema RAG",
+      "Script RTFM"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Los ADRs operan como bitácoras de diseño técnico preservando la justificación de la arquitectura para futuros integrantes del desarrollo."
+  },
+  {
+    "id": "doc-q023",
+    "question": "Al estructurar un prompt mediante RCFT, la asignación de una identidad experta determinada responde explícitamente al campo de ______.",
+    "answer": "Role (Rol)",
+    "options": [
+      "Role (Rol)",
+      "Context (Contexto)",
+      "Task (Tarea)",
+      "Format (Formato)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Establecer el Role ayuda al modelo a seleccionar el tono, los patrones técnicos y el nivel de profundidad que mejor respondan a la solicitud."
+  },
+  {
+    "id": "doc-q024",
+    "question": "El patrón arquitectónico ______ combina la potencia generativa de los LLMs con mecanismos precisos de indexación de información externa en tiempo real.",
+    "answer": "Retrieval-Augmented Generation (RAG)",
+    "options": [
+      "Retrieval-Augmented Generation (RAG)",
+      "Architecture Decision Record (ADR)",
+      "Estructura RCFT",
+      "Logs de Continuar y Registrar"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "RAG enriquece el procesamiento dinámico al suministrar conocimientos actualizados al modelo sin requerir un reentrenamiento de su red neuronal."
+  },
+  {
+    "id": "doc-q025",
+    "question": "Definir que los resultados de una consulta a la IA se organicen como un archivo separado por comas tipo CSV es parte de la sección ______ del patrón RCFT.",
+    "answer": "Format (Formato)",
+    "options": [
+      "Format (Formato)",
+      "Role (Rol)",
+      "Context (Contexto)",
+      "Task (Tarea)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El Format determina de forma rigurosa los límites morfológicos de salida para que puedan integrarse con subsistemas externos."
+  },
+  {
+    "id": "doc-q026",
+    "question": "La sección que describe la solución técnica adoptada dentro de un registro de decisiones de arquitectura se denomina ______.",
+    "answer": "Decision (Decisión)",
+    "options": ["Decision (Decisión)", "Consequences", "Status", "RTFM"],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La sección de decisión documenta de manera clara e inequívoca la postura tecnológica elegida por el equipo de ingeniería."
+  },
+  {
+    "id": "doc-q027",
+    "question": "La fase de obtención de fragmentos de texto relevantes desde una base de datos de embeddings en un flujo RAG se conoce técnicamente como ______.",
+    "answer": "Retrieval",
+    "options": ["Retrieval", "Generation", "Chunking", "Prompting"],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El Retrieval localiza y extrae las piezas informativas cruciales asociadas semánticamente a la consulta ingresada por el usuario."
+  },
+  {
+    "id": "doc-q028",
+    "question": "Explicar el historial del proyecto y los motivos de negocio que justifican un prompt específico atiende directamente a la sección de ______ del modelo RCFT.",
+    "answer": "Context (Contexto)",
+    "options": [
+      "Context (Contexto)",
+      "Role (Rol)",
+      "Task (Tarea)",
+      "Format (Formato)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El Context delimita el espacio del problema impidiendo que el LLM divague en soluciones fuera del dominio real requerido."
+  },
+  {
+    "id": "doc-q029",
+    "question": "Cuando un documento de diseño de arquitectura indica el estado actual de la iniciativa, este componente corresponde al ______ del ADR.",
+    "answer": "Status",
+    "options": ["Status", "Context", "Title", "Consequences"],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El Status monitorea la evolución del ciclo de vida del ADR, mostrando si se encuentra en estado propuesto, aceptado o superado."
+  },
+  {
+    "id": "doc-q030",
+    "question": "Ordenar explícitamente a un LLM: 'Escribe un caso de prueba unitaria para una función asíncrona', define el elemento de ______ dentro del formato RCFT.",
+    "answer": "Task (Tarea)",
+    "options": [
+      "Task (Tarea)",
+      "Role (Rol)",
+      "Context (Contexto)",
+      "Format (Formato)"
+    ],
+    "category": "BS_00_Intro",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La Task marca el mandato de ejecución directo que el modelo de lenguaje automatizado debe materializar de forma mandatoria."
+  }
+]

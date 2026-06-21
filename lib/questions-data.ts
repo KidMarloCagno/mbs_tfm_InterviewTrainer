@@ -17,6 +17,11 @@ import pythonQuestions from "@/prisma/data/sets/python.json";
 import reactQuestions from "@/prisma/data/sets/react.json";
 import springQuestions from "@/prisma/data/sets/spring.json";
 import systemdesignQuestions from "@/prisma/data/sets/systemsdesign.json";
+import bs00Fundamentos from "@/prisma/data/sets/BS_00_Fundamentos_Desarollo.json";
+import bs00Intro from "@/prisma/data/sets/BS_00_Intro.json";
+import bs01IngSoftware from "@/prisma/data/sets/BS_01_Ing_Software.json";
+import bs02ArqSoftware from "@/prisma/data/sets/BS_02_Arq_Software.json";
+import javaKeyConcepts from "@/prisma/data/sets/java_key_concepts.json";
 import type { GameQuestion } from "@/components/game/GameEngine";
 
 interface QuestionSetItem {
@@ -67,6 +72,22 @@ const questionsData: Record<string, GameQuestion[]> = {
     "Design Patterns",
     "dp",
   ),
+  "BS 00 Intro": mapSet(bs00Intro as QuestionSetItem[], "BS 00 Intro", "bs0i"),
+  "BS 00 Fundamentos Desarollo": mapSet(
+    bs00Fundamentos as QuestionSetItem[],
+    "BS 00 Fundamentos Desarollo",
+    "bs0f",
+  ),
+  "BS 01 Ing Software": mapSet(
+    bs01IngSoftware as QuestionSetItem[],
+    "BS 01 Ing Software",
+    "bs1",
+  ),
+  "BS 02 Arq Software": mapSet(
+    bs02ArqSoftware as QuestionSetItem[],
+    "BS 02 Arq Software",
+    "bs2",
+  ),
   "CI/CD Basics": mapSet(
     ciCdBasicsQuestions as QuestionSetItem[],
     "CI/CD Basics",
@@ -96,6 +117,11 @@ const questionsData: Record<string, GameQuestion[]> = {
     mavenBasicsQuestions as QuestionSetItem[],
     "Maven Basics",
     "mvn",
+  ),
+  "Java Key Concepts": mapSet(
+    javaKeyConcepts as QuestionSetItem[],
+    "Java Key Concepts",
+    "jkc",
   ),
   SystemsDesign: mapSet(
     systemdesignQuestions as QuestionSetItem[],

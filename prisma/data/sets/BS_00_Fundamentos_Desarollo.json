@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "dev-q001",
+    "question": "¿Cuál es el propósito del comando 'cd' en la terminal de comandos Bash?",
+    "answer": "Cambiar el directorio de trabajo actual",
+    "options": [
+      "Cambiar el directorio de trabajo actual",
+      "Listar los archivos de una carpeta",
+      "Mostrar la ruta del directorio actual",
+      "Crear un nuevo archivo de texto"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El comando 'cd' significa 'change directory' y se utiliza para navegar entre las carpetas del sistema de archivos."
+  },
+  {
+    "id": "dev-q002",
+    "question": "¿Cuál es la función principal del comando 'ls' en Bash?",
+    "answer": "Listar los archivos y directorios del directorio actual",
+    "options": [
+      "Listar los archivos y directorios del directorio actual",
+      "Mostrar la ruta absoluta del directorio de trabajo",
+      "Cambiar los permisos de seguridad de una carpeta",
+      "Crear un nuevo archivo de script ejecutable"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El comando 'ls' permite visualizar qué elementos están almacenados en la carpeta en la que nos encontramos mapeados."
+  },
+  {
+    "id": "dev-q003",
+    "question": "¿Cuál es la función del comando 'pwd' en la terminal?",
+    "answer": "Imprimir la ruta del directorio de trabajo actual",
+    "options": [
+      "Imprimir la ruta del directorio de trabajo actual",
+      "Modificar la contraseña del usuario del sistema",
+      "Eliminar de forma permanente un archivo del disco",
+      "Crear un nuevo enlace simbólico entre carpetas"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las siglas de 'pwd' significan 'print working directory', indicando el path completo desde la raíz del sistema."
+  },
+  {
+    "id": "dev-q004",
+    "question": "En la terminal, ¿qué herramienta conecta la salida estándar de un comando con la entrada de otro?",
+    "answer": "Pipes (Tuberías)",
+    "options": [
+      "Pipes (Tuberías)",
+      "Redirecciones con '>'",
+      "Cronjobs",
+      "Variables de entorno"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los pipes, representados por el carácter '|', permiten encadenar comandos enviando flujos de datos intermedios."
+  },
+  {
+    "id": "dev-q005",
+    "question": "¿Qué operador de redirección se utiliza para agregar datos al final de un archivo sin borrar su contenido previo?",
+    "answer": "El operador '>>'",
+    "options": [
+      "El operador '>>'",
+      "El operador '>'",
+      "El operador '|'",
+      "El operador '<'"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El operador '>>' realiza una redirección de tipo 'append', anexando la salida al final del archivo existente."
+  },
+  {
+    "id": "dev-q006",
+    "question": "¿Qué es un cronjob en sistemas basados en Unix/Linux?",
+    "answer": "Una tarea programada para ejecutarse automáticamente de forma periódica",
+    "options": [
+      "Una tarea programada para ejecutarse automáticamente de forma periódica",
+      "Un script de Bash que solo se ejecuta al apagar el equipo",
+      "Un comando para compilar código fuente en segundo plano",
+      "Un protocolo de red para transferir archivos ejecutables .sh"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Los cronjobs son gestionados por el demonio cron para automatizar tareas repetitivas mediante una sintaxis temporal específica."
+  },
+  {
+    "id": "dev-q007",
+    "question": "¿Cómo se estructuran las expresiones de tiempo (cronometría) en la configuración de un cronjob?",
+    "answer": "A través de 5 campos que definen minutos, horas, días y meses",
+    "options": [
+      "A través de 5 campos que definen minutos, horas, días y meses",
+      "Mediante un valor numérico único medido en milisegundos totales",
+      "Usando una cadena de texto libre leída por inteligencia artificial",
+      "Por medio de una marca de tiempo estática fija en formato ISO"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La sintaxis estándar de cron utiliza cinco campos ordenados para determinar los momentos exactos de ejecución."
+  },
+  {
+    "id": "dev-q008",
+    "question": "Si una variable se escribe bajo el formato 'miVariableEjemplo', ¿qué convención de estilo se está aplicando?",
+    "answer": "camelCase",
+    "options": ["camelCase", "snake_case", "PascalCase", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "camelCase inicia la primera palabra con minúscula y capitaliza las palabras siguientes sin dejar espacios."
+  },
+  {
+    "id": "dev-q009",
+    "question": "La convención de nomenclatura que escribe los términos como 'mi_variable_ejemplo' se denomina:",
+    "answer": "snake_case",
+    "options": ["snake_case", "camelCase", "PascalCase", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La convención snake_case une todas las palabras usando guiones bajos y mantiene el texto en minúsculas."
+  },
+  {
+    "id": "dev-q010",
+    "question": "Al nombrar una clase como 'UsuarioServicio', ¿qué estilo de convención se está respetando?",
+    "answer": "PascalCase",
+    "options": ["PascalCase", "camelCase", "snake_case", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "PascalCase capitaliza la letra inicial de absolutamente todas las palabras fusionadas dentro del identificador."
+  },
+  {
+    "id": "dev-q011",
+    "question": "¿Qué establece el Principio de Responsabilidad Única (SRP)?",
+    "answer": "Una clase o módulo debe tener una sola razón para cambiar",
+    "options": [
+      "Una clase o módulo debe tener una sola razón para cambiar",
+      "Todo el software debe desarrollarse en un único archivo fuente",
+      "Cada función debe aceptar un solo parámetro de entrada",
+      "El sistema solo debe conectarse a una única base de datos"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "SRP promueve el diseño modular, donde cada componente maneja solo una parte de la funcionalidad del negocio."
+  },
+  {
+    "id": "dev-q012",
+    "question": "En el manejo de errores, la estrategia de registrar un fallo pero permitir que la aplicación continúe se llama:",
+    "answer": "Registrar y Continuar (Logging)",
+    "options": [
+      "Registrar y Continuar (Logging)",
+      "Fallar Rápido (Fail Fast)",
+      "Degradación Elegante",
+      "Lógica de Reintento"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Consiste en documentar el incidente en los registros para su posterior análisis, sin interrumpir la experiencia del usuario."
+  },
+  {
+    "id": "dev-q013",
+    "question": "Cuando una aplicación deshabilita un componente fallido pero mantiene el resto de sus funciones activas, aplica:",
+    "answer": "Degradación Elegante (Graceful Degradation)",
+    "options": [
+      "Degradación Elegante (Graceful Degradation)",
+      "Fallar Rápido (Fail Fast)",
+      "Lógica de Reintento",
+      "Registrar y Continuar"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La degradación elegante evita un colapso total, ofreciendo una experiencia reducida pero funcional ante imprevistos."
+  },
+  {
+    "id": "dev-q014",
+    "question": "¿Qué estrategia detiene la ejecución inmediatamente al detectar una condición inválida para evitar consecuencias peores?",
+    "answer": "Fallar Rápido (Fail Fast)",
+    "options": [
+      "Fallar Rápido (Fail Fast)",
+      "Degradación Elegante",
+      "Lógica de Reintento",
+      "Registrar y Continuar"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Fail Fast detiene el flujo al instante para no operar con datos corruptos, facilitando la localización de bugs."
+  },
+  {
+    "id": "dev-q015",
+    "question": "¿Qué pilar de la POO oculta el estado interno de un objeto protegiéndolo de modificaciones externas directas?",
+    "answer": "Encapsulamiento",
+    "options": ["Encapsulamiento", "Abstracción", "Herencia", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El encapsulamiento agrupa datos y métodos restringiendo el acceso directo mediante modificadores de acceso públicos o privados."
+  },
+  {
+    "id": "dev-q016",
+    "question": "¿Qué pilar de la POO se enfoca en aislar las características esenciales de una entidad reduciendo la complejidad?",
+    "answer": "Abstracción",
+    "options": ["Abstracción", "Encapsulamiento", "Herencia", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La abstracción permite representar conceptos del mundo real mediante interfaces sencillas, ignorando detalles de bajo nivel."
+  },
+  {
+    "id": "dev-q017",
+    "question": "¿Qué pilar de la POO permite que una subclase herede estructura y comportamiento de una superclase?",
+    "answer": "Herencia",
+    "options": ["Herencia", "Encapsulamiento", "Abstracción", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La herencia establece jerarquías de clases facilitando enormemente la reutilización de código genérico."
+  },
+  {
+    "id": "dev-q018",
+    "question": "¿Qué pilar de la POO permite enviar un mismo mensaje a diferentes objetos y que cada uno responda a su manera?",
+    "answer": "Polimorfismo",
+    "options": ["Polimorfismo", "Encapsulamiento", "Abstracción", "Herencia"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El polimorfismo faculta que múltiples clases derivadas redefinan comportamientos manteniendo una interfaz común."
+  },
+  {
+    "id": "dev-q019",
+    "question": "¿Cuál es la característica principal de una función pura?",
+    "answer": "A iguales argumentos da igual resultado y no provoca efectos secundarios",
+    "options": [
+      "A iguales argumentos da igual resultado y no provoca efectos secundarios",
+      "Debe modificar obligatoriamente variables situadas en el entorno global",
+      "Su resultado cambia dinámicamente según la hora del sistema operativo",
+      "Requiere conectarse a internet para calcular su valor de retorno"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Las funciones puras son predecibles y deterministas, lo que simplifica su testeo y mantenimiento."
+  },
+  {
+    "id": "dev-q020",
+    "question": "Si una función modifica un archivo físico externo además de retornar un valor, se clasifica como una:",
+    "answer": "Función impura",
+    "options": [
+      "Función impura",
+      "Función pura",
+      "Función nativa",
+      "Función asíncrona"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Al generar un cambio observable fuera de su propio ámbito local, la función introduce un efecto secundario (side-effect)."
+  },
+  {
+    "id": "dev-q021",
+    "question": "Cuando un sistema inicia una operación y puede continuar con otras tareas sin esperar a que esta finalice, aplica:",
+    "answer": "Asincronía",
+    "options": [
+      "Asincronía",
+      "Sincronía estricta",
+      "Paralelismo físico",
+      "Bloqueo de hilos"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La asincronía optimiza el uso de recursos evitando que el hilo principal se congele esperando operaciones externas lentas."
+  },
+  {
+    "id": "dev-q022",
+    "question": "La ejecución simultánea de múltiples tareas distribuidas en múltiples núcleos físicos de CPU se denomina:",
+    "answer": "Paralelismo",
+    "options": [
+      "Paralelismo",
+      "Concurrencia simulada",
+      "Asincronía monohilo",
+      "Sincronización lineal"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El paralelismo requiere hardware con múltiples procesadores o núcleos reales para procesar tareas al unísono."
+  },
+  {
+    "id": "dev-q023",
+    "question": "¿Qué método HTTP es el estándar para solicitar o leer la información de un recurso en un servidor web?",
+    "answer": "GET",
+    "options": ["GET", "POST", "PUT", "DELETE"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "El método GET se usa únicamente para la lectura y recuperación de datos, siendo una operación segura."
+  },
+  {
+    "id": "dev-q024",
+    "question": "¿Qué método HTTP está diseñado de forma primaria para crear un nuevo recurso en el servidor?",
+    "answer": "POST",
+    "options": ["POST", "GET", "PUT", "DELETE"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "POST envía datos en el cuerpo de la petición hacia el servidor para dar de alta nuevas entidades."
+  },
+  {
+    "id": "dev-q025",
+    "question": "¿Qué método HTTP reemplaza por completo la representación de un recurso existente con nuevos datos?",
+    "answer": "PUT",
+    "options": ["PUT", "PATCH", "GET", "POST"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "El método PUT se utiliza para actualizaciones completas o para crear un recurso si se conoce su URI exacta."
+  },
+  {
+    "id": "dev-q026",
+    "question": "¿A qué categoría pertenecen los códigos de estado HTTP que empiezan con el dígito 2 (por ejemplo, 200)?",
+    "answer": "Éxito de la solicitud",
+    "options": [
+      "Éxito de la solicitud",
+      "Errores del cliente",
+      "Errores del servidor",
+      "Redirecciones de ruta"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La serie de códigos 2xx confirma que el servidor recibió, entendió y procesó la petición satisfactoriamente."
+  },
+  {
+    "id": "dev-q027",
+    "question": "¿A qué categoría pertenecen los códigos de estado HTTP que empiezan con el dígito 5 (por ejemplo, 500)?",
+    "answer": "Errores del servidor",
+    "options": [
+      "Errores del servidor",
+      "Errores del cliente",
+      "Respuestas informativas",
+      "Éxito de la solicitud"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La serie 5xx denota anomalías internas del servidor al intentar resolver una solicitud que parecía válida."
+  },
+  {
+    "id": "dev-q028",
+    "question": "¿Qué son las Cookies en el contexto del desarrollo web?",
+    "answer": "Pequeños fragmentos de texto almacenados localmente por el navegador del cliente",
+    "options": [
+      "Pequeños fragmentos de texto almacenados localmente por el navegador del cliente",
+      "Registros de base de datos relacionales guardados en memoria caché",
+      "Scripts de automatización del servidor para el control de cronjobs",
+      "Componentes de red que encriptan todo el backend de una API REST"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las cookies se usan principalmente para recordar configuraciones, sesiones y preferencias de usuario entre peticiones."
+  },
+  {
+    "id": "dev-q029",
+    "question": "¿Cuál es la definición correcta de JSON Web Token (JWT)?",
+    "answer": "Un formato compacto y autónomo para transferir información segura como un objeto JSON",
+    "options": [
+      "Un formato compacto y autónomo para transferir información segura como un objeto JSON",
+      "Un software de base de datos relacional para guardar sesiones de usuario",
+      "Un protocolo de comunicación físico que sustituye los cables de red",
+      "Una extensión de la terminal Bash para gestionar variables de entorno"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "Los JWT están firmados digitalmente, permitiendo verificar de forma confiable la identidad y roles del emisor."
+  },
+  {
+    "id": "dev-q030",
+    "question": "¿Cuál es la definición conceptual exacta de REST?",
+    "answer": "Un estilo arquitectónico para diseñar sistemas en red basado en restricciones",
+    "options": [
+      "Un estilo arquitectónico para diseñar sistemas en red basado en restricciones",
+      "Un protocolo binario estricto que requiere herramientas comerciales",
+      "Un lenguaje de consulta para interactuar con bases de datos relacionales",
+      "Un software de automatización para servidores basados en GNU/Linux"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "REST propone pautas como la separación cliente-servidor y la ausencia de estado, usando las funciones nativas de HTTP."
+  },
+  {
+    "id": "dev-q031",
+    "question": "¿En qué consiste fundamentalmente el proceso de Autenticación (AuthN)?",
+    "answer": "En verificar y confirmar la identidad de un usuario en el sistema",
+    "options": [
+      "En verificar y confirmar la identidad de un usuario en el sistema",
+      "En asignar los roles y permisos de acceso a las carpetas",
+      "En registrar las trazas técnicas en el archivo de logging",
+      "En compactar los objetos JSON dentro de un token firmado"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La autenticación responde a la pregunta '¿Quién eres?', validando credenciales como contraseñas o firmas."
+  },
+  {
+    "id": "dev-q032",
+    "question": "¿En qué consiste fundamentalmente el proceso de Autorización (AuthZ)?",
+    "answer": "En determinar qué recursos y permisos tiene permitido usar un usuario",
+    "options": [
+      "En determinar qué recursos y permisos tiene permitido usar un usuario",
+      "En verificar las contraseñas de inicio de sesión en el backend",
+      "En realizar la limpieza física de tablas redundantes de datos",
+      "En habilitar la ejecución de tareas automatizadas por cronjobs"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La autorización evalúa si la identidad ya verificada cuenta con las facultades necesarias para realizar una acción."
+  },
+  {
+    "id": "dev-q033",
+    "question": "¿Qué cabecera HTTP estándar se emplea para adjuntar credenciales como API keys o Bearer tokens?",
+    "answer": "Authorization",
+    "options": ["Authorization", "Content-Type", "Origin", "Accept-Encoding"],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La cabecera 'Authorization' transmite tokens o credenciales para que el servidor valide el acceso a endpoints privados."
+  },
+  {
+    "id": "dev-q034",
+    "question": "¿Qué problema de seguridad de los navegadores web soluciona el mecanismo CORS?",
+    "answer": "Regula el intercambio seguro de recursos entre diferentes orígenes o dominios",
+    "options": [
+      "Regula el intercambio seguro de recursos entre diferentes orígenes o dominios",
+      "Evita de forma absoluta los bloqueos por concurrencia en la base de datos",
+      "Protege contra pérdidas accidentales de energía en el hardware de red",
+      "Garantiza el correcto tipado de las variables escritas en snake_case"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "CORS (Cross-Origin Resource Sharing) es una política de seguridad que define si un navegador permite peticiones hacia dominios distintos."
+  },
+  {
+    "id": "dev-q035",
+    "question": "En el diseño de bases de datos, ¿qué describe el problema de la Redundancia?",
+    "answer": "El almacenamiento innecesario de los mismos datos repetidos en varias tablas",
+    "options": [
+      "El almacenamiento innecesario de los mismos datos repetidos en varias tablas",
+      "La discrepancia de valores entre dos registros que deberían ser iguales",
+      "La velocidad reducida de respuesta ante consultas complejas",
+      "El bloqueo de transacciones cuando actúan demasiados usuarios"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "La redundancia descontrolada desperdicia espacio físico y favorece la aparición de anomalías al actualizar los datos."
+  },
+  {
+    "id": "dev-q036",
+    "question": "En bases de datos relacionales, ¿qué es un Modelo Entidad-Relación?",
+    "answer": "Una herramienta conceptual para representar datos y los vínculos lógicos entre ellos",
+    "options": [
+      "Una herramienta conceptual para representar datos y los vínculos lógicos entre ellos",
+      "Un script ejecutable encargado de automatizar las copias de seguridad",
+      "Un tipo de base de datos NoSQL optimizada para almacenar archivos JSON",
+      "Un protocolo de red para mapear cabeceras de autorización web"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Este modelo modela el mundo real mediante entidades (objetos) y relaciones (conexiones), sirviendo de plano estructural."
+  },
+  {
+    "id": "dev-q037",
+    "question": "En el estándar ACID de bases de datos, ¿qué garantiza la propiedad de Atomicidad?",
+    "answer": "Que una transacción se complete en su totalidad o no se aplique en absoluto",
+    "options": [
+      "Que una transacción se complete en su totalidad o no se aplique en absoluto",
+      "Que los datos modificados se mantengan guardados incluso tras un apagón",
+      "Que los esquemas relacionales cumplan con el tipado estricto del lenguaje",
+      "Que las tablas se dividan físicamente en varios discos de estado sólido"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "La atomicidad trata a la transacción como una unidad indivisible: si una parte falla, todo se revierte (rollback)."
+  },
+  {
+    "id": "dev-q038",
+    "question": "¿Cuál es la característica principal de una base de datos de tipo NoSQL?",
+    "answer": "No depende exclusivamente de tablas fijas y permite esquemas flexibles",
+    "options": [
+      "No depende exclusivamente de tablas fijas y permite esquemas flexibles",
+      "Prohíbe por completo el uso de conexiones web y consultas remotas",
+      "Es incapaz de controlar problemas de redundancia o rendimiento técnico",
+      "Requiere obligatoriamente un mapeo orientado a objetos de forma binaria"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las bases NoSQL manejan modelos variados (documentos, clave-valor, grafos), adaptándose a datos no estructurados."
+  },
+  {
+    "id": "dev-q039",
+    "question": "En SQL, ¿qué grupo de comandos forma el componente DML (Data Manipulation Language)?",
+    "answer": "Los comandos para insertar, consultar, actualizar y eliminar registros",
+    "options": [
+      "Los comandos para insertar, consultar, actualizar and eliminar registros",
+      "Los comandos para crear, alterar y destruir estructuras de tablas",
+      "Las directivas destinadas a configurar usuarios y contraseñas",
+      "Los protocolos de red encargados del cifrado de tokens JWT"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Intermediate",
+    "explanation": "DML incluye sentencias como SELECT, INSERT, UPDATE y DELETE, enfocadas en interactuar con los datos existentes."
+  },
+  {
+    "id": "dev-q040",
+    "question": "Según el concepto de pirámide de pruebas, ¿qué tipo de pruebas se sitúan en la base por ser más rápidas y baratas?",
+    "answer": "Pruebas Unitarias (Unit Tests)",
+    "options": [
+      "Pruebas Unitarias (Unit Tests)",
+      "Pruebas de Integración",
+      "Pruebas de Extremo a Extremo (E2E)",
+      "Pruebas de estrés manuales"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "QUIZ_SIMPLE",
+    "level": "Beginner",
+    "explanation": "Las pruebas unitarias validan de forma aislada piezas mínimas de código (como funciones), constituyendo el grueso del testing."
+  },
+  {
+    "id": "dev-q041",
+    "question": "True or False: El comando 'cd' en una terminal Bash se utiliza para listar los archivos de una carpeta.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El comando 'cd' se usa para cambiar de directorio, mientras que 'ls' es el encargado de listar los archivos."
+  },
+  {
+    "id": "dev-q042",
+    "question": "True or False: El comando 'ls' en la terminal de comandos Bash se utiliza para listar los archivos y directorios del directorio actual.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Muestra por pantalla el contenido de la carpeta actual o de la ruta especificada como argumento."
+  },
+  {
+    "id": "dev-q043",
+    "question": "True or False: El comando 'pwd' en la terminal sirve para modificar la contraseña del usuario del sistema.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. 'pwd' (print working directory) muestra la ruta de la carpeta actual; no altera ninguna credencial de seguridad."
+  },
+  {
+    "id": "dev-q044",
+    "question": "True or False: Los Pipes (Tuberías) en la terminal desvían la salida de un comando hacia un archivo físico del disco.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Los pipes conectan comandos entre sí en memoria; la redirección a archivos se realiza con caracteres como '>' o '>>'."
+  },
+  {
+    "id": "dev-q045",
+    "question": "True or False: El operador '>>' se utiliza para agregar datos al final de un archivo sin borrar su contenido previo.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Realiza un anexado (append) preservando los registros antiguos que existieran en dicho fichero de destino."
+  },
+  {
+    "id": "dev-q046",
+    "question": "True or False: Un cronjob es un script de Bash que solo se ejecuta al apagar el equipo.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Es una tarea programada para ejecutarse automáticamente en intervalos de tiempo recurrentes predefinidos."
+  },
+  {
+    "id": "dev-q047",
+    "question": "True or False: La sintaxis de cronometría de ejecución de un cronjob estándar utiliza exactamente 5 campos para definir los tiempos.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Los cinco campos configuran de manera respectiva: minuto, hora, día del mes, mes y día de la semana."
+  },
+  {
+    "id": "dev-q048",
+    "question": "True or False: Si una variable sigue el formato 'miVariableEjemplo', se está aplicando la convención snake_case.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Ese formato corresponde a camelCase. La convención snake_case usaría guiones bajos, como en 'mi_variable_ejemplo'."
+  },
+  {
+    "id": "dev-q049",
+    "question": "True or False: La convención de nomenclatura que escribe los términos como 'mi_variable_ejemplo' se denomina snake_case.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Este estilo une palabras con guiones bajos y emplea exclusivamente letras minúsculas."
+  },
+  {
+    "id": "dev-q050",
+    "question": "True or False: Al nombrar una clase como 'UsuarioServicio', se está respetando el estilo PascalCase.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. PascalCase inicia todas las palabras unidas con mayúscula, formato común para nombrar clases o tipos en muchos lenguajes."
+  },
+  {
+    "id": "dev-q051",
+    "question": "True or False: El Principio de Responsabilidad Única afirma que todo el software debe desarrollarse en un único archivo fuente.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El SRP indica que cada módulo o clase debe encargarse de un único aspecto de la lógica de la aplicación."
+  },
+  {
+    "id": "dev-q052",
+    "question": "True or False: La estrategia de 'Registrar y Continuar' consiste en documentar un error en un archivo de log y dejar que el programa siga corriendo.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Se aplica cuando la falla no es crítica y el sistema puede omitirla de manera segura sin interrumpir el servicio."
+  },
+  {
+    "id": "dev-q053",
+    "question": "True or False: La Degradación Elegante significa que una aplicación debe colapsar por completo ante cualquier error menor.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. La degradación elegante busca que el sistema permanezca parcialmente operativo limitando solo la zona fallida."
+  },
+  {
+    "id": "dev-q054",
+    "question": "True or False: La estrategia 'Fallar Rápido' detiene la ejecución inmediatamente al detectar una condición inválida.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Frena el proceso al instante para alertar del bug de inmediato y no propagar errores silenciosos sobre los datos."
+  },
+  {
+    "id": "dev-q055",
+    "question": "True or False: El Encapsulamiento en POO sirve para obligar a las bases de datos a sincronizar sus tablas.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. El encapsulamiento restringe el acceso directo al estado interno de un objeto dentro del código fuente."
+  },
+  {
+    "id": "dev-q056",
+    "question": "True or False: La Abstracción en POO se enfoca en aislar las características esenciales de una entidad reduciendo la complejidad.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Ayuda a representar conceptos complejos ocultando los detalles de implementación innecesarios a los consumidores."
+  },
+  {
+    "id": "dev-q057",
+    "question": "True or False: El pilar de la Herencia permite que una subclase adquiera atributos y métodos de una superclase.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Es un mecanismo fundamental para reutilizar la lógica de programación organizada en árboles jerárquicos."
+  },
+  {
+    "id": "dev-q058",
+    "question": "True or False: El Polimorfismo impide que múltiples clases redefinan comportamientos manteniendo una interfaz común.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. El polimorfismo faculta precisamente a que distintas clases respondan al mismo mensaje de formas personalizadas."
+  },
+  {
+    "id": "dev-q059",
+    "question": "True or False: Una función pura da un resultado diferente cada vez que se invoca con los mismos argumentos.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. A iguales parámetros de entrada, una función pura obligatoriamente retornará exactamente el mismo valor."
+  },
+  {
+    "id": "dev-q060",
+    "question": "True or False: Si una función modifica un archivo físico externo, se clasifica como una función impura.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Al alterar el disco duro o cualquier elemento fuera de su contexto local, introduce efectos secundarios."
+  },
+  {
+    "id": "dev-q061",
+    "question": "True or False: La asincronía obliga al hilo de ejecución a congelarse y esperar a que terminen las llamadas externas lentas.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. La asincronía permite posponer la respuesta y continuar procesando otras actividades concurrentes en paralelo lógico."
+  },
+  {
+    "id": "dev-q062",
+    "question": "True or False: El Paralelismo requiere hardware con múltiples procesadores o núcleos reales para procesar tareas al unísono.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Exige soporte físico multichip o multinúcleo para ejecutar instrucciones simultáneas en la misma fracción de segundo."
+  },
+  {
+    "id": "dev-q063",
+    "question": "True or False: El método HTTP GET se usa principalmente para enviar datos en el cuerpo de la petición hacia el servidor y dar de alta nuevas entidades.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. GET lee y recupera datos sin alterar el estado del backend; POST es el adecuado para crear registros."
+  },
+  {
+    "id": "dev-q064",
+    "question": "True or False: El método HTTP POST está diseñado de forma primaria para crear un nuevo recurso en el servidor.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Envía un cuerpo de información al backend con la intención de registrar o procesar una nueva entidad."
+  },
+  {
+    "id": "dev-q065",
+    "question": "True or False: El método HTTP PUT reemplaza por completo la representación de un recurso existente con nuevos datos.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Mapea una actualización total del objeto apuntado por el identificador único uniforme en servicios REST."
+  },
+  {
+    "id": "dev-q066",
+    "question": "True or False: Los códigos de estado HTTP que empiezan con el dígito 2 (por ejemplo, 200) indican un error del cliente.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Los códigos 2xx simbolizan operaciones exitosas. Los errores del cliente pertenecen a la serie 4xx."
+  },
+  {
+    "id": "dev-q067",
+    "question": "True or False: Los códigos de estado HTTP que empiezan con el dígito 5 (por ejemplo, 500) pertenecen a errores del servidor.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Informan que un fallo o excepción incontrolada del lado del backend bloqueó el procesamiento de la llamada."
+  },
+  {
+    "id": "dev-q068",
+    "question": "True or False: Las Cookies son pequeños fragmentos de texto almacenados localmente por el navegador del cliente.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Son devueltas automáticamente por el cliente en cada petición posterior al dominio para mantener estados lógicos."
+  },
+  {
+    "id": "dev-q069",
+    "question": "True or False: Un JSON Web Token (JWT) es un protocolo de comunicación físico que sustituye los cables de red.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. JWT es un estándar compacto basado en texto estructurado para transmitir credenciales firmadas entre aplicaciones."
+  },
+  {
+    "id": "dev-q070",
+    "question": "True or False: REST es un estilo arquitectónico para diseñar sistemas en red basado en restricciones.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Propone el desacoplamiento cliente-servidor modelando operaciones mediante recursos e interfaces estandarizadas."
+  },
+  {
+    "id": "dev-q071",
+    "question": "True or False: El proceso de Autenticación (AuthN) consiste en verificar y confirmar la identidad de un usuario en el sistema.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. Se asegura de que la persona que intenta ingresar coincida realmente con el titular declarado de la cuenta."
+  },
+  {
+    "id": "dev-q072",
+    "question": "True or False: El proceso de Autorización (AuthZ) sirve para verificar las contraseñas de inicio de sesión en el backend.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. La validación de contraseñas es Autenticación (AuthN). La Autorización evalúa qué puede hacer después de entrar."
+  },
+  {
+    "id": "dev-q073",
+    "question": "True or False: La cabecera HTTP estándar 'Authorization' se emplea para adjuntar credenciales como API keys o Bearer tokens.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Permite que el servidor o API Gateway lea y procese las firmas o tokens para validar los privilegios asignados."
+  },
+  {
+    "id": "dev-q074",
+    "question": "True or False: El mecanismo CORS evita de forma absoluta los bloqueos por concurrencia en la base de datos.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Falso. CORS restringe o habilita accesos de red cruzados entre dominios en el navegador; no influye en las transacciones de bases de datos."
+  },
+  {
+    "id": "dev-q075",
+    "question": "True or False: El problema de la Redundancia describe el almacenamiento de los mismos datos repetidos en varias tablas.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. La duplicación innecesaria genera problemas de consistencia si no se aplican técnicas de normalización."
+  },
+  {
+    "id": "dev-q076",
+    "question": "True or False: Un Modelo Entidad-Relación es un script ejecutable encargado de automatizar las copias de seguridad.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Es un modelo abstracto y visual empleado para diseñar lógicamente la estructura relacional de la información."
+  },
+  {
+    "id": "dev-q077",
+    "question": "True or False: La propiedad de Atomicidad garantiza que una transacción se complete en su totalidad o no se aplique en absoluto.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. Mantiene el principio de todo o nada: ante una interrupción parcial, revierte los cambios para proteger la consistencia."
+  },
+  {
+    "id": "dev-q078",
+    "question": "True or False: Las bases de datos NoSQL dependen exclusivamente de tablas fijas y prohíben esquemas flexibles.",
+    "answer": "False",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Falso. Su ventaja reside precisamente en no requerir esquemas rígidos, utilizando formatos de documento, clave-valor o columnas."
+  },
+  {
+    "id": "dev-q079",
+    "question": "True or False: Los comandos SQL agrupados en DML (Data Manipulation Language) sirven para insertar, consultar, actualizar y eliminar registros.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Intermediate",
+    "explanation": "Verdadero. DML se orienta a interactuar directamente con la información guardada dentro del esqueleto relacional."
+  },
+  {
+    "id": "dev-q080",
+    "question": "True or False: Según la pirámide de pruebas, las pruebas unitarias se sitúan en la base por ser más rápidas y baratas.",
+    "answer": "True",
+    "options": ["True", "False"],
+    "category": "BS_00_Fund_Des",
+    "type": "TRUE_FALSE",
+    "level": "Beginner",
+    "explanation": "Verdadero. El modelo estipula que la mayor cantidad de validaciones automáticas deben ser unitarias para optimizar el tiempo de compilación."
+  },
+  {
+    "id": "dev-q081",
+    "question": "Para cambiar el directorio actual a una carpeta de destino en Bash, se recurre al comando ______.",
+    "answer": "cd",
+    "options": ["cd", "ls", "pwd", "cat"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El comando 'cd' (change directory) modifica la posición actual del puntero del shell de comandos."
+  },
+  {
+    "id": "dev-q082",
+    "question": "Para revisar el contenido interno de un directorio listando sus archivos se ejecuta el comando ______.",
+    "answer": "ls",
+    "options": ["ls", "cd", "pwd", "mkdir"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El comando 'ls' mapea e imprime en pantalla los nombres de los directorios y archivos de la ruta de trabajo actual."
+  },
+  {
+    "id": "dev-q083",
+    "question": "La instrucción que muestra por consola la ruta absoluta del directorio donde se halla parado el usuario es ______.",
+    "answer": "pwd",
+    "options": ["pwd", "ls", "cd", "rm"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El comando 'pwd' despliega el camino de directorios completo sirviendo de orientación lógica en la terminal."
+  },
+  {
+    "id": "dev-q084",
+    "question": "El operador '|' se conoce en los sistemas operativos Unix como ______ de comandos.",
+    "answer": "Pipe (Tubería)",
+    "options": ["Pipe (Tubería)", "Redirección", "Cronjob", "Filtro binario"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los pipes conectan procesos canalizando los streams de datos de manera secuencial sin usar archivos temporales."
+  },
+  {
+    "id": "dev-q085",
+    "question": "El operador ______ efectúa una redirección que anexa texto al final de un fichero respetando las líneas preexistentes.",
+    "answer": ">>",
+    "options": [">>", ">", "|", "&"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El uso de dobles símbolos de mayor qué (>>) evita la pérdida accidental de datos realizando un guardado al final."
+  },
+  {
+    "id": "dev-q086",
+    "question": "Un ______ es una tarea automatizada programada que el sistema GNU/Linux ejecuta según una calendarización estricta.",
+    "answer": "cronjob",
+    "options": ["cronjob", "pipe", "script impuro", "CORS request"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los cronjobs resuelven necesidades de mantenimiento como limpiezas semanales o backups sin intervención de operadores."
+  },
+  {
+    "id": "dev-q087",
+    "question": "La estructura temporal compuesta por cinco asteriscos ordenados representa la ______ de un cronjob.",
+    "answer": "sintaxis de cronometría",
+    "options": [
+      "sintaxis de cronometría",
+      "redirección estática",
+      "herencia funcional",
+      "asincronía monohilo"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Esta sintaxis especifica en qué minutos, horas o días de la semana despertará el servicio para procesar el script."
+  },
+  {
+    "id": "dev-q088",
+    "question": "La forma de escribir identificadores alternando mayúsculas a partir de la segunda palabra se define como ______.",
+    "answer": "camelCase",
+    "options": ["camelCase", "snake_case", "PascalCase", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "camelCase es ampliamente adoptado en lenguajes como JavaScript para nombrar variables ordinarias y funciones."
+  },
+  {
+    "id": "dev-q089",
+    "question": "El estilo de formateo de variables que intercala guiones bajos manteniendo todo en minúsculas se denomina ______.",
+    "answer": "snake_case",
+    "options": ["snake_case", "camelCase", "PascalCase", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El estilo snake_case es una convención muy habitual para nombrar campos en bases de datos relacionales y scripts de Python."
+  },
+  {
+    "id": "dev-q090",
+    "question": "La capitalización obligatoria de todas las palabras iniciales fusionadas en una entidad de código caracteriza a ______.",
+    "answer": "PascalCase",
+    "options": ["PascalCase", "camelCase", "snake_case", "kebab-case"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "PascalCase ayuda a diferenciar visualmente clases, interfaces o tipos complejos frente a variables comunes."
+  },
+  {
+    "id": "dev-q091",
+    "question": "El principio SOLID que dicta limitar el alcance de un módulo a una sola actividad técnica responde a la sigla ______.",
+    "answer": "SRP",
+    "options": ["SRP", "ACID", "CRUD", "REST"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "SRP (Single Responsibility Principle) reduce el acoplamiento evitando que una clase sufra modificaciones por razones de negocio inconexas."
+  },
+  {
+    "id": "dev-q092",
+    "question": "La estrategia de persistencia de logs que reporta incidentes tolerables sin frenar el procesamiento web se llama ______.",
+    "answer": "Registrar y Continuar",
+    "options": [
+      "Registrar y Continuar",
+      "Fallar Rápido",
+      "Degradación Elegante",
+      "Lógica de Reintento"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Esta técnica evita que una excepción menor detenga por completo el flujo general de transacciones del servidor web."
+  },
+  {
+    "id": "dev-q093",
+    "question": "Mantener operativas las facetas básicas del programa desactivando solo el módulo dañado constituye un ejemplo de ______.",
+    "answer": "Degradación Elegante",
+    "options": [
+      "Degradación Elegante",
+      "Fallar Rápido",
+      "Lógica de Reintento",
+      "Encapsulamiento estricto"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La degradación elegante preserva la experiencia de usuario impidiendo cierres inesperados de la aplicación global."
+  },
+  {
+    "id": "dev-q094",
+    "question": "Terminar abruptamente una transacción inválida antes de procesar cálculos erróneos implementa el principio de ______.",
+    "answer": "Fallar Rápido",
+    "options": [
+      "Fallar Rápido",
+      "Degradación Elegante",
+      "Lógica de Reintento",
+      "Registrar y Continuar"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Fallar Rápido (Fail Fast) previene la corrupción encadenada de bases de datos arrojando errores visibles rápidamente."
+  },
+  {
+    "id": "dev-q095",
+    "question": "Proteger los campos internos de modificaciones arbitrarias mediante métodos accesores públicos define al pilar de ______.",
+    "answer": "Encapsulamiento",
+    "options": ["Encapsulamiento", "Abstracción", "Herencia", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El encapsulamiento resguarda la integridad de los datos impidiendo manipulaciones externas descontroladas sobre el estado del objeto."
+  },
+  {
+    "id": "dev-q096",
+    "question": "Definir modelos de negocio basándose solo en los atributos indispensables del dominio técnico requiere la aplicación de ______.",
+    "answer": "Abstracción",
+    "options": ["Abstracción", "Encapsulamiento", "Herencia", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La abstracción reduce la carga cognitiva ignorando pormenores mecánicos secundarios a la hora de modelar clases."
+  },
+  {
+    "id": "dev-q097",
+    "question": "El enlace OOP que faculta a los desarrolladores a extender plantillas lógicas base hacia componentes hijos se llama ______.",
+    "answer": "Herencia",
+    "options": ["Herencia", "Encapsulamiento", "Abstracción", "Polimorfismo"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La herencia promueve la reutilización de código al derivar propiedades estructurales compartidas de un ancestro común."
+  },
+  {
+    "id": "dev-q098",
+    "question": "Invocar una acción uniforme sobre distintos objetos logrando respuestas adaptadas a su naturaleza específica requiere del ______.",
+    "answer": "Polimorfismo",
+    "options": ["Polimorfismo", "Encapsulamiento", "Abstracción", "Herencia"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El polimorfismo flexibiliza las arquitecturas de software al desvincular las interfaces de las ejecuciones particulares concretas."
+  },
+  {
+    "id": "dev-q099",
+    "question": "Una función se considera ______ cuando carece por completo de efectos secundarios colaterales en variables externas.",
+    "answer": "Pura",
+    "options": ["Pura", "Impura", "Asíncrona", "Estática"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La pureza funcional asegura predictibilidad matemática estricta facilitando la optimización y auditoría del código."
+  },
+  {
+    "id": "dev-q100",
+    "question": "Cualquier función que escriba trazas en archivos físicos o altere el DOM web se tipifica como ______.",
+    "answer": "Función impura",
+    "options": [
+      "Función impura",
+      "Función pura",
+      "Función determinista",
+      "Función atómica"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Estas funciones generan efectos colaterales (side-effects), requiriendo un control cuidadoso en entornos de ejecución distribuidos."
+  },
+  {
+    "id": "dev-q101",
+    "question": "Diferir la resolución de procesos pesados delegando callbacks o promesas aprovecha las capacidades de la ______.",
+    "answer": "Asincronía",
+    "options": [
+      "Asincronía",
+      "Sincronía rígida",
+      "Redundancia física",
+      "Encapsulación OOP"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La programación asíncrona mantiene receptivas las aplicaciones web evitando cuellos de botella por operaciones lentas."
+  },
+  {
+    "id": "dev-q102",
+    "question": "La ejecución simultánea y real de múltiples hilos en diferentes núcleos físicos de hardware representa al ______.",
+    "answer": "Paralelismo",
+    "options": [
+      "Paralelismo",
+      "Concurrencia monohilo",
+      "Aislamiento ACID",
+      "Logging síncrono"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El paralelismo exprime el rendimiento informático procesando múltiples tareas independientes en paralelo real de manera idéntica."
+  },
+  {
+    "id": "dev-q103",
+    "question": "El verbo HTTP ______ está restringido exclusivamente a consultas de lectura sin alteración de datos de persistencia.",
+    "answer": "GET",
+    "options": ["GET", "POST", "PUT", "DELETE"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las especificaciones consideran al método GET una operación segura que nunca debe generar cambios de estado lógicos."
+  },
+  {
+    "id": "dev-q104",
+    "question": "Para dar de alta registros transmitiendo estructuras complejas en el body de una solicitud web usamos ______.",
+    "answer": "POST",
+    "options": ["POST", "GET", "PUT", "PATCH"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "POST procesa las inserciones enviando bloques de datos a las colecciones del backend."
+  },
+  {
+    "id": "dev-q105",
+    "question": "El método estándar empleado para sobrescribir por completo un recurso específico mapeado en REST se denomina ______.",
+    "answer": "PUT",
+    "options": ["PUT", "PATCH", "POST", "GET"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "El uso de PUT es idempotente, lo que significa que realizar la misma petición idéntica varias veces dejará al objeto en el mismo estado."
+  },
+  {
+    "id": "dev-q106",
+    "question": "Cuando un servidor devuelve una respuesta exitosa con código 200, pertenece a la serie ______.",
+    "answer": "2xx",
+    "options": ["2xx", "4xx", "5xx", "3xx"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Los rangos 2xx agrupan todas las confirmaciones estandarizadas de procesamiento exitoso en internet."
+  },
+  {
+    "id": "dev-q107",
+    "question": "Las excepciones no atrapadas de la infraestructura del backend generan respuestas HTTP en la serie ______.",
+    "answer": "5xx",
+    "options": ["5xx", "2xx", "4xx", "1xx"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La aparición de códigos de la serie 5xx delata inconsistencias operacionales internas del entorno del servidor web."
+  },
+  {
+    "id": "dev-q108",
+    "question": "Almacenar preferencias persistentes del lado del navegador del usuario final requiere el uso de ______.",
+    "answer": "Cookies",
+    "options": ["Cookies", "Pipes", "Estructuras DDL", "Cronjobs"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las cookies permiten mitigar la naturaleza 'stateless' de HTTP almacenando identificadores clave en el cliente."
+  },
+  {
+    "id": "dev-q109",
+    "question": "La transferencia de estados criptográficos firmados mediante cadenas JSON compactas y legibles utiliza el estándar ______.",
+    "answer": "JWT",
+    "options": ["JWT", "CORS", "CRUD", "DML"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "Los tokens JWT encapsulan la información de identidad evitando consultas redundantes a la base de datos central en cada petición."
+  },
+  {
+    "id": "dev-q110",
+    "question": "Organizar endpoints web asumiendo las directrices operativas de HTTP tipifica al estilo arquitectónico ______.",
+    "answer": "REST",
+    "options": ["REST", "ACID", "DML", "SQL"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "REST estandariza la interacción de servicios desacoplados abstrayendo accesos a través de URIs lógicas uniformes."
+  },
+  {
+    "id": "dev-q111",
+    "question": "Determinar si el remitente de una petición coincide verdaderamente con la identidad declarada define a la ______.",
+    "answer": "Autenticación",
+    "options": [
+      "Autenticación",
+      "Autorización",
+      "Abstracción",
+      "Normalización"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La autenticación (AuthN) valida factores de seguridad (passwords o firmas) confirmando quién está accediendo al sistema."
+  },
+  {
+    "id": "dev-q112",
+    "question": "Evaluar si el usuario verificado cuenta con permisos de edición sobre una tabla específica corresponde a la ______.",
+    "answer": "Autorización",
+    "options": ["Autorización", "Autenticación", "Encapsulación", "Atomicidad"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La autorización (AuthZ) actúa inmediatamente después del Login regulando los privilegios de los usuarios."
+  },
+  {
+    "id": "dev-q113",
+    "question": "Para despachar tokens de seguridad en las solicitudes HTTP se inyectan datos dentro de la cabecera ______.",
+    "answer": "Authorization",
+    "options": ["Authorization", "Content-Type", "Origin", "Accept"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La cabecera 'Authorization' sirve de canal formal para que los middlewares verifiquen tokens portadores (Bearer)."
+  },
+  {
+    "id": "dev-q114",
+    "question": "El mecanismo de los navegadores web enfocado en permitir o denegar llamadas HTTP asíncronas originadas desde dominios externos es ______.",
+    "answer": "CORS",
+    "options": ["CORS", "ACID", "DML", "JWT"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "CORS (Cross-Origin Resource Sharing) protege de solicitudes cruzadas maliciosas dictando qué dominios pueden consumir recursos del backend."
+  },
+  {
+    "id": "dev-q115",
+    "question": "El almacenamiento desordenado que provoca copias idénticas de un mismo registro en múltiples archivos desata problemas de ______.",
+    "answer": "Redundancia",
+    "options": ["Redundancia", "Concurrencia", "Aislamiento", "Atomicidad"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "La redundancia descontrolada es el origen principal de inconsistencias crónicas de datos en sistemas antiguos."
+  },
+  {
+    "id": "dev-q116",
+    "question": "El plano o diagrama conceptual utilizado para estructurar las llaves y relaciones lógicas de datos relacionales se llama ______.",
+    "answer": "Modelo Entidad-Relación",
+    "options": [
+      "Modelo Entidad-Relación",
+      "Esquema NoSQL Documental",
+      "Pipeline de Testing E2E",
+      "Sintaxis de Cronometría"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "El Modelo Entidad-Relación organiza los datos mediante rectángulos y rombos reflejando las conexiones lógicas del negocio."
+  },
+  {
+    "id": "dev-q117",
+    "question": "La propiedad transaccional que asegura que las operaciones se apliquen íntegramente o se cancelen por completo es la ______.",
+    "answer": "Atomicidad",
+    "options": ["Atomicidad", "Durabilidad", "Consistencia", "Aislamiento"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "La atomicidad evita estados intermedios a medio procesar, asegurando que ante caídas eléctricas el sistema deshaga cambios incompletos."
+  },
+  {
+    "id": "dev-q118",
+    "question": "Los motores de bases de datos que guardan la información sin esquemas tabulares fijos se agrupan bajo la definición ______.",
+    "answer": "NoSQL",
+    "options": [
+      "NoSQL",
+      "Relacionales SQL",
+      "Orientadas a Objetos puras",
+      "Esquemas DDL rígidos"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las soluciones NoSQL agilizan el desarrollo al permitir cambiar la estructura de los datos guardados sin migraciones costosas."
+  },
+  {
+    "id": "dev-q119",
+    "question": "Las consultas de actualización o inserción de registros modifican los datos empleando el componente del lenguaje llamado ______.",
+    "answer": "DML",
+    "options": ["DML", "DDL", "CORS", "JWT"],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Intermediate",
+    "explanation": "DML (Data Manipulation Language) abarca las instrucciones cotidianas destinadas a gestionar las filas de información de las tablas."
+  },
+  {
+    "id": "dev-q120",
+    "question": "Para verificar funciones aisladas de código de manera veloz, los desarrolladores construyen una amplia base de pruebas ______.",
+    "answer": "Unitarias",
+    "options": [
+      "Unitarias",
+      "De Integración",
+      "E2E (Extremo a Extremo)",
+      "Manuales"
+    ],
+    "category": "BS_00_Fund_Des",
+    "type": "FILL_THE_BLANK",
+    "level": "Beginner",
+    "explanation": "Las pruebas unitarias garantizan el correcto funcionamiento del bloque de código más pequeño posible de manera aislada."
+  }
+]
